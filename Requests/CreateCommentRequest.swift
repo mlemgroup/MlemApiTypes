@@ -25,10 +25,10 @@ struct CreateCommentRequest: ApiPostRequest {
     ) {
         self.body = .init(
           content: content,
-          post_id: postId,
-          parent_id: parentId,
-          language_id: languageId,
-          form_id: formId
+          postId: postId,
+          parentId: parentId,
+          languageId: languageId,
+          formId: formId
       )
     }
 }

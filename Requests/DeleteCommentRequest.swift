@@ -21,7 +21,7 @@ struct DeleteCommentRequest: ApiPostRequest {
       deleted: Bool
     ) {
         self.body = .init(
-          comment_id: commentId,
+          commentId: commentId,
           deleted: deleted
       )
     }

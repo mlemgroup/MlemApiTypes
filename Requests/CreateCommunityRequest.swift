@@ -35,9 +35,9 @@ struct CreateCommunityRequest: ApiPostRequest {
           icon: icon,
           banner: banner,
           nsfw: nsfw,
-          posting_restricted_to_mods: postingRestrictedToMods,
-          discussion_languages: discussionLanguages,
-          only_followers_can_vote: onlyFollowersCanVote,
+          postingRestrictedToMods: postingRestrictedToMods,
+          discussionLanguages: discussionLanguages,
+          onlyFollowersCanVote: onlyFollowersCanVote,
           visibility: visibility
       )
     }

@@ -22,7 +22,7 @@ struct HideCommunityRequest: ApiPutRequest {
       reason: String?
     ) {
         self.body = .init(
-          community_id: communityId,
+          communityId: communityId,
           hidden: hidden,
           reason: reason
       )

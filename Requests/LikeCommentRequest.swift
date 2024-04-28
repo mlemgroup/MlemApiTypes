@@ -21,7 +21,7 @@ struct LikeCommentRequest: ApiPostRequest {
       score: Int
     ) {
         self.body = .init(
-          comment_id: commentId,
+          commentId: commentId,
           score: score
       )
     }

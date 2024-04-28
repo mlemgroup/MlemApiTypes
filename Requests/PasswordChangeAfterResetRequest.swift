@@ -24,7 +24,7 @@ struct PasswordChangeAfterResetRequest: ApiPostRequest {
         self.body = .init(
           token: token,
           password: password,
-          password_verify: passwordVerify
+          passwordVerify: passwordVerify
       )
     }
 }

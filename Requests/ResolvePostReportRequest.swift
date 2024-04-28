@@ -21,7 +21,7 @@ struct ResolvePostReportRequest: ApiPutRequest {
       resolved: Bool
     ) {
         self.body = .init(
-          report_id: reportId,
+          reportId: reportId,
           resolved: resolved
       )
     }

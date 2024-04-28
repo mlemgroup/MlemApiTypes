@@ -27,14 +27,14 @@ struct EditPostRequest: ApiPutRequest {
       customThumbnail: String?
     ) {
         self.body = .init(
-          post_id: postId,
+          postId: postId,
           name: name,
           url: url,
           body: body,
           nsfw: nsfw,
-          language_id: languageId,
-          alt_text: altText,
-          custom_thumbnail: customThumbnail
+          languageId: languageId,
+          altText: altText,
+          customThumbnail: customThumbnail
       )
     }
 }

@@ -21,7 +21,7 @@ struct LockPostRequest: ApiPostRequest {
       locked: Bool
     ) {
         self.body = .init(
-          post_id: postId,
+          postId: postId,
           locked: locked
       )
     }
