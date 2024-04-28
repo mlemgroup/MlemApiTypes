@@ -21,7 +21,7 @@ struct HidePostRequest: ApiPostRequest {
       hide: Bool
     ) {
         self.body = .init(
-          post_ids: postIds,
+          postIds: postIds,
           hide: hide
       )
     }

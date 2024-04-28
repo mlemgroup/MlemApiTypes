@@ -21,7 +21,7 @@ struct AddAdminRequest: ApiPostRequest {
       added: Bool
     ) {
         self.body = .init(
-          person_id: personId,
+          personId: personId,
           added: added
       )
     }

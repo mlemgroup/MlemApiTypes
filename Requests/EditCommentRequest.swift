@@ -23,10 +23,10 @@ struct EditCommentRequest: ApiPutRequest {
       formId: String?
     ) {
         self.body = .init(
-          comment_id: commentId,
+          commentId: commentId,
           content: content,
-          language_id: languageId,
-          form_id: formId
+          languageId: languageId,
+          formId: formId
       )
     }
 }

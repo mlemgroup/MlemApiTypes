@@ -23,7 +23,7 @@ struct RemoveCommunityRequest: ApiPostRequest {
       expires: Int?
     ) {
         self.body = .init(
-          community_id: communityId,
+          communityId: communityId,
           removed: removed,
           reason: reason,
           expires: expires

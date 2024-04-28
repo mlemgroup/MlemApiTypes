@@ -29,14 +29,14 @@ struct CreatePostRequest: ApiPostRequest {
     ) {
         self.body = .init(
           name: name,
-          community_id: communityId,
+          communityId: communityId,
           url: url,
           body: body,
           honeypot: honeypot,
           nsfw: nsfw,
-          language_id: languageId,
-          alt_text: altText,
-          custom_thumbnail: customThumbnail
+          languageId: languageId,
+          altText: altText,
+          customThumbnail: customThumbnail
       )
     }
 }

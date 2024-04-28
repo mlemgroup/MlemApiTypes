@@ -22,9 +22,9 @@ struct MarkPostAsReadRequest: ApiPostRequest {
       postIds: [Int]?
     ) {
         self.body = .init(
-          post_id: postId,
+          postId: postId,
           read: read,
-          post_ids: postIds
+          postIds: postIds
       )
     }
 }
