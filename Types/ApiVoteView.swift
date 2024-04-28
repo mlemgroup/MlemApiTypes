@@ -14,5 +14,5 @@ import Foundation
 struct ApiVoteView: Codable {
     let creator: ApiPerson
     let score: Int
-    let creator_banned_from_community: Bool? // Exists only in 0.19.4
+    let creatorBannedFromCommunity: Bool? // Exists only in 0.19.4
 }

@@ -11,11 +11,11 @@ import Foundation
 
 // MyUserInfo.ts
 struct ApiMyUserInfo: Codable {
-    let local_user_view: ApiLocalUserView
+    let localUserView: ApiLocalUserView
     let follows: [ApiCommunityFollowerView]
     let moderates: [ApiCommunityModeratorView]
-    let community_blocks: [ApiCommunityBlockView]
-    let person_blocks: [ApiPersonBlockView]
-    let discussion_languages: [Int]
-    let instance_blocks: [ApiInstanceBlockView]? // Exists >=0.19.0
+    let communityBlocks: [ApiCommunityBlockView]
+    let personBlocks: [ApiPersonBlockView]
+    let discussionLanguages: [Int]
+    let instanceBlocks: [ApiInstanceBlockView]? // Exists >=0.19.0
 }

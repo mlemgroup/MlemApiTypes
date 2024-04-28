@@ -13,12 +13,12 @@ import Foundation
 struct ApiSearch: Codable {
     // swiftlint:disable:next identifier_name
     let q: String
-    let community_id: Int?
-    let community_name: String?
-    let creator_id: Int?
+    let communityId: Int?
+    let communityName: String?
+    let creatorId: Int?
     let type_: ApiSearchType?
     let sort: ApiSortType?
-    let listing_type: ApiListingType?
+    let listingType: ApiListingType?
     let page: Int?
     let limit: Int?
 }

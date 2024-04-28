@@ -11,7 +11,7 @@ import Foundation
 
 // MarkPostAsRead.ts
 struct ApiMarkPostAsRead: Codable {
-    let post_id: Int? // Exists <=0.19.3; Optional >=0.19.0
+    let postId: Int? // Exists <=0.19.3; Optional >=0.19.0
     let read: Bool
-    let post_ids: [Int]? // Exists >=0.19.0; Optional <=0.19.3
+    let postIds: [Int]? // Exists >=0.19.0; Optional <=0.19.3
 }

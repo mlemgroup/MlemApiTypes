@@ -13,5 +13,5 @@ import Foundation
 struct ApiPasswordChangeAfterReset: Codable {
     let token: String
     let password: String
-    let password_verify: String
+    let passwordVerify: String
 }

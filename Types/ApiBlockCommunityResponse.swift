@@ -11,6 +11,6 @@ import Foundation
 
 // BlockCommunityResponse.ts
 struct ApiBlockCommunityResponse: Codable {
-    let community_view: ApiCommunityView
+    let communityView: ApiCommunityView
     let blocked: Bool
 }

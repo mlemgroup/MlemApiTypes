@@ -12,7 +12,7 @@ import Foundation
 // ListCommentLikes.ts
 // Exists >=0.19.2
 struct ApiListCommentLikes: Codable {
-    let comment_id: Int
+    let commentId: Int
     let page: Int?
     let limit: Int?
 }

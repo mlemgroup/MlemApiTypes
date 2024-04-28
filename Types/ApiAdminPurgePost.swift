@@ -12,8 +12,8 @@ import Foundation
 // AdminPurgePost.ts
 struct ApiAdminPurgePost: Codable {
     let id: Int
-    let admin_person_id: Int
-    let community_id: Int
+    let adminPersonId: Int
+    let communityId: Int
     let reason: String?
     let when_: String
 }

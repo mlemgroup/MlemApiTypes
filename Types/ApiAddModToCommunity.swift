@@ -11,7 +11,7 @@ import Foundation
 
 // AddModToCommunity.ts
 struct ApiAddModToCommunity: Codable {
-    let community_id: Int
-    let person_id: Int
+    let communityId: Int
+    let personId: Int
     let added: Bool
 }

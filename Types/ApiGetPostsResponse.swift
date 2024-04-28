@@ -12,5 +12,5 @@ import Foundation
 // GetPostsResponse.ts
 struct ApiGetPostsResponse: Codable {
     let posts: [ApiPostView]
-    let next_page: String? // Exists >=0.19.0
+    let nextPage: String? // Exists >=0.19.0
 }

@@ -14,5 +14,5 @@ struct ApiGetReplies: Codable {
     let sort: ApiCommentSortType?
     let page: Int?
     let limit: Int?
-    let unread_only: Bool?
+    let unreadOnly: Bool?
 }

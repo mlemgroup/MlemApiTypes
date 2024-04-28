@@ -15,5 +15,5 @@ struct ApiSiteMetadata: Codable {
     let title: String?
     let description: String?
     let image: String?
-    let embed_video_url: URL?
+    let embedVideoUrl: URL?
 }

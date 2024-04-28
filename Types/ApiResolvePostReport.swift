@@ -11,6 +11,6 @@ import Foundation
 
 // ResolvePostReport.ts
 struct ApiResolvePostReport: Codable {
-    let report_id: Int
+    let reportId: Int
     let resolved: Bool
 }

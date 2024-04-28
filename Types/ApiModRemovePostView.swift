@@ -11,7 +11,7 @@ import Foundation
 
 // ModRemovePostView.ts
 struct ApiModRemovePostView: Codable {
-    let mod_remove_post: ApiModRemovePost
+    let modRemovePost: ApiModRemovePost
     let moderator: ApiPerson?
     let post: ApiPost
     let community: ApiCommunity

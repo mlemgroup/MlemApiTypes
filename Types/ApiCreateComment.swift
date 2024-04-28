@@ -12,8 +12,8 @@ import Foundation
 // CreateComment.ts
 struct ApiCreateComment: Codable {
     let content: String
-    let post_id: Int
-    let parent_id: Int?
-    let language_id: Int?
-    let form_id: String? // Exists <=0.18.3
+    let postId: Int
+    let parentId: Int?
+    let languageId: Int?
+    let formId: String? // Exists <=0.18.3
 }

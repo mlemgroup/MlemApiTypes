@@ -11,6 +11,6 @@ import Foundation
 
 // PurgePerson.ts
 struct ApiPurgePerson: Codable {
-    let person_id: Int
+    let personId: Int
     let reason: String?
 }

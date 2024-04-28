@@ -11,5 +11,5 @@ import Foundation
 
 // ListPostReportsResponse.ts
 struct ApiListPostReportsResponse: Codable {
-    let post_reports: [ApiPostReportView]
+    let postReports: [ApiPostReportView]
 }

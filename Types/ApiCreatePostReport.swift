@@ -11,6 +11,6 @@ import Foundation
 
 // CreatePostReport.ts
 struct ApiCreatePostReport: Codable {
-    let post_id: Int
+    let postId: Int
     let reason: String
 }

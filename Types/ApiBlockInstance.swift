@@ -12,6 +12,6 @@ import Foundation
 // BlockInstance.ts
 // Exists >=0.19.0
 struct ApiBlockInstance: Codable {
-    let instance_id: Int
+    let instanceId: Int
     let block: Bool
 }

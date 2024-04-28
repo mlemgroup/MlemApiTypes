@@ -18,5 +18,5 @@ struct ApiInstanceWithFederationState: Codable {
     let updated: Date?
     let software: String?
     let version: String?
-    let federation_state: ApiReadableFederationState?
+    let federationState: ApiReadableFederationState?
 }

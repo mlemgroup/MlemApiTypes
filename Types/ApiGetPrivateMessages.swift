@@ -11,8 +11,8 @@ import Foundation
 
 // GetPrivateMessages.ts
 struct ApiGetPrivateMessages: Codable {
-    let unread_only: Bool?
+    let unreadOnly: Bool?
     let page: Int?
     let limit: Int?
-    let creator_id: Int? // Exists >=0.19.0
+    let creatorId: Int? // Exists >=0.19.0
 }

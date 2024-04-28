@@ -13,5 +13,5 @@ import Foundation
 struct ApiApproveRegistrationApplication: Codable {
     let id: Int
     let approve: Bool
-    let deny_reason: String?
+    let denyReason: String?
 }

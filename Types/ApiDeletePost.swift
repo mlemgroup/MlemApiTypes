@@ -11,6 +11,6 @@ import Foundation
 
 // DeletePost.ts
 struct ApiDeletePost: Codable {
-    let post_id: Int
+    let postId: Int
     let deleted: Bool
 }

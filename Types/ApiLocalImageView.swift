@@ -12,6 +12,6 @@ import Foundation
 // LocalImageView.ts
 // Exists only in 0.19.4
 struct ApiLocalImageView: Codable {
-    let local_image: ApiLocalImage
+    let localImage: ApiLocalImage
     let person: ApiPerson
 }

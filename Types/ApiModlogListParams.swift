@@ -11,12 +11,12 @@ import Foundation
 
 // ModlogListParams.ts
 struct ApiModlogListParams: Codable {
-    let community_id: Int?
-    let mod_person_id: Int?
-    let other_person_id: Int?
+    let communityId: Int?
+    let modPersonId: Int?
+    let otherPersonId: Int?
     let page: Int?
     let limit: Int?
-    let hide_modlog_names: Bool
-    let post_id: Int? // Exists only in 0.19.4
-    let comment_id: Int? // Exists only in 0.19.4
+    let hideModlogNames: Bool
+    let postId: Int? // Exists only in 0.19.4
+    let commentId: Int? // Exists only in 0.19.4
 }

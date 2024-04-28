@@ -12,12 +12,12 @@ import Foundation
 // PrivateMessageReport.ts
 struct ApiPrivateMessageReport: Codable {
     let id: Int
-    let creator_id: Int
-    let private_message_id: Int
-    let original_pm_text: String
+    let creatorId: Int
+    let privateMessageId: Int
+    let originalPmText: String
     let reason: String
     let resolved: Bool
-    let resolver_id: Int?
+    let resolverId: Int?
     let published: Date
     let updated: Date?
 }

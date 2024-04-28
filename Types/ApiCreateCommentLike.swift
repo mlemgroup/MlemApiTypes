@@ -11,6 +11,6 @@ import Foundation
 
 // CreateCommentLike.ts
 struct ApiCreateCommentLike: Codable {
-    let comment_id: Int
+    let commentId: Int
     let score: Int
 }

@@ -11,5 +11,5 @@ import Foundation
 
 // GetReportCount.ts
 struct ApiGetReportCount: Codable {
-    let community_id: Int?
+    let communityId: Int?
 }

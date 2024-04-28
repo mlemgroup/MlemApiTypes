@@ -13,7 +13,7 @@ import Foundation
 struct ApiListCommentReports: Codable {
     let page: Int?
     let limit: Int?
-    let unresolved_only: Bool?
-    let community_id: Int?
-    let comment_id: Int? // Exists only in 0.19.4
+    let unresolvedOnly: Bool?
+    let communityId: Int?
+    let commentId: Int? // Exists only in 0.19.4
 }

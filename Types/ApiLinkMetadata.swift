@@ -15,6 +15,6 @@ struct ApiLinkMetadata: Codable {
     let title: String?
     let description: String?
     let image: String?
-    let embed_video_url: URL?
-    let content_type: String?
+    let embedVideoUrl: URL?
+    let contentType: String?
 }

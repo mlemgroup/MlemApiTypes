@@ -11,6 +11,6 @@ import Foundation
 
 // DeleteCommunity.ts
 struct ApiDeleteCommunity: Codable {
-    let community_id: Int
+    let communityId: Int
     let deleted: Bool
 }

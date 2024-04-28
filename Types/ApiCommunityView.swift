@@ -15,5 +15,5 @@ struct ApiCommunityView: Codable {
     let subscribed: ApiSubscribedType
     let blocked: Bool
     let counts: ApiCommunityAggregates
-    let banned_from_community: Bool? // Exists only in 0.19.4
+    let bannedFromCommunity: Bool? // Exists only in 0.19.4
 }

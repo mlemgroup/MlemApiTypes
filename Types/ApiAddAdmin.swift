@@ -11,6 +11,6 @@ import Foundation
 
 // AddAdmin.ts
 struct ApiAddAdmin: Codable {
-    let person_id: Int
+    let personId: Int
     let added: Bool
 }

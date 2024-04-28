@@ -12,5 +12,5 @@ import Foundation
 // CommunityJoin.ts
 // Exists <=0.18.3
 struct ApiCommunityJoin: Codable {
-    let community_id: Int
+    let communityId: Int
 }

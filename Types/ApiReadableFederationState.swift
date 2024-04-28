@@ -12,10 +12,10 @@ import Foundation
 // ReadableFederationState.ts
 // Exists >=0.19.0
 struct ApiReadableFederationState: Codable {
-    let instance_id: Int
-    let last_successful_id: Int?
-    let last_successful_published_time: String?
-    let fail_count: Int
-    let last_retry: String?
-    let next_retry: String?
+    let instanceId: Int
+    let lastSuccessfulId: Int?
+    let lastSuccessfulPublishedTime: String?
+    let failCount: Int
+    let lastRetry: String?
+    let nextRetry: String?
 }

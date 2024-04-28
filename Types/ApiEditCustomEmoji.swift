@@ -13,7 +13,7 @@ import Foundation
 struct ApiEditCustomEmoji: Codable {
     let id: Int
     let category: String
-    let image_url: String
-    let alt_text: String
+    let imageUrl: String
+    let altText: String
     let keywords: [String]
 }

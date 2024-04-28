@@ -11,7 +11,7 @@ import Foundation
 
 // CommentResponse.ts
 struct ApiCommentResponse: Codable {
-    let comment_view: ApiCommentView
-    let recipient_ids: [Int]
-    let form_id: String? // Exists <=0.18.3
+    let commentView: ApiCommentView
+    let recipientIds: [Int]
+    let formId: String? // Exists <=0.18.3
 }

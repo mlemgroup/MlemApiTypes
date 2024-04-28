@@ -12,6 +12,6 @@ import Foundation
 // UpdateTotp.ts
 // Exists >=0.19.0
 struct ApiUpdateTotp: Codable {
-    let totp_token: String
+    let totpToken: String
     let enabled: Bool
 }

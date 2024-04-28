@@ -11,8 +11,8 @@ import Foundation
 
 // RegistrationApplicationView.ts
 struct ApiRegistrationApplicationView: Codable {
-    let registration_application: ApiRegistrationApplication
-    let creator_local_user: ApiLocalUser
+    let registrationApplication: ApiRegistrationApplication
+    let creatorLocalUser: ApiLocalUser
     let creator: ApiPerson
     let admin: ApiPerson?
 }

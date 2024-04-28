@@ -11,7 +11,7 @@ import Foundation
 
 // FeaturePost.ts
 struct ApiFeaturePost: Codable {
-    let post_id: Int
+    let postId: Int
     let featured: Bool
-    let feature_type: ApiPostFeatureType
+    let featureType: ApiPostFeatureType
 }

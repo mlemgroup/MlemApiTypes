@@ -13,5 +13,5 @@ import Foundation
 struct ApiGetUnreadCountResponse: Codable {
     let replies: Int
     let mentions: Int
-    let private_messages: Int
+    let privateMessages: Int
 }

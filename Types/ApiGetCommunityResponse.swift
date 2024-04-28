@@ -11,8 +11,8 @@ import Foundation
 
 // GetCommunityResponse.ts
 struct ApiGetCommunityResponse: Codable {
-    let community_view: ApiCommunityView
+    let communityView: ApiCommunityView
     let site: ApiSite?
     let moderators: [ApiCommunityModeratorView]
-    let discussion_languages: [Int]
+    let discussionLanguages: [Int]
 }

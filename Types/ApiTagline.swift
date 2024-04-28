@@ -12,7 +12,7 @@ import Foundation
 // Tagline.ts
 struct ApiTagline: Codable {
     let id: Int
-    let local_site_id: Int
+    let localSiteId: Int
     let content: String
     let published: Date
     let updated: Date?

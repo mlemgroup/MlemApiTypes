@@ -19,11 +19,11 @@ struct ApiSite: Codable {
     let icon: URL?
     let banner: URL?
     let description: String?
-    let actor_id: URL
-    let last_refreshed_at: Date
-    let inbox_url: String
-    let private_key: String? // Exists <=0.19.3
-    let public_key: String
-    let instance_id: Int
-    let content_warning: String? // Exists only in 0.19.4
+    let actorId: URL
+    let lastRefreshedAt: Date
+    let inboxUrl: String
+    let privateKey: String? // Exists <=0.19.3
+    let publicKey: String
+    let instanceId: Int
+    let contentWarning: String? // Exists only in 0.19.4
 }

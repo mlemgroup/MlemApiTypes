@@ -15,11 +15,11 @@ struct ApiGetPosts: Codable {
     let sort: ApiSortType?
     let page: Int?
     let limit: Int?
-    let community_id: Int?
-    let community_name: String?
-    let saved_only: Bool?
-    let liked_only: Bool? // Exists >=0.19.0
-    let disliked_only: Bool? // Exists >=0.19.0
-    let page_cursor: String? // Exists >=0.19.0
-    let show_hidden: Bool? // Exists only in 0.19.4
+    let communityId: Int?
+    let communityName: String?
+    let savedOnly: Bool?
+    let likedOnly: Bool? // Exists >=0.19.0
+    let dislikedOnly: Bool? // Exists >=0.19.0
+    let pageCursor: String? // Exists >=0.19.0
+    let showHidden: Bool? // Exists only in 0.19.4
 }

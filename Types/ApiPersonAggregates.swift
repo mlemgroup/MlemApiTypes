@@ -12,9 +12,9 @@ import Foundation
 // PersonAggregates.ts
 struct ApiPersonAggregates: Codable {
     let id: Int? // Exists <=0.18.3
-    let person_id: Int
-    let post_count: Int
-    let post_score: Int? // Exists <=0.18.3
-    let comment_count: Int
-    let comment_score: Int? // Exists <=0.18.3
+    let personId: Int
+    let postCount: Int
+    let postScore: Int? // Exists <=0.18.3
+    let commentCount: Int
+    let commentScore: Int? // Exists <=0.18.3
 }

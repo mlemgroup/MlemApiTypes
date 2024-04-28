@@ -12,8 +12,8 @@ import Foundation
 // ModRemoveComment.ts
 struct ApiModRemoveComment: Codable {
     let id: Int
-    let mod_person_id: Int
-    let comment_id: Int
+    let modPersonId: Int
+    let commentId: Int
     let reason: String?
     let removed: Bool
     let when_: String

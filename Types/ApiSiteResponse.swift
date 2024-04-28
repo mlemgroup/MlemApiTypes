@@ -11,6 +11,6 @@ import Foundation
 
 // SiteResponse.ts
 struct ApiSiteResponse: Codable {
-    let site_view: ApiSiteView
+    let siteView: ApiSiteView
     let taglines: [ApiTagline]
 }

@@ -12,8 +12,8 @@ import Foundation
 // ModTransferCommunity.ts
 struct ApiModTransferCommunity: Codable {
     let id: Int
-    let mod_person_id: Int
-    let other_person_id: Int
-    let community_id: Int
+    let modPersonId: Int
+    let otherPersonId: Int
+    let communityId: Int
     let when_: String
 }

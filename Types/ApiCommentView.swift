@@ -16,12 +16,12 @@ struct ApiCommentView: Codable {
     let post: ApiPost
     let community: ApiCommunity
     let counts: ApiCommentAggregates
-    let creator_banned_from_community: Bool
+    let creatorBannedFromCommunity: Bool
     let subscribed: ApiSubscribedType
     let saved: Bool
-    let creator_blocked: Bool
-    let my_vote: Int?
-    let creator_is_moderator: Bool? // Exists >=0.19.0
-    let creator_is_admin: Bool? // Exists >=0.19.0
-    let banned_from_community: Bool? // Exists only in 0.19.4
+    let creatorBlocked: Bool
+    let myVote: Int?
+    let creatorIsModerator: Bool? // Exists >=0.19.0
+    let creatorIsAdmin: Bool? // Exists >=0.19.0
+    let bannedFromCommunity: Bool? // Exists only in 0.19.4
 }

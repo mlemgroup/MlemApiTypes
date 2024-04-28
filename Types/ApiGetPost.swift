@@ -12,5 +12,5 @@ import Foundation
 // GetPost.ts
 struct ApiGetPost: Codable {
     let id: Int?
-    let comment_id: Int?
+    let commentId: Int?
 }

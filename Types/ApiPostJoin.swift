@@ -12,5 +12,5 @@ import Foundation
 // PostJoin.ts
 // Exists <=0.18.3
 struct ApiPostJoin: Codable {
-    let post_id: Int
+    let postId: Int
 }
