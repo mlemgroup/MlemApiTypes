@@ -2,7 +2,7 @@
 //  ApiGetSiteResponse.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-27
+//  Created by Eric Andrews on 2024-04-28
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -11,13 +11,13 @@ import Foundation
 
 // GetSiteResponse.ts
 struct ApiGetSiteResponse: Codable {
-    let site_view: ApiSiteView
+    let siteView: ApiSiteView
     let admins: [ApiPersonView]
     let version: String
-    let my_user: ApiMyUserInfo?
-    let all_languages: [ApiLanguage]
-    let discussion_languages: [Int]
+    let myUser: ApiMyUserInfo?
+    let allLanguages: [ApiLanguage]
+    let discussionLanguages: [Int]
     let taglines: [ApiTagline]
-    let custom_emojis: [ApiCustomEmojiView]
-    let blocked_urls: [ApiLocalSiteUrlBlocklist]? // Exists only in 0.19.4
+    let customEmojis: [ApiCustomEmojiView]
+    let blockedUrls: [ApiLocalSiteUrlBlocklist]? // Exists only in 0.19.4
 }

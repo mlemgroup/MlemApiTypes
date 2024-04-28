@@ -2,7 +2,7 @@
 //  ApiInstanceWithFederationState.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-27
+//  Created by Eric Andrews on 2024-04-28
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -18,5 +18,5 @@ struct ApiInstanceWithFederationState: Codable {
     let updated: Date?
     let software: String?
     let version: String?
-    let federation_state: ApiReadableFederationState?
+    let federationState: ApiReadableFederationState?
 }

@@ -2,7 +2,7 @@
 //  ApiBlockPersonResponse.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-27
+//  Created by Eric Andrews on 2024-04-28
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -11,6 +11,6 @@ import Foundation
 
 // BlockPersonResponse.ts
 struct ApiBlockPersonResponse: Codable {
-    let person_view: ApiPersonView
+    let personView: ApiPersonView
     let blocked: Bool
 }

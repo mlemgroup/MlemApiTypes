@@ -2,7 +2,7 @@
 //  ApiSiteView.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-27
+//  Created by Eric Andrews on 2024-04-28
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -12,7 +12,7 @@ import Foundation
 // SiteView.ts
 struct ApiSiteView: Codable {
     let site: ApiSite
-    let local_site: ApiLocalSite
-    let local_site_rate_limit: ApiLocalSiteRateLimit
+    let localSite: ApiLocalSite
+    let localSiteRateLimit: ApiLocalSiteRateLimit
     let counts: ApiSiteAggregates
 }

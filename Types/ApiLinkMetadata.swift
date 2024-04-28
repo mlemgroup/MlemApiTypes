@@ -2,7 +2,7 @@
 //  ApiLinkMetadata.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-27
+//  Created by Eric Andrews on 2024-04-28
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -15,6 +15,6 @@ struct ApiLinkMetadata: Codable {
     let title: String?
     let description: String?
     let image: String?
-    let embed_video_url: URL?
-    let content_type: String?
+    let embedVideoUrl: URL?
+    let contentType: String?
 }

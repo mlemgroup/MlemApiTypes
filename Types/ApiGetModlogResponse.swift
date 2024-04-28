@@ -2,7 +2,7 @@
 //  ApiGetModlogResponse.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-27
+//  Created by Eric Andrews on 2024-04-28
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -11,19 +11,19 @@ import Foundation
 
 // GetModlogResponse.ts
 struct ApiGetModlogResponse: Codable {
-    let removed_posts: [ApiModRemovePostView]
-    let locked_posts: [ApiModLockPostView]
-    let featured_posts: [ApiModFeaturePostView]
-    let removed_comments: [ApiModRemoveCommentView]
-    let removed_communities: [ApiModRemoveCommunityView]
-    let banned_from_community: [ApiModBanFromCommunityView]
+    let removedPosts: [ApiModRemovePostView]
+    let lockedPosts: [ApiModLockPostView]
+    let featuredPosts: [ApiModFeaturePostView]
+    let removedComments: [ApiModRemoveCommentView]
+    let removedCommunities: [ApiModRemoveCommunityView]
+    let bannedFromCommunity: [ApiModBanFromCommunityView]
     let banned: [ApiModBanView]
-    let added_to_community: [ApiModAddCommunityView]
-    let transferred_to_community: [ApiModTransferCommunityView]
+    let addedToCommunity: [ApiModAddCommunityView]
+    let transferredToCommunity: [ApiModTransferCommunityView]
     let added: [ApiModAddView]
-    let admin_purged_persons: [ApiAdminPurgePersonView]
-    let admin_purged_communities: [ApiAdminPurgeCommunityView]
-    let admin_purged_posts: [ApiAdminPurgePostView]
-    let admin_purged_comments: [ApiAdminPurgeCommentView]
-    let hidden_communities: [ApiModHideCommunityView]
+    let adminPurgedPersons: [ApiAdminPurgePersonView]
+    let adminPurgedCommunities: [ApiAdminPurgeCommunityView]
+    let adminPurgedPosts: [ApiAdminPurgePostView]
+    let adminPurgedComments: [ApiAdminPurgeCommentView]
+    let hiddenCommunities: [ApiModHideCommunityView]
 }

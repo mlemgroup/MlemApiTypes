@@ -2,7 +2,7 @@
 //  ApiCommunityView.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-27
+//  Created by Eric Andrews on 2024-04-28
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -15,5 +15,5 @@ struct ApiCommunityView: Codable {
     let subscribed: ApiSubscribedType
     let blocked: Bool
     let counts: ApiCommunityAggregates
-    let banned_from_community: Bool? // Exists only in 0.19.4
+    let bannedFromCommunity: Bool? // Exists only in 0.19.4
 }

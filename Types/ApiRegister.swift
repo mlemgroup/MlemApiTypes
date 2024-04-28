@@ -2,7 +2,7 @@
 //  ApiRegister.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-27
+//  Created by Eric Andrews on 2024-04-28
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -13,11 +13,11 @@ import Foundation
 struct ApiRegister: Codable {
     let username: String
     let password: String
-    let password_verify: String
-    let show_nsfw: Bool
+    let passwordVerify: String
+    let showNsfw: Bool
     let email: String?
-    let captcha_uuid: String?
-    let captcha_answer: String?
+    let captchaUuid: String?
+    let captchaAnswer: String?
     let honeypot: String?
     let answer: String?
 }

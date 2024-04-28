@@ -2,7 +2,7 @@
 //  ApiModRemoveCommentView.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-27
+//  Created by Eric Andrews on 2024-04-28
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -11,7 +11,7 @@ import Foundation
 
 // ModRemoveCommentView.ts
 struct ApiModRemoveCommentView: Codable {
-    let mod_remove_comment: ApiModRemoveComment
+    let modRemoveComment: ApiModRemoveComment
     let moderator: ApiPerson?
     let comment: ApiComment
     let commenter: ApiPerson

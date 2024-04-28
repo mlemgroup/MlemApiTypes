@@ -2,7 +2,7 @@
 //  ApiListPostReports.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-27
+//  Created by Eric Andrews on 2024-04-28
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -13,7 +13,7 @@ import Foundation
 struct ApiListPostReports: Codable {
     let page: Int?
     let limit: Int?
-    let unresolved_only: Bool?
-    let community_id: Int?
-    let post_id: Int? // Exists only in 0.19.4
+    let unresolvedOnly: Bool?
+    let communityId: Int?
+    let postId: Int? // Exists only in 0.19.4
 }
