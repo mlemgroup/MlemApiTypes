@@ -11,5 +11,5 @@ import Foundation
 
 // ListCommunitiesResponse.ts
 public struct ApiListCommunitiesResponse: Codable {
-    let communities: [ApiCommunityView]
+    public let communities: [ApiCommunityView]
 }

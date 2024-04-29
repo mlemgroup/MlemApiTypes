@@ -12,5 +12,5 @@ import Foundation
 // BlockInstanceResponse.ts
 // Exists >=0.19.0
 public struct ApiBlockInstanceResponse: Codable {
-    let blocked: Bool
+    public let blocked: Bool
 }

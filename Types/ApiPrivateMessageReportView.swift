@@ -11,9 +11,9 @@ import Foundation
 
 // PrivateMessageReportView.ts
 public struct ApiPrivateMessageReportView: Codable {
-    let privateMessageReport: ApiPrivateMessageReport
-    let privateMessage: ApiPrivateMessage
-    let privateMessageCreator: ApiPerson
-    let creator: ApiPerson
-    let resolver: ApiPerson?
+    public let privateMessageReport: ApiPrivateMessageReport
+    public let privateMessage: ApiPrivateMessage
+    public let privateMessageCreator: ApiPerson
+    public let creator: ApiPerson
+    public let resolver: ApiPerson?
 }

@@ -11,9 +11,9 @@ import Foundation
 
 // AdminPurgeComment.ts
 public struct ApiAdminPurgeComment: Codable {
-    let id: Int
-    let adminPersonId: Int
-    let postId: Int
-    let reason: String?
-    let when_: String
+    public let id: Int
+    public let adminPersonId: Int
+    public let postId: Int
+    public let reason: String?
+    public let when_: String
 }

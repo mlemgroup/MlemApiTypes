@@ -11,8 +11,8 @@ import Foundation
 
 // ModFeaturePostView.ts
 public struct ApiModFeaturePostView: Codable {
-    let modFeaturePost: ApiModFeaturePost
-    let moderator: ApiPerson?
-    let post: ApiPost
-    let community: ApiCommunity
+    public let modFeaturePost: ApiModFeaturePost
+    public let moderator: ApiPerson?
+    public let post: ApiPost
+    public let community: ApiCommunity
 }

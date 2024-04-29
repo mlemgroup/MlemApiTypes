@@ -12,11 +12,11 @@ import Foundation
 // InstanceWithFederationState.ts
 // Exists >=0.19.0
 public struct ApiInstanceWithFederationState: Codable {
-    let id: Int
-    let domain: String
-    let published: Date
-    let updated: Date?
-    let software: String?
-    let version: String?
-    let federationState: ApiReadableFederationState?
+    public let id: Int
+    public let domain: String
+    public let published: Date
+    public let updated: Date?
+    public let software: String?
+    public let version: String?
+    public let federationState: ApiReadableFederationState?
 }

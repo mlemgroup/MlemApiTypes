@@ -11,12 +11,12 @@ import Foundation
 
 // GetModlog.ts
 public struct ApiGetModlog: Codable {
-    let modPersonId: Int?
-    let communityId: Int?
-    let page: Int?
-    let limit: Int?
-    let type_: ApiModlogActionType?
-    let otherPersonId: Int?
-    let postId: Int? // Exists only in 0.19.4
-    let commentId: Int? // Exists only in 0.19.4
+    public let modPersonId: Int?
+    public let communityId: Int?
+    public let page: Int?
+    public let limit: Int?
+    public let type_: ApiModlogActionType?
+    public let otherPersonId: Int?
+    public let postId: Int? // Exists only in 0.19.4
+    public let commentId: Int? // Exists only in 0.19.4
 }

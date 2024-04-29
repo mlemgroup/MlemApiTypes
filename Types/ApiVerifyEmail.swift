@@ -11,5 +11,5 @@ import Foundation
 
 // VerifyEmail.ts
 public struct ApiVerifyEmail: Codable {
-    let token: String
+    public let token: String
 }

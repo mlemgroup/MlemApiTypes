@@ -11,9 +11,9 @@ import Foundation
 
 // GetPersonDetailsResponse.ts
 public struct ApiGetPersonDetailsResponse: Codable {
-    let personView: ApiPersonView
-    let comments: [ApiCommentView]
-    let posts: [ApiPostView]
-    let moderates: [ApiCommunityModeratorView]
-    let site: ApiSite? // Exists >=0.19.2; Optional >=0.19.3
+    public let personView: ApiPersonView
+    public let comments: [ApiCommentView]
+    public let posts: [ApiPostView]
+    public let moderates: [ApiCommunityModeratorView]
+    public let site: ApiSite? // Exists >=0.19.2; Optional >=0.19.3
 }

@@ -11,6 +11,6 @@ import Foundation
 
 // TransferCommunity.ts
 public struct ApiTransferCommunity: Codable {
-    let communityId: Int
-    let personId: Int
+    public let communityId: Int
+    public let personId: Int
 }

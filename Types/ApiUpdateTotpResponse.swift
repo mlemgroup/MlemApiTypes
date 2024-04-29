@@ -12,5 +12,5 @@ import Foundation
 // UpdateTotpResponse.ts
 // Exists >=0.19.0
 public struct ApiUpdateTotpResponse: Codable {
-    let enabled: Bool
+    public let enabled: Bool
 }

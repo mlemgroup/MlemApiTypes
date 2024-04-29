@@ -11,22 +11,22 @@ import Foundation
 
 // LocalSiteRateLimit.ts
 public struct ApiLocalSiteRateLimit: Codable {
-    let id: Int? // Exists <=0.18.3
-    let localSiteId: Int
-    let message: Int
-    let messagePerSecond: Int
-    let post: Int
-    let postPerSecond: Int
-    let register: Int
-    let registerPerSecond: Int
-    let image: Int
-    let imagePerSecond: Int
-    let comment: Int
-    let commentPerSecond: Int
-    let search: Int
-    let searchPerSecond: Int
-    let published: Date
-    let updated: Date?
-    let importUserSettings: Int? // Exists >=0.19.0
-    let importUserSettingsPerSecond: Int? // Exists >=0.19.0
+    public let id: Int? // Exists <=0.18.3
+    public let localSiteId: Int
+    public let message: Int
+    public let messagePerSecond: Int
+    public let post: Int
+    public let postPerSecond: Int
+    public let register: Int
+    public let registerPerSecond: Int
+    public let image: Int
+    public let imagePerSecond: Int
+    public let comment: Int
+    public let commentPerSecond: Int
+    public let search: Int
+    public let searchPerSecond: Int
+    public let published: Date
+    public let updated: Date?
+    public let importUserSettings: Int? // Exists >=0.19.0
+    public let importUserSettingsPerSecond: Int? // Exists >=0.19.0
 }

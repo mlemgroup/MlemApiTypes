@@ -11,7 +11,7 @@ import Foundation
 
 // ApproveRegistrationApplication.ts
 public struct ApiApproveRegistrationApplication: Codable {
-    let id: Int
-    let approve: Bool
-    let denyReason: String?
+    public let id: Int
+    public let approve: Bool
+    public let denyReason: String?
 }

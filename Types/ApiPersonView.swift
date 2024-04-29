@@ -11,7 +11,7 @@ import Foundation
 
 // PersonView.ts
 public struct ApiPersonView: Codable {
-    let person: ApiPerson
-    let counts: ApiPersonAggregates
-    let isAdmin: Bool? // Exists >=0.19.0
+    public let person: ApiPerson
+    public let counts: ApiPersonAggregates
+    public let isAdmin: Bool? // Exists >=0.19.0
 }

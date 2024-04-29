@@ -11,8 +11,8 @@ import Foundation
 
 // LocalUserView.ts
 public struct ApiLocalUserView: Codable {
-    let localUser: ApiLocalUser
-    let person: ApiPerson
-    let counts: ApiPersonAggregates
-    let localUserVoteDisplayMode: ApiLocalUserVoteDisplayMode? // Exists only in 0.19.4
+    public let localUser: ApiLocalUser
+    public let person: ApiPerson
+    public let counts: ApiPersonAggregates
+    public let localUserVoteDisplayMode: ApiLocalUserVoteDisplayMode? // Exists only in 0.19.4
 }

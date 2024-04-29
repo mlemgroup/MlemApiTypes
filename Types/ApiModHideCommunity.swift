@@ -11,10 +11,10 @@ import Foundation
 
 // ModHideCommunity.ts
 public struct ApiModHideCommunity: Codable {
-    let id: Int
-    let communityId: Int
-    let modPersonId: Int
-    let when_: String
-    let reason: String?
-    let hidden: Bool
+    public let id: Int
+    public let communityId: Int
+    public let modPersonId: Int
+    public let when_: String
+    public let reason: String?
+    public let hidden: Bool
 }

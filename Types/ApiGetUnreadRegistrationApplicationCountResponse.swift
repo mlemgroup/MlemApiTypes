@@ -12,5 +12,5 @@ import Foundation
 // GetUnreadRegistrationApplicationCountResponse.ts
 // swiftlint:disable:next type_name
 public struct ApiGetUnreadRegistrationApplicationCountResponse: Codable {
-    let registrationApplications: Int
+    public let registrationApplications: Int
 }

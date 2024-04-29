@@ -11,8 +11,8 @@ import Foundation
 
 // ResolveObjectResponse.ts
 public struct ApiResolveObjectResponse: Codable {
-    let comment: ApiCommentView?
-    let post: ApiPostView?
-    let community: ApiCommunityView?
-    let person: ApiPersonView?
+    public let comment: ApiCommentView?
+    public let post: ApiPostView?
+    public let community: ApiCommunityView?
+    public let person: ApiPersonView?
 }

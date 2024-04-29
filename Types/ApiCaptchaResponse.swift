@@ -11,7 +11,7 @@ import Foundation
 
 // CaptchaResponse.ts
 public struct ApiCaptchaResponse: Codable {
-    let png: String
-    let wav: String
-    let uuid: String
+    public let png: String
+    public let wav: String
+    public let uuid: String
 }

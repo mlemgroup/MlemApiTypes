@@ -11,19 +11,19 @@ import Foundation
 
 // Site.ts
 public struct ApiSite: Codable {
-    let id: Int
-    let name: String
-    let sidebar: String?
-    let published: Date
-    let updated: Date?
-    let icon: URL?
-    let banner: URL?
-    let description: String?
-    let actorId: URL
-    let lastRefreshedAt: Date
-    let inboxUrl: String
-    let privateKey: String? // Exists <=0.19.3
-    let publicKey: String
-    let instanceId: Int
-    let contentWarning: String? // Exists only in 0.19.4
+    public let id: Int
+    public let name: String
+    public let sidebar: String?
+    public let published: Date
+    public let updated: Date?
+    public let icon: URL?
+    public let banner: URL?
+    public let description: String?
+    public let actorId: URL
+    public let lastRefreshedAt: Date
+    public let inboxUrl: String
+    public let privateKey: String? // Exists <=0.19.3
+    public let publicKey: String
+    public let instanceId: Int
+    public let contentWarning: String? // Exists only in 0.19.4
 }

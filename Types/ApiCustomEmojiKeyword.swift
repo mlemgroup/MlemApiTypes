@@ -11,7 +11,7 @@ import Foundation
 
 // CustomEmojiKeyword.ts
 public struct ApiCustomEmojiKeyword: Codable {
-    let id: Int? // Exists <=0.18.3
-    let customEmojiId: Int
-    let keyword: String
+    public let id: Int? // Exists <=0.18.3
+    public let customEmojiId: Int
+    public let keyword: String
 }

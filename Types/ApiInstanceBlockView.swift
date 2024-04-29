@@ -12,7 +12,7 @@ import Foundation
 // InstanceBlockView.ts
 // Exists >=0.19.0
 public struct ApiInstanceBlockView: Codable {
-    let person: ApiPerson
-    let instance: ApiInstance
-    let site: ApiSite?
+    public let person: ApiPerson
+    public let instance: ApiInstance
+    public let site: ApiSite?
 }

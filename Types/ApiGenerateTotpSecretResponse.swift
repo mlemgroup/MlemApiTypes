@@ -12,5 +12,5 @@ import Foundation
 // GenerateTotpSecretResponse.ts
 // Exists >=0.19.0
 public struct ApiGenerateTotpSecretResponse: Codable {
-    let totpSecretUrl: String
+    public let totpSecretUrl: String
 }

@@ -11,5 +11,5 @@ import Foundation
 
 // ListRegistrationApplicationsResponse.ts
 public struct ApiListRegistrationApplicationsResponse: Codable {
-    let registrationApplications: [ApiRegistrationApplicationView]
+    public let registrationApplications: [ApiRegistrationApplicationView]
 }

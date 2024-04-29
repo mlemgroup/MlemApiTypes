@@ -12,8 +12,8 @@ import Foundation
 // SiteMetadata.ts
 // Exists <=0.19.3
 public struct ApiSiteMetadata: Codable {
-    let title: String?
-    let description: String?
-    let image: String?
-    let embedVideoUrl: URL?
+    public let title: String?
+    public let description: String?
+    public let image: String?
+    public let embedVideoUrl: URL?
 }

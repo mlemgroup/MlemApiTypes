@@ -11,9 +11,9 @@ import Foundation
 
 // CommunityView.ts
 public struct ApiCommunityView: Codable {
-    let community: ApiCommunity
-    let subscribed: ApiSubscribedType
-    let blocked: Bool
-    let counts: ApiCommunityAggregates
-    let bannedFromCommunity: Bool? // Exists only in 0.19.4
+    public let community: ApiCommunity
+    public let subscribed: ApiSubscribedType
+    public let blocked: Bool
+    public let counts: ApiCommunityAggregates
+    public let bannedFromCommunity: Bool? // Exists only in 0.19.4
 }

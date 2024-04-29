@@ -11,9 +11,9 @@ import Foundation
 
 // BanPerson.ts
 public struct ApiBanPerson: Codable {
-    let personId: Int
-    let ban: Bool
-    let removeData: Bool?
-    let reason: String?
-    let expires: Int?
+    public let personId: Int
+    public let ban: Bool
+    public let removeData: Bool?
+    public let reason: String?
+    public let expires: Int?
 }

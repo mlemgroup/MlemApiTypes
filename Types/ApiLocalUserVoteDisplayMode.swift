@@ -12,9 +12,9 @@ import Foundation
 // LocalUserVoteDisplayMode.ts
 // Exists only in 0.19.4
 public struct ApiLocalUserVoteDisplayMode: Codable {
-    let localUserId: Int
-    let score: Bool
-    let upvotes: Bool
-    let downvotes: Bool
-    let upvotePercentage: Bool
+    public let localUserId: Int
+    public let score: Bool
+    public let upvotes: Bool
+    public let downvotes: Bool
+    public let upvotePercentage: Bool
 }

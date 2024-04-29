@@ -11,15 +11,15 @@ import Foundation
 
 // GetPosts.ts
 public struct ApiGetPosts: Codable {
-    let type_: ApiListingType?
-    let sort: ApiSortType?
-    let page: Int?
-    let limit: Int?
-    let communityId: Int?
-    let communityName: String?
-    let savedOnly: Bool?
-    let likedOnly: Bool? // Exists >=0.19.0
-    let dislikedOnly: Bool? // Exists >=0.19.0
-    let pageCursor: String? // Exists >=0.19.0
-    let showHidden: Bool? // Exists only in 0.19.4
+    public let type_: ApiListingType?
+    public let sort: ApiSortType?
+    public let page: Int?
+    public let limit: Int?
+    public let communityId: Int?
+    public let communityName: String?
+    public let savedOnly: Bool?
+    public let likedOnly: Bool? // Exists >=0.19.0
+    public let dislikedOnly: Bool? // Exists >=0.19.0
+    public let pageCursor: String? // Exists >=0.19.0
+    public let showHidden: Bool? // Exists only in 0.19.4
 }

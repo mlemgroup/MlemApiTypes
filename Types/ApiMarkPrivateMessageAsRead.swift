@@ -11,6 +11,6 @@ import Foundation
 
 // MarkPrivateMessageAsRead.ts
 public struct ApiMarkPrivateMessageAsRead: Codable {
-    let privateMessageId: Int
-    let read: Bool
+    public let privateMessageId: Int
+    public let read: Bool
 }

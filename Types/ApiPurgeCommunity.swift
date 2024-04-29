@@ -11,6 +11,6 @@ import Foundation
 
 // PurgeCommunity.ts
 public struct ApiPurgeCommunity: Codable {
-    let communityId: Int
-    let reason: String?
+    public let communityId: Int
+    public let reason: String?
 }

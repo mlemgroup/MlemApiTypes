@@ -11,6 +11,6 @@ import Foundation
 
 // MarkPersonMentionAsRead.ts
 public struct ApiMarkPersonMentionAsRead: Codable {
-    let personMentionId: Int
-    let read: Bool
+    public let personMentionId: Int
+    public let read: Bool
 }

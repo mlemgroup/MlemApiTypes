@@ -11,13 +11,13 @@ import Foundation
 
 // CreatePost.ts
 public struct ApiCreatePost: Codable {
-    let name: String
-    let communityId: Int
-    let url: String?
-    let body: String?
-    let honeypot: String?
-    let nsfw: Bool?
-    let languageId: Int?
-    let altText: String? // Exists only in 0.19.4
-    let customThumbnail: String? // Exists only in 0.19.4
+    public let name: String
+    public let communityId: Int
+    public let url: String?
+    public let body: String?
+    public let honeypot: String?
+    public let nsfw: Bool?
+    public let languageId: Int?
+    public let altText: String? // Exists only in 0.19.4
+    public let customThumbnail: String? // Exists only in 0.19.4
 }

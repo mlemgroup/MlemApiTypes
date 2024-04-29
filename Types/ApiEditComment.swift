@@ -11,8 +11,8 @@ import Foundation
 
 // EditComment.ts
 public struct ApiEditComment: Codable {
-    let commentId: Int
-    let content: String?
-    let languageId: Int?
-    let formId: String? // Exists <=0.18.3
+    public let commentId: Int
+    public let content: String?
+    public let languageId: Int?
+    public let formId: String? // Exists <=0.18.3
 }

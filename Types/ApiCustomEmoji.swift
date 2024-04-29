@@ -11,12 +11,12 @@ import Foundation
 
 // CustomEmoji.ts
 public struct ApiCustomEmoji: Codable {
-    let id: Int
-    let localSiteId: Int
-    let shortcode: String
-    let imageUrl: String
-    let altText: String
-    let category: String
-    let published: Date
-    let updated: Date?
+    public let id: Int
+    public let localSiteId: Int
+    public let shortcode: String
+    public let imageUrl: String
+    public let altText: String
+    public let category: String
+    public let published: Date
+    public let updated: Date?
 }

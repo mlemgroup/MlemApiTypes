@@ -11,5 +11,5 @@ import Foundation
 
 // DeleteCustomEmoji.ts
 public struct ApiDeleteCustomEmoji: Codable {
-    let id: Int
+    public let id: Int
 }

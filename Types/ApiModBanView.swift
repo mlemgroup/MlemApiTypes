@@ -11,7 +11,7 @@ import Foundation
 
 // ModBanView.ts
 public struct ApiModBanView: Codable {
-    let modBan: ApiModBan
-    let moderator: ApiPerson?
-    let bannedPerson: ApiPerson
+    public let modBan: ApiModBan
+    public let moderator: ApiPerson?
+    public let bannedPerson: ApiPerson
 }

@@ -11,9 +11,9 @@ import Foundation
 
 // CreateCustomEmoji.ts
 public struct ApiCreateCustomEmoji: Codable {
-    let category: String
-    let shortcode: String
-    let imageUrl: String
-    let altText: String
-    let keywords: [String]
+    public let category: String
+    public let shortcode: String
+    public let imageUrl: String
+    public let altText: String
+    public let keywords: [String]
 }

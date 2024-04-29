@@ -11,8 +11,8 @@ import Foundation
 
 // ModTransferCommunityView.ts
 public struct ApiModTransferCommunityView: Codable {
-    let modTransferCommunity: ApiModTransferCommunity
-    let moderator: ApiPerson?
-    let community: ApiCommunity
-    let moddedPerson: ApiPerson
+    public let modTransferCommunity: ApiModTransferCommunity
+    public let moderator: ApiPerson?
+    public let community: ApiCommunity
+    public let moddedPerson: ApiPerson
 }

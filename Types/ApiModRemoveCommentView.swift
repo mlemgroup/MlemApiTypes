@@ -11,10 +11,10 @@ import Foundation
 
 // ModRemoveCommentView.ts
 public struct ApiModRemoveCommentView: Codable {
-    let modRemoveComment: ApiModRemoveComment
-    let moderator: ApiPerson?
-    let comment: ApiComment
-    let commenter: ApiPerson
-    let post: ApiPost
-    let community: ApiCommunity
+    public let modRemoveComment: ApiModRemoveComment
+    public let moderator: ApiPerson?
+    public let comment: ApiComment
+    public let commenter: ApiPerson
+    public let post: ApiPost
+    public let community: ApiCommunity
 }

@@ -11,6 +11,6 @@ import Foundation
 
 // AddAdmin.ts
 public struct ApiAddAdmin: Codable {
-    let personId: Int
-    let added: Bool
+    public let personId: Int
+    public let added: Bool
 }

@@ -11,7 +11,7 @@ import Foundation
 
 // RemovePost.ts
 public struct ApiRemovePost: Codable {
-    let postId: Int
-    let removed: Bool
-    let reason: String?
+    public let postId: Int
+    public let removed: Bool
+    public let reason: String?
 }

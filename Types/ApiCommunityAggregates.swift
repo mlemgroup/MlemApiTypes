@@ -11,16 +11,16 @@ import Foundation
 
 // CommunityAggregates.ts
 public struct ApiCommunityAggregates: Codable {
-    let id: Int? // Exists <=0.18.3
-    let communityId: Int
-    let subscribers: Int
-    let posts: Int
-    let comments: Int
-    let published: Date
-    let usersActiveDay: Int
-    let usersActiveWeek: Int
-    let usersActiveMonth: Int
-    let usersActiveHalfYear: Int
-    let hotRank: Int? // Exists <=0.18.3
-    let subscribersLocal: Int? // Exists in 0.19.2, 0.19.4 but not in 0.18.0, 0.18.1, 0.18.3, 0.19.0, 0.19.3
+    public let id: Int? // Exists <=0.18.3
+    public let communityId: Int
+    public let subscribers: Int
+    public let posts: Int
+    public let comments: Int
+    public let published: Date
+    public let usersActiveDay: Int
+    public let usersActiveWeek: Int
+    public let usersActiveMonth: Int
+    public let usersActiveHalfYear: Int
+    public let hotRank: Int? // Exists <=0.18.3
+    public let subscribersLocal: Int? // Exists in 0.19.2, 0.19.4 but not in 0.18.0, 0.18.1, 0.18.3, 0.19.0, 0.19.3
 }

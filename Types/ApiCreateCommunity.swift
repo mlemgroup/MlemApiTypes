@@ -11,14 +11,14 @@ import Foundation
 
 // CreateCommunity.ts
 public struct ApiCreateCommunity: Codable {
-    let name: String
-    let title: String
-    let description: String?
-    let icon: URL?
-    let banner: URL?
-    let nsfw: Bool?
-    let postingRestrictedToMods: Bool?
-    let discussionLanguages: [Int]?
-    let onlyFollowersCanVote: Bool? // Exists only in 0.19.2
-    let visibility: ApiCommunityVisibility? // Exists in 0.19.2, 0.19.4 but not in 0.18.0, 0.18.1, 0.18.3, 0.19.0, 0.19.3
+    public let name: String
+    public let title: String
+    public let description: String?
+    public let icon: URL?
+    public let banner: URL?
+    public let nsfw: Bool?
+    public let postingRestrictedToMods: Bool?
+    public let discussionLanguages: [Int]?
+    public let onlyFollowersCanVote: Bool? // Exists only in 0.19.2
+    public let visibility: ApiCommunityVisibility? // Exists in 0.19.2, 0.19.4 but not in 0.18.0, 0.18.1, 0.18.3, 0.19.0, 0.19.3
 }

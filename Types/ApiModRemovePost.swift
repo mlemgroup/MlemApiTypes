@@ -11,10 +11,10 @@ import Foundation
 
 // ModRemovePost.ts
 public struct ApiModRemovePost: Codable {
-    let id: Int
-    let modPersonId: Int
-    let postId: Int
-    let reason: String?
-    let removed: Bool
-    let when_: String
+    public let id: Int
+    public let modPersonId: Int
+    public let postId: Int
+    public let reason: String?
+    public let removed: Bool
+    public let when_: String
 }

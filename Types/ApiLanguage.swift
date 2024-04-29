@@ -11,7 +11,7 @@ import Foundation
 
 // Language.ts
 public struct ApiLanguage: Codable {
-    let id: Int
-    let code: String
-    let name: String
+    public let id: Int
+    public let code: String
+    public let name: String
 }

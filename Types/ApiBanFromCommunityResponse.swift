@@ -11,6 +11,6 @@ import Foundation
 
 // BanFromCommunityResponse.ts
 public struct ApiBanFromCommunityResponse: Codable {
-    let personView: ApiPersonView
-    let banned: Bool
+    public let personView: ApiPersonView
+    public let banned: Bool
 }

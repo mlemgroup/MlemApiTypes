@@ -11,14 +11,14 @@ import Foundation
 
 // SiteAggregates.ts
 public struct ApiSiteAggregates: Codable {
-    let id: Int? // Exists <=0.18.3
-    let siteId: Int
-    let users: Int
-    let posts: Int
-    let comments: Int
-    let communities: Int
-    let usersActiveDay: Int
-    let usersActiveWeek: Int
-    let usersActiveMonth: Int
-    let usersActiveHalfYear: Int
+    public let id: Int? // Exists <=0.18.3
+    public let siteId: Int
+    public let users: Int
+    public let posts: Int
+    public let comments: Int
+    public let communities: Int
+    public let usersActiveDay: Int
+    public let usersActiveWeek: Int
+    public let usersActiveMonth: Int
+    public let usersActiveHalfYear: Int
 }

@@ -11,6 +11,6 @@ import Foundation
 
 // DeleteComment.ts
 public struct ApiDeleteComment: Codable {
-    let commentId: Int
-    let deleted: Bool
+    public let commentId: Int
+    public let deleted: Bool
 }

@@ -11,6 +11,6 @@ import Foundation
 
 // DistinguishComment.ts
 public struct ApiDistinguishComment: Codable {
-    let commentId: Int
-    let distinguished: Bool
+    public let commentId: Int
+    public let distinguished: Bool
 }

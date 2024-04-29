@@ -11,6 +11,6 @@ import Foundation
 
 // GetCommunity.ts
 public struct ApiGetCommunity: Codable {
-    let id: Int?
-    let name: String?
+    public let id: Int?
+    public let name: String?
 }

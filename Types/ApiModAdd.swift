@@ -11,9 +11,9 @@ import Foundation
 
 // ModAdd.ts
 public struct ApiModAdd: Codable {
-    let id: Int
-    let modPersonId: Int
-    let otherPersonId: Int
-    let removed: Bool
-    let when_: String
+    public let id: Int
+    public let modPersonId: Int
+    public let otherPersonId: Int
+    public let removed: Bool
+    public let when_: String
 }

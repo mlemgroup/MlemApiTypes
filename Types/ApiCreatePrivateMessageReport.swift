@@ -11,6 +11,6 @@ import Foundation
 
 // CreatePrivateMessageReport.ts
 public struct ApiCreatePrivateMessageReport: Codable {
-    let privateMessageId: Int
-    let reason: String
+    public let privateMessageId: Int
+    public let reason: String
 }
