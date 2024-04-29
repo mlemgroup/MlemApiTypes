@@ -2,7 +2,7 @@
 //  ApiCommentSortType.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // CommentSortType.ts
-enum ApiCommentSortType: String, Codable {
+public enum ApiCommentSortType: String, Codable {
     case hot = "Hot"
     case top = "Top"
     case new = "New"

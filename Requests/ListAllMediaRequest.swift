@@ -2,14 +2,14 @@
 //  ListAllMediaRequest.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
 
-struct ListAllMediaRequest: ApiGetRequest {
+public struct ListAllMediaRequest: ApiGetRequest {
     typealias Response = ApiListMediaResponse
 
     let path = "admin/list_all_media"

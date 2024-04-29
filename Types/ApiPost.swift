@@ -2,7 +2,7 @@
 //  ApiPost.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // Post.ts
-struct ApiPost: Codable {
+public struct ApiPost: Codable {
     let id: Int
     let name: String
     let url: String?

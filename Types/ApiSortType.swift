@@ -2,7 +2,7 @@
 //  ApiSortType.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // SortType.ts
-enum ApiSortType: String, Codable {
+public enum ApiSortType: String, Codable {
     case active = "Active"
     case hot = "Hot"
     case new = "New"

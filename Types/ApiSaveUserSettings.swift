@@ -2,7 +2,7 @@
 //  ApiSaveUserSettings.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // SaveUserSettings.ts
-struct ApiSaveUserSettings: Codable {
+public struct ApiSaveUserSettings: Codable {
     let showNsfw: Bool?
     let showScores: Bool?
     let theme: String?

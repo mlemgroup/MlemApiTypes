@@ -2,7 +2,7 @@
 //  ApiGetCaptchaResponse.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // GetCaptchaResponse.ts
-struct ApiGetCaptchaResponse: Codable {
+public struct ApiGetCaptchaResponse: Codable {
     // swiftlint:disable:next identifier_name
     let ok: ApiCaptchaResponse?
 }

@@ -2,7 +2,7 @@
 //  ApiModAddCommunityView.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // ModAddCommunityView.ts
-struct ApiModAddCommunityView: Codable {
+public struct ApiModAddCommunityView: Codable {
     let modAddCommunity: ApiModAddCommunity
     let moderator: ApiPerson?
     let community: ApiCommunity

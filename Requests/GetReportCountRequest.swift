@@ -2,14 +2,14 @@
 //  GetReportCountRequest.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
 
-struct GetReportCountRequest: ApiGetRequest {
+public struct GetReportCountRequest: ApiGetRequest {
     typealias Response = ApiGetReportCountResponse
 
     let path = "user/report_count"

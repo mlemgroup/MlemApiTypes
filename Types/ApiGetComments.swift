@@ -2,7 +2,7 @@
 //  ApiGetComments.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // GetComments.ts
-struct ApiGetComments: Codable {
+public struct ApiGetComments: Codable {
     let type_: ApiListingType?
     let sort: ApiCommentSortType?
     let maxDepth: Int?

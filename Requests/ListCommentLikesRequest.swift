@@ -2,14 +2,14 @@
 //  ListCommentLikesRequest.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
 
-struct ListCommentLikesRequest: ApiGetRequest {
+public struct ListCommentLikesRequest: ApiGetRequest {
     typealias Response = ApiListCommentLikesResponse
 
     let path = "comment/like/list"

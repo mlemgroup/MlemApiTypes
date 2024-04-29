@@ -2,7 +2,7 @@
 //  ApiCreateCustomEmoji.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // CreateCustomEmoji.ts
-struct ApiCreateCustomEmoji: Codable {
+public struct ApiCreateCustomEmoji: Codable {
     let category: String
     let shortcode: String
     let imageUrl: String

@@ -2,7 +2,7 @@
 //  ApiMyUserInfo.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // MyUserInfo.ts
-struct ApiMyUserInfo: Codable {
+public struct ApiMyUserInfo: Codable {
     let localUserView: ApiLocalUserView
     let follows: [ApiCommunityFollowerView]
     let moderates: [ApiCommunityModeratorView]

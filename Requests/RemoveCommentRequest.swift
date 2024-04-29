@@ -2,14 +2,14 @@
 //  RemoveCommentRequest.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
 
-struct RemoveCommentRequest: ApiPostRequest {
+public struct RemoveCommentRequest: ApiPostRequest {
     typealias Body = ApiRemoveComment
     typealias Response = ApiCommentResponse
 

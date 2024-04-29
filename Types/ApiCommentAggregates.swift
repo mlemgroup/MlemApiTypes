@@ -2,7 +2,7 @@
 //  ApiCommentAggregates.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // CommentAggregates.ts
-struct ApiCommentAggregates: Codable {
+public struct ApiCommentAggregates: Codable {
     let id: Int? // Exists <=0.18.3
     let commentId: Int
     let score: Int
