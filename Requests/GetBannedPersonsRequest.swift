@@ -12,8 +12,8 @@ import Foundation
 public struct GetBannedPersonsRequest: ApiGetRequest {
     public typealias Response = ApiBannedPersonsResponse
 
-    let path = "user/banned"
-    let queryItems: [URLQueryItem]
+    public let path = "user/banned"
+    public let queryItems: [URLQueryItem]
 
     init() {
         self.queryItems = .init()

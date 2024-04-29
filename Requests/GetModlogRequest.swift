@@ -12,8 +12,8 @@ import Foundation
 public struct GetModlogRequest: ApiGetRequest {
     public typealias Response = ApiGetModlogResponse
 
-    let path = "modlog"
-    let queryItems: [URLQueryItem]
+    public let path = "modlog"
+    public let queryItems: [URLQueryItem]
 
     init(
       modPersonId: Int?,

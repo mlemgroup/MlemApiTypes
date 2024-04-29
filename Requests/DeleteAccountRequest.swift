@@ -13,8 +13,8 @@ public struct DeleteAccountRequest: ApiPostRequest {
     public typealias Body = ApiDeleteAccount
     public typealias Response = ApiSuccessResponse
 
-    let path = "user/delete_account"
-    let body: Body?
+    public let path = "user/delete_account"
+    public let body: Body?
 
     init(
       password: String,

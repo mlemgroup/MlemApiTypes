@@ -12,8 +12,8 @@ import Foundation
 public struct ListRegistrationApplicationsRequest: ApiGetRequest {
     public typealias Response = ApiListRegistrationApplicationsResponse
 
-    let path = "admin/registration_application/list"
-    let queryItems: [URLQueryItem]
+    public let path = "admin/registration_application/list"
+    public let queryItems: [URLQueryItem]
 
     init(
       unreadOnly: Bool?,

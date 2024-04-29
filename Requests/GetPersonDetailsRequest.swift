@@ -12,8 +12,8 @@ import Foundation
 public struct GetPersonDetailsRequest: ApiGetRequest {
     public typealias Response = ApiGetPersonDetailsResponse
 
-    let path = "user"
-    let queryItems: [URLQueryItem]
+    public let path = "user"
+    public let queryItems: [URLQueryItem]
 
     init(
       personId: Int?,

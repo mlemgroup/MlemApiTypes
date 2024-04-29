@@ -13,8 +13,8 @@ public struct BlockPersonRequest: ApiPostRequest {
     public typealias Body = ApiBlockPerson
     public typealias Response = ApiBlockPersonResponse
 
-    let path = "user/block"
-    let body: Body?
+    public let path = "user/block"
+    public let body: Body?
 
     init(
       personId: Int,

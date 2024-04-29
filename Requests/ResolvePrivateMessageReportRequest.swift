@@ -13,8 +13,8 @@ public struct ResolvePrivateMessageReportRequest: ApiPutRequest {
     public typealias Body = ApiResolvePrivateMessageReport
     public typealias Response = ApiPrivateMessageReportResponse
 
-    let path = "private_message/report/resolve"
-    let body: Body?
+    public let path = "private_message/report/resolve"
+    public let body: Body?
 
     init(
       reportId: Int,

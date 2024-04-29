@@ -13,8 +13,8 @@ public struct UpdateTotpRequest: ApiPostRequest {
     public typealias Body = ApiUpdateTotp
     public typealias Response = ApiUpdateTotpResponse
 
-    let path = "user/totp/update"
-    let body: Body?
+    public let path = "user/totp/update"
+    public let body: Body?
 
     init(
       totpToken: String,

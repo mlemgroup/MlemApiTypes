@@ -12,8 +12,8 @@ import Foundation
 public struct SearchRequest: ApiGetRequest {
     public typealias Response = ApiSearchResponse
 
-    let path = "search"
-    let queryItems: [URLQueryItem]
+    public let path = "search"
+    public let queryItems: [URLQueryItem]
 
     init(
       // swiftlint:disable:next identifier_name

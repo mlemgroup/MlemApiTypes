@@ -13,8 +13,8 @@ public struct GenerateTotpSecretRequest: ApiPostRequest {
     public typealias Body = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiGenerateTotpSecretResponse
 
-    let path = "user/totp/generate"
-    let body: Body?
+    public let path = "user/totp/generate"
+    public let body: Body?
 
     init() {
         self.body = nil

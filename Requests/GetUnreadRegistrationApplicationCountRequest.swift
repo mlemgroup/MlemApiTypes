@@ -13,8 +13,8 @@ import Foundation
 public struct GetUnreadRegistrationApplicationCountRequest: ApiGetRequest {
     public typealias Response = ApiGetUnreadRegistrationApplicationCountResponse
 
-    let path = "admin/registration_application/count"
-    let queryItems: [URLQueryItem]
+    public let path = "admin/registration_application/count"
+    public let queryItems: [URLQueryItem]
 
     init() {
         self.queryItems = .init()

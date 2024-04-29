@@ -13,8 +13,8 @@ public struct LogoutRequest: ApiPostRequest {
     public typealias Body = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiSuccessResponse
 
-    let path = "user/logout"
-    let body: Body?
+    public let path = "user/logout"
+    public let body: Body?
 
     init() {
         self.body = nil

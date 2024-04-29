@@ -13,8 +13,8 @@ public struct PurgePersonRequest: ApiPostRequest {
     public typealias Body = ApiPurgePerson
     public typealias Response = ApiSuccessResponse
 
-    let path = "admin/purge/person"
-    let body: Body?
+    public let path = "admin/purge/person"
+    public let body: Body?
 
     init(
       personId: Int,

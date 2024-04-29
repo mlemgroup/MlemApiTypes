@@ -13,8 +13,8 @@ public struct EditCommunityRequest: ApiPutRequest {
     public typealias Body = ApiEditCommunity
     public typealias Response = ApiCommunityResponse
 
-    let path = "community"
-    let body: Body?
+    public let path = "community"
+    public let body: Body?
 
     init(
       communityId: Int,

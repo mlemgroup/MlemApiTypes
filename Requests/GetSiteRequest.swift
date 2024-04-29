@@ -12,8 +12,8 @@ import Foundation
 public struct GetSiteRequest: ApiGetRequest {
     public typealias Response = ApiGetSiteResponse
 
-    let path = "site"
-    let queryItems: [URLQueryItem]
+    public let path = "site"
+    public let queryItems: [URLQueryItem]
 
     init() {
         self.queryItems = .init()

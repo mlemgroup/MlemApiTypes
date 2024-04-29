@@ -13,8 +13,8 @@ public struct CreateSiteRequest: ApiPostRequest {
     public typealias Body = ApiCreateSite
     public typealias Response = ApiSiteResponse
 
-    let path = "site"
-    let body: Body?
+    public let path = "site"
+    public let body: Body?
 
     init(
       name: String,

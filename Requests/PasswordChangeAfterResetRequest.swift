@@ -13,8 +13,8 @@ public struct PasswordChangeAfterResetRequest: ApiPostRequest {
     public typealias Body = ApiPasswordChangeAfterReset
     public typealias Response = ApiSuccessResponse
 
-    let path = "user/password_change"
-    let body: Body?
+    public let path = "user/password_change"
+    public let body: Body?
 
     init(
       token: String,

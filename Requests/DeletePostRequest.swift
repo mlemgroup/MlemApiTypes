@@ -13,8 +13,8 @@ public struct DeletePostRequest: ApiPostRequest {
     public typealias Body = ApiDeletePost
     public typealias Response = ApiPostResponse
 
-    let path = "post/delete"
-    let body: Body?
+    public let path = "post/delete"
+    public let body: Body?
 
     init(
       postId: Int,

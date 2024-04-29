@@ -13,8 +13,8 @@ public struct MarkPostAsReadRequest: ApiPostRequest {
     public typealias Body = ApiMarkPostAsRead
     public typealias Response = ApiSuccessResponse
 
-    let path = "post/mark_as_read"
-    let body: Body?
+    public let path = "post/mark_as_read"
+    public let body: Body?
 
     init(
       postId: Int?,

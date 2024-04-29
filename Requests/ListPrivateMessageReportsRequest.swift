@@ -12,8 +12,8 @@ import Foundation
 public struct ListPrivateMessageReportsRequest: ApiGetRequest {
     public typealias Response = ApiListPrivateMessageReportsResponse
 
-    let path = "private_message/report/list"
-    let queryItems: [URLQueryItem]
+    public let path = "private_message/report/list"
+    public let queryItems: [URLQueryItem]
 
     init(
       page: Int?,

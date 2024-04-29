@@ -13,8 +13,8 @@ public struct HideCommunityRequest: ApiPutRequest {
     public typealias Body = ApiHideCommunity
     public typealias Response = ApiSuccessResponse
 
-    let path = "community/hide"
-    let body: Body?
+    public let path = "community/hide"
+    public let body: Body?
 
     init(
       communityId: Int,

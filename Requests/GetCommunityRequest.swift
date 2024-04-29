@@ -12,8 +12,8 @@ import Foundation
 public struct GetCommunityRequest: ApiGetRequest {
     public typealias Response = ApiGetCommunityResponse
 
-    let path = "community"
-    let queryItems: [URLQueryItem]
+    public let path = "community"
+    public let queryItems: [URLQueryItem]
 
     init(
       id: Int?,

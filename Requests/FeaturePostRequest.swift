@@ -13,8 +13,8 @@ public struct FeaturePostRequest: ApiPostRequest {
     public typealias Body = ApiFeaturePost
     public typealias Response = ApiPostResponse
 
-    let path = "post/feature"
-    let body: Body?
+    public let path = "post/feature"
+    public let body: Body?
 
     init(
       postId: Int,

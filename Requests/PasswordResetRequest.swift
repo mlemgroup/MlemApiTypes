@@ -13,8 +13,8 @@ public struct PasswordResetRequest: ApiPostRequest {
     public typealias Body = ApiPasswordReset
     public typealias Response = ApiSuccessResponse
 
-    let path = "user/password_reset"
-    let body: Body?
+    public let path = "user/password_reset"
+    public let body: Body?
 
     init(
       email: String

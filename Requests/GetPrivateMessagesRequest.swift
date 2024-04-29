@@ -12,8 +12,8 @@ import Foundation
 public struct GetPrivateMessagesRequest: ApiGetRequest {
     public typealias Response = ApiPrivateMessagesResponse
 
-    let path = "private_message/list"
-    let queryItems: [URLQueryItem]
+    public let path = "private_message/list"
+    public let queryItems: [URLQueryItem]
 
     init(
       unreadOnly: Bool?,

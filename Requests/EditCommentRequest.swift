@@ -13,8 +13,8 @@ public struct EditCommentRequest: ApiPutRequest {
     public typealias Body = ApiEditComment
     public typealias Response = ApiCommentResponse
 
-    let path = "comment"
-    let body: Body?
+    public let path = "comment"
+    public let body: Body?
 
     init(
       commentId: Int,

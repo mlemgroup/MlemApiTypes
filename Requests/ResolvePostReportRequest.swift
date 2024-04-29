@@ -13,8 +13,8 @@ public struct ResolvePostReportRequest: ApiPutRequest {
     public typealias Body = ApiResolvePostReport
     public typealias Response = ApiPostReportResponse
 
-    let path = "post/report/resolve"
-    let body: Body?
+    public let path = "post/report/resolve"
+    public let body: Body?
 
     init(
       reportId: Int,

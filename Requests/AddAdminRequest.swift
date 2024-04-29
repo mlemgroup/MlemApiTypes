@@ -13,8 +13,8 @@ public struct AddAdminRequest: ApiPostRequest {
     public typealias Body = ApiAddAdmin
     public typealias Response = ApiAddAdminResponse
 
-    let path = "admin/add"
-    let body: Body?
+    public let path = "admin/add"
+    public let body: Body?
 
     init(
       personId: Int,

@@ -12,8 +12,8 @@ import Foundation
 public struct ResolveObjectRequest: ApiGetRequest {
     public typealias Response = ApiResolveObjectResponse
 
-    let path = "resolve_object"
-    let queryItems: [URLQueryItem]
+    public let path = "resolve_object"
+    public let queryItems: [URLQueryItem]
 
     init(
       // swiftlint:disable:next identifier_name
