@@ -10,7 +10,7 @@
 import Foundation
 
 public struct GetSiteMetadataRequest: ApiGetRequest {
-    typealias Response = ApiGetSiteMetadataResponse
+    public typealias Response = ApiGetSiteMetadataResponse
 
     let path = "post/site_metadata"
     let queryItems: [URLQueryItem]

@@ -10,8 +10,8 @@
 import Foundation
 
 public struct PasswordResetRequest: ApiPostRequest {
-    typealias Body = ApiPasswordReset
-    typealias Response = ApiSuccessResponse
+    public typealias Body = ApiPasswordReset
+    public typealias Response = ApiSuccessResponse
 
     let path = "user/password_reset"
     let body: Body?

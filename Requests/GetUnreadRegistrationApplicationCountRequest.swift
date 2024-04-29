@@ -11,7 +11,7 @@ import Foundation
 
 // swiftlint:disable:next type_name
 public struct GetUnreadRegistrationApplicationCountRequest: ApiGetRequest {
-    typealias Response = ApiGetUnreadRegistrationApplicationCountResponse
+    public typealias Response = ApiGetUnreadRegistrationApplicationCountResponse
 
     let path = "admin/registration_application/count"
     let queryItems: [URLQueryItem]

@@ -10,8 +10,8 @@
 import Foundation
 
 public struct CreateCommentReportRequest: ApiPostRequest {
-    typealias Body = ApiCreateCommentReport
-    typealias Response = ApiCommentReportResponse
+    public typealias Body = ApiCreateCommentReport
+    public typealias Response = ApiCommentReportResponse
 
     let path = "comment/report"
     let body: Body?

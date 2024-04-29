@@ -10,8 +10,8 @@
 import Foundation
 
 public struct BanFromCommunityRequest: ApiPostRequest {
-    typealias Body = ApiBanFromCommunity
-    typealias Response = ApiBanFromCommunityResponse
+    public typealias Body = ApiBanFromCommunity
+    public typealias Response = ApiBanFromCommunityResponse
 
     let path = "community/ban_user"
     let body: Body?

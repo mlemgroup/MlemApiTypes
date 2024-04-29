@@ -10,8 +10,8 @@
 import Foundation
 
 public struct CreatePrivateMessageRequest: ApiPostRequest {
-    typealias Body = ApiCreatePrivateMessage
-    typealias Response = ApiPrivateMessageResponse
+    public typealias Body = ApiCreatePrivateMessage
+    public typealias Response = ApiPrivateMessageResponse
 
     let path = "private_message"
     let body: Body?

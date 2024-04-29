@@ -10,8 +10,8 @@
 import Foundation
 
 public struct RegisterRequest: ApiPostRequest {
-    typealias Body = ApiRegister
-    typealias Response = ApiLoginResponse
+    public typealias Body = ApiRegister
+    public typealias Response = ApiLoginResponse
 
     let path = "user/register"
     let body: Body?

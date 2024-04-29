@@ -10,7 +10,7 @@
 import Foundation
 
 public struct GetPostRequest: ApiGetRequest {
-    typealias Response = ApiGetPostResponse
+    public typealias Response = ApiGetPostResponse
 
     let path = "post"
     let queryItems: [URLQueryItem]

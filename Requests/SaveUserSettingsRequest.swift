@@ -10,8 +10,8 @@
 import Foundation
 
 public struct SaveUserSettingsRequest: ApiPutRequest {
-    typealias Body = ApiSaveUserSettings
-    typealias Response = ApiSuccessResponse
+    public typealias Body = ApiSaveUserSettings
+    public typealias Response = ApiSuccessResponse
 
     let path = "user/save_user_settings"
     let body: Body?

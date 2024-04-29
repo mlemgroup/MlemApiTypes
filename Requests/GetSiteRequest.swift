@@ -10,7 +10,7 @@
 import Foundation
 
 public struct GetSiteRequest: ApiGetRequest {
-    typealias Response = ApiGetSiteResponse
+    public typealias Response = ApiGetSiteResponse
 
     let path = "site"
     let queryItems: [URLQueryItem]

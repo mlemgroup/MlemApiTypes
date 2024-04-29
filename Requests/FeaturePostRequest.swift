@@ -10,8 +10,8 @@
 import Foundation
 
 public struct FeaturePostRequest: ApiPostRequest {
-    typealias Body = ApiFeaturePost
-    typealias Response = ApiPostResponse
+    public typealias Body = ApiFeaturePost
+    public typealias Response = ApiPostResponse
 
     let path = "post/feature"
     let body: Body?

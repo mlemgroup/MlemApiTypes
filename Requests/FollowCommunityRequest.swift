@@ -10,8 +10,8 @@
 import Foundation
 
 public struct FollowCommunityRequest: ApiPostRequest {
-    typealias Body = ApiFollowCommunity
-    typealias Response = ApiCommunityResponse
+    public typealias Body = ApiFollowCommunity
+    public typealias Response = ApiCommunityResponse
 
     let path = "community/follow"
     let body: Body?

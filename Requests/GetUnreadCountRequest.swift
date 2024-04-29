@@ -10,7 +10,7 @@
 import Foundation
 
 public struct GetUnreadCountRequest: ApiGetRequest {
-    typealias Response = ApiGetUnreadCountResponse
+    public typealias Response = ApiGetUnreadCountResponse
 
     let path = "user/unread_count"
     let queryItems: [URLQueryItem]

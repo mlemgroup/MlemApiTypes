@@ -10,8 +10,8 @@
 import Foundation
 
 public struct DistinguishCommentRequest: ApiPostRequest {
-    typealias Body = ApiDistinguishComment
-    typealias Response = ApiCommentResponse
+    public typealias Body = ApiDistinguishComment
+    public typealias Response = ApiCommentResponse
 
     let path = "comment/distinguish"
     let body: Body?

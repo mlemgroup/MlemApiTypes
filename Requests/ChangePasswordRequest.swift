@@ -10,8 +10,8 @@
 import Foundation
 
 public struct ChangePasswordRequest: ApiPutRequest {
-    typealias Body = ApiChangePassword
-    typealias Response = ApiLoginResponse
+    public typealias Body = ApiChangePassword
+    public typealias Response = ApiLoginResponse
 
     let path = "user/change_password"
     let body: Body?

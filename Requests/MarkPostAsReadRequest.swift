@@ -10,8 +10,8 @@
 import Foundation
 
 public struct MarkPostAsReadRequest: ApiPostRequest {
-    typealias Body = ApiMarkPostAsRead
-    typealias Response = ApiSuccessResponse
+    public typealias Body = ApiMarkPostAsRead
+    public typealias Response = ApiSuccessResponse
 
     let path = "post/mark_as_read"
     let body: Body?

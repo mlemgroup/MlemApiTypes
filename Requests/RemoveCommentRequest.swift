@@ -10,8 +10,8 @@
 import Foundation
 
 public struct RemoveCommentRequest: ApiPostRequest {
-    typealias Body = ApiRemoveComment
-    typealias Response = ApiCommentResponse
+    public typealias Body = ApiRemoveComment
+    public typealias Response = ApiCommentResponse
 
     let path = "comment/remove"
     let body: Body?

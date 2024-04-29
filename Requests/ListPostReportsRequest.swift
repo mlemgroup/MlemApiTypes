@@ -10,7 +10,7 @@
 import Foundation
 
 public struct ListPostReportsRequest: ApiGetRequest {
-    typealias Response = ApiListPostReportsResponse
+    public typealias Response = ApiListPostReportsResponse
 
     let path = "post/report/list"
     let queryItems: [URLQueryItem]

@@ -10,8 +10,8 @@
 import Foundation
 
 public struct VerifyEmailRequest: ApiPostRequest {
-    typealias Body = ApiVerifyEmail
-    typealias Response = ApiSuccessResponse
+    public typealias Body = ApiVerifyEmail
+    public typealias Response = ApiSuccessResponse
 
     let path = "user/verify_email"
     let body: Body?

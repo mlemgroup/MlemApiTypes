@@ -10,7 +10,7 @@
 import Foundation
 
 public struct ListRegistrationApplicationsRequest: ApiGetRequest {
-    typealias Response = ApiListRegistrationApplicationsResponse
+    public typealias Response = ApiListRegistrationApplicationsResponse
 
     let path = "admin/registration_application/list"
     let queryItems: [URLQueryItem]

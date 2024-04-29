@@ -10,8 +10,8 @@
 import Foundation
 
 public struct DeleteCustomEmojiRequest: ApiPostRequest {
-    typealias Body = ApiDeleteCustomEmoji
-    typealias Response = ApiSuccessResponse
+    public typealias Body = ApiDeleteCustomEmoji
+    public typealias Response = ApiSuccessResponse
 
     let path = "custom_emoji/delete"
     let body: Body?

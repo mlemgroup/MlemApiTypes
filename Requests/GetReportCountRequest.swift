@@ -10,7 +10,7 @@
 import Foundation
 
 public struct GetReportCountRequest: ApiGetRequest {
-    typealias Response = ApiGetReportCountResponse
+    public typealias Response = ApiGetReportCountResponse
 
     let path = "user/report_count"
     let queryItems: [URLQueryItem]

@@ -10,8 +10,8 @@
 import Foundation
 
 public struct LockPostRequest: ApiPostRequest {
-    typealias Body = ApiLockPost
-    typealias Response = ApiPostResponse
+    public typealias Body = ApiLockPost
+    public typealias Response = ApiPostResponse
 
     let path = "post/lock"
     let body: Body?

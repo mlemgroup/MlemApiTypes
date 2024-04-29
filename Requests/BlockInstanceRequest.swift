@@ -10,8 +10,8 @@
 import Foundation
 
 public struct BlockInstanceRequest: ApiPostRequest {
-    typealias Body = ApiBlockInstance
-    typealias Response = ApiBlockInstanceResponse
+    public typealias Body = ApiBlockInstance
+    public typealias Response = ApiBlockInstanceResponse
 
     let path = "site/block"
     let body: Body?

@@ -10,8 +10,8 @@
 import Foundation
 
 public struct BlockPersonRequest: ApiPostRequest {
-    typealias Body = ApiBlockPerson
-    typealias Response = ApiBlockPersonResponse
+    public typealias Body = ApiBlockPerson
+    public typealias Response = ApiBlockPersonResponse
 
     let path = "user/block"
     let body: Body?

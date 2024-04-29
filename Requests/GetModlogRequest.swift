@@ -10,7 +10,7 @@
 import Foundation
 
 public struct GetModlogRequest: ApiGetRequest {
-    typealias Response = ApiGetModlogResponse
+    public typealias Response = ApiGetModlogResponse
 
     let path = "modlog"
     let queryItems: [URLQueryItem]

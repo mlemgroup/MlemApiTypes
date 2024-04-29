@@ -10,7 +10,7 @@
 import Foundation
 
 public struct GetCommentRequest: ApiGetRequest {
-    typealias Response = ApiCommentResponse
+    public typealias Response = ApiCommentResponse
 
     let path = "comment"
     let queryItems: [URLQueryItem]
