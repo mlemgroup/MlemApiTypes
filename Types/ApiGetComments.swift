@@ -11,16 +11,16 @@ import Foundation
 
 // GetComments.ts
 public struct ApiGetComments: Codable {
-    let type_: ApiListingType?
-    let sort: ApiCommentSortType?
-    let maxDepth: Int?
-    let page: Int?
-    let limit: Int?
-    let communityId: Int?
-    let communityName: String?
-    let postId: Int?
-    let parentId: Int?
-    let savedOnly: Bool?
-    let likedOnly: Bool? // Exists >=0.19.0
-    let dislikedOnly: Bool? // Exists >=0.19.0
+    public let type_: ApiListingType?
+    public let sort: ApiCommentSortType?
+    public let maxDepth: Int?
+    public let page: Int?
+    public let limit: Int?
+    public let communityId: Int?
+    public let communityName: String?
+    public let postId: Int?
+    public let parentId: Int?
+    public let savedOnly: Bool?
+    public let likedOnly: Bool? // Exists >=0.19.0
+    public let dislikedOnly: Bool? // Exists >=0.19.0
 }

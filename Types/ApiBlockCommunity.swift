@@ -11,6 +11,6 @@ import Foundation
 
 // BlockCommunity.ts
 public struct ApiBlockCommunity: Codable {
-    let communityId: Int
-    let block: Bool
+    public let communityId: Int
+    public let block: Bool
 }

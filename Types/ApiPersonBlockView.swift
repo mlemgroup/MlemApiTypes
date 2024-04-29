@@ -11,6 +11,6 @@ import Foundation
 
 // PersonBlockView.ts
 public struct ApiPersonBlockView: Codable {
-    let person: ApiPerson
-    let target: ApiPerson
+    public let person: ApiPerson
+    public let target: ApiPerson
 }

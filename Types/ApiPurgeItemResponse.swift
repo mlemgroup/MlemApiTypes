@@ -12,5 +12,5 @@ import Foundation
 // PurgeItemResponse.ts
 // Exists <=0.18.3
 public struct ApiPurgeItemResponse: Codable {
-    let success: Bool
+    public let success: Bool
 }

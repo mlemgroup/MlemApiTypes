@@ -11,13 +11,13 @@ import Foundation
 
 // Register.ts
 public struct ApiRegister: Codable {
-    let username: String
-    let password: String
-    let passwordVerify: String
-    let showNsfw: Bool
-    let email: String?
-    let captchaUuid: String?
-    let captchaAnswer: String?
-    let honeypot: String?
-    let answer: String?
+    public let username: String
+    public let password: String
+    public let passwordVerify: String
+    public let showNsfw: Bool
+    public let email: String?
+    public let captchaUuid: String?
+    public let captchaAnswer: String?
+    public let honeypot: String?
+    public let answer: String?
 }

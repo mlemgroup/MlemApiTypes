@@ -11,11 +11,11 @@ import Foundation
 
 // ModRemoveCommunity.ts
 public struct ApiModRemoveCommunity: Codable {
-    let id: Int
-    let modPersonId: Int
-    let communityId: Int
-    let reason: String?
-    let removed: Bool
-    let expires: String? // Exists <=0.18.3
-    let when_: String
+    public let id: Int
+    public let modPersonId: Int
+    public let communityId: Int
+    public let reason: String?
+    public let removed: Bool
+    public let expires: String? // Exists <=0.18.3
+    public let when_: String
 }

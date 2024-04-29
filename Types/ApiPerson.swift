@@ -11,22 +11,22 @@ import Foundation
 
 // Person.ts
 public struct ApiPerson: Codable {
-    let id: Int
-    let name: String
-    let displayName: String?
-    let avatar: URL?
-    let banned: Bool
-    let published: Date
-    let updated: Date?
-    let actorId: URL
-    let bio: String?
-    let local: Bool
-    let banner: URL?
-    let deleted: Bool
-    let matrixUserId: String?
-    let admin: Bool? // Exists <=0.18.3
-    let botAccount: Bool
-    let banExpires: Date?
-    let instanceId: Int
-    let inboxUrl: String? // Exists between 0.18.1 and 0.18.3
+    public let id: Int
+    public let name: String
+    public let displayName: String?
+    public let avatar: URL?
+    public let banned: Bool
+    public let published: Date
+    public let updated: Date?
+    public let actorId: URL
+    public let bio: String?
+    public let local: Bool
+    public let banner: URL?
+    public let deleted: Bool
+    public let matrixUserId: String?
+    public let admin: Bool? // Exists <=0.18.3
+    public let botAccount: Bool
+    public let banExpires: Date?
+    public let instanceId: Int
+    public let inboxUrl: String? // Exists between 0.18.1 and 0.18.3
 }

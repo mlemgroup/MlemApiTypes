@@ -11,7 +11,7 @@ import Foundation
 
 // ChangePassword.ts
 public struct ApiChangePassword: Codable {
-    let newPassword: String
-    let newPasswordVerify: String
-    let oldPassword: String
+    public let newPassword: String
+    public let newPasswordVerify: String
+    public let oldPassword: String
 }

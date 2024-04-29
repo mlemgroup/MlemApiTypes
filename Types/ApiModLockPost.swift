@@ -11,9 +11,9 @@ import Foundation
 
 // ModLockPost.ts
 public struct ApiModLockPost: Codable {
-    let id: Int
-    let modPersonId: Int
-    let postId: Int
-    let locked: Bool
-    let when_: String
+    public let id: Int
+    public let modPersonId: Int
+    public let postId: Int
+    public let locked: Bool
+    public let when_: String
 }

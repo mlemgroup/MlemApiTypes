@@ -11,5 +11,5 @@ import Foundation
 
 // GetRepliesResponse.ts
 public struct ApiGetRepliesResponse: Codable {
-    let replies: [ApiCommentReplyView]
+    public let replies: [ApiCommentReplyView]
 }

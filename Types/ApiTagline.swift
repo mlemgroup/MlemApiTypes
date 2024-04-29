@@ -11,9 +11,9 @@ import Foundation
 
 // Tagline.ts
 public struct ApiTagline: Codable {
-    let id: Int
-    let localSiteId: Int
-    let content: String
-    let published: Date
-    let updated: Date?
+    public let id: Int
+    public let localSiteId: Int
+    public let content: String
+    public let published: Date
+    public let updated: Date?
 }

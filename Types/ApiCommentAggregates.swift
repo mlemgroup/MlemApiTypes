@@ -11,12 +11,12 @@ import Foundation
 
 // CommentAggregates.ts
 public struct ApiCommentAggregates: Codable {
-    let id: Int? // Exists <=0.18.3
-    let commentId: Int
-    let score: Int
-    let upvotes: Int
-    let downvotes: Int
-    let published: Date
-    let childCount: Int
-    let hotRank: Int? // Exists <=0.18.3
+    public let id: Int? // Exists <=0.18.3
+    public let commentId: Int
+    public let score: Int
+    public let upvotes: Int
+    public let downvotes: Int
+    public let published: Date
+    public let childCount: Int
+    public let hotRank: Int? // Exists <=0.18.3
 }

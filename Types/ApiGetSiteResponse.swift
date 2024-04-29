@@ -11,13 +11,13 @@ import Foundation
 
 // GetSiteResponse.ts
 public struct ApiGetSiteResponse: Codable {
-    let siteView: ApiSiteView
-    let admins: [ApiPersonView]
-    let version: String
-    let myUser: ApiMyUserInfo?
-    let allLanguages: [ApiLanguage]
-    let discussionLanguages: [Int]
-    let taglines: [ApiTagline]
-    let customEmojis: [ApiCustomEmojiView]
-    let blockedUrls: [ApiLocalSiteUrlBlocklist]? // Exists only in 0.19.4
+    public let siteView: ApiSiteView
+    public let admins: [ApiPersonView]
+    public let version: String
+    public let myUser: ApiMyUserInfo?
+    public let allLanguages: [ApiLanguage]
+    public let discussionLanguages: [Int]
+    public let taglines: [ApiTagline]
+    public let customEmojis: [ApiCustomEmojiView]
+    public let blockedUrls: [ApiLocalSiteUrlBlocklist]? // Exists only in 0.19.4
 }

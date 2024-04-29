@@ -12,5 +12,5 @@ import Foundation
 // ResolveObject.ts
 public struct ApiResolveObject: Codable {
     // swiftlint:disable:next identifier_name
-    let q: String
+    public let q: String
 }

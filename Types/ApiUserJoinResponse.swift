@@ -12,5 +12,5 @@ import Foundation
 // UserJoinResponse.ts
 // Exists <=0.18.3
 public struct ApiUserJoinResponse: Codable {
-    let joined: Bool
+    public let joined: Bool
 }

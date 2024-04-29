@@ -11,10 +11,10 @@ import Foundation
 
 // Instance.ts
 public struct ApiInstance: Codable {
-    let id: Int
-    let domain: String
-    let published: Date
-    let updated: Date?
-    let software: String?
-    let version: String?
+    public let id: Int
+    public let domain: String
+    public let published: Date
+    public let updated: Date?
+    public let software: String?
+    public let version: String?
 }

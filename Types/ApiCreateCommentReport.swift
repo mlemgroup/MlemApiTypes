@@ -11,6 +11,6 @@ import Foundation
 
 // CreateCommentReport.ts
 public struct ApiCreateCommentReport: Codable {
-    let commentId: Int
-    let reason: String
+    public let commentId: Int
+    public let reason: String
 }

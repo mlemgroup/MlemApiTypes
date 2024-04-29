@@ -12,5 +12,5 @@ import Foundation
 // SuccessResponse.ts
 // Exists >=0.19.0
 public struct ApiSuccessResponse: Codable {
-    let success: Bool
+    public let success: Bool
 }

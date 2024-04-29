@@ -11,10 +11,10 @@ import Foundation
 
 // RegistrationApplication.ts
 public struct ApiRegistrationApplication: Codable {
-    let id: Int
-    let localUserId: Int
-    let answer: String
-    let adminId: Int?
-    let denyReason: String?
-    let published: Date
+    public let id: Int
+    public let localUserId: Int
+    public let answer: String
+    public let adminId: Int?
+    public let denyReason: String?
+    public let published: Date
 }

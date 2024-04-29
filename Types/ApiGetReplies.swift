@@ -11,8 +11,8 @@ import Foundation
 
 // GetReplies.ts
 public struct ApiGetReplies: Codable {
-    let sort: ApiCommentSortType?
-    let page: Int?
-    let limit: Int?
-    let unreadOnly: Bool?
+    public let sort: ApiCommentSortType?
+    public let page: Int?
+    public let limit: Int?
+    public let unreadOnly: Bool?
 }

@@ -11,8 +11,8 @@ import Foundation
 
 // SiteView.ts
 public struct ApiSiteView: Codable {
-    let site: ApiSite
-    let localSite: ApiLocalSite
-    let localSiteRateLimit: ApiLocalSiteRateLimit
-    let counts: ApiSiteAggregates
+    public let site: ApiSite
+    public let localSite: ApiLocalSite
+    public let localSiteRateLimit: ApiLocalSiteRateLimit
+    public let counts: ApiSiteAggregates
 }

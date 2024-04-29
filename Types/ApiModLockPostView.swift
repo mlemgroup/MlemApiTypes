@@ -11,8 +11,8 @@ import Foundation
 
 // ModLockPostView.ts
 public struct ApiModLockPostView: Codable {
-    let modLockPost: ApiModLockPost
-    let moderator: ApiPerson?
-    let post: ApiPost
-    let community: ApiCommunity
+    public let modLockPost: ApiModLockPost
+    public let moderator: ApiPerson?
+    public let post: ApiPost
+    public let community: ApiCommunity
 }

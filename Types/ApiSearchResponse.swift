@@ -11,9 +11,9 @@ import Foundation
 
 // SearchResponse.ts
 public struct ApiSearchResponse: Codable {
-    let type_: ApiSearchType
-    let comments: [ApiCommentView]
-    let posts: [ApiPostView]
-    let communities: [ApiCommunityView]
-    let users: [ApiPersonView]
+    public let type_: ApiSearchType
+    public let comments: [ApiCommentView]
+    public let posts: [ApiPostView]
+    public let communities: [ApiCommunityView]
+    public let users: [ApiPersonView]
 }

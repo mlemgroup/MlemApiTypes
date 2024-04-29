@@ -12,5 +12,5 @@ import Foundation
 // ListPostLikesResponse.ts
 // Exists >=0.19.2
 public struct ApiListPostLikesResponse: Codable {
-    let postLikes: [ApiVoteView]
+    public let postLikes: [ApiVoteView]
 }

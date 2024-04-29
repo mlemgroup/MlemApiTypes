@@ -11,27 +11,27 @@ import Foundation
 
 // Post.ts
 public struct ApiPost: Codable {
-    let id: Int
-    let name: String
-    let url: String?
-    let body: String?
-    let creatorId: Int
-    let communityId: Int
-    let removed: Bool
-    let locked: Bool
-    let published: Date
-    let updated: Date?
-    let deleted: Bool
-    let nsfw: Bool
-    let embedTitle: String?
-    let embedDescription: String?
-    let thumbnailUrl: URL?
-    let apId: URL
-    let local: Bool
-    let embedVideoUrl: URL?
-    let languageId: Int
-    let featuredCommunity: Bool
-    let featuredLocal: Bool
-    let urlContentType: String? // Exists only in 0.19.4
-    let altText: String? // Exists only in 0.19.4
+    public let id: Int
+    public let name: String
+    public let url: String?
+    public let body: String?
+    public let creatorId: Int
+    public let communityId: Int
+    public let removed: Bool
+    public let locked: Bool
+    public let published: Date
+    public let updated: Date?
+    public let deleted: Bool
+    public let nsfw: Bool
+    public let embedTitle: String?
+    public let embedDescription: String?
+    public let thumbnailUrl: URL?
+    public let apId: URL
+    public let local: Bool
+    public let embedVideoUrl: URL?
+    public let languageId: Int
+    public let featuredCommunity: Bool
+    public let featuredLocal: Bool
+    public let urlContentType: String? // Exists only in 0.19.4
+    public let altText: String? // Exists only in 0.19.4
 }

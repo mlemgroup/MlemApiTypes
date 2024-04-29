@@ -11,12 +11,12 @@ import Foundation
 
 // EditPost.ts
 public struct ApiEditPost: Codable {
-    let postId: Int
-    let name: String?
-    let url: String?
-    let body: String?
-    let nsfw: Bool?
-    let languageId: Int?
-    let altText: String? // Exists only in 0.19.4
-    let customThumbnail: String? // Exists only in 0.19.4
+    public let postId: Int
+    public let name: String?
+    public let url: String?
+    public let body: String?
+    public let nsfw: Bool?
+    public let languageId: Int?
+    public let altText: String? // Exists only in 0.19.4
+    public let customThumbnail: String? // Exists only in 0.19.4
 }

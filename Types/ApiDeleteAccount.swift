@@ -11,6 +11,6 @@ import Foundation
 
 // DeleteAccount.ts
 public struct ApiDeleteAccount: Codable {
-    let password: String
-    let deleteContent: Bool? // Exists >=0.19.0
+    public let password: String
+    public let deleteContent: Bool? // Exists >=0.19.0
 }

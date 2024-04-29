@@ -11,6 +11,6 @@ import Foundation
 
 // ResolvePrivateMessageReport.ts
 public struct ApiResolvePrivateMessageReport: Codable {
-    let reportId: Int
-    let resolved: Bool
+    public let reportId: Int
+    public let resolved: Bool
 }

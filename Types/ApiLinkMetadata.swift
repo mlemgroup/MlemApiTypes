@@ -12,9 +12,9 @@ import Foundation
 // LinkMetadata.ts
 // Exists only in 0.19.4
 public struct ApiLinkMetadata: Codable {
-    let title: String?
-    let description: String?
-    let image: String?
-    let embedVideoUrl: URL?
-    let contentType: String?
+    public let title: String?
+    public let description: String?
+    public let image: String?
+    public let embedVideoUrl: URL?
+    public let contentType: String?
 }

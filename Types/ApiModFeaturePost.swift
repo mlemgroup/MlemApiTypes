@@ -11,10 +11,10 @@ import Foundation
 
 // ModFeaturePost.ts
 public struct ApiModFeaturePost: Codable {
-    let id: Int
-    let modPersonId: Int
-    let postId: Int
-    let featured: Bool
-    let when_: String
-    let isFeaturedCommunity: Bool
+    public let id: Int
+    public let modPersonId: Int
+    public let postId: Int
+    public let featured: Bool
+    public let when_: String
+    public let isFeaturedCommunity: Bool
 }

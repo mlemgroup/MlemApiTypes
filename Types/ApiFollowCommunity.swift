@@ -11,6 +11,6 @@ import Foundation
 
 // FollowCommunity.ts
 public struct ApiFollowCommunity: Codable {
-    let communityId: Int
-    let follow: Bool
+    public let communityId: Int
+    public let follow: Bool
 }

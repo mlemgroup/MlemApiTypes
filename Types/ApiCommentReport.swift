@@ -11,13 +11,13 @@ import Foundation
 
 // CommentReport.ts
 public struct ApiCommentReport: Codable {
-    let id: Int
-    let creatorId: Int
-    let commentId: Int
-    let originalCommentText: String
-    let reason: String
-    let resolved: Bool
-    let resolverId: Int?
-    let published: Date
-    let updated: Date?
+    public let id: Int
+    public let creatorId: Int
+    public let commentId: Int
+    public let originalCommentText: String
+    public let reason: String
+    public let resolved: Bool
+    public let resolverId: Int?
+    public let published: Date
+    public let updated: Date?
 }

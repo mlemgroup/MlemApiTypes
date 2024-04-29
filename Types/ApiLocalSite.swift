@@ -11,33 +11,33 @@ import Foundation
 
 // LocalSite.ts
 public struct ApiLocalSite: Codable {
-    let id: Int
-    let siteId: Int
-    let siteSetup: Bool
-    let enableDownvotes: Bool
-    let enableNsfw: Bool
-    let communityCreationAdminOnly: Bool
-    let requireEmailVerification: Bool
-    let applicationQuestion: String?
-    let privateInstance: Bool
-    let defaultTheme: String
-    let defaultPostListingType: ApiListingType
-    let legalInformation: String?
-    let hideModlogModNames: Bool
-    let applicationEmailAdmins: Bool
-    let slurFilterRegex: String?
-    let actorNameMaxLength: Int
-    let federationEnabled: Bool
-    let federationWorkerCount: Int? // Exists only in 0.18.0
-    let captchaEnabled: Bool
-    let captchaDifficulty: String
-    let published: Date
-    let updated: Date?
-    let registrationMode: ApiRegistrationMode
-    let reportsEmailAdmins: Bool
-    let federationSignedFetch: Bool? // Exists >=0.19.0
-    let contentWarning: String? // Exists only in 0.19.2
-    let autoExpandImages: Bool? // Exists only in 0.19.2
-    let defaultPostListingMode: ApiPostListingMode? // Exists only in 0.19.4
-    let defaultSortType: ApiSortType? // Exists only in 0.19.4
+    public let id: Int
+    public let siteId: Int
+    public let siteSetup: Bool
+    public let enableDownvotes: Bool
+    public let enableNsfw: Bool
+    public let communityCreationAdminOnly: Bool
+    public let requireEmailVerification: Bool
+    public let applicationQuestion: String?
+    public let privateInstance: Bool
+    public let defaultTheme: String
+    public let defaultPostListingType: ApiListingType
+    public let legalInformation: String?
+    public let hideModlogModNames: Bool
+    public let applicationEmailAdmins: Bool
+    public let slurFilterRegex: String?
+    public let actorNameMaxLength: Int
+    public let federationEnabled: Bool
+    public let federationWorkerCount: Int? // Exists only in 0.18.0
+    public let captchaEnabled: Bool
+    public let captchaDifficulty: String
+    public let published: Date
+    public let updated: Date?
+    public let registrationMode: ApiRegistrationMode
+    public let reportsEmailAdmins: Bool
+    public let federationSignedFetch: Bool? // Exists >=0.19.0
+    public let contentWarning: String? // Exists only in 0.19.2
+    public let autoExpandImages: Bool? // Exists only in 0.19.2
+    public let defaultPostListingMode: ApiPostListingMode? // Exists only in 0.19.4
+    public let defaultSortType: ApiSortType? // Exists only in 0.19.4
 }

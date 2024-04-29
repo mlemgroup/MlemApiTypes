@@ -11,9 +11,9 @@ import Foundation
 
 // PersonMention.ts
 public struct ApiPersonMention: Codable {
-    let id: Int
-    let recipientId: Int
-    let commentId: Int
-    let read: Bool
-    let published: Date
+    public let id: Int
+    public let recipientId: Int
+    public let commentId: Int
+    public let read: Bool
+    public let published: Date
 }

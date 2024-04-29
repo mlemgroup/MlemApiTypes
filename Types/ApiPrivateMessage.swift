@@ -11,14 +11,14 @@ import Foundation
 
 // PrivateMessage.ts
 public struct ApiPrivateMessage: Codable {
-    let id: Int
-    let creatorId: Int
-    let recipientId: Int
-    let content: String
-    let deleted: Bool
-    let read: Bool
-    let published: Date
-    let updated: Date?
-    let apId: URL
-    let local: Bool
+    public let id: Int
+    public let creatorId: Int
+    public let recipientId: Int
+    public let content: String
+    public let deleted: Bool
+    public let read: Bool
+    public let published: Date
+    public let updated: Date?
+    public let apId: URL
+    public let local: Bool
 }

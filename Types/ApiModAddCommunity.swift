@@ -11,10 +11,10 @@ import Foundation
 
 // ModAddCommunity.ts
 public struct ApiModAddCommunity: Codable {
-    let id: Int
-    let modPersonId: Int
-    let otherPersonId: Int
-    let communityId: Int
-    let removed: Bool
-    let when_: String
+    public let id: Int
+    public let modPersonId: Int
+    public let otherPersonId: Int
+    public let communityId: Int
+    public let removed: Bool
+    public let when_: String
 }

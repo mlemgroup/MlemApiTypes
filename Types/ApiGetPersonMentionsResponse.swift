@@ -11,5 +11,5 @@ import Foundation
 
 // GetPersonMentionsResponse.ts
 public struct ApiGetPersonMentionsResponse: Codable {
-    let mentions: [ApiPersonMentionView]
+    public let mentions: [ApiPersonMentionView]
 }

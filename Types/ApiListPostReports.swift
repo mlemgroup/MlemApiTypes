@@ -11,9 +11,9 @@ import Foundation
 
 // ListPostReports.ts
 public struct ApiListPostReports: Codable {
-    let page: Int?
-    let limit: Int?
-    let unresolvedOnly: Bool?
-    let communityId: Int?
-    let postId: Int? // Exists only in 0.19.4
+    public let page: Int?
+    public let limit: Int?
+    public let unresolvedOnly: Bool?
+    public let communityId: Int?
+    public let postId: Int? // Exists only in 0.19.4
 }

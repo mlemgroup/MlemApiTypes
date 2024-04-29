@@ -11,7 +11,7 @@ import Foundation
 
 // AdminPurgeCommentView.ts
 public struct ApiAdminPurgeCommentView: Codable {
-    let adminPurgeComment: ApiAdminPurgeComment
-    let admin: ApiPerson?
-    let post: ApiPost
+    public let adminPurgeComment: ApiAdminPurgeComment
+    public let admin: ApiPerson?
+    public let post: ApiPost
 }

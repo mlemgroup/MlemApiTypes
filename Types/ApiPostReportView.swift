@@ -11,21 +11,21 @@ import Foundation
 
 // PostReportView.ts
 public struct ApiPostReportView: Codable {
-    let postReport: ApiPostReport
-    let post: ApiPost
-    let community: ApiCommunity
-    let creator: ApiPerson
-    let postCreator: ApiPerson
-    let creatorBannedFromCommunity: Bool
-    let myVote: Int?
-    let counts: ApiPostAggregates
-    let resolver: ApiPerson?
-    let creatorIsModerator: Bool? // Exists only in 0.19.4
-    let creatorIsAdmin: Bool? // Exists only in 0.19.4
-    let subscribed: ApiSubscribedType? // Exists only in 0.19.4
-    let saved: Bool? // Exists only in 0.19.4
-    let read: Bool? // Exists only in 0.19.4
-    let hidden: Bool? // Exists only in 0.19.4
-    let creatorBlocked: Bool? // Exists only in 0.19.4
-    let unreadComments: Int? // Exists only in 0.19.4
+    public let postReport: ApiPostReport
+    public let post: ApiPost
+    public let community: ApiCommunity
+    public let creator: ApiPerson
+    public let postCreator: ApiPerson
+    public let creatorBannedFromCommunity: Bool
+    public let myVote: Int?
+    public let counts: ApiPostAggregates
+    public let resolver: ApiPerson?
+    public let creatorIsModerator: Bool? // Exists only in 0.19.4
+    public let creatorIsAdmin: Bool? // Exists only in 0.19.4
+    public let subscribed: ApiSubscribedType? // Exists only in 0.19.4
+    public let saved: Bool? // Exists only in 0.19.4
+    public let read: Bool? // Exists only in 0.19.4
+    public let hidden: Bool? // Exists only in 0.19.4
+    public let creatorBlocked: Bool? // Exists only in 0.19.4
+    public let unreadComments: Int? // Exists only in 0.19.4
 }

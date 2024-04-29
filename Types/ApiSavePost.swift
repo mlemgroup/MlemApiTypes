@@ -11,6 +11,6 @@ import Foundation
 
 // SavePost.ts
 public struct ApiSavePost: Codable {
-    let postId: Int
-    let save: Bool
+    public let postId: Int
+    public let save: Bool
 }

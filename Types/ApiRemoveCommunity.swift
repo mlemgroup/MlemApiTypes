@@ -11,8 +11,8 @@ import Foundation
 
 // RemoveCommunity.ts
 public struct ApiRemoveCommunity: Codable {
-    let communityId: Int
-    let removed: Bool
-    let reason: String?
-    let expires: Int? // Exists <=0.18.3
+    public let communityId: Int
+    public let removed: Bool
+    public let reason: String?
+    public let expires: Int? // Exists <=0.18.3
 }

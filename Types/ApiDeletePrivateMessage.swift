@@ -11,6 +11,6 @@ import Foundation
 
 // DeletePrivateMessage.ts
 public struct ApiDeletePrivateMessage: Codable {
-    let privateMessageId: Int
-    let deleted: Bool
+    public let privateMessageId: Int
+    public let deleted: Bool
 }

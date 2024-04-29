@@ -12,9 +12,9 @@ import Foundation
 // LoginToken.ts
 // Exists >=0.19.0
 public struct ApiLoginToken: Codable {
-    let userId: Int
-    let published: Date
+    public let userId: Int
+    public let published: Date
     // swiftlint:disable:next identifier_name
-    let ip: String?
-    let userAgent: String?
+    public let ip: String?
+    public let userAgent: String?
 }

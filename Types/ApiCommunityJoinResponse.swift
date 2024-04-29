@@ -12,5 +12,5 @@ import Foundation
 // CommunityJoinResponse.ts
 // Exists <=0.18.3
 public struct ApiCommunityJoinResponse: Codable {
-    let joined: Bool
+    public let joined: Bool
 }

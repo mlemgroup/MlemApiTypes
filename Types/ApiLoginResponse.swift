@@ -11,7 +11,7 @@ import Foundation
 
 // LoginResponse.ts
 public struct ApiLoginResponse: Codable {
-    let jwt: String?
-    let registrationCreated: Bool
-    let verifyEmailSent: Bool
+    public let jwt: String?
+    public let registrationCreated: Bool
+    public let verifyEmailSent: Bool
 }

@@ -11,19 +11,19 @@ import Foundation
 
 // CommentReportView.ts
 public struct ApiCommentReportView: Codable {
-    let commentReport: ApiCommentReport
-    let comment: ApiComment
-    let post: ApiPost
-    let community: ApiCommunity
-    let creator: ApiPerson
-    let commentCreator: ApiPerson
-    let counts: ApiCommentAggregates
-    let creatorBannedFromCommunity: Bool
-    let myVote: Int?
-    let resolver: ApiPerson?
-    let creatorIsModerator: Bool? // Exists only in 0.19.4
-    let creatorIsAdmin: Bool? // Exists only in 0.19.4
-    let creatorBlocked: Bool? // Exists only in 0.19.4
-    let subscribed: ApiSubscribedType? // Exists only in 0.19.4
-    let saved: Bool? // Exists only in 0.19.4
+    public let commentReport: ApiCommentReport
+    public let comment: ApiComment
+    public let post: ApiPost
+    public let community: ApiCommunity
+    public let creator: ApiPerson
+    public let commentCreator: ApiPerson
+    public let counts: ApiCommentAggregates
+    public let creatorBannedFromCommunity: Bool
+    public let myVote: Int?
+    public let resolver: ApiPerson?
+    public let creatorIsModerator: Bool? // Exists only in 0.19.4
+    public let creatorIsAdmin: Bool? // Exists only in 0.19.4
+    public let creatorBlocked: Bool? // Exists only in 0.19.4
+    public let subscribed: ApiSubscribedType? // Exists only in 0.19.4
+    public let saved: Bool? // Exists only in 0.19.4
 }

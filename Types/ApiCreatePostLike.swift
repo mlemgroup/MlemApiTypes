@@ -11,6 +11,6 @@ import Foundation
 
 // CreatePostLike.ts
 public struct ApiCreatePostLike: Codable {
-    let postId: Int
-    let score: Int
+    public let postId: Int
+    public let score: Int
 }

@@ -11,9 +11,9 @@ import Foundation
 
 // AdminPurgePost.ts
 public struct ApiAdminPurgePost: Codable {
-    let id: Int
-    let adminPersonId: Int
-    let communityId: Int
-    let reason: String?
-    let when_: String
+    public let id: Int
+    public let adminPersonId: Int
+    public let communityId: Int
+    public let reason: String?
+    public let when_: String
 }

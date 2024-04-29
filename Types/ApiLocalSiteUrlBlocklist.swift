@@ -12,8 +12,8 @@ import Foundation
 // LocalSiteUrlBlocklist.ts
 // Exists only in 0.19.4
 public struct ApiLocalSiteUrlBlocklist: Codable {
-    let id: Int
-    let url: String
-    let published: Date
-    let updated: Date?
+    public let id: Int
+    public let url: String
+    public let published: Date
+    public let updated: Date?
 }

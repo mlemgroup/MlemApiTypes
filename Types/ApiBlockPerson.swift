@@ -11,6 +11,6 @@ import Foundation
 
 // BlockPerson.ts
 public struct ApiBlockPerson: Codable {
-    let personId: Int
-    let block: Bool
+    public let personId: Int
+    public let block: Bool
 }
