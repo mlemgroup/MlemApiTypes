@@ -12,8 +12,8 @@ import Foundation
 public struct ListPostReportsRequest: ApiGetRequest {
     public typealias Response = ApiListPostReportsResponse
 
-    let path = "post/report/list"
-    let queryItems: [URLQueryItem]
+    public let path = "post/report/list"
+    public let queryItems: [URLQueryItem]
 
     init(
       page: Int?,

@@ -13,8 +13,8 @@ public struct DeleteCustomEmojiRequest: ApiPostRequest {
     public typealias Body = ApiDeleteCustomEmoji
     public typealias Response = ApiSuccessResponse
 
-    let path = "custom_emoji/delete"
-    let body: Body?
+    public let path = "custom_emoji/delete"
+    public let body: Body?
 
     init(
       id: Int

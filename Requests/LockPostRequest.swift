@@ -13,8 +13,8 @@ public struct LockPostRequest: ApiPostRequest {
     public typealias Body = ApiLockPost
     public typealias Response = ApiPostResponse
 
-    let path = "post/lock"
-    let body: Body?
+    public let path = "post/lock"
+    public let body: Body?
 
     init(
       postId: Int,

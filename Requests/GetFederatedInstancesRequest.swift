@@ -12,8 +12,8 @@ import Foundation
 public struct GetFederatedInstancesRequest: ApiGetRequest {
     public typealias Response = ApiGetFederatedInstancesResponse
 
-    let path = "federated_instances"
-    let queryItems: [URLQueryItem]
+    public let path = "federated_instances"
+    public let queryItems: [URLQueryItem]
 
     init() {
         self.queryItems = .init()

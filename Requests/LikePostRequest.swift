@@ -13,8 +13,8 @@ public struct LikePostRequest: ApiPostRequest {
     public typealias Body = ApiCreatePostLike
     public typealias Response = ApiPostResponse
 
-    let path = "post/like"
-    let body: Body?
+    public let path = "post/like"
+    public let body: Body?
 
     init(
       postId: Int,

@@ -13,8 +13,8 @@ public struct LeaveAdminRequest: ApiPostRequest {
     public typealias Body = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiGetSiteResponse
 
-    let path = "user/leave_admin"
-    let body: Body?
+    public let path = "user/leave_admin"
+    public let body: Body?
 
     init() {
         self.body = nil

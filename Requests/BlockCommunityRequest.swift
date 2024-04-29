@@ -13,8 +13,8 @@ public struct BlockCommunityRequest: ApiPostRequest {
     public typealias Body = ApiBlockCommunity
     public typealias Response = ApiBlockCommunityResponse
 
-    let path = "community/block"
-    let body: Body?
+    public let path = "community/block"
+    public let body: Body?
 
     init(
       communityId: Int,

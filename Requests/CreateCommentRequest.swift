@@ -13,8 +13,8 @@ public struct CreateCommentRequest: ApiPostRequest {
     public typealias Body = ApiCreateComment
     public typealias Response = ApiCommentResponse
 
-    let path = "comment"
-    let body: Body?
+    public let path = "comment"
+    public let body: Body?
 
     init(
       content: String,

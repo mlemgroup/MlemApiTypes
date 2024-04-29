@@ -13,8 +13,8 @@ public struct SaveUserSettingsRequest: ApiPutRequest {
     public typealias Body = ApiSaveUserSettings
     public typealias Response = ApiSuccessResponse
 
-    let path = "user/save_user_settings"
-    let body: Body?
+    public let path = "user/save_user_settings"
+    public let body: Body?
 
     init(
       showNsfw: Bool?,

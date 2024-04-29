@@ -13,8 +13,8 @@ public struct EditSiteRequest: ApiPutRequest {
     public typealias Body = ApiEditSite
     public typealias Response = ApiSiteResponse
 
-    let path = "site"
-    let body: Body?
+    public let path = "site"
+    public let body: Body?
 
     init(
       name: String?,

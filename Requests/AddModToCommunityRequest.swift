@@ -13,8 +13,8 @@ public struct AddModToCommunityRequest: ApiPostRequest {
     public typealias Body = ApiAddModToCommunity
     public typealias Response = ApiAddModToCommunityResponse
 
-    let path = "community/mod"
-    let body: Body?
+    public let path = "community/mod"
+    public let body: Body?
 
     init(
       communityId: Int,

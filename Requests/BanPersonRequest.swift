@@ -13,8 +13,8 @@ public struct BanPersonRequest: ApiPostRequest {
     public typealias Body = ApiBanPerson
     public typealias Response = ApiBanPersonResponse
 
-    let path = "user/ban"
-    let body: Body?
+    public let path = "user/ban"
+    public let body: Body?
 
     init(
       personId: Int,

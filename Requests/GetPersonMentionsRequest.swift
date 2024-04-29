@@ -12,8 +12,8 @@ import Foundation
 public struct GetPersonMentionsRequest: ApiGetRequest {
     public typealias Response = ApiGetPersonMentionsResponse
 
-    let path = "user/mention"
-    let queryItems: [URLQueryItem]
+    public let path = "user/mention"
+    public let queryItems: [URLQueryItem]
 
     init(
       sort: ApiCommentSortType?,

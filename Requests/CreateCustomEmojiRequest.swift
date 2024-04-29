@@ -13,8 +13,8 @@ public struct CreateCustomEmojiRequest: ApiPostRequest {
     public typealias Body = ApiCreateCustomEmoji
     public typealias Response = ApiCustomEmojiResponse
 
-    let path = "custom_emoji"
-    let body: Body?
+    public let path = "custom_emoji"
+    public let body: Body?
 
     init(
       category: String,

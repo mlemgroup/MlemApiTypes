@@ -12,8 +12,8 @@ import Foundation
 public struct GetRepliesRequest: ApiGetRequest {
     public typealias Response = ApiGetRepliesResponse
 
-    let path = "user/replies"
-    let queryItems: [URLQueryItem]
+    public let path = "user/replies"
+    public let queryItems: [URLQueryItem]
 
     init(
       sort: ApiCommentSortType?,

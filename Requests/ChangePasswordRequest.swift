@@ -13,8 +13,8 @@ public struct ChangePasswordRequest: ApiPutRequest {
     public typealias Body = ApiChangePassword
     public typealias Response = ApiLoginResponse
 
-    let path = "user/change_password"
-    let body: Body?
+    public let path = "user/change_password"
+    public let body: Body?
 
     init(
       newPassword: String,

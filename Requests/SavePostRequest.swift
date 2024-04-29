@@ -13,8 +13,8 @@ public struct SavePostRequest: ApiPutRequest {
     public typealias Body = ApiSavePost
     public typealias Response = ApiPostResponse
 
-    let path = "post/save"
-    let body: Body?
+    public let path = "post/save"
+    public let body: Body?
 
     init(
       postId: Int,

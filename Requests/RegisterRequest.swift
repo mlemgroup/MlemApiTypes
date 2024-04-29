@@ -13,8 +13,8 @@ public struct RegisterRequest: ApiPostRequest {
     public typealias Body = ApiRegister
     public typealias Response = ApiLoginResponse
 
-    let path = "user/register"
-    let body: Body?
+    public let path = "user/register"
+    public let body: Body?
 
     init(
       username: String,

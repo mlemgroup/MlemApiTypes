@@ -12,8 +12,8 @@ import Foundation
 public struct GetReportCountRequest: ApiGetRequest {
     public typealias Response = ApiGetReportCountResponse
 
-    let path = "user/report_count"
-    let queryItems: [URLQueryItem]
+    public let path = "user/report_count"
+    public let queryItems: [URLQueryItem]
 
     init(
       communityId: Int?

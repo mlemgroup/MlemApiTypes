@@ -13,8 +13,8 @@ public struct MarkCommentReplyAsReadRequest: ApiPostRequest {
     public typealias Body = ApiMarkCommentReplyAsRead
     public typealias Response = ApiCommentReplyResponse
 
-    let path = "comment/mark_as_read"
-    let body: Body?
+    public let path = "comment/mark_as_read"
+    public let body: Body?
 
     init(
       commentReplyId: Int,

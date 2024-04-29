@@ -13,8 +13,8 @@ public struct DeletePrivateMessageRequest: ApiPostRequest {
     public typealias Body = ApiDeletePrivateMessage
     public typealias Response = ApiPrivateMessageResponse
 
-    let path = "private_message/delete"
-    let body: Body?
+    public let path = "private_message/delete"
+    public let body: Body?
 
     init(
       privateMessageId: Int,

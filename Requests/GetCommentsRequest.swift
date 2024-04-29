@@ -12,8 +12,8 @@ import Foundation
 public struct GetCommentsRequest: ApiGetRequest {
     public typealias Response = ApiGetCommentsResponse
 
-    let path = "comment/list"
-    let queryItems: [URLQueryItem]
+    public let path = "comment/list"
+    public let queryItems: [URLQueryItem]
 
     init(
       type_: ApiListingType?,

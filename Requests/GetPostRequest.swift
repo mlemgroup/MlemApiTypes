@@ -12,8 +12,8 @@ import Foundation
 public struct GetPostRequest: ApiGetRequest {
     public typealias Response = ApiGetPostResponse
 
-    let path = "post"
-    let queryItems: [URLQueryItem]
+    public let path = "post"
+    public let queryItems: [URLQueryItem]
 
     init(
       id: Int?,

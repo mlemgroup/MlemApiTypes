@@ -12,8 +12,8 @@ import Foundation
 public struct ListAllMediaRequest: ApiGetRequest {
     public typealias Response = ApiListMediaResponse
 
-    let path = "admin/list_all_media"
-    let queryItems: [URLQueryItem]
+    public let path = "admin/list_all_media"
+    public let queryItems: [URLQueryItem]
 
     init(
       page: Int?,

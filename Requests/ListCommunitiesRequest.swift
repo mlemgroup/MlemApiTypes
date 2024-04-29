@@ -12,8 +12,8 @@ import Foundation
 public struct ListCommunitiesRequest: ApiGetRequest {
     public typealias Response = ApiListCommunitiesResponse
 
-    let path = "community/list"
-    let queryItems: [URLQueryItem]
+    public let path = "community/list"
+    public let queryItems: [URLQueryItem]
 
     init(
       type_: ApiListingType?,
