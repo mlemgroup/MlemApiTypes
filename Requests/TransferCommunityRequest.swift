@@ -10,8 +10,8 @@
 import Foundation
 
 public struct TransferCommunityRequest: ApiPostRequest {
-    typealias Body = ApiTransferCommunity
-    typealias Response = ApiGetCommunityResponse
+    public typealias Body = ApiTransferCommunity
+    public typealias Response = ApiGetCommunityResponse
 
     let path = "community/transfer"
     let body: Body?

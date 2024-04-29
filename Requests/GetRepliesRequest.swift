@@ -10,7 +10,7 @@
 import Foundation
 
 public struct GetRepliesRequest: ApiGetRequest {
-    typealias Response = ApiGetRepliesResponse
+    public typealias Response = ApiGetRepliesResponse
 
     let path = "user/replies"
     let queryItems: [URLQueryItem]

@@ -10,8 +10,8 @@
 import Foundation
 
 public struct CreateSiteRequest: ApiPostRequest {
-    typealias Body = ApiCreateSite
-    typealias Response = ApiSiteResponse
+    public typealias Body = ApiCreateSite
+    public typealias Response = ApiSiteResponse
 
     let path = "site"
     let body: Body?

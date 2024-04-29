@@ -10,8 +10,8 @@
 import Foundation
 
 public struct PurgePersonRequest: ApiPostRequest {
-    typealias Body = ApiPurgePerson
-    typealias Response = ApiSuccessResponse
+    public typealias Body = ApiPurgePerson
+    public typealias Response = ApiSuccessResponse
 
     let path = "admin/purge/person"
     let body: Body?

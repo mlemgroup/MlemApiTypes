@@ -10,7 +10,7 @@
 import Foundation
 
 public struct GetCaptchaRequest: ApiGetRequest {
-    typealias Response = ApiGetCaptchaResponse
+    public typealias Response = ApiGetCaptchaResponse
 
     let path = "user/get_captcha"
     let queryItems: [URLQueryItem]

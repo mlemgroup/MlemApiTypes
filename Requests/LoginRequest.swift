@@ -10,8 +10,8 @@
 import Foundation
 
 public struct LoginRequest: ApiPostRequest {
-    typealias Body = ApiLogin
-    typealias Response = ApiLoginResponse
+    public typealias Body = ApiLogin
+    public typealias Response = ApiLoginResponse
 
     let path = "user/login"
     let body: Body?

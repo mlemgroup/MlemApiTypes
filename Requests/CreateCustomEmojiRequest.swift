@@ -10,8 +10,8 @@
 import Foundation
 
 public struct CreateCustomEmojiRequest: ApiPostRequest {
-    typealias Body = ApiCreateCustomEmoji
-    typealias Response = ApiCustomEmojiResponse
+    public typealias Body = ApiCreateCustomEmoji
+    public typealias Response = ApiCustomEmojiResponse
 
     let path = "custom_emoji"
     let body: Body?

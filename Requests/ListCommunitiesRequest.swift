@@ -10,7 +10,7 @@
 import Foundation
 
 public struct ListCommunitiesRequest: ApiGetRequest {
-    typealias Response = ApiListCommunitiesResponse
+    public typealias Response = ApiListCommunitiesResponse
 
     let path = "community/list"
     let queryItems: [URLQueryItem]

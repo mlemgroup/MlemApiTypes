@@ -10,8 +10,8 @@
 import Foundation
 
 public struct PurgeCommentRequest: ApiPostRequest {
-    typealias Body = ApiPurgeComment
-    typealias Response = ApiSuccessResponse
+    public typealias Body = ApiPurgeComment
+    public typealias Response = ApiSuccessResponse
 
     let path = "admin/purge/comment"
     let body: Body?

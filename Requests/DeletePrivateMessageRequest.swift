@@ -10,8 +10,8 @@
 import Foundation
 
 public struct DeletePrivateMessageRequest: ApiPostRequest {
-    typealias Body = ApiDeletePrivateMessage
-    typealias Response = ApiPrivateMessageResponse
+    public typealias Body = ApiDeletePrivateMessage
+    public typealias Response = ApiPrivateMessageResponse
 
     let path = "private_message/delete"
     let body: Body?

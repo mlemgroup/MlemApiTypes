@@ -10,8 +10,8 @@
 import Foundation
 
 public struct MarkCommentReplyAsReadRequest: ApiPostRequest {
-    typealias Body = ApiMarkCommentReplyAsRead
-    typealias Response = ApiCommentReplyResponse
+    public typealias Body = ApiMarkCommentReplyAsRead
+    public typealias Response = ApiCommentReplyResponse
 
     let path = "comment/mark_as_read"
     let body: Body?

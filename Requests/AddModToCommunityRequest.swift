@@ -10,8 +10,8 @@
 import Foundation
 
 public struct AddModToCommunityRequest: ApiPostRequest {
-    typealias Body = ApiAddModToCommunity
-    typealias Response = ApiAddModToCommunityResponse
+    public typealias Body = ApiAddModToCommunity
+    public typealias Response = ApiAddModToCommunityResponse
 
     let path = "community/mod"
     let body: Body?

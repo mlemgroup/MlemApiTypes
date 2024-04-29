@@ -10,8 +10,8 @@
 import Foundation
 
 public struct AddAdminRequest: ApiPostRequest {
-    typealias Body = ApiAddAdmin
-    typealias Response = ApiAddAdminResponse
+    public typealias Body = ApiAddAdmin
+    public typealias Response = ApiAddAdminResponse
 
     let path = "admin/add"
     let body: Body?

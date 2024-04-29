@@ -10,7 +10,7 @@
 import Foundation
 
 public struct GetPrivateMessagesRequest: ApiGetRequest {
-    typealias Response = ApiPrivateMessagesResponse
+    public typealias Response = ApiPrivateMessagesResponse
 
     let path = "private_message/list"
     let queryItems: [URLQueryItem]

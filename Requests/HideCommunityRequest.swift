@@ -10,8 +10,8 @@
 import Foundation
 
 public struct HideCommunityRequest: ApiPutRequest {
-    typealias Body = ApiHideCommunity
-    typealias Response = ApiSuccessResponse
+    public typealias Body = ApiHideCommunity
+    public typealias Response = ApiSuccessResponse
 
     let path = "community/hide"
     let body: Body?

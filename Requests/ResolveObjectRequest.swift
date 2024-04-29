@@ -10,7 +10,7 @@
 import Foundation
 
 public struct ResolveObjectRequest: ApiGetRequest {
-    typealias Response = ApiResolveObjectResponse
+    public typealias Response = ApiResolveObjectResponse
 
     let path = "resolve_object"
     let queryItems: [URLQueryItem]

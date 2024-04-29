@@ -10,7 +10,7 @@
 import Foundation
 
 public struct SearchRequest: ApiGetRequest {
-    typealias Response = ApiSearchResponse
+    public typealias Response = ApiSearchResponse
 
     let path = "search"
     let queryItems: [URLQueryItem]

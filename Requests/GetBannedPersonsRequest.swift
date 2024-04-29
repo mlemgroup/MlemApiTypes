@@ -10,7 +10,7 @@
 import Foundation
 
 public struct GetBannedPersonsRequest: ApiGetRequest {
-    typealias Response = ApiBannedPersonsResponse
+    public typealias Response = ApiBannedPersonsResponse
 
     let path = "user/banned"
     let queryItems: [URLQueryItem]

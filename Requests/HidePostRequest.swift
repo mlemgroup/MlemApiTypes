@@ -10,8 +10,8 @@
 import Foundation
 
 public struct HidePostRequest: ApiPostRequest {
-    typealias Body = ApiHidePost
-    typealias Response = ApiSuccessResponse
+    public typealias Body = ApiHidePost
+    public typealias Response = ApiSuccessResponse
 
     let path = "post/hide"
     let body: Body?

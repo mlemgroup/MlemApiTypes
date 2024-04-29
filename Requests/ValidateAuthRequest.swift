@@ -10,7 +10,7 @@
 import Foundation
 
 public struct ValidateAuthRequest: ApiGetRequest {
-    typealias Response = ApiSuccessResponse
+    public typealias Response = ApiSuccessResponse
 
     let path = "user/validate_auth"
     let queryItems: [URLQueryItem]

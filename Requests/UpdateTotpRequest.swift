@@ -10,8 +10,8 @@
 import Foundation
 
 public struct UpdateTotpRequest: ApiPostRequest {
-    typealias Body = ApiUpdateTotp
-    typealias Response = ApiUpdateTotpResponse
+    public typealias Body = ApiUpdateTotp
+    public typealias Response = ApiUpdateTotpResponse
 
     let path = "user/totp/update"
     let body: Body?

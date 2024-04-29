@@ -10,8 +10,8 @@
 import Foundation
 
 public struct GenerateTotpSecretRequest: ApiPostRequest {
-    typealias Body = Int // dummy type for APIRequestBodyProviding conformance
-    typealias Response = ApiGenerateTotpSecretResponse
+    public typealias Body = Int // dummy type for APIRequestBodyProviding conformance
+    public typealias Response = ApiGenerateTotpSecretResponse
 
     let path = "user/totp/generate"
     let body: Body?

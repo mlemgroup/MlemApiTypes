@@ -10,8 +10,8 @@
 import Foundation
 
 public struct SavePostRequest: ApiPutRequest {
-    typealias Body = ApiSavePost
-    typealias Response = ApiPostResponse
+    public typealias Body = ApiSavePost
+    public typealias Response = ApiPostResponse
 
     let path = "post/save"
     let body: Body?

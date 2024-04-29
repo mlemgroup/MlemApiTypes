@@ -10,8 +10,8 @@
 import Foundation
 
 public struct ApproveRegistrationApplicationRequest: ApiPutRequest {
-    typealias Body = ApiApproveRegistrationApplication
-    typealias Response = ApiRegistrationApplicationResponse
+    public typealias Body = ApiApproveRegistrationApplication
+    public typealias Response = ApiRegistrationApplicationResponse
 
     let path = "admin/registration_application/approve"
     let body: Body?

@@ -10,8 +10,8 @@
 import Foundation
 
 public struct MarkPersonMentionAsReadRequest: ApiPostRequest {
-    typealias Body = ApiMarkPersonMentionAsRead
-    typealias Response = ApiPersonMentionResponse
+    public typealias Body = ApiMarkPersonMentionAsRead
+    public typealias Response = ApiPersonMentionResponse
 
     let path = "user/mention/mark_as_read"
     let body: Body?

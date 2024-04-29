@@ -10,8 +10,8 @@
 import Foundation
 
 public struct MarkPrivateMessageAsReadRequest: ApiPostRequest {
-    typealias Body = ApiMarkPrivateMessageAsRead
-    typealias Response = ApiPrivateMessageResponse
+    public typealias Body = ApiMarkPrivateMessageAsRead
+    public typealias Response = ApiPrivateMessageResponse
 
     let path = "private_message/mark_as_read"
     let body: Body?

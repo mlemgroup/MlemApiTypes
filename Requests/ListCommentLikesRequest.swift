@@ -10,7 +10,7 @@
 import Foundation
 
 public struct ListCommentLikesRequest: ApiGetRequest {
-    typealias Response = ApiListCommentLikesResponse
+    public typealias Response = ApiListCommentLikesResponse
 
     let path = "comment/like/list"
     let queryItems: [URLQueryItem]

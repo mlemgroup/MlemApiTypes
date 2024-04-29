@@ -10,8 +10,8 @@
 import Foundation
 
 public struct LikePostRequest: ApiPostRequest {
-    typealias Body = ApiCreatePostLike
-    typealias Response = ApiPostResponse
+    public typealias Body = ApiCreatePostLike
+    public typealias Response = ApiPostResponse
 
     let path = "post/like"
     let body: Body?

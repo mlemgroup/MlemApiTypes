@@ -10,7 +10,7 @@
 import Foundation
 
 public struct GetPersonMentionsRequest: ApiGetRequest {
-    typealias Response = ApiGetPersonMentionsResponse
+    public typealias Response = ApiGetPersonMentionsResponse
 
     let path = "user/mention"
     let queryItems: [URLQueryItem]
