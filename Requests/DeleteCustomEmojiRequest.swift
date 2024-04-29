@@ -2,14 +2,14 @@
 //  DeleteCustomEmojiRequest.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
 
-struct DeleteCustomEmojiRequest: ApiPostRequest {
+public struct DeleteCustomEmojiRequest: ApiPostRequest {
     typealias Body = ApiDeleteCustomEmoji
     typealias Response = ApiSuccessResponse
 

@@ -2,7 +2,7 @@
 //  ApiGetModlog.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // GetModlog.ts
-struct ApiGetModlog: Codable {
+public struct ApiGetModlog: Codable {
     let modPersonId: Int?
     let communityId: Int?
     let page: Int?

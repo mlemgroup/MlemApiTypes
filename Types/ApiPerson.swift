@@ -2,7 +2,7 @@
 //  ApiPerson.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // Person.ts
-struct ApiPerson: Codable {
+public struct ApiPerson: Codable {
     let id: Int
     let name: String
     let displayName: String?

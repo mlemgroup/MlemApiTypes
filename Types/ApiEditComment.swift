@@ -2,7 +2,7 @@
 //  ApiEditComment.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // EditComment.ts
-struct ApiEditComment: Codable {
+public struct ApiEditComment: Codable {
     let commentId: Int
     let content: String?
     let languageId: Int?

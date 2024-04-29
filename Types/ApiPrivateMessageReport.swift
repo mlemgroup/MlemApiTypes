@@ -2,7 +2,7 @@
 //  ApiPrivateMessageReport.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // PrivateMessageReport.ts
-struct ApiPrivateMessageReport: Codable {
+public struct ApiPrivateMessageReport: Codable {
     let id: Int
     let creatorId: Int
     let privateMessageId: Int

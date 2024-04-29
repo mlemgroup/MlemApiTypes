@@ -2,7 +2,7 @@
 //  ApiInstance.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // Instance.ts
-struct ApiInstance: Codable {
+public struct ApiInstance: Codable {
     let id: Int
     let domain: String
     let published: Date

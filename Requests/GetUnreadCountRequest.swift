@@ -2,14 +2,14 @@
 //  GetUnreadCountRequest.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-04-28
+//  Created by Eric Andrews on 2024-04-29
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
 
-struct GetUnreadCountRequest: ApiGetRequest {
+public struct GetUnreadCountRequest: ApiGetRequest {
     typealias Response = ApiGetUnreadCountResponse
 
     let path = "user/unread_count"
