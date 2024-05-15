@@ -2,7 +2,7 @@
 //  RemoveCommunityRequest.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-06
+//  Created by Eric Andrews on 2024-05-13
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
