@@ -2,7 +2,7 @@
 //  ApiPersonAggregates.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -11,10 +11,13 @@ import Foundation
 
 // PersonAggregates.ts
 public struct ApiPersonAggregates: Codable {
-    public let id: Int? // Exists <=0.18.3
+    /// Removed in 0.19.0
+    public let id: Int?
     public let personId: Int
     public let postCount: Int
-    public let postScore: Int? // Exists <=0.18.3
+    /// Removed in 0.19.0
+    public let postScore: Int?
     public let commentCount: Int
-    public let commentScore: Int? // Exists <=0.18.3
+    /// Removed in 0.19.0
+    public let commentScore: Int?
 }

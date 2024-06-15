@@ -2,7 +2,7 @@
 //  ApiSite.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -22,8 +22,10 @@ public struct ApiSite: Codable {
     public let actorId: URL
     public let lastRefreshedAt: Date
     public let inboxUrl: String
-    public let privateKey: String? // Exists <=0.19.3
+    /// Removed in 0.19.4
+    public let privateKey: String?
     public let publicKey: String
     public let instanceId: Int
-    public let contentWarning: String? // Exists only in 0.19.4
+    /// Added in 0.19.4
+    public let contentWarning: String?
 }

@@ -2,7 +2,7 @@
 //  ApiPersonView.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -13,5 +13,6 @@ import Foundation
 public struct ApiPersonView: Codable {
     public let person: ApiPerson
     public let counts: ApiPersonAggregates
-    public let isAdmin: Bool? // Exists >=0.19.0
+    /// Added in 0.19.0
+    public let isAdmin: Bool?
 }

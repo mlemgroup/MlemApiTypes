@@ -2,7 +2,7 @@
 //  ApiMyUserInfo.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -17,5 +17,6 @@ public struct ApiMyUserInfo: Codable {
     public let communityBlocks: [ApiCommunityBlockView]
     public let personBlocks: [ApiPersonBlockView]
     public let discussionLanguages: [Int]
-    public let instanceBlocks: [ApiInstanceBlockView]? // Exists >=0.19.0
+    /// Added in 0.19.0
+    public let instanceBlocks: [ApiInstanceBlockView]?
 }

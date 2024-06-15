@@ -2,7 +2,7 @@
 //  ApiLocalSiteUrlBlocklist.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // LocalSiteUrlBlocklist.ts
-// Exists only in 0.19.4
+/// Added in 0.19.4
 public struct ApiLocalSiteUrlBlocklist: Codable {
     public let id: Int
     public let url: String

@@ -2,7 +2,7 @@
 //  ApiSortType.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -25,9 +25,9 @@ public enum ApiSortType: String, Codable {
     case topHour = "TopHour"
     case topSixHour = "TopSixHour"
     case topTwelveHour = "TopTwelveHour"
-    case topThreeMonths = "TopThreeMonths" // Exists >=0.18.1
-    case topSixMonths = "TopSixMonths" // Exists >=0.18.1
-    case topNineMonths = "TopNineMonths" // Exists >=0.18.1
-    case controversial = "Controversial" // Exists >=0.19.0
-    case scaled = "Scaled" // Exists >=0.19.0
+    case topThreeMonths = "TopThreeMonths" /// Added in 0.18.1
+    case topSixMonths = "TopSixMonths" /// Added in 0.18.1
+    case topNineMonths = "TopNineMonths" /// Added in 0.18.1
+    case controversial = "Controversial" /// Added in 0.19.0
+    case scaled = "Scaled" /// Added in 0.19.0
 }

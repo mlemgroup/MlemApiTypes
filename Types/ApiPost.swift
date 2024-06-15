@@ -2,7 +2,7 @@
 //  ApiPost.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -32,6 +32,8 @@ public struct ApiPost: Codable {
     public let languageId: Int
     public let featuredCommunity: Bool
     public let featuredLocal: Bool
-    public let urlContentType: String? // Exists only in 0.19.4
-    public let altText: String? // Exists only in 0.19.4
+    /// Added in 0.19.4
+    public let urlContentType: String?
+    /// Added in 0.19.4
+    public let altText: String?
 }

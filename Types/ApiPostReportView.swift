@@ -2,7 +2,7 @@
 //  ApiPostReportView.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -20,12 +20,20 @@ public struct ApiPostReportView: Codable {
     public let myVote: Int?
     public let counts: ApiPostAggregates
     public let resolver: ApiPerson?
-    public let creatorIsModerator: Bool? // Exists only in 0.19.4
-    public let creatorIsAdmin: Bool? // Exists only in 0.19.4
-    public let subscribed: ApiSubscribedType? // Exists only in 0.19.4
-    public let saved: Bool? // Exists only in 0.19.4
-    public let read: Bool? // Exists only in 0.19.4
-    public let hidden: Bool? // Exists only in 0.19.4
-    public let creatorBlocked: Bool? // Exists only in 0.19.4
-    public let unreadComments: Int? // Exists only in 0.19.4
+    /// Added in 0.19.4
+    public let creatorIsModerator: Bool?
+    /// Added in 0.19.4
+    public let creatorIsAdmin: Bool?
+    /// Added in 0.19.4
+    public let subscribed: ApiSubscribedType?
+    /// Added in 0.19.4
+    public let saved: Bool?
+    /// Added in 0.19.4
+    public let read: Bool?
+    /// Added in 0.19.4
+    public let hidden: Bool?
+    /// Added in 0.19.4
+    public let creatorBlocked: Bool?
+    /// Added in 0.19.4
+    public let unreadComments: Int?
 }

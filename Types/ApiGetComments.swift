@@ -2,7 +2,7 @@
 //  ApiGetComments.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -21,6 +21,8 @@ public struct ApiGetComments: Codable {
     public let postId: Int?
     public let parentId: Int?
     public let savedOnly: Bool?
-    public let likedOnly: Bool? // Exists >=0.19.0
-    public let dislikedOnly: Bool? // Exists >=0.19.0
+    /// Added in 0.19.0
+    public let likedOnly: Bool?
+    /// Added in 0.19.0
+    public let dislikedOnly: Bool?
 }

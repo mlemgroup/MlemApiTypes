@@ -2,7 +2,7 @@
 //  ApiCommentAggregates.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -11,12 +11,14 @@ import Foundation
 
 // CommentAggregates.ts
 public struct ApiCommentAggregates: Codable {
-    public let id: Int? // Exists <=0.18.3
+    /// Removed in 0.19.0
+    public let id: Int?
     public let commentId: Int
     public let score: Int
     public let upvotes: Int
     public let downvotes: Int
     public let published: Date
     public let childCount: Int
-    public let hotRank: Int? // Exists <=0.18.3
+    /// Removed in 0.19.0
+    public let hotRank: Int?
 }

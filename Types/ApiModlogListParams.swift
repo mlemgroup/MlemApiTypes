@@ -2,7 +2,7 @@
 //  ApiModlogListParams.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -17,6 +17,8 @@ public struct ApiModlogListParams: Codable {
     public let page: Int?
     public let limit: Int?
     public let hideModlogNames: Bool
-    public let postId: Int? // Exists only in 0.19.4
-    public let commentId: Int? // Exists only in 0.19.4
+    /// Added in 0.19.4
+    public let postId: Int?
+    /// Added in 0.19.4
+    public let commentId: Int?
 }

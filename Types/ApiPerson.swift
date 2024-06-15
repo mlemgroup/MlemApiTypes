@@ -2,7 +2,7 @@
 //  ApiPerson.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -24,9 +24,11 @@ public struct ApiPerson: Codable {
     public let banner: URL?
     public let deleted: Bool
     public let matrixUserId: String?
-    public let admin: Bool? // Exists <=0.18.3
+    /// Removed in 0.19.0
+    public let admin: Bool?
     public let botAccount: Bool
     public let banExpires: Date?
     public let instanceId: Int
-    public let inboxUrl: String? // Exists between 0.18.1 and 0.18.3
+    /// Added in 0.18.1, removed in 0.19.0
+    public let inboxUrl: String?
 }

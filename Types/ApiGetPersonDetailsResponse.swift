@@ -2,7 +2,7 @@
 //  ApiGetPersonDetailsResponse.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -15,5 +15,6 @@ public struct ApiGetPersonDetailsResponse: Codable {
     public let comments: [ApiCommentView]
     public let posts: [ApiPostView]
     public let moderates: [ApiCommunityModeratorView]
-    public let site: ApiSite? // Exists >=0.19.2; Optional >=0.19.3
+    /// Added in 0.19.2; made optional in 0.19.3
+    public let site: ApiSite?
 }

@@ -2,7 +2,7 @@
 //  ApiPostAggregates.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -11,17 +11,24 @@ import Foundation
 
 // PostAggregates.ts
 public struct ApiPostAggregates: Codable {
-    public let id: Int? // Exists <=0.18.3
+    /// Removed in 0.19.0
+    public let id: Int?
     public let postId: Int
     public let comments: Int
     public let score: Int
     public let upvotes: Int
     public let downvotes: Int
     public let published: Date
-    public let newestCommentTimeNecro: String? // Exists <=0.18.3
-    public let newestCommentTime: String? // Exists in 0.18.0, 0.18.1, 0.18.3, 0.19.2, 0.19.3, 0.19.4 but not in 0.19.0
-    public let featuredCommunity: Bool? // Exists <=0.18.3
-    public let featuredLocal: Bool? // Exists <=0.18.3
-    public let hotRank: Int? // Exists <=0.18.3
-    public let hotRankActive: Int? // Exists <=0.18.3
+    /// Removed in 0.19.0
+    public let newestCommentTimeNecro: String?
+    /// Removed in 0.19.0, added in 0.19.2
+    public let newestCommentTime: String?
+    /// Removed in 0.19.0
+    public let featuredCommunity: Bool?
+    /// Removed in 0.19.0
+    public let featuredLocal: Bool?
+    /// Removed in 0.19.0
+    public let hotRank: Int?
+    /// Removed in 0.19.0
+    public let hotRankActive: Int?
 }

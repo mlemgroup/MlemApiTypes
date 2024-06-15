@@ -2,7 +2,7 @@
 //  ApiGetPostsResponse.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -12,5 +12,6 @@ import Foundation
 // GetPostsResponse.ts
 public struct ApiGetPostsResponse: Codable {
     public let posts: [ApiPostView]
-    public let nextPage: String? // Exists >=0.19.0
+    /// Added in 0.19.0
+    public let nextPage: String?
 }
