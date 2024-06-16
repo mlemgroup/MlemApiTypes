@@ -14,7 +14,7 @@ public struct ApiRegister: Codable {
     public let username: String
     public let password: String
     public let passwordVerify: String
-    made optional in 0.19.4
+    /// made optional in 0.19.4
     public let showNsfw: Bool?
     public let email: String?
     public let captchaUuid: String?
