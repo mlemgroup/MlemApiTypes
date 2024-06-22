@@ -2,7 +2,7 @@
 //  ApiEditSite.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -44,7 +44,8 @@ public struct ApiEditSite: Codable {
     public let rateLimitSearchPerSecond: Int?
     public let federationEnabled: Bool?
     public let federationDebug: Bool?
-    public let federationWorkerCount: Int? // Exists only in 0.18.0
+    /// Removed in 0.18.1
+    public let federationWorkerCount: Int?
     public let captchaEnabled: Bool?
     public let captchaDifficulty: String?
     public let allowedInstances: [String]?
@@ -52,9 +53,14 @@ public struct ApiEditSite: Codable {
     public let taglines: [String]?
     public let registrationMode: ApiRegistrationMode?
     public let reportsEmailAdmins: Bool?
-    public let contentWarning: String? // Exists in 0.19.2, 0.19.4 but not in 0.18.0, 0.18.1, 0.18.3, 0.19.0, 0.19.3
-    public let autoExpandImages: Bool? // Exists only in 0.19.2
-    public let defaultSortType: ApiSortType? // Exists only in 0.19.4
-    public let blockedUrls: [String]? // Exists only in 0.19.4
-    public let defaultPostListingMode: ApiPostListingMode? // Exists only in 0.19.4
+    /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
+    public let contentWarning: String?
+    /// Added in 0.19.2, removed in 0.19.3
+    public let autoExpandImages: Bool?
+    /// Added in 0.19.4
+    public let defaultSortType: ApiSortType?
+    /// Added in 0.19.4
+    public let blockedUrls: [String]?
+    /// Added in 0.19.4
+    public let defaultPostListingMode: ApiPostListingMode?
 }

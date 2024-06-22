@@ -2,7 +2,7 @@
 //  ApiCreatePost.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -18,6 +18,8 @@ public struct ApiCreatePost: Codable {
     public let honeypot: String?
     public let nsfw: Bool?
     public let languageId: Int?
-    public let altText: String? // Exists only in 0.19.4
-    public let customThumbnail: String? // Exists only in 0.19.4
+    /// Added in 0.19.4
+    public let altText: String?
+    /// Added in 0.19.4
+    public let customThumbnail: String?
 }

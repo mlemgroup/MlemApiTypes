@@ -2,7 +2,7 @@
 //  ApiPurgeItemResponse.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // PurgeItemResponse.ts
-// Exists <=0.18.3
+/// Removed in 0.19.0
 public struct ApiPurgeItemResponse: Codable {
     public let success: Bool
 }

@@ -2,7 +2,7 @@
 //  ApiListCommunities.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -15,5 +15,6 @@ public struct ApiListCommunities: Codable {
     public let sort: ApiSortType?
     public let page: Int?
     public let limit: Int?
-    public let showNsfw: Bool? // Exists >=0.18.1
+    /// Added in 0.18.1
+    public let showNsfw: Bool?
 }

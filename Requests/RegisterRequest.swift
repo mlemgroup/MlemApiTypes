@@ -2,7 +2,7 @@
 //  RegisterRequest.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -20,7 +20,7 @@ public struct RegisterRequest: ApiPostRequest {
       username: String,
       password: String,
       passwordVerify: String,
-      showNsfw: Bool,
+      showNsfw: Bool?,
       email: String?,
       captchaUuid: String?,
       captchaAnswer: String?,

@@ -2,7 +2,7 @@
 //  ApiSiteMetadata.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -10,7 +10,7 @@
 import Foundation
 
 // SiteMetadata.ts
-// Exists <=0.19.3
+/// Removed in 0.19.4
 public struct ApiSiteMetadata: Codable {
     public let title: String?
     public let description: String?

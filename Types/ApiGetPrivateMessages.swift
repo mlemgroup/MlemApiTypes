@@ -2,7 +2,7 @@
 //  ApiGetPrivateMessages.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -14,5 +14,6 @@ public struct ApiGetPrivateMessages: Codable {
     public let unreadOnly: Bool?
     public let page: Int?
     public let limit: Int?
-    public let creatorId: Int? // Exists >=0.19.0
+    /// Added in 0.19.0
+    public let creatorId: Int?
 }

@@ -2,7 +2,7 @@
 //  ApiCommunityView.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -15,5 +15,6 @@ public struct ApiCommunityView: Codable {
     public let subscribed: ApiSubscribedType
     public let blocked: Bool
     public let counts: ApiCommunityAggregates
-    public let bannedFromCommunity: Bool? // Exists only in 0.19.4
+    /// Added in 0.19.4
+    public let bannedFromCommunity: Bool?
 }

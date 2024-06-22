@@ -2,7 +2,7 @@
 //  ApiCreateCommunity.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -19,6 +19,8 @@ public struct ApiCreateCommunity: Codable {
     public let nsfw: Bool?
     public let postingRestrictedToMods: Bool?
     public let discussionLanguages: [Int]?
-    public let onlyFollowersCanVote: Bool? // Exists only in 0.19.2
-    public let visibility: ApiCommunityVisibility? // Exists in 0.19.2, 0.19.4 but not in 0.18.0, 0.18.1, 0.18.3, 0.19.0, 0.19.3
+    /// Added in 0.19.2, removed in 0.19.3
+    public let onlyFollowersCanVote: Bool?
+    /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
+    public let visibility: ApiCommunityVisibility?
 }

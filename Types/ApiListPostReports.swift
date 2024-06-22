@@ -2,7 +2,7 @@
 //  ApiListPostReports.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -15,5 +15,6 @@ public struct ApiListPostReports: Codable {
     public let limit: Int?
     public let unresolvedOnly: Bool?
     public let communityId: Int?
-    public let postId: Int? // Exists only in 0.19.4
+    /// Added in 0.19.4
+    public let postId: Int?
 }

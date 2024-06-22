@@ -2,7 +2,7 @@
 //  ApiLocalSite.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -28,16 +28,22 @@ public struct ApiLocalSite: Codable {
     public let slurFilterRegex: String?
     public let actorNameMaxLength: Int
     public let federationEnabled: Bool
-    public let federationWorkerCount: Int? // Exists only in 0.18.0
+    /// Removed in 0.18.1
+    public let federationWorkerCount: Int?
     public let captchaEnabled: Bool
     public let captchaDifficulty: String
     public let published: Date
     public let updated: Date?
     public let registrationMode: ApiRegistrationMode
     public let reportsEmailAdmins: Bool
-    public let federationSignedFetch: Bool? // Exists >=0.19.0
-    public let contentWarning: String? // Exists only in 0.19.2
-    public let autoExpandImages: Bool? // Exists only in 0.19.2
-    public let defaultPostListingMode: ApiPostListingMode? // Exists only in 0.19.4
-    public let defaultSortType: ApiSortType? // Exists only in 0.19.4
+    /// Added in 0.19.0
+    public let federationSignedFetch: Bool?
+    /// Added in 0.19.2, removed in 0.19.3
+    public let contentWarning: String?
+    /// Added in 0.19.2, removed in 0.19.3
+    public let autoExpandImages: Bool?
+    /// Added in 0.19.4
+    public let defaultPostListingMode: ApiPostListingMode?
+    /// Added in 0.19.4
+    public let defaultSortType: ApiSortType?
 }

@@ -2,7 +2,7 @@
 //  ApiRegister.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -14,7 +14,8 @@ public struct ApiRegister: Codable {
     public let username: String
     public let password: String
     public let passwordVerify: String
-    public let showNsfw: Bool
+    /// made optional in 0.19.4
+    public let showNsfw: Bool?
     public let email: String?
     public let captchaUuid: String?
     public let captchaAnswer: String?

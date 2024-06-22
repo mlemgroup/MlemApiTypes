@@ -2,7 +2,7 @@
 //  ApiListingType.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -14,5 +14,5 @@ public enum ApiListingType: String, Codable {
     case all = "All"
     case local = "Local"
     case subscribed = "Subscribed"
-    case moderatorView = "ModeratorView" // Exists >=0.19.0
+    case moderatorView = "ModeratorView" /// Added in 0.19.0
 }

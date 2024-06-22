@@ -2,7 +2,7 @@
 //  ApiGetSiteResponse.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -19,5 +19,6 @@ public struct ApiGetSiteResponse: Codable {
     public let discussionLanguages: [Int]
     public let taglines: [ApiTagline]
     public let customEmojis: [ApiCustomEmojiView]
-    public let blockedUrls: [ApiLocalSiteUrlBlocklist]? // Exists only in 0.19.4
+    /// Added in 0.19.4
+    public let blockedUrls: [ApiLocalSiteUrlBlocklist]?
 }

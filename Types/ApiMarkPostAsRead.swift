@@ -2,7 +2,7 @@
 //  ApiMarkPostAsRead.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -11,7 +11,9 @@ import Foundation
 
 // MarkPostAsRead.ts
 public struct ApiMarkPostAsRead: Codable {
-    public let postId: Int? // Exists <=0.19.3; Optional >=0.19.0
+    /// Removed in 0.19.4; made optional in 0.19.0
+    public let postId: Int?
     public let read: Bool
-    public let postIds: [Int]? // Exists >=0.19.0; Optional <=0.19.3
+    /// Added in 0.19.0; made non-optional in 0.19.4
+    public let postIds: [Int]?
 }

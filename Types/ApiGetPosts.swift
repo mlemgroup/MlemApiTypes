@@ -2,7 +2,7 @@
 //  ApiGetPosts.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -18,8 +18,12 @@ public struct ApiGetPosts: Codable {
     public let communityId: Int?
     public let communityName: String?
     public let savedOnly: Bool?
-    public let likedOnly: Bool? // Exists >=0.19.0
-    public let dislikedOnly: Bool? // Exists >=0.19.0
-    public let pageCursor: String? // Exists >=0.19.0
-    public let showHidden: Bool? // Exists only in 0.19.4
+    /// Added in 0.19.0
+    public let likedOnly: Bool?
+    /// Added in 0.19.0
+    public let dislikedOnly: Bool?
+    /// Added in 0.19.0
+    public let pageCursor: String?
+    /// Added in 0.19.4
+    public let showHidden: Bool?
 }

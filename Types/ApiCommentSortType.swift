@@ -2,7 +2,7 @@
 //  ApiCommentSortType.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -15,5 +15,5 @@ public enum ApiCommentSortType: String, Codable {
     case top = "Top"
     case new = "New"
     case old = "Old"
-    case controversial = "Controversial" // Exists >=0.19.0
+    case controversial = "Controversial" /// Added in 0.19.0
 }

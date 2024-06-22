@@ -2,7 +2,7 @@
 //  ApiCommunityAggregates.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -11,7 +11,8 @@ import Foundation
 
 // CommunityAggregates.ts
 public struct ApiCommunityAggregates: Codable {
-    public let id: Int? // Exists <=0.18.3
+    /// Removed in 0.19.0
+    public let id: Int?
     public let communityId: Int
     public let subscribers: Int
     public let posts: Int
@@ -21,6 +22,8 @@ public struct ApiCommunityAggregates: Codable {
     public let usersActiveWeek: Int
     public let usersActiveMonth: Int
     public let usersActiveHalfYear: Int
-    public let hotRank: Int? // Exists <=0.18.3
-    public let subscribersLocal: Int? // Exists in 0.19.2, 0.19.4 but not in 0.18.0, 0.18.1, 0.18.3, 0.19.0, 0.19.3
+    /// Removed in 0.19.0
+    public let hotRank: Int?
+    /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
+    public let subscribersLocal: Int?
 }

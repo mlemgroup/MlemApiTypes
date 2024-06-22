@@ -2,7 +2,7 @@
 //  ApiLocalSiteRateLimit.swift
 //  Mlem
 //
-//  Created by Eric Andrews on 2024-05-13
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
 //
 
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
@@ -11,7 +11,8 @@ import Foundation
 
 // LocalSiteRateLimit.ts
 public struct ApiLocalSiteRateLimit: Codable {
-    public let id: Int? // Exists <=0.18.3
+    /// Removed in 0.19.0
+    public let id: Int?
     public let localSiteId: Int
     public let message: Int
     public let messagePerSecond: Int
@@ -27,6 +28,8 @@ public struct ApiLocalSiteRateLimit: Codable {
     public let searchPerSecond: Int
     public let published: Date
     public let updated: Date?
-    public let importUserSettings: Int? // Exists >=0.19.0
-    public let importUserSettingsPerSecond: Int? // Exists >=0.19.0
+    /// Added in 0.19.0
+    public let importUserSettings: Int?
+    /// Added in 0.19.0
+    public let importUserSettingsPerSecond: Int?
 }
