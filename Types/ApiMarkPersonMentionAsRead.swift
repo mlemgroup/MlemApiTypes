@@ -10,7 +10,7 @@
 import Foundation
 
 // MarkPersonMentionAsRead.ts
-public struct ApiMarkPersonMentionAsRead: Codable {
+public struct ApiMarkPersonMentionAsRead: Codable, Hashable {
     public let personMentionId: Int
     public let read: Bool
 }

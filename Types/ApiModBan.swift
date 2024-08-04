@@ -10,7 +10,7 @@
 import Foundation
 
 // ModBan.ts
-public struct ApiModBan: Codable {
+public struct ApiModBan: Codable, Hashable {
     public let id: Int
     public let modPersonId: Int
     public let otherPersonId: Int

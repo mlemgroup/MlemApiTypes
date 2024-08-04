@@ -10,7 +10,7 @@
 import Foundation
 
 // FederatedInstances.ts
-public struct ApiFederatedInstances: Codable {
+public struct ApiFederatedInstances: Codable, Hashable {
     public let linked: [ApiInstance]
     public let allowed: [ApiInstance]
     public let blocked: [ApiInstance]

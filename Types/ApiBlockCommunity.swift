@@ -10,7 +10,7 @@
 import Foundation
 
 // BlockCommunity.ts
-public struct ApiBlockCommunity: Codable {
+public struct ApiBlockCommunity: Codable, Hashable {
     public let communityId: Int
     public let block: Bool
 }

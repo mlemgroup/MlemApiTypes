@@ -10,7 +10,7 @@
 import Foundation
 
 // Language.ts
-public struct ApiLanguage: Codable {
+public struct ApiLanguage: Codable, Hashable {
     public let id: Int
     public let code: String
     public let name: String

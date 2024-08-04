@@ -10,7 +10,7 @@
 import Foundation
 
 // ModFeaturePostView.ts
-public struct ApiModFeaturePostView: Codable {
+public struct ApiModFeaturePostView: Codable, Hashable {
     public let modFeaturePost: ApiModFeaturePost
     public let moderator: ApiPerson?
     public let post: ApiPost

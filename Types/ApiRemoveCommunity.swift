@@ -10,7 +10,7 @@
 import Foundation
 
 // RemoveCommunity.ts
-public struct ApiRemoveCommunity: Codable {
+public struct ApiRemoveCommunity: Codable, Hashable {
     public let communityId: Int
     public let removed: Bool
     public let reason: String?

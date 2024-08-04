@@ -10,7 +10,7 @@
 import Foundation
 
 // CommunityView.ts
-public struct ApiCommunityView: Codable {
+public struct ApiCommunityView: Codable, Hashable {
     public let community: ApiCommunity
     public let subscribed: ApiSubscribedType
     public let blocked: Bool

@@ -11,6 +11,6 @@ import Foundation
 
 // MarkAllAsRead.ts
 /// Removed in 0.19.0
-public struct ApiMarkAllAsRead: Codable {
+public struct ApiMarkAllAsRead: Codable, Hashable {
 
 }

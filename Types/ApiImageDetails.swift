@@ -11,7 +11,7 @@ import Foundation
 
 // ImageDetails.ts
 /// Added in 0.19.5
-public struct ApiImageDetails: Codable {
+public struct ApiImageDetails: Codable, Hashable {
     public let link: String
     public let width: Int
     public let height: Int

@@ -10,6 +10,6 @@
 import Foundation
 
 // GetSiteMetadataResponse.ts
-public struct ApiGetSiteMetadataResponse: Codable {
+public struct ApiGetSiteMetadataResponse: Codable, Hashable {
     public let metadata: ApiSiteMetadata
 }

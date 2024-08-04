@@ -10,6 +10,6 @@
 import Foundation
 
 // GetComment.ts
-public struct ApiGetComment: Codable {
+public struct ApiGetComment: Codable, Hashable {
     public let id: Int
 }

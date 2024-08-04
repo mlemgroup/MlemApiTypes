@@ -10,7 +10,7 @@
 import Foundation
 
 // ModlogListParams.ts
-public struct ApiModlogListParams: Codable {
+public struct ApiModlogListParams: Codable, Hashable {
     public let communityId: Int?
     public let modPersonId: Int?
     public let otherPersonId: Int?

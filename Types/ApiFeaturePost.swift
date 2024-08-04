@@ -10,7 +10,7 @@
 import Foundation
 
 // FeaturePost.ts
-public struct ApiFeaturePost: Codable {
+public struct ApiFeaturePost: Codable, Hashable {
     public let postId: Int
     public let featured: Bool
     public let featureType: ApiPostFeatureType

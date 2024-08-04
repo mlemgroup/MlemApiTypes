@@ -10,7 +10,7 @@
 import Foundation
 
 // Tagline.ts
-public struct ApiTagline: Codable {
+public struct ApiTagline: Codable, Hashable {
     public let id: Int
     public let localSiteId: Int
     public let content: String

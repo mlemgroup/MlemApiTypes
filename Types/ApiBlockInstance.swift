@@ -11,7 +11,7 @@ import Foundation
 
 // BlockInstance.ts
 /// Added in 0.19.0
-public struct ApiBlockInstance: Codable {
+public struct ApiBlockInstance: Codable, Hashable {
     public let instanceId: Int
     public let block: Bool
 }

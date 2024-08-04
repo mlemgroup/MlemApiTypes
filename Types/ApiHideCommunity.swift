@@ -10,7 +10,7 @@
 import Foundation
 
 // HideCommunity.ts
-public struct ApiHideCommunity: Codable {
+public struct ApiHideCommunity: Codable, Hashable {
     public let communityId: Int
     public let hidden: Bool
     public let reason: String?

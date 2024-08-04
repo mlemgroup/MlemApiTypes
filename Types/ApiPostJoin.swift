@@ -11,6 +11,6 @@ import Foundation
 
 // PostJoin.ts
 /// Removed in 0.19.0
-public struct ApiPostJoin: Codable {
+public struct ApiPostJoin: Codable, Hashable {
     public let postId: Int
 }

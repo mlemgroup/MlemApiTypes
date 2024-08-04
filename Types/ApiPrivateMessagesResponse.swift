@@ -10,6 +10,6 @@
 import Foundation
 
 // PrivateMessagesResponse.ts
-public struct ApiPrivateMessagesResponse: Codable {
+public struct ApiPrivateMessagesResponse: Codable, Hashable {
     public let privateMessages: [ApiPrivateMessageView]
 }

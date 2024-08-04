@@ -10,7 +10,7 @@
 import Foundation
 
 // PurgePerson.ts
-public struct ApiPurgePerson: Codable {
+public struct ApiPurgePerson: Codable, Hashable {
     public let personId: Int
     public let reason: String?
 }

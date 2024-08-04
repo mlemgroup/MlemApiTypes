@@ -10,7 +10,7 @@
 import Foundation
 
 // BlockPerson.ts
-public struct ApiBlockPerson: Codable {
+public struct ApiBlockPerson: Codable, Hashable {
     public let personId: Int
     public let block: Bool
 }

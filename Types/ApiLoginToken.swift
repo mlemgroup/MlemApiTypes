@@ -11,7 +11,7 @@ import Foundation
 
 // LoginToken.ts
 /// Added in 0.19.0
-public struct ApiLoginToken: Codable {
+public struct ApiLoginToken: Codable, Hashable {
     public let userId: Int
     public let published: Date
     // swiftlint:disable:next identifier_name

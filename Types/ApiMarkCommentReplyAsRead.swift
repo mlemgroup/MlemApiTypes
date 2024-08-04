@@ -10,7 +10,7 @@
 import Foundation
 
 // MarkCommentReplyAsRead.ts
-public struct ApiMarkCommentReplyAsRead: Codable {
+public struct ApiMarkCommentReplyAsRead: Codable, Hashable {
     public let commentReplyId: Int
     public let read: Bool
 }

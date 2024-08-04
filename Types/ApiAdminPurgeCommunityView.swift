@@ -10,7 +10,7 @@
 import Foundation
 
 // AdminPurgeCommunityView.ts
-public struct ApiAdminPurgeCommunityView: Codable {
+public struct ApiAdminPurgeCommunityView: Codable, Hashable {
     public let adminPurgeCommunity: ApiAdminPurgeCommunity
     public let admin: ApiPerson?
 }

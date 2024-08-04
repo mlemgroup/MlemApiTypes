@@ -10,7 +10,7 @@
 import Foundation
 
 // Instance.ts
-public struct ApiInstance: Codable {
+public struct ApiInstance: Codable, Hashable {
     public let id: Int
     public let domain: String
     public let published: Date

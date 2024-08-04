@@ -10,7 +10,7 @@
 import Foundation
 
 // GetCommunity.ts
-public struct ApiGetCommunity: Codable {
+public struct ApiGetCommunity: Codable, Hashable {
     public let id: Int?
     public let name: String?
 }

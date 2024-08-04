@@ -11,7 +11,7 @@ import Foundation
 
 // OpenGraphData.ts
 /// Added in 0.19.4
-public struct ApiOpenGraphData: Codable {
+public struct ApiOpenGraphData: Codable, Hashable {
     public let title: String?
     public let description: String?
     public let image: String?

@@ -11,6 +11,6 @@ import Foundation
 
 // ModJoin.ts
 /// Removed in 0.19.0
-public struct ApiModJoin: Codable {
+public struct ApiModJoin: Codable, Hashable {
     public let communityId: Int
 }

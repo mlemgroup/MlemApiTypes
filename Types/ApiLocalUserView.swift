@@ -10,7 +10,7 @@
 import Foundation
 
 // LocalUserView.ts
-public struct ApiLocalUserView: Codable {
+public struct ApiLocalUserView: Codable, Hashable {
     public let localUser: ApiLocalUser
     public let person: ApiPerson
     public let counts: ApiPersonAggregates

@@ -10,7 +10,7 @@
 import Foundation
 
 // GetPosts.ts
-public struct ApiGetPosts: Codable {
+public struct ApiGetPosts: Codable, Hashable {
     public let type_: ApiListingType?
     public let sort: ApiSortType?
     public let page: Int?

@@ -10,7 +10,7 @@
 import Foundation
 
 // ModAdd.ts
-public struct ApiModAdd: Codable {
+public struct ApiModAdd: Codable, Hashable {
     public let id: Int
     public let modPersonId: Int
     public let otherPersonId: Int

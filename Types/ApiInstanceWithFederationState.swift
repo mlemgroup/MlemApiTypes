@@ -11,7 +11,7 @@ import Foundation
 
 // InstanceWithFederationState.ts
 /// Added in 0.19.0
-public struct ApiInstanceWithFederationState: Codable {
+public struct ApiInstanceWithFederationState: Codable, Hashable {
     public let id: Int
     public let domain: String
     public let published: Date

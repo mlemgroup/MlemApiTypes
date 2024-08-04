@@ -10,7 +10,7 @@
 import Foundation
 
 // ListCommentReports.ts
-public struct ApiListCommentReports: Codable {
+public struct ApiListCommentReports: Codable, Hashable {
     public let page: Int?
     public let limit: Int?
     public let unresolvedOnly: Bool?

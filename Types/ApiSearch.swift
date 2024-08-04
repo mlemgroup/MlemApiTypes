@@ -10,7 +10,7 @@
 import Foundation
 
 // Search.ts
-public struct ApiSearch: Codable {
+public struct ApiSearch: Codable, Hashable {
     // swiftlint:disable:next identifier_name
     public let q: String
     public let communityId: Int?

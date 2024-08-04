@@ -11,7 +11,7 @@ import Foundation
 
 // SiteMetadata.ts
 /// Removed in 0.19.4
-public struct ApiSiteMetadata: Codable {
+public struct ApiSiteMetadata: Codable, Hashable {
     public let title: String?
     public let description: String?
     public let image: String?

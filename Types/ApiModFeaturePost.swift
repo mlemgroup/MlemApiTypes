@@ -10,7 +10,7 @@
 import Foundation
 
 // ModFeaturePost.ts
-public struct ApiModFeaturePost: Codable {
+public struct ApiModFeaturePost: Codable, Hashable {
     public let id: Int
     public let modPersonId: Int
     public let postId: Int

@@ -10,7 +10,7 @@
 import Foundation
 
 // MarkPostAsRead.ts
-public struct ApiMarkPostAsRead: Codable {
+public struct ApiMarkPostAsRead: Codable, Hashable {
     /// Removed in 0.19.4; made optional in 0.19.0
     public let postId: Int?
     public let read: Bool

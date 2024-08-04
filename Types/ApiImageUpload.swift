@@ -11,7 +11,7 @@ import Foundation
 
 // ImageUpload.ts
 /// Added in 0.19.0, removed in 0.19.4
-public struct ApiImageUpload: Codable {
+public struct ApiImageUpload: Codable, Hashable {
     public let localUserId: Int
     public let pictrsAlias: String
     public let pictrsDeleteToken: String

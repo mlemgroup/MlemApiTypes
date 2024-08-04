@@ -10,6 +10,6 @@
 import Foundation
 
 // CommentReplyResponse.ts
-public struct ApiCommentReplyResponse: Codable {
+public struct ApiCommentReplyResponse: Codable, Hashable {
     public let commentReplyView: ApiCommentReplyView
 }

@@ -10,7 +10,7 @@
 import Foundation
 
 // ListCommunities.ts
-public struct ApiListCommunities: Codable {
+public struct ApiListCommunities: Codable, Hashable {
     public let type_: ApiListingType?
     public let sort: ApiSortType?
     public let page: Int?

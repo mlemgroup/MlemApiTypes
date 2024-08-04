@@ -10,7 +10,7 @@
 import Foundation
 
 // ApproveRegistrationApplication.ts
-public struct ApiApproveRegistrationApplication: Codable {
+public struct ApiApproveRegistrationApplication: Codable, Hashable {
     public let id: Int
     public let approve: Bool
     public let denyReason: String?

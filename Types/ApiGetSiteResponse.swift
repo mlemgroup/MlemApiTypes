@@ -10,7 +10,7 @@
 import Foundation
 
 // GetSiteResponse.ts
-public struct ApiGetSiteResponse: Codable {
+public struct ApiGetSiteResponse: Codable, Hashable {
     public let siteView: ApiSiteView
     public let admins: [ApiPersonView]
     public let version: String
