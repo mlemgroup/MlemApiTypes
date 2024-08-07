@@ -10,7 +10,7 @@
 import Foundation
 
 // CustomEmojiView.ts
-public struct ApiCustomEmojiView: Codable {
+public struct ApiCustomEmojiView: Codable, Hashable {
     public let customEmoji: ApiCustomEmoji
     public let keywords: [ApiCustomEmojiKeyword]
 }

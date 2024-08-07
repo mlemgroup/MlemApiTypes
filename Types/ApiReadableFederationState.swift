@@ -11,7 +11,7 @@ import Foundation
 
 // ReadableFederationState.ts
 /// Added in 0.19.0
-public struct ApiReadableFederationState: Codable {
+public struct ApiReadableFederationState: Codable, Hashable {
     public let instanceId: Int
     public let lastSuccessfulId: Int?
     public let lastSuccessfulPublishedTime: String?

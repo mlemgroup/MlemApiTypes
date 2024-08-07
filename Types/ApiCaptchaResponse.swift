@@ -10,7 +10,7 @@
 import Foundation
 
 // CaptchaResponse.ts
-public struct ApiCaptchaResponse: Codable {
+public struct ApiCaptchaResponse: Codable, Hashable {
     public let png: String
     public let wav: String
     public let uuid: String

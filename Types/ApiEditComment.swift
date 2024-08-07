@@ -10,7 +10,7 @@
 import Foundation
 
 // EditComment.ts
-public struct ApiEditComment: Codable {
+public struct ApiEditComment: Codable, Hashable {
     public let commentId: Int
     public let content: String?
     public let languageId: Int?

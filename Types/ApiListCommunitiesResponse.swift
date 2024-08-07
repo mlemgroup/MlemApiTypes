@@ -10,6 +10,6 @@
 import Foundation
 
 // ListCommunitiesResponse.ts
-public struct ApiListCommunitiesResponse: Codable {
+public struct ApiListCommunitiesResponse: Codable, Hashable {
     public let communities: [ApiCommunityView]
 }

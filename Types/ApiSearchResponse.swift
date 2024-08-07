@@ -10,7 +10,7 @@
 import Foundation
 
 // SearchResponse.ts
-public struct ApiSearchResponse: Codable {
+public struct ApiSearchResponse: Codable, Hashable {
     public let type_: ApiSearchType
     public let comments: [ApiCommentView]
     public let posts: [ApiPostView]

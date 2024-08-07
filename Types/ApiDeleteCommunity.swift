@@ -10,7 +10,7 @@
 import Foundation
 
 // DeleteCommunity.ts
-public struct ApiDeleteCommunity: Codable {
+public struct ApiDeleteCommunity: Codable, Hashable {
     public let communityId: Int
     public let deleted: Bool
 }

@@ -10,6 +10,6 @@
 import Foundation
 
 // VerifyEmail.ts
-public struct ApiVerifyEmail: Codable {
+public struct ApiVerifyEmail: Codable, Hashable {
     public let token: String
 }

@@ -10,7 +10,7 @@
 import Foundation
 
 // DeletePost.ts
-public struct ApiDeletePost: Codable {
+public struct ApiDeletePost: Codable, Hashable {
     public let postId: Int
     public let deleted: Bool
 }

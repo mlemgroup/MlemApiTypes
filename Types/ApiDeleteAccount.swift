@@ -10,7 +10,7 @@
 import Foundation
 
 // DeleteAccount.ts
-public struct ApiDeleteAccount: Codable {
+public struct ApiDeleteAccount: Codable, Hashable {
     public let password: String
     /// Added in 0.19.0
     public let deleteContent: Bool?

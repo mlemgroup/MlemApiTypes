@@ -10,7 +10,7 @@
 import Foundation
 
 // GetPost.ts
-public struct ApiGetPost: Codable {
+public struct ApiGetPost: Codable, Hashable {
     public let id: Int?
     public let commentId: Int?
 }

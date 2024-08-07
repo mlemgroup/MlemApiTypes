@@ -10,6 +10,6 @@
 import Foundation
 
 // PasswordReset.ts
-public struct ApiPasswordReset: Codable {
+public struct ApiPasswordReset: Codable, Hashable {
     public let email: String
 }

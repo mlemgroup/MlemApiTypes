@@ -11,7 +11,7 @@ import Foundation
 
 // InstanceBlockView.ts
 /// Added in 0.19.0
-public struct ApiInstanceBlockView: Codable {
+public struct ApiInstanceBlockView: Codable, Hashable {
     public let person: ApiPerson
     public let instance: ApiInstance
     public let site: ApiSite?

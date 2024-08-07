@@ -10,7 +10,7 @@
 import Foundation
 
 // ResolveObjectResponse.ts
-public struct ApiResolveObjectResponse: Codable {
+public struct ApiResolveObjectResponse: Codable, Hashable {
     public let comment: ApiCommentView?
     public let post: ApiPostView?
     public let community: ApiCommunityView?

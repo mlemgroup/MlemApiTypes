@@ -10,7 +10,7 @@
 import Foundation
 
 // Person.ts
-public struct ApiPerson: Codable {
+public struct ApiPerson: Codable, Hashable {
     public let id: Int
     public let name: String
     public let displayName: String?

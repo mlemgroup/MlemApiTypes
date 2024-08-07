@@ -11,6 +11,6 @@ import Foundation
 
 // ModJoinResponse.ts
 /// Removed in 0.19.0
-public struct ApiModJoinResponse: Codable {
+public struct ApiModJoinResponse: Codable, Hashable {
     public let joined: Bool
 }

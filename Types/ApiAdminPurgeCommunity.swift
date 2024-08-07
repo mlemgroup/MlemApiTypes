@@ -10,7 +10,7 @@
 import Foundation
 
 // AdminPurgeCommunity.ts
-public struct ApiAdminPurgeCommunity: Codable {
+public struct ApiAdminPurgeCommunity: Codable, Hashable {
     public let id: Int
     public let adminPersonId: Int
     public let reason: String?

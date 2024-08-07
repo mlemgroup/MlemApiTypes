@@ -10,7 +10,7 @@
 import Foundation
 
 // MyUserInfo.ts
-public struct ApiMyUserInfo: Codable {
+public struct ApiMyUserInfo: Codable, Hashable {
     public let localUserView: ApiLocalUserView
     public let follows: [ApiCommunityFollowerView]
     public let moderates: [ApiCommunityModeratorView]

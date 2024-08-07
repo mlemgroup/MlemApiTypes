@@ -10,7 +10,7 @@
 import Foundation
 
 // PostView.ts
-public struct ApiPostView: Codable {
+public struct ApiPostView: Codable, Hashable {
     public let post: ApiPost
     public let creator: ApiPerson
     public let community: ApiCommunity

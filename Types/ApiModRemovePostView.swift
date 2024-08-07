@@ -10,7 +10,7 @@
 import Foundation
 
 // ModRemovePostView.ts
-public struct ApiModRemovePostView: Codable {
+public struct ApiModRemovePostView: Codable, Hashable {
     public let modRemovePost: ApiModRemovePost
     public let moderator: ApiPerson?
     public let post: ApiPost

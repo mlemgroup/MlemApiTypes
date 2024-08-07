@@ -11,6 +11,6 @@ import Foundation
 
 // SuccessResponse.ts
 /// Added in 0.19.0
-public struct ApiSuccessResponse: Codable {
+public struct ApiSuccessResponse: Codable, Hashable {
     public let success: Bool
 }

@@ -10,7 +10,7 @@
 import Foundation
 
 // ListPostReports.ts
-public struct ApiListPostReports: Codable {
+public struct ApiListPostReports: Codable, Hashable {
     public let page: Int?
     public let limit: Int?
     public let unresolvedOnly: Bool?

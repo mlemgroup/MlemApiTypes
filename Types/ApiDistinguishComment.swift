@@ -10,7 +10,7 @@
 import Foundation
 
 // DistinguishComment.ts
-public struct ApiDistinguishComment: Codable {
+public struct ApiDistinguishComment: Codable, Hashable {
     public let commentId: Int
     public let distinguished: Bool
 }

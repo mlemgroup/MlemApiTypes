@@ -10,7 +10,7 @@
 import Foundation
 
 // LoginResponse.ts
-public struct ApiLoginResponse: Codable {
+public struct ApiLoginResponse: Codable, Hashable {
     public let jwt: String?
     public let registrationCreated: Bool
     public let verifyEmailSent: Bool

@@ -10,7 +10,7 @@
 import Foundation
 
 // GetCaptchaResponse.ts
-public struct ApiGetCaptchaResponse: Codable {
+public struct ApiGetCaptchaResponse: Codable, Hashable {
     // swiftlint:disable:next identifier_name
     public let ok: ApiCaptchaResponse?
 }

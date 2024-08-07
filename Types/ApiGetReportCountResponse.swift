@@ -10,7 +10,7 @@
 import Foundation
 
 // GetReportCountResponse.ts
-public struct ApiGetReportCountResponse: Codable {
+public struct ApiGetReportCountResponse: Codable, Hashable {
     public let communityId: Int?
     public let commentReports: Int
     public let postReports: Int

@@ -10,7 +10,7 @@
 import Foundation
 
 // LocalSiteRateLimit.ts
-public struct ApiLocalSiteRateLimit: Codable {
+public struct ApiLocalSiteRateLimit: Codable, Hashable {
     /// Removed in 0.19.0
     public let id: Int?
     public let localSiteId: Int

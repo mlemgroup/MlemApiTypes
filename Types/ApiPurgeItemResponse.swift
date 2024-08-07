@@ -11,6 +11,6 @@ import Foundation
 
 // PurgeItemResponse.ts
 /// Removed in 0.19.0
-public struct ApiPurgeItemResponse: Codable {
+public struct ApiPurgeItemResponse: Codable, Hashable {
     public let success: Bool
 }

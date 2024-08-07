@@ -10,7 +10,7 @@
 import Foundation
 
 // ListPrivateMessageReports.ts
-public struct ApiListPrivateMessageReports: Codable {
+public struct ApiListPrivateMessageReports: Codable, Hashable {
     public let page: Int?
     public let limit: Int?
     public let unresolvedOnly: Bool?

@@ -10,7 +10,7 @@
 import Foundation
 
 // CreateCommentReport.ts
-public struct ApiCreateCommentReport: Codable {
+public struct ApiCreateCommentReport: Codable, Hashable {
     public let commentId: Int
     public let reason: String
 }

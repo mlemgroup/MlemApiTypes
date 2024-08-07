@@ -10,6 +10,6 @@
 import Foundation
 
 // GetSiteMetadata.ts
-public struct ApiGetSiteMetadata: Codable {
+public struct ApiGetSiteMetadata: Codable, Hashable {
     public let url: String
 }

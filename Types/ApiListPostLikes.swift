@@ -11,7 +11,7 @@ import Foundation
 
 // ListPostLikes.ts
 /// Added in 0.19.2
-public struct ApiListPostLikes: Codable {
+public struct ApiListPostLikes: Codable, Hashable {
     public let postId: Int
     public let page: Int?
     public let limit: Int?

@@ -11,6 +11,6 @@ import Foundation
 
 // ListCommentLikesResponse.ts
 /// Added in 0.19.2
-public struct ApiListCommentLikesResponse: Codable {
+public struct ApiListCommentLikesResponse: Codable, Hashable {
     public let commentLikes: [ApiVoteView]
 }

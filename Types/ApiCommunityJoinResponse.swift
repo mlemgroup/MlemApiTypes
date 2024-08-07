@@ -11,6 +11,6 @@ import Foundation
 
 // CommunityJoinResponse.ts
 /// Removed in 0.19.0
-public struct ApiCommunityJoinResponse: Codable {
+public struct ApiCommunityJoinResponse: Codable, Hashable {
     public let joined: Bool
 }

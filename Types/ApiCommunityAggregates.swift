@@ -10,7 +10,7 @@
 import Foundation
 
 // CommunityAggregates.ts
-public struct ApiCommunityAggregates: Codable {
+public struct ApiCommunityAggregates: Codable, Hashable {
     /// Removed in 0.19.0
     public let id: Int?
     public let communityId: Int

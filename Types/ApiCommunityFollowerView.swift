@@ -10,7 +10,7 @@
 import Foundation
 
 // CommunityFollowerView.ts
-public struct ApiCommunityFollowerView: Codable {
+public struct ApiCommunityFollowerView: Codable, Hashable {
     public let community: ApiCommunity
     public let follower: ApiPerson
 }

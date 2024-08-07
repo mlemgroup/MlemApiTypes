@@ -10,7 +10,7 @@
 import Foundation
 
 // RegistrationApplication.ts
-public struct ApiRegistrationApplication: Codable {
+public struct ApiRegistrationApplication: Codable, Hashable {
     public let id: Int
     public let localUserId: Int
     public let answer: String
