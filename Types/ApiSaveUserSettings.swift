@@ -17,8 +17,8 @@ public struct ApiSaveUserSettings: Codable, Hashable {
     public let defaultSortType: ApiSortType?
     public let defaultListingType: ApiListingType?
     public let interfaceLanguage: String?
-    public let avatar: URL?
-    public let banner: URL?
+    public let avatar: String?
+    public let banner: String?
     public let displayName: String?
     public let email: String?
     public let bio: String?
