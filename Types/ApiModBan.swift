@@ -16,6 +16,6 @@ public struct ApiModBan: Codable, Hashable {
     public let otherPersonId: Int
     public let reason: String?
     public let banned: Bool
-    public let expires: String?
-    public let when_: String
+    public let expires: Date?
+    public let when_: Date
 }

@@ -16,5 +16,5 @@ public struct ApiModAddCommunity: Codable, Hashable {
     public let otherPersonId: Int
     public let communityId: Int
     public let removed: Bool
-    public let when_: String
+    public let when_: Date
 }

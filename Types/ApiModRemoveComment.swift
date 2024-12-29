@@ -16,5 +16,5 @@ public struct ApiModRemoveComment: Codable, Hashable {
     public let commentId: Int
     public let reason: String?
     public let removed: Bool
-    public let when_: String
+    public let when_: Date
 }

@@ -17,6 +17,6 @@ public struct ApiModRemoveCommunity: Codable, Hashable {
     public let reason: String?
     public let removed: Bool
     /// Removed in 0.19.0
-    public let expires: String?
-    public let when_: String
+    public let expires: Date?
+    public let when_: Date
 }

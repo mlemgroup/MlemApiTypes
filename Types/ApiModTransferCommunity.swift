@@ -15,5 +15,5 @@ public struct ApiModTransferCommunity: Codable, Hashable {
     public let modPersonId: Int
     public let otherPersonId: Int
     public let communityId: Int
-    public let when_: String
+    public let when_: Date
 }
