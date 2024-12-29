@@ -14,7 +14,7 @@ public struct ApiModHideCommunity: Codable, Hashable {
     public let id: Int
     public let communityId: Int
     public let modPersonId: Int
-    public let when_: String
+    public let when_: Date
     public let reason: String?
     public let hidden: Bool
 }

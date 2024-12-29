@@ -15,5 +15,5 @@ public struct ApiAdminPurgeComment: Codable, Hashable {
     public let adminPersonId: Int
     public let postId: Int
     public let reason: String?
-    public let when_: String
+    public let when_: Date
 }

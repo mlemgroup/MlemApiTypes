@@ -15,5 +15,5 @@ public struct ApiModLockPost: Codable, Hashable {
     public let modPersonId: Int
     public let postId: Int
     public let locked: Bool
-    public let when_: String
+    public let when_: Date
 }

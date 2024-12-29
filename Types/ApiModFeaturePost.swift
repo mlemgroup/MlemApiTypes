@@ -15,6 +15,6 @@ public struct ApiModFeaturePost: Codable, Hashable {
     public let modPersonId: Int
     public let postId: Int
     public let featured: Bool
-    public let when_: String
+    public let when_: Date
     public let isFeaturedCommunity: Bool
 }
