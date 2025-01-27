@@ -19,7 +19,7 @@ public struct ApiSite: Codable, Hashable {
     public let icon: URL?
     public let banner: URL?
     public let description: String?
-    public let actorId: URL
+    public let actorId: ActorIdentifier
     public let lastRefreshedAt: Date
     public let inboxUrl: String
     /// Removed in 0.19.4

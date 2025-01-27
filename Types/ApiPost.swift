@@ -26,7 +26,7 @@ public struct ApiPost: Codable, Hashable {
     public let embedTitle: String?
     public let embedDescription: String?
     public let thumbnailUrl: URL?
-    public let apId: URL
+    public let apId: ActorIdentifier
     public let local: Bool
     public let embedVideoUrl: URL?
     public let languageId: Int
