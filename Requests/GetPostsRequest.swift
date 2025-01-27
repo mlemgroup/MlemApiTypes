@@ -26,7 +26,9 @@ public struct GetPostsRequest: ApiGetRequest {
       likedOnly: Bool?,
       dislikedOnly: Bool?,
       pageCursor: String?,
-      showHidden: Bool?
+      showHidden: Bool?,
+      showRead: Bool?,
+      showNsfw: Bool?
     ) {
         self.queryItems = [
             .init(name: "type_", value: type_?.rawValue),
@@ -39,7 +41,9 @@ public struct GetPostsRequest: ApiGetRequest {
             .init(name: "liked_only", value: likedOnly.map(String.init)),
             .init(name: "disliked_only", value: dislikedOnly.map(String.init)),
             .init(name: "page_cursor", value: pageCursor),
-            .init(name: "show_hidden", value: showHidden.map(String.init))
+            .init(name: "show_hidden", value: showHidden.map(String.init)),
+            .init(name: "show_read", value: showRead.map(String.init)),
+            .init(name: "show_nsfw", value: showNsfw.map(String.init))
         ]
     }
 }

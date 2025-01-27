@@ -21,4 +21,6 @@ public struct ApiSearch: Codable, Hashable {
     public let listingType: ApiListingType?
     public let page: Int?
     public let limit: Int?
+    /// Added in 0.19.6
+    public let postTitleOnly: Bool?
 }
