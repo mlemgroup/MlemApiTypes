@@ -25,7 +25,8 @@ public struct SearchRequest: ApiGetRequest {
       sort: ApiSortType?,
       listingType: ApiListingType?,
       page: Int?,
-      limit: Int?
+      limit: Int?,
+      postTitleOnly: Bool?
     ) {
         self.queryItems = [
             .init(name: "q", value: q),
@@ -36,7 +37,8 @@ public struct SearchRequest: ApiGetRequest {
             .init(name: "sort", value: sort?.rawValue),
             .init(name: "listing_type", value: listingType?.rawValue),
             .init(name: "page", value: page.map(String.init)),
-            .init(name: "limit", value: limit.map(String.init))
+            .init(name: "limit", value: limit.map(String.init)),
+            .init(name: "post_title_only", value: postTitleOnly.map(String.init))
         ]
     }
 }

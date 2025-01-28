@@ -20,7 +20,7 @@ public struct ApiCommunity: Codable, Hashable {
     public let updated: Date?
     public let deleted: Bool
     public let nsfw: Bool
-    public let actorId: URL
+    public let actorId: ActorIdentifier
     public let local: Bool
     public let icon: URL?
     public let banner: URL?

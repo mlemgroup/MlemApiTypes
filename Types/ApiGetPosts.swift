@@ -26,4 +26,8 @@ public struct ApiGetPosts: Codable, Hashable {
     public let pageCursor: String?
     /// Added in 0.19.4
     public let showHidden: Bool?
+    /// Added in 0.19.6
+    public let showRead: Bool?
+    /// Added in 0.19.6
+    public let showNsfw: Bool?
 }

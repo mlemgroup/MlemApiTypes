@@ -18,7 +18,7 @@ public struct ApiPerson: Codable, Hashable {
     public let banned: Bool
     public let published: Date
     public let updated: Date?
-    public let actorId: URL
+    public let actorId: ActorIdentifier
     public let bio: String?
     public let local: Bool
     public let banner: URL?

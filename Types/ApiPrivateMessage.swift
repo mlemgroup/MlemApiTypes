@@ -19,6 +19,6 @@ public struct ApiPrivateMessage: Codable, Hashable {
     public let read: Bool
     public let published: Date
     public let updated: Date?
-    public let apId: URL
+    public let apId: ActorIdentifier
     public let local: Bool
 }

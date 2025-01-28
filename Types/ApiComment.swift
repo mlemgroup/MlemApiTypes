@@ -19,7 +19,7 @@ public struct ApiComment: Codable, Hashable {
     public let published: Date
     public let updated: Date?
     public let deleted: Bool
-    public let apId: URL
+    public let apId: ActorIdentifier
     public let local: Bool
     public let path: String
     public let distinguished: Bool
