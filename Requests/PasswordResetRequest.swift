@@ -12,8 +12,6 @@ import Foundation
 public struct PasswordResetRequest: ApiPostRequest {
     public typealias Body = ApiPasswordReset
     public typealias Response = ApiSuccessResponse
-
-    public func path(on version: SiteVersion) -> String { "user/password_reset" }
     
     public let body: Body?
 
@@ -24,4 +22,6 @@ public struct PasswordResetRequest: ApiPostRequest {
             email: email
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "user/password_reset" }
 }

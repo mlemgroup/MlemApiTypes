@@ -12,8 +12,6 @@ import Foundation
 public struct LockPostRequest: ApiPostRequest {
     public typealias Body = ApiLockPost
     public typealias Response = ApiPostResponse
-
-    public func path(on version: SiteVersion) -> String { "post/lock" }
     
     public let body: Body?
 
@@ -26,4 +24,6 @@ public struct LockPostRequest: ApiPostRequest {
             locked: locked
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "post/lock" }
 }

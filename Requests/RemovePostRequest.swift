@@ -12,8 +12,6 @@ import Foundation
 public struct RemovePostRequest: ApiPostRequest {
     public typealias Body = ApiRemovePost
     public typealias Response = ApiPostResponse
-
-    public func path(on version: SiteVersion) -> String { "post/remove" }
     
     public let body: Body?
 
@@ -28,4 +26,6 @@ public struct RemovePostRequest: ApiPostRequest {
             reason: reason
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "post/remove" }
 }

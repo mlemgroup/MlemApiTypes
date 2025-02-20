@@ -12,8 +12,6 @@ import Foundation
 public struct EditPostRequest: ApiPutRequest {
     public typealias Body = ApiEditPost
     public typealias Response = ApiPostResponse
-
-    public func path(on version: SiteVersion) -> String { "post" }
     
     public let body: Body?
 
@@ -38,4 +36,6 @@ public struct EditPostRequest: ApiPutRequest {
             customThumbnail: customThumbnail
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "post" }
 }

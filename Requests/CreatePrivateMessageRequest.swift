@@ -12,8 +12,6 @@ import Foundation
 public struct CreatePrivateMessageRequest: ApiPostRequest {
     public typealias Body = ApiCreatePrivateMessage
     public typealias Response = ApiPrivateMessageResponse
-
-    public func path(on version: SiteVersion) -> String { "private_message" }
     
     public let body: Body?
 
@@ -26,4 +24,6 @@ public struct CreatePrivateMessageRequest: ApiPostRequest {
             recipientId: recipientId
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "private_message" }
 }

@@ -12,8 +12,6 @@ import Foundation
 public struct ChangePasswordRequest: ApiPutRequest {
     public typealias Body = ApiChangePassword
     public typealias Response = ApiLoginResponse
-
-    public func path(on version: SiteVersion) -> String { "user/change_password" }
     
     public let body: Body?
 
@@ -28,4 +26,6 @@ public struct ChangePasswordRequest: ApiPutRequest {
             oldPassword: oldPassword
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "user/change_password" }
 }

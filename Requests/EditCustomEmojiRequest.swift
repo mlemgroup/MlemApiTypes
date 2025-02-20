@@ -12,8 +12,6 @@ import Foundation
 public struct EditCustomEmojiRequest: ApiPutRequest {
     public typealias Body = ApiEditCustomEmoji
     public typealias Response = ApiCustomEmojiResponse
-
-    public func path(on version: SiteVersion) -> String { "custom_emoji" }
     
     public let body: Body?
 
@@ -32,4 +30,6 @@ public struct EditCustomEmojiRequest: ApiPutRequest {
             keywords: keywords
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "custom_emoji" }
 }

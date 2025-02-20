@@ -13,8 +13,6 @@ public struct ResolveObjectRequest: ApiGetRequest {
     public typealias Parameters = ApiResolveObject
     public typealias Response = ApiResolveObjectResponse
     
-    public func path(on version: SiteVersion) -> String { "resolve_object" }
-    
     public let parameters: Parameters?
     
     init(
@@ -25,4 +23,6 @@ public struct ResolveObjectRequest: ApiGetRequest {
             q: q
       )
     }
+    
+    public func path(on version: SiteVersion) -> String { "resolve_object" }
 }

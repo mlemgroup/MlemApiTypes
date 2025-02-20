@@ -12,8 +12,6 @@ import Foundation
 public struct EditCommentRequest: ApiPutRequest {
     public typealias Body = ApiEditComment
     public typealias Response = ApiCommentResponse
-
-    public func path(on version: SiteVersion) -> String { "comment" }
     
     public let body: Body?
 
@@ -30,4 +28,6 @@ public struct EditCommentRequest: ApiPutRequest {
             formId: formId
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "comment" }
 }

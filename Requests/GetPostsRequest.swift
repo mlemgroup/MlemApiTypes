@@ -13,8 +13,6 @@ public struct GetPostsRequest: ApiGetRequest {
     public typealias Parameters = ApiGetPosts
     public typealias Response = ApiGetPostsResponse
     
-    public func path(on version: SiteVersion) -> String { "post/list" }
-    
     public let parameters: Parameters?
     
     init(
@@ -48,4 +46,6 @@ public struct GetPostsRequest: ApiGetRequest {
             showNsfw: showNsfw
       )
     }
+    
+    public func path(on version: SiteVersion) -> String { "post/list" }
 }

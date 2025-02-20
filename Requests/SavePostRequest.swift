@@ -12,8 +12,6 @@ import Foundation
 public struct SavePostRequest: ApiPutRequest {
     public typealias Body = ApiSavePost
     public typealias Response = ApiPostResponse
-
-    public func path(on version: SiteVersion) -> String { "post/save" }
     
     public let body: Body?
 
@@ -26,4 +24,6 @@ public struct SavePostRequest: ApiPutRequest {
             save: save
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "post/save" }
 }

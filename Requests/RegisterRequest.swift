@@ -12,8 +12,6 @@ import Foundation
 public struct RegisterRequest: ApiPostRequest {
     public typealias Body = ApiRegister
     public typealias Response = ApiLoginResponse
-
-    public func path(on version: SiteVersion) -> String { "user/register" }
     
     public let body: Body?
 
@@ -40,4 +38,6 @@ public struct RegisterRequest: ApiPostRequest {
             answer: answer
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "user/register" }
 }

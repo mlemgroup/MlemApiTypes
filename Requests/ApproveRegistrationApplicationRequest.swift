@@ -12,8 +12,6 @@ import Foundation
 public struct ApproveRegistrationApplicationRequest: ApiPutRequest {
     public typealias Body = ApiApproveRegistrationApplication
     public typealias Response = ApiRegistrationApplicationResponse
-
-    public func path(on version: SiteVersion) -> String { "admin/registration_application/approve" }
     
     public let body: Body?
 
@@ -28,4 +26,6 @@ public struct ApproveRegistrationApplicationRequest: ApiPutRequest {
             denyReason: denyReason
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "admin/registration_application/approve" }
 }

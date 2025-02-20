@@ -13,8 +13,6 @@ public struct GetPrivateMessagesRequest: ApiGetRequest {
     public typealias Parameters = ApiGetPrivateMessages
     public typealias Response = ApiPrivateMessagesResponse
     
-    public func path(on version: SiteVersion) -> String { "private_message/list" }
-    
     public let parameters: Parameters?
     
     init(
@@ -30,4 +28,6 @@ public struct GetPrivateMessagesRequest: ApiGetRequest {
             creatorId: creatorId
       )
     }
+    
+    public func path(on version: SiteVersion) -> String { "private_message/list" }
 }

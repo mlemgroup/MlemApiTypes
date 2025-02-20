@@ -12,8 +12,6 @@ import Foundation
 public struct DeletePostRequest: ApiPostRequest {
     public typealias Body = ApiDeletePost
     public typealias Response = ApiPostResponse
-
-    public func path(on version: SiteVersion) -> String { "post/delete" }
     
     public let body: Body?
 
@@ -26,4 +24,6 @@ public struct DeletePostRequest: ApiPostRequest {
             deleted: deleted
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "post/delete" }
 }

@@ -12,8 +12,6 @@ import Foundation
 public struct BlockCommunityRequest: ApiPostRequest {
     public typealias Body = ApiBlockCommunity
     public typealias Response = ApiBlockCommunityResponse
-
-    public func path(on version: SiteVersion) -> String { "community/block" }
     
     public let body: Body?
 
@@ -26,4 +24,6 @@ public struct BlockCommunityRequest: ApiPostRequest {
             block: block
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "community/block" }
 }

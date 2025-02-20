@@ -13,8 +13,6 @@ public struct GetPersonDetailsRequest: ApiGetRequest {
     public typealias Parameters = ApiGetPersonDetails
     public typealias Response = ApiGetPersonDetailsResponse
     
-    public func path(on version: SiteVersion) -> String { "user" }
-    
     public let parameters: Parameters?
     
     init(
@@ -36,4 +34,6 @@ public struct GetPersonDetailsRequest: ApiGetRequest {
             savedOnly: savedOnly
       )
     }
+    
+    public func path(on version: SiteVersion) -> String { "user" }
 }

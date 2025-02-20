@@ -12,8 +12,6 @@ import Foundation
 public struct HidePostRequest: ApiPostRequest {
     public typealias Body = ApiHidePost
     public typealias Response = ApiSuccessResponse
-
-    public func path(on version: SiteVersion) -> String { "post/hide" }
     
     public let body: Body?
 
@@ -26,4 +24,6 @@ public struct HidePostRequest: ApiPostRequest {
             hide: hide
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "post/hide" }
 }

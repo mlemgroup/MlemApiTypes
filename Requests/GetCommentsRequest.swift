@@ -13,8 +13,6 @@ public struct GetCommentsRequest: ApiGetRequest {
     public typealias Parameters = ApiGetComments
     public typealias Response = ApiGetCommentsResponse
     
-    public func path(on version: SiteVersion) -> String { "comment/list" }
-    
     public let parameters: Parameters?
     
     init(
@@ -46,4 +44,6 @@ public struct GetCommentsRequest: ApiGetRequest {
             dislikedOnly: dislikedOnly
       )
     }
+    
+    public func path(on version: SiteVersion) -> String { "comment/list" }
 }

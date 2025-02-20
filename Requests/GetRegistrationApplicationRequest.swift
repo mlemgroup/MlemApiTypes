@@ -13,8 +13,6 @@ public struct GetRegistrationApplicationRequest: ApiGetRequest {
     public typealias Parameters = ApiGetRegistrationApplication
     public typealias Response = ApiRegistrationApplicationResponse
     
-    public func path(on version: SiteVersion) -> String { "admin/registration_application" }
-    
     public let parameters: Parameters?
     
     init(
@@ -24,4 +22,6 @@ public struct GetRegistrationApplicationRequest: ApiGetRequest {
             personId: personId
       )
     }
+    
+    public func path(on version: SiteVersion) -> String { "admin/registration_application" }
 }

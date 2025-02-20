@@ -12,8 +12,6 @@ import Foundation
 public struct UpdateTotpRequest: ApiPostRequest {
     public typealias Body = ApiUpdateTotp
     public typealias Response = ApiUpdateTotpResponse
-
-    public func path(on version: SiteVersion) -> String { "user/totp/update" }
     
     public let body: Body?
 
@@ -26,4 +24,6 @@ public struct UpdateTotpRequest: ApiPostRequest {
             enabled: enabled
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "user/totp/update" }
 }

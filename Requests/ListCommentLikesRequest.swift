@@ -13,8 +13,6 @@ public struct ListCommentLikesRequest: ApiGetRequest {
     public typealias Parameters = ApiListCommentLikes
     public typealias Response = ApiListCommentLikesResponse
     
-    public func path(on version: SiteVersion) -> String { "comment/like/list" }
-    
     public let parameters: Parameters?
     
     init(
@@ -28,4 +26,6 @@ public struct ListCommentLikesRequest: ApiGetRequest {
             limit: limit
       )
     }
+    
+    public func path(on version: SiteVersion) -> String { "comment/like/list" }
 }

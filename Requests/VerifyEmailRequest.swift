@@ -12,8 +12,6 @@ import Foundation
 public struct VerifyEmailRequest: ApiPostRequest {
     public typealias Body = ApiVerifyEmail
     public typealias Response = ApiSuccessResponse
-
-    public func path(on version: SiteVersion) -> String { "user/verify_email" }
     
     public let body: Body?
 
@@ -24,4 +22,6 @@ public struct VerifyEmailRequest: ApiPostRequest {
             token: token
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "user/verify_email" }
 }

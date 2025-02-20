@@ -12,8 +12,6 @@ import Foundation
 public struct FeaturePostRequest: ApiPostRequest {
     public typealias Body = ApiFeaturePost
     public typealias Response = ApiPostResponse
-
-    public func path(on version: SiteVersion) -> String { "post/feature" }
     
     public let body: Body?
 
@@ -28,4 +26,6 @@ public struct FeaturePostRequest: ApiPostRequest {
             featureType: featureType
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "post/feature" }
 }

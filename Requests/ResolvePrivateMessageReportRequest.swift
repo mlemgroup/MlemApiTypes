@@ -12,8 +12,6 @@ import Foundation
 public struct ResolvePrivateMessageReportRequest: ApiPutRequest {
     public typealias Body = ApiResolvePrivateMessageReport
     public typealias Response = ApiPrivateMessageReportResponse
-
-    public func path(on version: SiteVersion) -> String { "private_message/report/resolve" }
     
     public let body: Body?
 
@@ -26,4 +24,6 @@ public struct ResolvePrivateMessageReportRequest: ApiPutRequest {
             resolved: resolved
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "private_message/report/resolve" }
 }

@@ -12,8 +12,6 @@ import Foundation
 public struct PurgePostRequest: ApiPostRequest {
     public typealias Body = ApiPurgePost
     public typealias Response = ApiSuccessResponse
-
-    public func path(on version: SiteVersion) -> String { "admin/purge/post" }
     
     public let body: Body?
 
@@ -26,4 +24,6 @@ public struct PurgePostRequest: ApiPostRequest {
             reason: reason
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "admin/purge/post" }
 }

@@ -12,8 +12,6 @@ import Foundation
 public struct CreatePostReportRequest: ApiPostRequest {
     public typealias Body = ApiCreatePostReport
     public typealias Response = ApiPostReportResponse
-
-    public func path(on version: SiteVersion) -> String { "post/report" }
     
     public let body: Body?
 
@@ -26,4 +24,6 @@ public struct CreatePostReportRequest: ApiPostRequest {
             reason: reason
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "post/report" }
 }

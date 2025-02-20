@@ -12,8 +12,6 @@ import Foundation
 public struct BlockPersonRequest: ApiPostRequest {
     public typealias Body = ApiBlockPerson
     public typealias Response = ApiBlockPersonResponse
-
-    public func path(on version: SiteVersion) -> String { "user/block" }
     
     public let body: Body?
 
@@ -26,4 +24,6 @@ public struct BlockPersonRequest: ApiPostRequest {
             block: block
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "user/block" }
 }

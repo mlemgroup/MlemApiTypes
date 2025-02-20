@@ -12,8 +12,6 @@ import Foundation
 public struct FollowCommunityRequest: ApiPostRequest {
     public typealias Body = ApiFollowCommunity
     public typealias Response = ApiCommunityResponse
-
-    public func path(on version: SiteVersion) -> String { "community/follow" }
     
     public let body: Body?
 
@@ -26,4 +24,6 @@ public struct FollowCommunityRequest: ApiPostRequest {
             follow: follow
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "community/follow" }
 }

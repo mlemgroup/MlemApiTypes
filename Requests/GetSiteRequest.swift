@@ -13,11 +13,11 @@ public struct GetSiteRequest: ApiGetRequest {
     public typealias Parameters = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiGetSiteResponse
     
-    public func path(on version: SiteVersion) -> String { "site" }
-    
     public let parameters: Parameters?
     
     init() {
         self.parameters = nil
     }
+    
+    public func path(on version: SiteVersion) -> String { "site" }
 }

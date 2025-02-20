@@ -12,8 +12,6 @@ import Foundation
 public struct DeleteCustomEmojiRequest: ApiPostRequest {
     public typealias Body = ApiDeleteCustomEmoji
     public typealias Response = ApiSuccessResponse
-
-    public func path(on version: SiteVersion) -> String { "custom_emoji/delete" }
     
     public let body: Body?
 
@@ -24,4 +22,6 @@ public struct DeleteCustomEmojiRequest: ApiPostRequest {
             id: id
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "custom_emoji/delete" }
 }

@@ -13,8 +13,6 @@ public struct GetPersonMentionsRequest: ApiGetRequest {
     public typealias Parameters = ApiGetPersonMentions
     public typealias Response = ApiGetPersonMentionsResponse
     
-    public func path(on version: SiteVersion) -> String { "user/mention" }
-    
     public let parameters: Parameters?
     
     init(
@@ -30,4 +28,6 @@ public struct GetPersonMentionsRequest: ApiGetRequest {
             unreadOnly: unreadOnly
       )
     }
+    
+    public func path(on version: SiteVersion) -> String { "user/mention" }
 }

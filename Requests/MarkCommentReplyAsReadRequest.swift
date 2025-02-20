@@ -12,8 +12,6 @@ import Foundation
 public struct MarkCommentReplyAsReadRequest: ApiPostRequest {
     public typealias Body = ApiMarkCommentReplyAsRead
     public typealias Response = ApiCommentReplyResponse
-
-    public func path(on version: SiteVersion) -> String { "comment/mark_as_read" }
     
     public let body: Body?
 
@@ -26,4 +24,6 @@ public struct MarkCommentReplyAsReadRequest: ApiPostRequest {
             read: read
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "comment/mark_as_read" }
 }

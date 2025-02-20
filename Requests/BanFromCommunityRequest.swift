@@ -12,8 +12,6 @@ import Foundation
 public struct BanFromCommunityRequest: ApiPostRequest {
     public typealias Body = ApiBanFromCommunity
     public typealias Response = ApiBanFromCommunityResponse
-
-    public func path(on version: SiteVersion) -> String { "community/ban_user" }
     
     public let body: Body?
 
@@ -34,4 +32,6 @@ public struct BanFromCommunityRequest: ApiPostRequest {
             expires: expires
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "community/ban_user" }
 }

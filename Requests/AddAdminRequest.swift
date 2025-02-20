@@ -12,8 +12,6 @@ import Foundation
 public struct AddAdminRequest: ApiPostRequest {
     public typealias Body = ApiAddAdmin
     public typealias Response = ApiAddAdminResponse
-
-    public func path(on version: SiteVersion) -> String { "admin/add" }
     
     public let body: Body?
 
@@ -26,4 +24,6 @@ public struct AddAdminRequest: ApiPostRequest {
             added: added
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "admin/add" }
 }

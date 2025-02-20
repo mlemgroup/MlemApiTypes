@@ -12,8 +12,6 @@ import Foundation
 public struct LikeCommentRequest: ApiPostRequest {
     public typealias Body = ApiCreateCommentLike
     public typealias Response = ApiCommentResponse
-
-    public func path(on version: SiteVersion) -> String { "comment/like" }
     
     public let body: Body?
 
@@ -26,4 +24,6 @@ public struct LikeCommentRequest: ApiPostRequest {
             score: score
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "comment/like" }
 }

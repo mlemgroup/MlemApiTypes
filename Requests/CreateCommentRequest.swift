@@ -12,8 +12,6 @@ import Foundation
 public struct CreateCommentRequest: ApiPostRequest {
     public typealias Body = ApiCreateComment
     public typealias Response = ApiCommentResponse
-
-    public func path(on version: SiteVersion) -> String { "comment" }
     
     public let body: Body?
 
@@ -32,4 +30,6 @@ public struct CreateCommentRequest: ApiPostRequest {
             formId: formId
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "comment" }
 }

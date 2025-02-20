@@ -12,8 +12,6 @@ import Foundation
 public struct EditCommunityRequest: ApiPutRequest {
     public typealias Body = ApiEditCommunity
     public typealias Response = ApiCommunityResponse
-
-    public func path(on version: SiteVersion) -> String { "community" }
     
     public let body: Body?
 
@@ -42,4 +40,6 @@ public struct EditCommunityRequest: ApiPutRequest {
             visibility: visibility
       )
     }
+
+    public func path(on version: SiteVersion) -> String { "community" }
 }
