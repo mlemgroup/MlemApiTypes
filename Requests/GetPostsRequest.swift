@@ -10,11 +10,13 @@
 import Foundation
 
 public struct GetPostsRequest: ApiGetRequest {
+    public typealias Parameters = ApiGetPosts
     public typealias Response = ApiGetPostsResponse
-
-    public let path = "post/list"
-    public let queryItems: [URLQueryItem]
-
+    
+    public func path(on version: SiteVersion) -> String { "post/list" }
+    
+    public let parameters: Parameters?
+    
     init(
       type_: ApiListingType?,
       sort: ApiSortType?,
@@ -30,20 +32,20 @@ public struct GetPostsRequest: ApiGetRequest {
       showRead: Bool?,
       showNsfw: Bool?
     ) {
-        self.queryItems = [
-            .init(name: "type_", value: type_?.rawValue),
-            .init(name: "sort", value: sort?.rawValue),
-            .init(name: "page", value: page.map(String.init)),
-            .init(name: "limit", value: limit.map(String.init)),
-            .init(name: "community_id", value: communityId.map(String.init)),
-            .init(name: "community_name", value: communityName),
-            .init(name: "saved_only", value: savedOnly.map(String.init)),
-            .init(name: "liked_only", value: likedOnly.map(String.init)),
-            .init(name: "disliked_only", value: dislikedOnly.map(String.init)),
-            .init(name: "page_cursor", value: pageCursor),
-            .init(name: "show_hidden", value: showHidden.map(String.init)),
-            .init(name: "show_read", value: showRead.map(String.init)),
-            .init(name: "show_nsfw", value: showNsfw.map(String.init))
-        ]
+        self.parameters = .init(
+            type_: type_,
+            sort: sort,
+            page: page,
+            limit: limit,
+            communityId: communityId,
+            communityName: communityName,
+            savedOnly: savedOnly,
+            likedOnly: likedOnly,
+            dislikedOnly: dislikedOnly,
+            pageCursor: pageCursor,
+            showHidden: showHidden,
+            showRead: showRead,
+            showNsfw: showNsfw
+      )
     }
 }

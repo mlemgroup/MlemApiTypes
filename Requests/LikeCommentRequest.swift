@@ -13,7 +13,8 @@ public struct LikeCommentRequest: ApiPostRequest {
     public typealias Body = ApiCreateCommentLike
     public typealias Response = ApiCommentResponse
 
-    public let path = "comment/like"
+    public func path(on version: SiteVersion) -> String { "comment/like" }
+    
     public let body: Body?
 
     init(
@@ -21,8 +22,8 @@ public struct LikeCommentRequest: ApiPostRequest {
       score: Int
     ) {
         self.body = .init(
-          commentId: commentId,
-          score: score
+            commentId: commentId,
+            score: score
       )
     }
 }

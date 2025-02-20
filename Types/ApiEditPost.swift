@@ -10,7 +10,7 @@
 import Foundation
 
 // EditPost.ts
-public struct ApiEditPost: Codable, Hashable {
+public struct ApiEditPost: Codable, Hashable, Sendable {
     public let postId: Int
     public let name: String?
     public let url: String?

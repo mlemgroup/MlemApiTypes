@@ -11,6 +11,6 @@ import Foundation
 
 // GetSite.ts
 /// Removed in 0.19.0
-public struct ApiGetSite: Codable, Hashable {
+public struct ApiGetSite: Codable, Hashable, Sendable {
 
 }

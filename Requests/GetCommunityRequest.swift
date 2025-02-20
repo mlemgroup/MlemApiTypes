@@ -10,18 +10,20 @@
 import Foundation
 
 public struct GetCommunityRequest: ApiGetRequest {
+    public typealias Parameters = ApiGetCommunity
     public typealias Response = ApiGetCommunityResponse
-
-    public let path = "community"
-    public let queryItems: [URLQueryItem]
-
+    
+    public func path(on version: SiteVersion) -> String { "community" }
+    
+    public let parameters: Parameters?
+    
     init(
       id: Int?,
       name: String?
     ) {
-        self.queryItems = [
-            .init(name: "id", value: id.map(String.init)),
-            .init(name: "name", value: name)
-        ]
+        self.parameters = .init(
+            id: id,
+            name: name
+      )
     }
 }

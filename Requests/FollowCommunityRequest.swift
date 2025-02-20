@@ -13,7 +13,8 @@ public struct FollowCommunityRequest: ApiPostRequest {
     public typealias Body = ApiFollowCommunity
     public typealias Response = ApiCommunityResponse
 
-    public let path = "community/follow"
+    public func path(on version: SiteVersion) -> String { "community/follow" }
+    
     public let body: Body?
 
     init(
@@ -21,8 +22,8 @@ public struct FollowCommunityRequest: ApiPostRequest {
       follow: Bool
     ) {
         self.body = .init(
-          communityId: communityId,
-          follow: follow
+            communityId: communityId,
+            follow: follow
       )
     }
 }

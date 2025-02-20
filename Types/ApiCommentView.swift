@@ -10,7 +10,7 @@
 import Foundation
 
 // CommentView.ts
-public struct ApiCommentView: Codable, Hashable {
+public struct ApiCommentView: Codable, Hashable, Sendable {
     public let comment: ApiComment
     public let creator: ApiPerson
     public let post: ApiPost

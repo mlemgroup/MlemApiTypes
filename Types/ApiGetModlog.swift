@@ -10,7 +10,7 @@
 import Foundation
 
 // GetModlog.ts
-public struct ApiGetModlog: Codable, Hashable {
+public struct ApiGetModlog: Codable, Hashable, Sendable {
     public let modPersonId: Int?
     public let communityId: Int?
     public let page: Int?

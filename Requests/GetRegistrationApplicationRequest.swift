@@ -10,16 +10,18 @@
 import Foundation
 
 public struct GetRegistrationApplicationRequest: ApiGetRequest {
+    public typealias Parameters = ApiGetRegistrationApplication
     public typealias Response = ApiRegistrationApplicationResponse
-
-    public let path = "admin/registration_application"
-    public let queryItems: [URLQueryItem]
-
+    
+    public func path(on version: SiteVersion) -> String { "admin/registration_application" }
+    
+    public let parameters: Parameters?
+    
     init(
       personId: Int
     ) {
-        self.queryItems = [
-            .init(name: "person_id", value: String(personId))
-        ]
+        self.parameters = .init(
+            personId: personId
+      )
     }
 }

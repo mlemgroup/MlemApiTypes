@@ -10,7 +10,7 @@
 import Foundation
 
 // LocalSite.ts
-public struct ApiLocalSite: Codable, Hashable {
+public struct ApiLocalSite: Codable, Hashable, Sendable {
     public let id: Int
     public let siteId: Int
     public let siteSetup: Bool

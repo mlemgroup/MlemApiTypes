@@ -11,6 +11,6 @@ import Foundation
 
 // GetUnreadRegistrationApplicationCount.ts
 /// Removed in 0.19.0
-public struct ApiGetUnreadRegistrationApplicationCount: Codable, Hashable {
+public struct ApiGetUnreadRegistrationApplicationCount: Codable, Hashable, Sendable {
 
 }

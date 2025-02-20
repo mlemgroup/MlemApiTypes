@@ -10,7 +10,7 @@
 import Foundation
 
 // CreateCommentLike.ts
-public struct ApiCreateCommentLike: Codable, Hashable {
+public struct ApiCreateCommentLike: Codable, Hashable, Sendable {
     public let commentId: Int
     public let score: Int
 }

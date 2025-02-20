@@ -10,7 +10,7 @@
 import Foundation
 
 // LockPost.ts
-public struct ApiLockPost: Codable, Hashable {
+public struct ApiLockPost: Codable, Hashable, Sendable {
     public let postId: Int
     public let locked: Bool
 }

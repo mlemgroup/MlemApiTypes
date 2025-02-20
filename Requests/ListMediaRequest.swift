@@ -10,18 +10,20 @@
 import Foundation
 
 public struct ListMediaRequest: ApiGetRequest {
+    public typealias Parameters = ApiListMedia
     public typealias Response = ApiListMediaResponse
-
-    public let path = "account/list_media"
-    public let queryItems: [URLQueryItem]
-
+    
+    public func path(on version: SiteVersion) -> String { "account/list_media" }
+    
+    public let parameters: Parameters?
+    
     init(
       page: Int?,
       limit: Int?
     ) {
-        self.queryItems = [
-            .init(name: "page", value: page.map(String.init)),
-            .init(name: "limit", value: limit.map(String.init))
-        ]
+        self.parameters = .init(
+            page: page,
+            limit: limit
+      )
     }
 }

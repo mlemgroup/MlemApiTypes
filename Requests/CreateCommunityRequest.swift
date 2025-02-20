@@ -13,7 +13,8 @@ public struct CreateCommunityRequest: ApiPostRequest {
     public typealias Body = ApiCreateCommunity
     public typealias Response = ApiCommunityResponse
 
-    public let path = "community"
+    public func path(on version: SiteVersion) -> String { "community" }
+    
     public let body: Body?
 
     init(
@@ -29,16 +30,16 @@ public struct CreateCommunityRequest: ApiPostRequest {
       visibility: ApiCommunityVisibility?
     ) {
         self.body = .init(
-          name: name,
-          title: title,
-          description: description,
-          icon: icon,
-          banner: banner,
-          nsfw: nsfw,
-          postingRestrictedToMods: postingRestrictedToMods,
-          discussionLanguages: discussionLanguages,
-          onlyFollowersCanVote: onlyFollowersCanVote,
-          visibility: visibility
+            name: name,
+            title: title,
+            description: description,
+            icon: icon,
+            banner: banner,
+            nsfw: nsfw,
+            postingRestrictedToMods: postingRestrictedToMods,
+            discussionLanguages: discussionLanguages,
+            onlyFollowersCanVote: onlyFollowersCanVote,
+            visibility: visibility
       )
     }
 }

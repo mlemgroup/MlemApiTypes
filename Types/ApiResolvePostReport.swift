@@ -10,7 +10,7 @@
 import Foundation
 
 // ResolvePostReport.ts
-public struct ApiResolvePostReport: Codable, Hashable {
+public struct ApiResolvePostReport: Codable, Hashable, Sendable {
     public let reportId: Int
     public let resolved: Bool
 }

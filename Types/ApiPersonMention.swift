@@ -10,7 +10,7 @@
 import Foundation
 
 // PersonMention.ts
-public struct ApiPersonMention: Codable, Hashable {
+public struct ApiPersonMention: Codable, Hashable, Sendable {
     public let id: Int
     public let recipientId: Int
     public let commentId: Int

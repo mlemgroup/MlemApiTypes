@@ -10,7 +10,7 @@
 import Foundation
 
 // ChangePassword.ts
-public struct ApiChangePassword: Codable, Hashable {
+public struct ApiChangePassword: Codable, Hashable, Sendable {
     public let newPassword: String
     public let newPasswordVerify: String
     public let oldPassword: String

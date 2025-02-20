@@ -10,7 +10,7 @@
 import Foundation
 
 // GetComments.ts
-public struct ApiGetComments: Codable, Hashable {
+public struct ApiGetComments: Codable, Hashable, Sendable {
     public let type_: ApiListingType?
     public let sort: ApiCommentSortType?
     public let maxDepth: Int?

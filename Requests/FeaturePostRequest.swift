@@ -13,7 +13,8 @@ public struct FeaturePostRequest: ApiPostRequest {
     public typealias Body = ApiFeaturePost
     public typealias Response = ApiPostResponse
 
-    public let path = "post/feature"
+    public func path(on version: SiteVersion) -> String { "post/feature" }
+    
     public let body: Body?
 
     init(
@@ -22,9 +23,9 @@ public struct FeaturePostRequest: ApiPostRequest {
       featureType: ApiPostFeatureType
     ) {
         self.body = .init(
-          postId: postId,
-          featured: featured,
-          featureType: featureType
+            postId: postId,
+            featured: featured,
+            featureType: featureType
       )
     }
 }

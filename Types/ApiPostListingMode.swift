@@ -11,7 +11,7 @@ import Foundation
 
 // PostListingMode.ts
 /// Added in 0.19.0
-public enum ApiPostListingMode: String, Codable {
+public enum ApiPostListingMode: String, Codable, Sendable {
     case list = "List"
     case card = "Card"
     case smallCard = "SmallCard"

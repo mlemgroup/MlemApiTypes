@@ -13,7 +13,8 @@ public struct ResolvePostReportRequest: ApiPutRequest {
     public typealias Body = ApiResolvePostReport
     public typealias Response = ApiPostReportResponse
 
-    public let path = "post/report/resolve"
+    public func path(on version: SiteVersion) -> String { "post/report/resolve" }
+    
     public let body: Body?
 
     init(
@@ -21,8 +22,8 @@ public struct ResolvePostReportRequest: ApiPutRequest {
       resolved: Bool
     ) {
         self.body = .init(
-          reportId: reportId,
-          resolved: resolved
+            reportId: reportId,
+            resolved: resolved
       )
     }
 }

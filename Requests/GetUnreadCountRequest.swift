@@ -10,12 +10,14 @@
 import Foundation
 
 public struct GetUnreadCountRequest: ApiGetRequest {
+    public typealias Parameters = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiGetUnreadCountResponse
-
-    public let path = "user/unread_count"
-    public let queryItems: [URLQueryItem]
-
+    
+    public func path(on version: SiteVersion) -> String { "user/unread_count" }
+    
+    public let parameters: Parameters?
+    
     init() {
-        self.queryItems = .init()
+        self.parameters = nil
     }
 }

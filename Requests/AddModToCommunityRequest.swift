@@ -13,7 +13,8 @@ public struct AddModToCommunityRequest: ApiPostRequest {
     public typealias Body = ApiAddModToCommunity
     public typealias Response = ApiAddModToCommunityResponse
 
-    public let path = "community/mod"
+    public func path(on version: SiteVersion) -> String { "community/mod" }
+    
     public let body: Body?
 
     init(
@@ -22,9 +23,9 @@ public struct AddModToCommunityRequest: ApiPostRequest {
       added: Bool
     ) {
         self.body = .init(
-          communityId: communityId,
-          personId: personId,
-          added: added
+            communityId: communityId,
+            personId: personId,
+            added: added
       )
     }
 }

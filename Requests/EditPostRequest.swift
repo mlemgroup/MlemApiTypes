@@ -13,7 +13,8 @@ public struct EditPostRequest: ApiPutRequest {
     public typealias Body = ApiEditPost
     public typealias Response = ApiPostResponse
 
-    public let path = "post"
+    public func path(on version: SiteVersion) -> String { "post" }
+    
     public let body: Body?
 
     init(
@@ -27,14 +28,14 @@ public struct EditPostRequest: ApiPutRequest {
       customThumbnail: String?
     ) {
         self.body = .init(
-          postId: postId,
-          name: name,
-          url: url,
-          body: body,
-          nsfw: nsfw,
-          languageId: languageId,
-          altText: altText,
-          customThumbnail: customThumbnail
+            postId: postId,
+            name: name,
+            url: url,
+            body: body,
+            nsfw: nsfw,
+            languageId: languageId,
+            altText: altText,
+            customThumbnail: customThumbnail
       )
     }
 }

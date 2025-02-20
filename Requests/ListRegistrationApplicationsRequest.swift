@@ -10,20 +10,22 @@
 import Foundation
 
 public struct ListRegistrationApplicationsRequest: ApiGetRequest {
+    public typealias Parameters = ApiListRegistrationApplications
     public typealias Response = ApiListRegistrationApplicationsResponse
-
-    public let path = "admin/registration_application/list"
-    public let queryItems: [URLQueryItem]
-
+    
+    public func path(on version: SiteVersion) -> String { "admin/registration_application/list" }
+    
+    public let parameters: Parameters?
+    
     init(
       unreadOnly: Bool?,
       page: Int?,
       limit: Int?
     ) {
-        self.queryItems = [
-            .init(name: "unread_only", value: unreadOnly.map(String.init)),
-            .init(name: "page", value: page.map(String.init)),
-            .init(name: "limit", value: limit.map(String.init))
-        ]
+        self.parameters = .init(
+            unreadOnly: unreadOnly,
+            page: page,
+            limit: limit
+      )
     }
 }

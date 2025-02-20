@@ -10,7 +10,7 @@
 import Foundation
 
 // Register.ts
-public struct ApiRegister: Codable, Hashable {
+public struct ApiRegister: Codable, Hashable, Sendable {
     public let username: String
     public let password: String
     public let passwordVerify: String

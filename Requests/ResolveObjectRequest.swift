@@ -10,17 +10,19 @@
 import Foundation
 
 public struct ResolveObjectRequest: ApiGetRequest {
+    public typealias Parameters = ApiResolveObject
     public typealias Response = ApiResolveObjectResponse
-
-    public let path = "resolve_object"
-    public let queryItems: [URLQueryItem]
-
+    
+    public func path(on version: SiteVersion) -> String { "resolve_object" }
+    
+    public let parameters: Parameters?
+    
     init(
       // swiftlint:disable:next identifier_name
       q: String
     ) {
-        self.queryItems = [
-            .init(name: "q", value: q)
-        ]
+        self.parameters = .init(
+            q: q
+      )
     }
 }

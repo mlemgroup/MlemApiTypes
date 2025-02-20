@@ -10,7 +10,7 @@
 import Foundation
 
 // BanFromCommunityResponse.ts
-public struct ApiBanFromCommunityResponse: Codable, Hashable {
+public struct ApiBanFromCommunityResponse: Codable, Hashable, Sendable {
     public let personView: ApiPersonView
     public let banned: Bool
 }

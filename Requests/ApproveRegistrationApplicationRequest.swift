@@ -13,7 +13,8 @@ public struct ApproveRegistrationApplicationRequest: ApiPutRequest {
     public typealias Body = ApiApproveRegistrationApplication
     public typealias Response = ApiRegistrationApplicationResponse
 
-    public let path = "admin/registration_application/approve"
+    public func path(on version: SiteVersion) -> String { "admin/registration_application/approve" }
+    
     public let body: Body?
 
     init(
@@ -22,9 +23,9 @@ public struct ApproveRegistrationApplicationRequest: ApiPutRequest {
       denyReason: String?
     ) {
         self.body = .init(
-          id: id,
-          approve: approve,
-          denyReason: denyReason
+            id: id,
+            approve: approve,
+            denyReason: denyReason
       )
     }
 }

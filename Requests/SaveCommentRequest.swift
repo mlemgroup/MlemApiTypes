@@ -13,7 +13,8 @@ public struct SaveCommentRequest: ApiPutRequest {
     public typealias Body = ApiSaveComment
     public typealias Response = ApiCommentResponse
 
-    public let path = "comment/save"
+    public func path(on version: SiteVersion) -> String { "comment/save" }
+    
     public let body: Body?
 
     init(
@@ -21,8 +22,8 @@ public struct SaveCommentRequest: ApiPutRequest {
       save: Bool
     ) {
         self.body = .init(
-          commentId: commentId,
-          save: save
+            commentId: commentId,
+            save: save
       )
     }
 }

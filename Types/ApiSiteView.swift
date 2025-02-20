@@ -10,7 +10,7 @@
 import Foundation
 
 // SiteView.ts
-public struct ApiSiteView: Codable, Hashable {
+public struct ApiSiteView: Codable, Hashable, Sendable {
     public let site: ApiSite
     public let localSite: ApiLocalSite
     public let localSiteRateLimit: ApiLocalSiteRateLimit

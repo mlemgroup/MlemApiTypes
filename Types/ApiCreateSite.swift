@@ -10,7 +10,7 @@
 import Foundation
 
 // CreateSite.ts
-public struct ApiCreateSite: Codable, Hashable {
+public struct ApiCreateSite: Codable, Hashable, Sendable {
     public let name: String
     public let sidebar: String?
     public let description: String?

@@ -13,7 +13,8 @@ public struct EditPrivateMessageRequest: ApiPutRequest {
     public typealias Body = ApiEditPrivateMessage
     public typealias Response = ApiPrivateMessageResponse
 
-    public let path = "private_message"
+    public func path(on version: SiteVersion) -> String { "private_message" }
+    
     public let body: Body?
 
     init(
@@ -21,8 +22,8 @@ public struct EditPrivateMessageRequest: ApiPutRequest {
       content: String
     ) {
         self.body = .init(
-          privateMessageId: privateMessageId,
-          content: content
+            privateMessageId: privateMessageId,
+            content: content
       )
     }
 }

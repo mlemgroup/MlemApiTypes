@@ -11,6 +11,6 @@ import Foundation
 
 // GetUnreadCount.ts
 /// Removed in 0.19.0
-public struct ApiGetUnreadCount: Codable, Hashable {
+public struct ApiGetUnreadCount: Codable, Hashable, Sendable {
 
 }

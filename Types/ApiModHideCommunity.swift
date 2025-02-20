@@ -10,7 +10,7 @@
 import Foundation
 
 // ModHideCommunity.ts
-public struct ApiModHideCommunity: Codable, Hashable {
+public struct ApiModHideCommunity: Codable, Hashable, Sendable {
     public let id: Int
     public let communityId: Int
     public let modPersonId: Int

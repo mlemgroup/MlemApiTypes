@@ -10,12 +10,14 @@
 import Foundation
 
 public struct GetSiteRequest: ApiGetRequest {
+    public typealias Parameters = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiGetSiteResponse
-
-    public let path = "site"
-    public let queryItems: [URLQueryItem]
-
+    
+    public func path(on version: SiteVersion) -> String { "site" }
+    
+    public let parameters: Parameters?
+    
     init() {
-        self.queryItems = .init()
+        self.parameters = nil
     }
 }

@@ -10,7 +10,7 @@
 import Foundation
 
 // SortType.ts
-public enum ApiSortType: String, Codable {
+public enum ApiSortType: String, Codable, Sendable {
     case active = "Active"
     case hot = "Hot"
     case new = "New"

@@ -13,7 +13,8 @@ public struct CreatePostRequest: ApiPostRequest {
     public typealias Body = ApiCreatePost
     public typealias Response = ApiPostResponse
 
-    public let path = "post"
+    public func path(on version: SiteVersion) -> String { "post" }
+    
     public let body: Body?
 
     init(
@@ -28,15 +29,15 @@ public struct CreatePostRequest: ApiPostRequest {
       customThumbnail: String?
     ) {
         self.body = .init(
-          name: name,
-          communityId: communityId,
-          url: url,
-          body: body,
-          honeypot: honeypot,
-          nsfw: nsfw,
-          languageId: languageId,
-          altText: altText,
-          customThumbnail: customThumbnail
+            name: name,
+            communityId: communityId,
+            url: url,
+            body: body,
+            honeypot: honeypot,
+            nsfw: nsfw,
+            languageId: languageId,
+            altText: altText,
+            customThumbnail: customThumbnail
       )
     }
 }

@@ -10,7 +10,7 @@
 import Foundation
 
 // CommentSortType.ts
-public enum ApiCommentSortType: String, Codable {
+public enum ApiCommentSortType: String, Codable, Sendable {
     case hot = "Hot"
     case top = "Top"
     case new = "New"

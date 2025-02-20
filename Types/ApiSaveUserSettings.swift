@@ -10,7 +10,7 @@
 import Foundation
 
 // SaveUserSettings.ts
-public struct ApiSaveUserSettings: Codable, Hashable {
+public struct ApiSaveUserSettings: Codable, Hashable, Sendable {
     public let showNsfw: Bool?
     public let showScores: Bool?
     public let theme: String?

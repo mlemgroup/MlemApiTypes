@@ -10,6 +10,6 @@
 import Foundation
 
 // PostReportResponse.ts
-public struct ApiPostReportResponse: Codable, Hashable {
+public struct ApiPostReportResponse: Codable, Hashable, Sendable {
     public let postReportView: ApiPostReportView
 }

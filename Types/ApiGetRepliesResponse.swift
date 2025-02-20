@@ -10,6 +10,6 @@
 import Foundation
 
 // GetRepliesResponse.ts
-public struct ApiGetRepliesResponse: Codable, Hashable {
+public struct ApiGetRepliesResponse: Codable, Hashable, Sendable {
     public let replies: [ApiCommentReplyView]
 }

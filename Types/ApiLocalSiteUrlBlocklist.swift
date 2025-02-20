@@ -11,7 +11,7 @@ import Foundation
 
 // LocalSiteUrlBlocklist.ts
 /// Added in 0.19.4
-public struct ApiLocalSiteUrlBlocklist: Codable, Hashable {
+public struct ApiLocalSiteUrlBlocklist: Codable, Hashable, Sendable {
     public let id: Int
     public let url: String
     public let published: Date

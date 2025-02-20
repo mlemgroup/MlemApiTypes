@@ -10,7 +10,7 @@
 import Foundation
 
 // PersonView.ts
-public struct ApiPersonView: Codable, Hashable {
+public struct ApiPersonView: Codable, Hashable, Sendable {
     public let person: ApiPerson
     public let counts: ApiPersonAggregates
     /// Added in 0.19.0

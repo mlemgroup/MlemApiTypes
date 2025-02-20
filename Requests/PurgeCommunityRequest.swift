@@ -13,7 +13,8 @@ public struct PurgeCommunityRequest: ApiPostRequest {
     public typealias Body = ApiPurgeCommunity
     public typealias Response = ApiSuccessResponse
 
-    public let path = "admin/purge/community"
+    public func path(on version: SiteVersion) -> String { "admin/purge/community" }
+    
     public let body: Body?
 
     init(
@@ -21,8 +22,8 @@ public struct PurgeCommunityRequest: ApiPostRequest {
       reason: String?
     ) {
         self.body = .init(
-          communityId: communityId,
-          reason: reason
+            communityId: communityId,
+            reason: reason
       )
     }
 }

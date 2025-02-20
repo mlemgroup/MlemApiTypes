@@ -11,7 +11,7 @@ import Foundation
 
 // VoteView.ts
 /// Added in 0.19.2
-public struct ApiVoteView: Codable, Hashable {
+public struct ApiVoteView: Codable, Hashable, Sendable {
     public let creator: ApiPerson
     public let score: Int
     /// Added in 0.19.4

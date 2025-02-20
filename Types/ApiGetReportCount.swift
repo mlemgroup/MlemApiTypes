@@ -10,6 +10,6 @@
 import Foundation
 
 // GetReportCount.ts
-public struct ApiGetReportCount: Codable, Hashable {
+public struct ApiGetReportCount: Codable, Hashable, Sendable {
     public let communityId: Int?
 }

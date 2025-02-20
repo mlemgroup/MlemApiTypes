@@ -10,7 +10,7 @@
 import Foundation
 
 // GetPersonDetailsResponse.ts
-public struct ApiGetPersonDetailsResponse: Codable, Hashable {
+public struct ApiGetPersonDetailsResponse: Codable, Hashable, Sendable {
     public let personView: ApiPersonView
     public let comments: [ApiCommentView]
     public let posts: [ApiPostView]

@@ -10,7 +10,7 @@
 import Foundation
 
 // PrivateMessageReportView.ts
-public struct ApiPrivateMessageReportView: Codable, Hashable {
+public struct ApiPrivateMessageReportView: Codable, Hashable, Sendable {
     public let privateMessageReport: ApiPrivateMessageReport
     public let privateMessage: ApiPrivateMessage
     public let privateMessageCreator: ApiPerson

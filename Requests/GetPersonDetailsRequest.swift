@@ -10,11 +10,13 @@
 import Foundation
 
 public struct GetPersonDetailsRequest: ApiGetRequest {
+    public typealias Parameters = ApiGetPersonDetails
     public typealias Response = ApiGetPersonDetailsResponse
-
-    public let path = "user"
-    public let queryItems: [URLQueryItem]
-
+    
+    public func path(on version: SiteVersion) -> String { "user" }
+    
+    public let parameters: Parameters?
+    
     init(
       personId: Int?,
       username: String?,
@@ -24,14 +26,14 @@ public struct GetPersonDetailsRequest: ApiGetRequest {
       communityId: Int?,
       savedOnly: Bool?
     ) {
-        self.queryItems = [
-            .init(name: "person_id", value: personId.map(String.init)),
-            .init(name: "username", value: username),
-            .init(name: "sort", value: sort?.rawValue),
-            .init(name: "page", value: page.map(String.init)),
-            .init(name: "limit", value: limit.map(String.init)),
-            .init(name: "community_id", value: communityId.map(String.init)),
-            .init(name: "saved_only", value: savedOnly.map(String.init))
-        ]
+        self.parameters = .init(
+            personId: personId,
+            username: username,
+            sort: sort,
+            page: page,
+            limit: limit,
+            communityId: communityId,
+            savedOnly: savedOnly
+      )
     }
 }

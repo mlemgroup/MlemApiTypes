@@ -10,7 +10,7 @@
 import Foundation
 
 // CreatePostReport.ts
-public struct ApiCreatePostReport: Codable, Hashable {
+public struct ApiCreatePostReport: Codable, Hashable, Sendable {
     public let postId: Int
     public let reason: String
 }

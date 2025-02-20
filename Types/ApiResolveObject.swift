@@ -10,7 +10,7 @@
 import Foundation
 
 // ResolveObject.ts
-public struct ApiResolveObject: Codable, Hashable {
+public struct ApiResolveObject: Codable, Hashable, Sendable {
     // swiftlint:disable:next identifier_name
     public let q: String
 }

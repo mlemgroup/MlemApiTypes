@@ -13,7 +13,8 @@ public struct SaveUserSettingsRequest: ApiPutRequest {
     public typealias Body = ApiSaveUserSettings
     public typealias Response = ApiSuccessResponse
 
-    public let path = "user/save_user_settings"
+    public func path(on version: SiteVersion) -> String { "user/save_user_settings" }
+    
     public let body: Body?
 
     init(
@@ -50,37 +51,37 @@ public struct SaveUserSettingsRequest: ApiPutRequest {
       showUpvotePercentage: Bool?
     ) {
         self.body = .init(
-          showNsfw: showNsfw,
-          showScores: showScores,
-          theme: theme,
-          defaultSortType: defaultSortType,
-          defaultListingType: defaultListingType,
-          interfaceLanguage: interfaceLanguage,
-          avatar: avatar,
-          banner: banner,
-          displayName: displayName,
-          email: email,
-          bio: bio,
-          matrixUserId: matrixUserId,
-          showAvatars: showAvatars,
-          sendNotificationsToEmail: sendNotificationsToEmail,
-          botAccount: botAccount,
-          showBotAccounts: showBotAccounts,
-          showReadPosts: showReadPosts,
-          showNewPostNotifs: showNewPostNotifs,
-          discussionLanguages: discussionLanguages,
-          generateTotp2fa: generateTotp2fa,
-          openLinksInNewTab: openLinksInNewTab,
-          blurNsfw: blurNsfw,
-          autoExpand: autoExpand,
-          infiniteScrollEnabled: infiniteScrollEnabled,
-          postListingMode: postListingMode,
-          enableKeyboardNavigation: enableKeyboardNavigation,
-          enableAnimatedImages: enableAnimatedImages,
-          collapseBotComments: collapseBotComments,
-          showUpvotes: showUpvotes,
-          showDownvotes: showDownvotes,
-          showUpvotePercentage: showUpvotePercentage
+            showNsfw: showNsfw,
+            showScores: showScores,
+            theme: theme,
+            defaultSortType: defaultSortType,
+            defaultListingType: defaultListingType,
+            interfaceLanguage: interfaceLanguage,
+            avatar: avatar,
+            banner: banner,
+            displayName: displayName,
+            email: email,
+            bio: bio,
+            matrixUserId: matrixUserId,
+            showAvatars: showAvatars,
+            sendNotificationsToEmail: sendNotificationsToEmail,
+            botAccount: botAccount,
+            showBotAccounts: showBotAccounts,
+            showReadPosts: showReadPosts,
+            showNewPostNotifs: showNewPostNotifs,
+            discussionLanguages: discussionLanguages,
+            generateTotp2fa: generateTotp2fa,
+            openLinksInNewTab: openLinksInNewTab,
+            blurNsfw: blurNsfw,
+            autoExpand: autoExpand,
+            infiniteScrollEnabled: infiniteScrollEnabled,
+            postListingMode: postListingMode,
+            enableKeyboardNavigation: enableKeyboardNavigation,
+            enableAnimatedImages: enableAnimatedImages,
+            collapseBotComments: collapseBotComments,
+            showUpvotes: showUpvotes,
+            showDownvotes: showDownvotes,
+            showUpvotePercentage: showUpvotePercentage
       )
     }
 }

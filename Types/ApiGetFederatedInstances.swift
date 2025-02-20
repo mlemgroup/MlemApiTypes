@@ -11,6 +11,6 @@ import Foundation
 
 // GetFederatedInstances.ts
 /// Removed in 0.19.0
-public struct ApiGetFederatedInstances: Codable, Hashable {
+public struct ApiGetFederatedInstances: Codable, Hashable, Sendable {
 
 }

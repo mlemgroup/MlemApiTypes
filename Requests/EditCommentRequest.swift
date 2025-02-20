@@ -13,7 +13,8 @@ public struct EditCommentRequest: ApiPutRequest {
     public typealias Body = ApiEditComment
     public typealias Response = ApiCommentResponse
 
-    public let path = "comment"
+    public func path(on version: SiteVersion) -> String { "comment" }
+    
     public let body: Body?
 
     init(
@@ -23,10 +24,10 @@ public struct EditCommentRequest: ApiPutRequest {
       formId: String?
     ) {
         self.body = .init(
-          commentId: commentId,
-          content: content,
-          languageId: languageId,
-          formId: formId
+            commentId: commentId,
+            content: content,
+            languageId: languageId,
+            formId: formId
       )
     }
 }

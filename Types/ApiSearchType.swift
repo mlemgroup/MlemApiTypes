@@ -10,7 +10,7 @@
 import Foundation
 
 // SearchType.ts
-public enum ApiSearchType: String, Codable {
+public enum ApiSearchType: String, Codable, Sendable {
     case all = "All"
     case comments = "Comments"
     case posts = "Posts"

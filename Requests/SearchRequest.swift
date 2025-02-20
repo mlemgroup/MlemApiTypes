@@ -10,11 +10,13 @@
 import Foundation
 
 public struct SearchRequest: ApiGetRequest {
+    public typealias Parameters = ApiSearch
     public typealias Response = ApiSearchResponse
-
-    public let path = "search"
-    public let queryItems: [URLQueryItem]
-
+    
+    public func path(on version: SiteVersion) -> String { "search" }
+    
+    public let parameters: Parameters?
+    
     init(
       // swiftlint:disable:next identifier_name
       q: String,
@@ -28,17 +30,17 @@ public struct SearchRequest: ApiGetRequest {
       limit: Int?,
       postTitleOnly: Bool?
     ) {
-        self.queryItems = [
-            .init(name: "q", value: q),
-            .init(name: "community_id", value: communityId.map(String.init)),
-            .init(name: "community_name", value: communityName),
-            .init(name: "creator_id", value: creatorId.map(String.init)),
-            .init(name: "type_", value: type_?.rawValue),
-            .init(name: "sort", value: sort?.rawValue),
-            .init(name: "listing_type", value: listingType?.rawValue),
-            .init(name: "page", value: page.map(String.init)),
-            .init(name: "limit", value: limit.map(String.init)),
-            .init(name: "post_title_only", value: postTitleOnly.map(String.init))
-        ]
+        self.parameters = .init(
+            q: q,
+            communityId: communityId,
+            communityName: communityName,
+            creatorId: creatorId,
+            type_: type_,
+            sort: sort,
+            listingType: listingType,
+            page: page,
+            limit: limit,
+            postTitleOnly: postTitleOnly
+      )
     }
 }

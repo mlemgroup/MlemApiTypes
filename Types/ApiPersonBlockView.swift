@@ -10,7 +10,7 @@
 import Foundation
 
 // PersonBlockView.ts
-public struct ApiPersonBlockView: Codable, Hashable {
+public struct ApiPersonBlockView: Codable, Hashable, Sendable {
     public let person: ApiPerson
     public let target: ApiPerson
 }

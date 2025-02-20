@@ -10,12 +10,14 @@
 import Foundation
 
 public struct GetFederatedInstancesRequest: ApiGetRequest {
+    public typealias Parameters = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiGetFederatedInstancesResponse
-
-    public let path = "federated_instances"
-    public let queryItems: [URLQueryItem]
-
+    
+    public func path(on version: SiteVersion) -> String { "federated_instances" }
+    
+    public let parameters: Parameters?
+    
     init() {
-        self.queryItems = .init()
+        self.parameters = nil
     }
 }

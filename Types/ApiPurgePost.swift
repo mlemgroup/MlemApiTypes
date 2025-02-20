@@ -10,7 +10,7 @@
 import Foundation
 
 // PurgePost.ts
-public struct ApiPurgePost: Codable, Hashable {
+public struct ApiPurgePost: Codable, Hashable, Sendable {
     public let postId: Int
     public let reason: String?
 }
