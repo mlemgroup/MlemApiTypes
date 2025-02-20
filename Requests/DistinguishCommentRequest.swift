@@ -13,6 +13,7 @@ public struct DistinguishCommentRequest: ApiPostRequest {
     public typealias Body = ApiDistinguishComment
     public typealias Response = ApiCommentResponse
     
+    public let path: String = "comment/distinguish"
     public let body: Body?
 
     init(
@@ -24,6 +25,4 @@ public struct DistinguishCommentRequest: ApiPostRequest {
             distinguished: distinguished
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "comment/distinguish" }
 }

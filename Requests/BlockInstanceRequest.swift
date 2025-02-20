@@ -13,6 +13,7 @@ public struct BlockInstanceRequest: ApiPostRequest {
     public typealias Body = ApiBlockInstance
     public typealias Response = ApiBlockInstanceResponse
     
+    public let path: String = "site/block"
     public let body: Body?
 
     init(
@@ -24,6 +25,4 @@ public struct BlockInstanceRequest: ApiPostRequest {
             block: block
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "site/block" }
 }

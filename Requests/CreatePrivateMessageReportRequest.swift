@@ -13,6 +13,7 @@ public struct CreatePrivateMessageReportRequest: ApiPostRequest {
     public typealias Body = ApiCreatePrivateMessageReport
     public typealias Response = ApiPrivateMessageReportResponse
     
+    public let path: String = "private_message/report"
     public let body: Body?
 
     init(
@@ -24,6 +25,4 @@ public struct CreatePrivateMessageReportRequest: ApiPostRequest {
             reason: reason
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "private_message/report" }
 }

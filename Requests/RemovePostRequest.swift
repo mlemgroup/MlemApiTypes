@@ -13,6 +13,7 @@ public struct RemovePostRequest: ApiPostRequest {
     public typealias Body = ApiRemovePost
     public typealias Response = ApiPostResponse
     
+    public let path: String = "post/remove"
     public let body: Body?
 
     init(
@@ -26,6 +27,4 @@ public struct RemovePostRequest: ApiPostRequest {
             reason: reason
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "post/remove" }
 }

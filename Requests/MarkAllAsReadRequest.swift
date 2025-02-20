@@ -13,11 +13,10 @@ public struct MarkAllAsReadRequest: ApiPostRequest {
     public typealias Body = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiGetRepliesResponse
     
+    public let path: String = "user/mark_all_as_read"
     public let body: Body?
 
     init() {
         self.body = nil
     }
-
-    public func path(on version: SiteVersion) -> String { "user/mark_all_as_read" }
 }

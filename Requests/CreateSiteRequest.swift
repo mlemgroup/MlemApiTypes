@@ -13,6 +13,7 @@ public struct CreateSiteRequest: ApiPostRequest {
     public typealias Body = ApiCreateSite
     public typealias Response = ApiSiteResponse
     
+    public let path: String = "site"
     public let body: Body?
 
     init(
@@ -108,6 +109,4 @@ public struct CreateSiteRequest: ApiPostRequest {
             defaultPostListingMode: defaultPostListingMode
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "site" }
 }

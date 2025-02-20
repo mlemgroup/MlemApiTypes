@@ -13,6 +13,7 @@ public struct UpdateTotpRequest: ApiPostRequest {
     public typealias Body = ApiUpdateTotp
     public typealias Response = ApiUpdateTotpResponse
     
+    public let path: String = "user/totp/update"
     public let body: Body?
 
     init(
@@ -24,6 +25,4 @@ public struct UpdateTotpRequest: ApiPostRequest {
             enabled: enabled
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "user/totp/update" }
 }

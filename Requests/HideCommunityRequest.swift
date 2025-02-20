@@ -13,6 +13,7 @@ public struct HideCommunityRequest: ApiPutRequest {
     public typealias Body = ApiHideCommunity
     public typealias Response = ApiSuccessResponse
     
+    public let path: String = "community/hide"
     public let body: Body?
 
     init(
@@ -26,6 +27,4 @@ public struct HideCommunityRequest: ApiPutRequest {
             reason: reason
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "community/hide" }
 }

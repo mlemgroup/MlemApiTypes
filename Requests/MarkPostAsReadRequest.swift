@@ -13,6 +13,7 @@ public struct MarkPostAsReadRequest: ApiPostRequest {
     public typealias Body = ApiMarkPostAsRead
     public typealias Response = ApiSuccessResponse
     
+    public let path: String = "post/mark_as_read"
     public let body: Body?
 
     init(
@@ -26,6 +27,4 @@ public struct MarkPostAsReadRequest: ApiPostRequest {
             postIds: postIds
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "post/mark_as_read" }
 }

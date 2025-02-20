@@ -13,6 +13,7 @@ public struct EditCommunityRequest: ApiPutRequest {
     public typealias Body = ApiEditCommunity
     public typealias Response = ApiCommunityResponse
     
+    public let path: String = "community"
     public let body: Body?
 
     init(
@@ -40,6 +41,4 @@ public struct EditCommunityRequest: ApiPutRequest {
             visibility: visibility
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "community" }
 }

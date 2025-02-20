@@ -13,6 +13,7 @@ public struct ListCommunitiesRequest: ApiGetRequest {
     public typealias Parameters = ApiListCommunities
     public typealias Response = ApiListCommunitiesResponse
     
+    public let path: String = "community/list"
     public let parameters: Parameters?
     
     init(
@@ -30,6 +31,4 @@ public struct ListCommunitiesRequest: ApiGetRequest {
             showNsfw: showNsfw
       )
     }
-    
-    public func path(on version: SiteVersion) -> String { "community/list" }
 }

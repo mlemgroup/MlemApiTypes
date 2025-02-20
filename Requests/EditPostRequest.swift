@@ -13,6 +13,7 @@ public struct EditPostRequest: ApiPutRequest {
     public typealias Body = ApiEditPost
     public typealias Response = ApiPostResponse
     
+    public let path: String = "post"
     public let body: Body?
 
     init(
@@ -36,6 +37,4 @@ public struct EditPostRequest: ApiPutRequest {
             customThumbnail: customThumbnail
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "post" }
 }

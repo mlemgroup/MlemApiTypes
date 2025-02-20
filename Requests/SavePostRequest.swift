@@ -13,6 +13,7 @@ public struct SavePostRequest: ApiPutRequest {
     public typealias Body = ApiSavePost
     public typealias Response = ApiPostResponse
     
+    public let path: String = "post/save"
     public let body: Body?
 
     init(
@@ -24,6 +25,4 @@ public struct SavePostRequest: ApiPutRequest {
             save: save
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "post/save" }
 }

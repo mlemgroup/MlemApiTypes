@@ -13,6 +13,7 @@ public struct GetSiteMetadataRequest: ApiGetRequest {
     public typealias Parameters = ApiGetSiteMetadata
     public typealias Response = ApiGetSiteMetadataResponse
     
+    public let path: String = "post/site_metadata"
     public let parameters: Parameters?
     
     init(
@@ -22,6 +23,4 @@ public struct GetSiteMetadataRequest: ApiGetRequest {
             url: url
       )
     }
-    
-    public func path(on version: SiteVersion) -> String { "post/site_metadata" }
 }

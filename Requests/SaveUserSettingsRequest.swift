@@ -13,6 +13,7 @@ public struct SaveUserSettingsRequest: ApiPutRequest {
     public typealias Body = ApiSaveUserSettings
     public typealias Response = ApiSuccessResponse
     
+    public let path: String = "user/save_user_settings"
     public let body: Body?
 
     init(
@@ -82,6 +83,4 @@ public struct SaveUserSettingsRequest: ApiPutRequest {
             showUpvotePercentage: showUpvotePercentage
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "user/save_user_settings" }
 }

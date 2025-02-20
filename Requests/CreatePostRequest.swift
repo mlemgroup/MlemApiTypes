@@ -13,6 +13,7 @@ public struct CreatePostRequest: ApiPostRequest {
     public typealias Body = ApiCreatePost
     public typealias Response = ApiPostResponse
     
+    public let path: String = "post"
     public let body: Body?
 
     init(
@@ -38,6 +39,4 @@ public struct CreatePostRequest: ApiPostRequest {
             customThumbnail: customThumbnail
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "post" }
 }

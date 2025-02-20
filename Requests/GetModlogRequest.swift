@@ -13,6 +13,7 @@ public struct GetModlogRequest: ApiGetRequest {
     public typealias Parameters = ApiGetModlog
     public typealias Response = ApiGetModlogResponse
     
+    public let path: String = "modlog"
     public let parameters: Parameters?
     
     init(
@@ -36,6 +37,4 @@ public struct GetModlogRequest: ApiGetRequest {
             commentId: commentId
       )
     }
-    
-    public func path(on version: SiteVersion) -> String { "modlog" }
 }

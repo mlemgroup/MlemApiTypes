@@ -13,6 +13,7 @@ public struct CreateCustomEmojiRequest: ApiPostRequest {
     public typealias Body = ApiCreateCustomEmoji
     public typealias Response = ApiCustomEmojiResponse
     
+    public let path: String = "custom_emoji"
     public let body: Body?
 
     init(
@@ -30,6 +31,4 @@ public struct CreateCustomEmojiRequest: ApiPostRequest {
             keywords: keywords
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "custom_emoji" }
 }

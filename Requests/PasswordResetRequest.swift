@@ -13,6 +13,7 @@ public struct PasswordResetRequest: ApiPostRequest {
     public typealias Body = ApiPasswordReset
     public typealias Response = ApiSuccessResponse
     
+    public let path: String = "user/password_reset"
     public let body: Body?
 
     init(
@@ -22,6 +23,4 @@ public struct PasswordResetRequest: ApiPostRequest {
             email: email
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "user/password_reset" }
 }

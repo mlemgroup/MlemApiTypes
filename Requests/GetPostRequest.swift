@@ -13,6 +13,7 @@ public struct GetPostRequest: ApiGetRequest {
     public typealias Parameters = ApiGetPost
     public typealias Response = ApiGetPostResponse
     
+    public let path: String = "post"
     public let parameters: Parameters?
     
     init(
@@ -24,6 +25,4 @@ public struct GetPostRequest: ApiGetRequest {
             commentId: commentId
       )
     }
-    
-    public func path(on version: SiteVersion) -> String { "post" }
 }

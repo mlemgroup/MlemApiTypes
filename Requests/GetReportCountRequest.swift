@@ -13,6 +13,7 @@ public struct GetReportCountRequest: ApiGetRequest {
     public typealias Parameters = ApiGetReportCount
     public typealias Response = ApiGetReportCountResponse
     
+    public let path: String = "user/report_count"
     public let parameters: Parameters?
     
     init(
@@ -22,6 +23,4 @@ public struct GetReportCountRequest: ApiGetRequest {
             communityId: communityId
       )
     }
-    
-    public func path(on version: SiteVersion) -> String { "user/report_count" }
 }

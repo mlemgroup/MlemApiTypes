@@ -13,6 +13,7 @@ public struct LoginRequest: ApiPostRequest {
     public typealias Body = ApiLogin
     public typealias Response = ApiLoginResponse
     
+    public let path: String = "user/login"
     public let body: Body?
 
     init(
@@ -26,6 +27,4 @@ public struct LoginRequest: ApiPostRequest {
             totp2faToken: totp2faToken
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "user/login" }
 }

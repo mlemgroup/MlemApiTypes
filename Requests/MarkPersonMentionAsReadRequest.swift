@@ -13,6 +13,7 @@ public struct MarkPersonMentionAsReadRequest: ApiPostRequest {
     public typealias Body = ApiMarkPersonMentionAsRead
     public typealias Response = ApiPersonMentionResponse
     
+    public let path: String = "user/mention/mark_as_read"
     public let body: Body?
 
     init(
@@ -24,6 +25,4 @@ public struct MarkPersonMentionAsReadRequest: ApiPostRequest {
             read: read
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "user/mention/mark_as_read" }
 }

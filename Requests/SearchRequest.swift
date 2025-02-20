@@ -13,6 +13,7 @@ public struct SearchRequest: ApiGetRequest {
     public typealias Parameters = ApiSearch
     public typealias Response = ApiSearchResponse
     
+    public let path: String = "search"
     public let parameters: Parameters?
     
     init(
@@ -41,6 +42,4 @@ public struct SearchRequest: ApiGetRequest {
             postTitleOnly: postTitleOnly
       )
     }
-    
-    public func path(on version: SiteVersion) -> String { "search" }
 }

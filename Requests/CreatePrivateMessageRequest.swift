@@ -13,6 +13,7 @@ public struct CreatePrivateMessageRequest: ApiPostRequest {
     public typealias Body = ApiCreatePrivateMessage
     public typealias Response = ApiPrivateMessageResponse
     
+    public let path: String = "private_message"
     public let body: Body?
 
     init(
@@ -24,6 +25,4 @@ public struct CreatePrivateMessageRequest: ApiPostRequest {
             recipientId: recipientId
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "private_message" }
 }

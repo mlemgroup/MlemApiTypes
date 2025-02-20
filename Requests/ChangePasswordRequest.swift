@@ -13,6 +13,7 @@ public struct ChangePasswordRequest: ApiPutRequest {
     public typealias Body = ApiChangePassword
     public typealias Response = ApiLoginResponse
     
+    public let path: String = "user/change_password"
     public let body: Body?
 
     init(
@@ -26,6 +27,4 @@ public struct ChangePasswordRequest: ApiPutRequest {
             oldPassword: oldPassword
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "user/change_password" }
 }

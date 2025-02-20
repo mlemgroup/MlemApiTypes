@@ -13,6 +13,7 @@ public struct DeleteAccountRequest: ApiPostRequest {
     public typealias Body = ApiDeleteAccount
     public typealias Response = ApiSuccessResponse
     
+    public let path: String = "user/delete_account"
     public let body: Body?
 
     init(
@@ -24,6 +25,4 @@ public struct DeleteAccountRequest: ApiPostRequest {
             deleteContent: deleteContent
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "user/delete_account" }
 }

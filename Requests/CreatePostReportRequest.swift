@@ -13,6 +13,7 @@ public struct CreatePostReportRequest: ApiPostRequest {
     public typealias Body = ApiCreatePostReport
     public typealias Response = ApiPostReportResponse
     
+    public let path: String = "post/report"
     public let body: Body?
 
     init(
@@ -24,6 +25,4 @@ public struct CreatePostReportRequest: ApiPostRequest {
             reason: reason
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "post/report" }
 }

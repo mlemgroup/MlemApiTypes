@@ -13,6 +13,7 @@ public struct ListPrivateMessageReportsRequest: ApiGetRequest {
     public typealias Parameters = ApiListPrivateMessageReports
     public typealias Response = ApiListPrivateMessageReportsResponse
     
+    public let path: String = "private_message/report/list"
     public let parameters: Parameters?
     
     init(
@@ -26,6 +27,4 @@ public struct ListPrivateMessageReportsRequest: ApiGetRequest {
             unresolvedOnly: unresolvedOnly
       )
     }
-    
-    public func path(on version: SiteVersion) -> String { "private_message/report/list" }
 }

@@ -13,6 +13,7 @@ public struct ListMediaRequest: ApiGetRequest {
     public typealias Parameters = ApiListMedia
     public typealias Response = ApiListMediaResponse
     
+    public let path: String = "account/list_media"
     public let parameters: Parameters?
     
     init(
@@ -24,6 +25,4 @@ public struct ListMediaRequest: ApiGetRequest {
             limit: limit
       )
     }
-    
-    public func path(on version: SiteVersion) -> String { "account/list_media" }
 }

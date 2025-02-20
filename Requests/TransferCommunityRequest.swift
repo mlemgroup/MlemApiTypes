@@ -13,6 +13,7 @@ public struct TransferCommunityRequest: ApiPostRequest {
     public typealias Body = ApiTransferCommunity
     public typealias Response = ApiGetCommunityResponse
     
+    public let path: String = "community/transfer"
     public let body: Body?
 
     init(
@@ -24,6 +25,4 @@ public struct TransferCommunityRequest: ApiPostRequest {
             personId: personId
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "community/transfer" }
 }

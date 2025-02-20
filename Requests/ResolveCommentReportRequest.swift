@@ -13,6 +13,7 @@ public struct ResolveCommentReportRequest: ApiPutRequest {
     public typealias Body = ApiResolveCommentReport
     public typealias Response = ApiCommentReportResponse
     
+    public let path: String = "comment/report/resolve"
     public let body: Body?
 
     init(
@@ -24,6 +25,4 @@ public struct ResolveCommentReportRequest: ApiPutRequest {
             resolved: resolved
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "comment/report/resolve" }
 }

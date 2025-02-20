@@ -13,6 +13,7 @@ public struct BlockCommunityRequest: ApiPostRequest {
     public typealias Body = ApiBlockCommunity
     public typealias Response = ApiBlockCommunityResponse
     
+    public let path: String = "community/block"
     public let body: Body?
 
     init(
@@ -24,6 +25,4 @@ public struct BlockCommunityRequest: ApiPostRequest {
             block: block
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "community/block" }
 }

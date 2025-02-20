@@ -13,6 +13,7 @@ public struct BanPersonRequest: ApiPostRequest {
     public typealias Body = ApiBanPerson
     public typealias Response = ApiBanPersonResponse
     
+    public let path: String = "user/ban"
     public let body: Body?
 
     init(
@@ -30,6 +31,4 @@ public struct BanPersonRequest: ApiPostRequest {
             expires: expires
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "user/ban" }
 }

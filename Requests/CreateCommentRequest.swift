@@ -13,6 +13,7 @@ public struct CreateCommentRequest: ApiPostRequest {
     public typealias Body = ApiCreateComment
     public typealias Response = ApiCommentResponse
     
+    public let path: String = "comment"
     public let body: Body?
 
     init(
@@ -30,6 +31,4 @@ public struct CreateCommentRequest: ApiPostRequest {
             formId: formId
       )
     }
-
-    public func path(on version: SiteVersion) -> String { "comment" }
 }

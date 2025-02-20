@@ -13,11 +13,10 @@ public struct GetCaptchaRequest: ApiGetRequest {
     public typealias Parameters = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiGetCaptchaResponse
     
+    public let path: String = "user/get_captcha"
     public let parameters: Parameters?
     
     init() {
         self.parameters = nil
     }
-    
-    public func path(on version: SiteVersion) -> String { "user/get_captcha" }
 }

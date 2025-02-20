@@ -13,6 +13,7 @@ public struct GetRepliesRequest: ApiGetRequest {
     public typealias Parameters = ApiGetReplies
     public typealias Response = ApiGetRepliesResponse
     
+    public let path: String = "user/replies"
     public let parameters: Parameters?
     
     init(
@@ -28,6 +29,4 @@ public struct GetRepliesRequest: ApiGetRequest {
             unreadOnly: unreadOnly
       )
     }
-    
-    public func path(on version: SiteVersion) -> String { "user/replies" }
 }

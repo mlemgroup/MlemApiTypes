@@ -14,11 +14,10 @@ public struct GetUnreadRegistrationApplicationCountRequest: ApiGetRequest {
     public typealias Parameters = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiGetUnreadRegistrationApplicationCountResponse
     
+    public let path: String = "admin/registration_application/count"
     public let parameters: Parameters?
     
     init() {
         self.parameters = nil
     }
-    
-    public func path(on version: SiteVersion) -> String { "admin/registration_application/count" }
 }
