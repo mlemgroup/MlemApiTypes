@@ -11,6 +11,6 @@ import Foundation
 
 // UserJoin.ts
 /// Removed in 0.19.0
-public struct ApiUserJoin: Codable, Hashable {
+public struct ApiUserJoin: Codable, Hashable, Sendable {
 
 }

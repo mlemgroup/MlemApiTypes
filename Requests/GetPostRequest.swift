@@ -10,18 +10,19 @@
 import Foundation
 
 public struct GetPostRequest: ApiGetRequest {
+    public typealias Parameters = ApiGetPost
     public typealias Response = ApiGetPostResponse
-
-    public let path = "post"
-    public let queryItems: [URLQueryItem]
-
+    
+    public let path: String = "post"
+    public let parameters: Parameters?
+    
     init(
       id: Int?,
       commentId: Int?
     ) {
-        self.queryItems = [
-            .init(name: "id", value: id.map(String.init)),
-            .init(name: "comment_id", value: commentId.map(String.init))
-        ]
+        self.parameters = .init(
+            id: id,
+            commentId: commentId
+      )
     }
 }

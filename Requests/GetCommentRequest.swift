@@ -10,16 +10,17 @@
 import Foundation
 
 public struct GetCommentRequest: ApiGetRequest {
+    public typealias Parameters = ApiGetComment
     public typealias Response = ApiCommentResponse
-
-    public let path = "comment"
-    public let queryItems: [URLQueryItem]
-
+    
+    public let path: String = "comment"
+    public let parameters: Parameters?
+    
     init(
       id: Int
     ) {
-        self.queryItems = [
-            .init(name: "id", value: String(id))
-        ]
+        self.parameters = .init(
+            id: id
+      )
     }
 }

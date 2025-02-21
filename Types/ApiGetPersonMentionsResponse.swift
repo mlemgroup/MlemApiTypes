@@ -10,6 +10,6 @@
 import Foundation
 
 // GetPersonMentionsResponse.ts
-public struct ApiGetPersonMentionsResponse: Codable, Hashable {
+public struct ApiGetPersonMentionsResponse: Codable, Hashable, Sendable {
     public let mentions: [ApiPersonMentionView]
 }

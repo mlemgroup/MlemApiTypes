@@ -12,8 +12,8 @@ import Foundation
 public struct UpdateTotpRequest: ApiPostRequest {
     public typealias Body = ApiUpdateTotp
     public typealias Response = ApiUpdateTotpResponse
-
-    public let path = "user/totp/update"
+    
+    public let path: String = "user/totp/update"
     public let body: Body?
 
     init(
@@ -21,8 +21,8 @@ public struct UpdateTotpRequest: ApiPostRequest {
       enabled: Bool
     ) {
         self.body = .init(
-          totpToken: totpToken,
-          enabled: enabled
+            totpToken: totpToken,
+            enabled: enabled
       )
     }
 }

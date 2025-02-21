@@ -10,16 +10,17 @@
 import Foundation
 
 public struct GetReportCountRequest: ApiGetRequest {
+    public typealias Parameters = ApiGetReportCount
     public typealias Response = ApiGetReportCountResponse
-
-    public let path = "user/report_count"
-    public let queryItems: [URLQueryItem]
-
+    
+    public let path: String = "user/report_count"
+    public let parameters: Parameters?
+    
     init(
       communityId: Int?
     ) {
-        self.queryItems = [
-            .init(name: "community_id", value: communityId.map(String.init))
-        ]
+        self.parameters = .init(
+            communityId: communityId
+      )
     }
 }

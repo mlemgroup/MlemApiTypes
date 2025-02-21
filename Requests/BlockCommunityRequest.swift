@@ -12,8 +12,8 @@ import Foundation
 public struct BlockCommunityRequest: ApiPostRequest {
     public typealias Body = ApiBlockCommunity
     public typealias Response = ApiBlockCommunityResponse
-
-    public let path = "community/block"
+    
+    public let path: String = "community/block"
     public let body: Body?
 
     init(
@@ -21,8 +21,8 @@ public struct BlockCommunityRequest: ApiPostRequest {
       block: Bool
     ) {
         self.body = .init(
-          communityId: communityId,
-          block: block
+            communityId: communityId,
+            block: block
       )
     }
 }

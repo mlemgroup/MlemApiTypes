@@ -10,7 +10,7 @@
 import Foundation
 
 // PostFeatureType.ts
-public enum ApiPostFeatureType: String, Codable {
+public enum ApiPostFeatureType: String, Codable, Sendable {
     case local = "Local"
     case community = "Community"
 }

@@ -11,12 +11,13 @@ import Foundation
 
 // swiftlint:disable:next type_name
 public struct GetUnreadRegistrationApplicationCountRequest: ApiGetRequest {
+    public typealias Parameters = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiGetUnreadRegistrationApplicationCountResponse
-
-    public let path = "admin/registration_application/count"
-    public let queryItems: [URLQueryItem]
-
+    
+    public let path: String = "admin/registration_application/count"
+    public let parameters: Parameters?
+    
     init() {
-        self.queryItems = .init()
+        self.parameters = nil
     }
 }

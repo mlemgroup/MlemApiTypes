@@ -12,8 +12,8 @@ import Foundation
 public struct DeleteCommunityRequest: ApiPostRequest {
     public typealias Body = ApiDeleteCommunity
     public typealias Response = ApiCommunityResponse
-
-    public let path = "community/delete"
+    
+    public let path: String = "community/delete"
     public let body: Body?
 
     init(
@@ -21,8 +21,8 @@ public struct DeleteCommunityRequest: ApiPostRequest {
       deleted: Bool
     ) {
         self.body = .init(
-          communityId: communityId,
-          deleted: deleted
+            communityId: communityId,
+            deleted: deleted
       )
     }
 }

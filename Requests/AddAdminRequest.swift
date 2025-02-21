@@ -12,8 +12,8 @@ import Foundation
 public struct AddAdminRequest: ApiPostRequest {
     public typealias Body = ApiAddAdmin
     public typealias Response = ApiAddAdminResponse
-
-    public let path = "admin/add"
+    
+    public let path: String = "admin/add"
     public let body: Body?
 
     init(
@@ -21,8 +21,8 @@ public struct AddAdminRequest: ApiPostRequest {
       added: Bool
     ) {
         self.body = .init(
-          personId: personId,
-          added: added
+            personId: personId,
+            added: added
       )
     }
 }

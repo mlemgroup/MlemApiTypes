@@ -12,8 +12,8 @@ import Foundation
 public struct LoginRequest: ApiPostRequest {
     public typealias Body = ApiLogin
     public typealias Response = ApiLoginResponse
-
-    public let path = "user/login"
+    
+    public let path: String = "user/login"
     public let body: Body?
 
     init(
@@ -22,9 +22,9 @@ public struct LoginRequest: ApiPostRequest {
       totp2faToken: String?
     ) {
         self.body = .init(
-          usernameOrEmail: usernameOrEmail,
-          password: password,
-          totp2faToken: totp2faToken
+            usernameOrEmail: usernameOrEmail,
+            password: password,
+            totp2faToken: totp2faToken
       )
     }
 }

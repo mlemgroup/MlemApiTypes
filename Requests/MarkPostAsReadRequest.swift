@@ -12,8 +12,8 @@ import Foundation
 public struct MarkPostAsReadRequest: ApiPostRequest {
     public typealias Body = ApiMarkPostAsRead
     public typealias Response = ApiSuccessResponse
-
-    public let path = "post/mark_as_read"
+    
+    public let path: String = "post/mark_as_read"
     public let body: Body?
 
     init(
@@ -22,9 +22,9 @@ public struct MarkPostAsReadRequest: ApiPostRequest {
       postIds: [Int]?
     ) {
         self.body = .init(
-          postId: postId,
-          read: read,
-          postIds: postIds
+            postId: postId,
+            read: read,
+            postIds: postIds
       )
     }
 }

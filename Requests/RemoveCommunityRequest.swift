@@ -12,8 +12,8 @@ import Foundation
 public struct RemoveCommunityRequest: ApiPostRequest {
     public typealias Body = ApiRemoveCommunity
     public typealias Response = ApiCommunityResponse
-
-    public let path = "community/remove"
+    
+    public let path: String = "community/remove"
     public let body: Body?
 
     init(
@@ -23,10 +23,10 @@ public struct RemoveCommunityRequest: ApiPostRequest {
       expires: Int?
     ) {
         self.body = .init(
-          communityId: communityId,
-          removed: removed,
-          reason: reason,
-          expires: expires
+            communityId: communityId,
+            removed: removed,
+            reason: reason,
+            expires: expires
       )
     }
 }

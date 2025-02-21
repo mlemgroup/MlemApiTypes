@@ -12,8 +12,8 @@ import Foundation
 public struct ChangePasswordRequest: ApiPutRequest {
     public typealias Body = ApiChangePassword
     public typealias Response = ApiLoginResponse
-
-    public let path = "user/change_password"
+    
+    public let path: String = "user/change_password"
     public let body: Body?
 
     init(
@@ -22,9 +22,9 @@ public struct ChangePasswordRequest: ApiPutRequest {
       oldPassword: String
     ) {
         self.body = .init(
-          newPassword: newPassword,
-          newPasswordVerify: newPasswordVerify,
-          oldPassword: oldPassword
+            newPassword: newPassword,
+            newPasswordVerify: newPasswordVerify,
+            oldPassword: oldPassword
       )
     }
 }

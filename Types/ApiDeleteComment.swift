@@ -10,7 +10,7 @@
 import Foundation
 
 // DeleteComment.ts
-public struct ApiDeleteComment: Codable, Hashable {
+public struct ApiDeleteComment: Codable, Hashable, Sendable {
     public let commentId: Int
     public let deleted: Bool
 }

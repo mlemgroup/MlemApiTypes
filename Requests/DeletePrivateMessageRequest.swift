@@ -12,8 +12,8 @@ import Foundation
 public struct DeletePrivateMessageRequest: ApiPostRequest {
     public typealias Body = ApiDeletePrivateMessage
     public typealias Response = ApiPrivateMessageResponse
-
-    public let path = "private_message/delete"
+    
+    public let path: String = "private_message/delete"
     public let body: Body?
 
     init(
@@ -21,8 +21,8 @@ public struct DeletePrivateMessageRequest: ApiPostRequest {
       deleted: Bool
     ) {
         self.body = .init(
-          privateMessageId: privateMessageId,
-          deleted: deleted
+            privateMessageId: privateMessageId,
+            deleted: deleted
       )
     }
 }

@@ -11,6 +11,6 @@ import Foundation
 
 // GetCaptcha.ts
 /// Removed in 0.19.0
-public struct ApiGetCaptcha: Codable, Hashable {
+public struct ApiGetCaptcha: Codable, Hashable, Sendable {
 
 }

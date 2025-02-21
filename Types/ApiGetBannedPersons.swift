@@ -11,6 +11,6 @@ import Foundation
 
 // GetBannedPersons.ts
 /// Removed in 0.19.0
-public struct ApiGetBannedPersons: Codable, Hashable {
+public struct ApiGetBannedPersons: Codable, Hashable, Sendable {
 
 }

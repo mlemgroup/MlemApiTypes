@@ -10,7 +10,7 @@
 import Foundation
 
 // ModlogActionType.ts
-public enum ApiModlogActionType: String, Codable {
+public enum ApiModlogActionType: String, Codable, Sendable {
     case all = "All"
     case modRemovePost = "ModRemovePost"
     case modLockPost = "ModLockPost"

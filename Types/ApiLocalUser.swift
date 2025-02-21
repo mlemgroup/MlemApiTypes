@@ -10,7 +10,7 @@
 import Foundation
 
 // LocalUser.ts
-public struct ApiLocalUser: Codable, Hashable {
+public struct ApiLocalUser: Codable, Hashable, Sendable {
     public let id: Int
     public let personId: Int
     public let email: String?

@@ -10,7 +10,7 @@
 import Foundation
 
 // GetPostsResponse.ts
-public struct ApiGetPostsResponse: Codable, Hashable {
+public struct ApiGetPostsResponse: Codable, Hashable, Sendable {
     public let posts: [ApiPostView]
     /// Added in 0.19.0
     public let nextPage: String?

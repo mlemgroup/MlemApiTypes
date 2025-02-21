@@ -12,8 +12,8 @@ import Foundation
 public struct PasswordChangeAfterResetRequest: ApiPostRequest {
     public typealias Body = ApiPasswordChangeAfterReset
     public typealias Response = ApiSuccessResponse
-
-    public let path = "user/password_change"
+    
+    public let path: String = "user/password_change"
     public let body: Body?
 
     init(
@@ -22,9 +22,9 @@ public struct PasswordChangeAfterResetRequest: ApiPostRequest {
       passwordVerify: String
     ) {
         self.body = .init(
-          token: token,
-          password: password,
-          passwordVerify: passwordVerify
+            token: token,
+            password: password,
+            passwordVerify: passwordVerify
       )
     }
 }

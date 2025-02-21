@@ -10,6 +10,6 @@
 import Foundation
 
 // AddModToCommunityResponse.ts
-public struct ApiAddModToCommunityResponse: Codable, Hashable {
+public struct ApiAddModToCommunityResponse: Codable, Hashable, Sendable {
     public let moderators: [ApiCommunityModeratorView]
 }

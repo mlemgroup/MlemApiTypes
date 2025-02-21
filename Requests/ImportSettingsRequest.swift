@@ -12,8 +12,8 @@ import Foundation
 public struct ImportSettingsRequest: ApiPostRequest {
     public typealias Body = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiSuccessResponse
-
-    public let path = "user/import_settings"
+    
+    public let path: String = "user/import_settings"
     public let body: Body?
 
     init() {

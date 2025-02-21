@@ -12,8 +12,8 @@ import Foundation
 public struct LockPostRequest: ApiPostRequest {
     public typealias Body = ApiLockPost
     public typealias Response = ApiPostResponse
-
-    public let path = "post/lock"
+    
+    public let path: String = "post/lock"
     public let body: Body?
 
     init(
@@ -21,8 +21,8 @@ public struct LockPostRequest: ApiPostRequest {
       locked: Bool
     ) {
         self.body = .init(
-          postId: postId,
-          locked: locked
+            postId: postId,
+            locked: locked
       )
     }
 }

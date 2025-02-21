@@ -10,7 +10,7 @@
 import Foundation
 
 // SubscribedType.ts
-public enum ApiSubscribedType: String, Codable {
+public enum ApiSubscribedType: String, Codable, Sendable {
     case subscribed = "Subscribed"
     case notSubscribed = "NotSubscribed"
     case pending = "Pending"

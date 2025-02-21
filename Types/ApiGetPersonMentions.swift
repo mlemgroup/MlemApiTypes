@@ -10,7 +10,7 @@
 import Foundation
 
 // GetPersonMentions.ts
-public struct ApiGetPersonMentions: Codable, Hashable {
+public struct ApiGetPersonMentions: Codable, Hashable, Sendable {
     public let sort: ApiCommentSortType?
     public let page: Int?
     public let limit: Int?

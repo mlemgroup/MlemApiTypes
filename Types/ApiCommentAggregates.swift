@@ -10,7 +10,7 @@
 import Foundation
 
 // CommentAggregates.ts
-public struct ApiCommentAggregates: Codable, Hashable {
+public struct ApiCommentAggregates: Codable, Hashable, Sendable {
     /// Removed in 0.19.0
     public let id: Int?
     public let commentId: Int

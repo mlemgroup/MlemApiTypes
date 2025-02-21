@@ -11,7 +11,7 @@ import Foundation
 
 // CommunityVisibility.ts
 /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
-public enum ApiCommunityVisibility: String, Codable {
+public enum ApiCommunityVisibility: String, Codable, Sendable {
     case public_ = "Public"
     case localOnly = "LocalOnly"
 }

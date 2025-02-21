@@ -10,7 +10,7 @@
 import Foundation
 
 // ModBanFromCommunityView.ts
-public struct ApiModBanFromCommunityView: Codable, Hashable {
+public struct ApiModBanFromCommunityView: Codable, Hashable, Sendable {
     public let modBanFromCommunity: ApiModBanFromCommunity
     public let moderator: ApiPerson?
     public let community: ApiCommunity

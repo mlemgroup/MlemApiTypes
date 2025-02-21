@@ -10,12 +10,13 @@
 import Foundation
 
 public struct GetBannedPersonsRequest: ApiGetRequest {
+    public typealias Parameters = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiBannedPersonsResponse
-
-    public let path = "user/banned"
-    public let queryItems: [URLQueryItem]
-
+    
+    public let path: String = "user/banned"
+    public let parameters: Parameters?
+    
     init() {
-        self.queryItems = .init()
+        self.parameters = nil
     }
 }

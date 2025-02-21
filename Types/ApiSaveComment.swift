@@ -10,7 +10,7 @@
 import Foundation
 
 // SaveComment.ts
-public struct ApiSaveComment: Codable, Hashable {
+public struct ApiSaveComment: Codable, Hashable, Sendable {
     public let commentId: Int
     public let save: Bool
 }

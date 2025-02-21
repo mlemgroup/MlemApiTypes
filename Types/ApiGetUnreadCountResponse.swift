@@ -10,7 +10,7 @@
 import Foundation
 
 // GetUnreadCountResponse.ts
-public struct ApiGetUnreadCountResponse: Codable, Hashable {
+public struct ApiGetUnreadCountResponse: Codable, Hashable, Sendable {
     public let replies: Int
     public let mentions: Int
     public let privateMessages: Int

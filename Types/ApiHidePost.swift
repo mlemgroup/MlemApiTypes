@@ -11,7 +11,7 @@ import Foundation
 
 // HidePost.ts
 /// Added in 0.19.4
-public struct ApiHidePost: Codable, Hashable {
+public struct ApiHidePost: Codable, Hashable, Sendable {
     public let postIds: [Int]
     public let hide: Bool
 }

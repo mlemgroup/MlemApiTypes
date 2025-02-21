@@ -10,11 +10,12 @@
 import Foundation
 
 public struct ListCommunitiesRequest: ApiGetRequest {
+    public typealias Parameters = ApiListCommunities
     public typealias Response = ApiListCommunitiesResponse
-
-    public let path = "community/list"
-    public let queryItems: [URLQueryItem]
-
+    
+    public let path: String = "community/list"
+    public let parameters: Parameters?
+    
     init(
       type_: ApiListingType?,
       sort: ApiSortType?,
@@ -22,12 +23,12 @@ public struct ListCommunitiesRequest: ApiGetRequest {
       limit: Int?,
       showNsfw: Bool?
     ) {
-        self.queryItems = [
-            .init(name: "type_", value: type_?.rawValue),
-            .init(name: "sort", value: sort?.rawValue),
-            .init(name: "page", value: page.map(String.init)),
-            .init(name: "limit", value: limit.map(String.init)),
-            .init(name: "show_nsfw", value: showNsfw.map(String.init))
-        ]
+        self.parameters = .init(
+            type_: type_,
+            sort: sort,
+            page: page,
+            limit: limit,
+            showNsfw: showNsfw
+      )
     }
 }

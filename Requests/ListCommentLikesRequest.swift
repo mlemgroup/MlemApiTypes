@@ -10,20 +10,21 @@
 import Foundation
 
 public struct ListCommentLikesRequest: ApiGetRequest {
+    public typealias Parameters = ApiListCommentLikes
     public typealias Response = ApiListCommentLikesResponse
-
-    public let path = "comment/like/list"
-    public let queryItems: [URLQueryItem]
-
+    
+    public let path: String = "comment/like/list"
+    public let parameters: Parameters?
+    
     init(
       commentId: Int,
       page: Int?,
       limit: Int?
     ) {
-        self.queryItems = [
-            .init(name: "comment_id", value: String(commentId)),
-            .init(name: "page", value: page.map(String.init)),
-            .init(name: "limit", value: limit.map(String.init))
-        ]
+        self.parameters = .init(
+            commentId: commentId,
+            page: page,
+            limit: limit
+      )
     }
 }

@@ -10,20 +10,21 @@
 import Foundation
 
 public struct ListPrivateMessageReportsRequest: ApiGetRequest {
+    public typealias Parameters = ApiListPrivateMessageReports
     public typealias Response = ApiListPrivateMessageReportsResponse
-
-    public let path = "private_message/report/list"
-    public let queryItems: [URLQueryItem]
-
+    
+    public let path: String = "private_message/report/list"
+    public let parameters: Parameters?
+    
     init(
       page: Int?,
       limit: Int?,
       unresolvedOnly: Bool?
     ) {
-        self.queryItems = [
-            .init(name: "page", value: page.map(String.init)),
-            .init(name: "limit", value: limit.map(String.init)),
-            .init(name: "unresolved_only", value: unresolvedOnly.map(String.init))
-        ]
+        self.parameters = .init(
+            page: page,
+            limit: limit,
+            unresolvedOnly: unresolvedOnly
+      )
     }
 }

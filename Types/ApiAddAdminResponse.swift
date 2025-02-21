@@ -10,6 +10,6 @@
 import Foundation
 
 // AddAdminResponse.ts
-public struct ApiAddAdminResponse: Codable, Hashable {
+public struct ApiAddAdminResponse: Codable, Hashable, Sendable {
     public let admins: [ApiPersonView]
 }

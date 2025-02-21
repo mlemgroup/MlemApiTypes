@@ -10,7 +10,7 @@
 import Foundation
 
 // RegistrationApplicationView.ts
-public struct ApiRegistrationApplicationView: Codable, Hashable {
+public struct ApiRegistrationApplicationView: Codable, Hashable, Sendable {
     public let registrationApplication: ApiRegistrationApplication
     public let creatorLocalUser: ApiLocalUser
     public let creator: ApiPerson

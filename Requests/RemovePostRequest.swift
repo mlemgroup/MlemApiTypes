@@ -12,8 +12,8 @@ import Foundation
 public struct RemovePostRequest: ApiPostRequest {
     public typealias Body = ApiRemovePost
     public typealias Response = ApiPostResponse
-
-    public let path = "post/remove"
+    
+    public let path: String = "post/remove"
     public let body: Body?
 
     init(
@@ -22,9 +22,9 @@ public struct RemovePostRequest: ApiPostRequest {
       reason: String?
     ) {
         self.body = .init(
-          postId: postId,
-          removed: removed,
-          reason: reason
+            postId: postId,
+            removed: removed,
+            reason: reason
       )
     }
 }

@@ -10,7 +10,7 @@
 import Foundation
 
 // GetModlogResponse.ts
-public struct ApiGetModlogResponse: Codable, Hashable {
+public struct ApiGetModlogResponse: Codable, Hashable, Sendable {
     public let removedPosts: [ApiModRemovePostView]
     public let lockedPosts: [ApiModLockPostView]
     public let featuredPosts: [ApiModFeaturePostView]

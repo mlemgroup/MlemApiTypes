@@ -12,8 +12,8 @@ import Foundation
 public struct CreatePostReportRequest: ApiPostRequest {
     public typealias Body = ApiCreatePostReport
     public typealias Response = ApiPostReportResponse
-
-    public let path = "post/report"
+    
+    public let path: String = "post/report"
     public let body: Body?
 
     init(
@@ -21,8 +21,8 @@ public struct CreatePostReportRequest: ApiPostRequest {
       reason: String
     ) {
         self.body = .init(
-          postId: postId,
-          reason: reason
+            postId: postId,
+            reason: reason
       )
     }
 }

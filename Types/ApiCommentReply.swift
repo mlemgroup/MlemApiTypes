@@ -10,7 +10,7 @@
 import Foundation
 
 // CommentReply.ts
-public struct ApiCommentReply: Codable, Hashable {
+public struct ApiCommentReply: Codable, Hashable, Sendable {
     public let id: Int
     public let recipientId: Int
     public let commentId: Int

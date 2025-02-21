@@ -10,7 +10,7 @@
 import Foundation
 
 // GetReplies.ts
-public struct ApiGetReplies: Codable, Hashable {
+public struct ApiGetReplies: Codable, Hashable, Sendable {
     public let sort: ApiCommentSortType?
     public let page: Int?
     public let limit: Int?

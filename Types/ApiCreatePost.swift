@@ -10,7 +10,7 @@
 import Foundation
 
 // CreatePost.ts
-public struct ApiCreatePost: Codable, Hashable {
+public struct ApiCreatePost: Codable, Hashable, Sendable {
     public let name: String
     public let communityId: Int
     public let url: String?

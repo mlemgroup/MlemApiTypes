@@ -10,7 +10,7 @@
 import Foundation
 
 // RemoveComment.ts
-public struct ApiRemoveComment: Codable, Hashable {
+public struct ApiRemoveComment: Codable, Hashable, Sendable {
     public let commentId: Int
     public let removed: Bool
     public let reason: String?

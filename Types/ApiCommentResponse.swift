@@ -10,7 +10,7 @@
 import Foundation
 
 // CommentResponse.ts
-public struct ApiCommentResponse: Codable, Hashable {
+public struct ApiCommentResponse: Codable, Hashable, Sendable {
     public let commentView: ApiCommentView
     public let recipientIds: [Int]
     /// Removed in 0.19.0

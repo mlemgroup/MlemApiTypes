@@ -12,8 +12,8 @@ import Foundation
 public struct HideCommunityRequest: ApiPutRequest {
     public typealias Body = ApiHideCommunity
     public typealias Response = ApiSuccessResponse
-
-    public let path = "community/hide"
+    
+    public let path: String = "community/hide"
     public let body: Body?
 
     init(
@@ -22,9 +22,9 @@ public struct HideCommunityRequest: ApiPutRequest {
       reason: String?
     ) {
         self.body = .init(
-          communityId: communityId,
-          hidden: hidden,
-          reason: reason
+            communityId: communityId,
+            hidden: hidden,
+            reason: reason
       )
     }
 }

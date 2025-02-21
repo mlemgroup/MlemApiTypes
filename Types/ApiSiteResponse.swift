@@ -10,7 +10,7 @@
 import Foundation
 
 // SiteResponse.ts
-public struct ApiSiteResponse: Codable, Hashable {
+public struct ApiSiteResponse: Codable, Hashable, Sendable {
     public let siteView: ApiSiteView
     public let taglines: [ApiTagline]
 }

@@ -10,7 +10,7 @@
 import Foundation
 
 // RegistrationMode.ts
-public enum ApiRegistrationMode: String, Codable {
+public enum ApiRegistrationMode: String, Codable, Sendable {
     case closed = "Closed"
     case requireApplication = "RequireApplication"
     case open = "Open"

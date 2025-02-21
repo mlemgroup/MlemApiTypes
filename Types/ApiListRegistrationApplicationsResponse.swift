@@ -10,6 +10,6 @@
 import Foundation
 
 // ListRegistrationApplicationsResponse.ts
-public struct ApiListRegistrationApplicationsResponse: Codable, Hashable {
+public struct ApiListRegistrationApplicationsResponse: Codable, Hashable, Sendable {
     public let registrationApplications: [ApiRegistrationApplicationView]
 }

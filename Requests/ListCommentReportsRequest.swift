@@ -10,11 +10,12 @@
 import Foundation
 
 public struct ListCommentReportsRequest: ApiGetRequest {
+    public typealias Parameters = ApiListCommentReports
     public typealias Response = ApiListCommentReportsResponse
-
-    public let path = "comment/report/list"
-    public let queryItems: [URLQueryItem]
-
+    
+    public let path: String = "comment/report/list"
+    public let parameters: Parameters?
+    
     init(
       page: Int?,
       limit: Int?,
@@ -22,12 +23,12 @@ public struct ListCommentReportsRequest: ApiGetRequest {
       communityId: Int?,
       commentId: Int?
     ) {
-        self.queryItems = [
-            .init(name: "page", value: page.map(String.init)),
-            .init(name: "limit", value: limit.map(String.init)),
-            .init(name: "unresolved_only", value: unresolvedOnly.map(String.init)),
-            .init(name: "community_id", value: communityId.map(String.init)),
-            .init(name: "comment_id", value: commentId.map(String.init))
-        ]
+        self.parameters = .init(
+            page: page,
+            limit: limit,
+            unresolvedOnly: unresolvedOnly,
+            communityId: communityId,
+            commentId: commentId
+      )
     }
 }

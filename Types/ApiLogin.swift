@@ -10,7 +10,7 @@
 import Foundation
 
 // Login.ts
-public struct ApiLogin: Codable, Hashable {
+public struct ApiLogin: Codable, Hashable, Sendable {
     public let usernameOrEmail: String
     public let password: String
     public let totp2faToken: String?

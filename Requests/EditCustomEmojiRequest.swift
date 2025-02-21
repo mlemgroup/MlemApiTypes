@@ -12,8 +12,8 @@ import Foundation
 public struct EditCustomEmojiRequest: ApiPutRequest {
     public typealias Body = ApiEditCustomEmoji
     public typealias Response = ApiCustomEmojiResponse
-
-    public let path = "custom_emoji"
+    
+    public let path: String = "custom_emoji"
     public let body: Body?
 
     init(
@@ -24,11 +24,11 @@ public struct EditCustomEmojiRequest: ApiPutRequest {
       keywords: [String]
     ) {
         self.body = .init(
-          id: id,
-          category: category,
-          imageUrl: imageUrl,
-          altText: altText,
-          keywords: keywords
+            id: id,
+            category: category,
+            imageUrl: imageUrl,
+            altText: altText,
+            keywords: keywords
       )
     }
 }

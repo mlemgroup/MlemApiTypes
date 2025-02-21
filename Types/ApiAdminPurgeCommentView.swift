@@ -10,7 +10,7 @@
 import Foundation
 
 // AdminPurgeCommentView.ts
-public struct ApiAdminPurgeCommentView: Codable, Hashable {
+public struct ApiAdminPurgeCommentView: Codable, Hashable, Sendable {
     public let adminPurgeComment: ApiAdminPurgeComment
     public let admin: ApiPerson?
     public let post: ApiPost

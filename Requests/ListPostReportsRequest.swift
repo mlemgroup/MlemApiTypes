@@ -10,11 +10,12 @@
 import Foundation
 
 public struct ListPostReportsRequest: ApiGetRequest {
+    public typealias Parameters = ApiListPostReports
     public typealias Response = ApiListPostReportsResponse
-
-    public let path = "post/report/list"
-    public let queryItems: [URLQueryItem]
-
+    
+    public let path: String = "post/report/list"
+    public let parameters: Parameters?
+    
     init(
       page: Int?,
       limit: Int?,
@@ -22,12 +23,12 @@ public struct ListPostReportsRequest: ApiGetRequest {
       communityId: Int?,
       postId: Int?
     ) {
-        self.queryItems = [
-            .init(name: "page", value: page.map(String.init)),
-            .init(name: "limit", value: limit.map(String.init)),
-            .init(name: "unresolved_only", value: unresolvedOnly.map(String.init)),
-            .init(name: "community_id", value: communityId.map(String.init)),
-            .init(name: "post_id", value: postId.map(String.init))
-        ]
+        self.parameters = .init(
+            page: page,
+            limit: limit,
+            unresolvedOnly: unresolvedOnly,
+            communityId: communityId,
+            postId: postId
+      )
     }
 }

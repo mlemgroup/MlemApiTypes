@@ -11,7 +11,7 @@ import Foundation
 
 // LocalImage.ts
 /// Added in 0.19.4
-public struct ApiLocalImage: Codable, Hashable {
+public struct ApiLocalImage: Codable, Hashable, Sendable {
     public let localUserId: Int?
     public let pictrsAlias: String
     public let pictrsDeleteToken: String

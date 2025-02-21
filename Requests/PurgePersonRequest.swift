@@ -12,8 +12,8 @@ import Foundation
 public struct PurgePersonRequest: ApiPostRequest {
     public typealias Body = ApiPurgePerson
     public typealias Response = ApiSuccessResponse
-
-    public let path = "admin/purge/person"
+    
+    public let path: String = "admin/purge/person"
     public let body: Body?
 
     init(
@@ -21,8 +21,8 @@ public struct PurgePersonRequest: ApiPostRequest {
       reason: String?
     ) {
         self.body = .init(
-          personId: personId,
-          reason: reason
+            personId: personId,
+            reason: reason
       )
     }
 }

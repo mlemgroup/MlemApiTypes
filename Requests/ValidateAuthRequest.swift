@@ -10,12 +10,13 @@
 import Foundation
 
 public struct ValidateAuthRequest: ApiGetRequest {
+    public typealias Parameters = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiSuccessResponse
-
-    public let path = "user/validate_auth"
-    public let queryItems: [URLQueryItem]
-
+    
+    public let path: String = "user/validate_auth"
+    public let parameters: Parameters?
+    
     init() {
-        self.queryItems = .init()
+        self.parameters = nil
     }
 }

@@ -10,7 +10,7 @@
 import Foundation
 
 // AddAdmin.ts
-public struct ApiAddAdmin: Codable, Hashable {
+public struct ApiAddAdmin: Codable, Hashable, Sendable {
     public let personId: Int
     public let added: Bool
 }

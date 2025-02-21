@@ -10,7 +10,7 @@
 import Foundation
 
 // PostAggregates.ts
-public struct ApiPostAggregates: Codable, Hashable {
+public struct ApiPostAggregates: Codable, Hashable, Sendable {
     /// Removed in 0.19.0
     public let id: Int?
     public let postId: Int

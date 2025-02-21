@@ -10,7 +10,7 @@
 import Foundation
 
 // ListingType.ts
-public enum ApiListingType: String, Codable {
+public enum ApiListingType: String, Codable, Sendable {
     case all = "All"
     case local = "Local"
     case subscribed = "Subscribed"

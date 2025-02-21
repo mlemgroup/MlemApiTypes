@@ -10,7 +10,7 @@
 import Foundation
 
 // CustomEmoji.ts
-public struct ApiCustomEmoji: Codable, Hashable {
+public struct ApiCustomEmoji: Codable, Hashable, Sendable {
     public let id: Int
     public let localSiteId: Int
     public let shortcode: String

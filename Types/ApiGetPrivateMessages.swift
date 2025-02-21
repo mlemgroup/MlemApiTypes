@@ -10,7 +10,7 @@
 import Foundation
 
 // GetPrivateMessages.ts
-public struct ApiGetPrivateMessages: Codable, Hashable {
+public struct ApiGetPrivateMessages: Codable, Hashable, Sendable {
     public let unreadOnly: Bool?
     public let page: Int?
     public let limit: Int?

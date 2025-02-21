@@ -12,8 +12,8 @@ import Foundation
 public struct BanPersonRequest: ApiPostRequest {
     public typealias Body = ApiBanPerson
     public typealias Response = ApiBanPersonResponse
-
-    public let path = "user/ban"
+    
+    public let path: String = "user/ban"
     public let body: Body?
 
     init(
@@ -24,11 +24,11 @@ public struct BanPersonRequest: ApiPostRequest {
       expires: Int?
     ) {
         self.body = .init(
-          personId: personId,
-          ban: ban,
-          removeData: removeData,
-          reason: reason,
-          expires: expires
+            personId: personId,
+            ban: ban,
+            removeData: removeData,
+            reason: reason,
+            expires: expires
       )
     }
 }

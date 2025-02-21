@@ -10,6 +10,6 @@
 import Foundation
 
 // DeleteCustomEmoji.ts
-public struct ApiDeleteCustomEmoji: Codable, Hashable {
+public struct ApiDeleteCustomEmoji: Codable, Hashable, Sendable {
     public let id: Int
 }

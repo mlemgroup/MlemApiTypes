@@ -10,22 +10,23 @@
 import Foundation
 
 public struct GetRepliesRequest: ApiGetRequest {
+    public typealias Parameters = ApiGetReplies
     public typealias Response = ApiGetRepliesResponse
-
-    public let path = "user/replies"
-    public let queryItems: [URLQueryItem]
-
+    
+    public let path: String = "user/replies"
+    public let parameters: Parameters?
+    
     init(
       sort: ApiCommentSortType?,
       page: Int?,
       limit: Int?,
       unreadOnly: Bool?
     ) {
-        self.queryItems = [
-            .init(name: "sort", value: sort?.rawValue),
-            .init(name: "page", value: page.map(String.init)),
-            .init(name: "limit", value: limit.map(String.init)),
-            .init(name: "unread_only", value: unreadOnly.map(String.init))
-        ]
+        self.parameters = .init(
+            sort: sort,
+            page: page,
+            limit: limit,
+            unreadOnly: unreadOnly
+      )
     }
 }

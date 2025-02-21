@@ -10,7 +10,7 @@
 import Foundation
 
 // CreateCommunity.ts
-public struct ApiCreateCommunity: Codable, Hashable {
+public struct ApiCreateCommunity: Codable, Hashable, Sendable {
     public let name: String
     public let title: String
     public let description: String?

@@ -10,7 +10,7 @@
 import Foundation
 
 // GetPersonDetails.ts
-public struct ApiGetPersonDetails: Codable, Hashable {
+public struct ApiGetPersonDetails: Codable, Hashable, Sendable {
     public let personId: Int?
     public let username: String?
     public let sort: ApiSortType?

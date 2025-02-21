@@ -10,6 +10,6 @@
 import Foundation
 
 // CustomEmojiResponse.ts
-public struct ApiCustomEmojiResponse: Codable, Hashable {
+public struct ApiCustomEmojiResponse: Codable, Hashable, Sendable {
     public let customEmoji: ApiCustomEmojiView
 }

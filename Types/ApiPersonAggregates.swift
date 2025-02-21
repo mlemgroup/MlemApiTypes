@@ -10,7 +10,7 @@
 import Foundation
 
 // PersonAggregates.ts
-public struct ApiPersonAggregates: Codable, Hashable {
+public struct ApiPersonAggregates: Codable, Hashable, Sendable {
     /// Removed in 0.19.0
     public let id: Int?
     public let personId: Int

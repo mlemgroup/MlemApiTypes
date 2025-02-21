@@ -12,8 +12,8 @@ import Foundation
 public struct RegisterRequest: ApiPostRequest {
     public typealias Body = ApiRegister
     public typealias Response = ApiLoginResponse
-
-    public let path = "user/register"
+    
+    public let path: String = "user/register"
     public let body: Body?
 
     init(
@@ -28,15 +28,15 @@ public struct RegisterRequest: ApiPostRequest {
       answer: String?
     ) {
         self.body = .init(
-          username: username,
-          password: password,
-          passwordVerify: passwordVerify,
-          showNsfw: showNsfw,
-          email: email,
-          captchaUuid: captchaUuid,
-          captchaAnswer: captchaAnswer,
-          honeypot: honeypot,
-          answer: answer
+            username: username,
+            password: password,
+            passwordVerify: passwordVerify,
+            showNsfw: showNsfw,
+            email: email,
+            captchaUuid: captchaUuid,
+            captchaAnswer: captchaAnswer,
+            honeypot: honeypot,
+            answer: answer
       )
     }
 }

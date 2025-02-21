@@ -11,7 +11,7 @@ import Foundation
 
 // ListMedia.ts
 /// Added in 0.19.4
-public struct ApiListMedia: Codable, Hashable {
+public struct ApiListMedia: Codable, Hashable, Sendable {
     public let page: Int?
     public let limit: Int?
 }

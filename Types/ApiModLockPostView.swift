@@ -10,7 +10,7 @@
 import Foundation
 
 // ModLockPostView.ts
-public struct ApiModLockPostView: Codable, Hashable {
+public struct ApiModLockPostView: Codable, Hashable, Sendable {
     public let modLockPost: ApiModLockPost
     public let moderator: ApiPerson?
     public let post: ApiPost
