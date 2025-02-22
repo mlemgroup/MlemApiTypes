@@ -11,11 +11,11 @@ import Foundation
 
 // CommunityView.ts
 public struct ApiCommunityView: Codable, Hashable, Sendable {
-    public let community: ApiCommunity
-    public let subscribed: ApiSubscribedType
-    public let blocked: Bool
+    public var community: ApiCommunity
+    public var subscribed: ApiSubscribedType
+    public var blocked: Bool
     /// Removed in 0.20.0
-    public let counts: ApiCommunityAggregates?
+    public var counts: ApiCommunityAggregates?
     /// Added in 0.19.4
-    public let bannedFromCommunity: Bool?
+    public var bannedFromCommunity: Bool?
 }

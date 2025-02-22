@@ -11,6 +11,6 @@ import Foundation
 
 // CommunityResponse.ts
 public struct ApiCommunityResponse: Codable, Hashable, Sendable {
-    public let communityView: ApiCommunityView
-    public let discussionLanguages: [Int]
+    public var communityView: ApiCommunityView
+    public var discussionLanguages: [Int]
 }

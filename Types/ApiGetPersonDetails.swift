@@ -11,16 +11,16 @@ import Foundation
 
 // GetPersonDetails.ts
 public struct ApiGetPersonDetails: Codable, Hashable, Sendable {
-    public let personId: Int?
-    public let username: String?
+    public var personId: Int?
+    public var username: String?
     /// Removed in 0.20.0
-    public let sort: ApiSortType?
+    public var sort: ApiSortType?
     /// Removed in 0.20.0
-    public let page: Int?
+    public var page: Int?
     /// Removed in 0.20.0
-    public let limit: Int?
+    public var limit: Int?
     /// Removed in 0.20.0
-    public let communityId: Int?
+    public var communityId: Int?
     /// Removed in 0.20.0
-    public let savedOnly: Bool?
+    public var savedOnly: Bool?
 }

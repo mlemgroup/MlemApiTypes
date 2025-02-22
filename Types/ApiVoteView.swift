@@ -12,8 +12,8 @@ import Foundation
 // VoteView.ts
 /// Added in 0.19.2
 public struct ApiVoteView: Codable, Hashable, Sendable {
-    public let creator: ApiPerson
-    public let score: Int
+    public var creator: ApiPerson
+    public var score: Int
     /// Added in 0.19.4
-    public let creatorBannedFromCommunity: Bool?
+    public var creatorBannedFromCommunity: Bool?
 }

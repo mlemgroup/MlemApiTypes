@@ -12,6 +12,6 @@ import Foundation
 // UpdateTotp.ts
 /// Added in 0.19.0
 public struct ApiUpdateTotp: Codable, Hashable, Sendable {
-    public let totpToken: String
-    public let enabled: Bool
+    public var totpToken: String
+    public var enabled: Bool
 }

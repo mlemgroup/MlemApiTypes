@@ -11,12 +11,12 @@ import Foundation
 
 // GetPersonDetailsResponse.ts
 public struct ApiGetPersonDetailsResponse: Codable, Hashable, Sendable {
-    public let personView: ApiPersonView
+    public var personView: ApiPersonView
     /// Removed in 0.20.0
-    public let comments: [ApiCommentView]?
+    public var comments: [ApiCommentView]?
     /// Removed in 0.20.0
-    public let posts: [ApiPostView]?
-    public let moderates: [ApiCommunityModeratorView]
+    public var posts: [ApiPostView]?
+    public var moderates: [ApiCommunityModeratorView]
     /// Added in 0.19.2; made optional in 0.19.3
-    public let site: ApiSite?
+    public var site: ApiSite?
 }

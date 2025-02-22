@@ -12,11 +12,11 @@ import Foundation
 // LoginToken.ts
 /// Added in 0.19.0
 public struct ApiLoginToken: Codable, Hashable, Sendable {
-    public let userId: Int
-    public let published: Date
+    public var userId: Int
+    public var published: Date
     // swiftlint:disable:next identifier_name
-    public let ip: String?
-    public let userAgent: String?
+    public var ip: String?
+    public var userAgent: String?
 }
 
 public extension ApiLoginToken {

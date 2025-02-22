@@ -11,6 +11,6 @@ import Foundation
 
 // GetPost.ts
 public struct ApiGetPost: Codable, Hashable, Sendable {
-    public let id: Int?
-    public let commentId: Int?
+    public var id: Int?
+    public var commentId: Int?
 }

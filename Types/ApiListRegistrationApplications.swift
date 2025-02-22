@@ -11,7 +11,7 @@ import Foundation
 
 // ListRegistrationApplications.ts
 public struct ApiListRegistrationApplications: Codable, Hashable, Sendable {
-    public let unreadOnly: Bool?
-    public let page: Int?
-    public let limit: Int?
+    public var unreadOnly: Bool?
+    public var page: Int?
+    public var limit: Int?
 }

@@ -12,14 +12,14 @@ import Foundation
 // CommentSlimView.ts
 /// Added in 0.20.0
 public struct ApiCommentSlimView: Codable, Hashable, Sendable {
-    public let comment: ApiComment
-    public let creator: ApiPerson
-    public let creatorBannedFromCommunity: Bool
-    public let bannedFromCommunity: Bool
-    public let creatorIsModerator: Bool
-    public let creatorIsAdmin: Bool
-    public let subscribed: ApiSubscribedType
-    public let saved: Bool
-    public let creatorBlocked: Bool
-    public let myVote: Int?
+    public var comment: ApiComment
+    public var creator: ApiPerson
+    public var creatorBannedFromCommunity: Bool
+    public var bannedFromCommunity: Bool
+    public var creatorIsModerator: Bool
+    public var creatorIsAdmin: Bool
+    public var subscribed: ApiSubscribedType
+    public var saved: Bool
+    public var creatorBlocked: Bool
+    public var myVote: Int?
 }

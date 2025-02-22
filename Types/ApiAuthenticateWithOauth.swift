@@ -12,11 +12,11 @@ import Foundation
 // AuthenticateWithOauth.ts
 /// Added in 0.20.0
 public struct ApiAuthenticateWithOauth: Codable, Hashable, Sendable {
-    public let code: String
-    public let oauthProviderId: Int
-    public let redirectUri: String
-    public let showNsfw: Bool?
-    public let username: String?
-    public let answer: String?
-    public let pkceCodeVerifier: String?
+    public var code: String
+    public var oauthProviderId: Int
+    public var redirectUri: String
+    public var showNsfw: Bool?
+    public var username: String?
+    public var answer: String?
+    public var pkceCodeVerifier: String?
 }

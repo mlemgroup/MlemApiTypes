@@ -11,10 +11,10 @@ import Foundation
 
 // ListCommunities.ts
 public struct ApiListCommunities: Codable, Hashable, Sendable {
-    public let type_: ApiListingType?
-    public let sort: ApiSortType?
-    public let page: Int?
-    public let limit: Int?
+    public var type_: ApiListingType?
+    public var sort: ApiSortType?
+    public var page: Int?
+    public var limit: Int?
     /// Added in 0.18.1
-    public let showNsfw: Bool?
+    public var showNsfw: Bool?
 }

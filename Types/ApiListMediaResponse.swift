@@ -12,5 +12,5 @@ import Foundation
 // ListMediaResponse.ts
 /// Added in 0.19.4
 public struct ApiListMediaResponse: Codable, Hashable, Sendable {
-    public let images: [ApiLocalImageView]
+    public var images: [ApiLocalImageView]
 }

@@ -11,47 +11,47 @@ import Foundation
 
 // Post.ts
 public struct ApiPost: Codable, Hashable, Sendable {
-    public let id: Int
-    public let name: String
-    public let url: String?
-    public let body: String?
-    public let creatorId: Int
-    public let communityId: Int
-    public let removed: Bool
-    public let locked: Bool
-    public let published: Date
-    public let updated: Date?
-    public let deleted: Bool
-    public let nsfw: Bool
-    public let embedTitle: String?
-    public let embedDescription: String?
-    public let thumbnailUrl: URL?
-    public let actorId: ActorIdentifier
-    public let local: Bool
-    public let embedVideoUrl: URL?
-    public let languageId: Int
-    public let featuredCommunity: Bool
-    public let featuredLocal: Bool
+    public var id: Int
+    public var name: String
+    public var url: String?
+    public var body: String?
+    public var creatorId: Int
+    public var communityId: Int
+    public var removed: Bool
+    public var locked: Bool
+    public var published: Date
+    public var updated: Date?
+    public var deleted: Bool
+    public var nsfw: Bool
+    public var embedTitle: String?
+    public var embedDescription: String?
+    public var thumbnailUrl: URL?
+    public var actorId: ActorIdentifier
+    public var local: Bool
+    public var embedVideoUrl: URL?
+    public var languageId: Int
+    public var featuredCommunity: Bool
+    public var featuredLocal: Bool
     /// Added in 0.19.4
-    public let urlContentType: String?
+    public var urlContentType: String?
     /// Added in 0.19.4
-    public let altText: String?
+    public var altText: String?
     /// Added in 0.20.0
-    public let scheduledPublishTime: String?
+    public var scheduledPublishTime: String?
     /// Added in 0.20.0
-    public let comments: Int?
+    public var comments: Int?
     /// Added in 0.20.0
-    public let score: Int?
+    public var score: Int?
     /// Added in 0.20.0
-    public let upvotes: Int?
+    public var upvotes: Int?
     /// Added in 0.20.0
-    public let downvotes: Int?
+    public var downvotes: Int?
     /// Added in 0.20.0
-    public let newestCommentTime: String?
+    public var newestCommentTime: String?
     /// Added in 0.20.0
-    public let reportCount: Int?
+    public var reportCount: Int?
     /// Added in 0.20.0
-    public let unresolvedReportCount: Int?
+    public var unresolvedReportCount: Int?
 }
 
 public extension ApiPost {

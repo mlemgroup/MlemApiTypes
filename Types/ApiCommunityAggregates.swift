@@ -13,20 +13,20 @@ import Foundation
 /// Removed in 0.20.0
 public struct ApiCommunityAggregates: Codable, Hashable, Sendable {
     /// Removed in 0.19.0
-    public let id: Int?
-    public let communityId: Int
-    public let subscribers: Int
-    public let posts: Int
-    public let comments: Int
-    public let published: Date
-    public let usersActiveDay: Int
-    public let usersActiveWeek: Int
-    public let usersActiveMonth: Int
-    public let usersActiveHalfYear: Int
+    public var id: Int?
+    public var communityId: Int
+    public var subscribers: Int
+    public var posts: Int
+    public var comments: Int
+    public var published: Date
+    public var usersActiveDay: Int
+    public var usersActiveWeek: Int
+    public var usersActiveMonth: Int
+    public var usersActiveHalfYear: Int
     /// Removed in 0.19.0
-    public let hotRank: Int?
+    public var hotRank: Int?
     /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
-    public let subscribersLocal: Int?
+    public var subscribersLocal: Int?
 }
 
 public extension ApiCommunityAggregates {

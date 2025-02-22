@@ -12,11 +12,11 @@ import Foundation
 // PersonPostMention.ts
 /// Added in 0.20.0
 public struct ApiPersonPostMention: Codable, Hashable, Sendable {
-    public let id: Int
-    public let recipientId: Int
-    public let postId: Int
-    public let read: Bool
-    public let published: Date
+    public var id: Int
+    public var recipientId: Int
+    public var postId: Int
+    public var read: Bool
+    public var published: Date
 }
 
 public extension ApiPersonPostMention {

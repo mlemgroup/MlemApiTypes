@@ -12,11 +12,11 @@ import Foundation
 // ListReports.ts
 /// Added in 0.20.0
 public struct ApiListReports: Codable, Hashable, Sendable {
-    public let unresolvedOnly: Bool?
-    public let type_: ApiReportType?
-    public let postId: Int?
-    public let communityId: Int?
-    public let pageCursor: String?
-    public let pageBack: Bool?
-    public let showCommunityRuleViolations: Bool?
+    public var unresolvedOnly: Bool?
+    public var type_: ApiReportType?
+    public var postId: Int?
+    public var communityId: Int?
+    public var pageCursor: String?
+    public var pageBack: Bool?
+    public var showCommunityRuleViolations: Bool?
 }

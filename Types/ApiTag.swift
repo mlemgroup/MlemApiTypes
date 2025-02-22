@@ -12,13 +12,13 @@ import Foundation
 // Tag.ts
 /// Added in 0.20.0
 public struct ApiTag: Codable, Hashable, Sendable {
-    public let id: Int
-    public let actorId: ActorIdentifier
-    public let name: String
-    public let communityId: Int
-    public let published: Date
-    public let updated: Date?
-    public let deleted: Bool
+    public var id: Int
+    public var actorId: ActorIdentifier
+    public var name: String
+    public var communityId: Int
+    public var published: Date
+    public var updated: Date?
+    public var deleted: Bool
 }
 
 public extension ApiTag {

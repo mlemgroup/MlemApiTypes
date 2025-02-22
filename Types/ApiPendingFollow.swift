@@ -12,8 +12,8 @@ import Foundation
 // PendingFollow.ts
 /// Added in 0.20.0
 public struct ApiPendingFollow: Codable, Hashable, Sendable {
-    public let person: ApiPerson
-    public let community: ApiCommunity
-    public let isNewInstance: Bool
-    public let subscribed: ApiSubscribedType
+    public var person: ApiPerson
+    public var community: ApiCommunity
+    public var isNewInstance: Bool
+    public var subscribed: ApiSubscribedType
 }

@@ -13,5 +13,5 @@ import Foundation
 /// Added in 0.20.0
 // swiftlint:disable:next type_name
 public struct ApiGetCommunityPendingFollowsCountResponse: Codable, Hashable, Sendable {
-    public let count: Int
+    public var count: Int
 }

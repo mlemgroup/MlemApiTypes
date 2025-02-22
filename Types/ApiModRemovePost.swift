@@ -11,12 +11,12 @@ import Foundation
 
 // ModRemovePost.ts
 public struct ApiModRemovePost: Codable, Hashable, Sendable {
-    public let id: Int
-    public let modPersonId: Int
-    public let postId: Int
-    public let reason: String?
-    public let removed: Bool
-    public let published: Date
+    public var id: Int
+    public var modPersonId: Int
+    public var postId: Int
+    public var reason: String?
+    public var removed: Bool
+    public var published: Date
 }
 
 public extension ApiModRemovePost {

@@ -11,9 +11,9 @@ import Foundation
 
 // ModAddView.ts
 public struct ApiModAddView: Codable, Hashable, Sendable {
-    public let modAdd: ApiModAdd
-    public let moderator: ApiPerson?
-    public let otherPerson: ApiPerson
+    public var modAdd: ApiModAdd
+    public var moderator: ApiPerson?
+    public var otherPerson: ApiPerson
 }
 
 public extension ApiModAddView {

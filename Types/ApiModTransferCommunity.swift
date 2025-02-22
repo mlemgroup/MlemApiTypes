@@ -11,11 +11,11 @@ import Foundation
 
 // ModTransferCommunity.ts
 public struct ApiModTransferCommunity: Codable, Hashable, Sendable {
-    public let id: Int
-    public let modPersonId: Int
-    public let otherPersonId: Int
-    public let communityId: Int
-    public let published: Date
+    public var id: Int
+    public var modPersonId: Int
+    public var otherPersonId: Int
+    public var communityId: Int
+    public var published: Date
 }
 
 public extension ApiModTransferCommunity {

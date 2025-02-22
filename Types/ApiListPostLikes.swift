@@ -12,7 +12,7 @@ import Foundation
 // ListPostLikes.ts
 /// Added in 0.19.2
 public struct ApiListPostLikes: Codable, Hashable, Sendable {
-    public let postId: Int
-    public let page: Int?
-    public let limit: Int?
+    public var postId: Int
+    public var page: Int?
+    public var limit: Int?
 }

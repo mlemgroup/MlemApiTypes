@@ -12,5 +12,5 @@ import Foundation
 // GetCommunityPendingFollowsCount.ts
 /// Added in 0.20.0
 public struct ApiGetCommunityPendingFollowsCount: Codable, Hashable, Sendable {
-    public let communityId: Int
+    public var communityId: Int
 }

@@ -12,11 +12,11 @@ import Foundation
 // OAuthAccount.ts
 /// Added in 0.20.0
 public struct ApiOAuthAccount: Codable, Hashable, Sendable {
-    public let localUserId: Int
-    public let oauthProviderId: Int
-    public let oauthUserId: String
-    public let published: Date
-    public let updated: Date?
+    public var localUserId: Int
+    public var oauthProviderId: Int
+    public var oauthUserId: String
+    public var published: Date
+    public var updated: Date?
 }
 
 public extension ApiOAuthAccount {

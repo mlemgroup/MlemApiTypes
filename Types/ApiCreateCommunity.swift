@@ -11,18 +11,18 @@ import Foundation
 
 // CreateCommunity.ts
 public struct ApiCreateCommunity: Codable, Hashable, Sendable {
-    public let name: String
-    public let title: String
-    public let description: String?
-    public let icon: URL?
-    public let banner: URL?
-    public let nsfw: Bool?
-    public let postingRestrictedToMods: Bool?
-    public let discussionLanguages: [Int]?
+    public var name: String
+    public var title: String
+    public var description: String?
+    public var icon: URL?
+    public var banner: URL?
+    public var nsfw: Bool?
+    public var postingRestrictedToMods: Bool?
+    public var discussionLanguages: [Int]?
     /// Added in 0.19.2, removed in 0.19.3
-    public let onlyFollowersCanVote: Bool?
+    public var onlyFollowersCanVote: Bool?
     /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
-    public let visibility: ApiCommunityVisibility?
+    public var visibility: ApiCommunityVisibility?
     /// Added in 0.20.0
-    public let sidebar: String?
+    public var sidebar: String?
 }

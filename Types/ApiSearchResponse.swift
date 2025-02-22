@@ -12,15 +12,15 @@ import Foundation
 // SearchResponse.ts
 public struct ApiSearchResponse: Codable, Hashable, Sendable {
     /// Removed in 0.20.0
-    public let type_: ApiSearchType?
+    public var type_: ApiSearchType?
     /// Removed in 0.20.0
-    public let comments: [ApiCommentView]?
+    public var comments: [ApiCommentView]?
     /// Removed in 0.20.0
-    public let posts: [ApiPostView]?
+    public var posts: [ApiPostView]?
     /// Removed in 0.20.0
-    public let communities: [ApiCommunityView]?
+    public var communities: [ApiCommunityView]?
     /// Removed in 0.20.0
-    public let users: [ApiPersonView]?
+    public var users: [ApiPersonView]?
     /// Added in 0.20.0
-    public let results: [ApiSearchCombinedView]?
+    public var results: [ApiSearchCombinedView]?
 }

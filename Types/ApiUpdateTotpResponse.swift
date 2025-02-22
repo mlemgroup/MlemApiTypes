@@ -12,5 +12,5 @@ import Foundation
 // UpdateTotpResponse.ts
 /// Added in 0.19.0
 public struct ApiUpdateTotpResponse: Codable, Hashable, Sendable {
-    public let enabled: Bool
+    public var enabled: Bool
 }

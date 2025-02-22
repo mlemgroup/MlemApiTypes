@@ -12,12 +12,12 @@ import Foundation
 // AdminAllowInstance.ts
 /// Added in 0.20.0
 public struct ApiAdminAllowInstance: Codable, Hashable, Sendable {
-    public let id: Int
-    public let instanceId: Int
-    public let adminPersonId: Int
-    public let allowed: Bool
-    public let reason: String?
-    public let published: Date
+    public var id: Int
+    public var instanceId: Int
+    public var adminPersonId: Int
+    public var allowed: Bool
+    public var reason: String?
+    public var published: Date
 }
 
 public extension ApiAdminAllowInstance {

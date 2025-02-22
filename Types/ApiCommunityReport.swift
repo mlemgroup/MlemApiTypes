@@ -12,20 +12,20 @@ import Foundation
 // CommunityReport.ts
 /// Added in 0.20.0
 public struct ApiCommunityReport: Codable, Hashable, Sendable {
-    public let id: Int
-    public let creatorId: Int
-    public let communityId: Int
-    public let originalCommunityName: String
-    public let originalCommunityTitle: String
-    public let originalCommunityDescription: String?
-    public let originalCommunitySidebar: String?
-    public let originalCommunityIcon: String?
-    public let originalCommunityBanner: String?
-    public let reason: String
-    public let resolved: Bool
-    public let resolverId: Int?
-    public let published: Date
-    public let updated: Date?
+    public var id: Int
+    public var creatorId: Int
+    public var communityId: Int
+    public var originalCommunityName: String
+    public var originalCommunityTitle: String
+    public var originalCommunityDescription: String?
+    public var originalCommunitySidebar: String?
+    public var originalCommunityIcon: String?
+    public var originalCommunityBanner: String?
+    public var reason: String
+    public var resolved: Bool
+    public var resolverId: Int?
+    public var published: Date
+    public var updated: Date?
 }
 
 public extension ApiCommunityReport {

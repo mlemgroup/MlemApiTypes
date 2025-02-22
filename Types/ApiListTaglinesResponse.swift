@@ -12,5 +12,5 @@ import Foundation
 // ListTaglinesResponse.ts
 /// Added in 0.20.0
 public struct ApiListTaglinesResponse: Codable, Hashable, Sendable {
-    public let taglines: [ApiTagline]
+    public var taglines: [ApiTagline]
 }

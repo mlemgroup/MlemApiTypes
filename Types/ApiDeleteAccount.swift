@@ -11,7 +11,7 @@ import Foundation
 
 // DeleteAccount.ts
 public struct ApiDeleteAccount: Codable, Hashable, Sendable {
-    public let password: String
+    public var password: String
     /// Added in 0.19.0
-    public let deleteContent: Bool?
+    public var deleteContent: Bool?
 }

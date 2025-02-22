@@ -12,5 +12,5 @@ import Foundation
 // DeleteOAuthProvider.ts
 /// Added in 0.20.0
 public struct ApiDeleteOAuthProvider: Codable, Hashable, Sendable {
-    public let id: Int
+    public var id: Int
 }

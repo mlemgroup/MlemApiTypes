@@ -11,6 +11,6 @@ import Foundation
 
 // CreateCommentReport.ts
 public struct ApiCreateCommentReport: Codable, Hashable, Sendable {
-    public let commentId: Int
-    public let reason: String
+    public var commentId: Int
+    public var reason: String
 }

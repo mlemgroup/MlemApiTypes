@@ -11,11 +11,11 @@ import Foundation
 
 // ModAdd.ts
 public struct ApiModAdd: Codable, Hashable, Sendable {
-    public let id: Int
-    public let modPersonId: Int
-    public let otherPersonId: Int
-    public let removed: Bool
-    public let published: Date
+    public var id: Int
+    public var modPersonId: Int
+    public var otherPersonId: Int
+    public var removed: Bool
+    public var published: Date
 }
 
 public extension ApiModAdd {

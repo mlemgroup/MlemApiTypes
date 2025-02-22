@@ -11,5 +11,5 @@ import Foundation
 
 // PasswordReset.ts
 public struct ApiPasswordReset: Codable, Hashable, Sendable {
-    public let email: String
+    public var email: String
 }

@@ -11,9 +11,9 @@ import Foundation
 
 // PersonView.ts
 public struct ApiPersonView: Codable, Hashable, Sendable {
-    public let person: ApiPerson
+    public var person: ApiPerson
     /// Removed in 0.20.0
-    public let counts: ApiPersonAggregates?
+    public var counts: ApiPersonAggregates?
     /// Added in 0.19.0
-    public let isAdmin: Bool?
+    public var isAdmin: Bool?
 }

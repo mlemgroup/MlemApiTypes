@@ -11,7 +11,7 @@ import Foundation
 
 // CaptchaResponse.ts
 public struct ApiCaptchaResponse: Codable, Hashable, Sendable {
-    public let png: String
-    public let wav: String
-    public let uuid: String
+    public var png: String
+    public var wav: String
+    public var uuid: String
 }

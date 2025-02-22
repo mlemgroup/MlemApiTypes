@@ -11,5 +11,5 @@ import Foundation
 
 // GetFederatedInstancesResponse.ts
 public struct ApiGetFederatedInstancesResponse: Codable, Hashable, Sendable {
-    public let federatedInstances: ApiFederatedInstances?
+    public var federatedInstances: ApiFederatedInstances?
 }

@@ -11,12 +11,12 @@ import Foundation
 
 // ModHideCommunity.ts
 public struct ApiModHideCommunity: Codable, Hashable, Sendable {
-    public let id: Int
-    public let communityId: Int
-    public let modPersonId: Int
-    public let published: Date
-    public let reason: String?
-    public let hidden: Bool
+    public var id: Int
+    public var communityId: Int
+    public var modPersonId: Int
+    public var published: Date
+    public var reason: String?
+    public var hidden: Bool
 }
 
 public extension ApiModHideCommunity {

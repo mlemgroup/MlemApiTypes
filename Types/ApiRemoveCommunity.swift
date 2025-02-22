@@ -11,9 +11,9 @@ import Foundation
 
 // RemoveCommunity.ts
 public struct ApiRemoveCommunity: Codable, Hashable, Sendable {
-    public let communityId: Int
-    public let removed: Bool
-    public let reason: String?
+    public var communityId: Int
+    public var removed: Bool
+    public var reason: String?
     /// Removed in 0.19.0
-    public let expires: Int?
+    public var expires: Int?
 }

@@ -12,6 +12,6 @@ import Foundation
 // UserBlockInstanceParams.ts
 /// Added in 0.20.0
 public struct ApiUserBlockInstanceParams: Codable, Hashable, Sendable {
-    public let instanceId: Int
-    public let block: Bool
+    public var instanceId: Int
+    public var block: Bool
 }

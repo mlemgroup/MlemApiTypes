@@ -12,7 +12,7 @@ import Foundation
 // AdminAllowInstanceParams.ts
 /// Added in 0.20.0
 public struct ApiAdminAllowInstanceParams: Codable, Hashable, Sendable {
-    public let instance: String
-    public let allow: Bool
-    public let reason: String?
+    public var instance: String
+    public var allow: Bool
+    public var reason: String?
 }

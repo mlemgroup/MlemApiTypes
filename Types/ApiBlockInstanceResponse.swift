@@ -12,5 +12,5 @@ import Foundation
 // BlockInstanceResponse.ts
 /// Added in 0.19.0, removed in 0.20.0
 public struct ApiBlockInstanceResponse: Codable, Hashable, Sendable {
-    public let blocked: Bool
+    public var blocked: Bool
 }

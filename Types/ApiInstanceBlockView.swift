@@ -12,7 +12,7 @@ import Foundation
 // InstanceBlockView.ts
 /// Added in 0.19.0, removed in 0.20.0
 public struct ApiInstanceBlockView: Codable, Hashable, Sendable {
-    public let person: ApiPerson
-    public let instance: ApiInstance
-    public let site: ApiSite?
+    public var person: ApiPerson
+    public var instance: ApiInstance
+    public var site: ApiSite?
 }

@@ -11,7 +11,7 @@ import Foundation
 
 // PasswordChangeAfterReset.ts
 public struct ApiPasswordChangeAfterReset: Codable, Hashable, Sendable {
-    public let token: String
-    public let password: String
-    public let passwordVerify: String
+    public var token: String
+    public var password: String
+    public var passwordVerify: String
 }

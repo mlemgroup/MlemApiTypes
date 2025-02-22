@@ -13,15 +13,15 @@ import Foundation
 /// Removed in 0.20.0
 public struct ApiCommentAggregates: Codable, Hashable, Sendable {
     /// Removed in 0.19.0
-    public let id: Int?
-    public let commentId: Int
-    public let score: Int
-    public let upvotes: Int
-    public let downvotes: Int
-    public let published: Date
-    public let childCount: Int
+    public var id: Int?
+    public var commentId: Int
+    public var score: Int
+    public var upvotes: Int
+    public var downvotes: Int
+    public var published: Date
+    public var childCount: Int
     /// Removed in 0.19.0
-    public let hotRank: Int?
+    public var hotRank: Int?
 }
 
 public extension ApiCommentAggregates {

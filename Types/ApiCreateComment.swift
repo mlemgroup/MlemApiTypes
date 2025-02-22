@@ -11,10 +11,10 @@ import Foundation
 
 // CreateComment.ts
 public struct ApiCreateComment: Codable, Hashable, Sendable {
-    public let content: String
-    public let postId: Int
-    public let parentId: Int?
-    public let languageId: Int?
+    public var content: String
+    public var postId: Int
+    public var parentId: Int?
+    public var languageId: Int?
     /// Removed in 0.19.0
-    public let formId: String?
+    public var formId: String?
 }

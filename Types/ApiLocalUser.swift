@@ -11,67 +11,67 @@ import Foundation
 
 // LocalUser.ts
 public struct ApiLocalUser: Codable, Hashable, Sendable {
-    public let id: Int
-    public let personId: Int
-    public let email: String?
-    public let showNsfw: Bool
-    public let theme: String
+    public var id: Int
+    public var personId: Int
+    public var email: String?
+    public var showNsfw: Bool
+    public var theme: String
     /// Removed in 0.20.0
-    public let defaultSortType: ApiSortType?
-    public let defaultListingType: ApiListingType
-    public let interfaceLanguage: String
-    public let showAvatars: Bool
-    public let sendNotificationsToEmail: Bool
+    public var defaultSortType: ApiSortType?
+    public var defaultListingType: ApiListingType
+    public var interfaceLanguage: String
+    public var showAvatars: Bool
+    public var sendNotificationsToEmail: Bool
     /// Removed in 0.19.0
-    public let validatorTime: String?
+    public var validatorTime: String?
     /// Removed in 0.20.0
-    public let showScores: Bool?
-    public let showBotAccounts: Bool
-    public let showReadPosts: Bool
+    public var showScores: Bool?
+    public var showBotAccounts: Bool
+    public var showReadPosts: Bool
     /// Removed in 0.19.0
-    public let showNewPostNotifs: Bool?
-    public let emailVerified: Bool
-    public let acceptedApplication: Bool
+    public var showNewPostNotifs: Bool?
+    public var emailVerified: Bool
+    public var acceptedApplication: Bool
     /// Removed in 0.19.0
-    public let totp2faUrl: String?
+    public var totp2faUrl: String?
     /// Added in 0.18.1
-    public let openLinksInNewTab: Bool?
+    public var openLinksInNewTab: Bool?
     /// Added in 0.19.0
-    public let blurNsfw: Bool?
+    public var blurNsfw: Bool?
     /// Added in 0.19.0, removed in 0.20.0
-    public let autoExpand: Bool?
+    public var autoExpand: Bool?
     /// Added in 0.19.0
-    public let infiniteScrollEnabled: Bool?
+    public var infiniteScrollEnabled: Bool?
     /// Added in 0.19.0
-    public let admin: Bool?
+    public var admin: Bool?
     /// Added in 0.19.0
-    public let postListingMode: ApiPostListingMode?
+    public var postListingMode: ApiPostListingMode?
     /// Added in 0.19.0
-    public let totp2faEnabled: Bool?
+    public var totp2faEnabled: Bool?
     /// Added in 0.19.0
-    public let enableKeyboardNavigation: Bool?
+    public var enableKeyboardNavigation: Bool?
     /// Added in 0.19.0
-    public let enableAnimatedImages: Bool?
+    public var enableAnimatedImages: Bool?
     /// Added in 0.19.0
-    public let collapseBotComments: Bool?
+    public var collapseBotComments: Bool?
     /// Added in 0.20.0
-    public let defaultPostSortType: ApiPostSortType?
+    public var defaultPostSortType: ApiPostSortType?
     /// Added in 0.20.0
-    public let enablePrivateMessages: Bool?
+    public var enablePrivateMessages: Bool?
     /// Added in 0.20.0
-    public let defaultCommentSortType: ApiCommentSortType?
+    public var defaultCommentSortType: ApiCommentSortType?
     /// Added in 0.20.0
-    public let autoMarkFetchedPostsAsRead: Bool?
+    public var autoMarkFetchedPostsAsRead: Bool?
     /// Added in 0.20.0
-    public let lastDonationNotification: String?
+    public var lastDonationNotification: String?
     /// Added in 0.20.0
-    public let hideMedia: Bool?
+    public var hideMedia: Bool?
     /// Added in 0.20.0
-    public let showScore: Bool?
+    public var showScore: Bool?
     /// Added in 0.20.0
-    public let showUpvotes: Bool?
+    public var showUpvotes: Bool?
     /// Added in 0.20.0
-    public let showDownvotes: Bool?
+    public var showDownvotes: Bool?
     /// Added in 0.20.0
-    public let showUpvotePercentage: Bool?
+    public var showUpvotePercentage: Bool?
 }

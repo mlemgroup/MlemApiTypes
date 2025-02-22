@@ -11,5 +11,5 @@ import Foundation
 
 // VerifyEmail.ts
 public struct ApiVerifyEmail: Codable, Hashable, Sendable {
-    public let token: String
+    public var token: String
 }

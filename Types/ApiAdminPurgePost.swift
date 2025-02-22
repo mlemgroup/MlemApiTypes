@@ -11,11 +11,11 @@ import Foundation
 
 // AdminPurgePost.ts
 public struct ApiAdminPurgePost: Codable, Hashable, Sendable {
-    public let id: Int
-    public let adminPersonId: Int
-    public let communityId: Int
-    public let reason: String?
-    public let published: Date
+    public var id: Int
+    public var adminPersonId: Int
+    public var communityId: Int
+    public var reason: String?
+    public var published: Date
 }
 
 public extension ApiAdminPurgePost {

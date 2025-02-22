@@ -11,31 +11,31 @@ import Foundation
 
 // Comment.ts
 public struct ApiComment: Codable, Hashable, Sendable {
-    public let id: Int
-    public let creatorId: Int
-    public let postId: Int
-    public let content: String
-    public let removed: Bool
-    public let published: Date
-    public let updated: Date?
-    public let deleted: Bool
-    public let actorId: ActorIdentifier
-    public let local: Bool
-    public let path: String
-    public let distinguished: Bool
-    public let languageId: Int
+    public var id: Int
+    public var creatorId: Int
+    public var postId: Int
+    public var content: String
+    public var removed: Bool
+    public var published: Date
+    public var updated: Date?
+    public var deleted: Bool
+    public var actorId: ActorIdentifier
+    public var local: Bool
+    public var path: String
+    public var distinguished: Bool
+    public var languageId: Int
     /// Added in 0.20.0
-    public let score: Int?
+    public var score: Int?
     /// Added in 0.20.0
-    public let upvotes: Int?
+    public var upvotes: Int?
     /// Added in 0.20.0
-    public let downvotes: Int?
+    public var downvotes: Int?
     /// Added in 0.20.0
-    public let childCount: Int?
+    public var childCount: Int?
     /// Added in 0.20.0
-    public let reportCount: Int?
+    public var reportCount: Int?
     /// Added in 0.20.0
-    public let unresolvedReportCount: Int?
+    public var unresolvedReportCount: Int?
 }
 
 public extension ApiComment {

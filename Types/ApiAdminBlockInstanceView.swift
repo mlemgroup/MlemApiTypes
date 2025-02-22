@@ -12,7 +12,7 @@ import Foundation
 // AdminBlockInstanceView.ts
 /// Added in 0.20.0
 public struct ApiAdminBlockInstanceView: Codable, Hashable, Sendable {
-    public let adminBlockInstance: ApiAdminBlockInstance
-    public let instance: ApiInstance
-    public let admin: ApiPerson?
+    public var adminBlockInstance: ApiAdminBlockInstance
+    public var instance: ApiInstance
+    public var admin: ApiPerson?
 }

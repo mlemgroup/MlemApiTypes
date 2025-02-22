@@ -11,75 +11,75 @@ import Foundation
 
 // LocalSite.ts
 public struct ApiLocalSite: Codable, Hashable, Sendable {
-    public let id: Int
-    public let siteId: Int
-    public let siteSetup: Bool
+    public var id: Int
+    public var siteId: Int
+    public var siteSetup: Bool
     /// Removed in 0.20.0
-    public let enableDownvotes: Bool?
+    public var enableDownvotes: Bool?
     /// Removed in 0.20.0
-    public let enableNsfw: Bool?
-    public let communityCreationAdminOnly: Bool
-    public let requireEmailVerification: Bool
-    public let applicationQuestion: String?
-    public let privateInstance: Bool
-    public let defaultTheme: String
-    public let defaultPostListingType: ApiListingType
-    public let legalInformation: String?
-    public let hideModlogModNames: Bool
-    public let applicationEmailAdmins: Bool
-    public let slurFilterRegex: String?
-    public let actorNameMaxLength: Int
-    public let federationEnabled: Bool
+    public var enableNsfw: Bool?
+    public var communityCreationAdminOnly: Bool
+    public var requireEmailVerification: Bool
+    public var applicationQuestion: String?
+    public var privateInstance: Bool
+    public var defaultTheme: String
+    public var defaultPostListingType: ApiListingType
+    public var legalInformation: String?
+    public var hideModlogModNames: Bool
+    public var applicationEmailAdmins: Bool
+    public var slurFilterRegex: String?
+    public var actorNameMaxLength: Int
+    public var federationEnabled: Bool
     /// Removed in 0.18.1
-    public let federationWorkerCount: Int?
-    public let captchaEnabled: Bool
-    public let captchaDifficulty: String
-    public let published: Date
-    public let updated: Date?
-    public let registrationMode: ApiRegistrationMode
-    public let reportsEmailAdmins: Bool
+    public var federationWorkerCount: Int?
+    public var captchaEnabled: Bool
+    public var captchaDifficulty: String
+    public var published: Date
+    public var updated: Date?
+    public var registrationMode: ApiRegistrationMode
+    public var reportsEmailAdmins: Bool
     /// Added in 0.19.0
-    public let federationSignedFetch: Bool?
+    public var federationSignedFetch: Bool?
     /// Added in 0.19.2, removed in 0.19.3
-    public let contentWarning: String?
+    public var contentWarning: String?
     /// Added in 0.19.2, removed in 0.19.3
-    public let autoExpandImages: Bool?
+    public var autoExpandImages: Bool?
     /// Added in 0.19.4
-    public let defaultPostListingMode: ApiPostListingMode?
+    public var defaultPostListingMode: ApiPostListingMode?
     /// Added in 0.19.4, removed in 0.20.0
-    public let defaultSortType: ApiSortType?
+    public var defaultSortType: ApiSortType?
     /// Added in 0.20.0
-    public let defaultPostSortType: ApiPostSortType?
+    public var defaultPostSortType: ApiPostSortType?
     /// Added in 0.20.0
-    public let defaultCommentSortType: ApiCommentSortType?
+    public var defaultCommentSortType: ApiCommentSortType?
     /// Added in 0.20.0
-    public let oauthRegistration: Bool?
+    public var oauthRegistration: Bool?
     /// Added in 0.20.0
-    public let postUpvotes: ApiFederationMode?
+    public var postUpvotes: ApiFederationMode?
     /// Added in 0.20.0
-    public let postDownvotes: ApiFederationMode?
+    public var postDownvotes: ApiFederationMode?
     /// Added in 0.20.0
-    public let commentUpvotes: ApiFederationMode?
+    public var commentUpvotes: ApiFederationMode?
     /// Added in 0.20.0
-    public let commentDownvotes: ApiFederationMode?
+    public var commentDownvotes: ApiFederationMode?
     /// Added in 0.20.0
-    public let disableDonationDialog: Bool?
+    public var disableDonationDialog: Bool?
     /// Added in 0.20.0
-    public let users: Int?
+    public var users: Int?
     /// Added in 0.20.0
-    public let posts: Int?
+    public var posts: Int?
     /// Added in 0.20.0
-    public let comments: Int?
+    public var comments: Int?
     /// Added in 0.20.0
-    public let communities: Int?
+    public var communities: Int?
     /// Added in 0.20.0
-    public let usersActiveDay: Int?
+    public var usersActiveDay: Int?
     /// Added in 0.20.0
-    public let usersActiveWeek: Int?
+    public var usersActiveWeek: Int?
     /// Added in 0.20.0
-    public let usersActiveMonth: Int?
+    public var usersActiveMonth: Int?
     /// Added in 0.20.0
-    public let usersActiveHalfYear: Int?
+    public var usersActiveHalfYear: Int?
 }
 
 public extension ApiLocalSite {

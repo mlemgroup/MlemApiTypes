@@ -12,6 +12,6 @@ import Foundation
 // MarkPersonCommentMentionAsRead.ts
 /// Added in 0.20.0
 public struct ApiMarkPersonCommentMentionAsRead: Codable, Hashable, Sendable {
-    public let personCommentMentionId: Int
-    public let read: Bool
+    public var personCommentMentionId: Int
+    public var read: Bool
 }

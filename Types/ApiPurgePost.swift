@@ -11,6 +11,6 @@ import Foundation
 
 // PurgePost.ts
 public struct ApiPurgePost: Codable, Hashable, Sendable {
-    public let postId: Int
-    public let reason: String?
+    public var postId: Int
+    public var reason: String?
 }

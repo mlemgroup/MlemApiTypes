@@ -11,17 +11,17 @@ import Foundation
 
 // PostReport.ts
 public struct ApiPostReport: Codable, Hashable, Sendable {
-    public let id: Int
-    public let creatorId: Int
-    public let postId: Int
-    public let originalPostName: String
-    public let originalPostUrl: String?
-    public let originalPostBody: String?
-    public let reason: String
-    public let resolved: Bool
-    public let resolverId: Int?
-    public let published: Date
-    public let updated: Date?
+    public var id: Int
+    public var creatorId: Int
+    public var postId: Int
+    public var originalPostName: String
+    public var originalPostUrl: String?
+    public var originalPostBody: String?
+    public var reason: String
+    public var resolved: Bool
+    public var resolverId: Int?
+    public var published: Date
+    public var updated: Date?
 }
 
 public extension ApiPostReport {

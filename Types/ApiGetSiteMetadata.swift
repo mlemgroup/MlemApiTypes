@@ -11,5 +11,5 @@ import Foundation
 
 // GetSiteMetadata.ts
 public struct ApiGetSiteMetadata: Codable, Hashable, Sendable {
-    public let url: String
+    public var url: String
 }

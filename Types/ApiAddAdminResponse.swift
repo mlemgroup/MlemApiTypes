@@ -11,5 +11,5 @@ import Foundation
 
 // AddAdminResponse.ts
 public struct ApiAddAdminResponse: Codable, Hashable, Sendable {
-    public let admins: [ApiPersonView]
+    public var admins: [ApiPersonView]
 }

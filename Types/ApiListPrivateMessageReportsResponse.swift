@@ -12,5 +12,5 @@ import Foundation
 // ListPrivateMessageReportsResponse.ts
 /// Removed in 0.20.0
 public struct ApiListPrivateMessageReportsResponse: Codable, Hashable, Sendable {
-    public let privateMessageReports: [ApiPrivateMessageReportView]
+    public var privateMessageReports: [ApiPrivateMessageReportView]
 }

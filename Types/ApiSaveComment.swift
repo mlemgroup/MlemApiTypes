@@ -11,6 +11,6 @@ import Foundation
 
 // SaveComment.ts
 public struct ApiSaveComment: Codable, Hashable, Sendable {
-    public let commentId: Int
-    public let save: Bool
+    public var commentId: Int
+    public var save: Bool
 }

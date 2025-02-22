@@ -11,8 +11,8 @@ import Foundation
 
 // GetPostResponse.ts
 public struct ApiGetPostResponse: Codable, Hashable, Sendable {
-    public let postView: ApiPostView
-    public let communityView: ApiCommunityView
-    public let moderators: [ApiCommunityModeratorView]
-    public let crossPosts: [ApiPostView]
+    public var postView: ApiPostView
+    public var communityView: ApiCommunityView
+    public var moderators: [ApiCommunityModeratorView]
+    public var crossPosts: [ApiPostView]
 }

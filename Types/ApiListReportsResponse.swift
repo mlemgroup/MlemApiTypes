@@ -12,5 +12,5 @@ import Foundation
 // ListReportsResponse.ts
 /// Added in 0.20.0
 public struct ApiListReportsResponse: Codable, Hashable, Sendable {
-    public let reports: [ApiReportCombinedView]
+    public var reports: [ApiReportCombinedView]
 }

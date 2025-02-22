@@ -11,23 +11,23 @@ import Foundation
 
 // GetSiteResponse.ts
 public struct ApiGetSiteResponse: Codable, Hashable, Sendable {
-    public let siteView: ApiSiteView
-    public let admins: [ApiPersonView]
-    public let version: String
+    public var siteView: ApiSiteView
+    public var admins: [ApiPersonView]
+    public var version: String
     /// Removed in 0.20.0
-    public let myUser: ApiMyUserInfo?
-    public let allLanguages: [ApiLanguage]
-    public let discussionLanguages: [Int]
+    public var myUser: ApiMyUserInfo?
+    public var allLanguages: [ApiLanguage]
+    public var discussionLanguages: [Int]
     /// Removed in 0.20.0
-    public let taglines: [ApiTagline]?
+    public var taglines: [ApiTagline]?
     /// Removed in 0.20.0
-    public let customEmojis: [ApiCustomEmojiView]?
+    public var customEmojis: [ApiCustomEmojiView]?
     /// Added in 0.19.4
-    public let blockedUrls: [ApiLocalSiteUrlBlocklist]?
+    public var blockedUrls: [ApiLocalSiteUrlBlocklist]?
     /// Added in 0.20.0
-    public let tagline: ApiTagline?
+    public var tagline: ApiTagline?
     /// Added in 0.20.0
-    public let adminOauthProviders: [ApiOAuthProvider]?
+    public var adminOauthProviders: [ApiOAuthProvider]?
     /// Added in 0.20.0
-    public let imageUploadDisabled: Bool?
+    public var imageUploadDisabled: Bool?
 }

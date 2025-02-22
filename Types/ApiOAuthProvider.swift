@@ -12,21 +12,21 @@ import Foundation
 // OAuthProvider.ts
 /// Added in 0.20.0
 public struct ApiOAuthProvider: Codable, Hashable, Sendable {
-    public let id: Int
-    public let displayName: String
-    public let issuer: String
-    public let authorizationEndpoint: String
-    public let tokenEndpoint: String
-    public let userinfoEndpoint: String
-    public let idClaim: String
-    public let clientId: String
-    public let scopes: String
-    public let autoVerifyEmail: Bool
-    public let accountLinkingEnabled: Bool
-    public let enabled: Bool
-    public let published: Date
-    public let updated: Date?
-    public let usePkce: Bool
+    public var id: Int
+    public var displayName: String
+    public var issuer: String
+    public var authorizationEndpoint: String
+    public var tokenEndpoint: String
+    public var userinfoEndpoint: String
+    public var idClaim: String
+    public var clientId: String
+    public var scopes: String
+    public var autoVerifyEmail: Bool
+    public var accountLinkingEnabled: Bool
+    public var enabled: Bool
+    public var published: Date
+    public var updated: Date?
+    public var usePkce: Bool
 }
 
 public extension ApiOAuthProvider {

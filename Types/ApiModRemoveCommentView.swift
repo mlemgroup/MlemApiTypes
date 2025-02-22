@@ -11,12 +11,12 @@ import Foundation
 
 // ModRemoveCommentView.ts
 public struct ApiModRemoveCommentView: Codable, Hashable, Sendable {
-    public let modRemoveComment: ApiModRemoveComment
-    public let moderator: ApiPerson?
-    public let comment: ApiComment
-    public let otherPerson: ApiPerson
-    public let post: ApiPost
-    public let community: ApiCommunity
+    public var modRemoveComment: ApiModRemoveComment
+    public var moderator: ApiPerson?
+    public var comment: ApiComment
+    public var otherPerson: ApiPerson
+    public var post: ApiPost
+    public var community: ApiCommunity
 }
 
 public extension ApiModRemoveCommentView {

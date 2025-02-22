@@ -11,5 +11,5 @@ import Foundation
 
 // GetCommentsResponse.ts
 public struct ApiGetCommentsResponse: Codable, Hashable, Sendable {
-    public let comments: [ApiCommentView]
+    public var comments: [ApiCommentView]
 }

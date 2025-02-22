@@ -11,15 +11,15 @@ import Foundation
 
 // PrivateMessageReport.ts
 public struct ApiPrivateMessageReport: Codable, Hashable, Sendable {
-    public let id: Int
-    public let creatorId: Int
-    public let privateMessageId: Int
-    public let originalPmText: String
-    public let reason: String
-    public let resolved: Bool
-    public let resolverId: Int?
-    public let published: Date
-    public let updated: Date?
+    public var id: Int
+    public var creatorId: Int
+    public var privateMessageId: Int
+    public var originalPmText: String
+    public var reason: String
+    public var resolved: Bool
+    public var resolverId: Int?
+    public var published: Date
+    public var updated: Date?
 }
 
 public extension ApiPrivateMessageReport {

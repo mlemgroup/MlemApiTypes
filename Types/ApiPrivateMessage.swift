@@ -11,16 +11,16 @@ import Foundation
 
 // PrivateMessage.ts
 public struct ApiPrivateMessage: Codable, Hashable, Sendable {
-    public let id: Int
-    public let creatorId: Int
-    public let recipientId: Int
-    public let content: String
-    public let deleted: Bool
-    public let read: Bool
-    public let published: Date
-    public let updated: Date?
-    public let actorId: ActorIdentifier
-    public let local: Bool
+    public var id: Int
+    public var creatorId: Int
+    public var recipientId: Int
+    public var content: String
+    public var deleted: Bool
+    public var read: Bool
+    public var published: Date
+    public var updated: Date?
+    public var actorId: ActorIdentifier
+    public var local: Bool
 }
 
 public extension ApiPrivateMessage {

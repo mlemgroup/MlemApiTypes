@@ -11,6 +11,6 @@ import Foundation
 
 // EditPrivateMessage.ts
 public struct ApiEditPrivateMessage: Codable, Hashable, Sendable {
-    public let privateMessageId: Int
-    public let content: String
+    public var privateMessageId: Int
+    public var content: String
 }

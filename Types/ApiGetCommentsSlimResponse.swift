@@ -12,5 +12,5 @@ import Foundation
 // GetCommentsSlimResponse.ts
 /// Added in 0.20.0
 public struct ApiGetCommentsSlimResponse: Codable, Hashable, Sendable {
-    public let comments: [ApiCommentSlimView]
+    public var comments: [ApiCommentSlimView]
 }

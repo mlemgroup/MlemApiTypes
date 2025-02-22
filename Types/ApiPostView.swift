@@ -11,28 +11,28 @@ import Foundation
 
 // PostView.ts
 public struct ApiPostView: Codable, Hashable, Sendable {
-    public let post: ApiPost
-    public let creator: ApiPerson
-    public let community: ApiCommunity
-    public let creatorBannedFromCommunity: Bool
+    public var post: ApiPost
+    public var creator: ApiPerson
+    public var community: ApiCommunity
+    public var creatorBannedFromCommunity: Bool
     /// Removed in 0.20.0
-    public let counts: ApiPostAggregates?
-    public let subscribed: ApiSubscribedType
-    public let saved: Bool
-    public let read: Bool
-    public let creatorBlocked: Bool
-    public let myVote: Int?
-    public let unreadComments: Int
+    public var counts: ApiPostAggregates?
+    public var subscribed: ApiSubscribedType
+    public var saved: Bool
+    public var read: Bool
+    public var creatorBlocked: Bool
+    public var myVote: Int?
+    public var unreadComments: Int
     /// Added in 0.19.0
-    public let creatorIsModerator: Bool?
+    public var creatorIsModerator: Bool?
     /// Added in 0.19.0
-    public let creatorIsAdmin: Bool?
+    public var creatorIsAdmin: Bool?
     /// Added in 0.19.4
-    public let bannedFromCommunity: Bool?
+    public var bannedFromCommunity: Bool?
     /// Added in 0.19.4
-    public let hidden: Bool?
+    public var hidden: Bool?
     /// Added in 0.19.5
-    public let imageDetails: ApiImageDetails?
+    public var imageDetails: ApiImageDetails?
     /// Added in 0.20.0
-    public let tags: ApiPostTags?
+    public var tags: ApiPostTags?
 }

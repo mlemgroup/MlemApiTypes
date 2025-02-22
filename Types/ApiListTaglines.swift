@@ -12,6 +12,6 @@ import Foundation
 // ListTaglines.ts
 /// Added in 0.20.0
 public struct ApiListTaglines: Codable, Hashable, Sendable {
-    public let page: Int?
-    public let limit: Int?
+    public var page: Int?
+    public var limit: Int?
 }

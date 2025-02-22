@@ -12,5 +12,5 @@ import Foundation
 // GenerateTotpSecretResponse.ts
 /// Added in 0.19.0
 public struct ApiGenerateTotpSecretResponse: Codable, Hashable, Sendable {
-    public let totpSecretUrl: String
+    public var totpSecretUrl: String
 }

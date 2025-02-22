@@ -11,9 +11,9 @@ import Foundation
 
 // EditCustomEmoji.ts
 public struct ApiEditCustomEmoji: Codable, Hashable, Sendable {
-    public let id: Int
-    public let category: String
-    public let imageUrl: String
-    public let altText: String
-    public let keywords: [String]
+    public var id: Int
+    public var category: String
+    public var imageUrl: String
+    public var altText: String
+    public var keywords: [String]
 }

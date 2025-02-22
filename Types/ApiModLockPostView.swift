@@ -11,12 +11,12 @@ import Foundation
 
 // ModLockPostView.ts
 public struct ApiModLockPostView: Codable, Hashable, Sendable {
-    public let modLockPost: ApiModLockPost
-    public let moderator: ApiPerson?
-    public let post: ApiPost
-    public let community: ApiCommunity
+    public var modLockPost: ApiModLockPost
+    public var moderator: ApiPerson?
+    public var post: ApiPost
+    public var community: ApiCommunity
     /// Added in 0.20.0
-    public let otherPerson: ApiPerson?
+    public var otherPerson: ApiPerson?
 }
 
 public extension ApiModLockPostView {

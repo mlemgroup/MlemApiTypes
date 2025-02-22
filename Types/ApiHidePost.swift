@@ -13,8 +13,8 @@ import Foundation
 /// Added in 0.19.4
 public struct ApiHidePost: Codable, Hashable, Sendable {
     /// Removed in 0.20.0
-    public let postIds: [Int]?
-    public let hide: Bool
+    public var postIds: [Int]?
+    public var hide: Bool
     /// Added in 0.20.0
-    public let postId: Int?
+    public var postId: Int?
 }

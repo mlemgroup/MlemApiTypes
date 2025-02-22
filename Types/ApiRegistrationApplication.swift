@@ -11,12 +11,12 @@ import Foundation
 
 // RegistrationApplication.ts
 public struct ApiRegistrationApplication: Codable, Hashable, Sendable {
-    public let id: Int
-    public let localUserId: Int
-    public let answer: String
-    public let adminId: Int?
-    public let denyReason: String?
-    public let published: Date
+    public var id: Int
+    public var localUserId: Int
+    public var answer: String
+    public var adminId: Int?
+    public var denyReason: String?
+    public var published: Date
 }
 
 public extension ApiRegistrationApplication {

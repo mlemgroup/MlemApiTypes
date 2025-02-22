@@ -11,12 +11,12 @@ import Foundation
 
 // BanFromCommunity.ts
 public struct ApiBanFromCommunity: Codable, Hashable, Sendable {
-    public let communityId: Int
-    public let personId: Int
-    public let ban: Bool
-    public let removeOrRestoreData: Bool?
-    public let reason: String?
-    public let expires: Int?
+    public var communityId: Int
+    public var personId: Int
+    public var ban: Bool
+    public var removeOrRestoreData: Bool?
+    public var reason: String?
+    public var expires: Int?
 }
 
 public extension ApiBanFromCommunity {

@@ -11,12 +11,12 @@ import Foundation
 
 // ModFeaturePostView.ts
 public struct ApiModFeaturePostView: Codable, Hashable, Sendable {
-    public let modFeaturePost: ApiModFeaturePost
-    public let moderator: ApiPerson?
-    public let post: ApiPost
-    public let community: ApiCommunity
+    public var modFeaturePost: ApiModFeaturePost
+    public var moderator: ApiPerson?
+    public var post: ApiPost
+    public var community: ApiCommunity
     /// Added in 0.20.0
-    public let otherPerson: ApiPerson?
+    public var otherPerson: ApiPerson?
 }
 
 public extension ApiModFeaturePostView {

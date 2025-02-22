@@ -12,11 +12,11 @@ import Foundation
 // LocalImage.ts
 /// Added in 0.19.4
 public struct ApiLocalImage: Codable, Hashable, Sendable {
-    public let localUserId: Int?
-    public let pictrsAlias: String
+    public var localUserId: Int?
+    public var pictrsAlias: String
     /// Removed in 0.20.0
-    public let pictrsDeleteToken: String?
-    public let published: Date
+    public var pictrsDeleteToken: String?
+    public var published: Date
 }
 
 public extension ApiLocalImage {

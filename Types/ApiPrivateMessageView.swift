@@ -11,7 +11,7 @@ import Foundation
 
 // PrivateMessageView.ts
 public struct ApiPrivateMessageView: Codable, Hashable, Sendable {
-    public let privateMessage: ApiPrivateMessage
-    public let creator: ApiPerson
-    public let recipient: ApiPerson
+    public var privateMessage: ApiPrivateMessage
+    public var creator: ApiPerson
+    public var recipient: ApiPerson
 }

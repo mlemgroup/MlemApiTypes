@@ -11,11 +11,11 @@ import Foundation
 
 // AdminPurgeComment.ts
 public struct ApiAdminPurgeComment: Codable, Hashable, Sendable {
-    public let id: Int
-    public let adminPersonId: Int
-    public let postId: Int
-    public let reason: String?
-    public let published: Date
+    public var id: Int
+    public var adminPersonId: Int
+    public var postId: Int
+    public var reason: String?
+    public var published: Date
 }
 
 public extension ApiAdminPurgeComment {

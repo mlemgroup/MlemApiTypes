@@ -11,23 +11,23 @@ import Foundation
 
 // Site.ts
 public struct ApiSite: Codable, Hashable, Sendable {
-    public let id: Int
-    public let name: String
-    public let sidebar: String?
-    public let published: Date
-    public let updated: Date?
-    public let icon: URL?
-    public let banner: URL?
-    public let description: String?
-    public let actorId: ActorIdentifier
-    public let lastRefreshedAt: Date
-    public let inboxUrl: String
+    public var id: Int
+    public var name: String
+    public var sidebar: String?
+    public var published: Date
+    public var updated: Date?
+    public var icon: URL?
+    public var banner: URL?
+    public var description: String?
+    public var actorId: ActorIdentifier
+    public var lastRefreshedAt: Date
+    public var inboxUrl: String
     /// Removed in 0.19.4
-    public let privateKey: String?
-    public let publicKey: String
-    public let instanceId: Int
+    public var privateKey: String?
+    public var publicKey: String
+    public var instanceId: Int
     /// Added in 0.19.4
-    public let contentWarning: String?
+    public var contentWarning: String?
 }
 
 public extension ApiSite {

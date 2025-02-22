@@ -11,5 +11,5 @@ import Foundation
 
 // BannedPersonsResponse.ts
 public struct ApiBannedPersonsResponse: Codable, Hashable, Sendable {
-    public let banned: [ApiPersonView]
+    public var banned: [ApiPersonView]
 }

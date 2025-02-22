@@ -12,26 +12,26 @@ import Foundation
 // LocalSiteRateLimit.ts
 public struct ApiLocalSiteRateLimit: Codable, Hashable, Sendable {
     /// Removed in 0.19.0
-    public let id: Int?
-    public let localSiteId: Int
-    public let message: Int
-    public let messagePerSecond: Int
-    public let post: Int
-    public let postPerSecond: Int
-    public let register: Int
-    public let registerPerSecond: Int
-    public let image: Int
-    public let imagePerSecond: Int
-    public let comment: Int
-    public let commentPerSecond: Int
-    public let search: Int
-    public let searchPerSecond: Int
-    public let published: Date
-    public let updated: Date?
+    public var id: Int?
+    public var localSiteId: Int
+    public var message: Int
+    public var messagePerSecond: Int
+    public var post: Int
+    public var postPerSecond: Int
+    public var register: Int
+    public var registerPerSecond: Int
+    public var image: Int
+    public var imagePerSecond: Int
+    public var comment: Int
+    public var commentPerSecond: Int
+    public var search: Int
+    public var searchPerSecond: Int
+    public var published: Date
+    public var updated: Date?
     /// Added in 0.19.0
-    public let importUserSettings: Int?
+    public var importUserSettings: Int?
     /// Added in 0.19.0
-    public let importUserSettingsPerSecond: Int?
+    public var importUserSettingsPerSecond: Int?
 }
 
 public extension ApiLocalSiteRateLimit {

@@ -12,8 +12,8 @@ import Foundation
 // ListCommunityPendingFollows.ts
 /// Added in 0.20.0
 public struct ApiListCommunityPendingFollows: Codable, Hashable, Sendable {
-    public let pendingOnly: Bool?
-    public let allCommunities: Bool?
-    public let page: Int?
-    public let limit: Int?
+    public var pendingOnly: Bool?
+    public var allCommunities: Bool?
+    public var page: Int?
+    public var limit: Int?
 }

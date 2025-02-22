@@ -11,20 +11,20 @@ import Foundation
 
 // GetModlog.ts
 public struct ApiGetModlog: Codable, Hashable, Sendable {
-    public let modPersonId: Int?
-    public let communityId: Int?
+    public var modPersonId: Int?
+    public var communityId: Int?
     /// Removed in 0.20.0
-    public let page: Int?
+    public var page: Int?
     /// Removed in 0.20.0
-    public let limit: Int?
-    public let type_: ApiModlogActionType?
-    public let otherPersonId: Int?
+    public var limit: Int?
+    public var type_: ApiModlogActionType?
+    public var otherPersonId: Int?
     /// Added in 0.19.4
-    public let postId: Int?
+    public var postId: Int?
     /// Added in 0.19.4
-    public let commentId: Int?
+    public var commentId: Int?
     /// Added in 0.20.0
-    public let pageCursor: String?
+    public var pageCursor: String?
     /// Added in 0.20.0
-    public let pageBack: Bool?
+    public var pageBack: Bool?
 }

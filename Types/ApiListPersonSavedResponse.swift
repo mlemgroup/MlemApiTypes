@@ -12,5 +12,5 @@ import Foundation
 // ListPersonSavedResponse.ts
 /// Added in 0.20.0
 public struct ApiListPersonSavedResponse: Codable, Hashable, Sendable {
-    public let saved: [ApiPersonContentCombinedView]
+    public var saved: [ApiPersonContentCombinedView]
 }

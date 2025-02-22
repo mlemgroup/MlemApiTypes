@@ -11,12 +11,12 @@ import Foundation
 
 // Tagline.ts
 public struct ApiTagline: Codable, Hashable, Sendable {
-    public let id: Int
+    public var id: Int
     /// Removed in 0.20.0
-    public let localSiteId: Int?
-    public let content: String
-    public let published: Date
-    public let updated: Date?
+    public var localSiteId: Int?
+    public var content: String
+    public var published: Date
+    public var updated: Date?
 }
 
 public extension ApiTagline {

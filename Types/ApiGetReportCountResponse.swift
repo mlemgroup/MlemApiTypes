@@ -12,13 +12,13 @@ import Foundation
 // GetReportCountResponse.ts
 public struct ApiGetReportCountResponse: Codable, Hashable, Sendable {
     /// Removed in 0.20.0
-    public let communityId: Int?
+    public var communityId: Int?
     /// Removed in 0.20.0
-    public let commentReports: Int?
+    public var commentReports: Int?
     /// Removed in 0.20.0
-    public let postReports: Int?
+    public var postReports: Int?
     /// Removed in 0.20.0
-    public let privateMessageReports: Int?
+    public var privateMessageReports: Int?
     /// Added in 0.20.0
-    public let count: Int?
+    public var count: Int?
 }

@@ -11,5 +11,5 @@ import Foundation
 
 // CustomEmojiResponse.ts
 public struct ApiCustomEmojiResponse: Codable, Hashable, Sendable {
-    public let customEmoji: ApiCustomEmojiView
+    public var customEmoji: ApiCustomEmojiView
 }

@@ -12,35 +12,35 @@ import Foundation
 // GetModlogResponse.ts
 public struct ApiGetModlogResponse: Codable, Hashable, Sendable {
     /// Removed in 0.20.0
-    public let removedPosts: [ApiModRemovePostView]?
+    public var removedPosts: [ApiModRemovePostView]?
     /// Removed in 0.20.0
-    public let lockedPosts: [ApiModLockPostView]?
+    public var lockedPosts: [ApiModLockPostView]?
     /// Removed in 0.20.0
-    public let featuredPosts: [ApiModFeaturePostView]?
+    public var featuredPosts: [ApiModFeaturePostView]?
     /// Removed in 0.20.0
-    public let removedComments: [ApiModRemoveCommentView]?
+    public var removedComments: [ApiModRemoveCommentView]?
     /// Removed in 0.20.0
-    public let removedCommunities: [ApiModRemoveCommunityView]?
+    public var removedCommunities: [ApiModRemoveCommunityView]?
     /// Removed in 0.20.0
-    public let bannedFromCommunity: [ApiModBanFromCommunityView]?
+    public var bannedFromCommunity: [ApiModBanFromCommunityView]?
     /// Removed in 0.20.0
-    public let banned: [ApiModBanView]?
+    public var banned: [ApiModBanView]?
     /// Removed in 0.20.0
-    public let addedToCommunity: [ApiModAddCommunityView]?
+    public var addedToCommunity: [ApiModAddCommunityView]?
     /// Removed in 0.20.0
-    public let transferredToCommunity: [ApiModTransferCommunityView]?
+    public var transferredToCommunity: [ApiModTransferCommunityView]?
     /// Removed in 0.20.0
-    public let added: [ApiModAddView]?
+    public var added: [ApiModAddView]?
     /// Removed in 0.20.0
-    public let adminPurgedPersons: [ApiAdminPurgePersonView]?
+    public var adminPurgedPersons: [ApiAdminPurgePersonView]?
     /// Removed in 0.20.0
-    public let adminPurgedCommunities: [ApiAdminPurgeCommunityView]?
+    public var adminPurgedCommunities: [ApiAdminPurgeCommunityView]?
     /// Removed in 0.20.0
-    public let adminPurgedPosts: [ApiAdminPurgePostView]?
+    public var adminPurgedPosts: [ApiAdminPurgePostView]?
     /// Removed in 0.20.0
-    public let adminPurgedComments: [ApiAdminPurgeCommentView]?
+    public var adminPurgedComments: [ApiAdminPurgeCommentView]?
     /// Removed in 0.20.0
-    public let hiddenCommunities: [ApiModHideCommunityView]?
+    public var hiddenCommunities: [ApiModHideCommunityView]?
     /// Added in 0.20.0
-    public let modlog: [ApiModlogCombinedView]?
+    public var modlog: [ApiModlogCombinedView]?
 }

@@ -12,5 +12,5 @@ import Foundation
 // MarkManyPostsAsRead.ts
 /// Added in 0.20.0
 public struct ApiMarkManyPostsAsRead: Codable, Hashable, Sendable {
-    public let postIds: [Int]
+    public var postIds: [Int]
 }

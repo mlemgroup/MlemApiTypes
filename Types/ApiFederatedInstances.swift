@@ -11,7 +11,7 @@ import Foundation
 
 // FederatedInstances.ts
 public struct ApiFederatedInstances: Codable, Hashable, Sendable {
-    public let linked: [ApiInstance]
-    public let allowed: [ApiInstance]
-    public let blocked: [ApiInstance]
+    public var linked: [ApiInstance]
+    public var allowed: [ApiInstance]
+    public var blocked: [ApiInstance]
 }

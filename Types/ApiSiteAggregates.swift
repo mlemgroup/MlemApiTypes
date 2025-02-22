@@ -13,14 +13,14 @@ import Foundation
 /// Removed in 0.20.0
 public struct ApiSiteAggregates: Codable, Hashable, Sendable {
     /// Removed in 0.19.0
-    public let id: Int?
-    public let siteId: Int
-    public let users: Int
-    public let posts: Int
-    public let comments: Int
-    public let communities: Int
-    public let usersActiveDay: Int
-    public let usersActiveWeek: Int
-    public let usersActiveMonth: Int
-    public let usersActiveHalfYear: Int
+    public var id: Int?
+    public var siteId: Int
+    public var users: Int
+    public var posts: Int
+    public var comments: Int
+    public var communities: Int
+    public var usersActiveDay: Int
+    public var usersActiveWeek: Int
+    public var usersActiveMonth: Int
+    public var usersActiveHalfYear: Int
 }

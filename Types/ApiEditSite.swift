@@ -11,80 +11,80 @@ import Foundation
 
 // EditSite.ts
 public struct ApiEditSite: Codable, Hashable, Sendable {
-    public let name: String?
-    public let sidebar: String?
-    public let description: String?
+    public var name: String?
+    public var sidebar: String?
+    public var description: String?
     /// Removed in 0.20.0
-    public let icon: URL?
+    public var icon: URL?
     /// Removed in 0.20.0
-    public let banner: URL?
+    public var banner: URL?
     /// Removed in 0.20.0
-    public let enableDownvotes: Bool?
+    public var enableDownvotes: Bool?
     /// Removed in 0.20.0
-    public let enableNsfw: Bool?
-    public let communityCreationAdminOnly: Bool?
-    public let requireEmailVerification: Bool?
-    public let applicationQuestion: String?
-    public let privateInstance: Bool?
-    public let defaultTheme: String?
-    public let defaultPostListingType: ApiListingType?
-    public let legalInformation: String?
-    public let applicationEmailAdmins: Bool?
-    public let hideModlogModNames: Bool?
-    public let discussionLanguages: [Int]?
-    public let slurFilterRegex: String?
-    public let actorNameMaxLength: Int?
-    public let rateLimitMessage: Int?
-    public let rateLimitMessagePerSecond: Int?
-    public let rateLimitPost: Int?
-    public let rateLimitPostPerSecond: Int?
-    public let rateLimitRegister: Int?
-    public let rateLimitRegisterPerSecond: Int?
-    public let rateLimitImage: Int?
-    public let rateLimitImagePerSecond: Int?
-    public let rateLimitComment: Int?
-    public let rateLimitCommentPerSecond: Int?
-    public let rateLimitSearch: Int?
-    public let rateLimitSearchPerSecond: Int?
-    public let federationEnabled: Bool?
+    public var enableNsfw: Bool?
+    public var communityCreationAdminOnly: Bool?
+    public var requireEmailVerification: Bool?
+    public var applicationQuestion: String?
+    public var privateInstance: Bool?
+    public var defaultTheme: String?
+    public var defaultPostListingType: ApiListingType?
+    public var legalInformation: String?
+    public var applicationEmailAdmins: Bool?
+    public var hideModlogModNames: Bool?
+    public var discussionLanguages: [Int]?
+    public var slurFilterRegex: String?
+    public var actorNameMaxLength: Int?
+    public var rateLimitMessage: Int?
+    public var rateLimitMessagePerSecond: Int?
+    public var rateLimitPost: Int?
+    public var rateLimitPostPerSecond: Int?
+    public var rateLimitRegister: Int?
+    public var rateLimitRegisterPerSecond: Int?
+    public var rateLimitImage: Int?
+    public var rateLimitImagePerSecond: Int?
+    public var rateLimitComment: Int?
+    public var rateLimitCommentPerSecond: Int?
+    public var rateLimitSearch: Int?
+    public var rateLimitSearchPerSecond: Int?
+    public var federationEnabled: Bool?
     /// Removed in 0.20.0
-    public let federationDebug: Bool?
+    public var federationDebug: Bool?
     /// Removed in 0.18.1
-    public let federationWorkerCount: Int?
-    public let captchaEnabled: Bool?
-    public let captchaDifficulty: String?
+    public var federationWorkerCount: Int?
+    public var captchaEnabled: Bool?
+    public var captchaDifficulty: String?
     /// Removed in 0.20.0
-    public let allowedInstances: [String]?
+    public var allowedInstances: [String]?
     /// Removed in 0.20.0
-    public let blockedInstances: [String]?
+    public var blockedInstances: [String]?
     /// Removed in 0.20.0
-    public let taglines: [String]?
-    public let registrationMode: ApiRegistrationMode?
-    public let reportsEmailAdmins: Bool?
+    public var taglines: [String]?
+    public var registrationMode: ApiRegistrationMode?
+    public var reportsEmailAdmins: Bool?
     /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
-    public let contentWarning: String?
+    public var contentWarning: String?
     /// Added in 0.19.2, removed in 0.19.3
-    public let autoExpandImages: Bool?
+    public var autoExpandImages: Bool?
     /// Added in 0.19.4, removed in 0.20.0
-    public let defaultSortType: ApiSortType?
+    public var defaultSortType: ApiSortType?
     /// Added in 0.19.4
-    public let blockedUrls: [String]?
+    public var blockedUrls: [String]?
     /// Added in 0.19.4
-    public let defaultPostListingMode: ApiPostListingMode?
+    public var defaultPostListingMode: ApiPostListingMode?
     /// Added in 0.20.0
-    public let defaultPostSortType: ApiPostSortType?
+    public var defaultPostSortType: ApiPostSortType?
     /// Added in 0.20.0
-    public let defaultCommentSortType: ApiCommentSortType?
+    public var defaultCommentSortType: ApiCommentSortType?
     /// Added in 0.20.0
-    public let oauthRegistration: Bool?
+    public var oauthRegistration: Bool?
     /// Added in 0.20.0
-    public let postUpvotes: ApiFederationMode?
+    public var postUpvotes: ApiFederationMode?
     /// Added in 0.20.0
-    public let postDownvotes: ApiFederationMode?
+    public var postDownvotes: ApiFederationMode?
     /// Added in 0.20.0
-    public let commentUpvotes: ApiFederationMode?
+    public var commentUpvotes: ApiFederationMode?
     /// Added in 0.20.0
-    public let commentDownvotes: ApiFederationMode?
+    public var commentDownvotes: ApiFederationMode?
     /// Added in 0.20.0
-    public let disableDonationDialog: Bool?
+    public var disableDonationDialog: Bool?
 }

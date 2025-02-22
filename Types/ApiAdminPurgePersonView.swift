@@ -11,6 +11,6 @@ import Foundation
 
 // AdminPurgePersonView.ts
 public struct ApiAdminPurgePersonView: Codable, Hashable, Sendable {
-    public let adminPurgePerson: ApiAdminPurgePerson
-    public let admin: ApiPerson?
+    public var adminPurgePerson: ApiAdminPurgePerson
+    public var admin: ApiPerson?
 }

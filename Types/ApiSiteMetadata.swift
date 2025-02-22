@@ -12,8 +12,8 @@ import Foundation
 // SiteMetadata.ts
 /// Removed in 0.19.4
 public struct ApiSiteMetadata: Codable, Hashable, Sendable {
-    public let title: String?
-    public let description: String?
-    public let image: String?
-    public let embedVideoUrl: URL?
+    public var title: String?
+    public var description: String?
+    public var image: String?
+    public var embedVideoUrl: URL?
 }

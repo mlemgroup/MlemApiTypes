@@ -12,5 +12,5 @@ import Foundation
 // GetRepliesResponse.ts
 /// Removed in 0.20.0
 public struct ApiGetRepliesResponse: Codable, Hashable, Sendable {
-    public let replies: [ApiCommentReplyView]
+    public var replies: [ApiCommentReplyView]
 }

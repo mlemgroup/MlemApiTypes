@@ -11,10 +11,10 @@ import Foundation
 
 // AdminPurgePerson.ts
 public struct ApiAdminPurgePerson: Codable, Hashable, Sendable {
-    public let id: Int
-    public let adminPersonId: Int
-    public let reason: String?
-    public let published: Date
+    public var id: Int
+    public var adminPersonId: Int
+    public var reason: String?
+    public var published: Date
 }
 
 public extension ApiAdminPurgePerson {

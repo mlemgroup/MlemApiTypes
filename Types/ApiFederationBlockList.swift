@@ -12,10 +12,10 @@ import Foundation
 // FederationBlockList.ts
 /// Added in 0.20.0
 public struct ApiFederationBlockList: Codable, Hashable, Sendable {
-    public let instanceId: Int
-    public let published: Date
-    public let updated: Date?
-    public let expires: String?
+    public var instanceId: Int
+    public var published: Date
+    public var updated: Date?
+    public var expires: String?
 }
 
 public extension ApiFederationBlockList {

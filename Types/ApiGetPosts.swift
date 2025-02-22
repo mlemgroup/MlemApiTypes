@@ -11,33 +11,33 @@ import Foundation
 
 // GetPosts.ts
 public struct ApiGetPosts: Codable, Hashable, Sendable {
-    public let type_: ApiListingType?
-    public let sort: ApiSortType?
-    public let page: Int?
-    public let limit: Int?
-    public let communityId: Int?
-    public let communityName: String?
-    public let savedOnly: Bool?
+    public var type_: ApiListingType?
+    public var sort: ApiSortType?
+    public var page: Int?
+    public var limit: Int?
+    public var communityId: Int?
+    public var communityName: String?
+    public var savedOnly: Bool?
     /// Added in 0.19.0
-    public let likedOnly: Bool?
+    public var likedOnly: Bool?
     /// Added in 0.19.0
-    public let dislikedOnly: Bool?
+    public var dislikedOnly: Bool?
     /// Added in 0.19.0
-    public let pageCursor: String?
+    public var pageCursor: String?
     /// Added in 0.19.4
-    public let showHidden: Bool?
+    public var showHidden: Bool?
     /// Added in 0.19.6
-    public let showRead: Bool?
+    public var showRead: Bool?
     /// Added in 0.19.6
-    public let showNsfw: Bool?
+    public var showNsfw: Bool?
     /// Added in 0.20.0
-    public let readOnly: Bool?
+    public var readOnly: Bool?
     /// Added in 0.20.0
-    public let hideMedia: Bool?
+    public var hideMedia: Bool?
     /// Added in 0.20.0
-    public let markAsRead: Bool?
+    public var markAsRead: Bool?
     /// Added in 0.20.0
-    public let noCommentsOnly: Bool?
+    public var noCommentsOnly: Bool?
     /// Added in 0.20.0
-    public let pageBack: Bool?
+    public var pageBack: Bool?
 }

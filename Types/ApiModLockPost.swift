@@ -11,11 +11,11 @@ import Foundation
 
 // ModLockPost.ts
 public struct ApiModLockPost: Codable, Hashable, Sendable {
-    public let id: Int
-    public let modPersonId: Int
-    public let postId: Int
-    public let locked: Bool
-    public let published: Date
+    public var id: Int
+    public var modPersonId: Int
+    public var postId: Int
+    public var locked: Bool
+    public var published: Date
 }
 
 public extension ApiModLockPost {

@@ -11,9 +11,9 @@ import Foundation
 
 // EditComment.ts
 public struct ApiEditComment: Codable, Hashable, Sendable {
-    public let commentId: Int
-    public let content: String?
-    public let languageId: Int?
+    public var commentId: Int
+    public var content: String?
+    public var languageId: Int?
     /// Removed in 0.19.0
-    public let formId: String?
+    public var formId: String?
 }

@@ -11,7 +11,7 @@ import Foundation
 
 // ModHideCommunityView.ts
 public struct ApiModHideCommunityView: Codable, Hashable, Sendable {
-    public let modHideCommunity: ApiModHideCommunity
-    public let admin: ApiPerson?
-    public let community: ApiCommunity
+    public var modHideCommunity: ApiModHideCommunity
+    public var admin: ApiPerson?
+    public var community: ApiCommunity
 }

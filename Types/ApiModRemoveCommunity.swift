@@ -11,14 +11,14 @@ import Foundation
 
 // ModRemoveCommunity.ts
 public struct ApiModRemoveCommunity: Codable, Hashable, Sendable {
-    public let id: Int
-    public let modPersonId: Int
-    public let communityId: Int
-    public let reason: String?
-    public let removed: Bool
+    public var id: Int
+    public var modPersonId: Int
+    public var communityId: Int
+    public var reason: String?
+    public var removed: Bool
     /// Removed in 0.19.0
-    public let expires: Date?
-    public let published: Date
+    public var expires: Date?
+    public var published: Date
 }
 
 public extension ApiModRemoveCommunity {

@@ -11,52 +11,52 @@ import Foundation
 
 // Community.ts
 public struct ApiCommunity: Codable, Hashable, Sendable {
-    public let id: Int
-    public let name: String
-    public let title: String
-    public let description: String?
-    public let removed: Bool
-    public let published: Date
-    public let updated: Date?
-    public let deleted: Bool
-    public let nsfw: Bool
-    public let actorId: ActorIdentifier
-    public let local: Bool
-    public let icon: URL?
-    public let banner: URL?
-    public let hidden: Bool
-    public let postingRestrictedToMods: Bool
-    public let instanceId: Int
+    public var id: Int
+    public var name: String
+    public var title: String
+    public var description: String?
+    public var removed: Bool
+    public var published: Date
+    public var updated: Date?
+    public var deleted: Bool
+    public var nsfw: Bool
+    public var actorId: ActorIdentifier
+    public var local: Bool
+    public var icon: URL?
+    public var banner: URL?
+    public var hidden: Bool
+    public var postingRestrictedToMods: Bool
+    public var instanceId: Int
     /// Added in 0.18.1, removed in 0.19.0
-    public let followersUrl: String?
+    public var followersUrl: String?
     /// Added in 0.18.1, removed in 0.19.0
-    public let inboxUrl: String?
+    public var inboxUrl: String?
     /// Added in 0.19.2, removed in 0.19.3
-    public let onlyFollowersCanVote: Bool?
+    public var onlyFollowersCanVote: Bool?
     /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
-    public let visibility: ApiCommunityVisibility?
+    public var visibility: ApiCommunityVisibility?
     /// Added in 0.20.0
-    public let sidebar: String?
+    public var sidebar: String?
     /// Added in 0.20.0
-    public let subscribers: Int?
+    public var subscribers: Int?
     /// Added in 0.20.0
-    public let posts: Int?
+    public var posts: Int?
     /// Added in 0.20.0
-    public let comments: Int?
+    public var comments: Int?
     /// Added in 0.20.0
-    public let usersActiveDay: Int?
+    public var usersActiveDay: Int?
     /// Added in 0.20.0
-    public let usersActiveWeek: Int?
+    public var usersActiveWeek: Int?
     /// Added in 0.20.0
-    public let usersActiveMonth: Int?
+    public var usersActiveMonth: Int?
     /// Added in 0.20.0
-    public let usersActiveHalfYear: Int?
+    public var usersActiveHalfYear: Int?
     /// Added in 0.20.0
-    public let subscribersLocal: Int?
+    public var subscribersLocal: Int?
     /// Added in 0.20.0
-    public let reportCount: Int?
+    public var reportCount: Int?
     /// Added in 0.20.0
-    public let unresolvedReportCount: Int?
+    public var unresolvedReportCount: Int?
 }
 
 public extension ApiCommunity {

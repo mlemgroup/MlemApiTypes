@@ -12,9 +12,9 @@ import Foundation
 // CommunityReportView.ts
 /// Added in 0.20.0
 public struct ApiCommunityReportView: Codable, Hashable, Sendable {
-    public let communityReport: ApiCommunityReport
-    public let community: ApiCommunity
-    public let creator: ApiPerson
-    public let subscribed: ApiSubscribedType
-    public let resolver: ApiPerson?
+    public var communityReport: ApiCommunityReport
+    public var community: ApiCommunity
+    public var creator: ApiPerson
+    public var subscribed: ApiSubscribedType
+    public var resolver: ApiPerson?
 }

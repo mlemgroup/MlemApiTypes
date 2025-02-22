@@ -11,30 +11,30 @@ import Foundation
 
 // Person.ts
 public struct ApiPerson: Codable, Hashable, Sendable {
-    public let id: Int
-    public let name: String
-    public let displayName: String?
-    public let avatar: URL?
-    public let banned: Bool
-    public let published: Date
-    public let updated: Date?
-    public let actorId: ActorIdentifier
-    public let bio: String?
-    public let local: Bool
-    public let banner: URL?
-    public let deleted: Bool
-    public let matrixUserId: String?
+    public var id: Int
+    public var name: String
+    public var displayName: String?
+    public var avatar: URL?
+    public var banned: Bool
+    public var published: Date
+    public var updated: Date?
+    public var actorId: ActorIdentifier
+    public var bio: String?
+    public var local: Bool
+    public var banner: URL?
+    public var deleted: Bool
+    public var matrixUserId: String?
     /// Removed in 0.19.0
-    public let admin: Bool?
-    public let botAccount: Bool
-    public let banExpires: Date?
-    public let instanceId: Int
+    public var admin: Bool?
+    public var botAccount: Bool
+    public var banExpires: Date?
+    public var instanceId: Int
     /// Added in 0.18.1, removed in 0.19.0
-    public let inboxUrl: String?
+    public var inboxUrl: String?
     /// Added in 0.20.0
-    public let postCount: Int?
+    public var postCount: Int?
     /// Added in 0.20.0
-    public let commentCount: Int?
+    public var commentCount: Int?
 }
 
 public extension ApiPerson {

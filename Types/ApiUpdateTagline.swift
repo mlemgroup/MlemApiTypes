@@ -12,6 +12,6 @@ import Foundation
 // UpdateTagline.ts
 /// Added in 0.20.0
 public struct ApiUpdateTagline: Codable, Hashable, Sendable {
-    public let id: Int
-    public let content: String
+    public var id: Int
+    public var content: String
 }

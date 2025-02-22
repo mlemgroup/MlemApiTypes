@@ -11,14 +11,14 @@ import Foundation
 
 // ModBanFromCommunity.ts
 public struct ApiModBanFromCommunity: Codable, Hashable, Sendable {
-    public let id: Int
-    public let modPersonId: Int
-    public let otherPersonId: Int
-    public let communityId: Int
-    public let reason: String?
-    public let banned: Bool
-    public let expires: Date?
-    public let published: Date
+    public var id: Int
+    public var modPersonId: Int
+    public var otherPersonId: Int
+    public var communityId: Int
+    public var reason: String?
+    public var banned: Bool
+    public var expires: Date?
+    public var published: Date
 }
 
 public extension ApiModBanFromCommunity {

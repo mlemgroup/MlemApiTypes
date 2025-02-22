@@ -11,9 +11,9 @@ import Foundation
 
 // Login.ts
 public struct ApiLogin: Codable, Hashable, Sendable {
-    public let usernameOrEmail: String
-    public let password: String
-    public let totp2faToken: String?
+    public var usernameOrEmail: String
+    public var password: String
+    public var totp2faToken: String?
 }
 
 public extension ApiLogin {
