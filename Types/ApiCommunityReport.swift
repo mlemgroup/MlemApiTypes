@@ -45,40 +45,4 @@ public extension ApiCommunityReport {
         case published = "published"
         case updated = "updated"
     }
-
-    init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(Int.self, forKey: .id)
-        self.creatorId = try container.decode(Int.self, forKey: .creatorId)
-        self.communityId = try container.decode(Int.self, forKey: .communityId)
-        self.originalCommunityName = try container.decode(String.self, forKey: .originalCommunityName)
-        self.originalCommunityTitle = try container.decode(String.self, forKey: .originalCommunityTitle)
-        self.originalCommunityDescription = try container.decodeIfPresent(String?.self, forKey: .originalCommunityDescription) ?? nil
-        self.originalCommunitySidebar = try container.decodeIfPresent(String?.self, forKey: .originalCommunitySidebar) ?? nil
-        self.originalCommunityIcon = try container.decodeIfPresent(String?.self, forKey: .originalCommunityIcon) ?? nil
-        self.originalCommunityBanner = try container.decodeIfPresent(String?.self, forKey: .originalCommunityBanner) ?? nil
-        self.reason = try container.decode(String.self, forKey: .reason)
-        self.resolved = try container.decode(Bool.self, forKey: .resolved)
-        self.resolverId = try container.decodeIfPresent(Int?.self, forKey: .resolverId) ?? nil
-        self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(id, forKey: .id)
-        try container.encode(creatorId, forKey: .creatorId)
-        try container.encode(communityId, forKey: .communityId)
-        try container.encode(originalCommunityName, forKey: .originalCommunityName)
-        try container.encode(originalCommunityTitle, forKey: .originalCommunityTitle)
-        try container.encode(originalCommunityDescription, forKey: .originalCommunityDescription)
-        try container.encode(originalCommunitySidebar, forKey: .originalCommunitySidebar)
-        try container.encode(originalCommunityIcon, forKey: .originalCommunityIcon)
-        try container.encode(originalCommunityBanner, forKey: .originalCommunityBanner)
-        try container.encode(reason, forKey: .reason)
-        try container.encode(resolved, forKey: .resolved)
-        try container.encode(resolverId, forKey: .resolverId)
-        try container.encode(published, forKey: .published)
-        try container.encode(updated, forKey: .updated)
-    }
 }

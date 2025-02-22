@@ -26,20 +26,4 @@ public extension ApiLocalImage {
         case pictrsDeleteToken = "pictrs_delete_token"
         case published = "published"
     }
-
-    init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.localUserId = try container.decodeIfPresent(Int?.self, forKey: .localUserId) ?? nil
-        self.pictrsAlias = try container.decode(String.self, forKey: .pictrsAlias)
-        self.pictrsDeleteToken = try container.decodeIfPresent(String?.self, forKey: .pictrsDeleteToken) ?? nil
-        self.published = try container.decode(Date.self, forKey: .published)
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(localUserId, forKey: .localUserId)
-        try container.encode(pictrsAlias, forKey: .pictrsAlias)
-        try container.encode(pictrsDeleteToken, forKey: .pictrsDeleteToken)
-        try container.encode(published, forKey: .published)
-    }
 }

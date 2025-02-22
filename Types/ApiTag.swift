@@ -31,26 +31,4 @@ public extension ApiTag {
         case updated = "updated"
         case deleted = "deleted"
     }
-
-    init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(Int.self, forKey: .id)
-        self.actorId = try container.decode(ActorIdentifier.self, forKey: .actorId)
-        self.name = try container.decode(String.self, forKey: .name)
-        self.communityId = try container.decode(Int.self, forKey: .communityId)
-        self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
-        self.deleted = try container.decode(Bool.self, forKey: .deleted)
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(id, forKey: .id)
-        try container.encode(actorId, forKey: .actorId)
-        try container.encode(name, forKey: .name)
-        try container.encode(communityId, forKey: .communityId)
-        try container.encode(published, forKey: .published)
-        try container.encode(updated, forKey: .updated)
-        try container.encode(deleted, forKey: .deleted)
-    }
 }

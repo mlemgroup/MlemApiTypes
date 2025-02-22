@@ -26,20 +26,4 @@ public extension ApiLoginToken {
         case ip = "ip"
         case userAgent = "user_agent"
     }
-
-    init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.userId = try container.decode(Int.self, forKey: .userId)
-        self.published = try container.decode(Date.self, forKey: .published)
-        self.ip = try container.decodeIfPresent(String?.self, forKey: .ip) ?? nil
-        self.userAgent = try container.decodeIfPresent(String?.self, forKey: .userAgent) ?? nil
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(userId, forKey: .userId)
-        try container.encode(published, forKey: .published)
-        try container.encode(ip, forKey: .ip)
-        try container.encode(userAgent, forKey: .userAgent)
-    }
 }

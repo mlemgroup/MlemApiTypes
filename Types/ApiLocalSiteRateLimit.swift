@@ -55,48 +55,4 @@ public extension ApiLocalSiteRateLimit {
         case importUserSettings = "import_user_settings"
         case importUserSettingsPerSecond = "import_user_settings_per_second"
     }
-
-    init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decodeIfPresent(Int?.self, forKey: .id) ?? nil
-        self.localSiteId = try container.decode(Int.self, forKey: .localSiteId)
-        self.message = try container.decode(Int.self, forKey: .message)
-        self.messagePerSecond = try container.decode(Int.self, forKey: .messagePerSecond)
-        self.post = try container.decode(Int.self, forKey: .post)
-        self.postPerSecond = try container.decode(Int.self, forKey: .postPerSecond)
-        self.register = try container.decode(Int.self, forKey: .register)
-        self.registerPerSecond = try container.decode(Int.self, forKey: .registerPerSecond)
-        self.image = try container.decode(Int.self, forKey: .image)
-        self.imagePerSecond = try container.decode(Int.self, forKey: .imagePerSecond)
-        self.comment = try container.decode(Int.self, forKey: .comment)
-        self.commentPerSecond = try container.decode(Int.self, forKey: .commentPerSecond)
-        self.search = try container.decode(Int.self, forKey: .search)
-        self.searchPerSecond = try container.decode(Int.self, forKey: .searchPerSecond)
-        self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
-        self.importUserSettings = try container.decodeIfPresent(Int?.self, forKey: .importUserSettings) ?? nil
-        self.importUserSettingsPerSecond = try container.decodeIfPresent(Int?.self, forKey: .importUserSettingsPerSecond) ?? nil
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(id, forKey: .id)
-        try container.encode(localSiteId, forKey: .localSiteId)
-        try container.encode(message, forKey: .message)
-        try container.encode(messagePerSecond, forKey: .messagePerSecond)
-        try container.encode(post, forKey: .post)
-        try container.encode(postPerSecond, forKey: .postPerSecond)
-        try container.encode(register, forKey: .register)
-        try container.encode(registerPerSecond, forKey: .registerPerSecond)
-        try container.encode(image, forKey: .image)
-        try container.encode(imagePerSecond, forKey: .imagePerSecond)
-        try container.encode(comment, forKey: .comment)
-        try container.encode(commentPerSecond, forKey: .commentPerSecond)
-        try container.encode(search, forKey: .search)
-        try container.encode(searchPerSecond, forKey: .searchPerSecond)
-        try container.encode(published, forKey: .published)
-        try container.encode(updated, forKey: .updated)
-        try container.encode(importUserSettings, forKey: .importUserSettings)
-        try container.encode(importUserSettingsPerSecond, forKey: .importUserSettingsPerSecond)
-    }
 }

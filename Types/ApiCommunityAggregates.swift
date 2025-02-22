@@ -44,36 +44,4 @@ public extension ApiCommunityAggregates {
         case hotRank = "hot_rank"
         case subscribersLocal = "subscribers_local"
     }
-
-    init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decodeIfPresent(Int?.self, forKey: .id) ?? nil
-        self.communityId = try container.decode(Int.self, forKey: .communityId)
-        self.subscribers = try container.decode(Int.self, forKey: .subscribers)
-        self.posts = try container.decode(Int.self, forKey: .posts)
-        self.comments = try container.decode(Int.self, forKey: .comments)
-        self.published = try container.decode(Date.self, forKey: .published)
-        self.usersActiveDay = try container.decode(Int.self, forKey: .usersActiveDay)
-        self.usersActiveWeek = try container.decode(Int.self, forKey: .usersActiveWeek)
-        self.usersActiveMonth = try container.decode(Int.self, forKey: .usersActiveMonth)
-        self.usersActiveHalfYear = try container.decode(Int.self, forKey: .usersActiveHalfYear)
-        self.hotRank = try container.decodeIfPresent(Int?.self, forKey: .hotRank) ?? nil
-        self.subscribersLocal = try container.decodeIfPresent(Int?.self, forKey: .subscribersLocal) ?? nil
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(id, forKey: .id)
-        try container.encode(communityId, forKey: .communityId)
-        try container.encode(subscribers, forKey: .subscribers)
-        try container.encode(posts, forKey: .posts)
-        try container.encode(comments, forKey: .comments)
-        try container.encode(published, forKey: .published)
-        try container.encode(usersActiveDay, forKey: .usersActiveDay)
-        try container.encode(usersActiveWeek, forKey: .usersActiveWeek)
-        try container.encode(usersActiveMonth, forKey: .usersActiveMonth)
-        try container.encode(usersActiveHalfYear, forKey: .usersActiveHalfYear)
-        try container.encode(hotRank, forKey: .hotRank)
-        try container.encode(subscribersLocal, forKey: .subscribersLocal)
-    }
 }
