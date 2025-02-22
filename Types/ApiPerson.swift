@@ -31,10 +31,6 @@ public struct ApiPerson: Codable, Hashable, Sendable {
     public var instanceId: Int
     /// Added in 0.18.1, removed in 0.19.0
     public var inboxUrl: String?
-    /// Added in 0.20.0
-    public var postCount: Int?
-    /// Added in 0.20.0
-    public var commentCount: Int?
 }
 
 public extension ApiPerson {
@@ -58,8 +54,6 @@ public extension ApiPerson {
         case banExpires = "ban_expires"
         case instanceId = "instance_id"
         case inboxUrl = "inbox_url"
-        case postCount = "post_count"
-        case commentCount = "comment_count"
     }
 
     init(from decoder: any Decoder) throws {
@@ -85,8 +79,6 @@ public extension ApiPerson {
         self.banExpires = try container.decodeIfPresent(Date?.self, forKey: .banExpires) ?? nil
         self.instanceId = try container.decode(Int.self, forKey: .instanceId)
         self.inboxUrl = try container.decodeIfPresent(String?.self, forKey: .inboxUrl) ?? nil
-        self.postCount = try container.decodeIfPresent(Int?.self, forKey: .postCount) ?? nil
-        self.commentCount = try container.decodeIfPresent(Int?.self, forKey: .commentCount) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {
@@ -110,7 +102,5 @@ public extension ApiPerson {
         try container.encode(banExpires, forKey: .banExpires)
         try container.encode(instanceId, forKey: .instanceId)
         try container.encode(inboxUrl, forKey: .inboxUrl)
-        try container.encode(postCount, forKey: .postCount)
-        try container.encode(commentCount, forKey: .commentCount)
     }
 }

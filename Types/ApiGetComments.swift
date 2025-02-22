@@ -20,12 +20,14 @@ public struct ApiGetComments: Codable, Hashable, Sendable {
     public var communityName: String?
     public var postId: Int?
     public var parentId: Int?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var savedOnly: Bool?
     /// Added in 0.19.0
     public var likedOnly: Bool?
     /// Added in 0.19.0
     public var dislikedOnly: Bool?
+    /// Added in 1.0.0
+    public var timeRangeSeconds: Int?
 }
 
 public extension ApiGetComments {
@@ -42,5 +44,6 @@ public extension ApiGetComments {
         case savedOnly = "saved_only"
         case likedOnly = "liked_only"
         case dislikedOnly = "disliked_only"
+        case timeRangeSeconds = "time_range_seconds"
     }
 }

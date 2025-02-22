@@ -11,17 +11,17 @@ import Foundation
 
 // SearchResponse.ts
 public struct ApiSearchResponse: Codable, Hashable, Sendable {
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var type_: ApiSearchType?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var comments: [ApiCommentView]?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var posts: [ApiPostView]?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var communities: [ApiCommunityView]?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var users: [ApiPersonView]?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var results: [ApiSearchCombinedView]?
 }
 

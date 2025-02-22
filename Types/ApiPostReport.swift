@@ -22,6 +22,8 @@ public struct ApiPostReport: Codable, Hashable, Sendable {
     public var resolverId: Int?
     public var published: Date
     public var updated: Date?
+    /// Added in 1.0.0
+    public var violatesInstanceRules: Bool?
 }
 
 public extension ApiPostReport {
@@ -37,5 +39,6 @@ public extension ApiPostReport {
         case resolverId = "resolver_id"
         case published = "published"
         case updated = "updated"
+        case violatesInstanceRules = "violates_instance_rules"
     }
 }

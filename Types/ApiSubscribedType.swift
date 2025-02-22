@@ -14,5 +14,5 @@ public enum ApiSubscribedType: String, Codable, Sendable {
     case subscribed = "Subscribed"
     case notSubscribed = "NotSubscribed"
     case pending = "Pending"
-    case approvalRequired = "ApprovalRequired" /// Added in 0.20.0
+    case approvalRequired = "ApprovalRequired" /// Added in 1.0.0
 }

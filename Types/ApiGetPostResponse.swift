@@ -13,7 +13,8 @@ import Foundation
 public struct ApiGetPostResponse: Codable, Hashable, Sendable {
     public var postView: ApiPostView
     public var communityView: ApiCommunityView
-    public var moderators: [ApiCommunityModeratorView]
+    /// Removed in 1.0.0
+    public var moderators: [ApiCommunityModeratorView]?
     public var crossPosts: [ApiPostView]
 }
 

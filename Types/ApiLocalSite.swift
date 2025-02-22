@@ -14,9 +14,9 @@ public struct ApiLocalSite: Codable, Hashable, Sendable {
     public var id: Int
     public var siteId: Int
     public var siteSetup: Bool
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var enableDownvotes: Bool?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var enableNsfw: Bool?
     public var communityCreationAdminOnly: Bool
     public var requireEmailVerification: Bool
@@ -46,40 +46,28 @@ public struct ApiLocalSite: Codable, Hashable, Sendable {
     public var autoExpandImages: Bool?
     /// Added in 0.19.4
     public var defaultPostListingMode: ApiPostListingMode?
-    /// Added in 0.19.4, removed in 0.20.0
+    /// Added in 0.19.4, removed in 1.0.0
     public var defaultSortType: ApiSortType?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var defaultPostSortType: ApiPostSortType?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var defaultCommentSortType: ApiCommentSortType?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var oauthRegistration: Bool?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var postUpvotes: ApiFederationMode?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var postDownvotes: ApiFederationMode?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var commentUpvotes: ApiFederationMode?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var commentDownvotes: ApiFederationMode?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var disableDonationDialog: Bool?
-    /// Added in 0.20.0
-    public var users: Int?
-    /// Added in 0.20.0
-    public var posts: Int?
-    /// Added in 0.20.0
-    public var comments: Int?
-    /// Added in 0.20.0
-    public var communities: Int?
-    /// Added in 0.20.0
-    public var usersActiveDay: Int?
-    /// Added in 0.20.0
-    public var usersActiveWeek: Int?
-    /// Added in 0.20.0
-    public var usersActiveMonth: Int?
-    /// Added in 0.20.0
-    public var usersActiveHalfYear: Int?
+    /// Added in 1.0.0
+    public var defaultPostTimeRangeSeconds: Int?
+    /// Added in 1.0.0
+    public var disallowNsfwContent: Bool?
 }
 
 public extension ApiLocalSite {
@@ -121,13 +109,7 @@ public extension ApiLocalSite {
         case commentUpvotes = "comment_upvotes"
         case commentDownvotes = "comment_downvotes"
         case disableDonationDialog = "disable_donation_dialog"
-        case users = "users"
-        case posts = "posts"
-        case comments = "comments"
-        case communities = "communities"
-        case usersActiveDay = "users_active_day"
-        case usersActiveWeek = "users_active_week"
-        case usersActiveMonth = "users_active_month"
-        case usersActiveHalfYear = "users_active_half_year"
+        case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
+        case disallowNsfwContent = "disallow_nsfw_content"
     }
 }

@@ -19,11 +19,13 @@ public struct CreatePostReportRequest: ApiPostRequest {
     init(
       endpoint: SiteVersion.EndpointVersion,
       postId: Int,
-      reason: String
+      reason: String,
+      violatesInstanceRules: Bool?
     ) {
         self.body = .init(
             postId: postId,
-            reason: reason
+            reason: reason,
+            violatesInstanceRules: violatesInstanceRules
         )
     }
 }

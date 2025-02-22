@@ -14,8 +14,7 @@ public struct ApiSiteView: Codable, Hashable, Sendable {
     public var site: ApiSite
     public var localSite: ApiLocalSite
     public var localSiteRateLimit: ApiLocalSiteRateLimit
-    /// Removed in 0.20.0
-    public var counts: ApiSiteAggregates?
+    public var counts: ApiSiteAggregates
 }
 
 public extension ApiSiteView {

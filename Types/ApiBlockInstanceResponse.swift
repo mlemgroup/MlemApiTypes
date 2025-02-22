@@ -10,7 +10,7 @@
 import Foundation
 
 // BlockInstanceResponse.ts
-/// Added in 0.19.0, removed in 0.20.0
+/// Added in 0.19.0, removed in 1.0.0
 public struct ApiBlockInstanceResponse: Codable, Hashable, Sendable {
     public var blocked: Bool
 }

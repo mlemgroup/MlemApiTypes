@@ -10,7 +10,7 @@
 import Foundation
 
 // FederationMode.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public enum ApiFederationMode: String, Codable, Sendable {
     case all = "All"
     case local = "Local"

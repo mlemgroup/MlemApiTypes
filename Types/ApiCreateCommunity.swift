@@ -23,7 +23,7 @@ public struct ApiCreateCommunity: Codable, Hashable, Sendable {
     public var onlyFollowersCanVote: Bool?
     /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
     public var visibility: ApiCommunityVisibility?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var sidebar: String?
 }
 

@@ -12,7 +12,7 @@ import Foundation
 // Tagline.ts
 public struct ApiTagline: Codable, Hashable, Sendable {
     public var id: Int
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var localSiteId: Int?
     public var content: String
     public var published: Date

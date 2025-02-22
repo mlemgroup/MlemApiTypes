@@ -10,7 +10,7 @@
 import Foundation
 
 // CreateTagline.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiCreateTagline: Codable, Hashable, Sendable {
     public var content: String
 }

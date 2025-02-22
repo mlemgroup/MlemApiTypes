@@ -10,7 +10,7 @@
 import Foundation
 
 // PersonBlockView.ts
-/// Removed in 0.20.0
+/// Removed in 1.0.0
 public struct ApiPersonBlockView: Codable, Hashable, Sendable {
     public var person: ApiPerson
     public var target: ApiPerson

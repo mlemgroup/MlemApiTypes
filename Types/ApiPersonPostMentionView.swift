@@ -10,7 +10,7 @@
 import Foundation
 
 // PersonPostMentionView.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiPersonPostMentionView: Codable, Hashable, Sendable {
     public var personPostMention: ApiPersonPostMention
     public var post: ApiPost
@@ -18,18 +18,20 @@ public struct ApiPersonPostMentionView: Codable, Hashable, Sendable {
     public var community: ApiCommunity
     public var imageDetails: ApiImageDetails?
     public var recipient: ApiPerson
+    public var counts: ApiPostAggregates
     public var creatorBannedFromCommunity: Bool
     public var bannedFromCommunity: Bool
     public var creatorIsModerator: Bool
     public var creatorIsAdmin: Bool
     public var subscribed: ApiSubscribedType
-    public var saved: Bool
+    public var saved: String?
     public var read: Bool
     public var hidden: Bool
     public var creatorBlocked: Bool
     public var myVote: Int?
     public var unreadComments: Int
     public var postTags: ApiPostTags
+    public var canMod: Bool
 }
 
 public extension ApiPersonPostMentionView {
@@ -40,6 +42,7 @@ public extension ApiPersonPostMentionView {
         case community = "community"
         case imageDetails = "image_details"
         case recipient = "recipient"
+        case counts = "counts"
         case creatorBannedFromCommunity = "creator_banned_from_community"
         case bannedFromCommunity = "banned_from_community"
         case creatorIsModerator = "creator_is_moderator"
@@ -52,5 +55,6 @@ public extension ApiPersonPostMentionView {
         case myVote = "my_vote"
         case unreadComments = "unread_comments"
         case postTags = "post_tags"
+        case canMod = "can_mod"
     }
 }

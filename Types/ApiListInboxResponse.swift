@@ -10,7 +10,7 @@
 import Foundation
 
 // ListInboxResponse.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiListInboxResponse: Codable, Hashable, Sendable {
     public var inbox: [ApiInboxCombinedView]
 }

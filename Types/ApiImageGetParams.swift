@@ -10,7 +10,7 @@
 import Foundation
 
 // ImageGetParams.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiImageGetParams: Codable, Hashable, Sendable {
     public var fileType: String?
     public var maxSize: Int?

@@ -9,7 +9,7 @@
 
 import Foundation
 
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ListPersonContentRequest: ApiGetRequest {
     public typealias Parameters = ApiListPersonContent
     public typealias Response = ApiListPersonContentResponse

@@ -65,13 +65,15 @@ public struct EditSiteRequest: ApiPutRequest {
       blockedUrls: [String]?,
       defaultPostListingMode: ApiPostListingMode?,
       defaultPostSortType: ApiPostSortType?,
+      defaultPostTimeRangeSeconds: Int?,
       defaultCommentSortType: ApiCommentSortType?,
       oauthRegistration: Bool?,
       postUpvotes: ApiFederationMode?,
       postDownvotes: ApiFederationMode?,
       commentUpvotes: ApiFederationMode?,
       commentDownvotes: ApiFederationMode?,
-      disableDonationDialog: Bool?
+      disableDonationDialog: Bool?,
+      disallowNsfwContent: Bool?
     ) {
         self.body = .init(
             name: name,
@@ -121,13 +123,15 @@ public struct EditSiteRequest: ApiPutRequest {
             blockedUrls: blockedUrls,
             defaultPostListingMode: defaultPostListingMode,
             defaultPostSortType: defaultPostSortType,
+            defaultPostTimeRangeSeconds: defaultPostTimeRangeSeconds,
             defaultCommentSortType: defaultCommentSortType,
             oauthRegistration: oauthRegistration,
             postUpvotes: postUpvotes,
             postDownvotes: postDownvotes,
             commentUpvotes: commentUpvotes,
             commentDownvotes: commentDownvotes,
-            disableDonationDialog: disableDonationDialog
+            disableDonationDialog: disableDonationDialog,
+            disallowNsfwContent: disallowNsfwContent
         )
     }
 }

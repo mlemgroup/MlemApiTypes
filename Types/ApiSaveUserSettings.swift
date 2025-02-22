@@ -14,13 +14,13 @@ public struct ApiSaveUserSettings: Codable, Hashable, Sendable {
     public var showNsfw: Bool?
     public var showScores: Bool?
     public var theme: String?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var defaultSortType: ApiSortType?
     public var defaultListingType: ApiListingType?
     public var interfaceLanguage: String?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var avatar: String?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var banner: String?
     public var displayName: String?
     public var email: String?
@@ -40,7 +40,7 @@ public struct ApiSaveUserSettings: Codable, Hashable, Sendable {
     public var openLinksInNewTab: Bool?
     /// Added in 0.19.0
     public var blurNsfw: Bool?
-    /// Added in 0.19.0, removed in 0.20.0
+    /// Added in 0.19.0, removed in 1.0.0
     public var autoExpand: Bool?
     /// Added in 0.19.0
     public var infiniteScrollEnabled: Bool?
@@ -58,15 +58,17 @@ public struct ApiSaveUserSettings: Codable, Hashable, Sendable {
     public var showDownvotes: Bool?
     /// Added in 0.19.4
     public var showUpvotePercentage: Bool?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var defaultPostSortType: ApiPostSortType?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
+    public var defaultPostTimeRangeSeconds: Int?
+    /// Added in 1.0.0
     public var defaultCommentSortType: ApiCommentSortType?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var enablePrivateMessages: Bool?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var autoMarkFetchedPostsAsRead: Bool?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var hideMedia: Bool?
 }
 
@@ -104,6 +106,7 @@ public extension ApiSaveUserSettings {
         case showDownvotes = "show_downvotes"
         case showUpvotePercentage = "show_upvote_percentage"
         case defaultPostSortType = "default_post_sort_type"
+        case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
         case defaultCommentSortType = "default_comment_sort_type"
         case enablePrivateMessages = "enable_private_messages"
         case autoMarkFetchedPostsAsRead = "auto_mark_fetched_posts_as_read"

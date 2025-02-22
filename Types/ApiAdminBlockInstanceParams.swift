@@ -10,7 +10,7 @@
 import Foundation
 
 // AdminBlockInstanceParams.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiAdminBlockInstanceParams: Codable, Hashable, Sendable {
     public var instance: String
     public var block: Bool

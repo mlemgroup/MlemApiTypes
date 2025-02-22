@@ -21,9 +21,9 @@ public struct ApiEditPost: Codable, Hashable, Sendable {
     public var altText: String?
     /// Added in 0.19.4
     public var customThumbnail: String?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var tags: [Int]?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var scheduledPublishTime: Int?
 }
 

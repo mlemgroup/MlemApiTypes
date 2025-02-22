@@ -10,7 +10,7 @@
 import Foundation
 
 // OAuthProvider.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiOAuthProvider: Codable, Hashable, Sendable {
     public var id: Int
     public var displayName: String

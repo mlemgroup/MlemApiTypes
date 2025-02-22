@@ -10,7 +10,7 @@
 import Foundation
 
 // ListCommentReportsResponse.ts
-/// Removed in 0.20.0
+/// Removed in 1.0.0
 public struct ApiListCommentReportsResponse: Codable, Hashable, Sendable {
     public var commentReports: [ApiCommentReportView]
 }

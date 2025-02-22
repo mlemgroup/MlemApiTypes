@@ -10,7 +10,7 @@
 import Foundation
 
 // InboxDataType.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public enum ApiInboxDataType: String, Codable, Sendable {
     case all = "All"
     case commentReply = "CommentReply"

@@ -9,7 +9,7 @@
 
 import Foundation
 
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct GetCommunityPendingFollowsCountRequest: ApiGetRequest {
     public typealias Parameters = ApiGetCommunityPendingFollowsCount
     public typealias Response = ApiGetCommunityPendingFollowsCountResponse

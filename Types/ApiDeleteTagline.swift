@@ -10,7 +10,7 @@
 import Foundation
 
 // DeleteTagline.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiDeleteTagline: Codable, Hashable, Sendable {
     public var id: Int
 }

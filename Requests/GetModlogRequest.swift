@@ -26,6 +26,7 @@ public struct GetModlogRequest: ApiGetRequest {
       otherPersonId: Int?,
       postId: Int?,
       commentId: Int?,
+      listingType: ApiListingType?,
       pageCursor: String?,
       pageBack: Bool?
     ) {
@@ -39,6 +40,7 @@ public struct GetModlogRequest: ApiGetRequest {
             otherPersonId: otherPersonId,
             postId: postId,
             commentId: commentId,
+            listingType: listingType,
             pageCursor: pageCursor,
             pageBack: pageBack
         )

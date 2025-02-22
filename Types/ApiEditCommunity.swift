@@ -14,9 +14,9 @@ public struct ApiEditCommunity: Codable, Hashable, Sendable {
     public var communityId: Int
     public var title: String?
     public var description: String?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var icon: URL?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var banner: URL?
     public var nsfw: Bool?
     public var postingRestrictedToMods: Bool?
@@ -25,7 +25,7 @@ public struct ApiEditCommunity: Codable, Hashable, Sendable {
     public var onlyFollowersCanVote: Bool?
     /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
     public var visibility: ApiCommunityVisibility?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var sidebar: String?
 }
 

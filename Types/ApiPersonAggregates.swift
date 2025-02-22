@@ -10,7 +10,6 @@
 import Foundation
 
 // PersonAggregates.ts
-/// Removed in 0.20.0
 public struct ApiPersonAggregates: Codable, Hashable, Sendable {
     /// Removed in 0.19.0
     public var id: Int?
@@ -21,6 +20,8 @@ public struct ApiPersonAggregates: Codable, Hashable, Sendable {
     public var commentCount: Int
     /// Removed in 0.19.0
     public var commentScore: Int?
+    /// Added in 1.0.0
+    public var published: Date?
 }
 
 public extension ApiPersonAggregates {
@@ -31,5 +32,6 @@ public extension ApiPersonAggregates {
         case postScore = "post_score"
         case commentCount = "comment_count"
         case commentScore = "comment_score"
+        case published = "published"
     }
 }

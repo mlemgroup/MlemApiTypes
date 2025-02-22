@@ -10,7 +10,7 @@
 import Foundation
 
 // PersonContentCombinedView.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public enum ApiPersonContentCombinedView: Codable, Hashable, Sendable {
     case post(ApiPostView)
     case comment(ApiCommentView)

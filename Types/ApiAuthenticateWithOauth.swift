@@ -10,7 +10,7 @@
 import Foundation
 
 // AuthenticateWithOauth.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiAuthenticateWithOauth: Codable, Hashable, Sendable {
     public var code: String
     public var oauthProviderId: Int

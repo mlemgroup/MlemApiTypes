@@ -17,8 +17,7 @@ public struct ApiCommentReportView: Codable, Hashable, Sendable {
     public var community: ApiCommunity
     public var creator: ApiPerson
     public var commentCreator: ApiPerson
-    /// Removed in 0.20.0
-    public var counts: ApiCommentAggregates?
+    public var counts: ApiCommentAggregates
     public var creatorBannedFromCommunity: Bool
     public var myVote: Int?
     public var resolver: ApiPerson?
@@ -30,7 +29,7 @@ public struct ApiCommentReportView: Codable, Hashable, Sendable {
     public var creatorBlocked: Bool?
     /// Added in 0.19.4
     public var subscribed: ApiSubscribedType?
-    /// Added in 0.19.4
+    /// Added in 0.19.4; made optional in 1.0.0
     public var saved: Bool?
 }
 

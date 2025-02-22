@@ -12,10 +12,10 @@ import Foundation
 // HidePost.ts
 /// Added in 0.19.4
 public struct ApiHidePost: Codable, Hashable, Sendable {
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var postIds: [Int]?
     public var hide: Bool
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var postId: Int?
 }
 

@@ -10,7 +10,7 @@
 import Foundation
 
 // CreateOAuthProvider.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiCreateOAuthProvider: Codable, Hashable, Sendable {
     public var displayName: String
     public var issuer: String

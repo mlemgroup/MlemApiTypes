@@ -10,11 +10,12 @@
 import Foundation
 
 // CommunityReportView.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiCommunityReportView: Codable, Hashable, Sendable {
     public var communityReport: ApiCommunityReport
     public var community: ApiCommunity
     public var creator: ApiPerson
+    public var counts: ApiCommunityAggregates
     public var subscribed: ApiSubscribedType
     public var resolver: ApiPerson?
 }
@@ -24,6 +25,7 @@ public extension ApiCommunityReportView {
         case communityReport = "community_report"
         case community = "community"
         case creator = "creator"
+        case counts = "counts"
         case subscribed = "subscribed"
         case resolver = "resolver"
     }

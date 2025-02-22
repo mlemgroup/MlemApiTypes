@@ -10,7 +10,7 @@
 import Foundation
 
 // InboxCombinedView.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public enum ApiInboxCombinedView: Codable, Hashable, Sendable {
     case commentReply(ApiCommentReplyView)
     case commentMention(ApiPersonCommentMentionView)

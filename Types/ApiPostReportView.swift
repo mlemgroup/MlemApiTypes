@@ -18,8 +18,7 @@ public struct ApiPostReportView: Codable, Hashable, Sendable {
     public var postCreator: ApiPerson
     public var creatorBannedFromCommunity: Bool
     public var myVote: Int?
-    /// Removed in 0.20.0
-    public var counts: ApiPostAggregates?
+    public var counts: ApiPostAggregates
     public var resolver: ApiPerson?
     /// Added in 0.19.4
     public var creatorIsModerator: Bool?
@@ -27,7 +26,7 @@ public struct ApiPostReportView: Codable, Hashable, Sendable {
     public var creatorIsAdmin: Bool?
     /// Added in 0.19.4
     public var subscribed: ApiSubscribedType?
-    /// Added in 0.19.4
+    /// Added in 0.19.4; made optional in 1.0.0
     public var saved: Bool?
     /// Added in 0.19.4
     public var read: Bool?

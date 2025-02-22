@@ -15,11 +15,11 @@ public struct ApiCommentView: Codable, Hashable, Sendable {
     public var creator: ApiPerson
     public var post: ApiPost
     public var community: ApiCommunity
-    /// Removed in 0.20.0
-    public var counts: ApiCommentAggregates?
+    public var counts: ApiCommentAggregates
     public var creatorBannedFromCommunity: Bool
     public var subscribed: ApiSubscribedType
-    public var saved: Bool
+    /// made optional in 1.0.0
+    public var saved: Bool?
     public var creatorBlocked: Bool
     public var myVote: Int?
     /// Added in 0.19.0
@@ -28,6 +28,8 @@ public struct ApiCommentView: Codable, Hashable, Sendable {
     public var creatorIsAdmin: Bool?
     /// Added in 0.19.4
     public var bannedFromCommunity: Bool?
+    /// Added in 1.0.0
+    public var canMod: Bool?
 }
 
 public extension ApiCommentView {
@@ -45,5 +47,6 @@ public extension ApiCommentView {
         case creatorIsModerator = "creator_is_moderator"
         case creatorIsAdmin = "creator_is_admin"
         case bannedFromCommunity = "banned_from_community"
+        case canMod = "can_mod"
     }
 }

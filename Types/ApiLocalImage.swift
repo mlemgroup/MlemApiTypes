@@ -14,7 +14,7 @@ import Foundation
 public struct ApiLocalImage: Codable, Hashable, Sendable {
     public var localUserId: Int?
     public var pictrsAlias: String
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var pictrsDeleteToken: String?
     public var published: Date
 }

@@ -16,7 +16,7 @@ public struct ApiLocalUser: Codable, Hashable, Sendable {
     public var email: String?
     public var showNsfw: Bool
     public var theme: String
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var defaultSortType: ApiSortType?
     public var defaultListingType: ApiListingType
     public var interfaceLanguage: String
@@ -24,7 +24,7 @@ public struct ApiLocalUser: Codable, Hashable, Sendable {
     public var sendNotificationsToEmail: Bool
     /// Removed in 0.19.0
     public var validatorTime: String?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var showScores: Bool?
     public var showBotAccounts: Bool
     public var showReadPosts: Bool
@@ -38,7 +38,7 @@ public struct ApiLocalUser: Codable, Hashable, Sendable {
     public var openLinksInNewTab: Bool?
     /// Added in 0.19.0
     public var blurNsfw: Bool?
-    /// Added in 0.19.0, removed in 0.20.0
+    /// Added in 0.19.0, removed in 1.0.0
     public var autoExpand: Bool?
     /// Added in 0.19.0
     public var infiniteScrollEnabled: Bool?
@@ -54,26 +54,20 @@ public struct ApiLocalUser: Codable, Hashable, Sendable {
     public var enableAnimatedImages: Bool?
     /// Added in 0.19.0
     public var collapseBotComments: Bool?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var defaultPostSortType: ApiPostSortType?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var enablePrivateMessages: Bool?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var defaultCommentSortType: ApiCommentSortType?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var autoMarkFetchedPostsAsRead: Bool?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var lastDonationNotification: String?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var hideMedia: Bool?
-    /// Added in 0.20.0
-    public var showScore: Bool?
-    /// Added in 0.20.0
-    public var showUpvotes: Bool?
-    /// Added in 0.20.0
-    public var showDownvotes: Bool?
-    /// Added in 0.20.0
-    public var showUpvotePercentage: Bool?
+    /// Added in 1.0.0
+    public var defaultPostTimeRangeSeconds: Int?
 }
 
 public extension ApiLocalUser {
@@ -112,9 +106,6 @@ public extension ApiLocalUser {
         case autoMarkFetchedPostsAsRead = "auto_mark_fetched_posts_as_read"
         case lastDonationNotification = "last_donation_notification"
         case hideMedia = "hide_media"
-        case showScore = "show_score"
-        case showUpvotes = "show_upvotes"
-        case showDownvotes = "show_downvotes"
-        case showUpvotePercentage = "show_upvote_percentage"
+        case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
     }
 }

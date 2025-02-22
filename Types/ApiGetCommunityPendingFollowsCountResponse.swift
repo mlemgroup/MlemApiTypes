@@ -10,7 +10,7 @@
 import Foundation
 
 // GetCommunityPendingFollowsCountResponse.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 // swiftlint:disable:next type_name
 public struct ApiGetCommunityPendingFollowsCountResponse: Codable, Hashable, Sendable {
     public var count: Int

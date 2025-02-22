@@ -10,7 +10,7 @@
 import Foundation
 
 // ListPersonSaved.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiListPersonSaved: Codable, Hashable, Sendable {
     public var type_: ApiPersonContentType?
     public var pageCursor: String?

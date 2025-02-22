@@ -9,7 +9,7 @@
 
 import Foundation
 
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct MarkPostMentionAsReadRequest: ApiPostRequest {
     public typealias Body = ApiMarkPersonPostMentionAsRead
     public typealias Response = ApiSuccessResponse

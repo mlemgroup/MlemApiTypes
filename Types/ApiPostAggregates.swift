@@ -10,7 +10,6 @@
 import Foundation
 
 // PostAggregates.ts
-/// Removed in 0.20.0
 public struct ApiPostAggregates: Codable, Hashable, Sendable {
     /// Removed in 0.19.0
     public var id: Int?
@@ -32,6 +31,10 @@ public struct ApiPostAggregates: Codable, Hashable, Sendable {
     public var hotRank: Int?
     /// Removed in 0.19.0
     public var hotRankActive: Int?
+    /// Added in 1.0.0
+    public var reportCount: Int?
+    /// Added in 1.0.0
+    public var unresolvedReportCount: Int?
 }
 
 public extension ApiPostAggregates {
@@ -49,5 +52,7 @@ public extension ApiPostAggregates {
         case featuredLocal = "featured_local"
         case hotRank = "hot_rank"
         case hotRankActive = "hot_rank_active"
+        case reportCount = "report_count"
+        case unresolvedReportCount = "unresolved_report_count"
     }
 }

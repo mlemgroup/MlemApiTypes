@@ -15,10 +15,10 @@ public struct ApiPostView: Codable, Hashable, Sendable {
     public var creator: ApiPerson
     public var community: ApiCommunity
     public var creatorBannedFromCommunity: Bool
-    /// Removed in 0.20.0
-    public var counts: ApiPostAggregates?
+    public var counts: ApiPostAggregates
     public var subscribed: ApiSubscribedType
-    public var saved: Bool
+    /// made optional in 1.0.0
+    public var saved: Bool?
     public var read: Bool
     public var creatorBlocked: Bool
     public var myVote: Int?
@@ -33,8 +33,10 @@ public struct ApiPostView: Codable, Hashable, Sendable {
     public var hidden: Bool?
     /// Added in 0.19.5
     public var imageDetails: ApiImageDetails?
-    /// Added in 0.20.0
-    public var tags: ApiPostTags?
+    /// Added in 1.0.0
+    public var tags: [ApiTag]?
+    /// Added in 1.0.0
+    public var canMod: Bool?
 }
 
 public extension ApiPostView {
@@ -56,5 +58,6 @@ public extension ApiPostView {
         case hidden = "hidden"
         case imageDetails = "image_details"
         case tags = "tags"
+        case canMod = "can_mod"
     }
 }

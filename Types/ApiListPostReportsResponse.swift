@@ -10,7 +10,7 @@
 import Foundation
 
 // ListPostReportsResponse.ts
-/// Removed in 0.20.0
+/// Removed in 1.0.0
 public struct ApiListPostReportsResponse: Codable, Hashable, Sendable {
     public var postReports: [ApiPostReportView]
 }

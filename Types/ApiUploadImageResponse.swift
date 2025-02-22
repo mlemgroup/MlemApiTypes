@@ -10,7 +10,7 @@
 import Foundation
 
 // UploadImageResponse.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiUploadImageResponse: Codable, Hashable, Sendable {
     public var imageUrl: String
     public var filename: String

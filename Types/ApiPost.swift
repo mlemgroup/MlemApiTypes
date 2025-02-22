@@ -36,22 +36,8 @@ public struct ApiPost: Codable, Hashable, Sendable {
     public var urlContentType: String?
     /// Added in 0.19.4
     public var altText: String?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var scheduledPublishTime: String?
-    /// Added in 0.20.0
-    public var comments: Int?
-    /// Added in 0.20.0
-    public var score: Int?
-    /// Added in 0.20.0
-    public var upvotes: Int?
-    /// Added in 0.20.0
-    public var downvotes: Int?
-    /// Added in 0.20.0
-    public var newestCommentTime: String?
-    /// Added in 0.20.0
-    public var reportCount: Int?
-    /// Added in 0.20.0
-    public var unresolvedReportCount: Int?
 }
 
 public extension ApiPost {
@@ -81,13 +67,6 @@ public extension ApiPost {
         case urlContentType = "url_content_type"
         case altText = "alt_text"
         case scheduledPublishTime = "scheduled_publish_time"
-        case comments = "comments"
-        case score = "score"
-        case upvotes = "upvotes"
-        case downvotes = "downvotes"
-        case newestCommentTime = "newest_comment_time"
-        case reportCount = "report_count"
-        case unresolvedReportCount = "unresolved_report_count"
     }
 
     init(from decoder: any Decoder) throws {
@@ -119,13 +98,6 @@ public extension ApiPost {
         self.urlContentType = try container.decodeIfPresent(String?.self, forKey: .urlContentType) ?? nil
         self.altText = try container.decodeIfPresent(String?.self, forKey: .altText) ?? nil
         self.scheduledPublishTime = try container.decodeIfPresent(String?.self, forKey: .scheduledPublishTime) ?? nil
-        self.comments = try container.decodeIfPresent(Int?.self, forKey: .comments) ?? nil
-        self.score = try container.decodeIfPresent(Int?.self, forKey: .score) ?? nil
-        self.upvotes = try container.decodeIfPresent(Int?.self, forKey: .upvotes) ?? nil
-        self.downvotes = try container.decodeIfPresent(Int?.self, forKey: .downvotes) ?? nil
-        self.newestCommentTime = try container.decodeIfPresent(String?.self, forKey: .newestCommentTime) ?? nil
-        self.reportCount = try container.decodeIfPresent(Int?.self, forKey: .reportCount) ?? nil
-        self.unresolvedReportCount = try container.decodeIfPresent(Int?.self, forKey: .unresolvedReportCount) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {
@@ -155,12 +127,5 @@ public extension ApiPost {
         try container.encode(urlContentType, forKey: .urlContentType)
         try container.encode(altText, forKey: .altText)
         try container.encode(scheduledPublishTime, forKey: .scheduledPublishTime)
-        try container.encode(comments, forKey: .comments)
-        try container.encode(score, forKey: .score)
-        try container.encode(upvotes, forKey: .upvotes)
-        try container.encode(downvotes, forKey: .downvotes)
-        try container.encode(newestCommentTime, forKey: .newestCommentTime)
-        try container.encode(reportCount, forKey: .reportCount)
-        try container.encode(unresolvedReportCount, forKey: .unresolvedReportCount)
     }
 }

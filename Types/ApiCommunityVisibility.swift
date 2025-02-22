@@ -14,5 +14,5 @@ import Foundation
 public enum ApiCommunityVisibility: String, Codable, Sendable {
     case public_ = "Public"
     case localOnly = "LocalOnly"
-    case private_ = "Private" /// Added in 0.20.0
+    case private_ = "Private" /// Added in 1.0.0
 }

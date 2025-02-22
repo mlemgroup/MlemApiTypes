@@ -10,7 +10,7 @@
 import Foundation
 
 // PersonMentionView.ts
-/// Removed in 0.20.0
+/// Removed in 1.0.0
 public struct ApiPersonMentionView: Codable, Hashable, Sendable {
     public var personMention: ApiPersonMention
     public var comment: ApiComment

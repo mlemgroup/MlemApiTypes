@@ -13,9 +13,9 @@ import Foundation
 public struct ApiGetModlog: Codable, Hashable, Sendable {
     public var modPersonId: Int?
     public var communityId: Int?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var page: Int?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var limit: Int?
     public var type_: ApiModlogActionType?
     public var otherPersonId: Int?
@@ -23,9 +23,11 @@ public struct ApiGetModlog: Codable, Hashable, Sendable {
     public var postId: Int?
     /// Added in 0.19.4
     public var commentId: Int?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
+    public var listingType: ApiListingType?
+    /// Added in 1.0.0
     public var pageCursor: String?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var pageBack: Bool?
 }
 
@@ -39,6 +41,7 @@ public extension ApiGetModlog {
         case otherPersonId = "other_person_id"
         case postId = "post_id"
         case commentId = "comment_id"
+        case listingType = "listing_type"
         case pageCursor = "page_cursor"
         case pageBack = "page_back"
     }

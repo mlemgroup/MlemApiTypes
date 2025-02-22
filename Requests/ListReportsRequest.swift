@@ -9,7 +9,7 @@
 
 import Foundation
 
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ListReportsRequest: ApiGetRequest {
     public typealias Parameters = ApiListReports
     public typealias Response = ApiListReportsResponse
@@ -24,7 +24,8 @@ public struct ListReportsRequest: ApiGetRequest {
       communityId: Int?,
       pageCursor: String?,
       pageBack: Bool?,
-      showCommunityRuleViolations: Bool?
+      showCommunityRuleViolations: Bool?,
+      myReportsOnly: Bool?
     ) {
         self.parameters = .init(
             unresolvedOnly: unresolvedOnly,
@@ -33,7 +34,8 @@ public struct ListReportsRequest: ApiGetRequest {
             communityId: communityId,
             pageCursor: pageCursor,
             pageBack: pageBack,
-            showCommunityRuleViolations: showCommunityRuleViolations
+            showCommunityRuleViolations: showCommunityRuleViolations,
+            myReportsOnly: myReportsOnly
         )
     }
 }

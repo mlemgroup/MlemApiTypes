@@ -10,7 +10,7 @@
 import Foundation
 
 // DeleteImageParams.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiDeleteImageParams: Codable, Hashable, Sendable {
     public var filename: String
 }

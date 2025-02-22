@@ -10,7 +10,7 @@
 import Foundation
 
 // SearchSortType.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public enum ApiSearchSortType: String, Codable, Sendable {
     case new = "New"
     case top = "Top"

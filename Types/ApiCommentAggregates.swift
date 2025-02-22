@@ -10,7 +10,6 @@
 import Foundation
 
 // CommentAggregates.ts
-/// Removed in 0.20.0
 public struct ApiCommentAggregates: Codable, Hashable, Sendable {
     /// Removed in 0.19.0
     public var id: Int?
@@ -22,6 +21,10 @@ public struct ApiCommentAggregates: Codable, Hashable, Sendable {
     public var childCount: Int
     /// Removed in 0.19.0
     public var hotRank: Int?
+    /// Added in 1.0.0
+    public var reportCount: Int?
+    /// Added in 1.0.0
+    public var unresolvedReportCount: Int?
 }
 
 public extension ApiCommentAggregates {
@@ -34,5 +37,7 @@ public extension ApiCommentAggregates {
         case published = "published"
         case childCount = "child_count"
         case hotRank = "hot_rank"
+        case reportCount = "report_count"
+        case unresolvedReportCount = "unresolved_report_count"
     }
 }

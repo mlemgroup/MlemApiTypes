@@ -10,7 +10,7 @@
 import Foundation
 
 // ListReportsResponse.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiListReportsResponse: Codable, Hashable, Sendable {
     public var reports: [ApiReportCombinedView]
 }

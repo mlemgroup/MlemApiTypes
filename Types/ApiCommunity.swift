@@ -35,28 +35,8 @@ public struct ApiCommunity: Codable, Hashable, Sendable {
     public var onlyFollowersCanVote: Bool?
     /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
     public var visibility: ApiCommunityVisibility?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var sidebar: String?
-    /// Added in 0.20.0
-    public var subscribers: Int?
-    /// Added in 0.20.0
-    public var posts: Int?
-    /// Added in 0.20.0
-    public var comments: Int?
-    /// Added in 0.20.0
-    public var usersActiveDay: Int?
-    /// Added in 0.20.0
-    public var usersActiveWeek: Int?
-    /// Added in 0.20.0
-    public var usersActiveMonth: Int?
-    /// Added in 0.20.0
-    public var usersActiveHalfYear: Int?
-    /// Added in 0.20.0
-    public var subscribersLocal: Int?
-    /// Added in 0.20.0
-    public var reportCount: Int?
-    /// Added in 0.20.0
-    public var unresolvedReportCount: Int?
 }
 
 public extension ApiCommunity {
@@ -83,16 +63,6 @@ public extension ApiCommunity {
         case onlyFollowersCanVote = "only_followers_can_vote"
         case visibility = "visibility"
         case sidebar = "sidebar"
-        case subscribers = "subscribers"
-        case posts = "posts"
-        case comments = "comments"
-        case usersActiveDay = "users_active_day"
-        case usersActiveWeek = "users_active_week"
-        case usersActiveMonth = "users_active_month"
-        case usersActiveHalfYear = "users_active_half_year"
-        case subscribersLocal = "subscribers_local"
-        case reportCount = "report_count"
-        case unresolvedReportCount = "unresolved_report_count"
     }
 
     init(from decoder: any Decoder) throws {
@@ -121,16 +91,6 @@ public extension ApiCommunity {
         self.onlyFollowersCanVote = try container.decodeIfPresent(Bool?.self, forKey: .onlyFollowersCanVote) ?? nil
         self.visibility = try container.decodeIfPresent(ApiCommunityVisibility?.self, forKey: .visibility) ?? nil
         self.sidebar = try container.decodeIfPresent(String?.self, forKey: .sidebar) ?? nil
-        self.subscribers = try container.decodeIfPresent(Int?.self, forKey: .subscribers) ?? nil
-        self.posts = try container.decodeIfPresent(Int?.self, forKey: .posts) ?? nil
-        self.comments = try container.decodeIfPresent(Int?.self, forKey: .comments) ?? nil
-        self.usersActiveDay = try container.decodeIfPresent(Int?.self, forKey: .usersActiveDay) ?? nil
-        self.usersActiveWeek = try container.decodeIfPresent(Int?.self, forKey: .usersActiveWeek) ?? nil
-        self.usersActiveMonth = try container.decodeIfPresent(Int?.self, forKey: .usersActiveMonth) ?? nil
-        self.usersActiveHalfYear = try container.decodeIfPresent(Int?.self, forKey: .usersActiveHalfYear) ?? nil
-        self.subscribersLocal = try container.decodeIfPresent(Int?.self, forKey: .subscribersLocal) ?? nil
-        self.reportCount = try container.decodeIfPresent(Int?.self, forKey: .reportCount) ?? nil
-        self.unresolvedReportCount = try container.decodeIfPresent(Int?.self, forKey: .unresolvedReportCount) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {
@@ -157,15 +117,5 @@ public extension ApiCommunity {
         try container.encode(onlyFollowersCanVote, forKey: .onlyFollowersCanVote)
         try container.encode(visibility, forKey: .visibility)
         try container.encode(sidebar, forKey: .sidebar)
-        try container.encode(subscribers, forKey: .subscribers)
-        try container.encode(posts, forKey: .posts)
-        try container.encode(comments, forKey: .comments)
-        try container.encode(usersActiveDay, forKey: .usersActiveDay)
-        try container.encode(usersActiveWeek, forKey: .usersActiveWeek)
-        try container.encode(usersActiveMonth, forKey: .usersActiveMonth)
-        try container.encode(usersActiveHalfYear, forKey: .usersActiveHalfYear)
-        try container.encode(subscribersLocal, forKey: .subscribersLocal)
-        try container.encode(reportCount, forKey: .reportCount)
-        try container.encode(unresolvedReportCount, forKey: .unresolvedReportCount)
     }
 }

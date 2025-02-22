@@ -10,7 +10,7 @@
 import Foundation
 
 // CommunityBlockView.ts
-/// Removed in 0.20.0
+/// Removed in 1.0.0
 public struct ApiCommunityBlockView: Codable, Hashable, Sendable {
     public var person: ApiPerson
     public var community: ApiCommunity

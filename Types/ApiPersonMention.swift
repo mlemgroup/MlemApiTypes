@@ -10,7 +10,7 @@
 import Foundation
 
 // PersonMention.ts
-/// Removed in 0.20.0
+/// Removed in 1.0.0
 public struct ApiPersonMention: Codable, Hashable, Sendable {
     public var id: Int
     public var recipientId: Int

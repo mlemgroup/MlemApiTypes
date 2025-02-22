@@ -10,7 +10,7 @@
 import Foundation
 
 // PersonCommentMentionView.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiPersonCommentMentionView: Codable, Hashable, Sendable {
     public var personCommentMention: ApiPersonCommentMention
     public var comment: ApiComment
@@ -18,14 +18,16 @@ public struct ApiPersonCommentMentionView: Codable, Hashable, Sendable {
     public var post: ApiPost
     public var community: ApiCommunity
     public var recipient: ApiPerson
+    public var counts: ApiCommentAggregates
     public var creatorBannedFromCommunity: Bool
     public var bannedFromCommunity: Bool
     public var creatorIsModerator: Bool
     public var creatorIsAdmin: Bool
     public var subscribed: ApiSubscribedType
-    public var saved: Bool
+    public var saved: String?
     public var creatorBlocked: Bool
     public var myVote: Int?
+    public var canMod: Bool
 }
 
 public extension ApiPersonCommentMentionView {
@@ -36,6 +38,7 @@ public extension ApiPersonCommentMentionView {
         case post = "post"
         case community = "community"
         case recipient = "recipient"
+        case counts = "counts"
         case creatorBannedFromCommunity = "creator_banned_from_community"
         case bannedFromCommunity = "banned_from_community"
         case creatorIsModerator = "creator_is_moderator"
@@ -44,5 +47,6 @@ public extension ApiPersonCommentMentionView {
         case saved = "saved"
         case creatorBlocked = "creator_blocked"
         case myVote = "my_vote"
+        case canMod = "can_mod"
     }
 }

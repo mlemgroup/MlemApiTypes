@@ -9,7 +9,7 @@
 
 import Foundation
 
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct DeleteTaglineRequest: ApiPostRequest {
     public typealias Body = ApiDeleteTagline
     public typealias Response = ApiSuccessResponse

@@ -10,7 +10,7 @@
 import Foundation
 
 // ReportCombinedView.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public enum ApiReportCombinedView: Codable, Hashable, Sendable {
     case post(ApiPostReportView)
     case comment(ApiCommentReportView)

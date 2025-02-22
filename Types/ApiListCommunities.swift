@@ -17,6 +17,8 @@ public struct ApiListCommunities: Codable, Hashable, Sendable {
     public var limit: Int?
     /// Added in 0.18.1
     public var showNsfw: Bool?
+    /// Added in 1.0.0
+    public var timeRangeSeconds: Int?
 }
 
 public extension ApiListCommunities {
@@ -26,5 +28,6 @@ public extension ApiListCommunities {
         case page = "page"
         case limit = "limit"
         case showNsfw = "show_nsfw"
+        case timeRangeSeconds = "time_range_seconds"
     }
 }

@@ -9,7 +9,7 @@
 
 import Foundation
 
-/// Removed in 0.20.0
+/// Removed in 1.0.0
 public struct GetRepliesRequest: ApiGetRequest {
     public typealias Parameters = ApiGetReplies
     public typealias Response = ApiGetRepliesResponse

@@ -10,7 +10,6 @@
 import Foundation
 
 // CommunityAggregates.ts
-/// Removed in 0.20.0
 public struct ApiCommunityAggregates: Codable, Hashable, Sendable {
     /// Removed in 0.19.0
     public var id: Int?
@@ -27,6 +26,10 @@ public struct ApiCommunityAggregates: Codable, Hashable, Sendable {
     public var hotRank: Int?
     /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
     public var subscribersLocal: Int?
+    /// Added in 1.0.0
+    public var reportCount: Int?
+    /// Added in 1.0.0
+    public var unresolvedReportCount: Int?
 }
 
 public extension ApiCommunityAggregates {
@@ -43,5 +46,7 @@ public extension ApiCommunityAggregates {
         case usersActiveHalfYear = "users_active_half_year"
         case hotRank = "hot_rank"
         case subscribersLocal = "subscribers_local"
+        case reportCount = "report_count"
+        case unresolvedReportCount = "unresolved_report_count"
     }
 }

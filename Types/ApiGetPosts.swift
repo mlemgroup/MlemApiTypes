@@ -30,15 +30,17 @@ public struct ApiGetPosts: Codable, Hashable, Sendable {
     public var showRead: Bool?
     /// Added in 0.19.6
     public var showNsfw: Bool?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
+    public var timeRangeSeconds: Int?
+    /// Added in 1.0.0
     public var readOnly: Bool?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var hideMedia: Bool?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var markAsRead: Bool?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var noCommentsOnly: Bool?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var pageBack: Bool?
 }
 
@@ -57,6 +59,7 @@ public extension ApiGetPosts {
         case showHidden = "show_hidden"
         case showRead = "show_read"
         case showNsfw = "show_nsfw"
+        case timeRangeSeconds = "time_range_seconds"
         case readOnly = "read_only"
         case hideMedia = "hide_media"
         case markAsRead = "mark_as_read"

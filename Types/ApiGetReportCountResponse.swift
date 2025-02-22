@@ -11,15 +11,15 @@ import Foundation
 
 // GetReportCountResponse.ts
 public struct ApiGetReportCountResponse: Codable, Hashable, Sendable {
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var communityId: Int?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var commentReports: Int?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var postReports: Int?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var privateMessageReports: Int?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var count: Int?
 }
 

@@ -10,7 +10,7 @@
 import Foundation
 
 // PendingFollow.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiPendingFollow: Codable, Hashable, Sendable {
     public var person: ApiPerson
     public var community: ApiCommunity

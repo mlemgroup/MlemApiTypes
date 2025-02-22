@@ -10,7 +10,7 @@
 import Foundation
 
 // FederationBlockList.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiFederationBlockList: Codable, Hashable, Sendable {
     public var instanceId: Int
     public var published: Date

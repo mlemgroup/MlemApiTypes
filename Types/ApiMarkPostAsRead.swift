@@ -11,10 +11,10 @@ import Foundation
 
 // MarkPostAsRead.ts
 public struct ApiMarkPostAsRead: Codable, Hashable, Sendable {
-    /// Removed in 0.19.4, added in 0.20.0; made optional in 0.19.0, made non-optional in 0.20.0
+    /// Removed in 0.19.4, added in 1.0.0; made optional in 0.19.0, made non-optional in 1.0.0
     public var postId: Int?
     public var read: Bool
-    /// Added in 0.19.0, removed in 0.20.0; made non-optional in 0.19.4
+    /// Added in 0.19.0, removed in 1.0.0; made non-optional in 0.19.4
     public var postIds: [Int]?
 }
 

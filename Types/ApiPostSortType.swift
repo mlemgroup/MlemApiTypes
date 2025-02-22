@@ -10,25 +10,15 @@
 import Foundation
 
 // PostSortType.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public enum ApiPostSortType: String, Codable, Sendable {
     case active = "Active"
     case hot = "Hot"
     case new = "New"
     case old = "Old"
-    case topDay = "TopDay"
-    case topWeek = "TopWeek"
-    case topMonth = "TopMonth"
-    case topYear = "TopYear"
-    case topAll = "TopAll"
+    case top = "Top"
     case mostComments = "MostComments"
     case newComments = "NewComments"
-    case topHour = "TopHour"
-    case topSixHour = "TopSixHour"
-    case topTwelveHour = "TopTwelveHour"
-    case topThreeMonths = "TopThreeMonths"
-    case topSixMonths = "TopSixMonths"
-    case topNineMonths = "TopNineMonths"
     case controversial = "Controversial"
     case scaled = "Scaled"
 }

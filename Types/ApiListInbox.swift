@@ -10,7 +10,7 @@
 import Foundation
 
 // ListInbox.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiListInbox: Codable, Hashable, Sendable {
     public var type_: ApiInboxDataType?
     public var unreadOnly: Bool?

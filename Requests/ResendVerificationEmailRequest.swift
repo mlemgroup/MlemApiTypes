@@ -1,5 +1,5 @@
 //
-//  DeleteOAuthProviderRequest.swift
+//  ResendVerificationEmailRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -10,16 +10,16 @@
 import Foundation
 
 /// Added in 1.0.0
-public struct DeleteOAuthProviderRequest: ApiPostRequest {
-    public typealias Body = ApiDeleteOAuthProvider
+public struct ResendVerificationEmailRequest: ApiPostRequest {
+    public typealias Body = ApiResendVerificationEmail
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "api/v4/oauth_provider/delete"
+    public let path: String = "api/v4/account/auth/resend_verification_email"
     public let body: Body?
 
-    init(id: Int) {
+    init(email: String) {
         self.body = .init(
-            id: id
+            email: email
         )
     }
 }

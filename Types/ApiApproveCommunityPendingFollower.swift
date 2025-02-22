@@ -10,7 +10,7 @@
 import Foundation
 
 // ApproveCommunityPendingFollower.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiApproveCommunityPendingFollower: Codable, Hashable, Sendable {
     public var communityId: Int
     public var followerId: Int

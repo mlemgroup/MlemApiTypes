@@ -29,7 +29,8 @@ public struct GetCommentsRequest: ApiGetRequest {
       parentId: Int?,
       savedOnly: Bool?,
       likedOnly: Bool?,
-      dislikedOnly: Bool?
+      dislikedOnly: Bool?,
+      timeRangeSeconds: Int?
     ) {
         self.path = endpoint == .v3 ? "api/v3/comment/list" : "api/v4/comment/list"
         self.parameters = .init(
@@ -44,7 +45,8 @@ public struct GetCommentsRequest: ApiGetRequest {
             parentId: parentId,
             savedOnly: savedOnly,
             likedOnly: likedOnly,
-            dislikedOnly: dislikedOnly
+            dislikedOnly: dislikedOnly,
+            timeRangeSeconds: timeRangeSeconds
         )
     }
 }

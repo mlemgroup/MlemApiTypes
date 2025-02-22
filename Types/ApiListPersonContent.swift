@@ -10,7 +10,7 @@
 import Foundation
 
 // ListPersonContent.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiListPersonContent: Codable, Hashable, Sendable {
     public var type_: ApiPersonContentType?
     public var personId: Int?

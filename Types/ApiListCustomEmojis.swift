@@ -10,7 +10,7 @@
 import Foundation
 
 // ListCustomEmojis.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiListCustomEmojis: Codable, Hashable, Sendable {
     public var page: Int?
     public var limit: Int?

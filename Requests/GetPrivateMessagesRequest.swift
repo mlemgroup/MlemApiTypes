@@ -9,7 +9,7 @@
 
 import Foundation
 
-/// Removed in 0.20.0
+/// Removed in 1.0.0
 public struct GetPrivateMessagesRequest: ApiGetRequest {
     public typealias Parameters = ApiGetPrivateMessages
     public typealias Response = ApiPrivateMessagesResponse

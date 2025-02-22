@@ -10,7 +10,7 @@
 import Foundation
 
 // ModlogCombinedView.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public enum ApiModlogCombinedView: Codable, Hashable, Sendable {
     case adminAllowInstance(ApiAdminAllowInstanceView)
     case adminBlockInstance(ApiAdminBlockInstanceView)

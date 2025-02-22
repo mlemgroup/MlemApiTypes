@@ -9,7 +9,7 @@
 
 import Foundation
 
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct GetCommentsSlimRequest: ApiGetRequest {
     public typealias Parameters = ApiGetComments
     public typealias Response = ApiGetCommentsSlimResponse
@@ -29,7 +29,8 @@ public struct GetCommentsSlimRequest: ApiGetRequest {
       parentId: Int?,
       savedOnly: Bool?,
       likedOnly: Bool?,
-      dislikedOnly: Bool?
+      dislikedOnly: Bool?,
+      timeRangeSeconds: Int?
     ) {
         self.parameters = .init(
             type_: type_,
@@ -43,7 +44,8 @@ public struct GetCommentsSlimRequest: ApiGetRequest {
             parentId: parentId,
             savedOnly: savedOnly,
             likedOnly: likedOnly,
-            dislikedOnly: dislikedOnly
+            dislikedOnly: dislikedOnly,
+            timeRangeSeconds: timeRangeSeconds
         )
     }
 }

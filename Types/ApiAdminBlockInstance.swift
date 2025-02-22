@@ -10,7 +10,7 @@
 import Foundation
 
 // AdminBlockInstance.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiAdminBlockInstance: Codable, Hashable, Sendable {
     public var id: Int
     public var instanceId: Int

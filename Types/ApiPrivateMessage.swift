@@ -21,6 +21,8 @@ public struct ApiPrivateMessage: Codable, Hashable, Sendable {
     public var updated: Date?
     public var actorId: ActorIdentifier
     public var local: Bool
+    /// Added in 1.0.0
+    public var removed: Bool?
 }
 
 public extension ApiPrivateMessage {
@@ -36,6 +38,7 @@ public extension ApiPrivateMessage {
         case actorId = "actor_id"
         case apId = "ap_id"
         case local = "local"
+        case removed = "removed"
     }
 
     init(from decoder: any Decoder) throws {
@@ -53,6 +56,7 @@ public extension ApiPrivateMessage {
             ?? container.decode(ActorIdentifier.self, forKey: .apId)
         )
         self.local = try container.decode(Bool.self, forKey: .local)
+        self.removed = try container.decodeIfPresent(Bool?.self, forKey: .removed) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {
@@ -68,5 +72,6 @@ public extension ApiPrivateMessage {
         try container.encode(actorId, forKey: .actorId)
         try container.encode(actorId, forKey: .apId)
         try container.encode(local, forKey: .local)
+        try container.encode(removed, forKey: .removed)
     }
 }

@@ -16,6 +16,8 @@ public struct ApiImageDetails: Codable, Hashable, Sendable {
     public var width: Int
     public var height: Int
     public var contentType: String
+    /// Added in 1.0.0
+    public var blurhash: String?
 }
 
 public extension ApiImageDetails {
@@ -24,5 +26,6 @@ public extension ApiImageDetails {
         case width = "width"
         case height = "height"
         case contentType = "content_type"
+        case blurhash = "blurhash"
     }
 }

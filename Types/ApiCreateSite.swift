@@ -14,13 +14,13 @@ public struct ApiCreateSite: Codable, Hashable, Sendable {
     public var name: String
     public var sidebar: String?
     public var description: String?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var icon: URL?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var banner: URL?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var enableDownvotes: Bool?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var enableNsfw: Bool?
     public var communityCreationAdminOnly: Bool?
     public var requireEmailVerification: Bool?
@@ -47,42 +47,44 @@ public struct ApiCreateSite: Codable, Hashable, Sendable {
     public var rateLimitSearch: Int?
     public var rateLimitSearchPerSecond: Int?
     public var federationEnabled: Bool?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var federationDebug: Bool?
     /// Removed in 0.18.1
     public var federationWorkerCount: Int?
     public var captchaEnabled: Bool?
     public var captchaDifficulty: String?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var allowedInstances: [String]?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var blockedInstances: [String]?
-    /// Removed in 0.20.0
+    /// Removed in 1.0.0
     public var taglines: [String]?
     public var registrationMode: ApiRegistrationMode?
     /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
     public var contentWarning: String?
     /// Added in 0.19.2, removed in 0.19.3
     public var autoExpandImages: Bool?
-    /// Added in 0.19.4, removed in 0.20.0
+    /// Added in 0.19.4, removed in 1.0.0
     public var defaultSortType: ApiSortType?
     /// Added in 0.19.4
     public var defaultPostListingMode: ApiPostListingMode?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var defaultPostSortType: ApiPostSortType?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
+    public var defaultPostTimeRangeSeconds: Int?
+    /// Added in 1.0.0
     public var defaultCommentSortType: ApiCommentSortType?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var oauthRegistration: Bool?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var postUpvotes: ApiFederationMode?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var postDownvotes: ApiFederationMode?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var commentUpvotes: ApiFederationMode?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var commentDownvotes: ApiFederationMode?
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var disableDonationDialog: Bool?
 }
 
@@ -133,6 +135,7 @@ public extension ApiCreateSite {
         case defaultSortType = "default_sort_type"
         case defaultPostListingMode = "default_post_listing_mode"
         case defaultPostSortType = "default_post_sort_type"
+        case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
         case defaultCommentSortType = "default_comment_sort_type"
         case oauthRegistration = "oauth_registration"
         case postUpvotes = "post_upvotes"

@@ -10,7 +10,7 @@
 import Foundation
 
 // ListReports.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiListReports: Codable, Hashable, Sendable {
     public var unresolvedOnly: Bool?
     public var type_: ApiReportType?
@@ -19,6 +19,7 @@ public struct ApiListReports: Codable, Hashable, Sendable {
     public var pageCursor: String?
     public var pageBack: Bool?
     public var showCommunityRuleViolations: Bool?
+    public var myReportsOnly: Bool?
 }
 
 public extension ApiListReports {
@@ -30,5 +31,6 @@ public extension ApiListReports {
         case pageCursor = "page_cursor"
         case pageBack = "page_back"
         case showCommunityRuleViolations = "show_community_rule_violations"
+        case myReportsOnly = "my_reports_only"
     }
 }

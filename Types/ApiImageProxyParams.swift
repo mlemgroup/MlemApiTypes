@@ -10,7 +10,7 @@
 import Foundation
 
 // ImageProxyParams.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiImageProxyParams: Codable, Hashable, Sendable {
     public var url: String
     public var fileType: String?

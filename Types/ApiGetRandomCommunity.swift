@@ -10,7 +10,7 @@
 import Foundation
 
 // GetRandomCommunity.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public struct ApiGetRandomCommunity: Codable, Hashable, Sendable {
     public var type_: ApiListingType?
     public var showNsfw: Bool?

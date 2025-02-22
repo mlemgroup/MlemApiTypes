@@ -24,18 +24,6 @@ public struct ApiComment: Codable, Hashable, Sendable {
     public var path: String
     public var distinguished: Bool
     public var languageId: Int
-    /// Added in 0.20.0
-    public var score: Int?
-    /// Added in 0.20.0
-    public var upvotes: Int?
-    /// Added in 0.20.0
-    public var downvotes: Int?
-    /// Added in 0.20.0
-    public var childCount: Int?
-    /// Added in 0.20.0
-    public var reportCount: Int?
-    /// Added in 0.20.0
-    public var unresolvedReportCount: Int?
 }
 
 public extension ApiComment {
@@ -54,12 +42,6 @@ public extension ApiComment {
         case path = "path"
         case distinguished = "distinguished"
         case languageId = "language_id"
-        case score = "score"
-        case upvotes = "upvotes"
-        case downvotes = "downvotes"
-        case childCount = "child_count"
-        case reportCount = "report_count"
-        case unresolvedReportCount = "unresolved_report_count"
     }
 
     init(from decoder: any Decoder) throws {
@@ -80,12 +62,6 @@ public extension ApiComment {
         self.path = try container.decode(String.self, forKey: .path)
         self.distinguished = try container.decode(Bool.self, forKey: .distinguished)
         self.languageId = try container.decode(Int.self, forKey: .languageId)
-        self.score = try container.decodeIfPresent(Int?.self, forKey: .score) ?? nil
-        self.upvotes = try container.decodeIfPresent(Int?.self, forKey: .upvotes) ?? nil
-        self.downvotes = try container.decodeIfPresent(Int?.self, forKey: .downvotes) ?? nil
-        self.childCount = try container.decodeIfPresent(Int?.self, forKey: .childCount) ?? nil
-        self.reportCount = try container.decodeIfPresent(Int?.self, forKey: .reportCount) ?? nil
-        self.unresolvedReportCount = try container.decodeIfPresent(Int?.self, forKey: .unresolvedReportCount) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {
@@ -104,11 +80,5 @@ public extension ApiComment {
         try container.encode(path, forKey: .path)
         try container.encode(distinguished, forKey: .distinguished)
         try container.encode(languageId, forKey: .languageId)
-        try container.encode(score, forKey: .score)
-        try container.encode(upvotes, forKey: .upvotes)
-        try container.encode(downvotes, forKey: .downvotes)
-        try container.encode(childCount, forKey: .childCount)
-        try container.encode(reportCount, forKey: .reportCount)
-        try container.encode(unresolvedReportCount, forKey: .unresolvedReportCount)
     }
 }

@@ -19,11 +19,13 @@ public struct CreateCommentReportRequest: ApiPostRequest {
     init(
       endpoint: SiteVersion.EndpointVersion,
       commentId: Int,
-      reason: String
+      reason: String,
+      violatesInstanceRules: Bool?
     ) {
         self.body = .init(
             commentId: commentId,
-            reason: reason
+            reason: reason,
+            violatesInstanceRules: violatesInstanceRules
         )
     }
 }

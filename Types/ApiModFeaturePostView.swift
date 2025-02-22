@@ -15,7 +15,7 @@ public struct ApiModFeaturePostView: Codable, Hashable, Sendable {
     public var moderator: ApiPerson?
     public var post: ApiPost
     public var community: ApiCommunity
-    /// Added in 0.20.0
+    /// Added in 1.0.0
     public var otherPerson: ApiPerson?
 }
 

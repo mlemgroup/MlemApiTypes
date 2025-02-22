@@ -27,6 +27,6 @@ public enum ApiModlogActionType: String, Codable, Sendable {
     case adminPurgeCommunity = "AdminPurgeCommunity"
     case adminPurgePost = "AdminPurgePost"
     case adminPurgeComment = "AdminPurgeComment"
-    case adminBlockInstance = "AdminBlockInstance" /// Added in 0.20.0
-    case adminAllowInstance = "AdminAllowInstance" /// Added in 0.20.0
+    case adminBlockInstance = "AdminBlockInstance" /// Added in 1.0.0
+    case adminAllowInstance = "AdminAllowInstance" /// Added in 1.0.0
 }

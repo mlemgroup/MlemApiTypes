@@ -10,7 +10,7 @@
 import Foundation
 
 // SearchCombinedView.ts
-/// Added in 0.20.0
+/// Added in 1.0.0
 public enum ApiSearchCombinedView: Codable, Hashable, Sendable {
     case post(ApiPostView)
     case comment(ApiCommentView)
