@@ -19,7 +19,7 @@ public struct LockPostRequest: ApiPostRequest {
     init(
       postId: Int,
       locked: Bool
-    ) {
+      ) {
         self.body = .init(
             postId: postId,
             locked: locked

@@ -13,10 +13,11 @@ public struct ValidateAuthRequest: ApiGetRequest {
     public typealias Parameters = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "user/validate_auth"
+    public let path: String
     public let parameters: Parameters?
     
-    init() {
+    init(endpoint: SiteVersion.EndpointVersion) {
+        self.path = endpoint == .v3 ? "user/validate_auth" : "account/validate_auth"
         self.parameters = nil
     }
 }

@@ -17,12 +17,14 @@ public struct HidePostRequest: ApiPostRequest {
     public let body: Body?
 
     init(
-      postIds: [Int],
-      hide: Bool
-    ) {
+      postIds: [Int]?,
+      hide: Bool,
+      postId: Int?
+      ) {
         self.body = .init(
             postIds: postIds,
-            hide: hide
+            hide: hide,
+            postId: postId
       )
     }
 }

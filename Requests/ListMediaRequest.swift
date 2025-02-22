@@ -19,7 +19,7 @@ public struct ListMediaRequest: ApiGetRequest {
     init(
       page: Int?,
       limit: Int?
-    ) {
+      ) {
         self.parameters = .init(
             page: page,
             limit: limit

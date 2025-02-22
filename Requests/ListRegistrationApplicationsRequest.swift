@@ -20,7 +20,7 @@ public struct ListRegistrationApplicationsRequest: ApiGetRequest {
       unreadOnly: Bool?,
       page: Int?,
       limit: Int?
-    ) {
+      ) {
         self.parameters = .init(
             unreadOnly: unreadOnly,
             page: page,

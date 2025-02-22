@@ -13,10 +13,11 @@ public struct GetPersonDetailsRequest: ApiGetRequest {
     public typealias Parameters = ApiGetPersonDetails
     public typealias Response = ApiGetPersonDetailsResponse
     
-    public let path: String = "user"
+    public let path: String
     public let parameters: Parameters?
     
     init(
+      endpoint: SiteVersion.EndpointVersion,
       personId: Int?,
       username: String?,
       sort: ApiSortType?,
@@ -24,7 +25,8 @@ public struct GetPersonDetailsRequest: ApiGetRequest {
       limit: Int?,
       communityId: Int?,
       savedOnly: Bool?
-    ) {
+      ) {
+        self.path = endpoint == .v3 ? "user" : "person"
         self.parameters = .init(
             personId: personId,
             username: username,

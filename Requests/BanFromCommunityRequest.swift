@@ -22,15 +22,17 @@ public struct BanFromCommunityRequest: ApiPostRequest {
       ban: Bool,
       removeData: Bool?,
       reason: String?,
-      expires: Int?
-    ) {
+      expires: Int?,
+      removeOrRestoreData: Bool?
+      ) {
         self.body = .init(
             communityId: communityId,
             personId: personId,
             ban: ban,
             removeData: removeData,
             reason: reason,
-            expires: expires
+            expires: expires,
+            removeOrRestoreData: removeOrRestoreData
       )
     }
 }

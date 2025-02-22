@@ -20,7 +20,7 @@ public struct MarkPostAsReadRequest: ApiPostRequest {
       postId: Int?,
       read: Bool,
       postIds: [Int]?
-    ) {
+      ) {
         self.body = .init(
             postId: postId,
             read: read,

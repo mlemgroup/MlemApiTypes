@@ -62,8 +62,16 @@ public struct EditSiteRequest: ApiPutRequest {
       autoExpandImages: Bool?,
       defaultSortType: ApiSortType?,
       blockedUrls: [String]?,
-      defaultPostListingMode: ApiPostListingMode?
-    ) {
+      defaultPostListingMode: ApiPostListingMode?,
+      defaultPostSortType: ApiPostSortType?,
+      defaultCommentSortType: ApiCommentSortType?,
+      oauthRegistration: Bool?,
+      postUpvotes: ApiFederationMode?,
+      postDownvotes: ApiFederationMode?,
+      commentUpvotes: ApiFederationMode?,
+      commentDownvotes: ApiFederationMode?,
+      disableDonationDialog: Bool?
+      ) {
         self.body = .init(
             name: name,
             sidebar: sidebar,
@@ -110,7 +118,15 @@ public struct EditSiteRequest: ApiPutRequest {
             autoExpandImages: autoExpandImages,
             defaultSortType: defaultSortType,
             blockedUrls: blockedUrls,
-            defaultPostListingMode: defaultPostListingMode
+            defaultPostListingMode: defaultPostListingMode,
+            defaultPostSortType: defaultPostSortType,
+            defaultCommentSortType: defaultCommentSortType,
+            oauthRegistration: oauthRegistration,
+            postUpvotes: postUpvotes,
+            postDownvotes: postDownvotes,
+            commentUpvotes: commentUpvotes,
+            commentDownvotes: commentDownvotes,
+            disableDonationDialog: disableDonationDialog
       )
     }
 }

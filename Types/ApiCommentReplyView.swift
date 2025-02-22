@@ -17,7 +17,8 @@ public struct ApiCommentReplyView: Codable, Hashable, Sendable {
     public let post: ApiPost
     public let community: ApiCommunity
     public let recipient: ApiPerson
-    public let counts: ApiCommentAggregates
+    /// Removed in 0.20.0
+    public let counts: ApiCommentAggregates?
     public let creatorBannedFromCommunity: Bool
     public let subscribed: ApiSubscribedType
     public let saved: Bool

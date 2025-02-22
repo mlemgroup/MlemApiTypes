@@ -19,7 +19,7 @@ public struct EditPrivateMessageRequest: ApiPutRequest {
     init(
       privateMessageId: Int,
       content: String
-    ) {
+      ) {
         self.body = .init(
             privateMessageId: privateMessageId,
             content: content

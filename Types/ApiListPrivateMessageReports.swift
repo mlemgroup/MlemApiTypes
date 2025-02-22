@@ -10,6 +10,7 @@
 import Foundation
 
 // ListPrivateMessageReports.ts
+/// Removed in 0.20.0
 public struct ApiListPrivateMessageReports: Codable, Hashable, Sendable {
     public let page: Int?
     public let limit: Int?

@@ -16,9 +16,7 @@ public struct GetRegistrationApplicationRequest: ApiGetRequest {
     public let path: String = "admin/registration_application"
     public let parameters: Parameters?
     
-    init(
-      personId: Int
-    ) {
+    init(personId: Int) {
         self.parameters = .init(
             personId: personId
       )

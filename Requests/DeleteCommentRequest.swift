@@ -19,7 +19,7 @@ public struct DeleteCommentRequest: ApiPostRequest {
     init(
       commentId: Int,
       deleted: Bool
-    ) {
+      ) {
         self.body = .init(
             commentId: commentId,
             deleted: deleted

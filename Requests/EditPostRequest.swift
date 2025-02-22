@@ -24,8 +24,10 @@ public struct EditPostRequest: ApiPutRequest {
       nsfw: Bool?,
       languageId: Int?,
       altText: String?,
-      customThumbnail: String?
-    ) {
+      customThumbnail: String?,
+      tags: [Int]?,
+      scheduledPublishTime: Int?
+      ) {
         self.body = .init(
             postId: postId,
             name: name,
@@ -34,7 +36,9 @@ public struct EditPostRequest: ApiPutRequest {
             nsfw: nsfw,
             languageId: languageId,
             altText: altText,
-            customThumbnail: customThumbnail
+            customThumbnail: customThumbnail,
+            tags: tags,
+            scheduledPublishTime: scheduledPublishTime
       )
     }
 }

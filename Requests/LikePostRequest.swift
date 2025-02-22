@@ -19,7 +19,7 @@ public struct LikePostRequest: ApiPostRequest {
     init(
       postId: Int,
       score: Int
-    ) {
+      ) {
         self.body = .init(
             postId: postId,
             score: score

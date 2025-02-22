@@ -19,7 +19,7 @@ public struct DistinguishCommentRequest: ApiPostRequest {
     init(
       commentId: Int,
       distinguished: Bool
-    ) {
+      ) {
         self.body = .init(
             commentId: commentId,
             distinguished: distinguished

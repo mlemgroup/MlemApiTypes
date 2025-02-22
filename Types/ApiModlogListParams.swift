@@ -10,6 +10,7 @@
 import Foundation
 
 // ModlogListParams.ts
+/// Removed in 0.20.0
 public struct ApiModlogListParams: Codable, Hashable, Sendable {
     public let communityId: Int?
     public let modPersonId: Int?

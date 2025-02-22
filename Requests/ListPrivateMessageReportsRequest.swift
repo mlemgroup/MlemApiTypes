@@ -9,6 +9,7 @@
 
 import Foundation
 
+/// Removed in 0.20.0
 public struct ListPrivateMessageReportsRequest: ApiGetRequest {
     public typealias Parameters = ApiListPrivateMessageReports
     public typealias Response = ApiListPrivateMessageReportsResponse
@@ -20,7 +21,7 @@ public struct ListPrivateMessageReportsRequest: ApiGetRequest {
       page: Int?,
       limit: Int?,
       unresolvedOnly: Bool?
-    ) {
+      ) {
         self.parameters = .init(
             page: page,
             limit: limit,

@@ -19,7 +19,7 @@ public struct AddAdminRequest: ApiPostRequest {
     init(
       personId: Int,
       added: Bool
-    ) {
+      ) {
         self.body = .init(
             personId: personId,
             added: added

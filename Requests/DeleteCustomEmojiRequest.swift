@@ -16,9 +16,7 @@ public struct DeleteCustomEmojiRequest: ApiPostRequest {
     public let path: String = "custom_emoji/delete"
     public let body: Body?
 
-    init(
-      id: Int
-    ) {
+    init(id: Int) {
         self.body = .init(
             id: id
       )

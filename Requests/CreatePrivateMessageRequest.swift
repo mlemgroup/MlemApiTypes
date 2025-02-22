@@ -19,7 +19,7 @@ public struct CreatePrivateMessageRequest: ApiPostRequest {
     init(
       content: String,
       recipientId: Int
-    ) {
+      ) {
         self.body = .init(
             content: content,
             recipientId: recipientId

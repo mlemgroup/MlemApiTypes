@@ -22,4 +22,8 @@ public struct ApiCreatePost: Codable, Hashable, Sendable {
     public let altText: String?
     /// Added in 0.19.4
     public let customThumbnail: String?
+    /// Added in 0.20.0
+    public let tags: [Int]?
+    /// Added in 0.20.0
+    public let scheduledPublishTime: Int?
 }

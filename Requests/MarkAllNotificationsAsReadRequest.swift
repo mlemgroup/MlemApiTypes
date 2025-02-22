@@ -1,5 +1,5 @@
 //
-//  MarkAllAsReadRequest.swift
+//  MarkAllNotificationsAsReadRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -9,14 +9,15 @@
 
 import Foundation
 
-public struct MarkAllAsReadRequest: ApiPostRequest {
+public struct MarkAllNotificationsAsReadRequest: ApiPostRequest {
     public typealias Body = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiGetRepliesResponse
     
-    public let path: String = "user/mark_all_as_read"
+    public let path: String
     public let body: Body?
 
-    init() {
+    init(endpoint: SiteVersion.EndpointVersion) {
+        self.path = endpoint == .v3 ? "user/mark_all_as_read" : "account/mark_as_read/all"
         self.body = nil
     }
 }

@@ -10,6 +10,7 @@
 import Foundation
 
 // GetPrivateMessages.ts
+/// Removed in 0.20.0
 public struct ApiGetPrivateMessages: Codable, Hashable, Sendable {
     public let unreadOnly: Bool?
     public let page: Int?

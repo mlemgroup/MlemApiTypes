@@ -9,6 +9,7 @@
 
 import Foundation
 
+/// Removed in 0.20.0
 public struct GetRepliesRequest: ApiGetRequest {
     public typealias Parameters = ApiGetReplies
     public typealias Response = ApiGetRepliesResponse
@@ -21,7 +22,7 @@ public struct GetRepliesRequest: ApiGetRequest {
       page: Int?,
       limit: Int?,
       unreadOnly: Bool?
-    ) {
+      ) {
         self.parameters = .init(
             sort: sort,
             page: page,

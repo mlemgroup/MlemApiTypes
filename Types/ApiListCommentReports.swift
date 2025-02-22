@@ -10,6 +10,7 @@
 import Foundation
 
 // ListCommentReports.ts
+/// Removed in 0.20.0
 public struct ApiListCommentReports: Codable, Hashable, Sendable {
     public let page: Int?
     public let limit: Int?

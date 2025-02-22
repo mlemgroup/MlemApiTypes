@@ -19,7 +19,7 @@ public struct CreatePrivateMessageReportRequest: ApiPostRequest {
     init(
       privateMessageId: Int,
       reason: String
-    ) {
+      ) {
         self.body = .init(
             privateMessageId: privateMessageId,
             reason: reason

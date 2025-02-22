@@ -18,7 +18,8 @@ public struct ApiPostReportView: Codable, Hashable, Sendable {
     public let postCreator: ApiPerson
     public let creatorBannedFromCommunity: Bool
     public let myVote: Int?
-    public let counts: ApiPostAggregates
+    /// Removed in 0.20.0
+    public let counts: ApiPostAggregates?
     public let resolver: ApiPerson?
     /// Added in 0.19.4
     public let creatorIsModerator: Bool?

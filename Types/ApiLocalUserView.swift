@@ -13,7 +13,8 @@ import Foundation
 public struct ApiLocalUserView: Codable, Hashable, Sendable {
     public let localUser: ApiLocalUser
     public let person: ApiPerson
-    public let counts: ApiPersonAggregates
-    /// Added in 0.19.4
+    /// Removed in 0.20.0
+    public let counts: ApiPersonAggregates?
+    /// Added in 0.19.4, removed in 0.20.0
     public let localUserVoteDisplayMode: ApiLocalUserVoteDisplayMode?
 }

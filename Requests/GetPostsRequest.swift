@@ -29,8 +29,13 @@ public struct GetPostsRequest: ApiGetRequest {
       pageCursor: String?,
       showHidden: Bool?,
       showRead: Bool?,
-      showNsfw: Bool?
-    ) {
+      showNsfw: Bool?,
+      readOnly: Bool?,
+      hideMedia: Bool?,
+      markAsRead: Bool?,
+      noCommentsOnly: Bool?,
+      pageBack: Bool?
+      ) {
         self.parameters = .init(
             type_: type_,
             sort: sort,
@@ -44,7 +49,12 @@ public struct GetPostsRequest: ApiGetRequest {
             pageCursor: pageCursor,
             showHidden: showHidden,
             showRead: showRead,
-            showNsfw: showNsfw
+            showNsfw: showNsfw,
+            readOnly: readOnly,
+            hideMedia: hideMedia,
+            markAsRead: markAsRead,
+            noCommentsOnly: noCommentsOnly,
+            pageBack: pageBack
       )
     }
 }

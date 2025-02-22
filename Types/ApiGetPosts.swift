@@ -30,4 +30,14 @@ public struct ApiGetPosts: Codable, Hashable, Sendable {
     public let showRead: Bool?
     /// Added in 0.19.6
     public let showNsfw: Bool?
+    /// Added in 0.20.0
+    public let readOnly: Bool?
+    /// Added in 0.20.0
+    public let hideMedia: Bool?
+    /// Added in 0.20.0
+    public let markAsRead: Bool?
+    /// Added in 0.20.0
+    public let noCommentsOnly: Bool?
+    /// Added in 0.20.0
+    public let pageBack: Bool?
 }

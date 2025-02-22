@@ -19,7 +19,7 @@ public struct TransferCommunityRequest: ApiPostRequest {
     init(
       communityId: Int,
       personId: Int
-    ) {
+      ) {
         self.body = .init(
             communityId: communityId,
             personId: personId

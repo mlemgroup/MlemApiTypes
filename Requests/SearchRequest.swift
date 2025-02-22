@@ -17,8 +17,9 @@ public struct SearchRequest: ApiGetRequest {
     public let parameters: Parameters?
     
     init(
+      
       // swiftlint:disable:next identifier_name
-      q: String,
+      q: String?,
       communityId: Int?,
       communityName: String?,
       creatorId: Int?,
@@ -27,8 +28,15 @@ public struct SearchRequest: ApiGetRequest {
       listingType: ApiListingType?,
       page: Int?,
       limit: Int?,
-      postTitleOnly: Bool?
-    ) {
+      postTitleOnly: Bool?,
+      searchTerm: String?,
+      titleOnly: Bool?,
+      postUrlOnly: Bool?,
+      likedOnly: Bool?,
+      dislikedOnly: Bool?,
+      pageCursor: String?,
+      pageBack: Bool?
+      ) {
         self.parameters = .init(
             q: q,
             communityId: communityId,
@@ -39,7 +47,14 @@ public struct SearchRequest: ApiGetRequest {
             listingType: listingType,
             page: page,
             limit: limit,
-            postTitleOnly: postTitleOnly
+            postTitleOnly: postTitleOnly,
+            searchTerm: searchTerm,
+            titleOnly: titleOnly,
+            postUrlOnly: postUrlOnly,
+            likedOnly: likedOnly,
+            dislikedOnly: dislikedOnly,
+            pageCursor: pageCursor,
+            pageBack: pageBack
       )
     }
 }

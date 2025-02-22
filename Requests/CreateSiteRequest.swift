@@ -60,8 +60,16 @@ public struct CreateSiteRequest: ApiPostRequest {
       contentWarning: String?,
       autoExpandImages: Bool?,
       defaultSortType: ApiSortType?,
-      defaultPostListingMode: ApiPostListingMode?
-    ) {
+      defaultPostListingMode: ApiPostListingMode?,
+      defaultPostSortType: ApiPostSortType?,
+      defaultCommentSortType: ApiCommentSortType?,
+      oauthRegistration: Bool?,
+      postUpvotes: ApiFederationMode?,
+      postDownvotes: ApiFederationMode?,
+      commentUpvotes: ApiFederationMode?,
+      commentDownvotes: ApiFederationMode?,
+      disableDonationDialog: Bool?
+      ) {
         self.body = .init(
             name: name,
             sidebar: sidebar,
@@ -106,7 +114,15 @@ public struct CreateSiteRequest: ApiPostRequest {
             contentWarning: contentWarning,
             autoExpandImages: autoExpandImages,
             defaultSortType: defaultSortType,
-            defaultPostListingMode: defaultPostListingMode
+            defaultPostListingMode: defaultPostListingMode,
+            defaultPostSortType: defaultPostSortType,
+            defaultCommentSortType: defaultCommentSortType,
+            oauthRegistration: oauthRegistration,
+            postUpvotes: postUpvotes,
+            postDownvotes: postDownvotes,
+            commentUpvotes: commentUpvotes,
+            commentDownvotes: commentDownvotes,
+            disableDonationDialog: disableDonationDialog
       )
     }
 }

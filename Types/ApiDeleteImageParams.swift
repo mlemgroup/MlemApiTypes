@@ -1,0 +1,16 @@
+//
+//  ApiDeleteImageParams.swift
+//  Mlem
+//
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
+//
+
+// ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
+
+import Foundation
+
+// DeleteImageParams.ts
+/// Added in 0.20.0
+public struct ApiDeleteImageParams: Codable, Hashable, Sendable {
+    public let filename: String
+}

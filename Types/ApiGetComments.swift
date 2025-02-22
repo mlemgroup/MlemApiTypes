@@ -20,6 +20,7 @@ public struct ApiGetComments: Codable, Hashable, Sendable {
     public let communityName: String?
     public let postId: Int?
     public let parentId: Int?
+    /// Removed in 0.20.0
     public let savedOnly: Bool?
     /// Added in 0.19.0
     public let likedOnly: Bool?

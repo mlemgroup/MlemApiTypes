@@ -19,7 +19,7 @@ public struct GetCommunityRequest: ApiGetRequest {
     init(
       id: Int?,
       name: String?
-    ) {
+      ) {
         self.parameters = .init(
             id: id,
             name: name

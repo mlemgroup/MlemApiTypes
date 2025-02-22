@@ -16,5 +16,5 @@ public enum ApiSearchType: String, Codable, Sendable {
     case posts = "Posts"
     case communities = "Communities"
     case users = "Users"
-    case url = "Url"
+    case url = "Url" /// Removed in 0.20.0
 }

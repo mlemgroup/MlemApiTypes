@@ -19,7 +19,7 @@ public struct MarkCommentReplyAsReadRequest: ApiPostRequest {
     init(
       commentReplyId: Int,
       read: Bool
-    ) {
+      ) {
         self.body = .init(
             commentReplyId: commentReplyId,
             read: read

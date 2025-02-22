@@ -20,7 +20,7 @@ public struct AddModToCommunityRequest: ApiPostRequest {
       communityId: Int,
       personId: Int,
       added: Bool
-    ) {
+      ) {
         self.body = .init(
             communityId: communityId,
             personId: personId,

@@ -19,7 +19,7 @@ public struct ResolvePrivateMessageReportRequest: ApiPutRequest {
     init(
       reportId: Int,
       resolved: Bool
-    ) {
+      ) {
         self.body = .init(
             reportId: reportId,
             resolved: resolved

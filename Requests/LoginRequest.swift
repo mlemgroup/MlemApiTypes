@@ -13,14 +13,16 @@ public struct LoginRequest: ApiPostRequest {
     public typealias Body = ApiLogin
     public typealias Response = ApiLoginResponse
     
-    public let path: String = "user/login"
+    public let path: String
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       usernameOrEmail: String,
       password: String,
       totp2faToken: String?
-    ) {
+      ) {
+        self.path = endpoint == .v3 ? "user/login" : "account/auth/login"
         self.body = .init(
             usernameOrEmail: usernameOrEmail,
             password: password,

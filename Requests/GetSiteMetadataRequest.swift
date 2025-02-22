@@ -16,9 +16,7 @@ public struct GetSiteMetadataRequest: ApiGetRequest {
     public let path: String = "post/site_metadata"
     public let parameters: Parameters?
     
-    init(
-      url: String
-    ) {
+    init(url: String) {
         self.parameters = .init(
             url: url
       )

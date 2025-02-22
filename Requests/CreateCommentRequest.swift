@@ -22,7 +22,7 @@ public struct CreateCommentRequest: ApiPostRequest {
       parentId: Int?,
       languageId: Int?,
       formId: String?
-    ) {
+      ) {
         self.body = .init(
             content: content,
             postId: postId,

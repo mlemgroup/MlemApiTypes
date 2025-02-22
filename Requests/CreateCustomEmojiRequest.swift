@@ -22,7 +22,7 @@ public struct CreateCustomEmojiRequest: ApiPostRequest {
       imageUrl: String,
       altText: String,
       keywords: [String]
-    ) {
+      ) {
         self.body = .init(
             category: category,
             shortcode: shortcode,

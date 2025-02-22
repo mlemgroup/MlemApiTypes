@@ -10,6 +10,7 @@
 import Foundation
 
 // SiteAggregates.ts
+/// Removed in 0.20.0
 public struct ApiSiteAggregates: Codable, Hashable, Sendable {
     /// Removed in 0.19.0
     public let id: Int?

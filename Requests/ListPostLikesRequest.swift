@@ -20,7 +20,7 @@ public struct ListPostLikesRequest: ApiGetRequest {
       postId: Int,
       page: Int?,
       limit: Int?
-    ) {
+      ) {
         self.parameters = .init(
             postId: postId,
             page: page,

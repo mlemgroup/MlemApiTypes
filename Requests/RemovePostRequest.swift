@@ -20,7 +20,7 @@ public struct RemovePostRequest: ApiPostRequest {
       postId: Int,
       removed: Bool,
       reason: String?
-    ) {
+      ) {
         self.body = .init(
             postId: postId,
             removed: removed,

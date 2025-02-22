@@ -19,7 +19,7 @@ public struct SaveCommentRequest: ApiPutRequest {
     init(
       commentId: Int,
       save: Bool
-    ) {
+      ) {
         self.body = .init(
             commentId: commentId,
             save: save

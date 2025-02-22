@@ -19,7 +19,7 @@ public struct PurgePersonRequest: ApiPostRequest {
     init(
       personId: Int,
       reason: String?
-    ) {
+      ) {
         self.body = .init(
             personId: personId,
             reason: reason

@@ -17,9 +17,10 @@ public struct ResolveObjectRequest: ApiGetRequest {
     public let parameters: Parameters?
     
     init(
+      
       // swiftlint:disable:next identifier_name
       q: String
-    ) {
+      ) {
         self.parameters = .init(
             q: q
       )

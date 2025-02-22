@@ -13,12 +13,14 @@ public struct PasswordResetRequest: ApiPostRequest {
     public typealias Body = ApiPasswordReset
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "user/password_reset"
+    public let path: String
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       email: String
-    ) {
+      ) {
+        self.path = endpoint == .v3 ? "user/password_reset" : "account/auth/password_reset"
         self.body = .init(
             email: email
       )

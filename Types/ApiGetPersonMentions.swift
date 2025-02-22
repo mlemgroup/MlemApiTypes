@@ -10,6 +10,7 @@
 import Foundation
 
 // GetPersonMentions.ts
+/// Removed in 0.20.0
 public struct ApiGetPersonMentions: Codable, Hashable, Sendable {
     public let sort: ApiCommentSortType?
     public let page: Int?

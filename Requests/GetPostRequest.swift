@@ -19,7 +19,7 @@ public struct GetPostRequest: ApiGetRequest {
     init(
       id: Int?,
       commentId: Int?
-    ) {
+      ) {
         self.parameters = .init(
             id: id,
             commentId: commentId

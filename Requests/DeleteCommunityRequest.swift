@@ -19,7 +19,7 @@ public struct DeleteCommunityRequest: ApiPostRequest {
     init(
       communityId: Int,
       deleted: Bool
-    ) {
+      ) {
         self.body = .init(
             communityId: communityId,
             deleted: deleted

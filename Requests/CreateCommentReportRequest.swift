@@ -19,7 +19,7 @@ public struct CreateCommentReportRequest: ApiPostRequest {
     init(
       commentId: Int,
       reason: String
-    ) {
+      ) {
         self.body = .init(
             commentId: commentId,
             reason: reason

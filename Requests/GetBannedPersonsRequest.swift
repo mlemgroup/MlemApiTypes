@@ -13,10 +13,11 @@ public struct GetBannedPersonsRequest: ApiGetRequest {
     public typealias Parameters = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiBannedPersonsResponse
     
-    public let path: String = "user/banned"
+    public let path: String
     public let parameters: Parameters?
     
-    init() {
+    init(endpoint: SiteVersion.EndpointVersion) {
+        self.path = endpoint == .v3 ? "user/banned" : "admin/banned"
         self.parameters = nil
     }
 }

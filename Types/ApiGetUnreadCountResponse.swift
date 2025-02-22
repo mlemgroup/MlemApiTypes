@@ -11,7 +11,12 @@ import Foundation
 
 // GetUnreadCountResponse.ts
 public struct ApiGetUnreadCountResponse: Codable, Hashable, Sendable {
-    public let replies: Int
-    public let mentions: Int
-    public let privateMessages: Int
+    /// Removed in 0.20.0
+    public let replies: Int?
+    /// Removed in 0.20.0
+    public let mentions: Int?
+    /// Removed in 0.20.0
+    public let privateMessages: Int?
+    /// Added in 0.20.0
+    public let count: Int?
 }

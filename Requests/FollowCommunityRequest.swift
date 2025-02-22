@@ -19,7 +19,7 @@ public struct FollowCommunityRequest: ApiPostRequest {
     init(
       communityId: Int,
       follow: Bool
-    ) {
+      ) {
         self.body = .init(
             communityId: communityId,
             follow: follow

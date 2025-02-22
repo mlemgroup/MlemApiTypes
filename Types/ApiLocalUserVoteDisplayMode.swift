@@ -10,7 +10,7 @@
 import Foundation
 
 // LocalUserVoteDisplayMode.ts
-/// Added in 0.19.4
+/// Added in 0.19.4, removed in 0.20.0
 public struct ApiLocalUserVoteDisplayMode: Codable, Hashable, Sendable {
     public let localUserId: Int
     public let score: Bool

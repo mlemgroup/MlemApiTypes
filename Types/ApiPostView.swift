@@ -15,7 +15,8 @@ public struct ApiPostView: Codable, Hashable, Sendable {
     public let creator: ApiPerson
     public let community: ApiCommunity
     public let creatorBannedFromCommunity: Bool
-    public let counts: ApiPostAggregates
+    /// Removed in 0.20.0
+    public let counts: ApiPostAggregates?
     public let subscribed: ApiSubscribedType
     public let saved: Bool
     public let read: Bool
@@ -32,4 +33,6 @@ public struct ApiPostView: Codable, Hashable, Sendable {
     public let hidden: Bool?
     /// Added in 0.19.5
     public let imageDetails: ApiImageDetails?
+    /// Added in 0.20.0
+    public let tags: ApiPostTags?
 }

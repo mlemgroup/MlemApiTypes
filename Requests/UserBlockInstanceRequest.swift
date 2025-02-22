@@ -1,5 +1,5 @@
 //
-//  BlockInstanceRequest.swift
+//  UserBlockInstanceRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -9,17 +9,19 @@
 
 import Foundation
 
-public struct BlockInstanceRequest: ApiPostRequest {
+public struct UserBlockInstanceRequest: ApiPostRequest {
     public typealias Body = ApiBlockInstance
     public typealias Response = ApiBlockInstanceResponse
     
-    public let path: String = "site/block"
+    public let path: String
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       instanceId: Int,
       block: Bool
-    ) {
+      ) {
+        self.path = endpoint == .v3 ? "site/block" : "account/block/instance"
         self.body = .init(
             instanceId: instanceId,
             block: block

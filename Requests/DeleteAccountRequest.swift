@@ -13,13 +13,15 @@ public struct DeleteAccountRequest: ApiPostRequest {
     public typealias Body = ApiDeleteAccount
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "user/delete_account"
+    public let path: String
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       password: String,
       deleteContent: Bool?
-    ) {
+      ) {
+        self.path = endpoint == .v3 ? "user/delete_account" : "account/delete"
         self.body = .init(
             password: password,
             deleteContent: deleteContent

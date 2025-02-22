@@ -9,6 +9,7 @@
 
 import Foundation
 
+/// Removed in 0.20.0
 public struct MarkPersonMentionAsReadRequest: ApiPostRequest {
     public typealias Body = ApiMarkPersonMentionAsRead
     public typealias Response = ApiPersonMentionResponse
@@ -19,7 +20,7 @@ public struct MarkPersonMentionAsReadRequest: ApiPostRequest {
     init(
       personMentionId: Int,
       read: Bool
-    ) {
+      ) {
         self.body = .init(
             personMentionId: personMentionId,
             read: read

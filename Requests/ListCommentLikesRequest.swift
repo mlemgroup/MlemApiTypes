@@ -20,7 +20,7 @@ public struct ListCommentLikesRequest: ApiGetRequest {
       commentId: Int,
       page: Int?,
       limit: Int?
-    ) {
+      ) {
         self.parameters = .init(
             commentId: commentId,
             page: page,

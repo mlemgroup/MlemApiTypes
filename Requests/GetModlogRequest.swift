@@ -24,8 +24,10 @@ public struct GetModlogRequest: ApiGetRequest {
       type_: ApiModlogActionType?,
       otherPersonId: Int?,
       postId: Int?,
-      commentId: Int?
-    ) {
+      commentId: Int?,
+      pageCursor: String?,
+      pageBack: Bool?
+      ) {
         self.parameters = .init(
             modPersonId: modPersonId,
             communityId: communityId,
@@ -34,7 +36,9 @@ public struct GetModlogRequest: ApiGetRequest {
             type_: type_,
             otherPersonId: otherPersonId,
             postId: postId,
-            commentId: commentId
+            commentId: commentId,
+            pageCursor: pageCursor,
+            pageBack: pageBack
       )
     }
 }

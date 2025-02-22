@@ -9,6 +9,7 @@
 
 import Foundation
 
+/// Removed in 0.20.0
 public struct ListCommentReportsRequest: ApiGetRequest {
     public typealias Parameters = ApiListCommentReports
     public typealias Response = ApiListCommentReportsResponse
@@ -22,7 +23,7 @@ public struct ListCommentReportsRequest: ApiGetRequest {
       unresolvedOnly: Bool?,
       communityId: Int?,
       commentId: Int?
-    ) {
+      ) {
         self.parameters = .init(
             page: page,
             limit: limit,

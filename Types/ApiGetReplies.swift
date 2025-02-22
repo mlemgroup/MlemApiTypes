@@ -10,6 +10,7 @@
 import Foundation
 
 // GetReplies.ts
+/// Removed in 0.20.0
 public struct ApiGetReplies: Codable, Hashable, Sendable {
     public let sort: ApiCommentSortType?
     public let page: Int?

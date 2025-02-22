@@ -20,7 +20,7 @@ public struct FeaturePostRequest: ApiPostRequest {
       postId: Int,
       featured: Bool,
       featureType: ApiPostFeatureType
-    ) {
+      ) {
         self.body = .init(
             postId: postId,
             featured: featured,

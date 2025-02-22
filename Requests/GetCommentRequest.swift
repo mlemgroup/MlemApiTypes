@@ -16,9 +16,7 @@ public struct GetCommentRequest: ApiGetRequest {
     public let path: String = "comment"
     public let parameters: Parameters?
     
-    init(
-      id: Int
-    ) {
+    init(id: Int) {
         self.parameters = .init(
             id: id
       )

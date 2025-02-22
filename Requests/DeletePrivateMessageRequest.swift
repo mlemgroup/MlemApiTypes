@@ -19,7 +19,7 @@ public struct DeletePrivateMessageRequest: ApiPostRequest {
     init(
       privateMessageId: Int,
       deleted: Bool
-    ) {
+      ) {
         self.body = .init(
             privateMessageId: privateMessageId,
             deleted: deleted

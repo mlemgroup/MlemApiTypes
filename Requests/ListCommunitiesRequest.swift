@@ -22,7 +22,7 @@ public struct ListCommunitiesRequest: ApiGetRequest {
       page: Int?,
       limit: Int?,
       showNsfw: Bool?
-    ) {
+      ) {
         self.parameters = .init(
             type_: type_,
             sort: sort,
