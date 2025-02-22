@@ -14,3 +14,9 @@ import Foundation
 public struct ApiModJoin: Codable, Hashable, Sendable {
     public var communityId: Int
 }
+
+public extension ApiModJoin {
+    enum CodingKeys: String, CodingKey {
+        case communityId = "community_id"
+    }
+}

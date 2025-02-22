@@ -27,3 +27,19 @@ public struct ApiCreatePost: Codable, Hashable, Sendable {
     /// Added in 0.20.0
     public var scheduledPublishTime: Int?
 }
+
+public extension ApiCreatePost {
+    enum CodingKeys: String, CodingKey {
+        case name = "name"
+        case communityId = "community_id"
+        case url = "url"
+        case body = "body"
+        case honeypot = "honeypot"
+        case nsfw = "nsfw"
+        case languageId = "language_id"
+        case altText = "alt_text"
+        case customThumbnail = "custom_thumbnail"
+        case tags = "tags"
+        case scheduledPublishTime = "scheduled_publish_time"
+    }
+}

@@ -16,3 +16,12 @@ public struct ApiResolveObjectResponse: Codable, Hashable, Sendable {
     public var community: ApiCommunityView?
     public var person: ApiPersonView?
 }
+
+public extension ApiResolveObjectResponse {
+    enum CodingKeys: String, CodingKey {
+        case comment = "comment"
+        case post = "post"
+        case community = "community"
+        case person = "person"
+    }
+}

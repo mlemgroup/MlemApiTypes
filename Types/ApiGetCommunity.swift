@@ -14,3 +14,10 @@ public struct ApiGetCommunity: Codable, Hashable, Sendable {
     public var id: Int?
     public var name: String?
 }
+
+public extension ApiGetCommunity {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case name = "name"
+    }
+}

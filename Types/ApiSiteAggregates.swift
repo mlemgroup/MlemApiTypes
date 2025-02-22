@@ -24,3 +24,18 @@ public struct ApiSiteAggregates: Codable, Hashable, Sendable {
     public var usersActiveMonth: Int
     public var usersActiveHalfYear: Int
 }
+
+public extension ApiSiteAggregates {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case siteId = "site_id"
+        case users = "users"
+        case posts = "posts"
+        case comments = "comments"
+        case communities = "communities"
+        case usersActiveDay = "users_active_day"
+        case usersActiveWeek = "users_active_week"
+        case usersActiveMonth = "users_active_month"
+        case usersActiveHalfYear = "users_active_half_year"
+    }
+}

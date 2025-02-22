@@ -47,7 +47,7 @@ public extension ApiPrivateMessage {
         self.deleted = try container.decode(Bool.self, forKey: .deleted)
         self.read = try container.decode(Bool.self, forKey: .read)
         self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decode(Date?.self, forKey: .updated)
+        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
         self.actorId = try (
             container.decodeIfPresent(ActorIdentifier.self, forKey: .actorId)
             ?? container.decode(ActorIdentifier.self, forKey: .apId)

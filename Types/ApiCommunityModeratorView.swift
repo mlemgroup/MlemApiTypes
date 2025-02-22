@@ -14,3 +14,10 @@ public struct ApiCommunityModeratorView: Codable, Hashable, Sendable {
     public var community: ApiCommunity
     public var moderator: ApiPerson
 }
+
+public extension ApiCommunityModeratorView {
+    enum CodingKeys: String, CodingKey {
+        case community = "community"
+        case moderator = "moderator"
+    }
+}

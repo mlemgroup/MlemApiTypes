@@ -18,3 +18,13 @@ public struct ApiListPersonContent: Codable, Hashable, Sendable {
     public var pageCursor: String?
     public var pageBack: Bool?
 }
+
+public extension ApiListPersonContent {
+    enum CodingKeys: String, CodingKey {
+        case type_ = "type_"
+        case personId = "person_id"
+        case username = "username"
+        case pageCursor = "page_cursor"
+        case pageBack = "page_back"
+    }
+}

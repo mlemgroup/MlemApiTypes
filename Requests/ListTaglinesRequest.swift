@@ -14,7 +14,7 @@ public struct ListTaglinesRequest: ApiGetRequest {
     public typealias Parameters = ApiListTaglines
     public typealias Response = ApiListTaglinesResponse
     
-    public let path: String = "admin/tagline/list"
+    public let path: String = "api/v4/admin/tagline/list"
     public let parameters: Parameters?
     
     init(

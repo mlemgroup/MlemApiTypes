@@ -26,3 +26,21 @@ public struct ApiCreateOAuthProvider: Codable, Hashable, Sendable {
     public var usePkce: Bool?
     public var enabled: Bool?
 }
+
+public extension ApiCreateOAuthProvider {
+    enum CodingKeys: String, CodingKey {
+        case displayName = "display_name"
+        case issuer = "issuer"
+        case authorizationEndpoint = "authorization_endpoint"
+        case tokenEndpoint = "token_endpoint"
+        case userinfoEndpoint = "userinfo_endpoint"
+        case idClaim = "id_claim"
+        case clientId = "client_id"
+        case clientSecret = "client_secret"
+        case scopes = "scopes"
+        case autoVerifyEmail = "auto_verify_email"
+        case accountLinkingEnabled = "account_linking_enabled"
+        case usePkce = "use_pkce"
+        case enabled = "enabled"
+    }
+}

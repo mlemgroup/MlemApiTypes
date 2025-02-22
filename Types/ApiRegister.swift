@@ -22,3 +22,17 @@ public struct ApiRegister: Codable, Hashable, Sendable {
     public var honeypot: String?
     public var answer: String?
 }
+
+public extension ApiRegister {
+    enum CodingKeys: String, CodingKey {
+        case username = "username"
+        case password = "password"
+        case passwordVerify = "password_verify"
+        case showNsfw = "show_nsfw"
+        case email = "email"
+        case captchaUuid = "captcha_uuid"
+        case captchaAnswer = "captcha_answer"
+        case honeypot = "honeypot"
+        case answer = "answer"
+    }
+}

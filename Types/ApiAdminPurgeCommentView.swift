@@ -15,3 +15,11 @@ public struct ApiAdminPurgeCommentView: Codable, Hashable, Sendable {
     public var admin: ApiPerson?
     public var post: ApiPost
 }
+
+public extension ApiAdminPurgeCommentView {
+    enum CodingKeys: String, CodingKey {
+        case adminPurgeComment = "admin_purge_comment"
+        case admin = "admin"
+        case post = "post"
+    }
+}

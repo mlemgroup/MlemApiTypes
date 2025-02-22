@@ -14,3 +14,9 @@ import Foundation
 public struct ApiDeleteImageParams: Codable, Hashable, Sendable {
     public var filename: String
 }
+
+public extension ApiDeleteImageParams {
+    enum CodingKeys: String, CodingKey {
+        case filename = "filename"
+    }
+}

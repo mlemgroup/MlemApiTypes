@@ -14,3 +14,10 @@ public struct ApiDeletePrivateMessage: Codable, Hashable, Sendable {
     public var privateMessageId: Int
     public var deleted: Bool
 }
+
+public extension ApiDeletePrivateMessage {
+    enum CodingKeys: String, CodingKey {
+        case privateMessageId = "private_message_id"
+        case deleted = "deleted"
+    }
+}

@@ -16,3 +16,12 @@ public struct ApiGetPostResponse: Codable, Hashable, Sendable {
     public var moderators: [ApiCommunityModeratorView]
     public var crossPosts: [ApiPostView]
 }
+
+public extension ApiGetPostResponse {
+    enum CodingKeys: String, CodingKey {
+        case postView = "post_view"
+        case communityView = "community_view"
+        case moderators = "moderators"
+        case crossPosts = "cross_posts"
+    }
+}

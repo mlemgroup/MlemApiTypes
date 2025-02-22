@@ -15,3 +15,10 @@ public struct ApiUpdateTotp: Codable, Hashable, Sendable {
     public var totpToken: String
     public var enabled: Bool
 }
+
+public extension ApiUpdateTotp {
+    enum CodingKeys: String, CodingKey {
+        case totpToken = "totp_token"
+        case enabled = "enabled"
+    }
+}

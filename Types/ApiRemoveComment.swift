@@ -15,3 +15,11 @@ public struct ApiRemoveComment: Codable, Hashable, Sendable {
     public var removed: Bool
     public var reason: String?
 }
+
+public extension ApiRemoveComment {
+    enum CodingKeys: String, CodingKey {
+        case commentId = "comment_id"
+        case removed = "removed"
+        case reason = "reason"
+    }
+}

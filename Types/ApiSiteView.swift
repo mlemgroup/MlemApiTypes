@@ -17,3 +17,12 @@ public struct ApiSiteView: Codable, Hashable, Sendable {
     /// Removed in 0.20.0
     public var counts: ApiSiteAggregates?
 }
+
+public extension ApiSiteView {
+    enum CodingKeys: String, CodingKey {
+        case site = "site"
+        case localSite = "local_site"
+        case localSiteRateLimit = "local_site_rate_limit"
+        case counts = "counts"
+    }
+}

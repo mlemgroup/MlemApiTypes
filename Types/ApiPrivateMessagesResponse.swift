@@ -14,3 +14,9 @@ import Foundation
 public struct ApiPrivateMessagesResponse: Codable, Hashable, Sendable {
     public var privateMessages: [ApiPrivateMessageView]
 }
+
+public extension ApiPrivateMessagesResponse {
+    enum CodingKeys: String, CodingKey {
+        case privateMessages = "private_messages"
+    }
+}

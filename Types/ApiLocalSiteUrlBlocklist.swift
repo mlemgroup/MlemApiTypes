@@ -31,7 +31,7 @@ public extension ApiLocalSiteUrlBlocklist {
         self.id = try container.decode(Int.self, forKey: .id)
         self.url = try container.decode(String.self, forKey: .url)
         self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decode(Date?.self, forKey: .updated)
+        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

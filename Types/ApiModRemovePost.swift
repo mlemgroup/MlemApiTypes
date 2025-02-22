@@ -35,7 +35,7 @@ public extension ApiModRemovePost {
         self.id = try container.decode(Int.self, forKey: .id)
         self.modPersonId = try container.decode(Int.self, forKey: .modPersonId)
         self.postId = try container.decode(Int.self, forKey: .postId)
-        self.reason = try container.decode(String?.self, forKey: .reason)
+        self.reason = try container.decodeIfPresent(String?.self, forKey: .reason) ?? nil
         self.removed = try container.decode(Bool.self, forKey: .removed)
         self.published = try (
             container.decodeIfPresent(Date.self, forKey: .published)

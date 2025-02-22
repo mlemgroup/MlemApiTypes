@@ -37,9 +37,9 @@ public extension ApiModBan {
         self.id = try container.decode(Int.self, forKey: .id)
         self.modPersonId = try container.decode(Int.self, forKey: .modPersonId)
         self.otherPersonId = try container.decode(Int.self, forKey: .otherPersonId)
-        self.reason = try container.decode(String?.self, forKey: .reason)
+        self.reason = try container.decodeIfPresent(String?.self, forKey: .reason) ?? nil
         self.banned = try container.decode(Bool.self, forKey: .banned)
-        self.expires = try container.decode(Date?.self, forKey: .expires)
+        self.expires = try container.decodeIfPresent(Date?.self, forKey: .expires) ?? nil
         self.published = try (
             container.decodeIfPresent(Date.self, forKey: .published)
             ?? container.decode(Date.self, forKey: .when_)

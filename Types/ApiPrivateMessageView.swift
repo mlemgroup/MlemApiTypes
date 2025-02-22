@@ -15,3 +15,11 @@ public struct ApiPrivateMessageView: Codable, Hashable, Sendable {
     public var creator: ApiPerson
     public var recipient: ApiPerson
 }
+
+public extension ApiPrivateMessageView {
+    enum CodingKeys: String, CodingKey {
+        case privateMessage = "private_message"
+        case creator = "creator"
+        case recipient = "recipient"
+    }
+}

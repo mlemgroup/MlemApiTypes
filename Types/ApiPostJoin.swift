@@ -14,3 +14,9 @@ import Foundation
 public struct ApiPostJoin: Codable, Hashable, Sendable {
     public var postId: Int
 }
+
+public extension ApiPostJoin {
+    enum CodingKeys: String, CodingKey {
+        case postId = "post_id"
+    }
+}

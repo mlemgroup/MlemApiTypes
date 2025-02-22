@@ -13,3 +13,9 @@ import Foundation
 public struct ApiAddAdminResponse: Codable, Hashable, Sendable {
     public var admins: [ApiPersonView]
 }
+
+public extension ApiAddAdminResponse {
+    enum CodingKeys: String, CodingKey {
+        case admins = "admins"
+    }
+}

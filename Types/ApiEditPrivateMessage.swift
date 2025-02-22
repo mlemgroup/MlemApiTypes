@@ -14,3 +14,10 @@ public struct ApiEditPrivateMessage: Codable, Hashable, Sendable {
     public var privateMessageId: Int
     public var content: String
 }
+
+public extension ApiEditPrivateMessage {
+    enum CodingKeys: String, CodingKey {
+        case privateMessageId = "private_message_id"
+        case content = "content"
+    }
+}

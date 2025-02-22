@@ -34,8 +34,8 @@ public extension ApiRegistrationApplication {
         self.id = try container.decode(Int.self, forKey: .id)
         self.localUserId = try container.decode(Int.self, forKey: .localUserId)
         self.answer = try container.decode(String.self, forKey: .answer)
-        self.adminId = try container.decode(Int?.self, forKey: .adminId)
-        self.denyReason = try container.decode(String?.self, forKey: .denyReason)
+        self.adminId = try container.decodeIfPresent(Int?.self, forKey: .adminId) ?? nil
+        self.denyReason = try container.decodeIfPresent(String?.self, forKey: .denyReason) ?? nil
         self.published = try container.decode(Date.self, forKey: .published)
     }
 

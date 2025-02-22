@@ -14,7 +14,7 @@ public struct ListCommunityPendingFollowsRequest: ApiGetRequest {
     public typealias Parameters = ApiListCommunityPendingFollows
     public typealias Response = ApiListCommunityPendingFollowsResponse
     
-    public let path: String = "community/pending_follows/list"
+    public let path: String = "api/v4/community/pending_follows/list"
     public let parameters: Parameters?
     
     init(

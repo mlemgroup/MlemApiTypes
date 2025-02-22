@@ -36,8 +36,8 @@ public extension ApiBanPerson {
             container.decodeIfPresent(Bool?.self, forKey: .removeOrRestoreData)
             ?? container.decode(Bool?.self, forKey: .removeData)
         )
-        self.reason = try container.decode(String?.self, forKey: .reason)
-        self.expires = try container.decode(Int?.self, forKey: .expires)
+        self.reason = try container.decodeIfPresent(String?.self, forKey: .reason) ?? nil
+        self.expires = try container.decodeIfPresent(Int?.self, forKey: .expires) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

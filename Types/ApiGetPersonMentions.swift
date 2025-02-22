@@ -17,3 +17,12 @@ public struct ApiGetPersonMentions: Codable, Hashable, Sendable {
     public var limit: Int?
     public var unreadOnly: Bool?
 }
+
+public extension ApiGetPersonMentions {
+    enum CodingKeys: String, CodingKey {
+        case sort = "sort"
+        case page = "page"
+        case limit = "limit"
+        case unreadOnly = "unread_only"
+    }
+}

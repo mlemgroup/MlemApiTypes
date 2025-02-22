@@ -70,7 +70,7 @@ public extension ApiComment {
         self.content = try container.decode(String.self, forKey: .content)
         self.removed = try container.decode(Bool.self, forKey: .removed)
         self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decode(Date?.self, forKey: .updated)
+        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
         self.deleted = try container.decode(Bool.self, forKey: .deleted)
         self.actorId = try (
             container.decodeIfPresent(ActorIdentifier.self, forKey: .actorId)
@@ -80,12 +80,12 @@ public extension ApiComment {
         self.path = try container.decode(String.self, forKey: .path)
         self.distinguished = try container.decode(Bool.self, forKey: .distinguished)
         self.languageId = try container.decode(Int.self, forKey: .languageId)
-        self.score = try container.decodeIfPresent(Int.self, forKey: .score)
-        self.upvotes = try container.decodeIfPresent(Int.self, forKey: .upvotes)
-        self.downvotes = try container.decodeIfPresent(Int.self, forKey: .downvotes)
-        self.childCount = try container.decodeIfPresent(Int.self, forKey: .childCount)
-        self.reportCount = try container.decodeIfPresent(Int.self, forKey: .reportCount)
-        self.unresolvedReportCount = try container.decodeIfPresent(Int.self, forKey: .unresolvedReportCount)
+        self.score = try container.decodeIfPresent(Int?.self, forKey: .score) ?? nil
+        self.upvotes = try container.decodeIfPresent(Int?.self, forKey: .upvotes) ?? nil
+        self.downvotes = try container.decodeIfPresent(Int?.self, forKey: .downvotes) ?? nil
+        self.childCount = try container.decodeIfPresent(Int?.self, forKey: .childCount) ?? nil
+        self.reportCount = try container.decodeIfPresent(Int?.self, forKey: .reportCount) ?? nil
+        self.unresolvedReportCount = try container.decodeIfPresent(Int?.self, forKey: .unresolvedReportCount) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

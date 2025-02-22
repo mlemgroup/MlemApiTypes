@@ -38,14 +38,14 @@ public extension ApiCommentAggregates {
 
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decodeIfPresent(Int.self, forKey: .id)
+        self.id = try container.decodeIfPresent(Int?.self, forKey: .id) ?? nil
         self.commentId = try container.decode(Int.self, forKey: .commentId)
         self.score = try container.decode(Int.self, forKey: .score)
         self.upvotes = try container.decode(Int.self, forKey: .upvotes)
         self.downvotes = try container.decode(Int.self, forKey: .downvotes)
         self.published = try container.decode(Date.self, forKey: .published)
         self.childCount = try container.decode(Int.self, forKey: .childCount)
-        self.hotRank = try container.decodeIfPresent(Int.self, forKey: .hotRank)
+        self.hotRank = try container.decodeIfPresent(Int?.self, forKey: .hotRank) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

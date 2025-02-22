@@ -16,3 +16,11 @@ public struct ApiCustomEmojiKeyword: Codable, Hashable, Sendable {
     public var customEmojiId: Int
     public var keyword: String
 }
+
+public extension ApiCustomEmojiKeyword {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case customEmojiId = "custom_emoji_id"
+        case keyword = "keyword"
+    }
+}

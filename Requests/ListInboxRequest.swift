@@ -14,7 +14,7 @@ public struct ListInboxRequest: ApiGetRequest {
     public typealias Parameters = ApiListInbox
     public typealias Response = ApiListInboxResponse
     
-    public let path: String = "account/inbox"
+    public let path: String = "api/v4/account/inbox"
     public let parameters: Parameters?
     
     init(

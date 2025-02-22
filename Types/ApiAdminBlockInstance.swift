@@ -38,8 +38,8 @@ public extension ApiAdminBlockInstance {
         self.instanceId = try container.decode(Int.self, forKey: .instanceId)
         self.adminPersonId = try container.decode(Int.self, forKey: .adminPersonId)
         self.blocked = try container.decode(Bool.self, forKey: .blocked)
-        self.reason = try container.decode(String?.self, forKey: .reason)
-        self.expires = try container.decode(String?.self, forKey: .expires)
+        self.reason = try container.decodeIfPresent(String?.self, forKey: .reason) ?? nil
+        self.expires = try container.decodeIfPresent(String?.self, forKey: .expires) ?? nil
         self.published = try container.decode(Date.self, forKey: .published)
     }
 

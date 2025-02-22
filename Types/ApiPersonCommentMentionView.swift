@@ -27,3 +27,22 @@ public struct ApiPersonCommentMentionView: Codable, Hashable, Sendable {
     public var creatorBlocked: Bool
     public var myVote: Int?
 }
+
+public extension ApiPersonCommentMentionView {
+    enum CodingKeys: String, CodingKey {
+        case personCommentMention = "person_comment_mention"
+        case comment = "comment"
+        case creator = "creator"
+        case post = "post"
+        case community = "community"
+        case recipient = "recipient"
+        case creatorBannedFromCommunity = "creator_banned_from_community"
+        case bannedFromCommunity = "banned_from_community"
+        case creatorIsModerator = "creator_is_moderator"
+        case creatorIsAdmin = "creator_is_admin"
+        case subscribed = "subscribed"
+        case saved = "saved"
+        case creatorBlocked = "creator_blocked"
+        case myVote = "my_vote"
+    }
+}

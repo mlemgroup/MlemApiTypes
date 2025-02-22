@@ -13,3 +13,9 @@ import Foundation
 public struct ApiRegistrationApplicationResponse: Codable, Hashable, Sendable {
     public var registrationApplication: ApiRegistrationApplicationView
 }
+
+public extension ApiRegistrationApplicationResponse {
+    enum CodingKeys: String, CodingKey {
+        case registrationApplication = "registration_application"
+    }
+}

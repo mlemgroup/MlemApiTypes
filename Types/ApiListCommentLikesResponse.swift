@@ -14,3 +14,9 @@ import Foundation
 public struct ApiListCommentLikesResponse: Codable, Hashable, Sendable {
     public var commentLikes: [ApiVoteView]
 }
+
+public extension ApiListCommentLikesResponse {
+    enum CodingKeys: String, CodingKey {
+        case commentLikes = "comment_likes"
+    }
+}

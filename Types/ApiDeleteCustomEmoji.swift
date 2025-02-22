@@ -13,3 +13,9 @@ import Foundation
 public struct ApiDeleteCustomEmoji: Codable, Hashable, Sendable {
     public var id: Int
 }
+
+public extension ApiDeleteCustomEmoji {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+    }
+}

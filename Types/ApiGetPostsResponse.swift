@@ -15,3 +15,10 @@ public struct ApiGetPostsResponse: Codable, Hashable, Sendable {
     /// Added in 0.19.0
     public var nextPage: String?
 }
+
+public extension ApiGetPostsResponse {
+    enum CodingKeys: String, CodingKey {
+        case posts = "posts"
+        case nextPage = "next_page"
+    }
+}

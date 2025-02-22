@@ -14,7 +14,7 @@ public struct GetRandomCommunityRequest: ApiGetRequest {
     public typealias Parameters = ApiGetRandomCommunity
     public typealias Response = ApiCommunityResponse
     
-    public let path: String = "community/random"
+    public let path: String = "api/v4/community/random"
     public let parameters: Parameters?
     
     init(

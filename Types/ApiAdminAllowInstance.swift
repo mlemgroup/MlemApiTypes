@@ -36,7 +36,7 @@ public extension ApiAdminAllowInstance {
         self.instanceId = try container.decode(Int.self, forKey: .instanceId)
         self.adminPersonId = try container.decode(Int.self, forKey: .adminPersonId)
         self.allowed = try container.decode(Bool.self, forKey: .allowed)
-        self.reason = try container.decode(String?.self, forKey: .reason)
+        self.reason = try container.decodeIfPresent(String?.self, forKey: .reason) ?? nil
         self.published = try container.decode(Date.self, forKey: .published)
     }
 

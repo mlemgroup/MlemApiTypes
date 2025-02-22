@@ -53,15 +53,15 @@ public extension ApiCommunityReport {
         self.communityId = try container.decode(Int.self, forKey: .communityId)
         self.originalCommunityName = try container.decode(String.self, forKey: .originalCommunityName)
         self.originalCommunityTitle = try container.decode(String.self, forKey: .originalCommunityTitle)
-        self.originalCommunityDescription = try container.decode(String?.self, forKey: .originalCommunityDescription)
-        self.originalCommunitySidebar = try container.decode(String?.self, forKey: .originalCommunitySidebar)
-        self.originalCommunityIcon = try container.decode(String?.self, forKey: .originalCommunityIcon)
-        self.originalCommunityBanner = try container.decode(String?.self, forKey: .originalCommunityBanner)
+        self.originalCommunityDescription = try container.decodeIfPresent(String?.self, forKey: .originalCommunityDescription) ?? nil
+        self.originalCommunitySidebar = try container.decodeIfPresent(String?.self, forKey: .originalCommunitySidebar) ?? nil
+        self.originalCommunityIcon = try container.decodeIfPresent(String?.self, forKey: .originalCommunityIcon) ?? nil
+        self.originalCommunityBanner = try container.decodeIfPresent(String?.self, forKey: .originalCommunityBanner) ?? nil
         self.reason = try container.decode(String.self, forKey: .reason)
         self.resolved = try container.decode(Bool.self, forKey: .resolved)
-        self.resolverId = try container.decode(Int?.self, forKey: .resolverId)
+        self.resolverId = try container.decodeIfPresent(Int?.self, forKey: .resolverId) ?? nil
         self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decode(Date?.self, forKey: .updated)
+        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

@@ -19,3 +19,13 @@ public struct ApiCommunityView: Codable, Hashable, Sendable {
     /// Added in 0.19.4
     public var bannedFromCommunity: Bool?
 }
+
+public extension ApiCommunityView {
+    enum CodingKeys: String, CodingKey {
+        case community = "community"
+        case subscribed = "subscribed"
+        case blocked = "blocked"
+        case counts = "counts"
+        case bannedFromCommunity = "banned_from_community"
+    }
+}

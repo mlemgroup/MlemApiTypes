@@ -16,3 +16,11 @@ public struct ApiListCommentLikes: Codable, Hashable, Sendable {
     public var page: Int?
     public var limit: Int?
 }
+
+public extension ApiListCommentLikes {
+    enum CodingKeys: String, CodingKey {
+        case commentId = "comment_id"
+        case page = "page"
+        case limit = "limit"
+    }
+}

@@ -18,3 +18,11 @@ public struct ApiHidePost: Codable, Hashable, Sendable {
     /// Added in 0.20.0
     public var postId: Int?
 }
+
+public extension ApiHidePost {
+    enum CodingKeys: String, CodingKey {
+        case postIds = "post_ids"
+        case hide = "hide"
+        case postId = "post_id"
+    }
+}

@@ -14,3 +14,9 @@ import Foundation
 public struct ApiGenerateTotpSecretResponse: Codable, Hashable, Sendable {
     public var totpSecretUrl: String
 }
+
+public extension ApiGenerateTotpSecretResponse {
+    enum CodingKeys: String, CodingKey {
+        case totpSecretUrl = "totp_secret_url"
+    }
+}

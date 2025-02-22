@@ -15,3 +15,10 @@ public struct ApiUploadImageResponse: Codable, Hashable, Sendable {
     public var imageUrl: String
     public var filename: String
 }
+
+public extension ApiUploadImageResponse {
+    enum CodingKeys: String, CodingKey {
+        case imageUrl = "image_url"
+        case filename = "filename"
+    }
+}

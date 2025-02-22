@@ -14,7 +14,7 @@ public struct GetCommunityPendingFollowsCountRequest: ApiGetRequest {
     public typealias Parameters = ApiGetCommunityPendingFollowsCount
     public typealias Response = ApiGetCommunityPendingFollowsCountResponse
     
-    public let path: String = "community/pending_follows/count"
+    public let path: String = "api/v4/community/pending_follows/count"
     public let parameters: Parameters?
     
     init(communityId: Int) {

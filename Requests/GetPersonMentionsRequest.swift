@@ -14,7 +14,7 @@ public struct GetPersonMentionsRequest: ApiGetRequest {
     public typealias Parameters = ApiGetPersonMentions
     public typealias Response = ApiGetPersonMentionsResponse
     
-    public let path: String = "user/mention"
+    public let path: String = "api/v3/user/mention"
     public let parameters: Parameters?
     
     init(

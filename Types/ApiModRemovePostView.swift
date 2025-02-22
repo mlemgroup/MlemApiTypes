@@ -31,10 +31,10 @@ public extension ApiModRemovePostView {
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.modRemovePost = try container.decode(ApiModRemovePost.self, forKey: .modRemovePost)
-        self.moderator = try container.decode(ApiPerson?.self, forKey: .moderator)
+        self.moderator = try container.decodeIfPresent(ApiPerson?.self, forKey: .moderator) ?? nil
         self.post = try container.decode(ApiPost.self, forKey: .post)
         self.community = try container.decode(ApiCommunity.self, forKey: .community)
-        self.otherPerson = try container.decodeIfPresent(ApiPerson.self, forKey: .otherPerson)
+        self.otherPerson = try container.decodeIfPresent(ApiPerson?.self, forKey: .otherPerson) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

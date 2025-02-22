@@ -38,7 +38,7 @@ public extension ApiModRemoveCommunity {
         self.id = try container.decode(Int.self, forKey: .id)
         self.modPersonId = try container.decode(Int.self, forKey: .modPersonId)
         self.communityId = try container.decode(Int.self, forKey: .communityId)
-        self.reason = try container.decode(String?.self, forKey: .reason)
+        self.reason = try container.decodeIfPresent(String?.self, forKey: .reason) ?? nil
         self.removed = try container.decode(Bool.self, forKey: .removed)
         self.expires = try container.decodeIfPresent(Date?.self, forKey: .expires) ?? nil
         self.published = try (

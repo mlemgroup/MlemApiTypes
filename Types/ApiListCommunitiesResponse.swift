@@ -13,3 +13,9 @@ import Foundation
 public struct ApiListCommunitiesResponse: Codable, Hashable, Sendable {
     public var communities: [ApiCommunityView]
 }
+
+public extension ApiListCommunitiesResponse {
+    enum CodingKeys: String, CodingKey {
+        case communities = "communities"
+    }
+}

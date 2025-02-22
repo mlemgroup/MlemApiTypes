@@ -100,10 +100,10 @@ public extension ApiCommunity {
         self.id = try container.decode(Int.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
         self.title = try container.decode(String.self, forKey: .title)
-        self.description = try container.decode(String?.self, forKey: .description)
+        self.description = try container.decodeIfPresent(String?.self, forKey: .description) ?? nil
         self.removed = try container.decode(Bool.self, forKey: .removed)
         self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decode(Date?.self, forKey: .updated)
+        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
         self.deleted = try container.decode(Bool.self, forKey: .deleted)
         self.nsfw = try container.decode(Bool.self, forKey: .nsfw)
         self.actorId = try (
@@ -111,26 +111,26 @@ public extension ApiCommunity {
             ?? container.decode(ActorIdentifier.self, forKey: .apId)
         )
         self.local = try container.decode(Bool.self, forKey: .local)
-        self.icon = try container.decode(URL?.self, forKey: .icon)
-        self.banner = try container.decode(URL?.self, forKey: .banner)
+        self.icon = try container.decodeIfPresent(URL?.self, forKey: .icon) ?? nil
+        self.banner = try container.decodeIfPresent(URL?.self, forKey: .banner) ?? nil
         self.hidden = try container.decode(Bool.self, forKey: .hidden)
         self.postingRestrictedToMods = try container.decode(Bool.self, forKey: .postingRestrictedToMods)
         self.instanceId = try container.decode(Int.self, forKey: .instanceId)
-        self.followersUrl = try container.decodeIfPresent(String.self, forKey: .followersUrl)
-        self.inboxUrl = try container.decodeIfPresent(String.self, forKey: .inboxUrl)
-        self.onlyFollowersCanVote = try container.decodeIfPresent(Bool.self, forKey: .onlyFollowersCanVote)
-        self.visibility = try container.decodeIfPresent(ApiCommunityVisibility.self, forKey: .visibility)
-        self.sidebar = try container.decodeIfPresent(String.self, forKey: .sidebar) ?? nil
-        self.subscribers = try container.decodeIfPresent(Int.self, forKey: .subscribers)
-        self.posts = try container.decodeIfPresent(Int.self, forKey: .posts)
-        self.comments = try container.decodeIfPresent(Int.self, forKey: .comments)
-        self.usersActiveDay = try container.decodeIfPresent(Int.self, forKey: .usersActiveDay)
-        self.usersActiveWeek = try container.decodeIfPresent(Int.self, forKey: .usersActiveWeek)
-        self.usersActiveMonth = try container.decodeIfPresent(Int.self, forKey: .usersActiveMonth)
-        self.usersActiveHalfYear = try container.decodeIfPresent(Int.self, forKey: .usersActiveHalfYear)
-        self.subscribersLocal = try container.decodeIfPresent(Int.self, forKey: .subscribersLocal)
-        self.reportCount = try container.decodeIfPresent(Int.self, forKey: .reportCount)
-        self.unresolvedReportCount = try container.decodeIfPresent(Int.self, forKey: .unresolvedReportCount)
+        self.followersUrl = try container.decodeIfPresent(String?.self, forKey: .followersUrl) ?? nil
+        self.inboxUrl = try container.decodeIfPresent(String?.self, forKey: .inboxUrl) ?? nil
+        self.onlyFollowersCanVote = try container.decodeIfPresent(Bool?.self, forKey: .onlyFollowersCanVote) ?? nil
+        self.visibility = try container.decodeIfPresent(ApiCommunityVisibility?.self, forKey: .visibility) ?? nil
+        self.sidebar = try container.decodeIfPresent(String?.self, forKey: .sidebar) ?? nil
+        self.subscribers = try container.decodeIfPresent(Int?.self, forKey: .subscribers) ?? nil
+        self.posts = try container.decodeIfPresent(Int?.self, forKey: .posts) ?? nil
+        self.comments = try container.decodeIfPresent(Int?.self, forKey: .comments) ?? nil
+        self.usersActiveDay = try container.decodeIfPresent(Int?.self, forKey: .usersActiveDay) ?? nil
+        self.usersActiveWeek = try container.decodeIfPresent(Int?.self, forKey: .usersActiveWeek) ?? nil
+        self.usersActiveMonth = try container.decodeIfPresent(Int?.self, forKey: .usersActiveMonth) ?? nil
+        self.usersActiveHalfYear = try container.decodeIfPresent(Int?.self, forKey: .usersActiveHalfYear) ?? nil
+        self.subscribersLocal = try container.decodeIfPresent(Int?.self, forKey: .subscribersLocal) ?? nil
+        self.reportCount = try container.decodeIfPresent(Int?.self, forKey: .reportCount) ?? nil
+        self.unresolvedReportCount = try container.decodeIfPresent(Int?.self, forKey: .unresolvedReportCount) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

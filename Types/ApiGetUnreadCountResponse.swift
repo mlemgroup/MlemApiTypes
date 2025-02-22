@@ -20,3 +20,12 @@ public struct ApiGetUnreadCountResponse: Codable, Hashable, Sendable {
     /// Added in 0.20.0
     public var count: Int?
 }
+
+public extension ApiGetUnreadCountResponse {
+    enum CodingKeys: String, CodingKey {
+        case replies = "replies"
+        case mentions = "mentions"
+        case privateMessages = "private_messages"
+        case count = "count"
+    }
+}

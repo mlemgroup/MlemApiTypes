@@ -17,3 +17,12 @@ public struct ApiOpenGraphData: Codable, Hashable, Sendable {
     public var image: String?
     public var embedVideoUrl: URL?
 }
+
+public extension ApiOpenGraphData {
+    enum CodingKeys: String, CodingKey {
+        case title = "title"
+        case description = "description"
+        case image = "image"
+        case embedVideoUrl = "embed_video_url"
+    }
+}

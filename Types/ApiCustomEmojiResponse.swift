@@ -13,3 +13,9 @@ import Foundation
 public struct ApiCustomEmojiResponse: Codable, Hashable, Sendable {
     public var customEmoji: ApiCustomEmojiView
 }
+
+public extension ApiCustomEmojiResponse {
+    enum CodingKeys: String, CodingKey {
+        case customEmoji = "custom_emoji"
+    }
+}

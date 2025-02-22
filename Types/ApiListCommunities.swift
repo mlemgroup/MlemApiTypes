@@ -18,3 +18,13 @@ public struct ApiListCommunities: Codable, Hashable, Sendable {
     /// Added in 0.18.1
     public var showNsfw: Bool?
 }
+
+public extension ApiListCommunities {
+    enum CodingKeys: String, CodingKey {
+        case type_ = "type_"
+        case sort = "sort"
+        case page = "page"
+        case limit = "limit"
+        case showNsfw = "show_nsfw"
+    }
+}

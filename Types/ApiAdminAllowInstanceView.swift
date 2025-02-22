@@ -16,3 +16,11 @@ public struct ApiAdminAllowInstanceView: Codable, Hashable, Sendable {
     public var instance: ApiInstance
     public var admin: ApiPerson?
 }
+
+public extension ApiAdminAllowInstanceView {
+    enum CodingKeys: String, CodingKey {
+        case adminAllowInstance = "admin_allow_instance"
+        case instance = "instance"
+        case admin = "admin"
+    }
+}

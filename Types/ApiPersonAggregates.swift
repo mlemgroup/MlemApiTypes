@@ -22,3 +22,14 @@ public struct ApiPersonAggregates: Codable, Hashable, Sendable {
     /// Removed in 0.19.0
     public var commentScore: Int?
 }
+
+public extension ApiPersonAggregates {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case personId = "person_id"
+        case postCount = "post_count"
+        case postScore = "post_score"
+        case commentCount = "comment_count"
+        case commentScore = "comment_score"
+    }
+}

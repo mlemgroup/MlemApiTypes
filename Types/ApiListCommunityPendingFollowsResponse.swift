@@ -14,3 +14,9 @@ import Foundation
 public struct ApiListCommunityPendingFollowsResponse: Codable, Hashable, Sendable {
     public var items: [ApiPendingFollow]
 }
+
+public extension ApiListCommunityPendingFollowsResponse {
+    enum CodingKeys: String, CodingKey {
+        case items = "items"
+    }
+}

@@ -14,3 +14,9 @@ import Foundation
 public struct ApiGetPersonMentionsResponse: Codable, Hashable, Sendable {
     public var mentions: [ApiPersonMentionView]
 }
+
+public extension ApiGetPersonMentionsResponse {
+    enum CodingKeys: String, CodingKey {
+        case mentions = "mentions"
+    }
+}

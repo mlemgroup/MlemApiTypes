@@ -14,3 +14,9 @@ import Foundation
 public struct ApiPostJoinResponse: Codable, Hashable, Sendable {
     public var joined: Bool
 }
+
+public extension ApiPostJoinResponse {
+    enum CodingKeys: String, CodingKey {
+        case joined = "joined"
+    }
+}

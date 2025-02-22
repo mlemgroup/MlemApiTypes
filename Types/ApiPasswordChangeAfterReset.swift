@@ -15,3 +15,11 @@ public struct ApiPasswordChangeAfterReset: Codable, Hashable, Sendable {
     public var password: String
     public var passwordVerify: String
 }
+
+public extension ApiPasswordChangeAfterReset {
+    enum CodingKeys: String, CodingKey {
+        case token = "token"
+        case password = "password"
+        case passwordVerify = "password_verify"
+    }
+}

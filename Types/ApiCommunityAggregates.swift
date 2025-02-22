@@ -47,7 +47,7 @@ public extension ApiCommunityAggregates {
 
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decodeIfPresent(Int.self, forKey: .id)
+        self.id = try container.decodeIfPresent(Int?.self, forKey: .id) ?? nil
         self.communityId = try container.decode(Int.self, forKey: .communityId)
         self.subscribers = try container.decode(Int.self, forKey: .subscribers)
         self.posts = try container.decode(Int.self, forKey: .posts)
@@ -57,8 +57,8 @@ public extension ApiCommunityAggregates {
         self.usersActiveWeek = try container.decode(Int.self, forKey: .usersActiveWeek)
         self.usersActiveMonth = try container.decode(Int.self, forKey: .usersActiveMonth)
         self.usersActiveHalfYear = try container.decode(Int.self, forKey: .usersActiveHalfYear)
-        self.hotRank = try container.decodeIfPresent(Int.self, forKey: .hotRank)
-        self.subscribersLocal = try container.decodeIfPresent(Int.self, forKey: .subscribersLocal)
+        self.hotRank = try container.decodeIfPresent(Int?.self, forKey: .hotRank) ?? nil
+        self.subscribersLocal = try container.decodeIfPresent(Int?.self, forKey: .subscribersLocal) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

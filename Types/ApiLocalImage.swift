@@ -29,9 +29,9 @@ public extension ApiLocalImage {
 
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.localUserId = try container.decode(Int?.self, forKey: .localUserId)
+        self.localUserId = try container.decodeIfPresent(Int?.self, forKey: .localUserId) ?? nil
         self.pictrsAlias = try container.decode(String.self, forKey: .pictrsAlias)
-        self.pictrsDeleteToken = try container.decodeIfPresent(String.self, forKey: .pictrsDeleteToken)
+        self.pictrsDeleteToken = try container.decodeIfPresent(String?.self, forKey: .pictrsDeleteToken) ?? nil
         self.published = try container.decode(Date.self, forKey: .published)
     }
 

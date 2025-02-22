@@ -16,3 +16,11 @@ public struct ApiListPrivateMessageReports: Codable, Hashable, Sendable {
     public var limit: Int?
     public var unresolvedOnly: Bool?
 }
+
+public extension ApiListPrivateMessageReports {
+    enum CodingKeys: String, CodingKey {
+        case page = "page"
+        case limit = "limit"
+        case unresolvedOnly = "unresolved_only"
+    }
+}

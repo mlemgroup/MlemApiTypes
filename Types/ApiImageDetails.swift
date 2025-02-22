@@ -17,3 +17,12 @@ public struct ApiImageDetails: Codable, Hashable, Sendable {
     public var height: Int
     public var contentType: String
 }
+
+public extension ApiImageDetails {
+    enum CodingKeys: String, CodingKey {
+        case link = "link"
+        case width = "width"
+        case height = "height"
+        case contentType = "content_type"
+    }
+}

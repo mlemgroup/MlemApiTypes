@@ -16,3 +16,11 @@ public struct ApiAdminAllowInstanceParams: Codable, Hashable, Sendable {
     public var allow: Bool
     public var reason: String?
 }
+
+public extension ApiAdminAllowInstanceParams {
+    enum CodingKeys: String, CodingKey {
+        case instance = "instance"
+        case allow = "allow"
+        case reason = "reason"
+    }
+}

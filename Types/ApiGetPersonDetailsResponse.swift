@@ -20,3 +20,13 @@ public struct ApiGetPersonDetailsResponse: Codable, Hashable, Sendable {
     /// Added in 0.19.2; made optional in 0.19.3
     public var site: ApiSite?
 }
+
+public extension ApiGetPersonDetailsResponse {
+    enum CodingKeys: String, CodingKey {
+        case personView = "person_view"
+        case comments = "comments"
+        case posts = "posts"
+        case moderates = "moderates"
+        case site = "site"
+    }
+}

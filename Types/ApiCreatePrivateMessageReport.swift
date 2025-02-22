@@ -14,3 +14,10 @@ public struct ApiCreatePrivateMessageReport: Codable, Hashable, Sendable {
     public var privateMessageId: Int
     public var reason: String
 }
+
+public extension ApiCreatePrivateMessageReport {
+    enum CodingKeys: String, CodingKey {
+        case privateMessageId = "private_message_id"
+        case reason = "reason"
+    }
+}

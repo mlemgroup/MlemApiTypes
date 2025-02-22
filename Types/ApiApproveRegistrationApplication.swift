@@ -15,3 +15,11 @@ public struct ApiApproveRegistrationApplication: Codable, Hashable, Sendable {
     public var approve: Bool
     public var denyReason: String?
 }
+
+public extension ApiApproveRegistrationApplication {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case approve = "approve"
+        case denyReason = "deny_reason"
+    }
+}

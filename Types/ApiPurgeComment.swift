@@ -14,3 +14,10 @@ public struct ApiPurgeComment: Codable, Hashable, Sendable {
     public var commentId: Int
     public var reason: String?
 }
+
+public extension ApiPurgeComment {
+    enum CodingKeys: String, CodingKey {
+        case commentId = "comment_id"
+        case reason = "reason"
+    }
+}

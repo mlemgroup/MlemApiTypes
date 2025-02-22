@@ -13,3 +13,9 @@ import Foundation
 public struct ApiBannedPersonsResponse: Codable, Hashable, Sendable {
     public var banned: [ApiPersonView]
 }
+
+public extension ApiBannedPersonsResponse {
+    enum CodingKeys: String, CodingKey {
+        case banned = "banned"
+    }
+}

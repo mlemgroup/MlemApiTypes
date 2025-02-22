@@ -69,3 +69,44 @@ public struct ApiSaveUserSettings: Codable, Hashable, Sendable {
     /// Added in 0.20.0
     public var hideMedia: Bool?
 }
+
+public extension ApiSaveUserSettings {
+    enum CodingKeys: String, CodingKey {
+        case showNsfw = "show_nsfw"
+        case showScores = "show_scores"
+        case theme = "theme"
+        case defaultSortType = "default_sort_type"
+        case defaultListingType = "default_listing_type"
+        case interfaceLanguage = "interface_language"
+        case avatar = "avatar"
+        case banner = "banner"
+        case displayName = "display_name"
+        case email = "email"
+        case bio = "bio"
+        case matrixUserId = "matrix_user_id"
+        case showAvatars = "show_avatars"
+        case sendNotificationsToEmail = "send_notifications_to_email"
+        case botAccount = "bot_account"
+        case showBotAccounts = "show_bot_accounts"
+        case showReadPosts = "show_read_posts"
+        case showNewPostNotifs = "show_new_post_notifs"
+        case discussionLanguages = "discussion_languages"
+        case generateTotp2fa = "generate_totp_2fa"
+        case openLinksInNewTab = "open_links_in_new_tab"
+        case blurNsfw = "blur_nsfw"
+        case autoExpand = "auto_expand"
+        case infiniteScrollEnabled = "infinite_scroll_enabled"
+        case postListingMode = "post_listing_mode"
+        case enableKeyboardNavigation = "enable_keyboard_navigation"
+        case enableAnimatedImages = "enable_animated_images"
+        case collapseBotComments = "collapse_bot_comments"
+        case showUpvotes = "show_upvotes"
+        case showDownvotes = "show_downvotes"
+        case showUpvotePercentage = "show_upvote_percentage"
+        case defaultPostSortType = "default_post_sort_type"
+        case defaultCommentSortType = "default_comment_sort_type"
+        case enablePrivateMessages = "enable_private_messages"
+        case autoMarkFetchedPostsAsRead = "auto_mark_fetched_posts_as_read"
+        case hideMedia = "hide_media"
+    }
+}

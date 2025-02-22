@@ -15,3 +15,11 @@ public struct ApiModRemoveCommunityView: Codable, Hashable, Sendable {
     public var moderator: ApiPerson?
     public var community: ApiCommunity
 }
+
+public extension ApiModRemoveCommunityView {
+    enum CodingKeys: String, CodingKey {
+        case modRemoveCommunity = "mod_remove_community"
+        case moderator = "moderator"
+        case community = "community"
+    }
+}

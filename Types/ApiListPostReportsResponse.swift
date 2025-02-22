@@ -14,3 +14,9 @@ import Foundation
 public struct ApiListPostReportsResponse: Codable, Hashable, Sendable {
     public var postReports: [ApiPostReportView]
 }
+
+public extension ApiListPostReportsResponse {
+    enum CodingKeys: String, CodingKey {
+        case postReports = "post_reports"
+    }
+}

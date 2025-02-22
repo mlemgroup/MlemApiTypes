@@ -14,3 +14,9 @@ import Foundation
 public struct ApiPurgeItemResponse: Codable, Hashable, Sendable {
     public var success: Bool
 }
+
+public extension ApiPurgeItemResponse {
+    enum CodingKeys: String, CodingKey {
+        case success = "success"
+    }
+}

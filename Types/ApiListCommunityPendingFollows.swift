@@ -17,3 +17,12 @@ public struct ApiListCommunityPendingFollows: Codable, Hashable, Sendable {
     public var page: Int?
     public var limit: Int?
 }
+
+public extension ApiListCommunityPendingFollows {
+    enum CodingKeys: String, CodingKey {
+        case pendingOnly = "pending_only"
+        case allCommunities = "all_communities"
+        case page = "page"
+        case limit = "limit"
+    }
+}

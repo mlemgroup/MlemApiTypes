@@ -34,9 +34,9 @@ public extension ApiInstance {
         self.id = try container.decode(Int.self, forKey: .id)
         self.domain = try container.decode(String.self, forKey: .domain)
         self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decode(Date?.self, forKey: .updated)
-        self.software = try container.decode(String?.self, forKey: .software)
-        self.version = try container.decode(String?.self, forKey: .version)
+        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
+        self.software = try container.decodeIfPresent(String?.self, forKey: .software) ?? nil
+        self.version = try container.decodeIfPresent(String?.self, forKey: .version) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

@@ -19,3 +19,14 @@ public struct ApiReadableFederationState: Codable, Hashable, Sendable {
     public var lastRetry: String?
     public var nextRetry: String?
 }
+
+public extension ApiReadableFederationState {
+    enum CodingKeys: String, CodingKey {
+        case instanceId = "instance_id"
+        case lastSuccessfulId = "last_successful_id"
+        case lastSuccessfulPublishedTime = "last_successful_published_time"
+        case failCount = "fail_count"
+        case lastRetry = "last_retry"
+        case nextRetry = "next_retry"
+    }
+}

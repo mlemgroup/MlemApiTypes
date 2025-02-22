@@ -14,3 +14,9 @@ import Foundation
 public struct ApiDeleteTagline: Codable, Hashable, Sendable {
     public var id: Int
 }
+
+public extension ApiDeleteTagline {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+    }
+}

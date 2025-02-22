@@ -31,3 +31,23 @@ public struct ApiCommentReplyView: Codable, Hashable, Sendable {
     /// Added in 0.19.4
     public var bannedFromCommunity: Bool?
 }
+
+public extension ApiCommentReplyView {
+    enum CodingKeys: String, CodingKey {
+        case commentReply = "comment_reply"
+        case comment = "comment"
+        case creator = "creator"
+        case post = "post"
+        case community = "community"
+        case recipient = "recipient"
+        case counts = "counts"
+        case creatorBannedFromCommunity = "creator_banned_from_community"
+        case subscribed = "subscribed"
+        case saved = "saved"
+        case creatorBlocked = "creator_blocked"
+        case myVote = "my_vote"
+        case creatorIsModerator = "creator_is_moderator"
+        case creatorIsAdmin = "creator_is_admin"
+        case bannedFromCommunity = "banned_from_community"
+    }
+}

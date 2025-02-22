@@ -33,7 +33,7 @@ public extension ApiModRemoveCommentView {
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.modRemoveComment = try container.decode(ApiModRemoveComment.self, forKey: .modRemoveComment)
-        self.moderator = try container.decode(ApiPerson?.self, forKey: .moderator)
+        self.moderator = try container.decodeIfPresent(ApiPerson?.self, forKey: .moderator) ?? nil
         self.comment = try container.decode(ApiComment.self, forKey: .comment)
         self.otherPerson = try (
             container.decodeIfPresent(ApiPerson.self, forKey: .otherPerson)

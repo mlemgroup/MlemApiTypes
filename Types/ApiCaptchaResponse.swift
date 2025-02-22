@@ -15,3 +15,11 @@ public struct ApiCaptchaResponse: Codable, Hashable, Sendable {
     public var wav: String
     public var uuid: String
 }
+
+public extension ApiCaptchaResponse {
+    enum CodingKeys: String, CodingKey {
+        case png = "png"
+        case wav = "wav"
+        case uuid = "uuid"
+    }
+}

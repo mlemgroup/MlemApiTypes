@@ -37,13 +37,13 @@ public extension ApiCustomEmoji {
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(Int.self, forKey: .id)
-        self.localSiteId = try container.decodeIfPresent(Int.self, forKey: .localSiteId)
+        self.localSiteId = try container.decodeIfPresent(Int?.self, forKey: .localSiteId) ?? nil
         self.shortcode = try container.decode(String.self, forKey: .shortcode)
         self.imageUrl = try container.decode(String.self, forKey: .imageUrl)
         self.altText = try container.decode(String.self, forKey: .altText)
         self.category = try container.decode(String.self, forKey: .category)
         self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decode(Date?.self, forKey: .updated)
+        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

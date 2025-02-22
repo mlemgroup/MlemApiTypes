@@ -18,3 +18,13 @@ public struct ApiLinkMetadata: Codable, Hashable, Sendable {
     public var embedVideoUrl: URL?
     public var contentType: String?
 }
+
+public extension ApiLinkMetadata {
+    enum CodingKeys: String, CodingKey {
+        case title = "title"
+        case description = "description"
+        case image = "image"
+        case embedVideoUrl = "embed_video_url"
+        case contentType = "content_type"
+    }
+}

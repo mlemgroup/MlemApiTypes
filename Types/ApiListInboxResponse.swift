@@ -14,3 +14,9 @@ import Foundation
 public struct ApiListInboxResponse: Codable, Hashable, Sendable {
     public var inbox: [ApiInboxCombinedView]
 }
+
+public extension ApiListInboxResponse {
+    enum CodingKeys: String, CodingKey {
+        case inbox = "inbox"
+    }
+}

@@ -29,7 +29,7 @@ public extension ApiModBanFromCommunityView {
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.modBanFromCommunity = try container.decode(ApiModBanFromCommunity.self, forKey: .modBanFromCommunity)
-        self.moderator = try container.decode(ApiPerson?.self, forKey: .moderator)
+        self.moderator = try container.decodeIfPresent(ApiPerson?.self, forKey: .moderator) ?? nil
         self.community = try container.decode(ApiCommunity.self, forKey: .community)
         self.otherPerson = try (
             container.decodeIfPresent(ApiPerson.self, forKey: .otherPerson)

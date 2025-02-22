@@ -17,3 +17,13 @@ public struct ApiCreateCustomEmoji: Codable, Hashable, Sendable {
     public var altText: String
     public var keywords: [String]
 }
+
+public extension ApiCreateCustomEmoji {
+    enum CodingKeys: String, CodingKey {
+        case category = "category"
+        case shortcode = "shortcode"
+        case imageUrl = "image_url"
+        case altText = "alt_text"
+        case keywords = "keywords"
+    }
+}

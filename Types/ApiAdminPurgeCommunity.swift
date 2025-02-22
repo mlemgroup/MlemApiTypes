@@ -30,7 +30,7 @@ public extension ApiAdminPurgeCommunity {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(Int.self, forKey: .id)
         self.adminPersonId = try container.decode(Int.self, forKey: .adminPersonId)
-        self.reason = try container.decode(String?.self, forKey: .reason)
+        self.reason = try container.decodeIfPresent(String?.self, forKey: .reason) ?? nil
         self.published = try (
             container.decodeIfPresent(Date.self, forKey: .published)
             ?? container.decode(Date.self, forKey: .when_)

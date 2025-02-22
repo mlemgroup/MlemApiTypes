@@ -43,9 +43,9 @@ public extension ApiPrivateMessageReport {
         self.originalPmText = try container.decode(String.self, forKey: .originalPmText)
         self.reason = try container.decode(String.self, forKey: .reason)
         self.resolved = try container.decode(Bool.self, forKey: .resolved)
-        self.resolverId = try container.decode(Int?.self, forKey: .resolverId)
+        self.resolverId = try container.decodeIfPresent(Int?.self, forKey: .resolverId) ?? nil
         self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decode(Date?.self, forKey: .updated)
+        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

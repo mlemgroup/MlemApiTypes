@@ -14,3 +14,9 @@ import Foundation
 public struct ApiUpdateTotpResponse: Codable, Hashable, Sendable {
     public var enabled: Bool
 }
+
+public extension ApiUpdateTotpResponse {
+    enum CodingKeys: String, CodingKey {
+        case enabled = "enabled"
+    }
+}

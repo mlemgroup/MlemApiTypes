@@ -17,3 +17,12 @@ public struct ApiListCustomEmojis: Codable, Hashable, Sendable {
     public var category: String?
     public var ignorePageLimits: Bool?
 }
+
+public extension ApiListCustomEmojis {
+    enum CodingKeys: String, CodingKey {
+        case page = "page"
+        case limit = "limit"
+        case category = "category"
+        case ignorePageLimits = "ignore_page_limits"
+    }
+}

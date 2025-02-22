@@ -17,3 +17,11 @@ public struct ApiVoteView: Codable, Hashable, Sendable {
     /// Added in 0.19.4
     public var creatorBannedFromCommunity: Bool?
 }
+
+public extension ApiVoteView {
+    enum CodingKeys: String, CodingKey {
+        case creator = "creator"
+        case score = "score"
+        case creatorBannedFromCommunity = "creator_banned_from_community"
+    }
+}

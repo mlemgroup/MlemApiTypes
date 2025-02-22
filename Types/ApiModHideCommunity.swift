@@ -39,7 +39,7 @@ public extension ApiModHideCommunity {
             container.decodeIfPresent(Date.self, forKey: .published)
             ?? container.decode(Date.self, forKey: .when_)
         )
-        self.reason = try container.decode(String?.self, forKey: .reason)
+        self.reason = try container.decodeIfPresent(String?.self, forKey: .reason) ?? nil
         self.hidden = try container.decode(Bool.self, forKey: .hidden)
     }
 

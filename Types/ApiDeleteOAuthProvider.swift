@@ -14,3 +14,9 @@ import Foundation
 public struct ApiDeleteOAuthProvider: Codable, Hashable, Sendable {
     public var id: Int
 }
+
+public extension ApiDeleteOAuthProvider {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+    }
+}

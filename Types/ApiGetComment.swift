@@ -13,3 +13,9 @@ import Foundation
 public struct ApiGetComment: Codable, Hashable, Sendable {
     public var id: Int
 }
+
+public extension ApiGetComment {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+    }
+}

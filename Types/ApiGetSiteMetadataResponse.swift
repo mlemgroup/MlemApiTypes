@@ -13,3 +13,9 @@ import Foundation
 public struct ApiGetSiteMetadataResponse: Codable, Hashable, Sendable {
     public var metadata: ApiSiteMetadata
 }
+
+public extension ApiGetSiteMetadataResponse {
+    enum CodingKeys: String, CodingKey {
+        case metadata = "metadata"
+    }
+}

@@ -14,3 +14,10 @@ public struct ApiBanFromCommunityResponse: Codable, Hashable, Sendable {
     public var personView: ApiPersonView
     public var banned: Bool
 }
+
+public extension ApiBanFromCommunityResponse {
+    enum CodingKeys: String, CodingKey {
+        case personView = "person_view"
+        case banned = "banned"
+    }
+}

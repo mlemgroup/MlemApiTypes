@@ -14,7 +14,7 @@ public struct GetMyUserRequest: ApiGetRequest {
     public typealias Parameters = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiMyUserInfo
     
-    public let path: String = "account"
+    public let path: String = "api/v4/account"
     public let parameters: Parameters?
     
     init() {

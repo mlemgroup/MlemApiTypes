@@ -14,3 +14,10 @@ public struct ApiSaveComment: Codable, Hashable, Sendable {
     public var commentId: Int
     public var save: Bool
 }
+
+public extension ApiSaveComment {
+    enum CodingKeys: String, CodingKey {
+        case commentId = "comment_id"
+        case save = "save"
+    }
+}

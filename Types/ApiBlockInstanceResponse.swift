@@ -14,3 +14,9 @@ import Foundation
 public struct ApiBlockInstanceResponse: Codable, Hashable, Sendable {
     public var blocked: Bool
 }
+
+public extension ApiBlockInstanceResponse {
+    enum CodingKeys: String, CodingKey {
+        case blocked = "blocked"
+    }
+}

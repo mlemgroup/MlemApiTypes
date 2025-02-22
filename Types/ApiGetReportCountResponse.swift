@@ -22,3 +22,13 @@ public struct ApiGetReportCountResponse: Codable, Hashable, Sendable {
     /// Added in 0.20.0
     public var count: Int?
 }
+
+public extension ApiGetReportCountResponse {
+    enum CodingKeys: String, CodingKey {
+        case communityId = "community_id"
+        case commentReports = "comment_reports"
+        case postReports = "post_reports"
+        case privateMessageReports = "private_message_reports"
+        case count = "count"
+    }
+}

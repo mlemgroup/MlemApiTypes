@@ -14,3 +14,9 @@ import Foundation
 public struct ApiMarkManyPostsAsRead: Codable, Hashable, Sendable {
     public var postIds: [Int]
 }
+
+public extension ApiMarkManyPostsAsRead {
+    enum CodingKeys: String, CodingKey {
+        case postIds = "post_ids"
+    }
+}

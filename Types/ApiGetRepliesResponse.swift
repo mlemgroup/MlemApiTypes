@@ -14,3 +14,9 @@ import Foundation
 public struct ApiGetRepliesResponse: Codable, Hashable, Sendable {
     public var replies: [ApiCommentReplyView]
 }
+
+public extension ApiGetRepliesResponse {
+    enum CodingKeys: String, CodingKey {
+        case replies = "replies"
+    }
+}

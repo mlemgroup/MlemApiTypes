@@ -14,3 +14,10 @@ public struct ApiDeleteCommunity: Codable, Hashable, Sendable {
     public var communityId: Int
     public var deleted: Bool
 }
+
+public extension ApiDeleteCommunity {
+    enum CodingKeys: String, CodingKey {
+        case communityId = "community_id"
+        case deleted = "deleted"
+    }
+}

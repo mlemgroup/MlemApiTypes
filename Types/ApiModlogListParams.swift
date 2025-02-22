@@ -23,3 +23,16 @@ public struct ApiModlogListParams: Codable, Hashable, Sendable {
     /// Added in 0.19.4
     public var commentId: Int?
 }
+
+public extension ApiModlogListParams {
+    enum CodingKeys: String, CodingKey {
+        case communityId = "community_id"
+        case modPersonId = "mod_person_id"
+        case otherPersonId = "other_person_id"
+        case page = "page"
+        case limit = "limit"
+        case hideModlogNames = "hide_modlog_names"
+        case postId = "post_id"
+        case commentId = "comment_id"
+    }
+}

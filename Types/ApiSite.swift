@@ -54,22 +54,22 @@ public extension ApiSite {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(Int.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
-        self.sidebar = try container.decode(String?.self, forKey: .sidebar)
+        self.sidebar = try container.decodeIfPresent(String?.self, forKey: .sidebar) ?? nil
         self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decode(Date?.self, forKey: .updated)
-        self.icon = try container.decode(URL?.self, forKey: .icon)
-        self.banner = try container.decode(URL?.self, forKey: .banner)
-        self.description = try container.decode(String?.self, forKey: .description)
+        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
+        self.icon = try container.decodeIfPresent(URL?.self, forKey: .icon) ?? nil
+        self.banner = try container.decodeIfPresent(URL?.self, forKey: .banner) ?? nil
+        self.description = try container.decodeIfPresent(String?.self, forKey: .description) ?? nil
         self.actorId = try (
             container.decodeIfPresent(ActorIdentifier.self, forKey: .actorId)
             ?? container.decode(ActorIdentifier.self, forKey: .apId)
         )
         self.lastRefreshedAt = try container.decode(Date.self, forKey: .lastRefreshedAt)
         self.inboxUrl = try container.decode(String.self, forKey: .inboxUrl)
-        self.privateKey = try container.decodeIfPresent(String.self, forKey: .privateKey) ?? nil
+        self.privateKey = try container.decodeIfPresent(String?.self, forKey: .privateKey) ?? nil
         self.publicKey = try container.decode(String.self, forKey: .publicKey)
         self.instanceId = try container.decode(Int.self, forKey: .instanceId)
-        self.contentWarning = try container.decodeIfPresent(String.self, forKey: .contentWarning) ?? nil
+        self.contentWarning = try container.decodeIfPresent(String?.self, forKey: .contentWarning) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

@@ -14,3 +14,10 @@ public struct ApiPurgePost: Codable, Hashable, Sendable {
     public var postId: Int
     public var reason: String?
 }
+
+public extension ApiPurgePost {
+    enum CodingKeys: String, CodingKey {
+        case postId = "post_id"
+        case reason = "reason"
+    }
+}

@@ -31,3 +31,20 @@ public struct ApiGetSiteResponse: Codable, Hashable, Sendable {
     /// Added in 0.20.0
     public var imageUploadDisabled: Bool?
 }
+
+public extension ApiGetSiteResponse {
+    enum CodingKeys: String, CodingKey {
+        case siteView = "site_view"
+        case admins = "admins"
+        case version = "version"
+        case myUser = "my_user"
+        case allLanguages = "all_languages"
+        case discussionLanguages = "discussion_languages"
+        case taglines = "taglines"
+        case customEmojis = "custom_emojis"
+        case blockedUrls = "blocked_urls"
+        case tagline = "tagline"
+        case adminOauthProviders = "admin_oauth_providers"
+        case imageUploadDisabled = "image_upload_disabled"
+    }
+}

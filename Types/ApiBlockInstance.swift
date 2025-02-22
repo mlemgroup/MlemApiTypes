@@ -15,3 +15,10 @@ public struct ApiBlockInstance: Codable, Hashable, Sendable {
     public var instanceId: Int
     public var block: Bool
 }
+
+public extension ApiBlockInstance {
+    enum CodingKeys: String, CodingKey {
+        case instanceId = "instance_id"
+        case block = "block"
+    }
+}

@@ -13,3 +13,9 @@ import Foundation
 public struct ApiAddModToCommunityResponse: Codable, Hashable, Sendable {
     public var moderators: [ApiCommunityModeratorView]
 }
+
+public extension ApiAddModToCommunityResponse {
+    enum CodingKeys: String, CodingKey {
+        case moderators = "moderators"
+    }
+}

@@ -18,3 +18,12 @@ public struct ApiLocalUserView: Codable, Hashable, Sendable {
     /// Added in 0.19.4, removed in 0.20.0
     public var localUserVoteDisplayMode: ApiLocalUserVoteDisplayMode?
 }
+
+public extension ApiLocalUserView {
+    enum CodingKeys: String, CodingKey {
+        case localUser = "local_user"
+        case person = "person"
+        case counts = "counts"
+        case localUserVoteDisplayMode = "local_user_vote_display_mode"
+    }
+}

@@ -63,7 +63,7 @@ public extension ApiOAuthProvider {
         self.accountLinkingEnabled = try container.decode(Bool.self, forKey: .accountLinkingEnabled)
         self.enabled = try container.decode(Bool.self, forKey: .enabled)
         self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decode(Date?.self, forKey: .updated)
+        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
         self.usePkce = try container.decode(Bool.self, forKey: .usePkce)
     }
 

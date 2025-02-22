@@ -28,3 +28,19 @@ public struct ApiEditCommunity: Codable, Hashable, Sendable {
     /// Added in 0.20.0
     public var sidebar: String?
 }
+
+public extension ApiEditCommunity {
+    enum CodingKeys: String, CodingKey {
+        case communityId = "community_id"
+        case title = "title"
+        case description = "description"
+        case icon = "icon"
+        case banner = "banner"
+        case nsfw = "nsfw"
+        case postingRestrictedToMods = "posting_restricted_to_mods"
+        case discussionLanguages = "discussion_languages"
+        case onlyFollowersCanVote = "only_followers_can_vote"
+        case visibility = "visibility"
+        case sidebar = "sidebar"
+    }
+}

@@ -28,3 +28,18 @@ public struct ApiGetModlog: Codable, Hashable, Sendable {
     /// Added in 0.20.0
     public var pageBack: Bool?
 }
+
+public extension ApiGetModlog {
+    enum CodingKeys: String, CodingKey {
+        case modPersonId = "mod_person_id"
+        case communityId = "community_id"
+        case page = "page"
+        case limit = "limit"
+        case type_ = "type_"
+        case otherPersonId = "other_person_id"
+        case postId = "post_id"
+        case commentId = "comment_id"
+        case pageCursor = "page_cursor"
+        case pageBack = "page_back"
+    }
+}

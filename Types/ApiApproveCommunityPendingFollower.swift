@@ -16,3 +16,11 @@ public struct ApiApproveCommunityPendingFollower: Codable, Hashable, Sendable {
     public var followerId: Int
     public var approve: Bool
 }
+
+public extension ApiApproveCommunityPendingFollower {
+    enum CodingKeys: String, CodingKey {
+        case communityId = "community_id"
+        case followerId = "follower_id"
+        case approve = "approve"
+    }
+}

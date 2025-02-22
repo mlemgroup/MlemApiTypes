@@ -14,7 +14,7 @@ public struct ListReportsRequest: ApiGetRequest {
     public typealias Parameters = ApiListReports
     public typealias Response = ApiListReportsResponse
     
-    public let path: String = "report/list"
+    public let path: String = "api/v4/report/list"
     public let parameters: Parameters?
     
     init(

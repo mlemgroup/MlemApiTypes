@@ -14,3 +14,10 @@ public struct ApiCreateCommentLike: Codable, Hashable, Sendable {
     public var commentId: Int
     public var score: Int
 }
+
+public extension ApiCreateCommentLike {
+    enum CodingKeys: String, CodingKey {
+        case commentId = "comment_id"
+        case score = "score"
+    }
+}

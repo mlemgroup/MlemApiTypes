@@ -15,3 +15,9 @@ import Foundation
 public struct ApiGetCommunityPendingFollowsCountResponse: Codable, Hashable, Sendable {
     public var count: Int
 }
+
+public extension ApiGetCommunityPendingFollowsCountResponse {
+    enum CodingKeys: String, CodingKey {
+        case count = "count"
+    }
+}

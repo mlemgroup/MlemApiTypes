@@ -14,7 +14,7 @@ public struct GetRepliesRequest: ApiGetRequest {
     public typealias Parameters = ApiGetReplies
     public typealias Response = ApiGetRepliesResponse
     
-    public let path: String = "user/replies"
+    public let path: String = "api/v3/user/replies"
     public let parameters: Parameters?
     
     init(

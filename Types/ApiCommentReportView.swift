@@ -33,3 +33,23 @@ public struct ApiCommentReportView: Codable, Hashable, Sendable {
     /// Added in 0.19.4
     public var saved: Bool?
 }
+
+public extension ApiCommentReportView {
+    enum CodingKeys: String, CodingKey {
+        case commentReport = "comment_report"
+        case comment = "comment"
+        case post = "post"
+        case community = "community"
+        case creator = "creator"
+        case commentCreator = "comment_creator"
+        case counts = "counts"
+        case creatorBannedFromCommunity = "creator_banned_from_community"
+        case myVote = "my_vote"
+        case resolver = "resolver"
+        case creatorIsModerator = "creator_is_moderator"
+        case creatorIsAdmin = "creator_is_admin"
+        case creatorBlocked = "creator_blocked"
+        case subscribed = "subscribed"
+        case saved = "saved"
+    }
+}

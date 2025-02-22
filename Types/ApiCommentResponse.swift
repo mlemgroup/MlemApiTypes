@@ -16,3 +16,11 @@ public struct ApiCommentResponse: Codable, Hashable, Sendable {
     /// Removed in 0.19.0
     public var formId: String?
 }
+
+public extension ApiCommentResponse {
+    enum CodingKeys: String, CodingKey {
+        case commentView = "comment_view"
+        case recipientIds = "recipient_ids"
+        case formId = "form_id"
+    }
+}

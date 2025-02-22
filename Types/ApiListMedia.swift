@@ -15,3 +15,10 @@ public struct ApiListMedia: Codable, Hashable, Sendable {
     public var page: Int?
     public var limit: Int?
 }
+
+public extension ApiListMedia {
+    enum CodingKeys: String, CodingKey {
+        case page = "page"
+        case limit = "limit"
+    }
+}

@@ -15,3 +15,10 @@ public struct ApiGetRandomCommunity: Codable, Hashable, Sendable {
     public var type_: ApiListingType?
     public var showNsfw: Bool?
 }
+
+public extension ApiGetRandomCommunity {
+    enum CodingKeys: String, CodingKey {
+        case type_ = "type_"
+        case showNsfw = "show_nsfw"
+    }
+}

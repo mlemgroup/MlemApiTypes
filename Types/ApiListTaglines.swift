@@ -15,3 +15,10 @@ public struct ApiListTaglines: Codable, Hashable, Sendable {
     public var page: Int?
     public var limit: Int?
 }
+
+public extension ApiListTaglines {
+    enum CodingKeys: String, CodingKey {
+        case page = "page"
+        case limit = "limit"
+    }
+}

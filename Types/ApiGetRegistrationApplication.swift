@@ -14,3 +14,9 @@ import Foundation
 public struct ApiGetRegistrationApplication: Codable, Hashable, Sendable {
     public var personId: Int
 }
+
+public extension ApiGetRegistrationApplication {
+    enum CodingKeys: String, CodingKey {
+        case personId = "person_id"
+    }
+}

@@ -17,3 +17,11 @@ public struct ApiMarkPostAsRead: Codable, Hashable, Sendable {
     /// Added in 0.19.0, removed in 0.20.0; made non-optional in 0.19.4
     public var postIds: [Int]?
 }
+
+public extension ApiMarkPostAsRead {
+    enum CodingKeys: String, CodingKey {
+        case postId = "post_id"
+        case read = "read"
+        case postIds = "post_ids"
+    }
+}

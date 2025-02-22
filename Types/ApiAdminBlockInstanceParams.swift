@@ -17,3 +17,12 @@ public struct ApiAdminBlockInstanceParams: Codable, Hashable, Sendable {
     public var reason: String?
     public var expires: String?
 }
+
+public extension ApiAdminBlockInstanceParams {
+    enum CodingKeys: String, CodingKey {
+        case instance = "instance"
+        case block = "block"
+        case reason = "reason"
+        case expires = "expires"
+    }
+}

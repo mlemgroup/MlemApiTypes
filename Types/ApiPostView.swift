@@ -36,3 +36,25 @@ public struct ApiPostView: Codable, Hashable, Sendable {
     /// Added in 0.20.0
     public var tags: ApiPostTags?
 }
+
+public extension ApiPostView {
+    enum CodingKeys: String, CodingKey {
+        case post = "post"
+        case creator = "creator"
+        case community = "community"
+        case creatorBannedFromCommunity = "creator_banned_from_community"
+        case counts = "counts"
+        case subscribed = "subscribed"
+        case saved = "saved"
+        case read = "read"
+        case creatorBlocked = "creator_blocked"
+        case myVote = "my_vote"
+        case unreadComments = "unread_comments"
+        case creatorIsModerator = "creator_is_moderator"
+        case creatorIsAdmin = "creator_is_admin"
+        case bannedFromCommunity = "banned_from_community"
+        case hidden = "hidden"
+        case imageDetails = "image_details"
+        case tags = "tags"
+    }
+}

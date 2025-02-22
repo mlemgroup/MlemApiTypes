@@ -14,3 +14,9 @@ import Foundation
 public struct ApiListTaglinesResponse: Codable, Hashable, Sendable {
     public var taglines: [ApiTagline]
 }
+
+public extension ApiListTaglinesResponse {
+    enum CodingKeys: String, CodingKey {
+        case taglines = "taglines"
+    }
+}

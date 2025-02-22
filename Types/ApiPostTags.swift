@@ -14,3 +14,9 @@ import Foundation
 public struct ApiPostTags: Codable, Hashable, Sendable {
     public var tags: [ApiTag]
 }
+
+public extension ApiPostTags {
+    enum CodingKeys: String, CodingKey {
+        case tags = "tags"
+    }
+}

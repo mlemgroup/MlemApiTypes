@@ -16,3 +16,12 @@ public struct ApiRegistrationApplicationView: Codable, Hashable, Sendable {
     public var creator: ApiPerson
     public var admin: ApiPerson?
 }
+
+public extension ApiRegistrationApplicationView {
+    enum CodingKeys: String, CodingKey {
+        case registrationApplication = "registration_application"
+        case creatorLocalUser = "creator_local_user"
+        case creator = "creator"
+        case admin = "admin"
+    }
+}

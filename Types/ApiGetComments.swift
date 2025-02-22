@@ -27,3 +27,20 @@ public struct ApiGetComments: Codable, Hashable, Sendable {
     /// Added in 0.19.0
     public var dislikedOnly: Bool?
 }
+
+public extension ApiGetComments {
+    enum CodingKeys: String, CodingKey {
+        case type_ = "type_"
+        case sort = "sort"
+        case maxDepth = "max_depth"
+        case page = "page"
+        case limit = "limit"
+        case communityId = "community_id"
+        case communityName = "community_name"
+        case postId = "post_id"
+        case parentId = "parent_id"
+        case savedOnly = "saved_only"
+        case likedOnly = "liked_only"
+        case dislikedOnly = "disliked_only"
+    }
+}

@@ -15,3 +15,10 @@ public struct ApiUpdateTagline: Codable, Hashable, Sendable {
     public var id: Int
     public var content: String
 }
+
+public extension ApiUpdateTagline {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case content = "content"
+    }
+}

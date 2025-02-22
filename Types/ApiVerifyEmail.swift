@@ -13,3 +13,9 @@ import Foundation
 public struct ApiVerifyEmail: Codable, Hashable, Sendable {
     public var token: String
 }
+
+public extension ApiVerifyEmail {
+    enum CodingKeys: String, CodingKey {
+        case token = "token"
+    }
+}

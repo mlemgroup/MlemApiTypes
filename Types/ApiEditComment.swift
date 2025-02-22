@@ -17,3 +17,12 @@ public struct ApiEditComment: Codable, Hashable, Sendable {
     /// Removed in 0.19.0
     public var formId: String?
 }
+
+public extension ApiEditComment {
+    enum CodingKeys: String, CodingKey {
+        case commentId = "comment_id"
+        case content = "content"
+        case languageId = "language_id"
+        case formId = "form_id"
+    }
+}

@@ -38,3 +38,25 @@ public struct ApiPostReportView: Codable, Hashable, Sendable {
     /// Added in 0.19.4
     public var unreadComments: Int?
 }
+
+public extension ApiPostReportView {
+    enum CodingKeys: String, CodingKey {
+        case postReport = "post_report"
+        case post = "post"
+        case community = "community"
+        case creator = "creator"
+        case postCreator = "post_creator"
+        case creatorBannedFromCommunity = "creator_banned_from_community"
+        case myVote = "my_vote"
+        case counts = "counts"
+        case resolver = "resolver"
+        case creatorIsModerator = "creator_is_moderator"
+        case creatorIsAdmin = "creator_is_admin"
+        case subscribed = "subscribed"
+        case saved = "saved"
+        case read = "read"
+        case hidden = "hidden"
+        case creatorBlocked = "creator_blocked"
+        case unreadComments = "unread_comments"
+    }
+}

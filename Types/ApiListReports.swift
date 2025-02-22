@@ -20,3 +20,15 @@ public struct ApiListReports: Codable, Hashable, Sendable {
     public var pageBack: Bool?
     public var showCommunityRuleViolations: Bool?
 }
+
+public extension ApiListReports {
+    enum CodingKeys: String, CodingKey {
+        case unresolvedOnly = "unresolved_only"
+        case type_ = "type_"
+        case postId = "post_id"
+        case communityId = "community_id"
+        case pageCursor = "page_cursor"
+        case pageBack = "page_back"
+        case showCommunityRuleViolations = "show_community_rule_violations"
+    }
+}

@@ -34,7 +34,7 @@ public extension ApiOAuthAccount {
         self.oauthProviderId = try container.decode(Int.self, forKey: .oauthProviderId)
         self.oauthUserId = try container.decode(String.self, forKey: .oauthUserId)
         self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decode(Date?.self, forKey: .updated)
+        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

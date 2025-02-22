@@ -15,3 +15,11 @@ public struct ApiFeaturePost: Codable, Hashable, Sendable {
     public var featured: Bool
     public var featureType: ApiPostFeatureType
 }
+
+public extension ApiFeaturePost {
+    enum CodingKeys: String, CodingKey {
+        case postId = "post_id"
+        case featured = "featured"
+        case featureType = "feature_type"
+    }
+}

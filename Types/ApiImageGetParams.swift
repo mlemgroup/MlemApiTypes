@@ -15,3 +15,10 @@ public struct ApiImageGetParams: Codable, Hashable, Sendable {
     public var fileType: String?
     public var maxSize: Int?
 }
+
+public extension ApiImageGetParams {
+    enum CodingKeys: String, CodingKey {
+        case fileType = "file_type"
+        case maxSize = "max_size"
+    }
+}

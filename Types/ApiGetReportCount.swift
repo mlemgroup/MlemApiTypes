@@ -13,3 +13,9 @@ import Foundation
 public struct ApiGetReportCount: Codable, Hashable, Sendable {
     public var communityId: Int?
 }
+
+public extension ApiGetReportCount {
+    enum CodingKeys: String, CodingKey {
+        case communityId = "community_id"
+    }
+}

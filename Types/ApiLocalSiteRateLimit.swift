@@ -58,7 +58,7 @@ public extension ApiLocalSiteRateLimit {
 
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decodeIfPresent(Int.self, forKey: .id)
+        self.id = try container.decodeIfPresent(Int?.self, forKey: .id) ?? nil
         self.localSiteId = try container.decode(Int.self, forKey: .localSiteId)
         self.message = try container.decode(Int.self, forKey: .message)
         self.messagePerSecond = try container.decode(Int.self, forKey: .messagePerSecond)
@@ -73,9 +73,9 @@ public extension ApiLocalSiteRateLimit {
         self.search = try container.decode(Int.self, forKey: .search)
         self.searchPerSecond = try container.decode(Int.self, forKey: .searchPerSecond)
         self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decode(Date?.self, forKey: .updated)
-        self.importUserSettings = try container.decodeIfPresent(Int.self, forKey: .importUserSettings)
-        self.importUserSettingsPerSecond = try container.decodeIfPresent(Int.self, forKey: .importUserSettingsPerSecond)
+        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
+        self.importUserSettings = try container.decodeIfPresent(Int?.self, forKey: .importUserSettings) ?? nil
+        self.importUserSettingsPerSecond = try container.decodeIfPresent(Int?.self, forKey: .importUserSettingsPerSecond) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

@@ -41,3 +41,25 @@ public struct ApiSearch: Codable, Hashable, Sendable {
     /// Added in 0.20.0
     public var pageBack: Bool?
 }
+
+public extension ApiSearch {
+    enum CodingKeys: String, CodingKey {
+        case q = "q"
+        case communityId = "community_id"
+        case communityName = "community_name"
+        case creatorId = "creator_id"
+        case type_ = "type_"
+        case sort = "sort"
+        case listingType = "listing_type"
+        case page = "page"
+        case limit = "limit"
+        case postTitleOnly = "post_title_only"
+        case searchTerm = "search_term"
+        case titleOnly = "title_only"
+        case postUrlOnly = "post_url_only"
+        case likedOnly = "liked_only"
+        case dislikedOnly = "disliked_only"
+        case pageCursor = "page_cursor"
+        case pageBack = "page_back"
+    }
+}

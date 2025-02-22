@@ -16,3 +16,12 @@ public struct ApiGetCommunityResponse: Codable, Hashable, Sendable {
     public var moderators: [ApiCommunityModeratorView]
     public var discussionLanguages: [Int]
 }
+
+public extension ApiGetCommunityResponse {
+    enum CodingKeys: String, CodingKey {
+        case communityView = "community_view"
+        case site = "site"
+        case moderators = "moderators"
+        case discussionLanguages = "discussion_languages"
+    }
+}

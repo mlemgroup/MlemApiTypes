@@ -53,19 +53,19 @@ public extension ApiPostAggregates {
 
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decodeIfPresent(Int.self, forKey: .id)
+        self.id = try container.decodeIfPresent(Int?.self, forKey: .id) ?? nil
         self.postId = try container.decode(Int.self, forKey: .postId)
         self.comments = try container.decode(Int.self, forKey: .comments)
         self.score = try container.decode(Int.self, forKey: .score)
         self.upvotes = try container.decode(Int.self, forKey: .upvotes)
         self.downvotes = try container.decode(Int.self, forKey: .downvotes)
         self.published = try container.decode(Date.self, forKey: .published)
-        self.newestCommentTimeNecro = try container.decodeIfPresent(String.self, forKey: .newestCommentTimeNecro)
-        self.newestCommentTime = try container.decodeIfPresent(String.self, forKey: .newestCommentTime)
-        self.featuredCommunity = try container.decodeIfPresent(Bool.self, forKey: .featuredCommunity)
-        self.featuredLocal = try container.decodeIfPresent(Bool.self, forKey: .featuredLocal)
-        self.hotRank = try container.decodeIfPresent(Int.self, forKey: .hotRank)
-        self.hotRankActive = try container.decodeIfPresent(Int.self, forKey: .hotRankActive)
+        self.newestCommentTimeNecro = try container.decodeIfPresent(String?.self, forKey: .newestCommentTimeNecro) ?? nil
+        self.newestCommentTime = try container.decodeIfPresent(String?.self, forKey: .newestCommentTime) ?? nil
+        self.featuredCommunity = try container.decodeIfPresent(Bool?.self, forKey: .featuredCommunity) ?? nil
+        self.featuredLocal = try container.decodeIfPresent(Bool?.self, forKey: .featuredLocal) ?? nil
+        self.hotRank = try container.decodeIfPresent(Int?.self, forKey: .hotRank) ?? nil
+        self.hotRankActive = try container.decodeIfPresent(Int?.self, forKey: .hotRankActive) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

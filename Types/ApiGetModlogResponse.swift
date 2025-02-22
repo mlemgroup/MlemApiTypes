@@ -44,3 +44,24 @@ public struct ApiGetModlogResponse: Codable, Hashable, Sendable {
     /// Added in 0.20.0
     public var modlog: [ApiModlogCombinedView]?
 }
+
+public extension ApiGetModlogResponse {
+    enum CodingKeys: String, CodingKey {
+        case removedPosts = "removed_posts"
+        case lockedPosts = "locked_posts"
+        case featuredPosts = "featured_posts"
+        case removedComments = "removed_comments"
+        case removedCommunities = "removed_communities"
+        case bannedFromCommunity = "banned_from_community"
+        case banned = "banned"
+        case addedToCommunity = "added_to_community"
+        case transferredToCommunity = "transferred_to_community"
+        case added = "added"
+        case adminPurgedPersons = "admin_purged_persons"
+        case adminPurgedCommunities = "admin_purged_communities"
+        case adminPurgedPosts = "admin_purged_posts"
+        case adminPurgedComments = "admin_purged_comments"
+        case hiddenCommunities = "hidden_communities"
+        case modlog = "modlog"
+    }
+}

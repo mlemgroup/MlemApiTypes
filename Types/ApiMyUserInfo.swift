@@ -20,3 +20,15 @@ public struct ApiMyUserInfo: Codable, Hashable, Sendable {
     /// Added in 0.19.0
     public var instanceBlocks: [ApiInstanceBlockView]?
 }
+
+public extension ApiMyUserInfo {
+    enum CodingKeys: String, CodingKey {
+        case localUserView = "local_user_view"
+        case follows = "follows"
+        case moderates = "moderates"
+        case communityBlocks = "community_blocks"
+        case personBlocks = "person_blocks"
+        case discussionLanguages = "discussion_languages"
+        case instanceBlocks = "instance_blocks"
+    }
+}

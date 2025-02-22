@@ -14,7 +14,7 @@ public struct GetPrivateMessagesRequest: ApiGetRequest {
     public typealias Parameters = ApiGetPrivateMessages
     public typealias Response = ApiPrivateMessagesResponse
     
-    public let path: String = "private_message/list"
+    public let path: String = "api/v3/private_message/list"
     public let parameters: Parameters?
     
     init(

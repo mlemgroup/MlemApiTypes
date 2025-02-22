@@ -19,3 +19,13 @@ public struct ApiListPostReports: Codable, Hashable, Sendable {
     /// Added in 0.19.4
     public var postId: Int?
 }
+
+public extension ApiListPostReports {
+    enum CodingKeys: String, CodingKey {
+        case page = "page"
+        case limit = "limit"
+        case unresolvedOnly = "unresolved_only"
+        case communityId = "community_id"
+        case postId = "post_id"
+    }
+}

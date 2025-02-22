@@ -16,3 +16,11 @@ public struct ApiInstanceBlockView: Codable, Hashable, Sendable {
     public var instance: ApiInstance
     public var site: ApiSite?
 }
+
+public extension ApiInstanceBlockView {
+    enum CodingKeys: String, CodingKey {
+        case person = "person"
+        case instance = "instance"
+        case site = "site"
+    }
+}

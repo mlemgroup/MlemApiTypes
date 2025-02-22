@@ -14,7 +14,7 @@ public struct ListPersonSavedRequest: ApiGetRequest {
     public typealias Parameters = ApiListPersonSaved
     public typealias Response = ApiListPersonSavedResponse
     
-    public let path: String = "account/auth/saved"
+    public let path: String = "api/v4/account/auth/saved"
     public let parameters: Parameters?
     
     init(

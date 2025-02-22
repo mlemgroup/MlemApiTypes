@@ -15,3 +15,10 @@ public struct ApiPersonBlockView: Codable, Hashable, Sendable {
     public var person: ApiPerson
     public var target: ApiPerson
 }
+
+public extension ApiPersonBlockView {
+    enum CodingKeys: String, CodingKey {
+        case person = "person"
+        case target = "target"
+    }
+}

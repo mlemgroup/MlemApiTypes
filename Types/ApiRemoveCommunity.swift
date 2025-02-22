@@ -17,3 +17,12 @@ public struct ApiRemoveCommunity: Codable, Hashable, Sendable {
     /// Removed in 0.19.0
     public var expires: Int?
 }
+
+public extension ApiRemoveCommunity {
+    enum CodingKeys: String, CodingKey {
+        case communityId = "community_id"
+        case removed = "removed"
+        case reason = "reason"
+        case expires = "expires"
+    }
+}

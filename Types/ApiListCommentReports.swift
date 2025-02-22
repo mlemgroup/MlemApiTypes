@@ -19,3 +19,13 @@ public struct ApiListCommentReports: Codable, Hashable, Sendable {
     /// Added in 0.19.4
     public var commentId: Int?
 }
+
+public extension ApiListCommentReports {
+    enum CodingKeys: String, CodingKey {
+        case page = "page"
+        case limit = "limit"
+        case unresolvedOnly = "unresolved_only"
+        case communityId = "community_id"
+        case commentId = "comment_id"
+    }
+}

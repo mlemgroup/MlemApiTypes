@@ -15,3 +15,11 @@ public struct ApiHideCommunity: Codable, Hashable, Sendable {
     public var hidden: Bool
     public var reason: String?
 }
+
+public extension ApiHideCommunity {
+    enum CodingKeys: String, CodingKey {
+        case communityId = "community_id"
+        case hidden = "hidden"
+        case reason = "reason"
+    }
+}

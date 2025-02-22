@@ -13,3 +13,9 @@ import Foundation
 public struct ApiGetFederatedInstancesResponse: Codable, Hashable, Sendable {
     public var federatedInstances: ApiFederatedInstances?
 }
+
+public extension ApiGetFederatedInstancesResponse {
+    enum CodingKeys: String, CodingKey {
+        case federatedInstances = "federated_instances"
+    }
+}

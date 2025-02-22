@@ -14,3 +14,9 @@ import Foundation
 public struct ApiListMediaResponse: Codable, Hashable, Sendable {
     public var images: [ApiLocalImageView]
 }
+
+public extension ApiListMediaResponse {
+    enum CodingKeys: String, CodingKey {
+        case images = "images"
+    }
+}

@@ -23,3 +23,18 @@ public struct ApiCommentSlimView: Codable, Hashable, Sendable {
     public var creatorBlocked: Bool
     public var myVote: Int?
 }
+
+public extension ApiCommentSlimView {
+    enum CodingKeys: String, CodingKey {
+        case comment = "comment"
+        case creator = "creator"
+        case creatorBannedFromCommunity = "creator_banned_from_community"
+        case bannedFromCommunity = "banned_from_community"
+        case creatorIsModerator = "creator_is_moderator"
+        case creatorIsAdmin = "creator_is_admin"
+        case subscribed = "subscribed"
+        case saved = "saved"
+        case creatorBlocked = "creator_blocked"
+        case myVote = "my_vote"
+    }
+}

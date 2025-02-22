@@ -41,3 +41,26 @@ public struct ApiGetPosts: Codable, Hashable, Sendable {
     /// Added in 0.20.0
     public var pageBack: Bool?
 }
+
+public extension ApiGetPosts {
+    enum CodingKeys: String, CodingKey {
+        case type_ = "type_"
+        case sort = "sort"
+        case page = "page"
+        case limit = "limit"
+        case communityId = "community_id"
+        case communityName = "community_name"
+        case savedOnly = "saved_only"
+        case likedOnly = "liked_only"
+        case dislikedOnly = "disliked_only"
+        case pageCursor = "page_cursor"
+        case showHidden = "show_hidden"
+        case showRead = "show_read"
+        case showNsfw = "show_nsfw"
+        case readOnly = "read_only"
+        case hideMedia = "hide_media"
+        case markAsRead = "mark_as_read"
+        case noCommentsOnly = "no_comments_only"
+        case pageBack = "page_back"
+    }
+}

@@ -14,3 +14,10 @@ public struct ApiCustomEmojiView: Codable, Hashable, Sendable {
     public var customEmoji: ApiCustomEmoji
     public var keywords: [ApiCustomEmojiKeyword]
 }
+
+public extension ApiCustomEmojiView {
+    enum CodingKeys: String, CodingKey {
+        case customEmoji = "custom_emoji"
+        case keywords = "keywords"
+    }
+}

@@ -15,3 +15,11 @@ public struct ApiListRegistrationApplications: Codable, Hashable, Sendable {
     public var page: Int?
     public var limit: Int?
 }
+
+public extension ApiListRegistrationApplications {
+    enum CodingKeys: String, CodingKey {
+        case unreadOnly = "unread_only"
+        case page = "page"
+        case limit = "limit"
+    }
+}

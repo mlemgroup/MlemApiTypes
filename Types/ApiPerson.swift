@@ -66,27 +66,27 @@ public extension ApiPerson {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(Int.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
-        self.displayName = try container.decode(String?.self, forKey: .displayName)
-        self.avatar = try container.decode(URL?.self, forKey: .avatar)
+        self.displayName = try container.decodeIfPresent(String?.self, forKey: .displayName) ?? nil
+        self.avatar = try container.decodeIfPresent(URL?.self, forKey: .avatar) ?? nil
         self.banned = try container.decode(Bool.self, forKey: .banned)
         self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decode(Date?.self, forKey: .updated)
+        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
         self.actorId = try (
             container.decodeIfPresent(ActorIdentifier.self, forKey: .actorId)
             ?? container.decode(ActorIdentifier.self, forKey: .apId)
         )
-        self.bio = try container.decode(String?.self, forKey: .bio)
+        self.bio = try container.decodeIfPresent(String?.self, forKey: .bio) ?? nil
         self.local = try container.decode(Bool.self, forKey: .local)
-        self.banner = try container.decode(URL?.self, forKey: .banner)
+        self.banner = try container.decodeIfPresent(URL?.self, forKey: .banner) ?? nil
         self.deleted = try container.decode(Bool.self, forKey: .deleted)
-        self.matrixUserId = try container.decode(String?.self, forKey: .matrixUserId)
-        self.admin = try container.decodeIfPresent(Bool.self, forKey: .admin)
+        self.matrixUserId = try container.decodeIfPresent(String?.self, forKey: .matrixUserId) ?? nil
+        self.admin = try container.decodeIfPresent(Bool?.self, forKey: .admin) ?? nil
         self.botAccount = try container.decode(Bool.self, forKey: .botAccount)
-        self.banExpires = try container.decode(Date?.self, forKey: .banExpires)
+        self.banExpires = try container.decodeIfPresent(Date?.self, forKey: .banExpires) ?? nil
         self.instanceId = try container.decode(Int.self, forKey: .instanceId)
-        self.inboxUrl = try container.decodeIfPresent(String.self, forKey: .inboxUrl)
-        self.postCount = try container.decodeIfPresent(Int.self, forKey: .postCount)
-        self.commentCount = try container.decodeIfPresent(Int.self, forKey: .commentCount)
+        self.inboxUrl = try container.decodeIfPresent(String?.self, forKey: .inboxUrl) ?? nil
+        self.postCount = try container.decodeIfPresent(Int?.self, forKey: .postCount) ?? nil
+        self.commentCount = try container.decodeIfPresent(Int?.self, forKey: .commentCount) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

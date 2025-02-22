@@ -15,3 +15,10 @@ public struct ApiMarkPersonMentionAsRead: Codable, Hashable, Sendable {
     public var personMentionId: Int
     public var read: Bool
 }
+
+public extension ApiMarkPersonMentionAsRead {
+    enum CodingKeys: String, CodingKey {
+        case personMentionId = "person_mention_id"
+        case read = "read"
+    }
+}

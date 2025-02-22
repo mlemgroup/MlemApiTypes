@@ -94,38 +94,38 @@ public extension ApiPost {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(Int.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
-        self.url = try container.decode(String?.self, forKey: .url)
-        self.body = try container.decode(String?.self, forKey: .body)
+        self.url = try container.decodeIfPresent(String?.self, forKey: .url) ?? nil
+        self.body = try container.decodeIfPresent(String?.self, forKey: .body) ?? nil
         self.creatorId = try container.decode(Int.self, forKey: .creatorId)
         self.communityId = try container.decode(Int.self, forKey: .communityId)
         self.removed = try container.decode(Bool.self, forKey: .removed)
         self.locked = try container.decode(Bool.self, forKey: .locked)
         self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decode(Date?.self, forKey: .updated)
+        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
         self.deleted = try container.decode(Bool.self, forKey: .deleted)
         self.nsfw = try container.decode(Bool.self, forKey: .nsfw)
-        self.embedTitle = try container.decode(String?.self, forKey: .embedTitle)
-        self.embedDescription = try container.decode(String?.self, forKey: .embedDescription)
-        self.thumbnailUrl = try container.decode(URL?.self, forKey: .thumbnailUrl)
+        self.embedTitle = try container.decodeIfPresent(String?.self, forKey: .embedTitle) ?? nil
+        self.embedDescription = try container.decodeIfPresent(String?.self, forKey: .embedDescription) ?? nil
+        self.thumbnailUrl = try container.decodeIfPresent(URL?.self, forKey: .thumbnailUrl) ?? nil
         self.actorId = try (
             container.decodeIfPresent(ActorIdentifier.self, forKey: .actorId)
             ?? container.decode(ActorIdentifier.self, forKey: .apId)
         )
         self.local = try container.decode(Bool.self, forKey: .local)
-        self.embedVideoUrl = try container.decode(URL?.self, forKey: .embedVideoUrl)
+        self.embedVideoUrl = try container.decodeIfPresent(URL?.self, forKey: .embedVideoUrl) ?? nil
         self.languageId = try container.decode(Int.self, forKey: .languageId)
         self.featuredCommunity = try container.decode(Bool.self, forKey: .featuredCommunity)
         self.featuredLocal = try container.decode(Bool.self, forKey: .featuredLocal)
-        self.urlContentType = try container.decodeIfPresent(String.self, forKey: .urlContentType) ?? nil
-        self.altText = try container.decodeIfPresent(String.self, forKey: .altText) ?? nil
-        self.scheduledPublishTime = try container.decodeIfPresent(String.self, forKey: .scheduledPublishTime) ?? nil
-        self.comments = try container.decodeIfPresent(Int.self, forKey: .comments)
-        self.score = try container.decodeIfPresent(Int.self, forKey: .score)
-        self.upvotes = try container.decodeIfPresent(Int.self, forKey: .upvotes)
-        self.downvotes = try container.decodeIfPresent(Int.self, forKey: .downvotes)
-        self.newestCommentTime = try container.decodeIfPresent(String.self, forKey: .newestCommentTime)
-        self.reportCount = try container.decodeIfPresent(Int.self, forKey: .reportCount)
-        self.unresolvedReportCount = try container.decodeIfPresent(Int.self, forKey: .unresolvedReportCount)
+        self.urlContentType = try container.decodeIfPresent(String?.self, forKey: .urlContentType) ?? nil
+        self.altText = try container.decodeIfPresent(String?.self, forKey: .altText) ?? nil
+        self.scheduledPublishTime = try container.decodeIfPresent(String?.self, forKey: .scheduledPublishTime) ?? nil
+        self.comments = try container.decodeIfPresent(Int?.self, forKey: .comments) ?? nil
+        self.score = try container.decodeIfPresent(Int?.self, forKey: .score) ?? nil
+        self.upvotes = try container.decodeIfPresent(Int?.self, forKey: .upvotes) ?? nil
+        self.downvotes = try container.decodeIfPresent(Int?.self, forKey: .downvotes) ?? nil
+        self.newestCommentTime = try container.decodeIfPresent(String?.self, forKey: .newestCommentTime) ?? nil
+        self.reportCount = try container.decodeIfPresent(Int?.self, forKey: .reportCount) ?? nil
+        self.unresolvedReportCount = try container.decodeIfPresent(Int?.self, forKey: .unresolvedReportCount) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

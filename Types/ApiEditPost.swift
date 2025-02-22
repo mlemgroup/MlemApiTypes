@@ -26,3 +26,18 @@ public struct ApiEditPost: Codable, Hashable, Sendable {
     /// Added in 0.20.0
     public var scheduledPublishTime: Int?
 }
+
+public extension ApiEditPost {
+    enum CodingKeys: String, CodingKey {
+        case postId = "post_id"
+        case name = "name"
+        case url = "url"
+        case body = "body"
+        case nsfw = "nsfw"
+        case languageId = "language_id"
+        case altText = "alt_text"
+        case customThumbnail = "custom_thumbnail"
+        case tags = "tags"
+        case scheduledPublishTime = "scheduled_publish_time"
+    }
+}

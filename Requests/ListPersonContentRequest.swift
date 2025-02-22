@@ -14,7 +14,7 @@ public struct ListPersonContentRequest: ApiGetRequest {
     public typealias Parameters = ApiListPersonContent
     public typealias Response = ApiListPersonContentResponse
     
-    public let path: String = "person/content"
+    public let path: String = "api/v4/person/content"
     public let parameters: Parameters?
     
     init(

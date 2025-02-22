@@ -24,3 +24,15 @@ public struct ApiGetPersonDetails: Codable, Hashable, Sendable {
     /// Removed in 0.20.0
     public var savedOnly: Bool?
 }
+
+public extension ApiGetPersonDetails {
+    enum CodingKeys: String, CodingKey {
+        case personId = "person_id"
+        case username = "username"
+        case sort = "sort"
+        case page = "page"
+        case limit = "limit"
+        case communityId = "community_id"
+        case savedOnly = "saved_only"
+    }
+}

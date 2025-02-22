@@ -14,3 +14,10 @@ public struct ApiDeleteComment: Codable, Hashable, Sendable {
     public var commentId: Int
     public var deleted: Bool
 }
+
+public extension ApiDeleteComment {
+    enum CodingKeys: String, CodingKey {
+        case commentId = "comment_id"
+        case deleted = "deleted"
+    }
+}

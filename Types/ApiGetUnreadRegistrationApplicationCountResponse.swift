@@ -14,3 +14,9 @@ import Foundation
 public struct ApiGetUnreadRegistrationApplicationCountResponse: Codable, Hashable, Sendable {
     public var registrationApplications: Int
 }
+
+public extension ApiGetUnreadRegistrationApplicationCountResponse {
+    enum CodingKeys: String, CodingKey {
+        case registrationApplications = "registration_applications"
+    }
+}

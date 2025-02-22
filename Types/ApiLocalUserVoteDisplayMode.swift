@@ -18,3 +18,13 @@ public struct ApiLocalUserVoteDisplayMode: Codable, Hashable, Sendable {
     public var downvotes: Bool
     public var upvotePercentage: Bool
 }
+
+public extension ApiLocalUserVoteDisplayMode {
+    enum CodingKeys: String, CodingKey {
+        case localUserId = "local_user_id"
+        case score = "score"
+        case upvotes = "upvotes"
+        case downvotes = "downvotes"
+        case upvotePercentage = "upvote_percentage"
+    }
+}

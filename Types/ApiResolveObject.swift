@@ -14,3 +14,9 @@ public struct ApiResolveObject: Codable, Hashable, Sendable {
     // swiftlint:disable:next identifier_name
     public var q: String
 }
+
+public extension ApiResolveObject {
+    enum CodingKeys: String, CodingKey {
+        case q = "q"
+    }
+}

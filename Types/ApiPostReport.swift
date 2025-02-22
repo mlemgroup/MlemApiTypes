@@ -45,13 +45,13 @@ public extension ApiPostReport {
         self.creatorId = try container.decode(Int.self, forKey: .creatorId)
         self.postId = try container.decode(Int.self, forKey: .postId)
         self.originalPostName = try container.decode(String.self, forKey: .originalPostName)
-        self.originalPostUrl = try container.decode(String?.self, forKey: .originalPostUrl)
-        self.originalPostBody = try container.decode(String?.self, forKey: .originalPostBody)
+        self.originalPostUrl = try container.decodeIfPresent(String?.self, forKey: .originalPostUrl) ?? nil
+        self.originalPostBody = try container.decodeIfPresent(String?.self, forKey: .originalPostBody) ?? nil
         self.reason = try container.decode(String.self, forKey: .reason)
         self.resolved = try container.decode(Bool.self, forKey: .resolved)
-        self.resolverId = try container.decode(Int?.self, forKey: .resolverId)
+        self.resolverId = try container.decodeIfPresent(Int?.self, forKey: .resolverId) ?? nil
         self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decode(Date?.self, forKey: .updated)
+        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

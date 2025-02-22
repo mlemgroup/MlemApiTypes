@@ -14,3 +14,9 @@ import Foundation
 public struct ApiListLoginsResponse: Codable, Hashable, Sendable {
     public var logins: [ApiLoginToken]
 }
+
+public extension ApiListLoginsResponse {
+    enum CodingKeys: String, CodingKey {
+        case logins = "logins"
+    }
+}

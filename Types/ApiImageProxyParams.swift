@@ -16,3 +16,11 @@ public struct ApiImageProxyParams: Codable, Hashable, Sendable {
     public var fileType: String?
     public var maxSize: Int?
 }
+
+public extension ApiImageProxyParams {
+    enum CodingKeys: String, CodingKey {
+        case url = "url"
+        case fileType = "file_type"
+        case maxSize = "max_size"
+    }
+}

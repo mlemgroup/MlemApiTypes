@@ -18,3 +18,12 @@ public struct ApiGetPrivateMessages: Codable, Hashable, Sendable {
     /// Added in 0.19.0
     public var creatorId: Int?
 }
+
+public extension ApiGetPrivateMessages {
+    enum CodingKeys: String, CodingKey {
+        case unreadOnly = "unread_only"
+        case page = "page"
+        case limit = "limit"
+        case creatorId = "creator_id"
+    }
+}

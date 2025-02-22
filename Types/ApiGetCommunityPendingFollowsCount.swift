@@ -14,3 +14,9 @@ import Foundation
 public struct ApiGetCommunityPendingFollowsCount: Codable, Hashable, Sendable {
     public var communityId: Int
 }
+
+public extension ApiGetCommunityPendingFollowsCount {
+    enum CodingKeys: String, CodingKey {
+        case communityId = "community_id"
+    }
+}

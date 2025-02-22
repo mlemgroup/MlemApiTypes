@@ -17,3 +17,13 @@ public struct ApiPrivateMessageReportView: Codable, Hashable, Sendable {
     public var creator: ApiPerson
     public var resolver: ApiPerson?
 }
+
+public extension ApiPrivateMessageReportView {
+    enum CodingKeys: String, CodingKey {
+        case privateMessageReport = "private_message_report"
+        case privateMessage = "private_message"
+        case privateMessageCreator = "private_message_creator"
+        case creator = "creator"
+        case resolver = "resolver"
+    }
+}

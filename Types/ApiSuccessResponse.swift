@@ -14,3 +14,9 @@ import Foundation
 public struct ApiSuccessResponse: Codable, Hashable, Sendable {
     public var success: Bool
 }
+
+public extension ApiSuccessResponse {
+    enum CodingKeys: String, CodingKey {
+        case success = "success"
+    }
+}

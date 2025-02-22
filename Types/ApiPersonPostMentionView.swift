@@ -31,3 +31,26 @@ public struct ApiPersonPostMentionView: Codable, Hashable, Sendable {
     public var unreadComments: Int
     public var postTags: ApiPostTags
 }
+
+public extension ApiPersonPostMentionView {
+    enum CodingKeys: String, CodingKey {
+        case personPostMention = "person_post_mention"
+        case post = "post"
+        case creator = "creator"
+        case community = "community"
+        case imageDetails = "image_details"
+        case recipient = "recipient"
+        case creatorBannedFromCommunity = "creator_banned_from_community"
+        case bannedFromCommunity = "banned_from_community"
+        case creatorIsModerator = "creator_is_moderator"
+        case creatorIsAdmin = "creator_is_admin"
+        case subscribed = "subscribed"
+        case saved = "saved"
+        case read = "read"
+        case hidden = "hidden"
+        case creatorBlocked = "creator_blocked"
+        case myVote = "my_vote"
+        case unreadComments = "unread_comments"
+        case postTags = "post_tags"
+    }
+}

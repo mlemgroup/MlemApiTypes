@@ -14,7 +14,7 @@ public struct GetCommentsSlimRequest: ApiGetRequest {
     public typealias Parameters = ApiGetComments
     public typealias Response = ApiGetCommentsSlimResponse
     
-    public let path: String = "comment/list/slim"
+    public let path: String = "api/v4/comment/list/slim"
     public let parameters: Parameters?
     
     init(

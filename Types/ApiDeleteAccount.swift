@@ -15,3 +15,10 @@ public struct ApiDeleteAccount: Codable, Hashable, Sendable {
     /// Added in 0.19.0
     public var deleteContent: Bool?
 }
+
+public extension ApiDeleteAccount {
+    enum CodingKeys: String, CodingKey {
+        case password = "password"
+        case deleteContent = "delete_content"
+    }
+}

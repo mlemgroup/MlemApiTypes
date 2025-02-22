@@ -17,3 +17,12 @@ public struct ApiPendingFollow: Codable, Hashable, Sendable {
     public var isNewInstance: Bool
     public var subscribed: ApiSubscribedType
 }
+
+public extension ApiPendingFollow {
+    enum CodingKeys: String, CodingKey {
+        case person = "person"
+        case community = "community"
+        case isNewInstance = "is_new_instance"
+        case subscribed = "subscribed"
+    }
+}

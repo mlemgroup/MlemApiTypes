@@ -14,3 +14,10 @@ public struct ApiBlockPerson: Codable, Hashable, Sendable {
     public var personId: Int
     public var block: Bool
 }
+
+public extension ApiBlockPerson {
+    enum CodingKeys: String, CodingKey {
+        case personId = "person_id"
+        case block = "block"
+    }
+}

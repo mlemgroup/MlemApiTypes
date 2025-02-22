@@ -13,3 +13,9 @@ import Foundation
 public struct ApiPasswordReset: Codable, Hashable, Sendable {
     public var email: String
 }
+
+public extension ApiPasswordReset {
+    enum CodingKeys: String, CodingKey {
+        case email = "email"
+    }
+}

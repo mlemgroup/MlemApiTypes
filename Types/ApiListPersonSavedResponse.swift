@@ -14,3 +14,9 @@ import Foundation
 public struct ApiListPersonSavedResponse: Codable, Hashable, Sendable {
     public var saved: [ApiPersonContentCombinedView]
 }
+
+public extension ApiListPersonSavedResponse {
+    enum CodingKeys: String, CodingKey {
+        case saved = "saved"
+    }
+}

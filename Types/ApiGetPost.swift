@@ -14,3 +14,10 @@ public struct ApiGetPost: Codable, Hashable, Sendable {
     public var id: Int?
     public var commentId: Int?
 }
+
+public extension ApiGetPost {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case commentId = "comment_id"
+    }
+}

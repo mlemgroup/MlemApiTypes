@@ -14,3 +14,9 @@ import Foundation
 public struct ApiListPersonContentResponse: Codable, Hashable, Sendable {
     public var content: [ApiPersonContentCombinedView]
 }
+
+public extension ApiListPersonContentResponse {
+    enum CodingKeys: String, CodingKey {
+        case content = "content"
+    }
+}

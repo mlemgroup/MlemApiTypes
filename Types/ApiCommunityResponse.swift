@@ -14,3 +14,10 @@ public struct ApiCommunityResponse: Codable, Hashable, Sendable {
     public var communityView: ApiCommunityView
     public var discussionLanguages: [Int]
 }
+
+public extension ApiCommunityResponse {
+    enum CodingKeys: String, CodingKey {
+        case communityView = "community_view"
+        case discussionLanguages = "discussion_languages"
+    }
+}

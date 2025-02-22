@@ -30,8 +30,8 @@ public extension ApiFederationBlockList {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.instanceId = try container.decode(Int.self, forKey: .instanceId)
         self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decode(Date?.self, forKey: .updated)
-        self.expires = try container.decode(String?.self, forKey: .expires)
+        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
+        self.expires = try container.decodeIfPresent(String?.self, forKey: .expires) ?? nil
     }
 
     func encode(to encoder: Encoder) throws {

@@ -14,3 +14,10 @@ public struct ApiAddAdmin: Codable, Hashable, Sendable {
     public var personId: Int
     public var added: Bool
 }
+
+public extension ApiAddAdmin {
+    enum CodingKeys: String, CodingKey {
+        case personId = "person_id"
+        case added = "added"
+    }
+}

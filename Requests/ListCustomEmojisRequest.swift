@@ -14,7 +14,7 @@ public struct ListCustomEmojisRequest: ApiGetRequest {
     public typealias Parameters = ApiListCustomEmojis
     public typealias Response = ApiListCustomEmojisResponse
     
-    public let path: String = "custom_emoji/list"
+    public let path: String = "api/v4/custom_emoji/list"
     public let parameters: Parameters?
     
     init(

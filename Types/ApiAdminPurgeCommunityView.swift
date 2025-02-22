@@ -14,3 +14,10 @@ public struct ApiAdminPurgeCommunityView: Codable, Hashable, Sendable {
     public var adminPurgeCommunity: ApiAdminPurgeCommunity
     public var admin: ApiPerson?
 }
+
+public extension ApiAdminPurgeCommunityView {
+    enum CodingKeys: String, CodingKey {
+        case adminPurgeCommunity = "admin_purge_community"
+        case admin = "admin"
+    }
+}

@@ -15,3 +15,10 @@ public struct ApiDeleteCustomEmojiResponse: Codable, Hashable, Sendable {
     public var id: Int
     public var success: Bool
 }
+
+public extension ApiDeleteCustomEmojiResponse {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case success = "success"
+    }
+}

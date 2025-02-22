@@ -39,7 +39,7 @@ public extension ApiTag {
         self.name = try container.decode(String.self, forKey: .name)
         self.communityId = try container.decode(Int.self, forKey: .communityId)
         self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decode(Date?.self, forKey: .updated)
+        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
         self.deleted = try container.decode(Bool.self, forKey: .deleted)
     }
 

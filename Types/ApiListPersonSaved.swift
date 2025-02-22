@@ -16,3 +16,11 @@ public struct ApiListPersonSaved: Codable, Hashable, Sendable {
     public var pageCursor: String?
     public var pageBack: Bool?
 }
+
+public extension ApiListPersonSaved {
+    enum CodingKeys: String, CodingKey {
+        case type_ = "type_"
+        case pageCursor = "page_cursor"
+        case pageBack = "page_back"
+    }
+}

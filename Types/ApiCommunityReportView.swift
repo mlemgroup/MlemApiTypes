@@ -18,3 +18,13 @@ public struct ApiCommunityReportView: Codable, Hashable, Sendable {
     public var subscribed: ApiSubscribedType
     public var resolver: ApiPerson?
 }
+
+public extension ApiCommunityReportView {
+    enum CodingKeys: String, CodingKey {
+        case communityReport = "community_report"
+        case community = "community"
+        case creator = "creator"
+        case subscribed = "subscribed"
+        case resolver = "resolver"
+    }
+}

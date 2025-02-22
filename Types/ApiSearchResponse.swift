@@ -24,3 +24,14 @@ public struct ApiSearchResponse: Codable, Hashable, Sendable {
     /// Added in 0.20.0
     public var results: [ApiSearchCombinedView]?
 }
+
+public extension ApiSearchResponse {
+    enum CodingKeys: String, CodingKey {
+        case type_ = "type_"
+        case comments = "comments"
+        case posts = "posts"
+        case communities = "communities"
+        case users = "users"
+        case results = "results"
+    }
+}
