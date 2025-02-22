@@ -20,10 +20,10 @@ public struct DeletePostRequest: ApiPostRequest {
       endpoint: SiteVersion.EndpointVersion,
       postId: Int,
       deleted: Bool
-      ) {
+    ) {
         self.body = .init(
             postId: postId,
             deleted: deleted
-      )
+        )
     }
 }

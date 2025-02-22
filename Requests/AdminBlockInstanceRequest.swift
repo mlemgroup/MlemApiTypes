@@ -22,12 +22,12 @@ public struct AdminBlockInstanceRequest: ApiPostRequest {
       block: Bool,
       reason: String?,
       expires: String?
-      ) {
+    ) {
         self.body = .init(
             instance: instance,
             block: block,
             reason: reason,
             expires: expires
-      )
+        )
     }
 }

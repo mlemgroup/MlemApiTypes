@@ -24,7 +24,7 @@ public struct BanFromCommunityRequest: ApiPostRequest {
       removeOrRestoreData: Bool?,
       reason: String?,
       expires: Int?
-      ) {
+    ) {
         self.body = .init(
             communityId: communityId,
             personId: personId,
@@ -32,6 +32,6 @@ public struct BanFromCommunityRequest: ApiPostRequest {
             removeOrRestoreData: removeOrRestoreData,
             reason: reason,
             expires: expires
-      )
+        )
     }
 }

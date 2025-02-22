@@ -19,10 +19,10 @@ public struct GetReportCountRequest: ApiGetRequest {
     init(
       endpoint: SiteVersion.EndpointVersion,
       communityId: Int?
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/user/report_count" : "api/v4/account/report_count"
         self.parameters = .init(
             communityId: communityId
-      )
+        )
     }
 }

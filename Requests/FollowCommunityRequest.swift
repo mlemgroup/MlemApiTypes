@@ -20,10 +20,10 @@ public struct FollowCommunityRequest: ApiPostRequest {
       endpoint: SiteVersion.EndpointVersion,
       communityId: Int,
       follow: Bool
-      ) {
+    ) {
         self.body = .init(
             communityId: communityId,
             follow: follow
-      )
+        )
     }
 }

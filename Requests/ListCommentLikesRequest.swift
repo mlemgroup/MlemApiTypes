@@ -21,12 +21,12 @@ public struct ListCommentLikesRequest: ApiGetRequest {
       commentId: Int,
       page: Int?,
       limit: Int?
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/comment/like/list" : "api/v4/comment/like/list"
         self.parameters = .init(
             commentId: commentId,
             page: page,
             limit: limit
-      )
+        )
     }
 }

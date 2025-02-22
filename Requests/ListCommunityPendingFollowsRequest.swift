@@ -22,12 +22,12 @@ public struct ListCommunityPendingFollowsRequest: ApiGetRequest {
       allCommunities: Bool?,
       page: Int?,
       limit: Int?
-      ) {
+    ) {
         self.parameters = .init(
             pendingOnly: pendingOnly,
             allCommunities: allCommunities,
             page: page,
             limit: limit
-      )
+        )
     }
 }

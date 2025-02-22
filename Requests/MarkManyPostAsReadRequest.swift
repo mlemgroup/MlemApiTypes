@@ -20,6 +20,6 @@ public struct MarkManyPostAsReadRequest: ApiPostRequest {
     init(postIds: [Int]) {
         self.body = .init(
             postIds: postIds
-      )
+        )
     }
 }

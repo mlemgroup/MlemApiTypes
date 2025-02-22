@@ -20,6 +20,6 @@ public struct DeleteImageRequest: ApiDeleteRequest {
     init(filename: String) {
         self.body = .init(
             filename: filename
-      )
+        )
     }
 }

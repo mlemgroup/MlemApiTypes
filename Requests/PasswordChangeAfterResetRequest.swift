@@ -21,12 +21,12 @@ public struct PasswordChangeAfterResetRequest: ApiPostRequest {
       token: String,
       password: String,
       passwordVerify: String
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/user/password_change" : "api/v4/account/auth/password_change"
         self.body = .init(
             token: token,
             password: password,
             passwordVerify: passwordVerify
-      )
+        )
     }
 }

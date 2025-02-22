@@ -25,7 +25,7 @@ public struct ListReportsRequest: ApiGetRequest {
       pageCursor: String?,
       pageBack: Bool?,
       showCommunityRuleViolations: Bool?
-      ) {
+    ) {
         self.parameters = .init(
             unresolvedOnly: unresolvedOnly,
             type_: type_,
@@ -34,6 +34,6 @@ public struct ListReportsRequest: ApiGetRequest {
             pageCursor: pageCursor,
             pageBack: pageBack,
             showCommunityRuleViolations: showCommunityRuleViolations
-      )
+        )
     }
 }

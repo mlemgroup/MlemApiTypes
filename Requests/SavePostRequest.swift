@@ -20,10 +20,10 @@ public struct SavePostRequest: ApiPutRequest {
       endpoint: SiteVersion.EndpointVersion,
       postId: Int,
       save: Bool
-      ) {
+    ) {
         self.body = .init(
             postId: postId,
             save: save
-      )
+        )
     }
 }

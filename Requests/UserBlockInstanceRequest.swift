@@ -20,11 +20,11 @@ public struct UserBlockInstanceRequest: ApiPostRequest {
       endpoint: SiteVersion.EndpointVersion,
       instanceId: Int,
       block: Bool
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/site/block" : "api/v4/account/block/instance"
         self.body = .init(
             instanceId: instanceId,
             block: block
-      )
+        )
     }
 }

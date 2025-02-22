@@ -21,11 +21,11 @@ public struct AdminAllowInstanceRequest: ApiPostRequest {
       instance: String,
       allow: Bool,
       reason: String?
-      ) {
+    ) {
         self.body = .init(
             instance: instance,
             allow: allow,
             reason: reason
-      )
+        )
     }
 }

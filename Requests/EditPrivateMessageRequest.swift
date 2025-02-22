@@ -20,10 +20,10 @@ public struct EditPrivateMessageRequest: ApiPutRequest {
       endpoint: SiteVersion.EndpointVersion,
       privateMessageId: Int,
       content: String
-      ) {
+    ) {
         self.body = .init(
             privateMessageId: privateMessageId,
             content: content
-      )
+        )
     }
 }

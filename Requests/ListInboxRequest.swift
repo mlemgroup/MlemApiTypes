@@ -22,12 +22,12 @@ public struct ListInboxRequest: ApiGetRequest {
       unreadOnly: Bool?,
       pageCursor: String?,
       pageBack: Bool?
-      ) {
+    ) {
         self.parameters = .init(
             type_: type_,
             unreadOnly: unreadOnly,
             pageCursor: pageCursor,
             pageBack: pageBack
-      )
+        )
     }
 }

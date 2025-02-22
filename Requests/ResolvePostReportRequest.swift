@@ -20,10 +20,10 @@ public struct ResolvePostReportRequest: ApiPutRequest {
       endpoint: SiteVersion.EndpointVersion,
       reportId: Int,
       resolved: Bool
-      ) {
+    ) {
         self.body = .init(
             reportId: reportId,
             resolved: resolved
-      )
+        )
     }
 }

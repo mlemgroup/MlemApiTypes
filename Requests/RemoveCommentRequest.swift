@@ -21,11 +21,11 @@ public struct RemoveCommentRequest: ApiPostRequest {
       commentId: Int,
       removed: Bool,
       reason: String?
-      ) {
+    ) {
         self.body = .init(
             commentId: commentId,
             removed: removed,
             reason: reason
-      )
+        )
     }
 }

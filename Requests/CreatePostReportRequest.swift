@@ -20,10 +20,10 @@ public struct CreatePostReportRequest: ApiPostRequest {
       endpoint: SiteVersion.EndpointVersion,
       postId: Int,
       reason: String
-      ) {
+    ) {
         self.body = .init(
             postId: postId,
             reason: reason
-      )
+        )
     }
 }

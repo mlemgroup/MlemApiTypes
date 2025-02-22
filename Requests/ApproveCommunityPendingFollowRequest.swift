@@ -21,11 +21,11 @@ public struct ApproveCommunityPendingFollowRequest: ApiPostRequest {
       communityId: Int,
       followerId: Int,
       approve: Bool
-      ) {
+    ) {
         self.body = .init(
             communityId: communityId,
             followerId: followerId,
             approve: approve
-      )
+        )
     }
 }

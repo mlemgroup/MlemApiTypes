@@ -23,7 +23,7 @@ public struct BanPersonRequest: ApiPostRequest {
       removeOrRestoreData: Bool?,
       reason: String?,
       expires: Int?
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/user/ban" : "api/v4/admin/ban"
         self.body = .init(
             personId: personId,
@@ -31,6 +31,6 @@ public struct BanPersonRequest: ApiPostRequest {
             removeOrRestoreData: removeOrRestoreData,
             reason: reason,
             expires: expires
-      )
+        )
     }
 }

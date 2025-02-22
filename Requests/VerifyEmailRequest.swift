@@ -19,10 +19,10 @@ public struct VerifyEmailRequest: ApiPostRequest {
     init(
       endpoint: SiteVersion.EndpointVersion,
       token: String
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/user/verify_email" : "api/v4/account/auth/verify_email"
         self.body = .init(
             token: token
-      )
+        )
     }
 }

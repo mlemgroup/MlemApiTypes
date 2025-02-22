@@ -19,9 +19,9 @@ public struct DeleteCustomEmojiRequest: ApiPostRequest {
     init(
       endpoint: SiteVersion.EndpointVersion,
       id: Int
-      ) {
+    ) {
         self.body = .init(
             id: id
-      )
+        )
     }
 }

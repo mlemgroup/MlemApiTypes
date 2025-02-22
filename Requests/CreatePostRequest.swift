@@ -29,7 +29,7 @@ public struct CreatePostRequest: ApiPostRequest {
       customThumbnail: String?,
       tags: [Int]?,
       scheduledPublishTime: Int?
-      ) {
+    ) {
         self.body = .init(
             name: name,
             communityId: communityId,
@@ -42,6 +42,6 @@ public struct CreatePostRequest: ApiPostRequest {
             customThumbnail: customThumbnail,
             tags: tags,
             scheduledPublishTime: scheduledPublishTime
-      )
+        )
     }
 }

@@ -54,7 +54,7 @@ public struct SaveUserSettingsRequest: ApiPutRequest {
       enablePrivateMessages: Bool?,
       autoMarkFetchedPostsAsRead: Bool?,
       hideMedia: Bool?
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/user/save_user_settings" : "api/v4/account/settings/save"
         self.body = .init(
             showNsfw: showNsfw,
@@ -93,6 +93,6 @@ public struct SaveUserSettingsRequest: ApiPutRequest {
             enablePrivateMessages: enablePrivateMessages,
             autoMarkFetchedPostsAsRead: autoMarkFetchedPostsAsRead,
             hideMedia: hideMedia
-      )
+        )
     }
 }

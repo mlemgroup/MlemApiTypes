@@ -23,13 +23,13 @@ public struct CreateCommentRequest: ApiPostRequest {
       parentId: Int?,
       languageId: Int?,
       formId: String?
-      ) {
+    ) {
         self.body = .init(
             content: content,
             postId: postId,
             parentId: parentId,
             languageId: languageId,
             formId: formId
-      )
+        )
     }
 }

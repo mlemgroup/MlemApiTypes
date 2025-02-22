@@ -70,7 +70,7 @@ public struct CreateSiteRequest: ApiPostRequest {
       commentUpvotes: ApiFederationMode?,
       commentDownvotes: ApiFederationMode?,
       disableDonationDialog: Bool?
-      ) {
+    ) {
         self.body = .init(
             name: name,
             sidebar: sidebar,
@@ -124,6 +124,6 @@ public struct CreateSiteRequest: ApiPostRequest {
             commentUpvotes: commentUpvotes,
             commentDownvotes: commentDownvotes,
             disableDonationDialog: disableDonationDialog
-      )
+        )
     }
 }

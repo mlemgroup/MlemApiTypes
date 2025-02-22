@@ -21,11 +21,11 @@ public struct ListPrivateMessageReportsRequest: ApiGetRequest {
       page: Int?,
       limit: Int?,
       unresolvedOnly: Bool?
-      ) {
+    ) {
         self.parameters = .init(
             page: page,
             limit: limit,
             unresolvedOnly: unresolvedOnly
-      )
+        )
     }
 }

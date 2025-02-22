@@ -29,7 +29,7 @@ public struct EditCommunityRequest: ApiPutRequest {
       onlyFollowersCanVote: Bool?,
       visibility: ApiCommunityVisibility?,
       sidebar: String?
-      ) {
+    ) {
         self.body = .init(
             communityId: communityId,
             title: title,
@@ -42,6 +42,6 @@ public struct EditCommunityRequest: ApiPutRequest {
             onlyFollowersCanVote: onlyFollowersCanVote,
             visibility: visibility,
             sidebar: sidebar
-      )
+        )
     }
 }

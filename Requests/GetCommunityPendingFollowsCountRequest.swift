@@ -20,6 +20,6 @@ public struct GetCommunityPendingFollowsCountRequest: ApiGetRequest {
     init(communityId: Int) {
         self.parameters = .init(
             communityId: communityId
-      )
+        )
     }
 }

@@ -30,7 +30,7 @@ public struct GetCommentsRequest: ApiGetRequest {
       savedOnly: Bool?,
       likedOnly: Bool?,
       dislikedOnly: Bool?
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/comment/list" : "api/v4/comment/list"
         self.parameters = .init(
             type_: type_,
@@ -45,6 +45,6 @@ public struct GetCommentsRequest: ApiGetRequest {
             savedOnly: savedOnly,
             likedOnly: likedOnly,
             dislikedOnly: dislikedOnly
-      )
+        )
     }
 }

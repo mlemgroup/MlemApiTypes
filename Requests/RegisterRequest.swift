@@ -27,7 +27,7 @@ public struct RegisterRequest: ApiPostRequest {
       captchaAnswer: String?,
       honeypot: String?,
       answer: String?
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/user/register" : "api/v4/account/auth/register"
         self.body = .init(
             username: username,
@@ -39,6 +39,6 @@ public struct RegisterRequest: ApiPostRequest {
             captchaAnswer: captchaAnswer,
             honeypot: honeypot,
             answer: answer
-      )
+        )
     }
 }

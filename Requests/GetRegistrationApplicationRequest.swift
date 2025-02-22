@@ -19,10 +19,10 @@ public struct GetRegistrationApplicationRequest: ApiGetRequest {
     init(
       endpoint: SiteVersion.EndpointVersion,
       personId: Int
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/admin/registration_application" : "api/v4/admin/registration_application"
         self.parameters = .init(
             personId: personId
-      )
+        )
     }
 }

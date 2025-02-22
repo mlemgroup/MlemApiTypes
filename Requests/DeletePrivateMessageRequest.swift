@@ -20,10 +20,10 @@ public struct DeletePrivateMessageRequest: ApiPostRequest {
       endpoint: SiteVersion.EndpointVersion,
       privateMessageId: Int,
       deleted: Bool
-      ) {
+    ) {
         self.body = .init(
             privateMessageId: privateMessageId,
             deleted: deleted
-      )
+        )
     }
 }

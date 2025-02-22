@@ -20,10 +20,10 @@ public struct PurgeCommunityRequest: ApiPostRequest {
       endpoint: SiteVersion.EndpointVersion,
       communityId: Int,
       reason: String?
-      ) {
+    ) {
         self.body = .init(
             communityId: communityId,
             reason: reason
-      )
+        )
     }
 }

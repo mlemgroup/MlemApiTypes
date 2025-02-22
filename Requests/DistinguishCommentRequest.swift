@@ -20,10 +20,10 @@ public struct DistinguishCommentRequest: ApiPostRequest {
       endpoint: SiteVersion.EndpointVersion,
       commentId: Int,
       distinguished: Bool
-      ) {
+    ) {
         self.body = .init(
             commentId: commentId,
             distinguished: distinguished
-      )
+        )
     }
 }

@@ -21,11 +21,11 @@ public struct ListPersonSavedRequest: ApiGetRequest {
       type_: ApiPersonContentType?,
       pageCursor: String?,
       pageBack: Bool?
-      ) {
+    ) {
         self.parameters = .init(
             type_: type_,
             pageCursor: pageCursor,
             pageBack: pageBack
-      )
+        )
     }
 }

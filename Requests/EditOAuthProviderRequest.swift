@@ -30,7 +30,7 @@ public struct EditOAuthProviderRequest: ApiPutRequest {
       accountLinkingEnabled: Bool?,
       usePkce: Bool?,
       enabled: Bool?
-      ) {
+    ) {
         self.body = .init(
             id: id,
             displayName: displayName,
@@ -44,6 +44,6 @@ public struct EditOAuthProviderRequest: ApiPutRequest {
             accountLinkingEnabled: accountLinkingEnabled,
             usePkce: usePkce,
             enabled: enabled
-      )
+        )
     }
 }

@@ -22,12 +22,12 @@ public struct EditCommentRequest: ApiPutRequest {
       content: String?,
       languageId: Int?,
       formId: String?
-      ) {
+    ) {
         self.body = .init(
             commentId: commentId,
             content: content,
             languageId: languageId,
             formId: formId
-      )
+        )
     }
 }

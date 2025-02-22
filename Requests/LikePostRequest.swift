@@ -20,10 +20,10 @@ public struct LikePostRequest: ApiPostRequest {
       endpoint: SiteVersion.EndpointVersion,
       postId: Int,
       score: Int
-      ) {
+    ) {
         self.body = .init(
             postId: postId,
             score: score
-      )
+        )
     }
 }

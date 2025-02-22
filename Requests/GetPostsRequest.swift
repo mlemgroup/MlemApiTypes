@@ -36,7 +36,7 @@ public struct GetPostsRequest: ApiGetRequest {
       markAsRead: Bool?,
       noCommentsOnly: Bool?,
       pageBack: Bool?
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/post/list" : "api/v4/post/list"
         self.parameters = .init(
             type_: type_,
@@ -57,6 +57,6 @@ public struct GetPostsRequest: ApiGetRequest {
             markAsRead: markAsRead,
             noCommentsOnly: noCommentsOnly,
             pageBack: pageBack
-      )
+        )
     }
 }

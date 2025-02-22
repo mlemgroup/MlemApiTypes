@@ -72,7 +72,7 @@ public struct EditSiteRequest: ApiPutRequest {
       commentUpvotes: ApiFederationMode?,
       commentDownvotes: ApiFederationMode?,
       disableDonationDialog: Bool?
-      ) {
+    ) {
         self.body = .init(
             name: name,
             sidebar: sidebar,
@@ -128,6 +128,6 @@ public struct EditSiteRequest: ApiPutRequest {
             commentUpvotes: commentUpvotes,
             commentDownvotes: commentDownvotes,
             disableDonationDialog: disableDonationDialog
-      )
+        )
     }
 }

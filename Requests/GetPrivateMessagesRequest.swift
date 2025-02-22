@@ -22,12 +22,12 @@ public struct GetPrivateMessagesRequest: ApiGetRequest {
       page: Int?,
       limit: Int?,
       creatorId: Int?
-      ) {
+    ) {
         self.parameters = .init(
             unreadOnly: unreadOnly,
             page: page,
             limit: limit,
             creatorId: creatorId
-      )
+        )
     }
 }

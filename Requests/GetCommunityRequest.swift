@@ -20,11 +20,11 @@ public struct GetCommunityRequest: ApiGetRequest {
       endpoint: SiteVersion.EndpointVersion,
       id: Int?,
       name: String?
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/community" : "api/v4/community"
         self.parameters = .init(
             id: id,
             name: name
-      )
+        )
     }
 }

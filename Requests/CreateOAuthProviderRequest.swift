@@ -31,7 +31,7 @@ public struct CreateOAuthProviderRequest: ApiPostRequest {
       accountLinkingEnabled: Bool?,
       usePkce: Bool?,
       enabled: Bool?
-      ) {
+    ) {
         self.body = .init(
             displayName: displayName,
             issuer: issuer,
@@ -46,6 +46,6 @@ public struct CreateOAuthProviderRequest: ApiPostRequest {
             accountLinkingEnabled: accountLinkingEnabled,
             usePkce: usePkce,
             enabled: enabled
-      )
+        )
     }
 }

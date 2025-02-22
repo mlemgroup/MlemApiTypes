@@ -20,10 +20,10 @@ public struct CreatePrivateMessageReportRequest: ApiPostRequest {
       endpoint: SiteVersion.EndpointVersion,
       privateMessageId: Int,
       reason: String
-      ) {
+    ) {
         self.body = .init(
             privateMessageId: privateMessageId,
             reason: reason
-      )
+        )
     }
 }

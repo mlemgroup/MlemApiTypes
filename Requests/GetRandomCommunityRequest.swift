@@ -20,10 +20,10 @@ public struct GetRandomCommunityRequest: ApiGetRequest {
     init(
       type_: ApiListingType?,
       showNsfw: Bool?
-      ) {
+    ) {
         self.parameters = .init(
             type_: type_,
             showNsfw: showNsfw
-      )
+        )
     }
 }

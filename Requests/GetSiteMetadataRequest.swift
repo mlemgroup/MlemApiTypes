@@ -19,10 +19,10 @@ public struct GetSiteMetadataRequest: ApiGetRequest {
     init(
       endpoint: SiteVersion.EndpointVersion,
       url: String
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/post/site_metadata" : "api/v4/post/site_metadata"
         self.parameters = .init(
             url: url
-      )
+        )
     }
 }

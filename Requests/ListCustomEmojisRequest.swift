@@ -22,12 +22,12 @@ public struct ListCustomEmojisRequest: ApiGetRequest {
       limit: Int?,
       category: String?,
       ignorePageLimits: Bool?
-      ) {
+    ) {
         self.parameters = .init(
             page: page,
             limit: limit,
             category: category,
             ignorePageLimits: ignorePageLimits
-      )
+        )
     }
 }

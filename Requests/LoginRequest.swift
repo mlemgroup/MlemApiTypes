@@ -21,12 +21,12 @@ public struct LoginRequest: ApiPostRequest {
       usernameOrEmail: String,
       password: String,
       totp2faToken: String?
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/user/login" : "api/v4/account/auth/login"
         self.body = .init(
             usernameOrEmail: usernameOrEmail,
             password: password,
             totp2faToken: totp2faToken
-      )
+        )
     }
 }

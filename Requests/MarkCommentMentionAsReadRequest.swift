@@ -20,10 +20,10 @@ public struct MarkCommentMentionAsReadRequest: ApiPostRequest {
     init(
       personCommentMentionId: Int,
       read: Bool
-      ) {
+    ) {
         self.body = .init(
             personCommentMentionId: personCommentMentionId,
             read: read
-      )
+        )
     }
 }

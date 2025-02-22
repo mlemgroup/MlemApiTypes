@@ -30,7 +30,7 @@ public struct GetCommentsSlimRequest: ApiGetRequest {
       savedOnly: Bool?,
       likedOnly: Bool?,
       dislikedOnly: Bool?
-      ) {
+    ) {
         self.parameters = .init(
             type_: type_,
             sort: sort,
@@ -44,6 +44,6 @@ public struct GetCommentsSlimRequest: ApiGetRequest {
             savedOnly: savedOnly,
             likedOnly: likedOnly,
             dislikedOnly: dislikedOnly
-      )
+        )
     }
 }

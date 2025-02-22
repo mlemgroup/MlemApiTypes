@@ -20,10 +20,10 @@ public struct EditTaglineRequest: ApiPutRequest {
     init(
       id: Int,
       content: String
-      ) {
+    ) {
         self.body = .init(
             id: id,
             content: content
-      )
+        )
     }
 }

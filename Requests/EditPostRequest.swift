@@ -28,7 +28,7 @@ public struct EditPostRequest: ApiPutRequest {
       customThumbnail: String?,
       tags: [Int]?,
       scheduledPublishTime: Int?
-      ) {
+    ) {
         self.body = .init(
             postId: postId,
             name: name,
@@ -40,6 +40,6 @@ public struct EditPostRequest: ApiPutRequest {
             customThumbnail: customThumbnail,
             tags: tags,
             scheduledPublishTime: scheduledPublishTime
-      )
+        )
     }
 }

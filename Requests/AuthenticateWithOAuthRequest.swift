@@ -25,7 +25,7 @@ public struct AuthenticateWithOAuthRequest: ApiPostRequest {
       username: String?,
       answer: String?,
       pkceCodeVerifier: String?
-      ) {
+    ) {
         self.body = .init(
             code: code,
             oauthProviderId: oauthProviderId,
@@ -34,6 +34,6 @@ public struct AuthenticateWithOAuthRequest: ApiPostRequest {
             username: username,
             answer: answer,
             pkceCodeVerifier: pkceCodeVerifier
-      )
+        )
     }
 }

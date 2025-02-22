@@ -20,10 +20,10 @@ public struct MarkPrivateMessageAsReadRequest: ApiPostRequest {
       endpoint: SiteVersion.EndpointVersion,
       privateMessageId: Int,
       read: Bool
-      ) {
+    ) {
         self.body = .init(
             privateMessageId: privateMessageId,
             read: read
-      )
+        )
     }
 }

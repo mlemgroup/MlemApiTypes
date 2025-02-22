@@ -20,10 +20,10 @@ public struct CreatePrivateMessageRequest: ApiPostRequest {
       endpoint: SiteVersion.EndpointVersion,
       content: String,
       recipientId: Int
-      ) {
+    ) {
         self.body = .init(
             content: content,
             recipientId: recipientId
-      )
+        )
     }
 }

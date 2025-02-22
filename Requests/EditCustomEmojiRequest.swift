@@ -23,13 +23,13 @@ public struct EditCustomEmojiRequest: ApiPutRequest {
       imageUrl: String,
       altText: String,
       keywords: [String]
-      ) {
+    ) {
         self.body = .init(
             id: id,
             category: category,
             imageUrl: imageUrl,
             altText: altText,
             keywords: keywords
-      )
+        )
     }
 }

@@ -23,13 +23,13 @@ public struct ListPostReportsRequest: ApiGetRequest {
       unresolvedOnly: Bool?,
       communityId: Int?,
       postId: Int?
-      ) {
+    ) {
         self.parameters = .init(
             page: page,
             limit: limit,
             unresolvedOnly: unresolvedOnly,
             communityId: communityId,
             postId: postId
-      )
+        )
     }
 }

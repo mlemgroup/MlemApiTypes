@@ -20,10 +20,10 @@ public struct DeleteCommentRequest: ApiPostRequest {
       endpoint: SiteVersion.EndpointVersion,
       commentId: Int,
       deleted: Bool
-      ) {
+    ) {
         self.body = .init(
             commentId: commentId,
             deleted: deleted
-      )
+        )
     }
 }

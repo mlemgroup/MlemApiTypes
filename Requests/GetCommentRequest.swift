@@ -19,10 +19,10 @@ public struct GetCommentRequest: ApiGetRequest {
     init(
       endpoint: SiteVersion.EndpointVersion,
       id: Int
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/comment" : "api/v4/comment"
         self.parameters = .init(
             id: id
-      )
+        )
     }
 }

@@ -21,11 +21,11 @@ public struct ApproveRegistrationApplicationRequest: ApiPutRequest {
       id: Int,
       approve: Bool,
       denyReason: String?
-      ) {
+    ) {
         self.body = .init(
             id: id,
             approve: approve,
             denyReason: denyReason
-      )
+        )
     }
 }

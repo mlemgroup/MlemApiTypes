@@ -20,10 +20,10 @@ public struct SaveCommentRequest: ApiPutRequest {
       endpoint: SiteVersion.EndpointVersion,
       commentId: Int,
       save: Bool
-      ) {
+    ) {
         self.body = .init(
             commentId: commentId,
             save: save
-      )
+        )
     }
 }

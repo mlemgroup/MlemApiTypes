@@ -22,12 +22,12 @@ public struct RemoveCommunityRequest: ApiPostRequest {
       removed: Bool,
       reason: String?,
       expires: Int?
-      ) {
+    ) {
         self.body = .init(
             communityId: communityId,
             removed: removed,
             reason: reason,
             expires: expires
-      )
+        )
     }
 }

@@ -20,10 +20,10 @@ public struct MarkCommentReplyAsReadRequest: ApiPostRequest {
       endpoint: SiteVersion.EndpointVersion,
       commentReplyId: Int,
       read: Bool
-      ) {
+    ) {
         self.body = .init(
             commentReplyId: commentReplyId,
             read: read
-      )
+        )
     }
 }

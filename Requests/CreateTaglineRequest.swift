@@ -20,6 +20,6 @@ public struct CreateTaglineRequest: ApiPostRequest {
     init(content: String) {
         self.body = .init(
             content: content
-      )
+        )
     }
 }

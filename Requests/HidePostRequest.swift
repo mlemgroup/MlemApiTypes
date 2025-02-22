@@ -21,11 +21,11 @@ public struct HidePostRequest: ApiPostRequest {
       postIds: [Int]?,
       hide: Bool,
       postId: Int?
-      ) {
+    ) {
         self.body = .init(
             postIds: postIds,
             hide: hide,
             postId: postId
-      )
+        )
     }
 }

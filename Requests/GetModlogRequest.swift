@@ -28,7 +28,7 @@ public struct GetModlogRequest: ApiGetRequest {
       commentId: Int?,
       pageCursor: String?,
       pageBack: Bool?
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/modlog" : "api/v4/modlog"
         self.parameters = .init(
             modPersonId: modPersonId,
@@ -41,6 +41,6 @@ public struct GetModlogRequest: ApiGetRequest {
             commentId: commentId,
             pageCursor: pageCursor,
             pageBack: pageBack
-      )
+        )
     }
 }

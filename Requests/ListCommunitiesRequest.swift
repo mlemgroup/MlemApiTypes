@@ -23,7 +23,7 @@ public struct ListCommunitiesRequest: ApiGetRequest {
       page: Int?,
       limit: Int?,
       showNsfw: Bool?
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/community/list" : "api/v4/community/list"
         self.parameters = .init(
             type_: type_,
@@ -31,6 +31,6 @@ public struct ListCommunitiesRequest: ApiGetRequest {
             page: page,
             limit: limit,
             showNsfw: showNsfw
-      )
+        )
     }
 }

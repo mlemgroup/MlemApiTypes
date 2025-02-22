@@ -20,10 +20,10 @@ public struct LockPostRequest: ApiPostRequest {
       endpoint: SiteVersion.EndpointVersion,
       postId: Int,
       locked: Bool
-      ) {
+    ) {
         self.body = .init(
             postId: postId,
             locked: locked
-      )
+        )
     }
 }

@@ -20,11 +20,11 @@ public struct GetPostRequest: ApiGetRequest {
       endpoint: SiteVersion.EndpointVersion,
       id: Int?,
       commentId: Int?
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/post" : "api/v4/post"
         self.parameters = .init(
             id: id,
             commentId: commentId
-      )
+        )
     }
 }

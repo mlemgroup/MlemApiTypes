@@ -20,6 +20,6 @@ public struct DeleteTaglineRequest: ApiPostRequest {
     init(id: Int) {
         self.body = .init(
             id: id
-      )
+        )
     }
 }

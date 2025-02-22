@@ -23,13 +23,13 @@ public struct ListPersonContentRequest: ApiGetRequest {
       username: String?,
       pageCursor: String?,
       pageBack: Bool?
-      ) {
+    ) {
         self.parameters = .init(
             type_: type_,
             personId: personId,
             username: username,
             pageCursor: pageCursor,
             pageBack: pageBack
-      )
+        )
     }
 }

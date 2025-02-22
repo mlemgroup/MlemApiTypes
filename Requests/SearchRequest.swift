@@ -37,7 +37,7 @@ public struct SearchRequest: ApiGetRequest {
       dislikedOnly: Bool?,
       pageCursor: String?,
       pageBack: Bool?
-      ) {
+    ) {
         self.path = endpoint == .v3 ? "api/v3/search" : "api/v4/search"
         self.parameters = .init(
             q: q,
@@ -57,6 +57,6 @@ public struct SearchRequest: ApiGetRequest {
             dislikedOnly: dislikedOnly,
             pageCursor: pageCursor,
             pageBack: pageBack
-      )
+        )
     }
 }

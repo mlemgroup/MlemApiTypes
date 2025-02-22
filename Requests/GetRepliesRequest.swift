@@ -22,12 +22,12 @@ public struct GetRepliesRequest: ApiGetRequest {
       page: Int?,
       limit: Int?,
       unreadOnly: Bool?
-      ) {
+    ) {
         self.parameters = .init(
             sort: sort,
             page: page,
             limit: limit,
             unreadOnly: unreadOnly
-      )
+        )
     }
 }
