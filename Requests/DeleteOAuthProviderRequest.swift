@@ -14,7 +14,7 @@ public struct DeleteOAuthProviderRequest: ApiPostRequest {
     public typealias Body = ApiDeleteOAuthProvider
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "oauth_provider/delete"
+    public let path: String = "api/v4/oauth_provider/delete"
     public let body: Body?
 
     init(id: Int) {

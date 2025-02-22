@@ -21,7 +21,7 @@ public struct BlockCommunityRequest: ApiPostRequest {
       communityId: Int,
       block: Bool
       ) {
-        self.path = endpoint == .v3 ? "community/block" : "account/block/community"
+        self.path = endpoint == .v3 ? "api/v3/community/block" : "api/v4/account/block/community"
         self.body = .init(
             communityId: communityId,
             block: block

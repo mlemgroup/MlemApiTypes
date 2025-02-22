@@ -13,10 +13,11 @@ public struct RemovePostRequest: ApiPostRequest {
     public typealias Body = ApiRemovePost
     public typealias Response = ApiPostResponse
     
-    public let path: String = "post/remove"
+    public let path: String = "api/v3/post/remove"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       postId: Int,
       removed: Bool,
       reason: String?

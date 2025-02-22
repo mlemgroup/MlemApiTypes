@@ -14,7 +14,7 @@ public struct EditTaglineRequest: ApiPutRequest {
     public typealias Body = ApiUpdateTagline
     public typealias Response = ApiTaglineResponse
     
-    public let path: String = "admin/tagline"
+    public let path: String = "api/v4/admin/tagline"
     public let body: Body?
 
     init(

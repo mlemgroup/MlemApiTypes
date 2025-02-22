@@ -13,10 +13,11 @@ public struct GetCommentsRequest: ApiGetRequest {
     public typealias Parameters = ApiGetComments
     public typealias Response = ApiGetCommentsResponse
     
-    public let path: String = "comment/list"
+    public let path: String
     public let parameters: Parameters?
     
     init(
+      endpoint: SiteVersion.EndpointVersion,
       type_: ApiListingType?,
       sort: ApiCommentSortType?,
       maxDepth: Int?,
@@ -30,6 +31,7 @@ public struct GetCommentsRequest: ApiGetRequest {
       likedOnly: Bool?,
       dislikedOnly: Bool?
       ) {
+        self.path = endpoint == .v3 ? "api/v3/comment/list" : "api/v4/comment/list"
         self.parameters = .init(
             type_: type_,
             sort: sort,

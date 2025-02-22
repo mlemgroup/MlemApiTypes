@@ -13,10 +13,11 @@ public struct SavePostRequest: ApiPutRequest {
     public typealias Body = ApiSavePost
     public typealias Response = ApiPostResponse
     
-    public let path: String = "post/save"
+    public let path: String = "api/v3/post/save"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       postId: Int,
       save: Bool
       ) {

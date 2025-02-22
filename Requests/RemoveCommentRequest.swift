@@ -13,10 +13,11 @@ public struct RemoveCommentRequest: ApiPostRequest {
     public typealias Body = ApiRemoveComment
     public typealias Response = ApiCommentResponse
     
-    public let path: String = "comment/remove"
+    public let path: String = "api/v3/comment/remove"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       commentId: Int,
       removed: Bool,
       reason: String?

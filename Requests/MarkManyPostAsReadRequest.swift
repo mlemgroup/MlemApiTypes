@@ -14,7 +14,7 @@ public struct MarkManyPostAsReadRequest: ApiPostRequest {
     public typealias Body = ApiMarkManyPostsAsRead
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "post/mark_as_read/many"
+    public let path: String = "api/v4/post/mark_as_read/many"
     public let body: Body?
 
     init(postIds: [Int]) {

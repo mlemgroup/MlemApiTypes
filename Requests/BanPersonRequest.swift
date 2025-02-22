@@ -20,19 +20,17 @@ public struct BanPersonRequest: ApiPostRequest {
       endpoint: SiteVersion.EndpointVersion,
       personId: Int,
       ban: Bool,
-      removeData: Bool?,
+      removeOrRestoreData: Bool?,
       reason: String?,
-      expires: Int?,
-      removeOrRestoreData: Bool?
+      expires: Int?
       ) {
-        self.path = endpoint == .v3 ? "user/ban" : "admin/ban"
+        self.path = endpoint == .v3 ? "api/v3/user/ban" : "api/v4/admin/ban"
         self.body = .init(
             personId: personId,
             ban: ban,
-            removeData: removeData,
+            removeOrRestoreData: removeOrRestoreData,
             reason: reason,
-            expires: expires,
-            removeOrRestoreData: removeOrRestoreData
+            expires: expires
       )
     }
 }

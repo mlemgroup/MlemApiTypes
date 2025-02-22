@@ -17,7 +17,7 @@ public struct ImportSettingsRequest: ApiPostRequest {
     public let body: Body?
 
     init(endpoint: SiteVersion.EndpointVersion) {
-        self.path = endpoint == .v3 ? "user/import_settings" : "account/settings/import"
+        self.path = endpoint == .v3 ? "api/v3/user/import_settings" : "api/v4/account/settings/import"
         self.body = nil
     }
 }

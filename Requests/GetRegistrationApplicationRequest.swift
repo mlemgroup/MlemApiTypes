@@ -13,10 +13,14 @@ public struct GetRegistrationApplicationRequest: ApiGetRequest {
     public typealias Parameters = ApiGetRegistrationApplication
     public typealias Response = ApiRegistrationApplicationResponse
     
-    public let path: String = "admin/registration_application"
+    public let path: String
     public let parameters: Parameters?
     
-    init(personId: Int) {
+    init(
+      endpoint: SiteVersion.EndpointVersion,
+      personId: Int
+      ) {
+        self.path = endpoint == .v3 ? "api/v3/admin/registration_application" : "api/v4/admin/registration_application"
         self.parameters = .init(
             personId: personId
       )

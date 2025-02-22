@@ -13,10 +13,11 @@ public struct EditCommentRequest: ApiPutRequest {
     public typealias Body = ApiEditComment
     public typealias Response = ApiCommentResponse
     
-    public let path: String = "comment"
+    public let path: String = "api/v3/comment"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       commentId: Int,
       content: String?,
       languageId: Int?,

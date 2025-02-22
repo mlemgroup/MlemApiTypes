@@ -17,7 +17,7 @@ public struct GetBannedPersonsRequest: ApiGetRequest {
     public let parameters: Parameters?
     
     init(endpoint: SiteVersion.EndpointVersion) {
-        self.path = endpoint == .v3 ? "user/banned" : "admin/banned"
+        self.path = endpoint == .v3 ? "api/v3/user/banned" : "api/v4/admin/banned"
         self.parameters = nil
     }
 }

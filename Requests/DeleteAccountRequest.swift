@@ -21,7 +21,7 @@ public struct DeleteAccountRequest: ApiPostRequest {
       password: String,
       deleteContent: Bool?
       ) {
-        self.path = endpoint == .v3 ? "user/delete_account" : "account/delete"
+        self.path = endpoint == .v3 ? "api/v3/user/delete_account" : "api/v4/account/delete"
         self.body = .init(
             password: password,
             deleteContent: deleteContent

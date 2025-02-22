@@ -14,7 +14,7 @@ public struct DeleteCommunityBannerRequest: ApiDeleteRequest {
     public typealias Body = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "community/banner"
+    public let path: String = "api/v4/community/banner"
     public let body: Body?
 
     init() {

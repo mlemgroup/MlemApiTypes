@@ -13,10 +13,11 @@ public struct CreatePostRequest: ApiPostRequest {
     public typealias Body = ApiCreatePost
     public typealias Response = ApiPostResponse
     
-    public let path: String = "post"
+    public let path: String = "api/v3/post"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       name: String,
       communityId: Int,
       url: String?,

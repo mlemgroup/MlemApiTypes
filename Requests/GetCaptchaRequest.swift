@@ -17,7 +17,7 @@ public struct GetCaptchaRequest: ApiGetRequest {
     public let parameters: Parameters?
     
     init(endpoint: SiteVersion.EndpointVersion) {
-        self.path = endpoint == .v3 ? "user/get_captcha" : "account/auth/get_captcha"
+        self.path = endpoint == .v3 ? "api/v3/user/get_captcha" : "api/v4/account/auth/get_captcha"
         self.parameters = nil
     }
 }

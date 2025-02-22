@@ -14,7 +14,7 @@ public struct AdminAllowInstanceRequest: ApiPostRequest {
     public typealias Body = ApiAdminAllowInstanceParams
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "admin/instance/allow"
+    public let path: String = "api/v4/admin/instance/allow"
     public let body: Body?
 
     init(

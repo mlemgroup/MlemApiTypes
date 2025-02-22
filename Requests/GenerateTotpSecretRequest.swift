@@ -17,7 +17,7 @@ public struct GenerateTotpSecretRequest: ApiPostRequest {
     public let body: Body?
 
     init(endpoint: SiteVersion.EndpointVersion) {
-        self.path = endpoint == .v3 ? "user/totp/generate" : "account/auth/totp/generate"
+        self.path = endpoint == .v3 ? "api/v3/user/totp/generate" : "api/v4/account/auth/totp/generate"
         self.body = nil
     }
 }

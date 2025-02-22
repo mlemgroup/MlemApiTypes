@@ -14,7 +14,7 @@ public struct AuthenticateWithOAuthRequest: ApiPostRequest {
     public typealias Body = ApiAuthenticateWithOauth
     public typealias Response = ApiLoginResponse
     
-    public let path: String = "oauth/authenticate"
+    public let path: String = "api/v4/oauth/authenticate"
     public let body: Body?
 
     init(

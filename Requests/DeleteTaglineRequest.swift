@@ -14,7 +14,7 @@ public struct DeleteTaglineRequest: ApiPostRequest {
     public typealias Body = ApiDeleteTagline
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "admin/tagline/delete"
+    public let path: String = "api/v4/admin/tagline/delete"
     public let body: Body?
 
     init(id: Int) {

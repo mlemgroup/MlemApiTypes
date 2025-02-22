@@ -26,7 +26,7 @@ public struct GetPersonDetailsRequest: ApiGetRequest {
       communityId: Int?,
       savedOnly: Bool?
       ) {
-        self.path = endpoint == .v3 ? "user" : "person"
+        self.path = endpoint == .v3 ? "api/v3/user" : "api/v4/person"
         self.parameters = .init(
             personId: personId,
             username: username,

@@ -14,7 +14,7 @@ public struct EditOAuthProviderRequest: ApiPutRequest {
     public typealias Body = ApiEditOAuthProvider
     public typealias Response = ApiOAuthProvider
     
-    public let path: String = "oauth_provider"
+    public let path: String = "api/v4/oauth_provider"
     public let body: Body?
 
     init(

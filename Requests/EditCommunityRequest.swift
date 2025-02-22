@@ -13,10 +13,11 @@ public struct EditCommunityRequest: ApiPutRequest {
     public typealias Body = ApiEditCommunity
     public typealias Response = ApiCommunityResponse
     
-    public let path: String = "community"
+    public let path: String = "api/v3/community"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       communityId: Int,
       title: String?,
       description: String?,

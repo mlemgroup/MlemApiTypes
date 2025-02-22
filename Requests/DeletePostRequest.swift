@@ -13,10 +13,11 @@ public struct DeletePostRequest: ApiPostRequest {
     public typealias Body = ApiDeletePost
     public typealias Response = ApiPostResponse
     
-    public let path: String = "post/delete"
+    public let path: String = "api/v3/post/delete"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       postId: Int,
       deleted: Bool
       ) {

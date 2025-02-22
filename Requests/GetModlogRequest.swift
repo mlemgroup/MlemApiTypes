@@ -13,10 +13,11 @@ public struct GetModlogRequest: ApiGetRequest {
     public typealias Parameters = ApiGetModlog
     public typealias Response = ApiGetModlogResponse
     
-    public let path: String = "modlog"
+    public let path: String
     public let parameters: Parameters?
     
     init(
+      endpoint: SiteVersion.EndpointVersion,
       modPersonId: Int?,
       communityId: Int?,
       page: Int?,
@@ -28,6 +29,7 @@ public struct GetModlogRequest: ApiGetRequest {
       pageCursor: String?,
       pageBack: Bool?
       ) {
+        self.path = endpoint == .v3 ? "api/v3/modlog" : "api/v4/modlog"
         self.parameters = .init(
             modPersonId: modPersonId,
             communityId: communityId,

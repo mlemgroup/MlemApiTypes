@@ -21,7 +21,7 @@ public struct UserBlockInstanceRequest: ApiPostRequest {
       instanceId: Int,
       block: Bool
       ) {
-        self.path = endpoint == .v3 ? "site/block" : "account/block/instance"
+        self.path = endpoint == .v3 ? "api/v3/site/block" : "api/v4/account/block/instance"
         self.body = .init(
             instanceId: instanceId,
             block: block

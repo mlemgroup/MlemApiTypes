@@ -21,7 +21,7 @@ public struct UpdateTotpRequest: ApiPostRequest {
       totpToken: String,
       enabled: Bool
       ) {
-        self.path = endpoint == .v3 ? "user/totp/update" : "account/auth/totp/update"
+        self.path = endpoint == .v3 ? "api/v3/user/totp/update" : "api/v4/account/auth/totp/update"
         self.body = .init(
             totpToken: totpToken,
             enabled: enabled

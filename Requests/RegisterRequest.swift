@@ -28,7 +28,7 @@ public struct RegisterRequest: ApiPostRequest {
       honeypot: String?,
       answer: String?
       ) {
-        self.path = endpoint == .v3 ? "user/register" : "account/auth/register"
+        self.path = endpoint == .v3 ? "api/v3/user/register" : "api/v4/account/auth/register"
         self.body = .init(
             username: username,
             password: password,

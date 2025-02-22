@@ -14,7 +14,7 @@ public struct DeleteUserAvatarRequest: ApiDeleteRequest {
     public typealias Body = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "account/avatar"
+    public let path: String = "api/v4/account/avatar"
     public let body: Body?
 
     init() {

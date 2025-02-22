@@ -17,7 +17,7 @@ public struct MarkAllNotificationsAsReadRequest: ApiPostRequest {
     public let body: Body?
 
     init(endpoint: SiteVersion.EndpointVersion) {
-        self.path = endpoint == .v3 ? "user/mark_all_as_read" : "account/mark_as_read/all"
+        self.path = endpoint == .v3 ? "api/v3/user/mark_all_as_read" : "api/v4/account/mark_as_read/all"
         self.body = nil
     }
 }

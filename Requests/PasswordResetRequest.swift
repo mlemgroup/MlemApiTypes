@@ -20,7 +20,7 @@ public struct PasswordResetRequest: ApiPostRequest {
       endpoint: SiteVersion.EndpointVersion,
       email: String
       ) {
-        self.path = endpoint == .v3 ? "user/password_reset" : "account/auth/password_reset"
+        self.path = endpoint == .v3 ? "api/v3/user/password_reset" : "api/v4/account/auth/password_reset"
         self.body = .init(
             email: email
       )

@@ -13,10 +13,11 @@ public struct ResolveCommentReportRequest: ApiPutRequest {
     public typealias Body = ApiResolveCommentReport
     public typealias Response = ApiCommentReportResponse
     
-    public let path: String = "comment/report/resolve"
+    public let path: String = "api/v3/comment/report/resolve"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       reportId: Int,
       resolved: Bool
       ) {

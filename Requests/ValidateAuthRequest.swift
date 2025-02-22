@@ -17,7 +17,7 @@ public struct ValidateAuthRequest: ApiGetRequest {
     public let parameters: Parameters?
     
     init(endpoint: SiteVersion.EndpointVersion) {
-        self.path = endpoint == .v3 ? "user/validate_auth" : "account/validate_auth"
+        self.path = endpoint == .v3 ? "api/v3/user/validate_auth" : "api/v4/account/validate_auth"
         self.parameters = nil
     }
 }

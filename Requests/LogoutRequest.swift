@@ -17,7 +17,7 @@ public struct LogoutRequest: ApiPostRequest {
     public let body: Body?
 
     init(endpoint: SiteVersion.EndpointVersion) {
-        self.path = endpoint == .v3 ? "user/logout" : "account/auth/logout"
+        self.path = endpoint == .v3 ? "api/v3/user/logout" : "api/v4/account/auth/logout"
         self.body = nil
     }
 }

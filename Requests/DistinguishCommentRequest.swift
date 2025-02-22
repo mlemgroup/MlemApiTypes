@@ -13,10 +13,11 @@ public struct DistinguishCommentRequest: ApiPostRequest {
     public typealias Body = ApiDistinguishComment
     public typealias Response = ApiCommentResponse
     
-    public let path: String = "comment/distinguish"
+    public let path: String = "api/v3/comment/distinguish"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       commentId: Int,
       distinguished: Bool
       ) {

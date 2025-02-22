@@ -13,10 +13,11 @@ public struct LockPostRequest: ApiPostRequest {
     public typealias Body = ApiLockPost
     public typealias Response = ApiPostResponse
     
-    public let path: String = "post/lock"
+    public let path: String = "api/v3/post/lock"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       postId: Int,
       locked: Bool
       ) {

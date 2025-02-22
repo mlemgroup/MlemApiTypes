@@ -13,10 +13,11 @@ public struct RemoveCommunityRequest: ApiPostRequest {
     public typealias Body = ApiRemoveCommunity
     public typealias Response = ApiCommunityResponse
     
-    public let path: String = "community/remove"
+    public let path: String = "api/v3/community/remove"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       communityId: Int,
       removed: Bool,
       reason: String?,

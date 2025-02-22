@@ -13,10 +13,11 @@ public struct LikePostRequest: ApiPostRequest {
     public typealias Body = ApiCreatePostLike
     public typealias Response = ApiPostResponse
     
-    public let path: String = "post/like"
+    public let path: String = "api/v3/post/like"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       postId: Int,
       score: Int
       ) {

@@ -17,7 +17,7 @@ public struct LeaveAdminRequest: ApiPostRequest {
     public let body: Body?
 
     init(endpoint: SiteVersion.EndpointVersion) {
-        self.path = endpoint == .v3 ? "user/leave_admin" : "admin/leave"
+        self.path = endpoint == .v3 ? "api/v3/user/leave_admin" : "api/v4/admin/leave"
         self.body = nil
     }
 }

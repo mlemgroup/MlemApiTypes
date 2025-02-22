@@ -13,10 +13,11 @@ public struct PurgePostRequest: ApiPostRequest {
     public typealias Body = ApiPurgePost
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "admin/purge/post"
+    public let path: String = "api/v3/admin/purge/post"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       postId: Int,
       reason: String?
       ) {

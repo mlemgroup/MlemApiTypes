@@ -13,10 +13,11 @@ public struct LikeCommentRequest: ApiPostRequest {
     public typealias Body = ApiCreateCommentLike
     public typealias Response = ApiCommentResponse
     
-    public let path: String = "comment/like"
+    public let path: String = "api/v3/comment/like"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       commentId: Int,
       score: Int
       ) {

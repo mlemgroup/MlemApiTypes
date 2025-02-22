@@ -13,10 +13,11 @@ public struct EditSiteRequest: ApiPutRequest {
     public typealias Body = ApiEditSite
     public typealias Response = ApiSiteResponse
     
-    public let path: String = "site"
+    public let path: String = "api/v3/site"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       name: String?,
       sidebar: String?,
       description: String?,

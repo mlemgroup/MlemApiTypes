@@ -17,7 +17,7 @@ public struct GetUnreadCountRequest: ApiGetRequest {
     public let parameters: Parameters?
     
     init(endpoint: SiteVersion.EndpointVersion) {
-        self.path = endpoint == .v3 ? "user/unread_count" : "account/unread_count"
+        self.path = endpoint == .v3 ? "api/v3/user/unread_count" : "api/v4/account/unread_count"
         self.parameters = nil
     }
 }

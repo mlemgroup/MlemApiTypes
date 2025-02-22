@@ -13,10 +13,11 @@ public struct SaveCommentRequest: ApiPutRequest {
     public typealias Body = ApiSaveComment
     public typealias Response = ApiCommentResponse
     
-    public let path: String = "comment/save"
+    public let path: String = "api/v3/comment/save"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       commentId: Int,
       save: Bool
       ) {

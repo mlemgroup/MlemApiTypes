@@ -14,7 +14,7 @@ public struct MarkPostMentionAsReadRequest: ApiPostRequest {
     public typealias Body = ApiMarkPersonPostMentionAsRead
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "account/mention/post/mark_as_read"
+    public let path: String = "api/v4/account/mention/post/mark_as_read"
     public let body: Body?
 
     init(

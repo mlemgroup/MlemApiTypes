@@ -14,7 +14,7 @@ public struct ApproveCommunityPendingFollowRequest: ApiPostRequest {
     public typealias Body = ApiApproveCommunityPendingFollower
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "community/pending_follows/approve"
+    public let path: String = "api/v4/community/pending_follows/approve"
     public let body: Body?
 
     init(

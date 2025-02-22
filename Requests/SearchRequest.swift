@@ -13,10 +13,11 @@ public struct SearchRequest: ApiGetRequest {
     public typealias Parameters = ApiSearch
     public typealias Response = ApiSearchResponse
     
-    public let path: String = "search"
+    public let path: String
     public let parameters: Parameters?
     
     init(
+      endpoint: SiteVersion.EndpointVersion,
       
       // swiftlint:disable:next identifier_name
       q: String?,
@@ -37,6 +38,7 @@ public struct SearchRequest: ApiGetRequest {
       pageCursor: String?,
       pageBack: Bool?
       ) {
+        self.path = endpoint == .v3 ? "api/v3/search" : "api/v4/search"
         self.parameters = .init(
             q: q,
             communityId: communityId,

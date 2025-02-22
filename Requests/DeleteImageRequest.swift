@@ -14,7 +14,7 @@ public struct DeleteImageRequest: ApiDeleteRequest {
     public typealias Body = ApiDeleteImageParams
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "image"
+    public let path: String = "api/v4/image"
     public let body: Body?
 
     init(filename: String) {

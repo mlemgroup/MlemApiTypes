@@ -14,7 +14,7 @@ public struct AdminBlockInstanceRequest: ApiPostRequest {
     public typealias Body = ApiAdminBlockInstanceParams
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "admin/instance/block"
+    public let path: String = "api/v4/admin/instance/block"
     public let body: Body?
 
     init(

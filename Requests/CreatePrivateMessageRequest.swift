@@ -13,10 +13,11 @@ public struct CreatePrivateMessageRequest: ApiPostRequest {
     public typealias Body = ApiCreatePrivateMessage
     public typealias Response = ApiPrivateMessageResponse
     
-    public let path: String = "private_message"
+    public let path: String = "api/v3/private_message"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       content: String,
       recipientId: Int
       ) {
