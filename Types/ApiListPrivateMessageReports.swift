@@ -10,8 +10,17 @@
 import Foundation
 
 // ListPrivateMessageReports.ts
+/// Removed in 1.0.0
 public struct ApiListPrivateMessageReports: Codable, Hashable, Sendable {
-    public let page: Int?
-    public let limit: Int?
-    public let unresolvedOnly: Bool?
+    public var page: Int?
+    public var limit: Int?
+    public var unresolvedOnly: Bool?
+}
+
+public extension ApiListPrivateMessageReports {
+    enum CodingKeys: String, CodingKey {
+        case page = "page"
+        case limit = "limit"
+        case unresolvedOnly = "unresolved_only"
+    }
 }

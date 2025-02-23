@@ -13,10 +13,11 @@ public struct GetCommentsRequest: ApiGetRequest {
     public typealias Parameters = ApiGetComments
     public typealias Response = ApiGetCommentsResponse
     
-    public let path: String = "comment/list"
+    public let path: String
     public let parameters: Parameters?
     
     init(
+      endpoint: SiteVersion.EndpointVersion,
       type_: ApiListingType?,
       sort: ApiCommentSortType?,
       maxDepth: Int?,
@@ -28,8 +29,10 @@ public struct GetCommentsRequest: ApiGetRequest {
       parentId: Int?,
       savedOnly: Bool?,
       likedOnly: Bool?,
-      dislikedOnly: Bool?
+      dislikedOnly: Bool?,
+      timeRangeSeconds: Int?
     ) {
+        self.path = endpoint == .v3 ? "api/v3/comment/list" : "api/v4/comment/list"
         self.parameters = .init(
             type_: type_,
             sort: sort,
@@ -42,7 +45,8 @@ public struct GetCommentsRequest: ApiGetRequest {
             parentId: parentId,
             savedOnly: savedOnly,
             likedOnly: likedOnly,
-            dislikedOnly: dislikedOnly
-      )
+            dislikedOnly: dislikedOnly,
+            timeRangeSeconds: timeRangeSeconds
+        )
     }
 }

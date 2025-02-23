@@ -13,10 +13,11 @@ public struct GetPostsRequest: ApiGetRequest {
     public typealias Parameters = ApiGetPosts
     public typealias Response = ApiGetPostsResponse
     
-    public let path: String = "post/list"
+    public let path: String
     public let parameters: Parameters?
     
     init(
+      endpoint: SiteVersion.EndpointVersion,
       type_: ApiListingType?,
       sort: ApiSortType?,
       page: Int?,
@@ -29,8 +30,15 @@ public struct GetPostsRequest: ApiGetRequest {
       pageCursor: String?,
       showHidden: Bool?,
       showRead: Bool?,
-      showNsfw: Bool?
+      showNsfw: Bool?,
+      timeRangeSeconds: Int?,
+      readOnly: Bool?,
+      hideMedia: Bool?,
+      markAsRead: Bool?,
+      noCommentsOnly: Bool?,
+      pageBack: Bool?
     ) {
+        self.path = endpoint == .v3 ? "api/v3/post/list" : "api/v4/post/list"
         self.parameters = .init(
             type_: type_,
             sort: sort,
@@ -44,7 +52,13 @@ public struct GetPostsRequest: ApiGetRequest {
             pageCursor: pageCursor,
             showHidden: showHidden,
             showRead: showRead,
-            showNsfw: showNsfw
-      )
+            showNsfw: showNsfw,
+            timeRangeSeconds: timeRangeSeconds,
+            readOnly: readOnly,
+            hideMedia: hideMedia,
+            markAsRead: markAsRead,
+            noCommentsOnly: noCommentsOnly,
+            pageBack: pageBack
+        )
     }
 }

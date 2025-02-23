@@ -11,10 +11,23 @@ import Foundation
 
 // CommunityView.ts
 public struct ApiCommunityView: Codable, Hashable, Sendable {
-    public let community: ApiCommunity
-    public let subscribed: ApiSubscribedType
-    public let blocked: Bool
-    public let counts: ApiCommunityAggregates
+    public var community: ApiCommunity
+    public var subscribed: ApiSubscribedType
+    public var blocked: Bool
+    public var counts: ApiCommunityAggregates
     /// Added in 0.19.4
-    public let bannedFromCommunity: Bool?
+    public var bannedFromCommunity: Bool?
+    /// Added in 1.0.0
+    public var canMod: Bool?
+}
+
+public extension ApiCommunityView {
+    enum CodingKeys: String, CodingKey {
+        case community = "community"
+        case subscribed = "subscribed"
+        case blocked = "blocked"
+        case counts = "counts"
+        case bannedFromCommunity = "banned_from_community"
+        case canMod = "can_mod"
+    }
 }

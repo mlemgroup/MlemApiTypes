@@ -9,11 +9,12 @@
 
 import Foundation
 
+/// Removed in 1.0.0
 public struct ListPostReportsRequest: ApiGetRequest {
     public typealias Parameters = ApiListPostReports
     public typealias Response = ApiListPostReportsResponse
     
-    public let path: String = "post/report/list"
+    public let path: String = "api/v3/post/report/list"
     public let parameters: Parameters?
     
     init(
@@ -29,6 +30,6 @@ public struct ListPostReportsRequest: ApiGetRequest {
             unresolvedOnly: unresolvedOnly,
             communityId: communityId,
             postId: postId
-      )
+        )
     }
 }

@@ -11,8 +11,20 @@ import Foundation
 
 // ModLockPostView.ts
 public struct ApiModLockPostView: Codable, Hashable, Sendable {
-    public let modLockPost: ApiModLockPost
-    public let moderator: ApiPerson?
-    public let post: ApiPost
-    public let community: ApiCommunity
+    public var modLockPost: ApiModLockPost
+    public var moderator: ApiPerson?
+    public var post: ApiPost
+    public var community: ApiCommunity
+    /// Added in 1.0.0
+    public var otherPerson: ApiPerson?
+}
+
+public extension ApiModLockPostView {
+    enum CodingKeys: String, CodingKey {
+        case modLockPost = "mod_lock_post"
+        case moderator = "moderator"
+        case post = "post"
+        case community = "community"
+        case otherPerson = "other_person"
+    }
 }

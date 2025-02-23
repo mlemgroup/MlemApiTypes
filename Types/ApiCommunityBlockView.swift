@@ -10,7 +10,15 @@
 import Foundation
 
 // CommunityBlockView.ts
+/// Removed in 1.0.0
 public struct ApiCommunityBlockView: Codable, Hashable, Sendable {
-    public let person: ApiPerson
-    public let community: ApiCommunity
+    public var person: ApiPerson
+    public var community: ApiCommunity
+}
+
+public extension ApiCommunityBlockView {
+    enum CodingKeys: String, CodingKey {
+        case person = "person"
+        case community = "community"
+    }
 }

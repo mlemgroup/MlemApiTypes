@@ -13,16 +13,19 @@ public struct CreatePostReportRequest: ApiPostRequest {
     public typealias Body = ApiCreatePostReport
     public typealias Response = ApiPostReportResponse
     
-    public let path: String = "post/report"
+    public let path: String = "api/v3/post/report"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       postId: Int,
-      reason: String
+      reason: String,
+      violatesInstanceRules: Bool?
     ) {
         self.body = .init(
             postId: postId,
-            reason: reason
-      )
+            reason: reason,
+            violatesInstanceRules: violatesInstanceRules
+        )
     }
 }

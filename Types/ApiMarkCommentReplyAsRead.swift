@@ -11,6 +11,13 @@ import Foundation
 
 // MarkCommentReplyAsRead.ts
 public struct ApiMarkCommentReplyAsRead: Codable, Hashable, Sendable {
-    public let commentReplyId: Int
-    public let read: Bool
+    public var commentReplyId: Int
+    public var read: Bool
+}
+
+public extension ApiMarkCommentReplyAsRead {
+    enum CodingKeys: String, CodingKey {
+        case commentReplyId = "comment_reply_id"
+        case read = "read"
+    }
 }

@@ -13,16 +13,17 @@ public struct PurgeCommentRequest: ApiPostRequest {
     public typealias Body = ApiPurgeComment
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "admin/purge/comment"
+    public let path: String = "api/v3/admin/purge/comment"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       commentId: Int,
       reason: String?
     ) {
         self.body = .init(
             commentId: commentId,
             reason: reason
-      )
+        )
     }
 }

@@ -10,6 +10,13 @@
 import Foundation
 
 // GetPersonMentionsResponse.ts
+/// Removed in 1.0.0
 public struct ApiGetPersonMentionsResponse: Codable, Hashable, Sendable {
-    public let mentions: [ApiPersonMentionView]
+    public var mentions: [ApiPersonMentionView]
+}
+
+public extension ApiGetPersonMentionsResponse {
+    enum CodingKeys: String, CodingKey {
+        case mentions = "mentions"
+    }
 }

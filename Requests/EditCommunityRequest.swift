@@ -13,10 +13,11 @@ public struct EditCommunityRequest: ApiPutRequest {
     public typealias Body = ApiEditCommunity
     public typealias Response = ApiCommunityResponse
     
-    public let path: String = "community"
+    public let path: String = "api/v3/community"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       communityId: Int,
       title: String?,
       description: String?,
@@ -26,7 +27,8 @@ public struct EditCommunityRequest: ApiPutRequest {
       postingRestrictedToMods: Bool?,
       discussionLanguages: [Int]?,
       onlyFollowersCanVote: Bool?,
-      visibility: ApiCommunityVisibility?
+      visibility: ApiCommunityVisibility?,
+      sidebar: String?
     ) {
         self.body = .init(
             communityId: communityId,
@@ -38,7 +40,8 @@ public struct EditCommunityRequest: ApiPutRequest {
             postingRestrictedToMods: postingRestrictedToMods,
             discussionLanguages: discussionLanguages,
             onlyFollowersCanVote: onlyFollowersCanVote,
-            visibility: visibility
-      )
+            visibility: visibility,
+            sidebar: sidebar
+        )
     }
 }

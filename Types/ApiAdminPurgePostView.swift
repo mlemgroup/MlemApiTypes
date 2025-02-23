@@ -11,7 +11,15 @@ import Foundation
 
 // AdminPurgePostView.ts
 public struct ApiAdminPurgePostView: Codable, Hashable, Sendable {
-    public let adminPurgePost: ApiAdminPurgePost
-    public let admin: ApiPerson?
-    public let community: ApiCommunity
+    public var adminPurgePost: ApiAdminPurgePost
+    public var admin: ApiPerson?
+    public var community: ApiCommunity
+}
+
+public extension ApiAdminPurgePostView {
+    enum CodingKeys: String, CodingKey {
+        case adminPurgePost = "admin_purge_post"
+        case admin = "admin"
+        case community = "community"
+    }
 }

@@ -11,6 +11,13 @@ import Foundation
 
 // PurgePost.ts
 public struct ApiPurgePost: Codable, Hashable, Sendable {
-    public let postId: Int
-    public let reason: String?
+    public var postId: Int
+    public var reason: String?
+}
+
+public extension ApiPurgePost {
+    enum CodingKeys: String, CodingKey {
+        case postId = "post_id"
+        case reason = "reason"
+    }
 }

@@ -13,10 +13,11 @@ public struct SaveUserSettingsRequest: ApiPutRequest {
     public typealias Body = ApiSaveUserSettings
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "user/save_user_settings"
+    public let path: String
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       showNsfw: Bool?,
       showScores: Bool?,
       theme: String?,
@@ -47,8 +48,15 @@ public struct SaveUserSettingsRequest: ApiPutRequest {
       collapseBotComments: Bool?,
       showUpvotes: Bool?,
       showDownvotes: Bool?,
-      showUpvotePercentage: Bool?
+      showUpvotePercentage: Bool?,
+      defaultPostSortType: ApiPostSortType?,
+      defaultPostTimeRangeSeconds: Int?,
+      defaultCommentSortType: ApiCommentSortType?,
+      enablePrivateMessages: Bool?,
+      autoMarkFetchedPostsAsRead: Bool?,
+      hideMedia: Bool?
     ) {
+        self.path = endpoint == .v3 ? "api/v3/user/save_user_settings" : "api/v4/account/settings/save"
         self.body = .init(
             showNsfw: showNsfw,
             showScores: showScores,
@@ -80,7 +88,13 @@ public struct SaveUserSettingsRequest: ApiPutRequest {
             collapseBotComments: collapseBotComments,
             showUpvotes: showUpvotes,
             showDownvotes: showDownvotes,
-            showUpvotePercentage: showUpvotePercentage
-      )
+            showUpvotePercentage: showUpvotePercentage,
+            defaultPostSortType: defaultPostSortType,
+            defaultPostTimeRangeSeconds: defaultPostTimeRangeSeconds,
+            defaultCommentSortType: defaultCommentSortType,
+            enablePrivateMessages: enablePrivateMessages,
+            autoMarkFetchedPostsAsRead: autoMarkFetchedPostsAsRead,
+            hideMedia: hideMedia
+        )
     }
 }

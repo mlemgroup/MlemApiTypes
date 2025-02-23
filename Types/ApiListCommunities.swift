@@ -11,10 +11,23 @@ import Foundation
 
 // ListCommunities.ts
 public struct ApiListCommunities: Codable, Hashable, Sendable {
-    public let type_: ApiListingType?
-    public let sort: ApiSortType?
-    public let page: Int?
-    public let limit: Int?
+    public var type_: ApiListingType?
+    public var sort: ApiSortType?
+    public var page: Int?
+    public var limit: Int?
     /// Added in 0.18.1
-    public let showNsfw: Bool?
+    public var showNsfw: Bool?
+    /// Added in 1.0.0
+    public var timeRangeSeconds: Int?
+}
+
+public extension ApiListCommunities {
+    enum CodingKeys: String, CodingKey {
+        case type_ = "type_"
+        case sort = "sort"
+        case page = "page"
+        case limit = "limit"
+        case showNsfw = "show_nsfw"
+        case timeRangeSeconds = "time_range_seconds"
+    }
 }

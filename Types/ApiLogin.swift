@@ -11,20 +11,22 @@ import Foundation
 
 // Login.ts
 public struct ApiLogin: Codable, Hashable, Sendable {
-    public let usernameOrEmail: String
-    public let password: String
-    public let totp2faToken: String?
+    public var usernameOrEmail: String
+    public var password: String
+    public var totp2faToken: String?
+}
 
-    enum EncodingKeys: String, CodingKey {
-        case username_or_email
-        case password
-        case totp_2fa_token
+public extension ApiLogin {
+    enum CodingKeys: String, CodingKey {
+        case usernameOrEmail = "username_or_email"
+        case password = "password"
+        case totp2faToken = "totp_2fa_token"
     }
 
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: EncodingKeys.self)
-        try container.encode(usernameOrEmail, forKey: .username_or_email)
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(usernameOrEmail, forKey: .usernameOrEmail)
         try container.encode(password, forKey: .password)
-        try container.encode(totp2faToken, forKey: .totp_2fa_token)
+        try container.encode(totp2faToken, forKey: .totp2faToken)
     }
 }

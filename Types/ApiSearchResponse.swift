@@ -11,9 +11,27 @@ import Foundation
 
 // SearchResponse.ts
 public struct ApiSearchResponse: Codable, Hashable, Sendable {
-    public let type_: ApiSearchType
-    public let comments: [ApiCommentView]
-    public let posts: [ApiPostView]
-    public let communities: [ApiCommunityView]
-    public let users: [ApiPersonView]
+    /// Removed in 1.0.0
+    public var type_: ApiSearchType?
+    /// Removed in 1.0.0
+    public var comments: [ApiCommentView]?
+    /// Removed in 1.0.0
+    public var posts: [ApiPostView]?
+    /// Removed in 1.0.0
+    public var communities: [ApiCommunityView]?
+    /// Removed in 1.0.0
+    public var users: [ApiPersonView]?
+    /// Added in 1.0.0
+    public var results: [ApiSearchCombinedView]?
+}
+
+public extension ApiSearchResponse {
+    enum CodingKeys: String, CodingKey {
+        case type_ = "type_"
+        case comments = "comments"
+        case posts = "posts"
+        case communities = "communities"
+        case users = "users"
+        case results = "results"
+    }
 }

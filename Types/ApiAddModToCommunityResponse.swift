@@ -11,5 +11,11 @@ import Foundation
 
 // AddModToCommunityResponse.ts
 public struct ApiAddModToCommunityResponse: Codable, Hashable, Sendable {
-    public let moderators: [ApiCommunityModeratorView]
+    public var moderators: [ApiCommunityModeratorView]
+}
+
+public extension ApiAddModToCommunityResponse {
+    enum CodingKeys: String, CodingKey {
+        case moderators = "moderators"
+    }
 }

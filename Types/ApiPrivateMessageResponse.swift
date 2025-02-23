@@ -11,5 +11,11 @@ import Foundation
 
 // PrivateMessageResponse.ts
 public struct ApiPrivateMessageResponse: Codable, Hashable, Sendable {
-    public let privateMessageView: ApiPrivateMessageView
+    public var privateMessageView: ApiPrivateMessageView
+}
+
+public extension ApiPrivateMessageResponse {
+    enum CodingKeys: String, CodingKey {
+        case privateMessageView = "private_message_view"
+    }
 }

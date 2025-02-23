@@ -11,6 +11,13 @@ import Foundation
 
 // CustomEmojiView.ts
 public struct ApiCustomEmojiView: Codable, Hashable, Sendable {
-    public let customEmoji: ApiCustomEmoji
-    public let keywords: [ApiCustomEmojiKeyword]
+    public var customEmoji: ApiCustomEmoji
+    public var keywords: [ApiCustomEmojiKeyword]
+}
+
+public extension ApiCustomEmojiView {
+    enum CodingKeys: String, CodingKey {
+        case customEmoji = "custom_emoji"
+        case keywords = "keywords"
+    }
 }

@@ -11,10 +11,46 @@ import Foundation
 
 // BanFromCommunity.ts
 public struct ApiBanFromCommunity: Codable, Hashable, Sendable {
-    public let communityId: Int
-    public let personId: Int
-    public let ban: Bool
-    public let removeData: Bool?
-    public let reason: String?
-    public let expires: Int?
+    public var communityId: Int
+    public var personId: Int
+    public var ban: Bool
+    public var removeOrRestoreData: Bool?
+    public var reason: String?
+    public var expires: Int?
+}
+
+public extension ApiBanFromCommunity {
+    enum CodingKeys: String, CodingKey {
+        case communityId = "community_id"
+        case personId = "person_id"
+        case ban = "ban"
+        case removeOrRestoreData = "remove_or_restore_data"
+        case removeData = "remove_data"
+        case reason = "reason"
+        case expires = "expires"
+    }
+
+    init(from decoder: any Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.communityId = try container.decode(Int.self, forKey: .communityId)
+        self.personId = try container.decode(Int.self, forKey: .personId)
+        self.ban = try container.decode(Bool.self, forKey: .ban)
+        self.removeOrRestoreData = try (
+            container.decodeIfPresent(Bool?.self, forKey: .removeOrRestoreData)
+            ?? container.decode(Bool?.self, forKey: .removeData)
+        )
+        self.reason = try container.decodeIfPresent(String?.self, forKey: .reason) ?? nil
+        self.expires = try container.decodeIfPresent(Int?.self, forKey: .expires) ?? nil
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(communityId, forKey: .communityId)
+        try container.encode(personId, forKey: .personId)
+        try container.encode(ban, forKey: .ban)
+        try container.encode(removeOrRestoreData, forKey: .removeOrRestoreData)
+        try container.encode(removeOrRestoreData, forKey: .removeData)
+        try container.encode(reason, forKey: .reason)
+        try container.encode(expires, forKey: .expires)
+    }
 }

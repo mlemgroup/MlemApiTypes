@@ -10,6 +10,13 @@
 import Foundation
 
 // ListPrivateMessageReportsResponse.ts
+/// Removed in 1.0.0
 public struct ApiListPrivateMessageReportsResponse: Codable, Hashable, Sendable {
-    public let privateMessageReports: [ApiPrivateMessageReportView]
+    public var privateMessageReports: [ApiPrivateMessageReportView]
+}
+
+public extension ApiListPrivateMessageReportsResponse {
+    enum CodingKeys: String, CodingKey {
+        case privateMessageReports = "private_message_reports"
+    }
 }

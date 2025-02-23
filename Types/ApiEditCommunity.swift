@@ -11,16 +11,36 @@ import Foundation
 
 // EditCommunity.ts
 public struct ApiEditCommunity: Codable, Hashable, Sendable {
-    public let communityId: Int
-    public let title: String?
-    public let description: String?
-    public let icon: URL?
-    public let banner: URL?
-    public let nsfw: Bool?
-    public let postingRestrictedToMods: Bool?
-    public let discussionLanguages: [Int]?
+    public var communityId: Int
+    public var title: String?
+    public var description: String?
+    /// Removed in 1.0.0
+    public var icon: URL?
+    /// Removed in 1.0.0
+    public var banner: URL?
+    public var nsfw: Bool?
+    public var postingRestrictedToMods: Bool?
+    public var discussionLanguages: [Int]?
     /// Added in 0.19.2, removed in 0.19.3
-    public let onlyFollowersCanVote: Bool?
+    public var onlyFollowersCanVote: Bool?
     /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
-    public let visibility: ApiCommunityVisibility?
+    public var visibility: ApiCommunityVisibility?
+    /// Added in 1.0.0
+    public var sidebar: String?
+}
+
+public extension ApiEditCommunity {
+    enum CodingKeys: String, CodingKey {
+        case communityId = "community_id"
+        case title = "title"
+        case description = "description"
+        case icon = "icon"
+        case banner = "banner"
+        case nsfw = "nsfw"
+        case postingRestrictedToMods = "posting_restricted_to_mods"
+        case discussionLanguages = "discussion_languages"
+        case onlyFollowersCanVote = "only_followers_can_vote"
+        case visibility = "visibility"
+        case sidebar = "sidebar"
+    }
 }

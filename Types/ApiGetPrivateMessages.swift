@@ -10,10 +10,20 @@
 import Foundation
 
 // GetPrivateMessages.ts
+/// Removed in 1.0.0
 public struct ApiGetPrivateMessages: Codable, Hashable, Sendable {
-    public let unreadOnly: Bool?
-    public let page: Int?
-    public let limit: Int?
+    public var unreadOnly: Bool?
+    public var page: Int?
+    public var limit: Int?
     /// Added in 0.19.0
-    public let creatorId: Int?
+    public var creatorId: Int?
+}
+
+public extension ApiGetPrivateMessages {
+    enum CodingKeys: String, CodingKey {
+        case unreadOnly = "unread_only"
+        case page = "page"
+        case limit = "limit"
+        case creatorId = "creator_id"
+    }
 }

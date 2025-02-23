@@ -12,5 +12,11 @@ import Foundation
 // ResolveObject.ts
 public struct ApiResolveObject: Codable, Hashable, Sendable {
     // swiftlint:disable:next identifier_name
-    public let q: String
+    public var q: String
+}
+
+public extension ApiResolveObject {
+    enum CodingKeys: String, CodingKey {
+        case q = "q"
+    }
 }

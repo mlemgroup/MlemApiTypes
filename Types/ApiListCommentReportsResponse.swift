@@ -10,6 +10,13 @@
 import Foundation
 
 // ListCommentReportsResponse.ts
+/// Removed in 1.0.0
 public struct ApiListCommentReportsResponse: Codable, Hashable, Sendable {
-    public let commentReports: [ApiCommentReportView]
+    public var commentReports: [ApiCommentReportView]
+}
+
+public extension ApiListCommentReportsResponse {
+    enum CodingKeys: String, CodingKey {
+        case commentReports = "comment_reports"
+    }
 }

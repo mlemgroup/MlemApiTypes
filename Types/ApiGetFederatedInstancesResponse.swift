@@ -11,5 +11,11 @@ import Foundation
 
 // GetFederatedInstancesResponse.ts
 public struct ApiGetFederatedInstancesResponse: Codable, Hashable, Sendable {
-    public let federatedInstances: ApiFederatedInstances?
+    public var federatedInstances: ApiFederatedInstances?
+}
+
+public extension ApiGetFederatedInstancesResponse {
+    enum CodingKeys: String, CodingKey {
+        case federatedInstances = "federated_instances"
+    }
 }

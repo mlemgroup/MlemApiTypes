@@ -11,6 +11,13 @@ import Foundation
 
 // DeletePost.ts
 public struct ApiDeletePost: Codable, Hashable, Sendable {
-    public let postId: Int
-    public let deleted: Bool
+    public var postId: Int
+    public var deleted: Bool
+}
+
+public extension ApiDeletePost {
+    enum CodingKeys: String, CodingKey {
+        case postId = "post_id"
+        case deleted = "deleted"
+    }
 }

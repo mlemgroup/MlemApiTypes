@@ -13,10 +13,11 @@ public struct LeaveAdminRequest: ApiPostRequest {
     public typealias Body = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiGetSiteResponse
     
-    public let path: String = "user/leave_admin"
+    public let path: String
     public let body: Body?
 
-    init() {
+    init(endpoint: SiteVersion.EndpointVersion) {
+        self.path = endpoint == .v3 ? "api/v3/user/leave_admin" : "api/v4/admin/leave"
         self.body = nil
     }
 }

@@ -11,6 +11,13 @@ import Foundation
 
 // CommunityFollowerView.ts
 public struct ApiCommunityFollowerView: Codable, Hashable, Sendable {
-    public let community: ApiCommunity
-    public let follower: ApiPerson
+    public var community: ApiCommunity
+    public var follower: ApiPerson
+}
+
+public extension ApiCommunityFollowerView {
+    enum CodingKeys: String, CodingKey {
+        case community = "community"
+        case follower = "follower"
+    }
 }

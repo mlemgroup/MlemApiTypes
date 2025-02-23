@@ -11,5 +11,11 @@ import Foundation
 
 // DeleteCustomEmoji.ts
 public struct ApiDeleteCustomEmoji: Codable, Hashable, Sendable {
-    public let id: Int
+    public var id: Int
+}
+
+public extension ApiDeleteCustomEmoji {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+    }
 }

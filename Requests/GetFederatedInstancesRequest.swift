@@ -13,10 +13,11 @@ public struct GetFederatedInstancesRequest: ApiGetRequest {
     public typealias Parameters = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiGetFederatedInstancesResponse
     
-    public let path: String = "federated_instances"
+    public let path: String
     public let parameters: Parameters?
     
-    init() {
+    init(endpoint: SiteVersion.EndpointVersion) {
+        self.path = endpoint == .v3 ? "api/v3/federated_instances" : "api/v4/federated_instances"
         self.parameters = nil
     }
 }

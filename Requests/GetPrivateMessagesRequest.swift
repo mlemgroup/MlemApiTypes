@@ -9,11 +9,12 @@
 
 import Foundation
 
+/// Removed in 1.0.0
 public struct GetPrivateMessagesRequest: ApiGetRequest {
     public typealias Parameters = ApiGetPrivateMessages
     public typealias Response = ApiPrivateMessagesResponse
     
-    public let path: String = "private_message/list"
+    public let path: String = "api/v3/private_message/list"
     public let parameters: Parameters?
     
     init(
@@ -27,6 +28,6 @@ public struct GetPrivateMessagesRequest: ApiGetRequest {
             page: page,
             limit: limit,
             creatorId: creatorId
-      )
+        )
     }
 }

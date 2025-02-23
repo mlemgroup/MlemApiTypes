@@ -11,6 +11,13 @@ import Foundation
 
 // SiteResponse.ts
 public struct ApiSiteResponse: Codable, Hashable, Sendable {
-    public let siteView: ApiSiteView
-    public let taglines: [ApiTagline]
+    public var siteView: ApiSiteView
+    public var taglines: [ApiTagline]
+}
+
+public extension ApiSiteResponse {
+    enum CodingKeys: String, CodingKey {
+        case siteView = "site_view"
+        case taglines = "taglines"
+    }
 }

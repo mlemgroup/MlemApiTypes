@@ -13,14 +13,15 @@ public struct BanFromCommunityRequest: ApiPostRequest {
     public typealias Body = ApiBanFromCommunity
     public typealias Response = ApiBanFromCommunityResponse
     
-    public let path: String = "community/ban_user"
+    public let path: String = "api/v3/community/ban_user"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       communityId: Int,
       personId: Int,
       ban: Bool,
-      removeData: Bool?,
+      removeOrRestoreData: Bool?,
       reason: String?,
       expires: Int?
     ) {
@@ -28,9 +29,9 @@ public struct BanFromCommunityRequest: ApiPostRequest {
             communityId: communityId,
             personId: personId,
             ban: ban,
-            removeData: removeData,
+            removeOrRestoreData: removeOrRestoreData,
             reason: reason,
             expires: expires
-      )
+        )
     }
 }

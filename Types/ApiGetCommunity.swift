@@ -11,6 +11,13 @@ import Foundation
 
 // GetCommunity.ts
 public struct ApiGetCommunity: Codable, Hashable, Sendable {
-    public let id: Int?
-    public let name: String?
+    public var id: Int?
+    public var name: String?
+}
+
+public extension ApiGetCommunity {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case name = "name"
+    }
 }

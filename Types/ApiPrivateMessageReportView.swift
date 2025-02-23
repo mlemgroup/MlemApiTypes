@@ -11,9 +11,19 @@ import Foundation
 
 // PrivateMessageReportView.ts
 public struct ApiPrivateMessageReportView: Codable, Hashable, Sendable {
-    public let privateMessageReport: ApiPrivateMessageReport
-    public let privateMessage: ApiPrivateMessage
-    public let privateMessageCreator: ApiPerson
-    public let creator: ApiPerson
-    public let resolver: ApiPerson?
+    public var privateMessageReport: ApiPrivateMessageReport
+    public var privateMessage: ApiPrivateMessage
+    public var privateMessageCreator: ApiPerson
+    public var creator: ApiPerson
+    public var resolver: ApiPerson?
+}
+
+public extension ApiPrivateMessageReportView {
+    enum CodingKeys: String, CodingKey {
+        case privateMessageReport = "private_message_report"
+        case privateMessage = "private_message"
+        case privateMessageCreator = "private_message_creator"
+        case creator = "creator"
+        case resolver = "resolver"
+    }
 }

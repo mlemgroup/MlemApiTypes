@@ -11,7 +11,15 @@ import Foundation
 
 // RemoveComment.ts
 public struct ApiRemoveComment: Codable, Hashable, Sendable {
-    public let commentId: Int
-    public let removed: Bool
-    public let reason: String?
+    public var commentId: Int
+    public var removed: Bool
+    public var reason: String?
+}
+
+public extension ApiRemoveComment {
+    enum CodingKeys: String, CodingKey {
+        case commentId = "comment_id"
+        case removed = "removed"
+        case reason = "reason"
+    }
 }

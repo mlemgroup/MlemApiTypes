@@ -11,6 +11,13 @@ import Foundation
 
 // EditPrivateMessage.ts
 public struct ApiEditPrivateMessage: Codable, Hashable, Sendable {
-    public let privateMessageId: Int
-    public let content: String
+    public var privateMessageId: Int
+    public var content: String
+}
+
+public extension ApiEditPrivateMessage {
+    enum CodingKeys: String, CodingKey {
+        case privateMessageId = "private_message_id"
+        case content = "content"
+    }
 }

@@ -13,10 +13,11 @@ public struct LogoutRequest: ApiPostRequest {
     public typealias Body = Int // dummy type for APIRequestBodyProviding conformance
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "user/logout"
+    public let path: String
     public let body: Body?
 
-    init() {
+    init(endpoint: SiteVersion.EndpointVersion) {
+        self.path = endpoint == .v3 ? "api/v3/user/logout" : "api/v4/account/auth/logout"
         self.body = nil
     }
 }

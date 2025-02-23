@@ -11,7 +11,15 @@ import Foundation
 
 // AdminPurgeCommentView.ts
 public struct ApiAdminPurgeCommentView: Codable, Hashable, Sendable {
-    public let adminPurgeComment: ApiAdminPurgeComment
-    public let admin: ApiPerson?
-    public let post: ApiPost
+    public var adminPurgeComment: ApiAdminPurgeComment
+    public var admin: ApiPerson?
+    public var post: ApiPost
+}
+
+public extension ApiAdminPurgeCommentView {
+    enum CodingKeys: String, CodingKey {
+        case adminPurgeComment = "admin_purge_comment"
+        case admin = "admin"
+        case post = "post"
+    }
 }

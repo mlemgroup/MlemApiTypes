@@ -11,8 +11,20 @@ import Foundation
 
 // ModFeaturePostView.ts
 public struct ApiModFeaturePostView: Codable, Hashable, Sendable {
-    public let modFeaturePost: ApiModFeaturePost
-    public let moderator: ApiPerson?
-    public let post: ApiPost
-    public let community: ApiCommunity
+    public var modFeaturePost: ApiModFeaturePost
+    public var moderator: ApiPerson?
+    public var post: ApiPost
+    public var community: ApiCommunity
+    /// Added in 1.0.0
+    public var otherPerson: ApiPerson?
+}
+
+public extension ApiModFeaturePostView {
+    enum CodingKeys: String, CodingKey {
+        case modFeaturePost = "mod_feature_post"
+        case moderator = "moderator"
+        case post = "post"
+        case community = "community"
+        case otherPerson = "other_person"
+    }
 }

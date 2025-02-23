@@ -11,7 +11,15 @@ import Foundation
 
 // Language.ts
 public struct ApiLanguage: Codable, Hashable, Sendable {
-    public let id: Int
-    public let code: String
-    public let name: String
+    public var id: Int
+    public var code: String
+    public var name: String
+}
+
+public extension ApiLanguage {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case code = "code"
+        case name = "name"
+    }
 }

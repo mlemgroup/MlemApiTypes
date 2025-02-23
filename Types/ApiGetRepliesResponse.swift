@@ -10,6 +10,13 @@
 import Foundation
 
 // GetRepliesResponse.ts
+/// Removed in 1.0.0
 public struct ApiGetRepliesResponse: Codable, Hashable, Sendable {
-    public let replies: [ApiCommentReplyView]
+    public var replies: [ApiCommentReplyView]
+}
+
+public extension ApiGetRepliesResponse {
+    enum CodingKeys: String, CodingKey {
+        case replies = "replies"
+    }
 }

@@ -11,22 +11,46 @@ import Foundation
 
 // CommentReplyView.ts
 public struct ApiCommentReplyView: Codable, Hashable, Sendable {
-    public let commentReply: ApiCommentReply
-    public let comment: ApiComment
-    public let creator: ApiPerson
-    public let post: ApiPost
-    public let community: ApiCommunity
-    public let recipient: ApiPerson
-    public let counts: ApiCommentAggregates
-    public let creatorBannedFromCommunity: Bool
-    public let subscribed: ApiSubscribedType
-    public let saved: Bool
-    public let creatorBlocked: Bool
-    public let myVote: Int?
+    public var commentReply: ApiCommentReply
+    public var comment: ApiComment
+    public var creator: ApiPerson
+    public var post: ApiPost
+    public var community: ApiCommunity
+    public var recipient: ApiPerson
+    public var counts: ApiCommentAggregates
+    public var creatorBannedFromCommunity: Bool
+    public var subscribed: ApiSubscribedType
+    /// made optional in 1.0.0
+    public var saved: Bool?
+    public var creatorBlocked: Bool
+    public var myVote: Int?
     /// Added in 0.19.0
-    public let creatorIsModerator: Bool?
+    public var creatorIsModerator: Bool?
     /// Added in 0.19.0
-    public let creatorIsAdmin: Bool?
+    public var creatorIsAdmin: Bool?
     /// Added in 0.19.4
-    public let bannedFromCommunity: Bool?
+    public var bannedFromCommunity: Bool?
+    /// Added in 1.0.0
+    public var canMod: Bool?
+}
+
+public extension ApiCommentReplyView {
+    enum CodingKeys: String, CodingKey {
+        case commentReply = "comment_reply"
+        case comment = "comment"
+        case creator = "creator"
+        case post = "post"
+        case community = "community"
+        case recipient = "recipient"
+        case counts = "counts"
+        case creatorBannedFromCommunity = "creator_banned_from_community"
+        case subscribed = "subscribed"
+        case saved = "saved"
+        case creatorBlocked = "creator_blocked"
+        case myVote = "my_vote"
+        case creatorIsModerator = "creator_is_moderator"
+        case creatorIsAdmin = "creator_is_admin"
+        case bannedFromCommunity = "banned_from_community"
+        case canMod = "can_mod"
+    }
 }

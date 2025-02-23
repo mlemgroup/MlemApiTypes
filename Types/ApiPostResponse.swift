@@ -11,5 +11,11 @@ import Foundation
 
 // PostResponse.ts
 public struct ApiPostResponse: Codable, Hashable, Sendable {
-    public let postView: ApiPostView
+    public var postView: ApiPostView
+}
+
+public extension ApiPostResponse {
+    enum CodingKeys: String, CodingKey {
+        case postView = "post_view"
+    }
 }

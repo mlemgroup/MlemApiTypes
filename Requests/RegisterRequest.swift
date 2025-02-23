@@ -13,10 +13,11 @@ public struct RegisterRequest: ApiPostRequest {
     public typealias Body = ApiRegister
     public typealias Response = ApiLoginResponse
     
-    public let path: String = "user/register"
+    public let path: String
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       username: String,
       password: String,
       passwordVerify: String,
@@ -27,6 +28,7 @@ public struct RegisterRequest: ApiPostRequest {
       honeypot: String?,
       answer: String?
     ) {
+        self.path = endpoint == .v3 ? "api/v3/user/register" : "api/v4/account/auth/register"
         self.body = .init(
             username: username,
             password: password,
@@ -37,6 +39,6 @@ public struct RegisterRequest: ApiPostRequest {
             captchaAnswer: captchaAnswer,
             honeypot: honeypot,
             answer: answer
-      )
+        )
     }
 }

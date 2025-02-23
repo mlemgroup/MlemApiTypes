@@ -11,9 +11,18 @@ import Foundation
 
 // LocalUserView.ts
 public struct ApiLocalUserView: Codable, Hashable, Sendable {
-    public let localUser: ApiLocalUser
-    public let person: ApiPerson
-    public let counts: ApiPersonAggregates
+    public var localUser: ApiLocalUser
+    public var person: ApiPerson
+    public var counts: ApiPersonAggregates
     /// Added in 0.19.4
-    public let localUserVoteDisplayMode: ApiLocalUserVoteDisplayMode?
+    public var localUserVoteDisplayMode: ApiLocalUserVoteDisplayMode?
+}
+
+public extension ApiLocalUserView {
+    enum CodingKeys: String, CodingKey {
+        case localUser = "local_user"
+        case person = "person"
+        case counts = "counts"
+        case localUserVoteDisplayMode = "local_user_vote_display_mode"
+    }
 }

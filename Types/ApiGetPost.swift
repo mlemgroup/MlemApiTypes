@@ -11,6 +11,13 @@ import Foundation
 
 // GetPost.ts
 public struct ApiGetPost: Codable, Hashable, Sendable {
-    public let id: Int?
-    public let commentId: Int?
+    public var id: Int?
+    public var commentId: Int?
+}
+
+public extension ApiGetPost {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case commentId = "comment_id"
+    }
 }

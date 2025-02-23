@@ -10,7 +10,15 @@
 import Foundation
 
 // PersonBlockView.ts
+/// Removed in 1.0.0
 public struct ApiPersonBlockView: Codable, Hashable, Sendable {
-    public let person: ApiPerson
-    public let target: ApiPerson
+    public var person: ApiPerson
+    public var target: ApiPerson
+}
+
+public extension ApiPersonBlockView {
+    enum CodingKeys: String, CodingKey {
+        case person = "person"
+        case target = "target"
+    }
 }

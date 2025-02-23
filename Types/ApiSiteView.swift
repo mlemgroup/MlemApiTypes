@@ -11,8 +11,17 @@ import Foundation
 
 // SiteView.ts
 public struct ApiSiteView: Codable, Hashable, Sendable {
-    public let site: ApiSite
-    public let localSite: ApiLocalSite
-    public let localSiteRateLimit: ApiLocalSiteRateLimit
-    public let counts: ApiSiteAggregates
+    public var site: ApiSite
+    public var localSite: ApiLocalSite
+    public var localSiteRateLimit: ApiLocalSiteRateLimit
+    public var counts: ApiSiteAggregates
+}
+
+public extension ApiSiteView {
+    enum CodingKeys: String, CodingKey {
+        case site = "site"
+        case localSite = "local_site"
+        case localSiteRateLimit = "local_site_rate_limit"
+        case counts = "counts"
+    }
 }

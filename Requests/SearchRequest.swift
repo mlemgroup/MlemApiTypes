@@ -13,22 +13,33 @@ public struct SearchRequest: ApiGetRequest {
     public typealias Parameters = ApiSearch
     public typealias Response = ApiSearchResponse
     
-    public let path: String = "search"
+    public let path: String
     public let parameters: Parameters?
     
     init(
+      endpoint: SiteVersion.EndpointVersion,
+      
       // swiftlint:disable:next identifier_name
-      q: String,
+      q: String?,
       communityId: Int?,
       communityName: String?,
       creatorId: Int?,
       type_: ApiSearchType?,
-      sort: ApiSortType?,
+      sort: SearchSortTypeBridge?,
       listingType: ApiListingType?,
       page: Int?,
       limit: Int?,
-      postTitleOnly: Bool?
+      postTitleOnly: Bool?,
+      searchTerm: String?,
+      timeRangeSeconds: Int?,
+      titleOnly: Bool?,
+      postUrlOnly: Bool?,
+      likedOnly: Bool?,
+      dislikedOnly: Bool?,
+      pageCursor: String?,
+      pageBack: Bool?
     ) {
+        self.path = endpoint == .v3 ? "api/v3/search" : "api/v4/search"
         self.parameters = .init(
             q: q,
             communityId: communityId,
@@ -39,7 +50,15 @@ public struct SearchRequest: ApiGetRequest {
             listingType: listingType,
             page: page,
             limit: limit,
-            postTitleOnly: postTitleOnly
-      )
+            postTitleOnly: postTitleOnly,
+            searchTerm: searchTerm,
+            timeRangeSeconds: timeRangeSeconds,
+            titleOnly: titleOnly,
+            postUrlOnly: postUrlOnly,
+            likedOnly: likedOnly,
+            dislikedOnly: dislikedOnly,
+            pageCursor: pageCursor,
+            pageBack: pageBack
+        )
     }
 }

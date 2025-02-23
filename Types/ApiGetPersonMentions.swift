@@ -10,9 +10,19 @@
 import Foundation
 
 // GetPersonMentions.ts
+/// Removed in 1.0.0
 public struct ApiGetPersonMentions: Codable, Hashable, Sendable {
-    public let sort: ApiCommentSortType?
-    public let page: Int?
-    public let limit: Int?
-    public let unreadOnly: Bool?
+    public var sort: ApiCommentSortType?
+    public var page: Int?
+    public var limit: Int?
+    public var unreadOnly: Bool?
+}
+
+public extension ApiGetPersonMentions {
+    enum CodingKeys: String, CodingKey {
+        case sort = "sort"
+        case page = "page"
+        case limit = "limit"
+        case unreadOnly = "unread_only"
+    }
 }

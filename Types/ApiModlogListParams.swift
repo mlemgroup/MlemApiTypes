@@ -10,15 +10,29 @@
 import Foundation
 
 // ModlogListParams.ts
+/// Removed in 1.0.0
 public struct ApiModlogListParams: Codable, Hashable, Sendable {
-    public let communityId: Int?
-    public let modPersonId: Int?
-    public let otherPersonId: Int?
-    public let page: Int?
-    public let limit: Int?
-    public let hideModlogNames: Bool
+    public var communityId: Int?
+    public var modPersonId: Int?
+    public var otherPersonId: Int?
+    public var page: Int?
+    public var limit: Int?
+    public var hideModlogNames: Bool
     /// Added in 0.19.4
-    public let postId: Int?
+    public var postId: Int?
     /// Added in 0.19.4
-    public let commentId: Int?
+    public var commentId: Int?
+}
+
+public extension ApiModlogListParams {
+    enum CodingKeys: String, CodingKey {
+        case communityId = "community_id"
+        case modPersonId = "mod_person_id"
+        case otherPersonId = "other_person_id"
+        case page = "page"
+        case limit = "limit"
+        case hideModlogNames = "hide_modlog_names"
+        case postId = "post_id"
+        case commentId = "comment_id"
+    }
 }

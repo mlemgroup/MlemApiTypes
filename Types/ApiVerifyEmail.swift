@@ -11,5 +11,11 @@ import Foundation
 
 // VerifyEmail.ts
 public struct ApiVerifyEmail: Codable, Hashable, Sendable {
-    public let token: String
+    public var token: String
+}
+
+public extension ApiVerifyEmail {
+    enum CodingKeys: String, CodingKey {
+        case token = "token"
+    }
 }

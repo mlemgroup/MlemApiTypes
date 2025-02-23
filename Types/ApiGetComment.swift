@@ -11,5 +11,11 @@ import Foundation
 
 // GetComment.ts
 public struct ApiGetComment: Codable, Hashable, Sendable {
-    public let id: Int
+    public var id: Int
+}
+
+public extension ApiGetComment {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+    }
 }

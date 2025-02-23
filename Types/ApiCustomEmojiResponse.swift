@@ -11,5 +11,11 @@ import Foundation
 
 // CustomEmojiResponse.ts
 public struct ApiCustomEmojiResponse: Codable, Hashable, Sendable {
-    public let customEmoji: ApiCustomEmojiView
+    public var customEmoji: ApiCustomEmojiView
+}
+
+public extension ApiCustomEmojiResponse {
+    enum CodingKeys: String, CodingKey {
+        case customEmoji = "custom_emoji"
+    }
 }

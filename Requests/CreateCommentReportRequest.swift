@@ -13,16 +13,19 @@ public struct CreateCommentReportRequest: ApiPostRequest {
     public typealias Body = ApiCreateCommentReport
     public typealias Response = ApiCommentReportResponse
     
-    public let path: String = "comment/report"
+    public let path: String = "api/v3/comment/report"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       commentId: Int,
-      reason: String
+      reason: String,
+      violatesInstanceRules: Bool?
     ) {
         self.body = .init(
             commentId: commentId,
-            reason: reason
-      )
+            reason: reason,
+            violatesInstanceRules: violatesInstanceRules
+        )
     }
 }

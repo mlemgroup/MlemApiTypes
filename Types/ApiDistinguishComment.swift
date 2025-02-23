@@ -11,6 +11,13 @@ import Foundation
 
 // DistinguishComment.ts
 public struct ApiDistinguishComment: Codable, Hashable, Sendable {
-    public let commentId: Int
-    public let distinguished: Bool
+    public var commentId: Int
+    public var distinguished: Bool
+}
+
+public extension ApiDistinguishComment {
+    enum CodingKeys: String, CodingKey {
+        case commentId = "comment_id"
+        case distinguished = "distinguished"
+    }
 }

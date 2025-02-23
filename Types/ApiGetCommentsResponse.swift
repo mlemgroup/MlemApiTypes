@@ -11,5 +11,11 @@ import Foundation
 
 // GetCommentsResponse.ts
 public struct ApiGetCommentsResponse: Codable, Hashable, Sendable {
-    public let comments: [ApiCommentView]
+    public var comments: [ApiCommentView]
+}
+
+public extension ApiGetCommentsResponse {
+    enum CodingKeys: String, CodingKey {
+        case comments = "comments"
+    }
 }

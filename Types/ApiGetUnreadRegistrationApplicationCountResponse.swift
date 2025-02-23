@@ -12,5 +12,11 @@ import Foundation
 // GetUnreadRegistrationApplicationCountResponse.ts
 // swiftlint:disable:next type_name
 public struct ApiGetUnreadRegistrationApplicationCountResponse: Codable, Hashable, Sendable {
-    public let registrationApplications: Int
+    public var registrationApplications: Int
+}
+
+public extension ApiGetUnreadRegistrationApplicationCountResponse {
+    enum CodingKeys: String, CodingKey {
+        case registrationApplications = "registration_applications"
+    }
 }

@@ -11,6 +11,13 @@ import Foundation
 
 // CreateCommentLike.ts
 public struct ApiCreateCommentLike: Codable, Hashable, Sendable {
-    public let commentId: Int
-    public let score: Int
+    public var commentId: Int
+    public var score: Int
+}
+
+public extension ApiCreateCommentLike {
+    enum CodingKeys: String, CodingKey {
+        case commentId = "comment_id"
+        case score = "score"
+    }
 }

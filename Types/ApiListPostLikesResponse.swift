@@ -12,5 +12,11 @@ import Foundation
 // ListPostLikesResponse.ts
 /// Added in 0.19.2
 public struct ApiListPostLikesResponse: Codable, Hashable, Sendable {
-    public let postLikes: [ApiVoteView]
+    public var postLikes: [ApiVoteView]
+}
+
+public extension ApiListPostLikesResponse {
+    enum CodingKeys: String, CodingKey {
+        case postLikes = "post_likes"
+    }
 }

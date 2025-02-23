@@ -9,11 +9,12 @@
 
 import Foundation
 
+/// Removed in 1.0.0
 public struct MarkPersonMentionAsReadRequest: ApiPostRequest {
     public typealias Body = ApiMarkPersonMentionAsRead
     public typealias Response = ApiPersonMentionResponse
     
-    public let path: String = "user/mention/mark_as_read"
+    public let path: String = "api/v3/user/mention/mark_as_read"
     public let body: Body?
 
     init(
@@ -23,6 +24,6 @@ public struct MarkPersonMentionAsReadRequest: ApiPostRequest {
         self.body = .init(
             personMentionId: personMentionId,
             read: read
-      )
+        )
     }
 }

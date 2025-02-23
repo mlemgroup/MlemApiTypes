@@ -9,11 +9,12 @@
 
 import Foundation
 
+/// Removed in 1.0.0
 public struct GetRepliesRequest: ApiGetRequest {
     public typealias Parameters = ApiGetReplies
     public typealias Response = ApiGetRepliesResponse
     
-    public let path: String = "user/replies"
+    public let path: String = "api/v3/user/replies"
     public let parameters: Parameters?
     
     init(
@@ -27,6 +28,6 @@ public struct GetRepliesRequest: ApiGetRequest {
             page: page,
             limit: limit,
             unreadOnly: unreadOnly
-      )
+        )
     }
 }

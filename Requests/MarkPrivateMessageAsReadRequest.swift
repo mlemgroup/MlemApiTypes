@@ -13,16 +13,17 @@ public struct MarkPrivateMessageAsReadRequest: ApiPostRequest {
     public typealias Body = ApiMarkPrivateMessageAsRead
     public typealias Response = ApiPrivateMessageResponse
     
-    public let path: String = "private_message/mark_as_read"
+    public let path: String = "api/v3/private_message/mark_as_read"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       privateMessageId: Int,
       read: Bool
     ) {
         self.body = .init(
             privateMessageId: privateMessageId,
             read: read
-      )
+        )
     }
 }

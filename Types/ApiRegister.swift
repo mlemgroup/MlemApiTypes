@@ -11,14 +11,28 @@ import Foundation
 
 // Register.ts
 public struct ApiRegister: Codable, Hashable, Sendable {
-    public let username: String
-    public let password: String
-    public let passwordVerify: String
+    public var username: String
+    public var password: String
+    public var passwordVerify: String
     /// made optional in 0.19.4
-    public let showNsfw: Bool?
-    public let email: String?
-    public let captchaUuid: String?
-    public let captchaAnswer: String?
-    public let honeypot: String?
-    public let answer: String?
+    public var showNsfw: Bool?
+    public var email: String?
+    public var captchaUuid: String?
+    public var captchaAnswer: String?
+    public var honeypot: String?
+    public var answer: String?
+}
+
+public extension ApiRegister {
+    enum CodingKeys: String, CodingKey {
+        case username = "username"
+        case password = "password"
+        case passwordVerify = "password_verify"
+        case showNsfw = "show_nsfw"
+        case email = "email"
+        case captchaUuid = "captcha_uuid"
+        case captchaAnswer = "captcha_answer"
+        case honeypot = "honeypot"
+        case answer = "answer"
+    }
 }

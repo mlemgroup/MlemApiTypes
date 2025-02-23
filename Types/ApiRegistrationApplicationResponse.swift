@@ -11,5 +11,11 @@ import Foundation
 
 // RegistrationApplicationResponse.ts
 public struct ApiRegistrationApplicationResponse: Codable, Hashable, Sendable {
-    public let registrationApplication: ApiRegistrationApplicationView
+    public var registrationApplication: ApiRegistrationApplicationView
+}
+
+public extension ApiRegistrationApplicationResponse {
+    enum CodingKeys: String, CodingKey {
+        case registrationApplication = "registration_application"
+    }
 }

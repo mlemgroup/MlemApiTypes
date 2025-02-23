@@ -13,10 +13,11 @@ public struct EditSiteRequest: ApiPutRequest {
     public typealias Body = ApiEditSite
     public typealias Response = ApiSiteResponse
     
-    public let path: String = "site"
+    public let path: String = "api/v3/site"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       name: String?,
       sidebar: String?,
       description: String?,
@@ -62,7 +63,17 @@ public struct EditSiteRequest: ApiPutRequest {
       autoExpandImages: Bool?,
       defaultSortType: ApiSortType?,
       blockedUrls: [String]?,
-      defaultPostListingMode: ApiPostListingMode?
+      defaultPostListingMode: ApiPostListingMode?,
+      defaultPostSortType: ApiPostSortType?,
+      defaultPostTimeRangeSeconds: Int?,
+      defaultCommentSortType: ApiCommentSortType?,
+      oauthRegistration: Bool?,
+      postUpvotes: ApiFederationMode?,
+      postDownvotes: ApiFederationMode?,
+      commentUpvotes: ApiFederationMode?,
+      commentDownvotes: ApiFederationMode?,
+      disableDonationDialog: Bool?,
+      disallowNsfwContent: Bool?
     ) {
         self.body = .init(
             name: name,
@@ -110,7 +121,17 @@ public struct EditSiteRequest: ApiPutRequest {
             autoExpandImages: autoExpandImages,
             defaultSortType: defaultSortType,
             blockedUrls: blockedUrls,
-            defaultPostListingMode: defaultPostListingMode
-      )
+            defaultPostListingMode: defaultPostListingMode,
+            defaultPostSortType: defaultPostSortType,
+            defaultPostTimeRangeSeconds: defaultPostTimeRangeSeconds,
+            defaultCommentSortType: defaultCommentSortType,
+            oauthRegistration: oauthRegistration,
+            postUpvotes: postUpvotes,
+            postDownvotes: postDownvotes,
+            commentUpvotes: commentUpvotes,
+            commentDownvotes: commentDownvotes,
+            disableDonationDialog: disableDonationDialog,
+            disallowNsfwContent: disallowNsfwContent
+        )
     }
 }

@@ -11,10 +11,21 @@ import Foundation
 
 // RegistrationApplication.ts
 public struct ApiRegistrationApplication: Codable, Hashable, Sendable {
-    public let id: Int
-    public let localUserId: Int
-    public let answer: String
-    public let adminId: Int?
-    public let denyReason: String?
-    public let published: Date
+    public var id: Int
+    public var localUserId: Int
+    public var answer: String
+    public var adminId: Int?
+    public var denyReason: String?
+    public var published: Date
+}
+
+public extension ApiRegistrationApplication {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case localUserId = "local_user_id"
+        case answer = "answer"
+        case adminId = "admin_id"
+        case denyReason = "deny_reason"
+        case published = "published"
+    }
 }

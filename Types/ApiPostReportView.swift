@@ -11,29 +11,51 @@ import Foundation
 
 // PostReportView.ts
 public struct ApiPostReportView: Codable, Hashable, Sendable {
-    public let postReport: ApiPostReport
-    public let post: ApiPost
-    public let community: ApiCommunity
-    public let creator: ApiPerson
-    public let postCreator: ApiPerson
-    public let creatorBannedFromCommunity: Bool
-    public let myVote: Int?
-    public let counts: ApiPostAggregates
-    public let resolver: ApiPerson?
+    public var postReport: ApiPostReport
+    public var post: ApiPost
+    public var community: ApiCommunity
+    public var creator: ApiPerson
+    public var postCreator: ApiPerson
+    public var creatorBannedFromCommunity: Bool
+    public var myVote: Int?
+    public var counts: ApiPostAggregates
+    public var resolver: ApiPerson?
     /// Added in 0.19.4
-    public let creatorIsModerator: Bool?
+    public var creatorIsModerator: Bool?
     /// Added in 0.19.4
-    public let creatorIsAdmin: Bool?
+    public var creatorIsAdmin: Bool?
     /// Added in 0.19.4
-    public let subscribed: ApiSubscribedType?
+    public var subscribed: ApiSubscribedType?
+    /// Added in 0.19.4; made optional in 1.0.0
+    public var saved: Bool?
     /// Added in 0.19.4
-    public let saved: Bool?
+    public var read: Bool?
     /// Added in 0.19.4
-    public let read: Bool?
+    public var hidden: Bool?
     /// Added in 0.19.4
-    public let hidden: Bool?
+    public var creatorBlocked: Bool?
     /// Added in 0.19.4
-    public let creatorBlocked: Bool?
-    /// Added in 0.19.4
-    public let unreadComments: Int?
+    public var unreadComments: Int?
+}
+
+public extension ApiPostReportView {
+    enum CodingKeys: String, CodingKey {
+        case postReport = "post_report"
+        case post = "post"
+        case community = "community"
+        case creator = "creator"
+        case postCreator = "post_creator"
+        case creatorBannedFromCommunity = "creator_banned_from_community"
+        case myVote = "my_vote"
+        case counts = "counts"
+        case resolver = "resolver"
+        case creatorIsModerator = "creator_is_moderator"
+        case creatorIsAdmin = "creator_is_admin"
+        case subscribed = "subscribed"
+        case saved = "saved"
+        case read = "read"
+        case hidden = "hidden"
+        case creatorBlocked = "creator_blocked"
+        case unreadComments = "unread_comments"
+    }
 }

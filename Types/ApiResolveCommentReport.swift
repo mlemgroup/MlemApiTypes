@@ -11,6 +11,13 @@ import Foundation
 
 // ResolveCommentReport.ts
 public struct ApiResolveCommentReport: Codable, Hashable, Sendable {
-    public let reportId: Int
-    public let resolved: Bool
+    public var reportId: Int
+    public var resolved: Bool
+}
+
+public extension ApiResolveCommentReport {
+    enum CodingKeys: String, CodingKey {
+        case reportId = "report_id"
+        case resolved = "resolved"
+    }
 }

@@ -13,16 +13,17 @@ public struct ResolvePostReportRequest: ApiPutRequest {
     public typealias Body = ApiResolvePostReport
     public typealias Response = ApiPostReportResponse
     
-    public let path: String = "post/report/resolve"
+    public let path: String = "api/v3/post/report/resolve"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       reportId: Int,
       resolved: Bool
     ) {
         self.body = .init(
             reportId: reportId,
             resolved: resolved
-      )
+        )
     }
 }

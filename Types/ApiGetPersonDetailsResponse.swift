@@ -11,10 +11,22 @@ import Foundation
 
 // GetPersonDetailsResponse.ts
 public struct ApiGetPersonDetailsResponse: Codable, Hashable, Sendable {
-    public let personView: ApiPersonView
-    public let comments: [ApiCommentView]
-    public let posts: [ApiPostView]
-    public let moderates: [ApiCommunityModeratorView]
+    public var personView: ApiPersonView
+    /// Removed in 1.0.0
+    public var comments: [ApiCommentView]?
+    /// Removed in 1.0.0
+    public var posts: [ApiPostView]?
+    public var moderates: [ApiCommunityModeratorView]
     /// Added in 0.19.2; made optional in 0.19.3
-    public let site: ApiSite?
+    public var site: ApiSite?
+}
+
+public extension ApiGetPersonDetailsResponse {
+    enum CodingKeys: String, CodingKey {
+        case personView = "person_view"
+        case comments = "comments"
+        case posts = "posts"
+        case moderates = "moderates"
+        case site = "site"
+    }
 }

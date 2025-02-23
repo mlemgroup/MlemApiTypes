@@ -13,16 +13,19 @@ public struct HidePostRequest: ApiPostRequest {
     public typealias Body = ApiHidePost
     public typealias Response = ApiSuccessResponse
     
-    public let path: String = "post/hide"
+    public let path: String = "api/v3/post/hide"
     public let body: Body?
 
     init(
-      postIds: [Int],
-      hide: Bool
+      endpoint: SiteVersion.EndpointVersion,
+      postIds: [Int]?,
+      hide: Bool,
+      postId: Int?
     ) {
         self.body = .init(
             postIds: postIds,
-            hide: hide
-      )
+            hide: hide,
+            postId: postId
+        )
     }
 }

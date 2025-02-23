@@ -11,8 +11,16 @@ import Foundation
 
 // PersonView.ts
 public struct ApiPersonView: Codable, Hashable, Sendable {
-    public let person: ApiPerson
-    public let counts: ApiPersonAggregates
+    public var person: ApiPerson
+    public var counts: ApiPersonAggregates
     /// Added in 0.19.0
-    public let isAdmin: Bool?
+    public var isAdmin: Bool?
+}
+
+public extension ApiPersonView {
+    enum CodingKeys: String, CodingKey {
+        case person = "person"
+        case counts = "counts"
+        case isAdmin = "is_admin"
+    }
 }

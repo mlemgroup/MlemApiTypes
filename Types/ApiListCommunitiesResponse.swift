@@ -11,5 +11,11 @@ import Foundation
 
 // ListCommunitiesResponse.ts
 public struct ApiListCommunitiesResponse: Codable, Hashable, Sendable {
-    public let communities: [ApiCommunityView]
+    public var communities: [ApiCommunityView]
+}
+
+public extension ApiListCommunitiesResponse {
+    enum CodingKeys: String, CodingKey {
+        case communities = "communities"
+    }
 }

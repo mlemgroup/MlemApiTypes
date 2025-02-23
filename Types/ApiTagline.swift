@@ -11,9 +11,20 @@ import Foundation
 
 // Tagline.ts
 public struct ApiTagline: Codable, Hashable, Sendable {
-    public let id: Int
-    public let localSiteId: Int
-    public let content: String
-    public let published: Date
-    public let updated: Date?
+    public var id: Int
+    /// Removed in 1.0.0
+    public var localSiteId: Int?
+    public var content: String
+    public var published: Date
+    public var updated: Date?
+}
+
+public extension ApiTagline {
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case localSiteId = "local_site_id"
+        case content = "content"
+        case published = "published"
+        case updated = "updated"
+    }
 }

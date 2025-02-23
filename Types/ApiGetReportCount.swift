@@ -11,5 +11,11 @@ import Foundation
 
 // GetReportCount.ts
 public struct ApiGetReportCount: Codable, Hashable, Sendable {
-    public let communityId: Int?
+    public var communityId: Int?
+}
+
+public extension ApiGetReportCount {
+    enum CodingKeys: String, CodingKey {
+        case communityId = "community_id"
+    }
 }

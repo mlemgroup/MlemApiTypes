@@ -11,6 +11,13 @@ import Foundation
 
 // BlockCommunity.ts
 public struct ApiBlockCommunity: Codable, Hashable, Sendable {
-    public let communityId: Int
-    public let block: Bool
+    public var communityId: Int
+    public var block: Bool
+}
+
+public extension ApiBlockCommunity {
+    enum CodingKeys: String, CodingKey {
+        case communityId = "community_id"
+        case block = "block"
+    }
 }

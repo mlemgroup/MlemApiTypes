@@ -11,12 +11,24 @@ import Foundation
 
 // MyUserInfo.ts
 public struct ApiMyUserInfo: Codable, Hashable, Sendable {
-    public let localUserView: ApiLocalUserView
-    public let follows: [ApiCommunityFollowerView]
-    public let moderates: [ApiCommunityModeratorView]
-    public let communityBlocks: [ApiCommunityBlockView]
-    public let personBlocks: [ApiPersonBlockView]
-    public let discussionLanguages: [Int]
+    public var localUserView: ApiLocalUserView
+    public var follows: [ApiCommunityFollowerView]
+    public var moderates: [ApiCommunityModeratorView]
+    public var communityBlocks: [ApiCommunityBlockView]
+    public var personBlocks: [ApiPersonBlockView]
+    public var discussionLanguages: [Int]
     /// Added in 0.19.0
-    public let instanceBlocks: [ApiInstanceBlockView]?
+    public var instanceBlocks: [ApiInstanceBlockView]?
+}
+
+public extension ApiMyUserInfo {
+    enum CodingKeys: String, CodingKey {
+        case localUserView = "local_user_view"
+        case follows = "follows"
+        case moderates = "moderates"
+        case communityBlocks = "community_blocks"
+        case personBlocks = "person_blocks"
+        case discussionLanguages = "discussion_languages"
+        case instanceBlocks = "instance_blocks"
+    }
 }

@@ -13,10 +13,11 @@ public struct CreateCustomEmojiRequest: ApiPostRequest {
     public typealias Body = ApiCreateCustomEmoji
     public typealias Response = ApiCustomEmojiResponse
     
-    public let path: String = "custom_emoji"
+    public let path: String = "api/v3/custom_emoji"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       category: String,
       shortcode: String,
       imageUrl: String,
@@ -29,6 +30,6 @@ public struct CreateCustomEmojiRequest: ApiPostRequest {
             imageUrl: imageUrl,
             altText: altText,
             keywords: keywords
-      )
+        )
     }
 }

@@ -13,10 +13,11 @@ public struct CreatePostRequest: ApiPostRequest {
     public typealias Body = ApiCreatePost
     public typealias Response = ApiPostResponse
     
-    public let path: String = "post"
+    public let path: String = "api/v3/post"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       name: String,
       communityId: Int,
       url: String?,
@@ -25,7 +26,9 @@ public struct CreatePostRequest: ApiPostRequest {
       nsfw: Bool?,
       languageId: Int?,
       altText: String?,
-      customThumbnail: String?
+      customThumbnail: String?,
+      tags: [Int]?,
+      scheduledPublishTime: Int?
     ) {
         self.body = .init(
             name: name,
@@ -36,7 +39,9 @@ public struct CreatePostRequest: ApiPostRequest {
             nsfw: nsfw,
             languageId: languageId,
             altText: altText,
-            customThumbnail: customThumbnail
-      )
+            customThumbnail: customThumbnail,
+            tags: tags,
+            scheduledPublishTime: scheduledPublishTime
+        )
     }
 }

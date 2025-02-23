@@ -12,5 +12,11 @@ import Foundation
 // PurgeItemResponse.ts
 /// Removed in 0.19.0
 public struct ApiPurgeItemResponse: Codable, Hashable, Sendable {
-    public let success: Bool
+    public var success: Bool
+}
+
+public extension ApiPurgeItemResponse {
+    enum CodingKeys: String, CodingKey {
+        case success = "success"
+    }
 }

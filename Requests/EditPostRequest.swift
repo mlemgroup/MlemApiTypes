@@ -13,10 +13,11 @@ public struct EditPostRequest: ApiPutRequest {
     public typealias Body = ApiEditPost
     public typealias Response = ApiPostResponse
     
-    public let path: String = "post"
+    public let path: String = "api/v3/post"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       postId: Int,
       name: String?,
       url: String?,
@@ -24,7 +25,9 @@ public struct EditPostRequest: ApiPutRequest {
       nsfw: Bool?,
       languageId: Int?,
       altText: String?,
-      customThumbnail: String?
+      customThumbnail: String?,
+      tags: [Int]?,
+      scheduledPublishTime: Int?
     ) {
         self.body = .init(
             postId: postId,
@@ -34,7 +37,9 @@ public struct EditPostRequest: ApiPutRequest {
             nsfw: nsfw,
             languageId: languageId,
             altText: altText,
-            customThumbnail: customThumbnail
-      )
+            customThumbnail: customThumbnail,
+            tags: tags,
+            scheduledPublishTime: scheduledPublishTime
+        )
     }
 }

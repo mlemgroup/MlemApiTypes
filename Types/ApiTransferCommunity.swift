@@ -11,6 +11,13 @@ import Foundation
 
 // TransferCommunity.ts
 public struct ApiTransferCommunity: Codable, Hashable, Sendable {
-    public let communityId: Int
-    public let personId: Int
+    public var communityId: Int
+    public var personId: Int
+}
+
+public extension ApiTransferCommunity {
+    enum CodingKeys: String, CodingKey {
+        case communityId = "community_id"
+        case personId = "person_id"
+    }
 }

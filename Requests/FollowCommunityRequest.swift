@@ -13,16 +13,17 @@ public struct FollowCommunityRequest: ApiPostRequest {
     public typealias Body = ApiFollowCommunity
     public typealias Response = ApiCommunityResponse
     
-    public let path: String = "community/follow"
+    public let path: String = "api/v3/community/follow"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       communityId: Int,
       follow: Bool
     ) {
         self.body = .init(
             communityId: communityId,
             follow: follow
-      )
+        )
     }
 }

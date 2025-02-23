@@ -13,10 +13,11 @@ public struct CreateSiteRequest: ApiPostRequest {
     public typealias Body = ApiCreateSite
     public typealias Response = ApiSiteResponse
     
-    public let path: String = "site"
+    public let path: String = "api/v3/site"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       name: String,
       sidebar: String?,
       description: String?,
@@ -60,7 +61,16 @@ public struct CreateSiteRequest: ApiPostRequest {
       contentWarning: String?,
       autoExpandImages: Bool?,
       defaultSortType: ApiSortType?,
-      defaultPostListingMode: ApiPostListingMode?
+      defaultPostListingMode: ApiPostListingMode?,
+      defaultPostSortType: ApiPostSortType?,
+      defaultPostTimeRangeSeconds: Int?,
+      defaultCommentSortType: ApiCommentSortType?,
+      oauthRegistration: Bool?,
+      postUpvotes: ApiFederationMode?,
+      postDownvotes: ApiFederationMode?,
+      commentUpvotes: ApiFederationMode?,
+      commentDownvotes: ApiFederationMode?,
+      disableDonationDialog: Bool?
     ) {
         self.body = .init(
             name: name,
@@ -106,7 +116,16 @@ public struct CreateSiteRequest: ApiPostRequest {
             contentWarning: contentWarning,
             autoExpandImages: autoExpandImages,
             defaultSortType: defaultSortType,
-            defaultPostListingMode: defaultPostListingMode
-      )
+            defaultPostListingMode: defaultPostListingMode,
+            defaultPostSortType: defaultPostSortType,
+            defaultPostTimeRangeSeconds: defaultPostTimeRangeSeconds,
+            defaultCommentSortType: defaultCommentSortType,
+            oauthRegistration: oauthRegistration,
+            postUpvotes: postUpvotes,
+            postDownvotes: postDownvotes,
+            commentUpvotes: commentUpvotes,
+            commentDownvotes: commentDownvotes,
+            disableDonationDialog: disableDonationDialog
+        )
     }
 }

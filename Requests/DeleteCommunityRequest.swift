@@ -13,16 +13,17 @@ public struct DeleteCommunityRequest: ApiPostRequest {
     public typealias Body = ApiDeleteCommunity
     public typealias Response = ApiCommunityResponse
     
-    public let path: String = "community/delete"
+    public let path: String = "api/v3/community/delete"
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       communityId: Int,
       deleted: Bool
     ) {
         self.body = .init(
             communityId: communityId,
             deleted: deleted
-      )
+        )
     }
 }

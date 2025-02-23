@@ -13,22 +13,24 @@ public struct BanPersonRequest: ApiPostRequest {
     public typealias Body = ApiBanPerson
     public typealias Response = ApiBanPersonResponse
     
-    public let path: String = "user/ban"
+    public let path: String
     public let body: Body?
 
     init(
+      endpoint: SiteVersion.EndpointVersion,
       personId: Int,
       ban: Bool,
-      removeData: Bool?,
+      removeOrRestoreData: Bool?,
       reason: String?,
       expires: Int?
     ) {
+        self.path = endpoint == .v3 ? "api/v3/user/ban" : "api/v4/admin/ban"
         self.body = .init(
             personId: personId,
             ban: ban,
-            removeData: removeData,
+            removeOrRestoreData: removeOrRestoreData,
             reason: reason,
             expires: expires
-      )
+        )
     }
 }

@@ -11,6 +11,13 @@ import Foundation
 
 // PurgeComment.ts
 public struct ApiPurgeComment: Codable, Hashable, Sendable {
-    public let commentId: Int
-    public let reason: String?
+    public var commentId: Int
+    public var reason: String?
+}
+
+public extension ApiPurgeComment {
+    enum CodingKeys: String, CodingKey {
+        case commentId = "comment_id"
+        case reason = "reason"
+    }
 }

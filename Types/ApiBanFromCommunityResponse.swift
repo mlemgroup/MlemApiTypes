@@ -11,6 +11,13 @@ import Foundation
 
 // BanFromCommunityResponse.ts
 public struct ApiBanFromCommunityResponse: Codable, Hashable, Sendable {
-    public let personView: ApiPersonView
-    public let banned: Bool
+    public var personView: ApiPersonView
+    public var banned: Bool
+}
+
+public extension ApiBanFromCommunityResponse {
+    enum CodingKeys: String, CodingKey {
+        case personView = "person_view"
+        case banned = "banned"
+    }
 }

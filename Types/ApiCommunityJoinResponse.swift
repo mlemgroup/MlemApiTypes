@@ -12,5 +12,11 @@ import Foundation
 // CommunityJoinResponse.ts
 /// Removed in 0.19.0
 public struct ApiCommunityJoinResponse: Codable, Hashable, Sendable {
-    public let joined: Bool
+    public var joined: Bool
+}
+
+public extension ApiCommunityJoinResponse {
+    enum CodingKeys: String, CodingKey {
+        case joined = "joined"
+    }
 }
