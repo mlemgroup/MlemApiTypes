@@ -9,15 +9,17 @@
 
 import Foundation
 
+/// Lemmy availability: available from 0.19.0 onwards
 public struct ValidateAuthRequest: ApiGetRequest {
-    public typealias Parameters = Int // dummy type for APIRequestBodyProviding conformance
+    public typealias Parameters = Int
     public typealias Response = ApiSuccessResponse
     
     public let path: String
-    public let parameters: Parameters?
+    public let parameters: Parameters? = nil
     
-    init(endpoint: SiteVersion.EndpointVersion) {
-        self.path = endpoint == .v3 ? "api/v3/user/validate_auth" : "api/v4/account/validate_auth"
-        self.parameters = nil
+    init(
+      endpoint: SiteVersion.EndpointVersion
+    ) {
+        self.path = endpoint == .v4 ? "api/v4/account/validate_auth" : "api/v3/user/validate_auth"
     }
 }

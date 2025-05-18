@@ -9,11 +9,10 @@
 
 import Foundation
 
-// GetCommunityPendingFollowsCountResponse.ts
-/// Added in 1.0.0
-// swiftlint:disable:next type_name
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiGetCommunityPendingFollowsCountResponse: Codable, Hashable, Sendable {
-    public var count: Int
+    /// Lemmy availability: all versions
+    public let count: Int
 }
 
 public extension ApiGetCommunityPendingFollowsCountResponse {

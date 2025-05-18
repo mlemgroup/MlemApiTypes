@@ -9,10 +9,10 @@
 
 import Foundation
 
-// CommentReplyResponse.ts
-/// Removed in 1.0.0
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiCommentReplyResponse: Codable, Hashable, Sendable {
-    public var commentReplyView: ApiCommentReplyView
+    /// Lemmy availability: all versions
+    public let commentReplyView: ApiCommentReplyView
 }
 
 public extension ApiCommentReplyResponse {

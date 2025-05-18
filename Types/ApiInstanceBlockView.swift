@@ -9,12 +9,14 @@
 
 import Foundation
 
-// InstanceBlockView.ts
-/// Added in 0.19.0, removed in 1.0.0
+/// Lemmy availability: available between 0.19.0 and 0.19.11
 public struct ApiInstanceBlockView: Codable, Hashable, Sendable {
-    public var person: ApiPerson
-    public var instance: ApiInstance
-    public var site: ApiSite?
+    /// Lemmy availability: all versions
+    public let person: ApiPerson
+    /// Lemmy availability: all versions
+    public let instance: ApiInstance
+    /// Lemmy availability: all versions
+    public let site: ApiSite?
 }
 
 public extension ApiInstanceBlockView {

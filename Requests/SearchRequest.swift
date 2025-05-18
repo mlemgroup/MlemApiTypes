@@ -9,6 +9,7 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct SearchRequest: ApiGetRequest {
     public typealias Parameters = ApiSearch
     public typealias Response = ApiSearchResponse
@@ -18,14 +19,12 @@ public struct SearchRequest: ApiGetRequest {
     
     init(
       endpoint: SiteVersion.EndpointVersion,
-      
-      // swiftlint:disable:next identifier_name
       q: String?,
       communityId: Int?,
       communityName: String?,
       creatorId: Int?,
       type_: ApiSearchType?,
-      sort: SearchSortTypeBridge?,
+      sort: SearchSortTypeBridge,
       listingType: ApiListingType?,
       page: Int?,
       limit: Int?,
@@ -39,7 +38,7 @@ public struct SearchRequest: ApiGetRequest {
       pageCursor: String?,
       pageBack: Bool?
     ) {
-        self.path = endpoint == .v3 ? "api/v3/search" : "api/v4/search"
+        self.path = endpoint == .v4 ? "api/v4/search" : "api/v3/search"
         self.parameters = .init(
             q: q,
             communityId: communityId,

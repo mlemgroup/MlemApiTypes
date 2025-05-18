@@ -9,15 +9,15 @@
 
 import Foundation
 
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct GetMyUserRequest: ApiGetRequest {
-    public typealias Parameters = Int // dummy type for APIRequestBodyProviding conformance
+    public typealias Parameters = Int
     public typealias Response = ApiMyUserInfo
     
     public let path: String = "api/v4/account"
-    public let parameters: Parameters?
+    public let parameters: Parameters? = nil
     
-    init() {
-        self.parameters = nil
+    init(
+    ) {
     }
 }

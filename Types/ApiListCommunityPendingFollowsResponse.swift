@@ -9,10 +9,10 @@
 
 import Foundation
 
-// ListCommunityPendingFollowsResponse.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiListCommunityPendingFollowsResponse: Codable, Hashable, Sendable {
-    public var items: [ApiPendingFollow]
+    /// Lemmy availability: all versions
+    public let items: [ApiPendingFollow]
 }
 
 public extension ApiListCommunityPendingFollowsResponse {

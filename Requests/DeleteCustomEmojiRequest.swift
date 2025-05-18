@@ -9,19 +9,35 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct DeleteCustomEmojiRequest: ApiPostRequest {
     public typealias Body = ApiDeleteCustomEmoji
-    public typealias Response = ApiSuccessResponse
+    public typealias Response = DeleteCustomEmojiResponseUnion
     
-    public let path: String = "api/v3/custom_emoji/delete"
+    public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       id: Int
     ) {
+        self.path = endpoint == .v4 ? "api/v4/custom_emoji/delete" : "api/v3/custom_emoji/delete"
         self.body = .init(
             id: id
         )
+    }
+}
+
+public enum DeleteCustomEmojiResponseUnion: Decodable {
+    case apiCustomEmojiResponse(ApiCustomEmojiResponse)
+    case apiSuccessResponse(ApiSuccessResponse)
+    
+    public init(from decoder: Decoder) throws {
+        if let value = try? ApiCustomEmojiResponse(from: decoder) {
+            self = .apiCustomEmojiResponse(value)
+            return
+        }
+        let value = try ApiSuccessResponse(from: decoder)
+        self = .apiSuccessResponse(value)
     }
 }

@@ -9,10 +9,10 @@
 
 import Foundation
 
-// DeleteImageParams.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiDeleteImageParams: Codable, Hashable, Sendable {
-    public var filename: String
+    /// Lemmy availability: all versions
+    public let filename: String
 }
 
 public extension ApiDeleteImageParams {

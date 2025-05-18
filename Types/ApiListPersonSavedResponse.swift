@@ -9,14 +9,18 @@
 
 import Foundation
 
-// ListPersonSavedResponse.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiListPersonSavedResponse: Codable, Hashable, Sendable {
-    public var saved: [ApiPersonContentCombinedView]
+    /// Lemmy availability: all versions
+    public let saved: [ApiPersonSavedCombinedView]
+    /// the pagination cursor to use to fetch the next page
+    /// Lemmy availability: all versions
+    public let nextPage: String?
 }
 
 public extension ApiListPersonSavedResponse {
     enum CodingKeys: String, CodingKey {
         case saved = "saved"
+        case nextPage = "next_page"
     }
 }

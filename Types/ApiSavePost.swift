@@ -9,10 +9,12 @@
 
 import Foundation
 
-// SavePost.ts
+/// Lemmy availability: all versions
 public struct ApiSavePost: Codable, Hashable, Sendable {
-    public var postId: Int
-    public var save: Bool
+    /// Lemmy availability: all versions
+    public let postId: Int
+    /// Lemmy availability: all versions
+    public let save: Bool
 }
 
 public extension ApiSavePost {

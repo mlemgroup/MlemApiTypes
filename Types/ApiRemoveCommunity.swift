@@ -9,13 +9,16 @@
 
 import Foundation
 
-// RemoveCommunity.ts
+/// Lemmy availability: all versions
 public struct ApiRemoveCommunity: Codable, Hashable, Sendable {
-    public var communityId: Int
-    public var removed: Bool
-    public var reason: String?
-    /// Removed in 0.19.0
-    public var expires: Int?
+    /// Lemmy availability: all versions
+    public let communityId: Int
+    /// Lemmy availability: all versions
+    public let removed: Bool
+    /// Lemmy availability: all versions
+    public let reason: String?
+    /// Lemmy availability: unavailable after 0.18.5
+    public let expires: Int?
 }
 
 public extension ApiRemoveCommunity {

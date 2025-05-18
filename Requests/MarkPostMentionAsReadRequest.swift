@@ -9,14 +9,14 @@
 
 import Foundation
 
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct MarkPostMentionAsReadRequest: ApiPostRequest {
     public typealias Body = ApiMarkPersonPostMentionAsRead
     public typealias Response = ApiSuccessResponse
     
     public let path: String = "api/v4/account/mention/post/mark_as_read"
     public let body: Body?
-
+    
     init(
       personPostMentionId: Int,
       read: Bool

@@ -9,11 +9,15 @@
 
 import Foundation
 
-// Login.ts
+/// Lemmy availability: all versions
 public struct ApiLogin: Codable, Hashable, Sendable {
-    public var usernameOrEmail: String
-    public var password: String
-    public var totp2faToken: String?
+    /// Lemmy availability: all versions
+    public let usernameOrEmail: String
+    /// Lemmy availability: all versions
+    public let password: String
+    /// May be required, if totp is enabled for their account.
+    /// Lemmy availability: all versions
+    public let totp2faToken: String?
 }
 
 public extension ApiLogin {
@@ -21,12 +25,5 @@ public extension ApiLogin {
         case usernameOrEmail = "username_or_email"
         case password = "password"
         case totp2faToken = "totp_2fa_token"
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(usernameOrEmail, forKey: .usernameOrEmail)
-        try container.encode(password, forKey: .password)
-        try container.encode(totp2faToken, forKey: .totp2faToken)
     }
 }

@@ -9,10 +9,12 @@
 
 import Foundation
 
-// DeletePost.ts
+/// Lemmy availability: all versions
 public struct ApiDeletePost: Codable, Hashable, Sendable {
-    public var postId: Int
-    public var deleted: Bool
+    /// Lemmy availability: all versions
+    public let postId: Int
+    /// Lemmy availability: all versions
+    public let deleted: Bool
 }
 
 public extension ApiDeletePost {

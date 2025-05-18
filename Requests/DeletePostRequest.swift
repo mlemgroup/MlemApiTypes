@@ -9,18 +9,20 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct DeletePostRequest: ApiPostRequest {
     public typealias Body = ApiDeletePost
     public typealias Response = ApiPostResponse
     
-    public let path: String = "api/v3/post/delete"
+    public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       postId: Int,
       deleted: Bool
     ) {
+        self.path = endpoint == .v4 ? "api/v4/post/delete" : "api/v3/post/delete"
         self.body = .init(
             postId: postId,
             deleted: deleted

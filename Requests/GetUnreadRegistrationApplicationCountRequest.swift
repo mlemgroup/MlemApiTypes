@@ -9,16 +9,19 @@
 
 import Foundation
 
-// swiftlint:disable:next type_name
+/// Lemmy availability: all versions
 public struct GetUnreadRegistrationApplicationCountRequest: ApiGetRequest {
-    public typealias Parameters = Int // dummy type for APIRequestBodyProviding conformance
+    public typealias Parameters = ApiGetUnreadRegistrationApplicationCount
     public typealias Response = ApiGetUnreadRegistrationApplicationCountResponse
     
     public let path: String
     public let parameters: Parameters?
     
-    init(endpoint: SiteVersion.EndpointVersion) {
-        self.path = endpoint == .v3 ? "api/v3/admin/registration_application/count" : "api/v4/admin/registration_application/count"
-        self.parameters = nil
+    init(
+      endpoint: SiteVersion.EndpointVersion
+    ) {
+        self.path = endpoint == .v4 ? "api/v4/admin/registration_application/count" : "api/v3/admin/registration_application/count"
+        self.parameters = .init(
+        )
     }
 }

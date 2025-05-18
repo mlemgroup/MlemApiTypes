@@ -9,9 +9,10 @@
 
 import Foundation
 
-// GetComment.ts
+/// Lemmy availability: all versions
 public struct ApiGetComment: Codable, Hashable, Sendable {
-    public var id: Int
+    /// Lemmy availability: all versions
+    public let id: Int
 }
 
 public extension ApiGetComment {

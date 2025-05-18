@@ -9,14 +9,18 @@
 
 import Foundation
 
-// ModFeaturePostView.ts
+/// Lemmy availability: all versions
 public struct ApiModFeaturePostView: Codable, Hashable, Sendable {
-    public var modFeaturePost: ApiModFeaturePost
-    public var moderator: ApiPerson?
-    public var post: ApiPost
-    public var community: ApiCommunity
-    /// Added in 1.0.0
-    public var otherPerson: ApiPerson?
+    /// Lemmy availability: all versions
+    public let modFeaturePost: ApiModFeaturePost
+    /// Lemmy availability: all versions
+    public let moderator: ApiPerson?
+    /// Lemmy availability: all versions
+    public let post: ApiPost
+    /// Lemmy availability: all versions
+    public let community: ApiCommunity
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let otherPerson: ApiPerson?
 }
 
 public extension ApiModFeaturePostView {

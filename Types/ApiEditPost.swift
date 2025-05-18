@@ -9,22 +9,32 @@
 
 import Foundation
 
-// EditPost.ts
+/// Lemmy availability: all versions
 public struct ApiEditPost: Codable, Hashable, Sendable {
-    public var postId: Int
-    public var name: String?
-    public var url: String?
-    public var body: String?
-    public var nsfw: Bool?
-    public var languageId: Int?
-    /// Added in 0.19.4
-    public var altText: String?
-    /// Added in 0.19.4
-    public var customThumbnail: String?
-    /// Added in 1.0.0
-    public var tags: [Int]?
-    /// Added in 1.0.0
-    public var scheduledPublishTime: Int?
+    /// Lemmy availability: all versions
+    public let postId: Int
+    /// Lemmy availability: all versions
+    public let name: String?
+    /// Lemmy availability: all versions
+    public let url: URL?
+    /// An optional body for the post in markdown.
+    /// Lemmy availability: all versions
+    public let body: String?
+    /// Lemmy availability: all versions
+    public let nsfw: Bool?
+    /// Lemmy availability: all versions
+    public let languageId: Int?
+    /// An optional alt_text, usable for image posts.
+    /// Lemmy availability: available from 0.19.4 onwards
+    public let altText: String?
+    /// Instead of fetching a thumbnail, use a custom one.
+    /// Lemmy availability: available from 0.19.4 onwards
+    public let customThumbnail: String?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let tags: [Int]?
+    /// Time when this post should be scheduled. Null means publish immediately.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let scheduledPublishTime: Int?
 }
 
 public extension ApiEditPost {

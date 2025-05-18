@@ -9,10 +9,10 @@
 
 import Foundation
 
-// ResendVerificationEmail.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiResendVerificationEmail: Codable, Hashable, Sendable {
-    public var email: String
+    /// Lemmy availability: all versions
+    public let email: String
 }
 
 public extension ApiResendVerificationEmail {

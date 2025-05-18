@@ -9,24 +9,35 @@
 
 import Foundation
 
-// EditCommunity.ts
+/// Lemmy availability: all versions
 public struct ApiEditCommunity: Codable, Hashable, Sendable {
-    public var communityId: Int
-    public var title: String?
-    public var description: String?
-    /// Removed in 1.0.0
-    public var icon: URL?
-    /// Removed in 1.0.0
-    public var banner: URL?
-    public var nsfw: Bool?
-    public var postingRestrictedToMods: Bool?
-    public var discussionLanguages: [Int]?
-    /// Added in 0.19.2, removed in 0.19.3
-    public var onlyFollowersCanVote: Bool?
-    /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
-    public var visibility: ApiCommunityVisibility?
-    /// Added in 1.0.0
-    public var sidebar: String?
+    /// Lemmy availability: all versions
+    public let communityId: Int
+    /// A longer title.
+    /// Lemmy availability: all versions
+    public let title: String?
+    /// A longer sidebar, or description of your community, in markdown.
+    /// Lemmy availability: all versions
+    public let description: String?
+    /// An icon URL.
+    /// Lemmy availability: unavailable after 0.19.11
+    public let icon: String?
+    /// A banner URL.
+    /// Lemmy availability: unavailable after 0.19.11
+    public let banner: String?
+    /// Whether its an NSFW community.
+    /// Lemmy availability: all versions
+    public let nsfw: Bool?
+    /// Whether to restrict posting only to moderators.
+    /// Lemmy availability: all versions
+    public let postingRestrictedToMods: Bool?
+    /// Lemmy availability: all versions
+    public let discussionLanguages: [Int]?
+    /// Lemmy availability: available from 0.19.4 onwards
+    public let visibility: ApiCommunityVisibility?
+    /// A sidebar for the community in markdown.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let sidebar: String?
 }
 
 public extension ApiEditCommunity {
@@ -39,7 +50,6 @@ public extension ApiEditCommunity {
         case nsfw = "nsfw"
         case postingRestrictedToMods = "posting_restricted_to_mods"
         case discussionLanguages = "discussion_languages"
-        case onlyFollowersCanVote = "only_followers_can_vote"
         case visibility = "visibility"
         case sidebar = "sidebar"
     }

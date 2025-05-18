@@ -9,11 +9,14 @@
 
 import Foundation
 
-// ChangePassword.ts
+/// Lemmy availability: all versions
 public struct ApiChangePassword: Codable, Hashable, Sendable {
-    public var newPassword: String
-    public var newPasswordVerify: String
-    public var oldPassword: String
+    /// Lemmy availability: all versions
+    public let newPassword: String
+    /// Lemmy availability: all versions
+    public let newPasswordVerify: String
+    /// Lemmy availability: all versions
+    public let oldPassword: String
 }
 
 public extension ApiChangePassword {

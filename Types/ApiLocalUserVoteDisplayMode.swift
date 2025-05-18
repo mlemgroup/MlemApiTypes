@@ -9,15 +9,18 @@
 
 import Foundation
 
-// LocalUserVoteDisplayMode.ts
-/// Added in 0.19.4
+/// Lemmy availability: available between 0.19.4 and 0.19.11
 public struct ApiLocalUserVoteDisplayMode: Codable, Hashable, Sendable {
-    /// Removed in 1.0.0
-    public var localUserId: Int?
-    public var score: Bool
-    public var upvotes: Bool
-    public var downvotes: Bool
-    public var upvotePercentage: Bool
+    /// Lemmy availability: all versions
+    public let localUserId: Int
+    /// Lemmy availability: all versions
+    public let score: Bool
+    /// Lemmy availability: all versions
+    public let upvotes: Bool
+    /// Lemmy availability: all versions
+    public let downvotes: Bool
+    /// Lemmy availability: all versions
+    public let upvotePercentage: Bool
 }
 
 public extension ApiLocalUserVoteDisplayMode {

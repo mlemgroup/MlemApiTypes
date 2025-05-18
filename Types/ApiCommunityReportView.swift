@@ -9,15 +9,16 @@
 
 import Foundation
 
-// CommunityReportView.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiCommunityReportView: Codable, Hashable, Sendable {
-    public var communityReport: ApiCommunityReport
-    public var community: ApiCommunity
-    public var creator: ApiPerson
-    public var counts: ApiCommunityAggregates
-    public var subscribed: ApiSubscribedType
-    public var resolver: ApiPerson?
+    /// Lemmy availability: all versions
+    public let communityReport: ApiCommunityReport
+    /// Lemmy availability: all versions
+    public let community: ApiCommunity
+    /// Lemmy availability: all versions
+    public let creator: ApiPerson
+    /// Lemmy availability: all versions
+    public let resolver: ApiPerson?
 }
 
 public extension ApiCommunityReportView {
@@ -25,8 +26,6 @@ public extension ApiCommunityReportView {
         case communityReport = "community_report"
         case community = "community"
         case creator = "creator"
-        case counts = "counts"
-        case subscribed = "subscribed"
         case resolver = "resolver"
     }
 }

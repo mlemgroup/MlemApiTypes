@@ -9,9 +9,10 @@
 
 import Foundation
 
-// GetSiteMetadata.ts
+/// Lemmy availability: all versions
 public struct ApiGetSiteMetadata: Codable, Hashable, Sendable {
-    public var url: String
+    /// Lemmy availability: all versions
+    public let url: URL
 }
 
 public extension ApiGetSiteMetadata {

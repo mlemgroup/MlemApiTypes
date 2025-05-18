@@ -9,10 +9,12 @@
 
 import Foundation
 
-// FollowCommunity.ts
+/// Lemmy availability: all versions
 public struct ApiFollowCommunity: Codable, Hashable, Sendable {
-    public var communityId: Int
-    public var follow: Bool
+    /// Lemmy availability: all versions
+    public let communityId: Int
+    /// Lemmy availability: all versions
+    public let follow: Bool
 }
 
 public extension ApiFollowCommunity {

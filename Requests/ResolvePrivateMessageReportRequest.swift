@@ -9,18 +9,20 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct ResolvePrivateMessageReportRequest: ApiPutRequest {
     public typealias Body = ApiResolvePrivateMessageReport
     public typealias Response = ApiPrivateMessageReportResponse
     
-    public let path: String = "api/v3/private_message/report/resolve"
+    public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       reportId: Int,
       resolved: Bool
     ) {
+        self.path = endpoint == .v4 ? "api/v4/private_message/report/resolve" : "api/v3/private_message/report/resolve"
         self.body = .init(
             reportId: reportId,
             resolved: resolved

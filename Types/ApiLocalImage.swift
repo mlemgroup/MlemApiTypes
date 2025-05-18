@@ -9,14 +9,16 @@
 
 import Foundation
 
-// LocalImage.ts
-/// Added in 0.19.4
+/// Lemmy availability: available from 0.19.4 onwards
 public struct ApiLocalImage: Codable, Hashable, Sendable {
-    public var localUserId: Int?
-    public var pictrsAlias: String
-    /// Removed in 1.0.0
-    public var pictrsDeleteToken: String?
-    public var published: Date
+    /// Lemmy availability: all versions
+    public let localUserId: Int?
+    /// Lemmy availability: all versions
+    public let pictrsAlias: String
+    /// Lemmy availability: unavailable after 0.19.11
+    public let pictrsDeleteToken: String?
+    /// Lemmy availability: all versions
+    public let published: Date
 }
 
 public extension ApiLocalImage {

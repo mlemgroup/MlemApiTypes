@@ -9,27 +9,28 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct CreateCommunityRequest: ApiPostRequest {
     public typealias Body = ApiCreateCommunity
     public typealias Response = ApiCommunityResponse
     
-    public let path: String = "api/v3/community"
+    public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       name: String,
       title: String,
       description: String?,
-      icon: URL?,
-      banner: URL?,
+      icon: String?,
+      banner: String?,
       nsfw: Bool?,
       postingRestrictedToMods: Bool?,
       discussionLanguages: [Int]?,
-      onlyFollowersCanVote: Bool?,
       visibility: ApiCommunityVisibility?,
       sidebar: String?
     ) {
+        self.path = endpoint == .v4 ? "api/v4/community" : "api/v3/community"
         self.body = .init(
             name: name,
             title: title,
@@ -39,7 +40,6 @@ public struct CreateCommunityRequest: ApiPostRequest {
             nsfw: nsfw,
             postingRestrictedToMods: postingRestrictedToMods,
             discussionLanguages: discussionLanguages,
-            onlyFollowersCanVote: onlyFollowersCanVote,
             visibility: visibility,
             sidebar: sidebar
         )

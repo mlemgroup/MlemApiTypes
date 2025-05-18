@@ -9,10 +9,12 @@
 
 import Foundation
 
-// AddAdmin.ts
+/// Lemmy availability: all versions
 public struct ApiAddAdmin: Codable, Hashable, Sendable {
-    public var personId: Int
-    public var added: Bool
+    /// Lemmy availability: all versions
+    public let personId: Int
+    /// Lemmy availability: all versions
+    public let added: Bool
 }
 
 public extension ApiAddAdmin {

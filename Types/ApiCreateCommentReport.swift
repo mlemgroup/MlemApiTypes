@@ -9,12 +9,14 @@
 
 import Foundation
 
-// CreateCommentReport.ts
+/// Lemmy availability: all versions
 public struct ApiCreateCommentReport: Codable, Hashable, Sendable {
-    public var commentId: Int
-    public var reason: String
-    /// Added in 1.0.0
-    public var violatesInstanceRules: Bool?
+    /// Lemmy availability: all versions
+    public let commentId: Int
+    /// Lemmy availability: all versions
+    public let reason: String
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let violatesInstanceRules: Bool?
 }
 
 public extension ApiCreateCommentReport {

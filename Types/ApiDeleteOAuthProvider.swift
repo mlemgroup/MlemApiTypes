@@ -9,10 +9,10 @@
 
 import Foundation
 
-// DeleteOAuthProvider.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiDeleteOAuthProvider: Codable, Hashable, Sendable {
-    public var id: Int
+    /// Lemmy availability: all versions
+    public let id: Int
 }
 
 public extension ApiDeleteOAuthProvider {

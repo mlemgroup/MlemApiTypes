@@ -9,10 +9,10 @@
 
 import Foundation
 
-// ListCommentReportsResponse.ts
-/// Removed in 1.0.0
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiListCommentReportsResponse: Codable, Hashable, Sendable {
-    public var commentReports: [ApiCommentReportView]
+    /// Lemmy availability: all versions
+    public let commentReports: [ApiCommentReportView]
 }
 
 public extension ApiListCommentReportsResponse {

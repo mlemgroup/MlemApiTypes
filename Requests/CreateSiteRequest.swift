@@ -9,20 +9,21 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct CreateSiteRequest: ApiPostRequest {
     public typealias Body = ApiCreateSite
     public typealias Response = ApiSiteResponse
     
-    public let path: String = "api/v3/site"
+    public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       name: String,
       sidebar: String?,
       description: String?,
-      icon: URL?,
-      banner: URL?,
+      icon: String?,
+      banner: String?,
       enableDownvotes: Bool?,
       enableNsfw: Bool?,
       communityCreationAdminOnly: Bool?,
@@ -58,9 +59,8 @@ public struct CreateSiteRequest: ApiPostRequest {
       blockedInstances: [String]?,
       taglines: [String]?,
       registrationMode: ApiRegistrationMode?,
-      contentWarning: String?,
-      autoExpandImages: Bool?,
       defaultSortType: ApiSortType?,
+      contentWarning: String?,
       defaultPostListingMode: ApiPostListingMode?,
       defaultPostSortType: ApiPostSortType?,
       defaultPostTimeRangeSeconds: Int?,
@@ -70,8 +70,10 @@ public struct CreateSiteRequest: ApiPostRequest {
       postDownvotes: ApiFederationMode?,
       commentUpvotes: ApiFederationMode?,
       commentDownvotes: ApiFederationMode?,
-      disableDonationDialog: Bool?
+      disableDonationDialog: Bool?,
+      disallowNsfwContent: Bool?
     ) {
+        self.path = endpoint == .v4 ? "api/v4/site" : "api/v3/site"
         self.body = .init(
             name: name,
             sidebar: sidebar,
@@ -113,9 +115,8 @@ public struct CreateSiteRequest: ApiPostRequest {
             blockedInstances: blockedInstances,
             taglines: taglines,
             registrationMode: registrationMode,
-            contentWarning: contentWarning,
-            autoExpandImages: autoExpandImages,
             defaultSortType: defaultSortType,
+            contentWarning: contentWarning,
             defaultPostListingMode: defaultPostListingMode,
             defaultPostSortType: defaultPostSortType,
             defaultPostTimeRangeSeconds: defaultPostTimeRangeSeconds,
@@ -125,7 +126,8 @@ public struct CreateSiteRequest: ApiPostRequest {
             postDownvotes: postDownvotes,
             commentUpvotes: commentUpvotes,
             commentDownvotes: commentDownvotes,
-            disableDonationDialog: disableDonationDialog
+            disableDonationDialog: disableDonationDialog,
+            disallowNsfwContent: disallowNsfwContent
         )
     }
 }

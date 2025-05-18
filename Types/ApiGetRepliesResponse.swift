@@ -9,10 +9,10 @@
 
 import Foundation
 
-// GetRepliesResponse.ts
-/// Removed in 1.0.0
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiGetRepliesResponse: Codable, Hashable, Sendable {
-    public var replies: [ApiCommentReplyView]
+    /// Lemmy availability: all versions
+    public let replies: [ApiCommentReplyView]
 }
 
 public extension ApiGetRepliesResponse {

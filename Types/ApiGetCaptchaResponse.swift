@@ -9,10 +9,11 @@
 
 import Foundation
 
-// GetCaptchaResponse.ts
+/// Lemmy availability: all versions
 public struct ApiGetCaptchaResponse: Codable, Hashable, Sendable {
-    // swiftlint:disable:next identifier_name
-    public var ok: ApiCaptchaResponse?
+    /// Will be None if captchas are disabled.
+    /// Lemmy availability: all versions
+    public let ok: ApiCaptchaResponse?
 }
 
 public extension ApiGetCaptchaResponse {

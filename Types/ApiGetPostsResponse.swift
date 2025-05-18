@@ -9,11 +9,13 @@
 
 import Foundation
 
-// GetPostsResponse.ts
+/// Lemmy availability: all versions
 public struct ApiGetPostsResponse: Codable, Hashable, Sendable {
-    public var posts: [ApiPostView]
-    /// Added in 0.19.0
-    public var nextPage: String?
+    /// Lemmy availability: all versions
+    public let posts: [ApiPostView]
+    /// the pagination cursor to use to fetch the next page
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let nextPage: String?
 }
 
 public extension ApiGetPostsResponse {

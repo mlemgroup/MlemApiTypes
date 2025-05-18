@@ -9,13 +9,14 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct RegisterRequest: ApiPostRequest {
     public typealias Body = ApiRegister
     public typealias Response = ApiLoginResponse
     
     public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       username: String,
@@ -28,7 +29,7 @@ public struct RegisterRequest: ApiPostRequest {
       honeypot: String?,
       answer: String?
     ) {
-        self.path = endpoint == .v3 ? "api/v3/user/register" : "api/v4/account/auth/register"
+        self.path = endpoint == .v4 ? "api/v4/account/auth/register" : "api/v3/user/register"
         self.body = .init(
             username: username,
             password: password,

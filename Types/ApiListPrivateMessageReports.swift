@@ -9,12 +9,15 @@
 
 import Foundation
 
-// ListPrivateMessageReports.ts
-/// Removed in 1.0.0
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiListPrivateMessageReports: Codable, Hashable, Sendable {
-    public var page: Int?
-    public var limit: Int?
-    public var unresolvedOnly: Bool?
+    /// Lemmy availability: all versions
+    public let page: Int?
+    /// Lemmy availability: all versions
+    public let limit: Int?
+    /// Only shows the unresolved reports
+    /// Lemmy availability: all versions
+    public let unresolvedOnly: Bool?
 }
 
 public extension ApiListPrivateMessageReports {

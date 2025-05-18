@@ -9,15 +9,18 @@
 
 import Foundation
 
-// ImageDetails.ts
-/// Added in 0.19.5
+/// Lemmy availability: available from 0.19.6 onwards
 public struct ApiImageDetails: Codable, Hashable, Sendable {
-    public var link: String
-    public var width: Int
-    public var height: Int
-    public var contentType: String
-    /// Added in 1.0.0
-    public var blurhash: String?
+    /// Lemmy availability: all versions
+    public let link: URL
+    /// Lemmy availability: all versions
+    public let width: Int
+    /// Lemmy availability: all versions
+    public let height: Int
+    /// Lemmy availability: all versions
+    public let contentType: String
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let blurhash: String?
 }
 
 public extension ApiImageDetails {

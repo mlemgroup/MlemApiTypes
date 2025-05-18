@@ -9,26 +9,18 @@
 
 import Foundation
 
-// InstanceWithFederationState.ts
-/// Added in 0.19.0
+/// Lemmy availability: available from 0.19.0 onwards
 public struct ApiInstanceWithFederationState: Codable, Hashable, Sendable {
-    public var id: Int
-    public var domain: String
-    public var published: Date
-    public var updated: Date?
-    public var software: String?
-    public var version: String?
-    public var federationState: ApiReadableFederationState?
+    /// Lemmy availability: all versions
+    public let instance: ApiInstance
+    /// if federation to this instance is or was active, show state of outgoing federation to this instance
+    /// Lemmy availability: all versions
+    public let federationState: ApiReadableFederationState?
 }
 
 public extension ApiInstanceWithFederationState {
     enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case domain = "domain"
-        case published = "published"
-        case updated = "updated"
-        case software = "software"
-        case version = "version"
+        case instance = "instance"
         case federationState = "federation_state"
     }
 }

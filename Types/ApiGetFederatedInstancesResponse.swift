@@ -9,9 +9,11 @@
 
 import Foundation
 
-// GetFederatedInstancesResponse.ts
+/// Lemmy availability: all versions
 public struct ApiGetFederatedInstancesResponse: Codable, Hashable, Sendable {
-    public var federatedInstances: ApiFederatedInstances?
+    /// Optional, because federation may be disabled.
+    /// Lemmy availability: all versions
+    public let federatedInstances: ApiFederatedInstances?
 }
 
 public extension ApiGetFederatedInstancesResponse {

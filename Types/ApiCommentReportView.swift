@@ -9,28 +9,46 @@
 
 import Foundation
 
-// CommentReportView.ts
+/// Lemmy availability: all versions
 public struct ApiCommentReportView: Codable, Hashable, Sendable {
-    public var commentReport: ApiCommentReport
-    public var comment: ApiComment
-    public var post: ApiPost
-    public var community: ApiCommunity
-    public var creator: ApiPerson
-    public var commentCreator: ApiPerson
-    public var counts: ApiCommentAggregates
-    public var creatorBannedFromCommunity: Bool
-    public var myVote: Int?
-    public var resolver: ApiPerson?
-    /// Added in 0.19.4
-    public var creatorIsModerator: Bool?
-    /// Added in 0.19.4
-    public var creatorIsAdmin: Bool?
-    /// Added in 0.19.4
-    public var creatorBlocked: Bool?
-    /// Added in 0.19.4
-    public var subscribed: ApiSubscribedType?
-    /// Added in 0.19.4; made optional in 1.0.0
-    public var saved: Bool?
+    /// Lemmy availability: all versions
+    public let commentReport: ApiCommentReport
+    /// Lemmy availability: all versions
+    public let comment: ApiComment
+    /// Lemmy availability: all versions
+    public let post: ApiPost
+    /// Lemmy availability: all versions
+    public let community: ApiCommunity
+    /// Lemmy availability: all versions
+    public let creator: ApiPerson
+    /// Lemmy availability: all versions
+    public let commentCreator: ApiPerson
+    /// Lemmy availability: unavailable after 0.19.11
+    public let counts: ApiCommentAggregates?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let creatorBannedFromCommunity: Bool?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let myVote: Int?
+    /// Lemmy availability: all versions
+    public let resolver: ApiPerson?
+    /// Lemmy availability: available between 0.19.4 and 0.19.11
+    public let creatorIsModerator: Bool?
+    /// Lemmy availability: available from 0.19.4 onwards
+    public let creatorIsAdmin: Bool?
+    /// Lemmy availability: available between 0.19.4 and 0.19.11
+    public let creatorBlocked: Bool?
+    /// Lemmy availability: available between 0.19.4 and 0.19.11
+    public let subscribed: ApiSubscribedType?
+    /// Lemmy availability: available between 0.19.4 and 0.19.11
+    public let saved: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let commentActions: ApiCommentActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let creatorCommunityActions: ApiCommunityActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let personActions: ApiPersonActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let communityActions: ApiCommunityActions?
 }
 
 public extension ApiCommentReportView {
@@ -50,5 +68,9 @@ public extension ApiCommentReportView {
         case creatorBlocked = "creator_blocked"
         case subscribed = "subscribed"
         case saved = "saved"
+        case commentActions = "comment_actions"
+        case creatorCommunityActions = "creator_community_actions"
+        case personActions = "person_actions"
+        case communityActions = "community_actions"
     }
 }

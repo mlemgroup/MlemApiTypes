@@ -9,6 +9,7 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct ListCommunitiesRequest: ApiGetRequest {
     public typealias Parameters = ApiListCommunities
     public typealias Response = ApiListCommunitiesResponse
@@ -25,7 +26,7 @@ public struct ListCommunitiesRequest: ApiGetRequest {
       showNsfw: Bool?,
       timeRangeSeconds: Int?
     ) {
-        self.path = endpoint == .v3 ? "api/v3/community/list" : "api/v4/community/list"
+        self.path = endpoint == .v4 ? "api/v4/community/list" : "api/v3/community/list"
         self.parameters = .init(
             type_: type_,
             sort: sort,

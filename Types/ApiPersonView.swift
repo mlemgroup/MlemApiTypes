@@ -9,12 +9,14 @@
 
 import Foundation
 
-// PersonView.ts
+/// Lemmy availability: all versions
 public struct ApiPersonView: Codable, Hashable, Sendable {
-    public var person: ApiPerson
-    public var counts: ApiPersonAggregates
-    /// Added in 0.19.0
-    public var isAdmin: Bool?
+    /// Lemmy availability: all versions
+    public let person: ApiPerson
+    /// Lemmy availability: unavailable after 0.19.11
+    public let counts: ApiPersonAggregates?
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let isAdmin: Bool?
 }
 
 public extension ApiPersonView {

@@ -9,15 +9,20 @@
 
 import Foundation
 
-// AdminAllowInstance.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiAdminAllowInstance: Codable, Hashable, Sendable {
-    public var id: Int
-    public var instanceId: Int
-    public var adminPersonId: Int
-    public var allowed: Bool
-    public var reason: String?
-    public var published: Date
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let instanceId: Int
+    /// Lemmy availability: all versions
+    public let adminPersonId: Int
+    /// Lemmy availability: all versions
+    public let allowed: Bool
+    /// Lemmy availability: all versions
+    public let reason: String?
+    /// Lemmy availability: all versions
+    public let published: Date
 }
 
 public extension ApiAdminAllowInstance {

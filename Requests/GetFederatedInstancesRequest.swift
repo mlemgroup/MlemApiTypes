@@ -9,15 +9,19 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct GetFederatedInstancesRequest: ApiGetRequest {
-    public typealias Parameters = Int // dummy type for APIRequestBodyProviding conformance
+    public typealias Parameters = ApiGetFederatedInstances
     public typealias Response = ApiGetFederatedInstancesResponse
     
     public let path: String
     public let parameters: Parameters?
     
-    init(endpoint: SiteVersion.EndpointVersion) {
-        self.path = endpoint == .v3 ? "api/v3/federated_instances" : "api/v4/federated_instances"
-        self.parameters = nil
+    init(
+      endpoint: SiteVersion.EndpointVersion
+    ) {
+        self.path = endpoint == .v4 ? "api/v4/federated_instances" : "api/v3/federated_instances"
+        self.parameters = .init(
+        )
     }
 }

@@ -9,9 +9,10 @@
 
 import Foundation
 
-// RegistrationApplicationResponse.ts
+/// Lemmy availability: all versions
 public struct ApiRegistrationApplicationResponse: Codable, Hashable, Sendable {
-    public var registrationApplication: ApiRegistrationApplicationView
+    /// Lemmy availability: all versions
+    public let registrationApplication: ApiRegistrationApplicationView
 }
 
 public extension ApiRegistrationApplicationResponse {

@@ -9,10 +9,10 @@
 
 import Foundation
 
-// GetPersonMentionsResponse.ts
-/// Removed in 1.0.0
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiGetPersonMentionsResponse: Codable, Hashable, Sendable {
-    public var mentions: [ApiPersonMentionView]
+    /// Lemmy availability: all versions
+    public let mentions: [ApiPersonCommentMentionView]
 }
 
 public extension ApiGetPersonMentionsResponse {

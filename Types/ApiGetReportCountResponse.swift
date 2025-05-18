@@ -9,18 +9,18 @@
 
 import Foundation
 
-// GetReportCountResponse.ts
+/// Lemmy availability: all versions
 public struct ApiGetReportCountResponse: Codable, Hashable, Sendable {
-    /// Removed in 1.0.0
-    public var communityId: Int?
-    /// Removed in 1.0.0
-    public var commentReports: Int?
-    /// Removed in 1.0.0
-    public var postReports: Int?
-    /// Removed in 1.0.0
-    public var privateMessageReports: Int?
-    /// Added in 1.0.0
-    public var count: Int?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let communityId: Int?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let commentReports: Int?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let postReports: Int?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let privateMessageReports: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let count: Int?
 }
 
 public extension ApiGetReportCountResponse {

@@ -9,11 +9,12 @@
 
 import Foundation
 
-// MarkPersonPostMentionAsRead.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiMarkPersonPostMentionAsRead: Codable, Hashable, Sendable {
-    public var personPostMentionId: Int
-    public var read: Bool
+    /// Lemmy availability: all versions
+    public let personPostMentionId: Int
+    /// Lemmy availability: all versions
+    public let read: Bool
 }
 
 public extension ApiMarkPersonPostMentionAsRead {

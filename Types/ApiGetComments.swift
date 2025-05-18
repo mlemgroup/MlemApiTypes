@@ -9,25 +9,36 @@
 
 import Foundation
 
-// GetComments.ts
+/// Lemmy availability: all versions
 public struct ApiGetComments: Codable, Hashable, Sendable {
-    public var type_: ApiListingType?
-    public var sort: ApiCommentSortType?
-    public var maxDepth: Int?
-    public var page: Int?
-    public var limit: Int?
-    public var communityId: Int?
-    public var communityName: String?
-    public var postId: Int?
-    public var parentId: Int?
-    /// Removed in 1.0.0
-    public var savedOnly: Bool?
-    /// Added in 0.19.0
-    public var likedOnly: Bool?
-    /// Added in 0.19.0
-    public var dislikedOnly: Bool?
-    /// Added in 1.0.0
-    public var timeRangeSeconds: Int?
+    /// Lemmy availability: all versions
+    public let type_: ApiListingType?
+    /// Lemmy availability: all versions
+    public let sort: ApiCommentSortType?
+    /// Lemmy availability: all versions
+    public let maxDepth: Int?
+    /// Lemmy availability: all versions
+    public let page: Int?
+    /// Lemmy availability: all versions
+    public let limit: Int?
+    /// Lemmy availability: all versions
+    public let communityId: Int?
+    /// Lemmy availability: all versions
+    public let communityName: String?
+    /// Lemmy availability: all versions
+    public let postId: Int?
+    /// Lemmy availability: all versions
+    public let parentId: Int?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let savedOnly: Bool?
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let likedOnly: Bool?
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let dislikedOnly: Bool?
+    /// Filter to within a given time range, in seconds.
+    /// IE 60 would give results for the past minute.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let timeRangeSeconds: Int?
 }
 
 public extension ApiGetComments {

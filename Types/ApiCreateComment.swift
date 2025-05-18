@@ -9,14 +9,19 @@
 
 import Foundation
 
-// CreateComment.ts
+/// Lemmy availability: all versions
 public struct ApiCreateComment: Codable, Hashable, Sendable {
-    public var content: String
-    public var postId: Int
-    public var parentId: Int?
-    public var languageId: Int?
-    /// Removed in 0.19.0
-    public var formId: String?
+    /// Lemmy availability: all versions
+    public let content: String
+    /// Lemmy availability: all versions
+    public let postId: Int
+    /// Lemmy availability: all versions
+    public let parentId: Int?
+    /// Lemmy availability: all versions
+    public let languageId: Int?
+    /// An optional front-end ID, to help UIs determine where the comment should go.
+    /// Lemmy availability: unavailable after 0.18.5
+    public let formId: String?
 }
 
 public extension ApiCreateComment {

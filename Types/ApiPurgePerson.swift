@@ -9,10 +9,12 @@
 
 import Foundation
 
-// PurgePerson.ts
+/// Lemmy availability: all versions
 public struct ApiPurgePerson: Codable, Hashable, Sendable {
-    public var personId: Int
-    public var reason: String?
+    /// Lemmy availability: all versions
+    public let personId: Int
+    /// Lemmy availability: all versions
+    public let reason: String?
 }
 
 public extension ApiPurgePerson {

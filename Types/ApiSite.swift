@@ -9,25 +9,50 @@
 
 import Foundation
 
-// Site.ts
+/// Lemmy availability: all versions
 public struct ApiSite: Codable, Hashable, Sendable {
-    public var id: Int
-    public var name: String
-    public var sidebar: String?
-    public var published: Date
-    public var updated: Date?
-    public var icon: URL?
-    public var banner: URL?
-    public var description: String?
-    public var actorId: ActorIdentifier
-    public var lastRefreshedAt: Date
-    public var inboxUrl: String
-    /// Removed in 0.19.4
-    public var privateKey: String?
-    public var publicKey: String
-    public var instanceId: Int
-    /// Added in 0.19.4
-    public var contentWarning: String?
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let name: String
+    /// A sidebar for the site in markdown.
+    /// Lemmy availability: all versions
+    public let sidebar: String?
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// Lemmy availability: all versions
+    public let updated: Date?
+    /// An icon URL.
+    /// Lemmy availability: all versions
+    public let icon: URL?
+    /// A banner url.
+    /// Lemmy availability: all versions
+    public let banner: URL?
+    /// A shorter, one-line description of the site.
+    /// Lemmy availability: all versions
+    public let description: String?
+    /// The federated actor_id.
+    /// Lemmy availability: unavailable after 0.19.11
+    public let actorId: ActorIdentifier?
+    /// The time the site was last refreshed.
+    /// Lemmy availability: all versions
+    public let lastRefreshedAt: Date
+    /// The site inbox
+    /// Lemmy availability: all versions
+    public let inboxUrl: URL
+    /// Lemmy availability: unavailable after 0.19.3
+    public let privateKey: String?
+    /// Lemmy availability: all versions
+    public let publicKey: String
+    /// Lemmy availability: all versions
+    public let instanceId: Int
+    /// If present, nsfw content is visible by default. Should be displayed by frontends/clients
+    /// when the site is first opened by a user.
+    /// Lemmy availability: available from 0.19.4 onwards
+    public let contentWarning: String?
+    /// The federated ap_id.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let apId: ActorIdentifier?
 }
 
 public extension ApiSite {
@@ -41,54 +66,12 @@ public extension ApiSite {
         case banner = "banner"
         case description = "description"
         case actorId = "actor_id"
-        case apId = "ap_id"
         case lastRefreshedAt = "last_refreshed_at"
         case inboxUrl = "inbox_url"
         case privateKey = "private_key"
         case publicKey = "public_key"
         case instanceId = "instance_id"
         case contentWarning = "content_warning"
-    }
-
-    init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(Int.self, forKey: .id)
-        self.name = try container.decode(String.self, forKey: .name)
-        self.sidebar = try container.decodeIfPresent(String?.self, forKey: .sidebar) ?? nil
-        self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
-        self.icon = try container.decodeIfPresent(URL?.self, forKey: .icon) ?? nil
-        self.banner = try container.decodeIfPresent(URL?.self, forKey: .banner) ?? nil
-        self.description = try container.decodeIfPresent(String?.self, forKey: .description) ?? nil
-        self.actorId = try (
-            container.decodeIfPresent(ActorIdentifier.self, forKey: .actorId)
-            ?? container.decode(ActorIdentifier.self, forKey: .apId)
-        )
-        self.lastRefreshedAt = try container.decode(Date.self, forKey: .lastRefreshedAt)
-        self.inboxUrl = try container.decode(String.self, forKey: .inboxUrl)
-        self.privateKey = try container.decodeIfPresent(String?.self, forKey: .privateKey) ?? nil
-        self.publicKey = try container.decode(String.self, forKey: .publicKey)
-        self.instanceId = try container.decode(Int.self, forKey: .instanceId)
-        self.contentWarning = try container.decodeIfPresent(String?.self, forKey: .contentWarning) ?? nil
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(id, forKey: .id)
-        try container.encode(name, forKey: .name)
-        try container.encode(sidebar, forKey: .sidebar)
-        try container.encode(published, forKey: .published)
-        try container.encode(updated, forKey: .updated)
-        try container.encode(icon, forKey: .icon)
-        try container.encode(banner, forKey: .banner)
-        try container.encode(description, forKey: .description)
-        try container.encode(actorId, forKey: .actorId)
-        try container.encode(actorId, forKey: .apId)
-        try container.encode(lastRefreshedAt, forKey: .lastRefreshedAt)
-        try container.encode(inboxUrl, forKey: .inboxUrl)
-        try container.encode(privateKey, forKey: .privateKey)
-        try container.encode(publicKey, forKey: .publicKey)
-        try container.encode(instanceId, forKey: .instanceId)
-        try container.encode(contentWarning, forKey: .contentWarning)
+        case apId = "ap_id"
     }
 }

@@ -9,12 +9,14 @@
 
 import Foundation
 
-// ListPersonSaved.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiListPersonSaved: Codable, Hashable, Sendable {
-    public var type_: ApiPersonContentType?
-    public var pageCursor: String?
-    public var pageBack: Bool?
+    /// Lemmy availability: all versions
+    public let type_: ApiPersonContentType?
+    /// Lemmy availability: all versions
+    public let pageCursor: String?
+    /// Lemmy availability: all versions
+    public let pageBack: Bool?
 }
 
 public extension ApiListPersonSaved {

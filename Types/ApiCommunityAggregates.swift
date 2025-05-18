@@ -9,27 +9,36 @@
 
 import Foundation
 
-// CommunityAggregates.ts
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiCommunityAggregates: Codable, Hashable, Sendable {
-    /// Removed in 0.19.0
-    public var id: Int?
-    public var communityId: Int
-    public var subscribers: Int
-    public var posts: Int
-    public var comments: Int
-    public var published: Date
-    public var usersActiveDay: Int
-    public var usersActiveWeek: Int
-    public var usersActiveMonth: Int
-    public var usersActiveHalfYear: Int
-    /// Removed in 0.19.0
-    public var hotRank: Int?
-    /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
-    public var subscribersLocal: Int?
-    /// Added in 1.0.0
-    public var reportCount: Int?
-    /// Added in 1.0.0
-    public var unresolvedReportCount: Int?
+    /// Lemmy availability: unavailable after 0.18.5
+    public let id: Int?
+    /// Lemmy availability: all versions
+    public let communityId: Int
+    /// Lemmy availability: all versions
+    public let subscribers: Int
+    /// Lemmy availability: all versions
+    public let posts: Int
+    /// Lemmy availability: all versions
+    public let comments: Int
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// The number of users with any activity in the last day.
+    /// Lemmy availability: all versions
+    public let usersActiveDay: Int
+    /// The number of users with any activity in the last week.
+    /// Lemmy availability: all versions
+    public let usersActiveWeek: Int
+    /// The number of users with any activity in the last month.
+    /// Lemmy availability: all versions
+    public let usersActiveMonth: Int
+    /// The number of users with any activity in the last year.
+    /// Lemmy availability: all versions
+    public let usersActiveHalfYear: Int
+    /// Lemmy availability: unavailable after 0.18.5
+    public let hotRank: Int?
+    /// Lemmy availability: available from 0.19.4 onwards
+    public let subscribersLocal: Int?
 }
 
 public extension ApiCommunityAggregates {
@@ -46,7 +55,5 @@ public extension ApiCommunityAggregates {
         case usersActiveHalfYear = "users_active_half_year"
         case hotRank = "hot_rank"
         case subscribersLocal = "subscribers_local"
-        case reportCount = "report_count"
-        case unresolvedReportCount = "unresolved_report_count"
     }
 }

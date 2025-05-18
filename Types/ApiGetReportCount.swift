@@ -9,9 +9,10 @@
 
 import Foundation
 
-// GetReportCount.ts
+/// Lemmy availability: all versions
 public struct ApiGetReportCount: Codable, Hashable, Sendable {
-    public var communityId: Int?
+    /// Lemmy availability: all versions
+    public let communityId: Int?
 }
 
 public extension ApiGetReportCount {

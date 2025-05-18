@@ -9,29 +9,33 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct BanFromCommunityRequest: ApiPostRequest {
     public typealias Body = ApiBanFromCommunity
     public typealias Response = ApiBanFromCommunityResponse
     
-    public let path: String = "api/v3/community/ban_user"
+    public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       communityId: Int,
       personId: Int,
       ban: Bool,
-      removeOrRestoreData: Bool?,
+      removeData: Bool?,
       reason: String?,
-      expires: Int?
+      expires: Int?,
+      removeOrRestoreData: Bool?
     ) {
+        self.path = endpoint == .v4 ? "api/v4/community/ban_user" : "api/v3/community/ban_user"
         self.body = .init(
             communityId: communityId,
             personId: personId,
             ban: ban,
-            removeOrRestoreData: removeOrRestoreData,
+            removeData: removeData,
             reason: reason,
-            expires: expires
+            expires: expires,
+            removeOrRestoreData: removeOrRestoreData
         )
     }
 }

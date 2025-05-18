@@ -9,12 +9,16 @@
 
 import Foundation
 
-// ResolveObjectResponse.ts
+/// Lemmy availability: all versions
 public struct ApiResolveObjectResponse: Codable, Hashable, Sendable {
-    public var comment: ApiCommentView?
-    public var post: ApiPostView?
-    public var community: ApiCommunityView?
-    public var person: ApiPersonView?
+    /// Lemmy availability: all versions
+    public let comment: ApiCommentView?
+    /// Lemmy availability: all versions
+    public let post: ApiPostView?
+    /// Lemmy availability: all versions
+    public let community: ApiCommunityView?
+    /// Lemmy availability: all versions
+    public let person: ApiPersonView?
 }
 
 public extension ApiResolveObjectResponse {

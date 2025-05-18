@@ -9,13 +9,16 @@
 
 import Foundation
 
-// LocalUserView.ts
+/// Lemmy availability: all versions
 public struct ApiLocalUserView: Codable, Hashable, Sendable {
-    public var localUser: ApiLocalUser
-    public var person: ApiPerson
-    public var counts: ApiPersonAggregates
-    /// Added in 0.19.4
-    public var localUserVoteDisplayMode: ApiLocalUserVoteDisplayMode?
+    /// Lemmy availability: all versions
+    public let localUser: ApiLocalUser
+    /// Lemmy availability: all versions
+    public let person: ApiPerson
+    /// Lemmy availability: unavailable after 0.19.11
+    public let counts: ApiPersonAggregates?
+    /// Lemmy availability: available between 0.19.4 and 0.19.11
+    public let localUserVoteDisplayMode: ApiLocalUserVoteDisplayMode?
 }
 
 public extension ApiLocalUserView {

@@ -9,13 +9,14 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct SaveUserSettingsRequest: ApiPutRequest {
     public typealias Body = ApiSaveUserSettings
     public typealias Response = ApiSuccessResponse
     
     public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       showNsfw: Bool?,
@@ -39,9 +40,9 @@ public struct SaveUserSettingsRequest: ApiPutRequest {
       discussionLanguages: [Int]?,
       generateTotp2fa: Bool?,
       openLinksInNewTab: Bool?,
+      infiniteScrollEnabled: Bool?,
       blurNsfw: Bool?,
       autoExpand: Bool?,
-      infiniteScrollEnabled: Bool?,
       postListingMode: ApiPostListingMode?,
       enableKeyboardNavigation: Bool?,
       enableAnimatedImages: Bool?,
@@ -56,7 +57,7 @@ public struct SaveUserSettingsRequest: ApiPutRequest {
       autoMarkFetchedPostsAsRead: Bool?,
       hideMedia: Bool?
     ) {
-        self.path = endpoint == .v3 ? "api/v3/user/save_user_settings" : "api/v4/account/settings/save"
+        self.path = endpoint == .v4 ? "api/v4/account/settings/save" : "api/v3/user/save_user_settings"
         self.body = .init(
             showNsfw: showNsfw,
             showScores: showScores,
@@ -79,9 +80,9 @@ public struct SaveUserSettingsRequest: ApiPutRequest {
             discussionLanguages: discussionLanguages,
             generateTotp2fa: generateTotp2fa,
             openLinksInNewTab: openLinksInNewTab,
+            infiniteScrollEnabled: infiniteScrollEnabled,
             blurNsfw: blurNsfw,
             autoExpand: autoExpand,
-            infiniteScrollEnabled: infiniteScrollEnabled,
             postListingMode: postListingMode,
             enableKeyboardNavigation: enableKeyboardNavigation,
             enableAnimatedImages: enableAnimatedImages,

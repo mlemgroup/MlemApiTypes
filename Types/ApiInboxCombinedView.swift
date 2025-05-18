@@ -1,4 +1,4 @@
-
+//
 //  ApiInboxCombinedView.swift
 //  Mlem
 //
@@ -9,16 +9,19 @@
 
 import Foundation
 
-// InboxCombinedView.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public enum ApiInboxCombinedView: Codable, Hashable, Sendable {
+    /// Lemmy availability: all versions
     case commentReply(ApiCommentReplyView)
+    /// Lemmy availability: all versions
     case commentMention(ApiPersonCommentMentionView)
+    /// Lemmy availability: all versions
     case postMention(ApiPersonPostMentionView)
+    /// Lemmy availability: all versions
     case privateMessage(ApiPrivateMessageView)
-
+    
     enum CodingKeys: CodingKey { case type_ }
-
+    
     public init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let type = try container.decodeIfPresent(String.self, forKey: .type_)
@@ -32,7 +35,7 @@ public enum ApiInboxCombinedView: Codable, Hashable, Sendable {
         )
         }
     }
-
+    
     public func encode(to encoder: any Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         switch self {

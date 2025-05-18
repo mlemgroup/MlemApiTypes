@@ -9,11 +9,14 @@
 
 import Foundation
 
-// Language.ts
+/// Lemmy availability: all versions
 public struct ApiLanguage: Codable, Hashable, Sendable {
-    public var id: Int
-    public var code: String
-    public var name: String
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let code: String
+    /// Lemmy availability: all versions
+    public let name: String
 }
 
 public extension ApiLanguage {

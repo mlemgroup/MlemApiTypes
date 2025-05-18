@@ -9,11 +9,12 @@
 
 import Foundation
 
-// GetRandomCommunity.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiGetRandomCommunity: Codable, Hashable, Sendable {
-    public var type_: ApiListingType?
-    public var showNsfw: Bool?
+    /// Lemmy availability: all versions
+    public let type_: ApiListingType?
+    /// Lemmy availability: all versions
+    public let showNsfw: Bool?
 }
 
 public extension ApiGetRandomCommunity {

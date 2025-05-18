@@ -9,9 +9,10 @@
 
 import Foundation
 
-// PasswordReset.ts
+/// Lemmy availability: all versions
 public struct ApiPasswordReset: Codable, Hashable, Sendable {
-    public var email: String
+    /// Lemmy availability: all versions
+    public let email: String
 }
 
 public extension ApiPasswordReset {

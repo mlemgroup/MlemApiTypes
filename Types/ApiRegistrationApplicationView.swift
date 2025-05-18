@@ -9,12 +9,16 @@
 
 import Foundation
 
-// RegistrationApplicationView.ts
+/// Lemmy availability: all versions
 public struct ApiRegistrationApplicationView: Codable, Hashable, Sendable {
-    public var registrationApplication: ApiRegistrationApplication
-    public var creatorLocalUser: ApiLocalUser
-    public var creator: ApiPerson
-    public var admin: ApiPerson?
+    /// Lemmy availability: all versions
+    public let registrationApplication: ApiRegistrationApplication
+    /// Lemmy availability: all versions
+    public let creatorLocalUser: ApiLocalUser
+    /// Lemmy availability: all versions
+    public let creator: ApiPerson
+    /// Lemmy availability: all versions
+    public let admin: ApiPerson?
 }
 
 public extension ApiRegistrationApplicationView {

@@ -9,10 +9,12 @@
 
 import Foundation
 
-// SiteResponse.ts
+/// Lemmy availability: all versions
 public struct ApiSiteResponse: Codable, Hashable, Sendable {
-    public var siteView: ApiSiteView
-    public var taglines: [ApiTagline]
+    /// Lemmy availability: all versions
+    public let siteView: ApiSiteView
+    /// Lemmy availability: all versions
+    public let taglines: [ApiTagline]
 }
 
 public extension ApiSiteResponse {

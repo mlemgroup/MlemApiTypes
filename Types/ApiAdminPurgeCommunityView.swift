@@ -9,10 +9,12 @@
 
 import Foundation
 
-// AdminPurgeCommunityView.ts
+/// Lemmy availability: all versions
 public struct ApiAdminPurgeCommunityView: Codable, Hashable, Sendable {
-    public var adminPurgeCommunity: ApiAdminPurgeCommunity
-    public var admin: ApiPerson?
+    /// Lemmy availability: all versions
+    public let adminPurgeCommunity: ApiAdminPurgeCommunity
+    /// Lemmy availability: all versions
+    public let admin: ApiPerson?
 }
 
 public extension ApiAdminPurgeCommunityView {

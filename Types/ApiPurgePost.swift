@@ -9,10 +9,12 @@
 
 import Foundation
 
-// PurgePost.ts
+/// Lemmy availability: all versions
 public struct ApiPurgePost: Codable, Hashable, Sendable {
-    public var postId: Int
-    public var reason: String?
+    /// Lemmy availability: all versions
+    public let postId: Int
+    /// Lemmy availability: all versions
+    public let reason: String?
 }
 
 public extension ApiPurgePost {

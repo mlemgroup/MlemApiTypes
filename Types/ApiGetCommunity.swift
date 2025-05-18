@@ -9,10 +9,13 @@
 
 import Foundation
 
-// GetCommunity.ts
+/// Lemmy availability: all versions
 public struct ApiGetCommunity: Codable, Hashable, Sendable {
-    public var id: Int?
-    public var name: String?
+    /// Lemmy availability: all versions
+    public let id: Int?
+    /// Example: star_trek , or star_trek@xyz.tld
+    /// Lemmy availability: all versions
+    public let name: String?
 }
 
 public extension ApiGetCommunity {

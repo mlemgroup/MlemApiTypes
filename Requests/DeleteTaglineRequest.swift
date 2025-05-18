@@ -9,15 +9,17 @@
 
 import Foundation
 
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct DeleteTaglineRequest: ApiPostRequest {
     public typealias Body = ApiDeleteTagline
     public typealias Response = ApiSuccessResponse
     
     public let path: String = "api/v4/admin/tagline/delete"
     public let body: Body?
-
-    init(id: Int) {
+    
+    init(
+      id: Int
+    ) {
         self.body = .init(
             id: id
         )

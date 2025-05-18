@@ -9,14 +9,14 @@
 
 import Foundation
 
-// HidePost.ts
-/// Added in 0.19.4
+/// Lemmy availability: available from 0.19.4 onwards
 public struct ApiHidePost: Codable, Hashable, Sendable {
-    /// Removed in 1.0.0
-    public var postIds: [Int]?
-    public var hide: Bool
-    /// Added in 1.0.0
-    public var postId: Int?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let postIds: [Int]?
+    /// Lemmy availability: all versions
+    public let hide: Bool
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let postId: Int?
 }
 
 public extension ApiHidePost {

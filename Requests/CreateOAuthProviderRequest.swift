@@ -1,5 +1,5 @@
 //
-//  CreateOAuthProviderRequest.swift
+//  CreateOauthProviderRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -9,14 +9,14 @@
 
 import Foundation
 
-/// Added in 1.0.0
-public struct CreateOAuthProviderRequest: ApiPostRequest {
+/// Lemmy availability: available from 1.0.0-alpha onwards
+public struct CreateOauthProviderRequest: ApiPostRequest {
     public typealias Body = ApiCreateOAuthProvider
     public typealias Response = ApiOAuthProvider
     
     public let path: String = "api/v4/oauth_provider"
     public let body: Body?
-
+    
     init(
       displayName: String,
       issuer: String,

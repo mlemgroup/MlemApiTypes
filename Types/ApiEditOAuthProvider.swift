@@ -9,21 +9,32 @@
 
 import Foundation
 
-// EditOAuthProvider.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiEditOAuthProvider: Codable, Hashable, Sendable {
-    public var id: Int
-    public var displayName: String?
-    public var authorizationEndpoint: String?
-    public var tokenEndpoint: String?
-    public var userinfoEndpoint: String?
-    public var idClaim: String?
-    public var clientSecret: String?
-    public var scopes: String?
-    public var autoVerifyEmail: Bool?
-    public var accountLinkingEnabled: Bool?
-    public var usePkce: Bool?
-    public var enabled: Bool?
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let displayName: String?
+    /// Lemmy availability: all versions
+    public let authorizationEndpoint: String?
+    /// Lemmy availability: all versions
+    public let tokenEndpoint: String?
+    /// Lemmy availability: all versions
+    public let userinfoEndpoint: String?
+    /// Lemmy availability: all versions
+    public let idClaim: String?
+    /// Lemmy availability: all versions
+    public let clientSecret: String?
+    /// Lemmy availability: all versions
+    public let scopes: String?
+    /// Lemmy availability: all versions
+    public let autoVerifyEmail: Bool?
+    /// Lemmy availability: all versions
+    public let accountLinkingEnabled: Bool?
+    /// Lemmy availability: all versions
+    public let usePkce: Bool?
+    /// Lemmy availability: all versions
+    public let enabled: Bool?
 }
 
 public extension ApiEditOAuthProvider {

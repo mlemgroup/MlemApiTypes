@@ -9,10 +9,10 @@
 
 import Foundation
 
-// UpdateTotpResponse.ts
-/// Added in 0.19.0
+/// Lemmy availability: available from 0.19.0 onwards
 public struct ApiUpdateTotpResponse: Codable, Hashable, Sendable {
-    public var enabled: Bool
+    /// Lemmy availability: all versions
+    public let enabled: Bool
 }
 
 public extension ApiUpdateTotpResponse {

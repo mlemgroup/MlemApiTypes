@@ -9,20 +9,21 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct LoginRequest: ApiPostRequest {
     public typealias Body = ApiLogin
     public typealias Response = ApiLoginResponse
     
     public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       usernameOrEmail: String,
       password: String,
       totp2faToken: String?
     ) {
-        self.path = endpoint == .v3 ? "api/v3/user/login" : "api/v4/account/auth/login"
+        self.path = endpoint == .v4 ? "api/v4/account/auth/login" : "api/v3/user/login"
         self.body = .init(
             usernameOrEmail: usernameOrEmail,
             password: password,

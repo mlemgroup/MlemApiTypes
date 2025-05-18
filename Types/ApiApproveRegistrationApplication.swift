@@ -9,11 +9,14 @@
 
 import Foundation
 
-// ApproveRegistrationApplication.ts
+/// Lemmy availability: all versions
 public struct ApiApproveRegistrationApplication: Codable, Hashable, Sendable {
-    public var id: Int
-    public var approve: Bool
-    public var denyReason: String?
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let approve: Bool
+    /// Lemmy availability: all versions
+    public let denyReason: String?
 }
 
 public extension ApiApproveRegistrationApplication {

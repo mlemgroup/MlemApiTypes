@@ -9,9 +9,10 @@
 
 import Foundation
 
-// PostResponse.ts
+/// Lemmy availability: all versions
 public struct ApiPostResponse: Codable, Hashable, Sendable {
-    public var postView: ApiPostView
+    /// Lemmy availability: all versions
+    public let postView: ApiPostView
 }
 
 public extension ApiPostResponse {

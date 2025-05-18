@@ -9,11 +9,14 @@
 
 import Foundation
 
-// HideCommunity.ts
+/// Lemmy availability: all versions
 public struct ApiHideCommunity: Codable, Hashable, Sendable {
-    public var communityId: Int
-    public var hidden: Bool
-    public var reason: String?
+    /// Lemmy availability: all versions
+    public let communityId: Int
+    /// Lemmy availability: all versions
+    public let hidden: Bool
+    /// Lemmy availability: all versions
+    public let reason: String?
 }
 
 public extension ApiHideCommunity {

@@ -9,16 +9,24 @@
 
 import Foundation
 
-// ModRemoveCommunity.ts
+/// Lemmy availability: all versions
 public struct ApiModRemoveCommunity: Codable, Hashable, Sendable {
-    public var id: Int
-    public var modPersonId: Int
-    public var communityId: Int
-    public var reason: String?
-    public var removed: Bool
-    /// Removed in 0.19.0
-    public var expires: Date?
-    public var published: Date
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let modPersonId: Int
+    /// Lemmy availability: all versions
+    public let communityId: Int
+    /// Lemmy availability: all versions
+    public let reason: String?
+    /// Lemmy availability: all versions
+    public let removed: Bool
+    /// Lemmy availability: unavailable after 0.18.5
+    public let expires: Date?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let when_: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let published: Date?
 }
 
 public extension ApiModRemoveCommunity {
@@ -29,33 +37,7 @@ public extension ApiModRemoveCommunity {
         case reason = "reason"
         case removed = "removed"
         case expires = "expires"
-        case published = "published"
         case when_ = "when_"
-    }
-
-    init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(Int.self, forKey: .id)
-        self.modPersonId = try container.decode(Int.self, forKey: .modPersonId)
-        self.communityId = try container.decode(Int.self, forKey: .communityId)
-        self.reason = try container.decodeIfPresent(String?.self, forKey: .reason) ?? nil
-        self.removed = try container.decode(Bool.self, forKey: .removed)
-        self.expires = try container.decodeIfPresent(Date?.self, forKey: .expires) ?? nil
-        self.published = try (
-            container.decodeIfPresent(Date.self, forKey: .published)
-            ?? container.decode(Date.self, forKey: .when_)
-        )
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(id, forKey: .id)
-        try container.encode(modPersonId, forKey: .modPersonId)
-        try container.encode(communityId, forKey: .communityId)
-        try container.encode(reason, forKey: .reason)
-        try container.encode(removed, forKey: .removed)
-        try container.encode(expires, forKey: .expires)
-        try container.encode(published, forKey: .published)
-        try container.encode(published, forKey: .when_)
+        case published = "published"
     }
 }

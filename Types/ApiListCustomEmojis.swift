@@ -9,13 +9,16 @@
 
 import Foundation
 
-// ListCustomEmojis.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiListCustomEmojis: Codable, Hashable, Sendable {
-    public var page: Int?
-    public var limit: Int?
-    public var category: String?
-    public var ignorePageLimits: Bool?
+    /// Lemmy availability: all versions
+    public let page: Int?
+    /// Lemmy availability: all versions
+    public let limit: Int?
+    /// Lemmy availability: all versions
+    public let category: String?
+    /// Lemmy availability: all versions
+    public let ignorePageLimits: Bool?
 }
 
 public extension ApiListCustomEmojis {

@@ -9,6 +9,7 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct ListRegistrationApplicationsRequest: ApiGetRequest {
     public typealias Parameters = ApiListRegistrationApplications
     public typealias Response = ApiListRegistrationApplicationsResponse
@@ -22,7 +23,7 @@ public struct ListRegistrationApplicationsRequest: ApiGetRequest {
       page: Int?,
       limit: Int?
     ) {
-        self.path = endpoint == .v3 ? "api/v3/admin/registration_application/list" : "api/v4/admin/registration_application/list"
+        self.path = endpoint == .v4 ? "api/v4/admin/registration_application/list" : "api/v3/admin/registration_application/list"
         self.parameters = .init(
             unreadOnly: unreadOnly,
             page: page,

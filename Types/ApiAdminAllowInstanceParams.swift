@@ -9,12 +9,14 @@
 
 import Foundation
 
-// AdminAllowInstanceParams.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiAdminAllowInstanceParams: Codable, Hashable, Sendable {
-    public var instance: String
-    public var allow: Bool
-    public var reason: String?
+    /// Lemmy availability: all versions
+    public let instance: String
+    /// Lemmy availability: all versions
+    public let allow: Bool
+    /// Lemmy availability: all versions
+    public let reason: String?
 }
 
 public extension ApiAdminAllowInstanceParams {

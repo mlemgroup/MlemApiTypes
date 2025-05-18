@@ -9,15 +9,17 @@
 
 import Foundation
 
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct CreateTaglineRequest: ApiPostRequest {
     public typealias Body = ApiCreateTagline
     public typealias Response = ApiTaglineResponse
     
     public let path: String = "api/v4/admin/tagline"
     public let body: Body?
-
-    init(content: String) {
+    
+    init(
+      content: String
+    ) {
         self.body = .init(
             content: content
         )

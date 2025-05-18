@@ -9,19 +9,20 @@
 
 import Foundation
 
-// PersonAggregates.ts
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiPersonAggregates: Codable, Hashable, Sendable {
-    /// Removed in 0.19.0
-    public var id: Int?
-    public var personId: Int
-    public var postCount: Int
-    /// Removed in 0.19.0
-    public var postScore: Int?
-    public var commentCount: Int
-    /// Removed in 0.19.0
-    public var commentScore: Int?
-    /// Added in 1.0.0
-    public var published: Date?
+    /// Lemmy availability: unavailable after 0.18.5
+    public let id: Int?
+    /// Lemmy availability: all versions
+    public let personId: Int
+    /// Lemmy availability: all versions
+    public let postCount: Int
+    /// Lemmy availability: unavailable after 0.18.5
+    public let postScore: Int?
+    /// Lemmy availability: all versions
+    public let commentCount: Int
+    /// Lemmy availability: unavailable after 0.18.5
+    public let commentScore: Int?
 }
 
 public extension ApiPersonAggregates {
@@ -32,6 +33,5 @@ public extension ApiPersonAggregates {
         case postScore = "post_score"
         case commentCount = "comment_count"
         case commentScore = "comment_score"
-        case published = "published"
     }
 }

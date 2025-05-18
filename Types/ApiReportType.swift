@@ -9,12 +9,16 @@
 
 import Foundation
 
-// ReportType.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public enum ApiReportType: String, Codable, Sendable {
+    /// Lemmy availability: all versions
     case all = "All"
+    /// Lemmy availability: all versions
     case posts = "Posts"
+    /// Lemmy availability: all versions
     case comments = "Comments"
+    /// Lemmy availability: all versions
     case privateMessages = "PrivateMessages"
+    /// Lemmy availability: all versions
     case communities = "Communities"
 }

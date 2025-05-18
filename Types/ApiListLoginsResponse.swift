@@ -9,10 +9,10 @@
 
 import Foundation
 
-// ListLoginsResponse.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiListLoginsResponse: Codable, Hashable, Sendable {
-    public var logins: [ApiLoginToken]
+    /// Lemmy availability: all versions
+    public let logins: [ApiLoginToken]
 }
 
 public extension ApiListLoginsResponse {

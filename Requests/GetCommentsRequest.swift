@@ -9,6 +9,7 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct GetCommentsRequest: ApiGetRequest {
     public typealias Parameters = ApiGetComments
     public typealias Response = ApiGetCommentsResponse
@@ -32,7 +33,7 @@ public struct GetCommentsRequest: ApiGetRequest {
       dislikedOnly: Bool?,
       timeRangeSeconds: Int?
     ) {
-        self.path = endpoint == .v3 ? "api/v3/comment/list" : "api/v4/comment/list"
+        self.path = endpoint == .v4 ? "api/v4/comment/list" : "api/v3/comment/list"
         self.parameters = .init(
             type_: type_,
             sort: sort,

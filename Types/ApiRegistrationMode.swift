@@ -9,9 +9,12 @@
 
 import Foundation
 
-// RegistrationMode.ts
+/// Lemmy availability: all versions
 public enum ApiRegistrationMode: String, Codable, Sendable {
+    /// Lemmy availability: all versions
     case closed = "Closed"
+    /// Lemmy availability: all versions
     case requireApplication = "RequireApplication"
+    /// Lemmy availability: all versions
     case open = "Open"
 }

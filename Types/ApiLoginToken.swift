@@ -9,14 +9,20 @@
 
 import Foundation
 
-// LoginToken.ts
-/// Added in 0.19.0
+/// Lemmy availability: available from 0.19.0 onwards
 public struct ApiLoginToken: Codable, Hashable, Sendable {
-    public var userId: Int
-    public var published: Date
-    // swiftlint:disable:next identifier_name
-    public var ip: String?
-    public var userAgent: String?
+    /// Jwt token for this login
+    /// Lemmy availability: all versions
+    public let userId: Int
+    /// Time of login
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// IP address where login was made from, allows invalidating logins by IP address.
+    /// Could be stored in truncated format, or store derived information for better privacy.
+    /// Lemmy availability: all versions
+    public let ip: String?
+    /// Lemmy availability: all versions
+    public let userAgent: String?
 }
 
 public extension ApiLoginToken {

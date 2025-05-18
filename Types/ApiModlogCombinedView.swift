@@ -1,4 +1,4 @@
-
+//
 //  ApiModlogCombinedView.swift
 //  Mlem
 //
@@ -9,29 +9,45 @@
 
 import Foundation
 
-// ModlogCombinedView.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public enum ApiModlogCombinedView: Codable, Hashable, Sendable {
+    /// Lemmy availability: all versions
     case adminAllowInstance(ApiAdminAllowInstanceView)
+    /// Lemmy availability: all versions
     case adminBlockInstance(ApiAdminBlockInstanceView)
+    /// Lemmy availability: all versions
     case adminPurgeComment(ApiAdminPurgeCommentView)
+    /// Lemmy availability: all versions
     case adminPurgeCommunity(ApiAdminPurgeCommunityView)
+    /// Lemmy availability: all versions
     case adminPurgePerson(ApiAdminPurgePersonView)
+    /// Lemmy availability: all versions
     case adminPurgePost(ApiAdminPurgePostView)
+    /// Lemmy availability: all versions
     case modAdd(ApiModAddView)
+    /// Lemmy availability: all versions
     case modAddCommunity(ApiModAddCommunityView)
+    /// Lemmy availability: all versions
     case modBan(ApiModBanView)
+    /// Lemmy availability: all versions
     case modBanFromCommunity(ApiModBanFromCommunityView)
+    /// Lemmy availability: all versions
     case modFeaturePost(ApiModFeaturePostView)
-    case modHideCommunity(ApiModHideCommunityView)
+    /// Lemmy availability: all versions
+    case modChangeCommunityVisibility(ApiModChangeCommunityVisibilityView)
+    /// Lemmy availability: all versions
     case modLockPost(ApiModLockPostView)
+    /// Lemmy availability: all versions
     case modRemoveComment(ApiModRemoveCommentView)
+    /// Lemmy availability: all versions
     case modRemoveCommunity(ApiModRemoveCommunityView)
+    /// Lemmy availability: all versions
     case modRemovePost(ApiModRemovePostView)
+    /// Lemmy availability: all versions
     case modTransferCommunity(ApiModTransferCommunityView)
-
+    
     enum CodingKeys: CodingKey { case type_ }
-
+    
     public init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let type = try container.decodeIfPresent(String.self, forKey: .type_)
@@ -47,7 +63,7 @@ public enum ApiModlogCombinedView: Codable, Hashable, Sendable {
         case "ModBan": .modBan(try .init(from: decoder))
         case "ModBanFromCommunity": .modBanFromCommunity(try .init(from: decoder))
         case "ModFeaturePost": .modFeaturePost(try .init(from: decoder))
-        case "ModHideCommunity": .modHideCommunity(try .init(from: decoder))
+        case "ModChangeCommunityVisibility": .modChangeCommunityVisibility(try .init(from: decoder))
         case "ModLockPost": .modLockPost(try .init(from: decoder))
         case "ModRemoveComment": .modRemoveComment(try .init(from: decoder))
         case "ModRemoveCommunity": .modRemoveCommunity(try .init(from: decoder))
@@ -58,7 +74,7 @@ public enum ApiModlogCombinedView: Codable, Hashable, Sendable {
         )
         }
     }
-
+    
     public func encode(to encoder: any Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         switch self {
@@ -95,8 +111,8 @@ public enum ApiModlogCombinedView: Codable, Hashable, Sendable {
         case let .modFeaturePost(value):
             try container.encode("ModFeaturePost", forKey: .type_)
             try value.encode(to: encoder)
-        case let .modHideCommunity(value):
-            try container.encode("ModHideCommunity", forKey: .type_)
+        case let .modChangeCommunityVisibility(value):
+            try container.encode("ModChangeCommunityVisibility", forKey: .type_)
             try value.encode(to: encoder)
         case let .modLockPost(value):
             try container.encode("ModLockPost", forKey: .type_)

@@ -9,12 +9,16 @@
 
 import Foundation
 
-// InboxDataType.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public enum ApiInboxDataType: String, Codable, Sendable {
+    /// Lemmy availability: all versions
     case all = "All"
+    /// Lemmy availability: all versions
     case commentReply = "CommentReply"
+    /// Lemmy availability: all versions
     case commentMention = "CommentMention"
+    /// Lemmy availability: all versions
     case postMention = "PostMention"
+    /// Lemmy availability: all versions
     case privateMessage = "PrivateMessage"
 }

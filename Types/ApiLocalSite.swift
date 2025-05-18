@@ -9,65 +9,135 @@
 
 import Foundation
 
-// LocalSite.ts
+/// Lemmy availability: all versions
 public struct ApiLocalSite: Codable, Hashable, Sendable {
-    public var id: Int
-    public var siteId: Int
-    public var siteSetup: Bool
-    /// Removed in 1.0.0
-    public var enableDownvotes: Bool?
-    /// Removed in 1.0.0
-    public var enableNsfw: Bool?
-    public var communityCreationAdminOnly: Bool
-    public var requireEmailVerification: Bool
-    public var applicationQuestion: String?
-    public var privateInstance: Bool
-    public var defaultTheme: String
-    public var defaultPostListingType: ApiListingType
-    public var legalInformation: String?
-    public var hideModlogModNames: Bool
-    public var applicationEmailAdmins: Bool
-    public var slurFilterRegex: String?
-    public var actorNameMaxLength: Int
-    public var federationEnabled: Bool
-    /// Removed in 0.18.1
-    public var federationWorkerCount: Int?
-    public var captchaEnabled: Bool
-    public var captchaDifficulty: String
-    public var published: Date
-    public var updated: Date?
-    public var registrationMode: ApiRegistrationMode
-    public var reportsEmailAdmins: Bool
-    /// Added in 0.19.0
-    public var federationSignedFetch: Bool?
-    /// Added in 0.19.2, removed in 0.19.3
-    public var contentWarning: String?
-    /// Added in 0.19.2, removed in 0.19.3
-    public var autoExpandImages: Bool?
-    /// Added in 0.19.4
-    public var defaultPostListingMode: ApiPostListingMode?
-    /// Added in 0.19.4, removed in 1.0.0
-    public var defaultSortType: ApiSortType?
-    /// Added in 1.0.0
-    public var defaultPostSortType: ApiPostSortType?
-    /// Added in 1.0.0
-    public var defaultCommentSortType: ApiCommentSortType?
-    /// Added in 1.0.0
-    public var oauthRegistration: Bool?
-    /// Added in 1.0.0
-    public var postUpvotes: ApiFederationMode?
-    /// Added in 1.0.0
-    public var postDownvotes: ApiFederationMode?
-    /// Added in 1.0.0
-    public var commentUpvotes: ApiFederationMode?
-    /// Added in 1.0.0
-    public var commentDownvotes: ApiFederationMode?
-    /// Added in 1.0.0
-    public var disableDonationDialog: Bool?
-    /// Added in 1.0.0
-    public var defaultPostTimeRangeSeconds: Int?
-    /// Added in 1.0.0
-    public var disallowNsfwContent: Bool?
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let siteId: Int
+    /// True if the site is set up.
+    /// Lemmy availability: all versions
+    public let siteSetup: Bool
+    /// Whether downvotes are enabled.
+    /// Lemmy availability: unavailable after 0.19.11
+    public let enableDownvotes: Bool?
+    /// Whether NSFW is enabled.
+    /// Lemmy availability: unavailable after 0.19.11
+    public let enableNsfw: Bool?
+    /// Whether only admins can create communities.
+    /// Lemmy availability: all versions
+    public let communityCreationAdminOnly: Bool
+    /// Whether emails are required.
+    /// Lemmy availability: all versions
+    public let requireEmailVerification: Bool
+    /// An optional registration application questionnaire in markdown.
+    /// Lemmy availability: all versions
+    public let applicationQuestion: String?
+    /// Whether the instance is private or public.
+    /// Lemmy availability: all versions
+    public let privateInstance: Bool
+    /// The default front-end theme.
+    /// Lemmy availability: all versions
+    public let defaultTheme: String
+    /// Lemmy availability: all versions
+    public let defaultPostListingType: ApiListingType
+    /// An optional legal disclaimer page.
+    /// Lemmy availability: all versions
+    public let legalInformation: String?
+    /// Whether to hide mod names on the modlog.
+    /// Lemmy availability: all versions
+    public let hideModlogModNames: Bool
+    /// Whether new applications email admins.
+    /// Lemmy availability: all versions
+    public let applicationEmailAdmins: Bool
+    /// An optional regex to filter words.
+    /// Lemmy availability: all versions
+    public let slurFilterRegex: String?
+    /// The max actor name length.
+    /// Lemmy availability: all versions
+    public let actorNameMaxLength: Int
+    /// Whether federation is enabled.
+    /// Lemmy availability: all versions
+    public let federationEnabled: Bool
+    /// The number of concurrent federation http workers.
+    /// Lemmy availability: unavailable after 0.18.0
+    public let federationWorkerCount: Int?
+    /// Whether captcha is enabled.
+    /// Lemmy availability: all versions
+    public let captchaEnabled: Bool
+    /// The captcha difficulty.
+    /// Lemmy availability: all versions
+    public let captchaDifficulty: String
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// Lemmy availability: all versions
+    public let updated: Date?
+    /// Lemmy availability: all versions
+    public let registrationMode: ApiRegistrationMode
+    /// Whether to email admins on new reports.
+    /// Lemmy availability: all versions
+    public let reportsEmailAdmins: Bool
+    /// Whether to sign outgoing Activitypub fetches with private key of local instance. Some
+    /// Fediverse instances and platforms require this.
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let federationSignedFetch: Bool?
+    /// Default value for [LocalSite.post_listing_mode]
+    /// Lemmy availability: available from 0.19.4 onwards
+    public let defaultPostListingMode: ApiPostListingMode?
+    /// Default value for [LocalUser.post_listing_mode]
+    /// Lemmy availability: available between 0.19.4 and 0.19.11
+    public let defaultSortType: ApiSortType?
+    /// Default value for [LocalUser.post_sort_type]
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let defaultPostSortType: ApiPostSortType?
+    /// Default value for [LocalUser.comment_sort_type]
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let defaultCommentSortType: ApiCommentSortType?
+    /// Whether or not external auth methods can auto-register users.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let oauthRegistration: Bool?
+    /// What kind of post upvotes your site allows.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let postUpvotes: ApiFederationMode?
+    /// What kind of post downvotes your site allows.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let postDownvotes: ApiFederationMode?
+    /// What kind of comment upvotes your site allows.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let commentUpvotes: ApiFederationMode?
+    /// What kind of comment downvotes your site allows.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let commentDownvotes: ApiFederationMode?
+    /// If this is true, users will never see the dialog asking to support Lemmy development with
+    /// donations.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let disableDonationDialog: Bool?
+    /// A default time range limit to apply to post sorts, in seconds.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let defaultPostTimeRangeSeconds: Int?
+    /// Block NSFW content being created
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let disallowNsfwContent: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let users: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let posts: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let comments: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let communities: Int?
+    /// The number of users with any activity in the last day.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let usersActiveDay: Int?
+    /// The number of users with any activity in the last week.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let usersActiveWeek: Int?
+    /// The number of users with any activity in the last month.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let usersActiveMonth: Int?
+    /// The number of users with any activity in the last half year.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let usersActiveHalfYear: Int?
 }
 
 public extension ApiLocalSite {
@@ -97,8 +167,6 @@ public extension ApiLocalSite {
         case registrationMode = "registration_mode"
         case reportsEmailAdmins = "reports_email_admins"
         case federationSignedFetch = "federation_signed_fetch"
-        case contentWarning = "content_warning"
-        case autoExpandImages = "auto_expand_images"
         case defaultPostListingMode = "default_post_listing_mode"
         case defaultSortType = "default_sort_type"
         case defaultPostSortType = "default_post_sort_type"
@@ -111,5 +179,13 @@ public extension ApiLocalSite {
         case disableDonationDialog = "disable_donation_dialog"
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
         case disallowNsfwContent = "disallow_nsfw_content"
+        case users = "users"
+        case posts = "posts"
+        case comments = "comments"
+        case communities = "communities"
+        case usersActiveDay = "users_active_day"
+        case usersActiveWeek = "users_active_week"
+        case usersActiveMonth = "users_active_month"
+        case usersActiveHalfYear = "users_active_half_year"
     }
 }

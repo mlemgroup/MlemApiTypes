@@ -9,9 +9,10 @@
 
 import Foundation
 
-// AddModToCommunityResponse.ts
+/// Lemmy availability: all versions
 public struct ApiAddModToCommunityResponse: Codable, Hashable, Sendable {
-    public var moderators: [ApiCommunityModeratorView]
+    /// Lemmy availability: all versions
+    public let moderators: [ApiCommunityModeratorView]
 }
 
 public extension ApiAddModToCommunityResponse {

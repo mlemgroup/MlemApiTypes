@@ -9,17 +9,24 @@
 
 import Foundation
 
-// CustomEmoji.ts
+/// Lemmy availability: all versions
 public struct ApiCustomEmoji: Codable, Hashable, Sendable {
-    public var id: Int
-    /// Removed in 1.0.0
-    public var localSiteId: Int?
-    public var shortcode: String
-    public var imageUrl: String
-    public var altText: String
-    public var category: String
-    public var published: Date
-    public var updated: Date?
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: unavailable after 0.19.11
+    public let localSiteId: Int?
+    /// Lemmy availability: all versions
+    public let shortcode: String
+    /// Lemmy availability: all versions
+    public let imageUrl: URL
+    /// Lemmy availability: all versions
+    public let altText: String
+    /// Lemmy availability: all versions
+    public let category: String
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// Lemmy availability: all versions
+    public let updated: Date?
 }
 
 public extension ApiCustomEmoji {

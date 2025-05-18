@@ -9,11 +9,14 @@
 
 import Foundation
 
-// PasswordChangeAfterReset.ts
+/// Lemmy availability: all versions
 public struct ApiPasswordChangeAfterReset: Codable, Hashable, Sendable {
-    public var token: String
-    public var password: String
-    public var passwordVerify: String
+    /// Lemmy availability: all versions
+    public let token: String
+    /// Lemmy availability: all versions
+    public let password: String
+    /// Lemmy availability: all versions
+    public let passwordVerify: String
 }
 
 public extension ApiPasswordChangeAfterReset {

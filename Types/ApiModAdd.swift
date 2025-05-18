@@ -9,13 +9,20 @@
 
 import Foundation
 
-// ModAdd.ts
+/// Lemmy availability: all versions
 public struct ApiModAdd: Codable, Hashable, Sendable {
-    public var id: Int
-    public var modPersonId: Int
-    public var otherPersonId: Int
-    public var removed: Bool
-    public var published: Date
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let modPersonId: Int
+    /// Lemmy availability: all versions
+    public let otherPersonId: Int
+    /// Lemmy availability: all versions
+    public let removed: Bool
+    /// Lemmy availability: unavailable after 0.19.11
+    public let when_: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let published: Date?
 }
 
 public extension ApiModAdd {
@@ -24,29 +31,7 @@ public extension ApiModAdd {
         case modPersonId = "mod_person_id"
         case otherPersonId = "other_person_id"
         case removed = "removed"
-        case published = "published"
         case when_ = "when_"
-    }
-
-    init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(Int.self, forKey: .id)
-        self.modPersonId = try container.decode(Int.self, forKey: .modPersonId)
-        self.otherPersonId = try container.decode(Int.self, forKey: .otherPersonId)
-        self.removed = try container.decode(Bool.self, forKey: .removed)
-        self.published = try (
-            container.decodeIfPresent(Date.self, forKey: .published)
-            ?? container.decode(Date.self, forKey: .when_)
-        )
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(id, forKey: .id)
-        try container.encode(modPersonId, forKey: .modPersonId)
-        try container.encode(otherPersonId, forKey: .otherPersonId)
-        try container.encode(removed, forKey: .removed)
-        try container.encode(published, forKey: .published)
-        try container.encode(published, forKey: .when_)
+        case published = "published"
     }
 }

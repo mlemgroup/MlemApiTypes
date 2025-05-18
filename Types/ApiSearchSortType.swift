@@ -9,10 +9,12 @@
 
 import Foundation
 
-// SearchSortType.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public enum ApiSearchSortType: String, Codable, Sendable {
+    /// Lemmy availability: all versions
     case new = "New"
+    /// Lemmy availability: all versions
     case top = "Top"
+    /// Lemmy availability: all versions
     case old = "Old"
 }

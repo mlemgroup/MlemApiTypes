@@ -9,11 +9,14 @@
 
 import Foundation
 
-// RemovePost.ts
+/// Lemmy availability: all versions
 public struct ApiRemovePost: Codable, Hashable, Sendable {
-    public var postId: Int
-    public var removed: Bool
-    public var reason: String?
+    /// Lemmy availability: all versions
+    public let postId: Int
+    /// Lemmy availability: all versions
+    public let removed: Bool
+    /// Lemmy availability: all versions
+    public let reason: String?
 }
 
 public extension ApiRemovePost {

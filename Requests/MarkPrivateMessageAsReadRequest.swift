@@ -9,21 +9,37 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct MarkPrivateMessageAsReadRequest: ApiPostRequest {
     public typealias Body = ApiMarkPrivateMessageAsRead
-    public typealias Response = ApiPrivateMessageResponse
+    public typealias Response = MarkPrivateMessageAsReadResponseUnion
     
-    public let path: String = "api/v3/private_message/mark_as_read"
+    public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       privateMessageId: Int,
       read: Bool
     ) {
+        self.path = endpoint == .v4 ? "api/v4/private_message/mark_as_read" : "api/v3/private_message/mark_as_read"
         self.body = .init(
             privateMessageId: privateMessageId,
             read: read
         )
+    }
+}
+
+public enum MarkPrivateMessageAsReadResponseUnion: Decodable {
+    case apiPrivateMessageResponse(ApiPrivateMessageResponse)
+    case apiSuccessResponse(ApiSuccessResponse)
+    
+    public init(from decoder: Decoder) throws {
+        if let value = try? ApiPrivateMessageResponse(from: decoder) {
+            self = .apiPrivateMessageResponse(value)
+            return
+        }
+        let value = try ApiSuccessResponse(from: decoder)
+        self = .apiSuccessResponse(value)
     }
 }

@@ -9,11 +9,14 @@
 
 import Foundation
 
-// ModHideCommunityView.ts
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiModHideCommunityView: Codable, Hashable, Sendable {
-    public var modHideCommunity: ApiModHideCommunity
-    public var admin: ApiPerson?
-    public var community: ApiCommunity
+    /// Lemmy availability: all versions
+    public let modHideCommunity: ApiModHideCommunity
+    /// Lemmy availability: all versions
+    public let admin: ApiPerson?
+    /// Lemmy availability: all versions
+    public let community: ApiCommunity
 }
 
 public extension ApiModHideCommunityView {

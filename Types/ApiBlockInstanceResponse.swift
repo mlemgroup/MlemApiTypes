@@ -9,10 +9,10 @@
 
 import Foundation
 
-// BlockInstanceResponse.ts
-/// Added in 0.19.0, removed in 1.0.0
+/// Lemmy availability: available between 0.19.0 and 0.19.11
 public struct ApiBlockInstanceResponse: Codable, Hashable, Sendable {
-    public var blocked: Bool
+    /// Lemmy availability: all versions
+    public let blocked: Bool
 }
 
 public extension ApiBlockInstanceResponse {

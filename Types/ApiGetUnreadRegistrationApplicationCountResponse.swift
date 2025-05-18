@@ -9,10 +9,10 @@
 
 import Foundation
 
-// GetUnreadRegistrationApplicationCountResponse.ts
-// swiftlint:disable:next type_name
+/// Lemmy availability: all versions
 public struct ApiGetUnreadRegistrationApplicationCountResponse: Codable, Hashable, Sendable {
-    public var registrationApplications: Int
+    /// Lemmy availability: all versions
+    public let registrationApplications: Int
 }
 
 public extension ApiGetUnreadRegistrationApplicationCountResponse {

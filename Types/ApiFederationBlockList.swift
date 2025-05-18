@@ -9,13 +9,16 @@
 
 import Foundation
 
-// FederationBlockList.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiFederationBlockList: Codable, Hashable, Sendable {
-    public var instanceId: Int
-    public var published: Date
-    public var updated: Date?
-    public var expires: String?
+    /// Lemmy availability: all versions
+    public let instanceId: Int
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// Lemmy availability: all versions
+    public let updated: Date?
+    /// Lemmy availability: all versions
+    public let expires: Date?
 }
 
 public extension ApiFederationBlockList {

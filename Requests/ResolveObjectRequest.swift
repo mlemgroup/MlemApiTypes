@@ -9,6 +9,7 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct ResolveObjectRequest: ApiGetRequest {
     public typealias Parameters = ApiResolveObject
     public typealias Response = ApiResolveObjectResponse
@@ -18,11 +19,9 @@ public struct ResolveObjectRequest: ApiGetRequest {
     
     init(
       endpoint: SiteVersion.EndpointVersion,
-      
-      // swiftlint:disable:next identifier_name
       q: String
     ) {
-        self.path = endpoint == .v3 ? "api/v3/resolve_object" : "api/v4/resolve_object"
+        self.path = endpoint == .v4 ? "api/v4/resolve_object" : "api/v3/resolve_object"
         self.parameters = .init(
             q: q
         )

@@ -9,11 +9,14 @@
 
 import Foundation
 
-// FederatedInstances.ts
+/// Lemmy availability: all versions
 public struct ApiFederatedInstances: Codable, Hashable, Sendable {
-    public var linked: [ApiInstance]
-    public var allowed: [ApiInstance]
-    public var blocked: [ApiInstance]
+    /// Lemmy availability: all versions
+    public let linked: [ApiInstance]
+    /// Lemmy availability: all versions
+    public let allowed: [ApiInstance]
+    /// Lemmy availability: all versions
+    public let blocked: [ApiInstance]
 }
 
 public extension ApiFederatedInstances {

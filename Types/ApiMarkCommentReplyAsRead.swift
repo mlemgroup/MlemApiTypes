@@ -9,10 +9,12 @@
 
 import Foundation
 
-// MarkCommentReplyAsRead.ts
+/// Lemmy availability: all versions
 public struct ApiMarkCommentReplyAsRead: Codable, Hashable, Sendable {
-    public var commentReplyId: Int
-    public var read: Bool
+    /// Lemmy availability: all versions
+    public let commentReplyId: Int
+    /// Lemmy availability: all versions
+    public let read: Bool
 }
 
 public extension ApiMarkCommentReplyAsRead {

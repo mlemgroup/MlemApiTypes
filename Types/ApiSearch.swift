@@ -9,39 +9,46 @@
 
 import Foundation
 
-// Search.ts
+/// Lemmy availability: all versions
 public struct ApiSearch: Codable, Hashable, Sendable {
-    /// Removed in 1.0.0
-    // swiftlint:disable:next identifier_name
-    public var q: String?
-    public var communityId: Int?
-    public var communityName: String?
-    public var creatorId: Int?
-    public var type_: ApiSearchType?
-    public var sort: SearchSortTypeBridge?
-    public var listingType: ApiListingType?
-    /// Removed in 1.0.0
-    public var page: Int?
-    /// Removed in 1.0.0
-    public var limit: Int?
-    /// Added in 0.19.6, removed in 1.0.0
-    public var postTitleOnly: Bool?
-    /// Added in 1.0.0
-    public var searchTerm: String?
-    /// Added in 1.0.0
-    public var timeRangeSeconds: Int?
-    /// Added in 1.0.0
-    public var titleOnly: Bool?
-    /// Added in 1.0.0
-    public var postUrlOnly: Bool?
-    /// Added in 1.0.0
-    public var likedOnly: Bool?
-    /// Added in 1.0.0
-    public var dislikedOnly: Bool?
-    /// Added in 1.0.0
-    public var pageCursor: String?
-    /// Added in 1.0.0
-    public var pageBack: Bool?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let q: String?
+    /// Lemmy availability: all versions
+    public let communityId: Int?
+    /// Lemmy availability: all versions
+    public let communityName: String?
+    /// Lemmy availability: all versions
+    public let creatorId: Int?
+    /// Lemmy availability: all versions
+    public let type_: ApiSearchType?
+    /// Lemmy availability: all versions
+    public let sort: SearchSortTypeBridge
+    /// Lemmy availability: all versions
+    public let listingType: ApiListingType?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let page: Int?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let limit: Int?
+    /// Lemmy availability: available between 0.19.6 and 0.19.11
+    public let postTitleOnly: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let searchTerm: String?
+    /// Filter to within a given time range, in seconds.
+    /// IE 60 would give results for the past minute.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let timeRangeSeconds: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let titleOnly: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let postUrlOnly: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let likedOnly: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let dislikedOnly: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let pageCursor: String?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let pageBack: Bool?
 }
 
 public extension ApiSearch {

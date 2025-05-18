@@ -9,6 +9,7 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct GetReportCountRequest: ApiGetRequest {
     public typealias Parameters = ApiGetReportCount
     public typealias Response = ApiGetReportCountResponse
@@ -20,7 +21,7 @@ public struct GetReportCountRequest: ApiGetRequest {
       endpoint: SiteVersion.EndpointVersion,
       communityId: Int?
     ) {
-        self.path = endpoint == .v3 ? "api/v3/user/report_count" : "api/v4/account/report_count"
+        self.path = endpoint == .v4 ? "api/v4/account/report_count" : "api/v3/user/report_count"
         self.parameters = .init(
             communityId: communityId
         )

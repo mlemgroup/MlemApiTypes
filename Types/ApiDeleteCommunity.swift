@@ -9,10 +9,12 @@
 
 import Foundation
 
-// DeleteCommunity.ts
+/// Lemmy availability: all versions
 public struct ApiDeleteCommunity: Codable, Hashable, Sendable {
-    public var communityId: Int
-    public var deleted: Bool
+    /// Lemmy availability: all versions
+    public let communityId: Int
+    /// Lemmy availability: all versions
+    public let deleted: Bool
 }
 
 public extension ApiDeleteCommunity {

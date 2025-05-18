@@ -9,10 +9,10 @@
 
 import Foundation
 
-// PostTags.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiPostTags: Codable, Hashable, Sendable {
-    public var tags: [ApiTag]
+    /// Lemmy availability: all versions
+    public let tags: [ApiTag]
 }
 
 public extension ApiPostTags {

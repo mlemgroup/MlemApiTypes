@@ -9,19 +9,21 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct CreateCommentReportRequest: ApiPostRequest {
     public typealias Body = ApiCreateCommentReport
     public typealias Response = ApiCommentReportResponse
     
-    public let path: String = "api/v3/comment/report"
+    public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       commentId: Int,
       reason: String,
       violatesInstanceRules: Bool?
     ) {
+        self.path = endpoint == .v4 ? "api/v4/comment/report" : "api/v3/comment/report"
         self.body = .init(
             commentId: commentId,
             reason: reason,

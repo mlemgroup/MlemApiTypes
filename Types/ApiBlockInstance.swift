@@ -9,11 +9,12 @@
 
 import Foundation
 
-// BlockInstance.ts
-/// Added in 0.19.0, removed in 1.0.0
+/// Lemmy availability: available between 0.19.0 and 0.19.11
 public struct ApiBlockInstance: Codable, Hashable, Sendable {
-    public var instanceId: Int
-    public var block: Bool
+    /// Lemmy availability: all versions
+    public let instanceId: Int
+    /// Lemmy availability: all versions
+    public let block: Bool
 }
 
 public extension ApiBlockInstance {

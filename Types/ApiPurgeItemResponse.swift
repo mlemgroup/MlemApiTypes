@@ -9,10 +9,10 @@
 
 import Foundation
 
-// PurgeItemResponse.ts
-/// Removed in 0.19.0
+/// Lemmy availability: unavailable after 0.18.5
 public struct ApiPurgeItemResponse: Codable, Hashable, Sendable {
-    public var success: Bool
+    /// Lemmy availability: all versions
+    public let success: Bool
 }
 
 public extension ApiPurgeItemResponse {

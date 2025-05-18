@@ -9,10 +9,12 @@
 
 import Foundation
 
-// LockPost.ts
+/// Lemmy availability: all versions
 public struct ApiLockPost: Codable, Hashable, Sendable {
-    public var postId: Int
-    public var locked: Bool
+    /// Lemmy availability: all versions
+    public let postId: Int
+    /// Lemmy availability: all versions
+    public let locked: Bool
 }
 
 public extension ApiLockPost {

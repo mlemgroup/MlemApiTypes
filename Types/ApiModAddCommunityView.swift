@@ -9,12 +9,18 @@
 
 import Foundation
 
-// ModAddCommunityView.ts
+/// Lemmy availability: all versions
 public struct ApiModAddCommunityView: Codable, Hashable, Sendable {
-    public var modAddCommunity: ApiModAddCommunity
-    public var moderator: ApiPerson?
-    public var community: ApiCommunity
-    public var otherPerson: ApiPerson
+    /// Lemmy availability: all versions
+    public let modAddCommunity: ApiModAddCommunity
+    /// Lemmy availability: all versions
+    public let moderator: ApiPerson?
+    /// Lemmy availability: all versions
+    public let community: ApiCommunity
+    /// Lemmy availability: unavailable after 0.19.11
+    public let moddedPerson: ApiPerson?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let otherPerson: ApiPerson?
 }
 
 public extension ApiModAddCommunityView {
@@ -22,27 +28,7 @@ public extension ApiModAddCommunityView {
         case modAddCommunity = "mod_add_community"
         case moderator = "moderator"
         case community = "community"
-        case otherPerson = "other_person"
         case moddedPerson = "modded_person"
-    }
-
-    init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.modAddCommunity = try container.decode(ApiModAddCommunity.self, forKey: .modAddCommunity)
-        self.moderator = try container.decodeIfPresent(ApiPerson?.self, forKey: .moderator) ?? nil
-        self.community = try container.decode(ApiCommunity.self, forKey: .community)
-        self.otherPerson = try (
-            container.decodeIfPresent(ApiPerson.self, forKey: .otherPerson)
-            ?? container.decode(ApiPerson.self, forKey: .moddedPerson)
-        )
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(modAddCommunity, forKey: .modAddCommunity)
-        try container.encode(moderator, forKey: .moderator)
-        try container.encode(community, forKey: .community)
-        try container.encode(otherPerson, forKey: .otherPerson)
-        try container.encode(otherPerson, forKey: .moddedPerson)
+        case otherPerson = "other_person"
     }
 }

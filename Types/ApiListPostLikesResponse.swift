@@ -9,10 +9,10 @@
 
 import Foundation
 
-// ListPostLikesResponse.ts
-/// Added in 0.19.2
+/// Lemmy availability: available from 0.19.2 onwards
 public struct ApiListPostLikesResponse: Codable, Hashable, Sendable {
-    public var postLikes: [ApiVoteView]
+    /// Lemmy availability: all versions
+    public let postLikes: [ApiVoteView]
 }
 
 public extension ApiListPostLikesResponse {

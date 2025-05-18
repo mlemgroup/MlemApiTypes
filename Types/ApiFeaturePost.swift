@@ -9,11 +9,14 @@
 
 import Foundation
 
-// FeaturePost.ts
+/// Lemmy availability: all versions
 public struct ApiFeaturePost: Codable, Hashable, Sendable {
-    public var postId: Int
-    public var featured: Bool
-    public var featureType: ApiPostFeatureType
+    /// Lemmy availability: all versions
+    public let postId: Int
+    /// Lemmy availability: all versions
+    public let featured: Bool
+    /// Lemmy availability: all versions
+    public let featureType: ApiPostFeatureType
 }
 
 public extension ApiFeaturePost {

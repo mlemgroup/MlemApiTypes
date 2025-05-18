@@ -9,12 +9,16 @@
 
 import Foundation
 
-// SiteView.ts
+/// Lemmy availability: all versions
 public struct ApiSiteView: Codable, Hashable, Sendable {
-    public var site: ApiSite
-    public var localSite: ApiLocalSite
-    public var localSiteRateLimit: ApiLocalSiteRateLimit
-    public var counts: ApiSiteAggregates
+    /// Lemmy availability: all versions
+    public let site: ApiSite
+    /// Lemmy availability: all versions
+    public let localSite: ApiLocalSite
+    /// Lemmy availability: all versions
+    public let localSiteRateLimit: ApiLocalSiteRateLimit
+    /// Lemmy availability: unavailable after 0.19.11
+    public let counts: ApiSiteAggregates?
 }
 
 public extension ApiSiteView {

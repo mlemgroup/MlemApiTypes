@@ -9,10 +9,13 @@
 
 import Foundation
 
-// CreateCommentLike.ts
+/// Lemmy availability: all versions
 public struct ApiCreateCommentLike: Codable, Hashable, Sendable {
-    public var commentId: Int
-    public var score: Int
+    /// Lemmy availability: all versions
+    public let commentId: Int
+    /// Must be -1, 0, or 1 .
+    /// Lemmy availability: all versions
+    public let score: Int
 }
 
 public extension ApiCreateCommentLike {

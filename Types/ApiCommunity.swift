@@ -9,34 +9,88 @@
 
 import Foundation
 
-// Community.ts
+/// Lemmy availability: all versions
 public struct ApiCommunity: Codable, Hashable, Sendable {
-    public var id: Int
-    public var name: String
-    public var title: String
-    public var description: String?
-    public var removed: Bool
-    public var published: Date
-    public var updated: Date?
-    public var deleted: Bool
-    public var nsfw: Bool
-    public var actorId: ActorIdentifier
-    public var local: Bool
-    public var icon: URL?
-    public var banner: URL?
-    public var hidden: Bool
-    public var postingRestrictedToMods: Bool
-    public var instanceId: Int
-    /// Added in 0.18.1, removed in 0.19.0
-    public var followersUrl: String?
-    /// Added in 0.18.1, removed in 0.19.0
-    public var inboxUrl: String?
-    /// Added in 0.19.2, removed in 0.19.3
-    public var onlyFollowersCanVote: Bool?
-    /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
-    public var visibility: ApiCommunityVisibility?
-    /// Added in 1.0.0
-    public var sidebar: String?
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let name: String
+    /// A longer title, that can contain other characters, and doesn't have to be unique.
+    /// Lemmy availability: all versions
+    public let title: String
+    /// A sidebar / markdown description.
+    /// Lemmy availability: all versions
+    public let description: String?
+    /// Whether the community is removed by a mod.
+    /// Lemmy availability: all versions
+    public let removed: Bool
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// Lemmy availability: all versions
+    public let updated: Date?
+    /// Whether the community has been deleted by its creator.
+    /// Lemmy availability: all versions
+    public let deleted: Bool
+    /// Whether its an NSFW community.
+    /// Lemmy availability: all versions
+    public let nsfw: Bool
+    /// The federated actor_id.
+    /// Lemmy availability: unavailable after 0.19.11
+    public let actorId: ActorIdentifier?
+    /// Whether the community is local.
+    /// Lemmy availability: all versions
+    public let local: Bool
+    /// A URL for an icon.
+    /// Lemmy availability: all versions
+    public let icon: URL?
+    /// A URL for a banner.
+    /// Lemmy availability: all versions
+    public let banner: URL?
+    /// Whether the community is hidden.
+    /// Lemmy availability: unavailable after 0.19.11
+    public let hidden: Bool?
+    /// Whether posting is restricted to mods only.
+    /// Lemmy availability: all versions
+    public let postingRestrictedToMods: Bool
+    /// Lemmy availability: all versions
+    public let instanceId: Int
+    /// Url where moderators collection is served over Activitypub
+    /// Url where featured posts collection is served over Activitypub
+    /// Lemmy availability: available from 0.19.4 onwards
+    public let visibility: ApiCommunityVisibility?
+    /// A sidebar for the community in markdown.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let sidebar: String?
+    /// The federated ap_id.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let apId: ActorIdentifier?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let subscribers: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let posts: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let comments: Int?
+    /// The number of users with any activity in the last day.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let usersActiveDay: Int?
+    /// The number of users with any activity in the last week.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let usersActiveWeek: Int?
+    /// The number of users with any activity in the last month.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let usersActiveMonth: Int?
+    /// The number of users with any activity in the last year.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let usersActiveHalfYear: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let subscribersLocal: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let reportCount: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let unresolvedReportCount: Int?
+    /// Number of any interactions over the last month.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let localRemoved: Bool?
 }
 
 public extension ApiCommunity {
@@ -51,71 +105,25 @@ public extension ApiCommunity {
         case deleted = "deleted"
         case nsfw = "nsfw"
         case actorId = "actor_id"
-        case apId = "ap_id"
         case local = "local"
         case icon = "icon"
         case banner = "banner"
         case hidden = "hidden"
         case postingRestrictedToMods = "posting_restricted_to_mods"
         case instanceId = "instance_id"
-        case followersUrl = "followers_url"
-        case inboxUrl = "inbox_url"
-        case onlyFollowersCanVote = "only_followers_can_vote"
         case visibility = "visibility"
         case sidebar = "sidebar"
-    }
-
-    init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(Int.self, forKey: .id)
-        self.name = try container.decode(String.self, forKey: .name)
-        self.title = try container.decode(String.self, forKey: .title)
-        self.description = try container.decodeIfPresent(String?.self, forKey: .description) ?? nil
-        self.removed = try container.decode(Bool.self, forKey: .removed)
-        self.published = try container.decode(Date.self, forKey: .published)
-        self.updated = try container.decodeIfPresent(Date?.self, forKey: .updated) ?? nil
-        self.deleted = try container.decode(Bool.self, forKey: .deleted)
-        self.nsfw = try container.decode(Bool.self, forKey: .nsfw)
-        self.actorId = try (
-            container.decodeIfPresent(ActorIdentifier.self, forKey: .actorId)
-            ?? container.decode(ActorIdentifier.self, forKey: .apId)
-        )
-        self.local = try container.decode(Bool.self, forKey: .local)
-        self.icon = try container.decodeIfPresent(URL?.self, forKey: .icon) ?? nil
-        self.banner = try container.decodeIfPresent(URL?.self, forKey: .banner) ?? nil
-        self.hidden = try container.decode(Bool.self, forKey: .hidden)
-        self.postingRestrictedToMods = try container.decode(Bool.self, forKey: .postingRestrictedToMods)
-        self.instanceId = try container.decode(Int.self, forKey: .instanceId)
-        self.followersUrl = try container.decodeIfPresent(String?.self, forKey: .followersUrl) ?? nil
-        self.inboxUrl = try container.decodeIfPresent(String?.self, forKey: .inboxUrl) ?? nil
-        self.onlyFollowersCanVote = try container.decodeIfPresent(Bool?.self, forKey: .onlyFollowersCanVote) ?? nil
-        self.visibility = try container.decodeIfPresent(ApiCommunityVisibility?.self, forKey: .visibility) ?? nil
-        self.sidebar = try container.decodeIfPresent(String?.self, forKey: .sidebar) ?? nil
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(id, forKey: .id)
-        try container.encode(name, forKey: .name)
-        try container.encode(title, forKey: .title)
-        try container.encode(description, forKey: .description)
-        try container.encode(removed, forKey: .removed)
-        try container.encode(published, forKey: .published)
-        try container.encode(updated, forKey: .updated)
-        try container.encode(deleted, forKey: .deleted)
-        try container.encode(nsfw, forKey: .nsfw)
-        try container.encode(actorId, forKey: .actorId)
-        try container.encode(actorId, forKey: .apId)
-        try container.encode(local, forKey: .local)
-        try container.encode(icon, forKey: .icon)
-        try container.encode(banner, forKey: .banner)
-        try container.encode(hidden, forKey: .hidden)
-        try container.encode(postingRestrictedToMods, forKey: .postingRestrictedToMods)
-        try container.encode(instanceId, forKey: .instanceId)
-        try container.encode(followersUrl, forKey: .followersUrl)
-        try container.encode(inboxUrl, forKey: .inboxUrl)
-        try container.encode(onlyFollowersCanVote, forKey: .onlyFollowersCanVote)
-        try container.encode(visibility, forKey: .visibility)
-        try container.encode(sidebar, forKey: .sidebar)
+        case apId = "ap_id"
+        case subscribers = "subscribers"
+        case posts = "posts"
+        case comments = "comments"
+        case usersActiveDay = "users_active_day"
+        case usersActiveWeek = "users_active_week"
+        case usersActiveMonth = "users_active_month"
+        case usersActiveHalfYear = "users_active_half_year"
+        case subscribersLocal = "subscribers_local"
+        case reportCount = "report_count"
+        case unresolvedReportCount = "unresolved_report_count"
+        case localRemoved = "local_removed"
     }
 }

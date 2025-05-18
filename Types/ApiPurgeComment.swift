@@ -9,10 +9,12 @@
 
 import Foundation
 
-// PurgeComment.ts
+/// Lemmy availability: all versions
 public struct ApiPurgeComment: Codable, Hashable, Sendable {
-    public var commentId: Int
-    public var reason: String?
+    /// Lemmy availability: all versions
+    public let commentId: Int
+    /// Lemmy availability: all versions
+    public let reason: String?
 }
 
 public extension ApiPurgeComment {

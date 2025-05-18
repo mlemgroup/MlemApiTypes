@@ -9,7 +9,7 @@
 
 import Foundation
 
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ListCustomEmojisRequest: ApiGetRequest {
     public typealias Parameters = ApiListCustomEmojis
     public typealias Response = ApiListCustomEmojisResponse

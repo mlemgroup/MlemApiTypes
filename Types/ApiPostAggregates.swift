@@ -9,32 +9,42 @@
 
 import Foundation
 
-// PostAggregates.ts
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiPostAggregates: Codable, Hashable, Sendable {
-    /// Removed in 0.19.0
-    public var id: Int?
-    public var postId: Int
-    public var comments: Int
-    public var score: Int
-    public var upvotes: Int
-    public var downvotes: Int
-    public var published: Date
-    /// Removed in 0.19.0
-    public var newestCommentTimeNecro: String?
-    /// Removed in 0.19.0, added in 0.19.2
-    public var newestCommentTime: String?
-    /// Removed in 0.19.0
-    public var featuredCommunity: Bool?
-    /// Removed in 0.19.0
-    public var featuredLocal: Bool?
-    /// Removed in 0.19.0
-    public var hotRank: Int?
-    /// Removed in 0.19.0
-    public var hotRankActive: Int?
-    /// Added in 1.0.0
-    public var reportCount: Int?
-    /// Added in 1.0.0
-    public var unresolvedReportCount: Int?
+    /// Lemmy availability: unavailable after 0.18.5
+    public let id: Int?
+    /// Lemmy availability: all versions
+    public let postId: Int
+    /// Lemmy availability: all versions
+    public let comments: Int
+    /// Lemmy availability: all versions
+    public let score: Int
+    /// Lemmy availability: all versions
+    public let upvotes: Int
+    /// Lemmy availability: all versions
+    public let downvotes: Int
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// A newest comment time, limited to 2 days, to prevent necrobumping  
+    /// Lemmy availability: unavailable after 0.18.5
+    public let newestCommentTimeNecro: Date?
+    /// The time of the newest comment in the post.
+    /// Lemmy availability: all versions
+    public let newestCommentTime: Date?
+    /// If the post is featured on the community.
+    /// Lemmy availability: unavailable after 0.18.5
+    public let featuredCommunity: Bool?
+    /// If the post is featured on the site / to local.
+    /// Lemmy availability: unavailable after 0.18.5
+    public let featuredLocal: Bool?
+    /// Lemmy availability: unavailable after 0.18.5
+    public let hotRank: Int?
+    /// Lemmy availability: unavailable after 0.18.5
+    public let hotRankActive: Int?
+    /// Lemmy availability: available between 0.18.3 and 0.18.5
+    public let communityId: Int?
+    /// Lemmy availability: available between 0.18.3 and 0.18.5
+    public let creatorId: Int?
 }
 
 public extension ApiPostAggregates {
@@ -52,7 +62,7 @@ public extension ApiPostAggregates {
         case featuredLocal = "featured_local"
         case hotRank = "hot_rank"
         case hotRankActive = "hot_rank_active"
-        case reportCount = "report_count"
-        case unresolvedReportCount = "unresolved_report_count"
+        case communityId = "community_id"
+        case creatorId = "creator_id"
     }
 }

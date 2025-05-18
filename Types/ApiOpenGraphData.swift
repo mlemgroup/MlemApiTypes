@@ -9,13 +9,16 @@
 
 import Foundation
 
-// OpenGraphData.ts
-/// Added in 0.19.4
+/// Lemmy availability: available from 0.19.4 onwards
 public struct ApiOpenGraphData: Codable, Hashable, Sendable {
-    public var title: String?
-    public var description: String?
-    public var image: String?
-    public var embedVideoUrl: URL?
+    /// Lemmy availability: all versions
+    public let title: String?
+    /// Lemmy availability: all versions
+    public let description: String?
+    /// Lemmy availability: all versions
+    public let image: URL?
+    /// Lemmy availability: all versions
+    public let embedVideoUrl: URL?
 }
 
 public extension ApiOpenGraphData {

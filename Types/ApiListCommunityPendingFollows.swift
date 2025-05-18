@@ -9,13 +9,18 @@
 
 import Foundation
 
-// ListCommunityPendingFollows.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiListCommunityPendingFollows: Codable, Hashable, Sendable {
-    public var pendingOnly: Bool?
-    public var allCommunities: Bool?
-    public var page: Int?
-    public var limit: Int?
+    /// Only shows the unapproved applications
+    /// Lemmy availability: all versions
+    public let pendingOnly: Bool?
+    /// Only for admins, show pending follows for communities which you dont moderate
+    /// Lemmy availability: all versions
+    public let allCommunities: Bool?
+    /// Lemmy availability: all versions
+    public let page: Int?
+    /// Lemmy availability: all versions
+    public let limit: Int?
 }
 
 public extension ApiListCommunityPendingFollows {

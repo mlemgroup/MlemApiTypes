@@ -9,19 +9,20 @@
 
 import Foundation
 
+/// Lemmy availability: available from 0.19.0 onwards
 public struct UpdateTotpRequest: ApiPostRequest {
     public typealias Body = ApiUpdateTotp
     public typealias Response = ApiUpdateTotpResponse
     
     public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       totpToken: String,
       enabled: Bool
     ) {
-        self.path = endpoint == .v3 ? "api/v3/user/totp/update" : "api/v4/account/auth/totp/update"
+        self.path = endpoint == .v4 ? "api/v4/account/auth/totp/update" : "api/v3/user/totp/update"
         self.body = .init(
             totpToken: totpToken,
             enabled: enabled

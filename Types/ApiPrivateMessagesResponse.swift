@@ -9,10 +9,10 @@
 
 import Foundation
 
-// PrivateMessagesResponse.ts
-/// Removed in 1.0.0
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiPrivateMessagesResponse: Codable, Hashable, Sendable {
-    public var privateMessages: [ApiPrivateMessageView]
+    /// Lemmy availability: all versions
+    public let privateMessages: [ApiPrivateMessageView]
 }
 
 public extension ApiPrivateMessagesResponse {

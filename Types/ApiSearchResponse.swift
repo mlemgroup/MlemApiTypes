@@ -9,20 +9,23 @@
 
 import Foundation
 
-// SearchResponse.ts
+/// Lemmy availability: all versions
 public struct ApiSearchResponse: Codable, Hashable, Sendable {
-    /// Removed in 1.0.0
-    public var type_: ApiSearchType?
-    /// Removed in 1.0.0
-    public var comments: [ApiCommentView]?
-    /// Removed in 1.0.0
-    public var posts: [ApiPostView]?
-    /// Removed in 1.0.0
-    public var communities: [ApiCommunityView]?
-    /// Removed in 1.0.0
-    public var users: [ApiPersonView]?
-    /// Added in 1.0.0
-    public var results: [ApiSearchCombinedView]?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let type_: ApiSearchType?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let comments: [ApiCommentView]?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let posts: [ApiPostView]?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let communities: [ApiCommunityView]?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let users: [ApiPersonView]?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let results: [ApiSearchCombinedView]?
+    /// the pagination cursor to use to fetch the next page
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let nextPage: String?
 }
 
 public extension ApiSearchResponse {
@@ -33,5 +36,6 @@ public extension ApiSearchResponse {
         case communities = "communities"
         case users = "users"
         case results = "results"
+        case nextPage = "next_page"
     }
 }

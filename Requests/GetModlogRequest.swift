@@ -9,6 +9,7 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct GetModlogRequest: ApiGetRequest {
     public typealias Parameters = ApiGetModlog
     public typealias Response = ApiGetModlogResponse
@@ -30,7 +31,7 @@ public struct GetModlogRequest: ApiGetRequest {
       pageCursor: String?,
       pageBack: Bool?
     ) {
-        self.path = endpoint == .v3 ? "api/v3/modlog" : "api/v4/modlog"
+        self.path = endpoint == .v4 ? "api/v4/modlog" : "api/v3/modlog"
         self.parameters = .init(
             modPersonId: modPersonId,
             communityId: communityId,

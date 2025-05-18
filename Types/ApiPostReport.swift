@@ -9,21 +9,35 @@
 
 import Foundation
 
-// PostReport.ts
+/// Lemmy availability: all versions
 public struct ApiPostReport: Codable, Hashable, Sendable {
-    public var id: Int
-    public var creatorId: Int
-    public var postId: Int
-    public var originalPostName: String
-    public var originalPostUrl: String?
-    public var originalPostBody: String?
-    public var reason: String
-    public var resolved: Bool
-    public var resolverId: Int?
-    public var published: Date
-    public var updated: Date?
-    /// Added in 1.0.0
-    public var violatesInstanceRules: Bool?
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let creatorId: Int
+    /// Lemmy availability: all versions
+    public let postId: Int
+    /// The original post title.
+    /// Lemmy availability: all versions
+    public let originalPostName: String
+    /// The original post url.
+    /// Lemmy availability: all versions
+    public let originalPostUrl: URL?
+    /// The original post body.
+    /// Lemmy availability: all versions
+    public let originalPostBody: String?
+    /// Lemmy availability: all versions
+    public let reason: String
+    /// Lemmy availability: all versions
+    public let resolved: Bool
+    /// Lemmy availability: all versions
+    public let resolverId: Int?
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// Lemmy availability: all versions
+    public let updated: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let violatesInstanceRules: Bool?
 }
 
 public extension ApiPostReport {

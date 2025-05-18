@@ -9,19 +9,24 @@
 
 import Foundation
 
-// ModlogListParams.ts
-/// Removed in 1.0.0
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiModlogListParams: Codable, Hashable, Sendable {
-    public var communityId: Int?
-    public var modPersonId: Int?
-    public var otherPersonId: Int?
-    public var page: Int?
-    public var limit: Int?
-    public var hideModlogNames: Bool
-    /// Added in 0.19.4
-    public var postId: Int?
-    /// Added in 0.19.4
-    public var commentId: Int?
+    /// Lemmy availability: all versions
+    public let communityId: Int?
+    /// Lemmy availability: all versions
+    public let modPersonId: Int?
+    /// Lemmy availability: all versions
+    public let otherPersonId: Int?
+    /// Lemmy availability: all versions
+    public let page: Int?
+    /// Lemmy availability: all versions
+    public let limit: Int?
+    /// Lemmy availability: all versions
+    public let hideModlogNames: Bool
+    /// Lemmy availability: available from 0.19.4 onwards
+    public let postId: Int?
+    /// Lemmy availability: available from 0.19.4 onwards
+    public let commentId: Int?
 }
 
 public extension ApiModlogListParams {

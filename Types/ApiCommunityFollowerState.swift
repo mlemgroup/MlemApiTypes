@@ -9,10 +9,12 @@
 
 import Foundation
 
-// CommunityFollowerState.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public enum ApiCommunityFollowerState: String, Codable, Sendable {
+    /// Lemmy availability: all versions
     case accepted = "Accepted"
+    /// Lemmy availability: all versions
     case pending = "Pending"
+    /// Lemmy availability: all versions
     case approvalRequired = "ApprovalRequired"
 }

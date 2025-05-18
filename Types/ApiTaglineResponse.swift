@@ -9,10 +9,10 @@
 
 import Foundation
 
-// TaglineResponse.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiTaglineResponse: Codable, Hashable, Sendable {
-    public var tagline: ApiTagline
+    /// Lemmy availability: all versions
+    public let tagline: ApiTagline
 }
 
 public extension ApiTaglineResponse {

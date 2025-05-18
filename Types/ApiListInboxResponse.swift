@@ -9,14 +9,18 @@
 
 import Foundation
 
-// ListInboxResponse.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiListInboxResponse: Codable, Hashable, Sendable {
-    public var inbox: [ApiInboxCombinedView]
+    /// Lemmy availability: all versions
+    public let inbox: [ApiInboxCombinedView]
+    /// the pagination cursor to use to fetch the next page
+    /// Lemmy availability: all versions
+    public let nextPage: String?
 }
 
 public extension ApiListInboxResponse {
     enum CodingKeys: String, CodingKey {
         case inbox = "inbox"
+        case nextPage = "next_page"
     }
 }

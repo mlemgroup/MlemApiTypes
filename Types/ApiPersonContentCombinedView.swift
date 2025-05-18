@@ -1,4 +1,4 @@
-
+//
 //  ApiPersonContentCombinedView.swift
 //  Mlem
 //
@@ -9,14 +9,15 @@
 
 import Foundation
 
-// PersonContentCombinedView.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public enum ApiPersonContentCombinedView: Codable, Hashable, Sendable {
+    /// Lemmy availability: all versions
     case post(ApiPostView)
+    /// Lemmy availability: all versions
     case comment(ApiCommentView)
-
+    
     enum CodingKeys: CodingKey { case type_ }
-
+    
     public init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let type = try container.decodeIfPresent(String.self, forKey: .type_)
@@ -28,7 +29,7 @@ public enum ApiPersonContentCombinedView: Codable, Hashable, Sendable {
         )
         }
     }
-
+    
     public func encode(to encoder: any Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         switch self {
