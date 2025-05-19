@@ -9,9 +9,10 @@
 
 import Foundation
 
-// CommentReportResponse.ts
+/// Lemmy availability: all versions
 public struct ApiCommentReportResponse: Codable, Hashable, Sendable {
-    public var commentReportView: ApiCommentReportView
+    /// Lemmy availability: all versions
+    public let commentReportView: ApiCommentReportView
 }
 
 public extension ApiCommentReportResponse {

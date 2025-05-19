@@ -9,9 +9,10 @@
 
 import Foundation
 
-// ListCommunitiesResponse.ts
+/// Lemmy availability: all versions
 public struct ApiListCommunitiesResponse: Codable, Hashable, Sendable {
-    public var communities: [ApiCommunityView]
+    /// Lemmy availability: all versions
+    public let communities: [ApiCommunityView]
 }
 
 public extension ApiListCommunitiesResponse {

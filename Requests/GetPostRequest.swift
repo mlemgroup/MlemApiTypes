@@ -9,6 +9,7 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct GetPostRequest: ApiGetRequest {
     public typealias Parameters = ApiGetPost
     public typealias Response = ApiGetPostResponse
@@ -21,7 +22,7 @@ public struct GetPostRequest: ApiGetRequest {
       id: Int?,
       commentId: Int?
     ) {
-        self.path = endpoint == .v3 ? "api/v3/post" : "api/v4/post"
+        self.path = endpoint == .v4 ? "api/v4/post" : "api/v3/post"
         self.parameters = .init(
             id: id,
             commentId: commentId

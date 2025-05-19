@@ -9,14 +9,18 @@
 
 import Foundation
 
-// PersonPostMention.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiPersonPostMention: Codable, Hashable, Sendable {
-    public var id: Int
-    public var recipientId: Int
-    public var postId: Int
-    public var read: Bool
-    public var published: Date
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let recipientId: Int
+    /// Lemmy availability: all versions
+    public let postId: Int
+    /// Lemmy availability: all versions
+    public let read: Bool
+    /// Lemmy availability: all versions
+    public let published: Date
 }
 
 public extension ApiPersonPostMention {

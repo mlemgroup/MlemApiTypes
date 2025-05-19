@@ -9,19 +9,21 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct FeaturePostRequest: ApiPostRequest {
     public typealias Body = ApiFeaturePost
     public typealias Response = ApiPostResponse
     
-    public let path: String = "api/v3/post/feature"
+    public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       postId: Int,
       featured: Bool,
       featureType: ApiPostFeatureType
     ) {
+        self.path = endpoint == .v4 ? "api/v4/post/feature" : "api/v3/post/feature"
         self.body = .init(
             postId: postId,
             featured: featured,

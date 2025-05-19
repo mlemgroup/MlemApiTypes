@@ -9,11 +9,12 @@
 
 import Foundation
 
-// UpdateTotp.ts
-/// Added in 0.19.0
+/// Lemmy availability: available from 0.19.0 onwards
 public struct ApiUpdateTotp: Codable, Hashable, Sendable {
-    public var totpToken: String
-    public var enabled: Bool
+    /// Lemmy availability: all versions
+    public let totpToken: String
+    /// Lemmy availability: all versions
+    public let enabled: Bool
 }
 
 public extension ApiUpdateTotp {

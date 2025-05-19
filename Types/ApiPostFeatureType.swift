@@ -9,8 +9,10 @@
 
 import Foundation
 
-// PostFeatureType.ts
+/// Lemmy availability: all versions
 public enum ApiPostFeatureType: String, Codable, Sendable {
+    /// Lemmy availability: all versions
     case local = "Local"
+    /// Lemmy availability: all versions
     case community = "Community"
 }

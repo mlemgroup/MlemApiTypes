@@ -9,14 +9,18 @@
 
 import Foundation
 
-// ListPersonContentResponse.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiListPersonContentResponse: Codable, Hashable, Sendable {
-    public var content: [ApiPersonContentCombinedView]
+    /// Lemmy availability: all versions
+    public let content: [ApiPersonContentCombinedView]
+    /// the pagination cursor to use to fetch the next page
+    /// Lemmy availability: all versions
+    public let nextPage: String?
 }
 
 public extension ApiListPersonContentResponse {
     enum CodingKeys: String, CodingKey {
         case content = "content"
+        case nextPage = "next_page"
     }
 }

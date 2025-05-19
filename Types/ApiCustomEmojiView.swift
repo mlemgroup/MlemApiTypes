@@ -9,10 +9,12 @@
 
 import Foundation
 
-// CustomEmojiView.ts
+/// Lemmy availability: all versions
 public struct ApiCustomEmojiView: Codable, Hashable, Sendable {
-    public var customEmoji: ApiCustomEmoji
-    public var keywords: [ApiCustomEmojiKeyword]
+    /// Lemmy availability: all versions
+    public let customEmoji: ApiCustomEmoji
+    /// Lemmy availability: all versions
+    public let keywords: [ApiCustomEmojiKeyword]
 }
 
 public extension ApiCustomEmojiView {

@@ -9,14 +9,19 @@
 
 import Foundation
 
-// ListPersonContent.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiListPersonContent: Codable, Hashable, Sendable {
-    public var type_: ApiPersonContentType?
-    public var personId: Int?
-    public var username: String?
-    public var pageCursor: String?
-    public var pageBack: Bool?
+    /// Lemmy availability: all versions
+    public let type_: ApiPersonContentType?
+    /// Lemmy availability: all versions
+    public let personId: Int?
+    /// Example: dessalines , or dessalines@xyz.tld
+    /// Lemmy availability: all versions
+    public let username: String?
+    /// Lemmy availability: all versions
+    public let pageCursor: String?
+    /// Lemmy availability: all versions
+    public let pageBack: Bool?
 }
 
 public extension ApiListPersonContent {

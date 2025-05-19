@@ -9,18 +9,20 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct FollowCommunityRequest: ApiPostRequest {
     public typealias Body = ApiFollowCommunity
     public typealias Response = ApiCommunityResponse
     
-    public let path: String = "api/v3/community/follow"
+    public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       communityId: Int,
       follow: Bool
     ) {
+        self.path = endpoint == .v4 ? "api/v4/community/follow" : "api/v3/community/follow"
         self.body = .init(
             communityId: communityId,
             follow: follow

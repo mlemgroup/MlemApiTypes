@@ -9,12 +9,14 @@
 
 import Foundation
 
-// ImageProxyParams.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiImageProxyParams: Codable, Hashable, Sendable {
-    public var url: String
-    public var fileType: String?
-    public var maxSize: Int?
+    /// Lemmy availability: all versions
+    public let url: String
+    /// Lemmy availability: all versions
+    public let fileType: String?
+    /// Lemmy availability: all versions
+    public let maxSize: Int?
 }
 
 public extension ApiImageProxyParams {

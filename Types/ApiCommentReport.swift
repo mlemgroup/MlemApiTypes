@@ -9,19 +9,28 @@
 
 import Foundation
 
-// CommentReport.ts
+/// Lemmy availability: all versions
 public struct ApiCommentReport: Codable, Hashable, Sendable {
-    public var id: Int
-    public var creatorId: Int
-    public var commentId: Int
-    public var originalCommentText: String
-    public var reason: String
-    public var resolved: Bool
-    public var resolverId: Int?
-    public var published: Date
-    public var updated: Date?
-    /// Added in 1.0.0
-    public var violatesInstanceRules: Bool?
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let creatorId: Int
+    /// Lemmy availability: all versions
+    public let commentId: Int
+    /// Lemmy availability: all versions
+    public let originalCommentText: String
+    /// Lemmy availability: all versions
+    public let reason: String
+    /// Lemmy availability: all versions
+    public let resolved: Bool
+    /// Lemmy availability: all versions
+    public let resolverId: Int?
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// Lemmy availability: all versions
+    public let updated: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let violatesInstanceRules: Bool?
 }
 
 public extension ApiCommentReport {

@@ -9,19 +9,21 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct ApproveRegistrationApplicationRequest: ApiPutRequest {
     public typealias Body = ApiApproveRegistrationApplication
     public typealias Response = ApiRegistrationApplicationResponse
     
-    public let path: String = "api/v3/admin/registration_application/approve"
+    public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       id: Int,
       approve: Bool,
       denyReason: String?
     ) {
+        self.path = endpoint == .v4 ? "api/v4/admin/registration_application/approve" : "api/v3/admin/registration_application/approve"
         self.body = .init(
             id: id,
             approve: approve,

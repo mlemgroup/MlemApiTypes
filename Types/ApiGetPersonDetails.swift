@@ -9,20 +9,23 @@
 
 import Foundation
 
-// GetPersonDetails.ts
+/// Lemmy availability: all versions
 public struct ApiGetPersonDetails: Codable, Hashable, Sendable {
-    public var personId: Int?
-    public var username: String?
-    /// Removed in 1.0.0
-    public var sort: ApiSortType?
-    /// Removed in 1.0.0
-    public var page: Int?
-    /// Removed in 1.0.0
-    public var limit: Int?
-    /// Removed in 1.0.0
-    public var communityId: Int?
-    /// Removed in 1.0.0
-    public var savedOnly: Bool?
+    /// Lemmy availability: all versions
+    public let personId: Int?
+    /// Example: dessalines , or dessalines@xyz.tld
+    /// Lemmy availability: all versions
+    public let username: String?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let sort: ApiSortType?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let page: Int?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let limit: Int?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let communityId: Int?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let savedOnly: Bool?
 }
 
 public extension ApiGetPersonDetails {

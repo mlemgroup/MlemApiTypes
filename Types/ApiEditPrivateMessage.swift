@@ -9,10 +9,12 @@
 
 import Foundation
 
-// EditPrivateMessage.ts
+/// Lemmy availability: all versions
 public struct ApiEditPrivateMessage: Codable, Hashable, Sendable {
-    public var privateMessageId: Int
-    public var content: String
+    /// Lemmy availability: all versions
+    public let privateMessageId: Int
+    /// Lemmy availability: all versions
+    public let content: String
 }
 
 public extension ApiEditPrivateMessage {

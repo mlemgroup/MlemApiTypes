@@ -9,14 +9,20 @@
 
 import Foundation
 
-// RegistrationApplication.ts
+/// Lemmy availability: all versions
 public struct ApiRegistrationApplication: Codable, Hashable, Sendable {
-    public var id: Int
-    public var localUserId: Int
-    public var answer: String
-    public var adminId: Int?
-    public var denyReason: String?
-    public var published: Date
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let localUserId: Int
+    /// Lemmy availability: all versions
+    public let answer: String
+    /// Lemmy availability: all versions
+    public let adminId: Int?
+    /// Lemmy availability: all versions
+    public let denyReason: String?
+    /// Lemmy availability: all versions
+    public let published: Date
 }
 
 public extension ApiRegistrationApplication {

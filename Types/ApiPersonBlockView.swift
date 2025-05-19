@@ -9,11 +9,12 @@
 
 import Foundation
 
-// PersonBlockView.ts
-/// Removed in 1.0.0
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiPersonBlockView: Codable, Hashable, Sendable {
-    public var person: ApiPerson
-    public var target: ApiPerson
+    /// Lemmy availability: all versions
+    public let person: ApiPerson
+    /// Lemmy availability: all versions
+    public let target: ApiPerson
 }
 
 public extension ApiPersonBlockView {

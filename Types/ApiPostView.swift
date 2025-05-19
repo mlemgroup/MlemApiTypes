@@ -9,34 +9,52 @@
 
 import Foundation
 
-// PostView.ts
+/// Lemmy availability: all versions
 public struct ApiPostView: Codable, Hashable, Sendable {
-    public var post: ApiPost
-    public var creator: ApiPerson
-    public var community: ApiCommunity
-    public var creatorBannedFromCommunity: Bool
-    public var counts: ApiPostAggregates
-    public var subscribed: ApiSubscribedType
-    /// made optional in 1.0.0
-    public var saved: Bool?
-    public var read: Bool
-    public var creatorBlocked: Bool
-    public var myVote: Int?
-    public var unreadComments: Int
-    /// Added in 0.19.0
-    public var creatorIsModerator: Bool?
-    /// Added in 0.19.0
-    public var creatorIsAdmin: Bool?
-    /// Added in 0.19.4
-    public var bannedFromCommunity: Bool?
-    /// Added in 0.19.4
-    public var hidden: Bool?
-    /// Added in 0.19.5
-    public var imageDetails: ApiImageDetails?
-    /// Added in 1.0.0
-    public var tags: [ApiTag]?
-    /// Added in 1.0.0
-    public var canMod: Bool?
+    /// Lemmy availability: all versions
+    public let post: ApiPost
+    /// Lemmy availability: all versions
+    public let creator: ApiPerson
+    /// Lemmy availability: all versions
+    public let community: ApiCommunity
+    /// Lemmy availability: unavailable after 0.19.11
+    public let creatorBannedFromCommunity: Bool?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let counts: ApiPostAggregates?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let subscribed: ApiSubscribedType?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let saved: Bool?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let read: Bool?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let creatorBlocked: Bool?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let myVote: Int?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let unreadComments: Int?
+    /// Lemmy availability: available between 0.19.0 and 0.19.11
+    public let creatorIsModerator: Bool?
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let creatorIsAdmin: Bool?
+    /// Lemmy availability: available between 0.19.4 and 0.19.11
+    public let bannedFromCommunity: Bool?
+    /// Lemmy availability: available between 0.19.4 and 0.19.11
+    public let hidden: Bool?
+    /// Lemmy availability: available from 0.19.6 onwards
+    public let imageDetails: ApiImageDetails?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let communityActions: ApiCommunityActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let personActions: ApiPersonActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let postActions: ApiPostActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let instanceActions: ApiInstanceActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let creatorCommunityActions: ApiCommunityActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let canMod: Bool?
 }
 
 public extension ApiPostView {
@@ -57,7 +75,11 @@ public extension ApiPostView {
         case bannedFromCommunity = "banned_from_community"
         case hidden = "hidden"
         case imageDetails = "image_details"
-        case tags = "tags"
+        case communityActions = "community_actions"
+        case personActions = "person_actions"
+        case postActions = "post_actions"
+        case instanceActions = "instance_actions"
+        case creatorCommunityActions = "creator_community_actions"
         case canMod = "can_mod"
     }
 }

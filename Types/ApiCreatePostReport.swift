@@ -9,12 +9,14 @@
 
 import Foundation
 
-// CreatePostReport.ts
+/// Lemmy availability: all versions
 public struct ApiCreatePostReport: Codable, Hashable, Sendable {
-    public var postId: Int
-    public var reason: String
-    /// Added in 1.0.0
-    public var violatesInstanceRules: Bool?
+    /// Lemmy availability: all versions
+    public let postId: Int
+    /// Lemmy availability: all versions
+    public let reason: String
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let violatesInstanceRules: Bool?
 }
 
 public extension ApiCreatePostReport {

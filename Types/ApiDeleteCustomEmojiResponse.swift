@@ -9,11 +9,12 @@
 
 import Foundation
 
-// DeleteCustomEmojiResponse.ts
-/// Removed in 0.19.0
+/// Lemmy availability: unavailable after 0.18.5
 public struct ApiDeleteCustomEmojiResponse: Codable, Hashable, Sendable {
-    public var id: Int
-    public var success: Bool
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let success: Bool
 }
 
 public extension ApiDeleteCustomEmojiResponse {

@@ -9,22 +9,29 @@
 
 import Foundation
 
-// Tag.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiTag: Codable, Hashable, Sendable {
-    public var id: Int
-    public var actorId: ActorIdentifier
-    public var name: String
-    public var communityId: Int
-    public var published: Date
-    public var updated: Date?
-    public var deleted: Bool
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let apId: ActorIdentifier
+    /// Lemmy availability: all versions
+    public let name: String
+    /// the community that owns this tag
+    /// Lemmy availability: all versions
+    public let communityId: Int
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// Lemmy availability: all versions
+    public let updated: Date?
+    /// Lemmy availability: all versions
+    public let deleted: Bool
 }
 
 public extension ApiTag {
     enum CodingKeys: String, CodingKey {
         case id = "id"
-        case actorId = "actor_id"
+        case apId = "ap_id"
         case name = "name"
         case communityId = "community_id"
         case published = "published"

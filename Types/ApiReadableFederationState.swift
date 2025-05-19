@@ -9,24 +9,18 @@
 
 import Foundation
 
-// ReadableFederationState.ts
-/// Added in 0.19.0
+/// Lemmy availability: available from 0.19.0 onwards
 public struct ApiReadableFederationState: Codable, Hashable, Sendable {
-    public var instanceId: Int
-    public var lastSuccessfulId: Int?
-    public var lastSuccessfulPublishedTime: String?
-    public var failCount: Int
-    public var lastRetry: String?
-    public var nextRetry: String?
+    /// Lemmy availability: all versions
+    public let internalState: ApiFederationQueueState
+    /// timestamp of the next retry attempt (null if fail count is 0)
+    /// Lemmy availability: all versions
+    public let nextRetry: Date?
 }
 
 public extension ApiReadableFederationState {
     enum CodingKeys: String, CodingKey {
-        case instanceId = "instance_id"
-        case lastSuccessfulId = "last_successful_id"
-        case lastSuccessfulPublishedTime = "last_successful_published_time"
-        case failCount = "fail_count"
-        case lastRetry = "last_retry"
+        case internalState = "internal_state"
         case nextRetry = "next_retry"
     }
 }

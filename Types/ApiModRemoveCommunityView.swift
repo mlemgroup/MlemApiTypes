@@ -9,11 +9,14 @@
 
 import Foundation
 
-// ModRemoveCommunityView.ts
+/// Lemmy availability: all versions
 public struct ApiModRemoveCommunityView: Codable, Hashable, Sendable {
-    public var modRemoveCommunity: ApiModRemoveCommunity
-    public var moderator: ApiPerson?
-    public var community: ApiCommunity
+    /// Lemmy availability: all versions
+    public let modRemoveCommunity: ApiModRemoveCommunity
+    /// Lemmy availability: all versions
+    public let moderator: ApiPerson?
+    /// Lemmy availability: all versions
+    public let community: ApiCommunity
 }
 
 public extension ApiModRemoveCommunityView {

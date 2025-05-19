@@ -9,13 +9,16 @@
 
 import Foundation
 
-// GetReplies.ts
-/// Removed in 1.0.0
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiGetReplies: Codable, Hashable, Sendable {
-    public var sort: ApiCommentSortType?
-    public var page: Int?
-    public var limit: Int?
-    public var unreadOnly: Bool?
+    /// Lemmy availability: all versions
+    public let sort: ApiCommentSortType?
+    /// Lemmy availability: all versions
+    public let page: Int?
+    /// Lemmy availability: all versions
+    public let limit: Int?
+    /// Lemmy availability: all versions
+    public let unreadOnly: Bool?
 }
 
 public extension ApiGetReplies {

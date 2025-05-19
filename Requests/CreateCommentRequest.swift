@@ -9,13 +9,14 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct CreateCommentRequest: ApiPostRequest {
     public typealias Body = ApiCreateComment
     public typealias Response = ApiCommentResponse
     
-    public let path: String = "api/v3/comment"
+    public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       content: String,
@@ -24,6 +25,7 @@ public struct CreateCommentRequest: ApiPostRequest {
       languageId: Int?,
       formId: String?
     ) {
+        self.path = endpoint == .v4 ? "api/v4/comment" : "api/v3/comment"
         self.body = .init(
             content: content,
             postId: postId,

@@ -9,10 +9,12 @@
 
 import Foundation
 
-// MarkPrivateMessageAsRead.ts
+/// Lemmy availability: all versions
 public struct ApiMarkPrivateMessageAsRead: Codable, Hashable, Sendable {
-    public var privateMessageId: Int
-    public var read: Bool
+    /// Lemmy availability: all versions
+    public let privateMessageId: Int
+    /// Lemmy availability: all versions
+    public let read: Bool
 }
 
 public extension ApiMarkPrivateMessageAsRead {

@@ -9,14 +9,18 @@
 
 import Foundation
 
-// ModLockPostView.ts
+/// Lemmy availability: all versions
 public struct ApiModLockPostView: Codable, Hashable, Sendable {
-    public var modLockPost: ApiModLockPost
-    public var moderator: ApiPerson?
-    public var post: ApiPost
-    public var community: ApiCommunity
-    /// Added in 1.0.0
-    public var otherPerson: ApiPerson?
+    /// Lemmy availability: all versions
+    public let modLockPost: ApiModLockPost
+    /// Lemmy availability: all versions
+    public let moderator: ApiPerson?
+    /// Lemmy availability: all versions
+    public let post: ApiPost
+    /// Lemmy availability: all versions
+    public let community: ApiCommunity
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let otherPerson: ApiPerson?
 }
 
 public extension ApiModLockPostView {

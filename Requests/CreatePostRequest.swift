@@ -9,18 +9,19 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct CreatePostRequest: ApiPostRequest {
     public typealias Body = ApiCreatePost
     public typealias Response = ApiPostResponse
     
-    public let path: String = "api/v3/post"
+    public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       name: String,
       communityId: Int,
-      url: String?,
+      url: URL?,
       body: String?,
       honeypot: String?,
       nsfw: Bool?,
@@ -30,6 +31,7 @@ public struct CreatePostRequest: ApiPostRequest {
       tags: [Int]?,
       scheduledPublishTime: Int?
     ) {
+        self.path = endpoint == .v4 ? "api/v4/post" : "api/v3/post"
         self.body = .init(
             name: name,
             communityId: communityId,

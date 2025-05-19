@@ -9,44 +9,32 @@
 
 import Foundation
 
-// BanPerson.ts
+/// Lemmy availability: all versions
 public struct ApiBanPerson: Codable, Hashable, Sendable {
-    public var personId: Int
-    public var ban: Bool
-    public var removeOrRestoreData: Bool?
-    public var reason: String?
-    public var expires: Int?
+    /// Lemmy availability: all versions
+    public let personId: Int
+    /// Lemmy availability: all versions
+    public let ban: Bool
+    /// Optionally remove all their data. Useful for new troll accounts.
+    /// Lemmy availability: unavailable after 0.19.11
+    public let removeData: Bool?
+    /// Lemmy availability: all versions
+    public let reason: String?
+    /// Lemmy availability: all versions
+    public let expires: Int?
+    /// Optionally remove or restore all their data. Useful for new troll accounts.
+    /// If ban is true, then this means remove. If ban is false, it means restore.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let removeOrRestoreData: Bool?
 }
 
 public extension ApiBanPerson {
     enum CodingKeys: String, CodingKey {
         case personId = "person_id"
         case ban = "ban"
-        case removeOrRestoreData = "remove_or_restore_data"
         case removeData = "remove_data"
         case reason = "reason"
         case expires = "expires"
-    }
-
-    init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.personId = try container.decode(Int.self, forKey: .personId)
-        self.ban = try container.decode(Bool.self, forKey: .ban)
-        self.removeOrRestoreData = try (
-            container.decodeIfPresent(Bool?.self, forKey: .removeOrRestoreData)
-            ?? container.decode(Bool?.self, forKey: .removeData)
-        )
-        self.reason = try container.decodeIfPresent(String?.self, forKey: .reason) ?? nil
-        self.expires = try container.decodeIfPresent(Int?.self, forKey: .expires) ?? nil
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(personId, forKey: .personId)
-        try container.encode(ban, forKey: .ban)
-        try container.encode(removeOrRestoreData, forKey: .removeOrRestoreData)
-        try container.encode(removeOrRestoreData, forKey: .removeData)
-        try container.encode(reason, forKey: .reason)
-        try container.encode(expires, forKey: .expires)
+        case removeOrRestoreData = "remove_or_restore_data"
     }
 }

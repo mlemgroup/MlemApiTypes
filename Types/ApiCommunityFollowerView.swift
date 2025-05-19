@@ -9,10 +9,12 @@
 
 import Foundation
 
-// CommunityFollowerView.ts
+/// Lemmy availability: all versions
 public struct ApiCommunityFollowerView: Codable, Hashable, Sendable {
-    public var community: ApiCommunity
-    public var follower: ApiPerson
+    /// Lemmy availability: all versions
+    public let community: ApiCommunity
+    /// Lemmy availability: all versions
+    public let follower: ApiPerson
 }
 
 public extension ApiCommunityFollowerView {

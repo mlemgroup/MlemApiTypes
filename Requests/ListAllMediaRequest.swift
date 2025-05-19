@@ -9,6 +9,7 @@
 
 import Foundation
 
+/// Lemmy availability: available from 0.19.4 onwards
 public struct ListAllMediaRequest: ApiGetRequest {
     public typealias Parameters = ApiListMedia
     public typealias Response = ApiListMediaResponse
@@ -21,7 +22,7 @@ public struct ListAllMediaRequest: ApiGetRequest {
       page: Int?,
       limit: Int?
     ) {
-        self.path = endpoint == .v3 ? "api/v3/admin/list_all_media" : "api/v4/admin/list_all_media"
+        self.path = endpoint == .v4 ? "api/v4/admin/list_all_media" : "api/v3/admin/list_all_media"
         self.parameters = .init(
             page: page,
             limit: limit

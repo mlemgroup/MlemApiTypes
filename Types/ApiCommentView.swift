@@ -9,27 +9,46 @@
 
 import Foundation
 
-// CommentView.ts
+/// Lemmy availability: all versions
 public struct ApiCommentView: Codable, Hashable, Sendable {
-    public var comment: ApiComment
-    public var creator: ApiPerson
-    public var post: ApiPost
-    public var community: ApiCommunity
-    public var counts: ApiCommentAggregates
-    public var creatorBannedFromCommunity: Bool
-    public var subscribed: ApiSubscribedType
-    /// made optional in 1.0.0
-    public var saved: Bool?
-    public var creatorBlocked: Bool
-    public var myVote: Int?
-    /// Added in 0.19.0
-    public var creatorIsModerator: Bool?
-    /// Added in 0.19.0
-    public var creatorIsAdmin: Bool?
-    /// Added in 0.19.4
-    public var bannedFromCommunity: Bool?
-    /// Added in 1.0.0
-    public var canMod: Bool?
+    /// Lemmy availability: all versions
+    public let comment: ApiComment
+    /// Lemmy availability: all versions
+    public let creator: ApiPerson
+    /// Lemmy availability: all versions
+    public let post: ApiPost
+    /// Lemmy availability: all versions
+    public let community: ApiCommunity
+    /// Lemmy availability: unavailable after 0.19.11
+    public let counts: ApiCommentAggregates?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let creatorBannedFromCommunity: Bool?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let subscribed: ApiSubscribedType?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let saved: Bool?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let creatorBlocked: Bool?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let myVote: Int?
+    /// Lemmy availability: available between 0.19.0 and 0.19.11
+    public let creatorIsModerator: Bool?
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let creatorIsAdmin: Bool?
+    /// Lemmy availability: available between 0.19.4 and 0.19.11
+    public let bannedFromCommunity: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let communityActions: ApiCommunityActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let commentActions: ApiCommentActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let personActions: ApiPersonActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let instanceActions: ApiInstanceActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let creatorCommunityActions: ApiCommunityActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let canMod: Bool?
 }
 
 public extension ApiCommentView {
@@ -47,6 +66,11 @@ public extension ApiCommentView {
         case creatorIsModerator = "creator_is_moderator"
         case creatorIsAdmin = "creator_is_admin"
         case bannedFromCommunity = "banned_from_community"
+        case communityActions = "community_actions"
+        case commentActions = "comment_actions"
+        case personActions = "person_actions"
+        case instanceActions = "instance_actions"
+        case creatorCommunityActions = "creator_community_actions"
         case canMod = "can_mod"
     }
 }

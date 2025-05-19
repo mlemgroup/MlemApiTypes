@@ -9,10 +9,10 @@
 
 import Foundation
 
-// GetCommentsSlimResponse.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiGetCommentsSlimResponse: Codable, Hashable, Sendable {
-    public var comments: [ApiCommentSlimView]
+    /// Lemmy availability: all versions
+    public let comments: [ApiCommentSlimView]
 }
 
 public extension ApiGetCommentsSlimResponse {

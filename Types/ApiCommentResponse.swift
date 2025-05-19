@@ -9,12 +9,15 @@
 
 import Foundation
 
-// CommentResponse.ts
+/// Lemmy availability: all versions
 public struct ApiCommentResponse: Codable, Hashable, Sendable {
-    public var commentView: ApiCommentView
-    public var recipientIds: [Int]
-    /// Removed in 0.19.0
-    public var formId: String?
+    /// Lemmy availability: all versions
+    public let commentView: ApiCommentView
+    /// Lemmy availability: all versions
+    public let recipientIds: [Int]
+    /// An optional front end ID, to tell which is coming back  
+    /// Lemmy availability: unavailable after 0.18.5
+    public let formId: String?
 }
 
 public extension ApiCommentResponse {

@@ -9,11 +9,14 @@
 
 import Foundation
 
-// AdminPurgeCommentView.ts
+/// Lemmy availability: all versions
 public struct ApiAdminPurgeCommentView: Codable, Hashable, Sendable {
-    public var adminPurgeComment: ApiAdminPurgeComment
-    public var admin: ApiPerson?
-    public var post: ApiPost
+    /// Lemmy availability: all versions
+    public let adminPurgeComment: ApiAdminPurgeComment
+    /// Lemmy availability: all versions
+    public let admin: ApiPerson?
+    /// Lemmy availability: all versions
+    public let post: ApiPost
 }
 
 public extension ApiAdminPurgeCommentView {

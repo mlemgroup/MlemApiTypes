@@ -9,10 +9,10 @@
 
 import Foundation
 
-// ListMediaResponse.ts
-/// Added in 0.19.4
+/// Lemmy availability: available from 0.19.4 onwards
 public struct ApiListMediaResponse: Codable, Hashable, Sendable {
-    public var images: [ApiLocalImageView]
+    /// Lemmy availability: all versions
+    public let images: [ApiLocalImageView]
 }
 
 public extension ApiListMediaResponse {

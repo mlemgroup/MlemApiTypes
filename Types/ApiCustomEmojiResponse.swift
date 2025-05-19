@@ -9,9 +9,10 @@
 
 import Foundation
 
-// CustomEmojiResponse.ts
+/// Lemmy availability: all versions
 public struct ApiCustomEmojiResponse: Codable, Hashable, Sendable {
-    public var customEmoji: ApiCustomEmojiView
+    /// Lemmy availability: all versions
+    public let customEmoji: ApiCustomEmojiView
 }
 
 public extension ApiCustomEmojiResponse {

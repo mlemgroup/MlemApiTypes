@@ -9,10 +9,12 @@
 
 import Foundation
 
-// CommunityResponse.ts
+/// Lemmy availability: all versions
 public struct ApiCommunityResponse: Codable, Hashable, Sendable {
-    public var communityView: ApiCommunityView
-    public var discussionLanguages: [Int]
+    /// Lemmy availability: all versions
+    public let communityView: ApiCommunityView
+    /// Lemmy availability: all versions
+    public let discussionLanguages: [Int]
 }
 
 public extension ApiCommunityResponse {

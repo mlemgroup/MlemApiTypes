@@ -9,17 +9,30 @@
 
 import Foundation
 
-// ListReports.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiListReports: Codable, Hashable, Sendable {
-    public var unresolvedOnly: Bool?
-    public var type_: ApiReportType?
-    public var postId: Int?
-    public var communityId: Int?
-    public var pageCursor: String?
-    public var pageBack: Bool?
-    public var showCommunityRuleViolations: Bool?
-    public var myReportsOnly: Bool?
+    /// Only shows the unresolved reports
+    /// Lemmy availability: all versions
+    public let unresolvedOnly: Bool?
+    /// Filter the type of report.
+    /// Lemmy availability: all versions
+    public let type_: ApiReportType?
+    /// Filter by the post id. Can return either comment or post reports.
+    /// Lemmy availability: all versions
+    public let postId: Int?
+    /// if no community is given, it returns reports for all communities moderated by the auth user
+    /// Lemmy availability: all versions
+    public let communityId: Int?
+    /// Lemmy availability: all versions
+    public let pageCursor: String?
+    /// Lemmy availability: all versions
+    public let pageBack: Bool?
+    /// Only for admins: also show reports with `violates_instance_rules=false`
+    /// Lemmy availability: all versions
+    public let showCommunityRuleViolations: Bool?
+    /// If true, view all your created reports. Works for non-admins/mods also.
+    /// Lemmy availability: all versions
+    public let myReportsOnly: Bool?
 }
 
 public extension ApiListReports {

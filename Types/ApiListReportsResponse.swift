@@ -9,14 +9,18 @@
 
 import Foundation
 
-// ListReportsResponse.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiListReportsResponse: Codable, Hashable, Sendable {
-    public var reports: [ApiReportCombinedView]
+    /// Lemmy availability: all versions
+    public let reports: [ApiReportCombinedView]
+    /// the pagination cursor to use to fetch the next page
+    /// Lemmy availability: all versions
+    public let nextPage: String?
 }
 
 public extension ApiListReportsResponse {
     enum CodingKeys: String, CodingKey {
         case reports = "reports"
+        case nextPage = "next_page"
     }
 }

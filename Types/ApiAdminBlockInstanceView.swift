@@ -9,12 +9,14 @@
 
 import Foundation
 
-// AdminBlockInstanceView.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiAdminBlockInstanceView: Codable, Hashable, Sendable {
-    public var adminBlockInstance: ApiAdminBlockInstance
-    public var instance: ApiInstance
-    public var admin: ApiPerson?
+    /// Lemmy availability: all versions
+    public let adminBlockInstance: ApiAdminBlockInstance
+    /// Lemmy availability: all versions
+    public let instance: ApiInstance
+    /// Lemmy availability: all versions
+    public let admin: ApiPerson?
 }
 
 public extension ApiAdminBlockInstanceView {

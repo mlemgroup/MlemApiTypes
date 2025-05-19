@@ -9,28 +9,31 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct BanPersonRequest: ApiPostRequest {
     public typealias Body = ApiBanPerson
     public typealias Response = ApiBanPersonResponse
     
     public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       personId: Int,
       ban: Bool,
-      removeOrRestoreData: Bool?,
+      removeData: Bool?,
       reason: String?,
-      expires: Int?
+      expires: Int?,
+      removeOrRestoreData: Bool?
     ) {
-        self.path = endpoint == .v3 ? "api/v3/user/ban" : "api/v4/admin/ban"
+        self.path = endpoint == .v4 ? "api/v4/admin/ban" : "api/v3/user/ban"
         self.body = .init(
             personId: personId,
             ban: ban,
-            removeOrRestoreData: removeOrRestoreData,
+            removeData: removeData,
             reason: reason,
-            expires: expires
+            expires: expires,
+            removeOrRestoreData: removeOrRestoreData
         )
     }
 }

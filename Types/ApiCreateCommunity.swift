@@ -9,22 +9,36 @@
 
 import Foundation
 
-// CreateCommunity.ts
+/// Lemmy availability: all versions
 public struct ApiCreateCommunity: Codable, Hashable, Sendable {
-    public var name: String
-    public var title: String
-    public var description: String?
-    public var icon: URL?
-    public var banner: URL?
-    public var nsfw: Bool?
-    public var postingRestrictedToMods: Bool?
-    public var discussionLanguages: [Int]?
-    /// Added in 0.19.2, removed in 0.19.3
-    public var onlyFollowersCanVote: Bool?
-    /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
-    public var visibility: ApiCommunityVisibility?
-    /// Added in 1.0.0
-    public var sidebar: String?
+    /// The unique name.
+    /// Lemmy availability: all versions
+    public let name: String
+    /// A longer title.
+    /// Lemmy availability: all versions
+    public let title: String
+    /// A longer sidebar, or description of your community, in markdown.
+    /// Lemmy availability: all versions
+    public let description: String?
+    /// An icon URL.
+    /// Lemmy availability: all versions
+    public let icon: String?
+    /// A banner URL.
+    /// Lemmy availability: all versions
+    public let banner: String?
+    /// Whether its an NSFW community.
+    /// Lemmy availability: all versions
+    public let nsfw: Bool?
+    /// Whether to restrict posting only to moderators.
+    /// Lemmy availability: all versions
+    public let postingRestrictedToMods: Bool?
+    /// Lemmy availability: all versions
+    public let discussionLanguages: [Int]?
+    /// Lemmy availability: available from 0.19.4 onwards
+    public let visibility: ApiCommunityVisibility?
+    /// A sidebar for the community in markdown.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let sidebar: String?
 }
 
 public extension ApiCreateCommunity {
@@ -37,7 +51,6 @@ public extension ApiCreateCommunity {
         case nsfw = "nsfw"
         case postingRestrictedToMods = "posting_restricted_to_mods"
         case discussionLanguages = "discussion_languages"
-        case onlyFollowersCanVote = "only_followers_can_vote"
         case visibility = "visibility"
         case sidebar = "sidebar"
     }

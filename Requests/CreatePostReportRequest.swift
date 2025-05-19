@@ -9,19 +9,21 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct CreatePostReportRequest: ApiPostRequest {
     public typealias Body = ApiCreatePostReport
     public typealias Response = ApiPostReportResponse
     
-    public let path: String = "api/v3/post/report"
+    public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       postId: Int,
       reason: String,
       violatesInstanceRules: Bool?
     ) {
+        self.path = endpoint == .v4 ? "api/v4/post/report" : "api/v3/post/report"
         self.body = .init(
             postId: postId,
             reason: reason,

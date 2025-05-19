@@ -9,19 +9,32 @@
 
 import Foundation
 
-// SiteAggregates.ts
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiSiteAggregates: Codable, Hashable, Sendable {
-    /// Removed in 0.19.0
-    public var id: Int?
-    public var siteId: Int
-    public var users: Int
-    public var posts: Int
-    public var comments: Int
-    public var communities: Int
-    public var usersActiveDay: Int
-    public var usersActiveWeek: Int
-    public var usersActiveMonth: Int
-    public var usersActiveHalfYear: Int
+    /// Lemmy availability: unavailable after 0.18.5
+    public let id: Int?
+    /// Lemmy availability: all versions
+    public let siteId: Int
+    /// Lemmy availability: all versions
+    public let users: Int
+    /// Lemmy availability: all versions
+    public let posts: Int
+    /// Lemmy availability: all versions
+    public let comments: Int
+    /// Lemmy availability: all versions
+    public let communities: Int
+    /// The number of users with any activity in the last day.
+    /// Lemmy availability: all versions
+    public let usersActiveDay: Int
+    /// The number of users with any activity in the last week.
+    /// Lemmy availability: all versions
+    public let usersActiveWeek: Int
+    /// The number of users with any activity in the last month.
+    /// Lemmy availability: all versions
+    public let usersActiveMonth: Int
+    /// The number of users with any activity in the last half year.
+    /// Lemmy availability: all versions
+    public let usersActiveHalfYear: Int
 }
 
 public extension ApiSiteAggregates {

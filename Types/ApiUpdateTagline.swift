@@ -9,11 +9,12 @@
 
 import Foundation
 
-// UpdateTagline.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiUpdateTagline: Codable, Hashable, Sendable {
-    public var id: Int
-    public var content: String
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let content: String
 }
 
 public extension ApiUpdateTagline {

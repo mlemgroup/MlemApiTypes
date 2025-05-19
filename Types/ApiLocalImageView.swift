@@ -9,11 +9,12 @@
 
 import Foundation
 
-// LocalImageView.ts
-/// Added in 0.19.4
+/// Lemmy availability: available from 0.19.4 onwards
 public struct ApiLocalImageView: Codable, Hashable, Sendable {
-    public var localImage: ApiLocalImage
-    public var person: ApiPerson
+    /// Lemmy availability: all versions
+    public let localImage: ApiLocalImage
+    /// Lemmy availability: all versions
+    public let person: ApiPerson
 }
 
 public extension ApiLocalImageView {

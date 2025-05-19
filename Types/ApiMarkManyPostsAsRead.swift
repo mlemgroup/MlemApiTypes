@@ -9,10 +9,10 @@
 
 import Foundation
 
-// MarkManyPostsAsRead.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiMarkManyPostsAsRead: Codable, Hashable, Sendable {
-    public var postIds: [Int]
+    /// Lemmy availability: all versions
+    public let postIds: [Int]
 }
 
 public extension ApiMarkManyPostsAsRead {

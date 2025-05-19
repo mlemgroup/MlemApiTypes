@@ -9,18 +9,20 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct LockPostRequest: ApiPostRequest {
     public typealias Body = ApiLockPost
     public typealias Response = ApiPostResponse
     
-    public let path: String = "api/v3/post/lock"
+    public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       postId: Int,
       locked: Bool
     ) {
+        self.path = endpoint == .v4 ? "api/v4/post/lock" : "api/v3/post/lock"
         self.body = .init(
             postId: postId,
             locked: locked

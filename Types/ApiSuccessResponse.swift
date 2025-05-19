@@ -9,10 +9,10 @@
 
 import Foundation
 
-// SuccessResponse.ts
-/// Added in 0.19.0
+/// Lemmy availability: available from 0.19.0 onwards
 public struct ApiSuccessResponse: Codable, Hashable, Sendable {
-    public var success: Bool
+    /// Lemmy availability: all versions
+    public let success: Bool
 }
 
 public extension ApiSuccessResponse {

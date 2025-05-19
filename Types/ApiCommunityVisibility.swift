@@ -9,10 +9,18 @@
 
 import Foundation
 
-// CommunityVisibility.ts
-/// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
+/// Lemmy availability: available from 0.19.4 onwards
 public enum ApiCommunityVisibility: String, Codable, Sendable {
-    case public_ = "Public"
+    /// Lemmy availability: all versions
+    case `public` = "Public"
+    /// Lemmy availability: unavailable after 0.19.11
     case localOnly = "LocalOnly"
-    case private_ = "Private" /// Added in 1.0.0
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    case unlisted = "Unlisted"
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    case localOnlyPublic = "LocalOnlyPublic"
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    case localOnlyPrivate = "LocalOnlyPrivate"
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    case `private` = "Private"
 }

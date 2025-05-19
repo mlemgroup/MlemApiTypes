@@ -1,5 +1,5 @@
 //
-//  AuthenticateWithOAuthRequest.swift
+//  AuthenticateWithOauthRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -9,18 +9,18 @@
 
 import Foundation
 
-/// Added in 1.0.0
-public struct AuthenticateWithOAuthRequest: ApiPostRequest {
+/// Lemmy availability: available from 1.0.0-alpha onwards
+public struct AuthenticateWithOauthRequest: ApiPostRequest {
     public typealias Body = ApiAuthenticateWithOauth
     public typealias Response = ApiLoginResponse
     
     public let path: String = "api/v4/oauth/authenticate"
     public let body: Body?
-
+    
     init(
       code: String,
       oauthProviderId: Int,
-      redirectUri: String,
+      redirectUri: URL,
       showNsfw: Bool?,
       username: String?,
       answer: String?,

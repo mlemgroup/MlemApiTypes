@@ -9,14 +9,18 @@
 
 import Foundation
 
-// PersonCommentMention.ts
-/// Added in 1.0.0
+/// Lemmy availability: all versions
 public struct ApiPersonCommentMention: Codable, Hashable, Sendable {
-    public var id: Int
-    public var recipientId: Int
-    public var commentId: Int
-    public var read: Bool
-    public var published: Date
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let recipientId: Int
+    /// Lemmy availability: all versions
+    public let commentId: Int
+    /// Lemmy availability: all versions
+    public let read: Bool
+    /// Lemmy availability: all versions
+    public let published: Date
 }
 
 public extension ApiPersonCommentMention {

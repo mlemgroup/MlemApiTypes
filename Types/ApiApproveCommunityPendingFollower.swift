@@ -9,12 +9,14 @@
 
 import Foundation
 
-// ApproveCommunityPendingFollower.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiApproveCommunityPendingFollower: Codable, Hashable, Sendable {
-    public var communityId: Int
-    public var followerId: Int
-    public var approve: Bool
+    /// Lemmy availability: all versions
+    public let communityId: Int
+    /// Lemmy availability: all versions
+    public let followerId: Int
+    /// Lemmy availability: all versions
+    public let approve: Bool
 }
 
 public extension ApiApproveCommunityPendingFollower {

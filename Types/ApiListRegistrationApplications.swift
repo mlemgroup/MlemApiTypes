@@ -9,11 +9,15 @@
 
 import Foundation
 
-// ListRegistrationApplications.ts
+/// Lemmy availability: all versions
 public struct ApiListRegistrationApplications: Codable, Hashable, Sendable {
-    public var unreadOnly: Bool?
-    public var page: Int?
-    public var limit: Int?
+    /// Only shows the unread applications (IE those without an admin actor)
+    /// Lemmy availability: all versions
+    public let unreadOnly: Bool?
+    /// Lemmy availability: all versions
+    public let page: Int?
+    /// Lemmy availability: all versions
+    public let limit: Int?
 }
 
 public extension ApiListRegistrationApplications {

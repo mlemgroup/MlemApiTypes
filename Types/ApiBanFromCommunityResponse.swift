@@ -9,10 +9,12 @@
 
 import Foundation
 
-// BanFromCommunityResponse.ts
+/// Lemmy availability: all versions
 public struct ApiBanFromCommunityResponse: Codable, Hashable, Sendable {
-    public var personView: ApiPersonView
-    public var banned: Bool
+    /// Lemmy availability: all versions
+    public let personView: ApiPersonView
+    /// Lemmy availability: all versions
+    public let banned: Bool
 }
 
 public extension ApiBanFromCommunityResponse {

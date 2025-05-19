@@ -9,10 +9,12 @@
 
 import Foundation
 
-// BlockCommunityResponse.ts
+/// Lemmy availability: all versions
 public struct ApiBlockCommunityResponse: Codable, Hashable, Sendable {
-    public var communityView: ApiCommunityView
-    public var blocked: Bool
+    /// Lemmy availability: all versions
+    public let communityView: ApiCommunityView
+    /// Lemmy availability: all versions
+    public let blocked: Bool
 }
 
 public extension ApiBlockCommunityResponse {

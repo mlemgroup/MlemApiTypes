@@ -9,10 +9,12 @@
 
 import Foundation
 
-// CommunityModeratorView.ts
+/// Lemmy availability: all versions
 public struct ApiCommunityModeratorView: Codable, Hashable, Sendable {
-    public var community: ApiCommunity
-    public var moderator: ApiPerson
+    /// Lemmy availability: all versions
+    public let community: ApiCommunity
+    /// Lemmy availability: all versions
+    public let moderator: ApiPerson
 }
 
 public extension ApiCommunityModeratorView {

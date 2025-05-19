@@ -9,7 +9,7 @@
 
 import Foundation
 
-/// Removed in 1.0.0
+/// Lemmy availability: unavailable after 0.19.11
 public struct ListPrivateMessageReportsRequest: ApiGetRequest {
     public typealias Parameters = ApiListPrivateMessageReports
     public typealias Response = ApiListPrivateMessageReportsResponse

@@ -9,83 +9,114 @@
 
 import Foundation
 
-// CreateSite.ts
+/// Lemmy availability: all versions
 public struct ApiCreateSite: Codable, Hashable, Sendable {
-    public var name: String
-    public var sidebar: String?
-    public var description: String?
-    /// Removed in 1.0.0
-    public var icon: URL?
-    /// Removed in 1.0.0
-    public var banner: URL?
-    /// Removed in 1.0.0
-    public var enableDownvotes: Bool?
-    /// Removed in 1.0.0
-    public var enableNsfw: Bool?
-    public var communityCreationAdminOnly: Bool?
-    public var requireEmailVerification: Bool?
-    public var applicationQuestion: String?
-    public var privateInstance: Bool?
-    public var defaultTheme: String?
-    public var defaultPostListingType: ApiListingType?
-    public var legalInformation: String?
-    public var applicationEmailAdmins: Bool?
-    public var hideModlogModNames: Bool?
-    public var discussionLanguages: [Int]?
-    public var slurFilterRegex: String?
-    public var actorNameMaxLength: Int?
-    public var rateLimitMessage: Int?
-    public var rateLimitMessagePerSecond: Int?
-    public var rateLimitPost: Int?
-    public var rateLimitPostPerSecond: Int?
-    public var rateLimitRegister: Int?
-    public var rateLimitRegisterPerSecond: Int?
-    public var rateLimitImage: Int?
-    public var rateLimitImagePerSecond: Int?
-    public var rateLimitComment: Int?
-    public var rateLimitCommentPerSecond: Int?
-    public var rateLimitSearch: Int?
-    public var rateLimitSearchPerSecond: Int?
-    public var federationEnabled: Bool?
-    /// Removed in 1.0.0
-    public var federationDebug: Bool?
-    /// Removed in 0.18.1
-    public var federationWorkerCount: Int?
-    public var captchaEnabled: Bool?
-    public var captchaDifficulty: String?
-    /// Removed in 1.0.0
-    public var allowedInstances: [String]?
-    /// Removed in 1.0.0
-    public var blockedInstances: [String]?
-    /// Removed in 1.0.0
-    public var taglines: [String]?
-    public var registrationMode: ApiRegistrationMode?
-    /// Added in 0.19.2, removed in 0.19.3, added in 0.19.4
-    public var contentWarning: String?
-    /// Added in 0.19.2, removed in 0.19.3
-    public var autoExpandImages: Bool?
-    /// Added in 0.19.4, removed in 1.0.0
-    public var defaultSortType: ApiSortType?
-    /// Added in 0.19.4
-    public var defaultPostListingMode: ApiPostListingMode?
-    /// Added in 1.0.0
-    public var defaultPostSortType: ApiPostSortType?
-    /// Added in 1.0.0
-    public var defaultPostTimeRangeSeconds: Int?
-    /// Added in 1.0.0
-    public var defaultCommentSortType: ApiCommentSortType?
-    /// Added in 1.0.0
-    public var oauthRegistration: Bool?
-    /// Added in 1.0.0
-    public var postUpvotes: ApiFederationMode?
-    /// Added in 1.0.0
-    public var postDownvotes: ApiFederationMode?
-    /// Added in 1.0.0
-    public var commentUpvotes: ApiFederationMode?
-    /// Added in 1.0.0
-    public var commentDownvotes: ApiFederationMode?
-    /// Added in 1.0.0
-    public var disableDonationDialog: Bool?
+    /// Lemmy availability: all versions
+    public let name: String
+    /// Lemmy availability: all versions
+    public let sidebar: String?
+    /// Lemmy availability: all versions
+    public let description: String?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let icon: String?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let banner: String?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let enableDownvotes: Bool?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let enableNsfw: Bool?
+    /// Lemmy availability: all versions
+    public let communityCreationAdminOnly: Bool?
+    /// Lemmy availability: all versions
+    public let requireEmailVerification: Bool?
+    /// Lemmy availability: all versions
+    public let applicationQuestion: String?
+    /// Lemmy availability: all versions
+    public let privateInstance: Bool?
+    /// Lemmy availability: all versions
+    public let defaultTheme: String?
+    /// Lemmy availability: all versions
+    public let defaultPostListingType: ApiListingType?
+    /// Lemmy availability: all versions
+    public let legalInformation: String?
+    /// Lemmy availability: all versions
+    public let applicationEmailAdmins: Bool?
+    /// Lemmy availability: all versions
+    public let hideModlogModNames: Bool?
+    /// Lemmy availability: all versions
+    public let discussionLanguages: [Int]?
+    /// Lemmy availability: all versions
+    public let slurFilterRegex: String?
+    /// Lemmy availability: all versions
+    public let actorNameMaxLength: Int?
+    /// Lemmy availability: all versions
+    public let rateLimitMessage: Int?
+    /// Lemmy availability: all versions
+    public let rateLimitMessagePerSecond: Int?
+    /// Lemmy availability: all versions
+    public let rateLimitPost: Int?
+    /// Lemmy availability: all versions
+    public let rateLimitPostPerSecond: Int?
+    /// Lemmy availability: all versions
+    public let rateLimitRegister: Int?
+    /// Lemmy availability: all versions
+    public let rateLimitRegisterPerSecond: Int?
+    /// Lemmy availability: all versions
+    public let rateLimitImage: Int?
+    /// Lemmy availability: all versions
+    public let rateLimitImagePerSecond: Int?
+    /// Lemmy availability: all versions
+    public let rateLimitComment: Int?
+    /// Lemmy availability: all versions
+    public let rateLimitCommentPerSecond: Int?
+    /// Lemmy availability: all versions
+    public let rateLimitSearch: Int?
+    /// Lemmy availability: all versions
+    public let rateLimitSearchPerSecond: Int?
+    /// Lemmy availability: all versions
+    public let federationEnabled: Bool?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let federationDebug: Bool?
+    /// Lemmy availability: unavailable after 0.18.0
+    public let federationWorkerCount: Int?
+    /// Lemmy availability: all versions
+    public let captchaEnabled: Bool?
+    /// Lemmy availability: all versions
+    public let captchaDifficulty: String?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let allowedInstances: [String]?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let blockedInstances: [String]?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let taglines: [String]?
+    /// Lemmy availability: all versions
+    public let registrationMode: ApiRegistrationMode?
+    /// Lemmy availability: available between 0.19.4 and 0.19.11
+    public let defaultSortType: ApiSortType?
+    /// Lemmy availability: available from 0.19.4 onwards
+    public let contentWarning: String?
+    /// Lemmy availability: available from 0.19.4 onwards
+    public let defaultPostListingMode: ApiPostListingMode?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let defaultPostSortType: ApiPostSortType?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let defaultPostTimeRangeSeconds: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let defaultCommentSortType: ApiCommentSortType?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let oauthRegistration: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let postUpvotes: ApiFederationMode?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let postDownvotes: ApiFederationMode?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let commentUpvotes: ApiFederationMode?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let commentDownvotes: ApiFederationMode?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let disableDonationDialog: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let disallowNsfwContent: Bool?
 }
 
 public extension ApiCreateSite {
@@ -130,9 +161,8 @@ public extension ApiCreateSite {
         case blockedInstances = "blocked_instances"
         case taglines = "taglines"
         case registrationMode = "registration_mode"
-        case contentWarning = "content_warning"
-        case autoExpandImages = "auto_expand_images"
         case defaultSortType = "default_sort_type"
+        case contentWarning = "content_warning"
         case defaultPostListingMode = "default_post_listing_mode"
         case defaultPostSortType = "default_post_sort_type"
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
@@ -143,5 +173,6 @@ public extension ApiCreateSite {
         case commentUpvotes = "comment_upvotes"
         case commentDownvotes = "comment_downvotes"
         case disableDonationDialog = "disable_donation_dialog"
+        case disallowNsfwContent = "disallow_nsfw_content"
     }
 }

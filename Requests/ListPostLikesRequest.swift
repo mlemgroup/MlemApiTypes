@@ -9,6 +9,7 @@
 
 import Foundation
 
+/// Lemmy availability: available from 0.19.2 onwards
 public struct ListPostLikesRequest: ApiGetRequest {
     public typealias Parameters = ApiListPostLikes
     public typealias Response = ApiListPostLikesResponse
@@ -22,7 +23,7 @@ public struct ListPostLikesRequest: ApiGetRequest {
       page: Int?,
       limit: Int?
     ) {
-        self.path = endpoint == .v3 ? "api/v3/post/like/list" : "api/v4/post/like/list"
+        self.path = endpoint == .v4 ? "api/v4/post/like/list" : "api/v3/post/like/list"
         self.parameters = .init(
             postId: postId,
             page: page,

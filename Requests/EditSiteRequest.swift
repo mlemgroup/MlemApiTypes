@@ -9,20 +9,21 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct EditSiteRequest: ApiPutRequest {
     public typealias Body = ApiEditSite
     public typealias Response = ApiSiteResponse
     
-    public let path: String = "api/v3/site"
+    public let path: String
     public let body: Body?
-
+    
     init(
       endpoint: SiteVersion.EndpointVersion,
       name: String?,
       sidebar: String?,
       description: String?,
-      icon: URL?,
-      banner: URL?,
+      icon: String?,
+      banner: String?,
       enableDownvotes: Bool?,
       enableNsfw: Bool?,
       communityCreationAdminOnly: Bool?,
@@ -59,10 +60,9 @@ public struct EditSiteRequest: ApiPutRequest {
       taglines: [String]?,
       registrationMode: ApiRegistrationMode?,
       reportsEmailAdmins: Bool?,
-      contentWarning: String?,
-      autoExpandImages: Bool?,
       defaultSortType: ApiSortType?,
       blockedUrls: [String]?,
+      contentWarning: String?,
       defaultPostListingMode: ApiPostListingMode?,
       defaultPostSortType: ApiPostSortType?,
       defaultPostTimeRangeSeconds: Int?,
@@ -75,6 +75,7 @@ public struct EditSiteRequest: ApiPutRequest {
       disableDonationDialog: Bool?,
       disallowNsfwContent: Bool?
     ) {
+        self.path = endpoint == .v4 ? "api/v4/site" : "api/v3/site"
         self.body = .init(
             name: name,
             sidebar: sidebar,
@@ -117,10 +118,9 @@ public struct EditSiteRequest: ApiPutRequest {
             taglines: taglines,
             registrationMode: registrationMode,
             reportsEmailAdmins: reportsEmailAdmins,
-            contentWarning: contentWarning,
-            autoExpandImages: autoExpandImages,
             defaultSortType: defaultSortType,
             blockedUrls: blockedUrls,
+            contentWarning: contentWarning,
             defaultPostListingMode: defaultPostListingMode,
             defaultPostSortType: defaultPostSortType,
             defaultPostTimeRangeSeconds: defaultPostTimeRangeSeconds,

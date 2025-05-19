@@ -9,14 +9,20 @@
 
 import Foundation
 
-// ModHideCommunity.ts
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiModHideCommunity: Codable, Hashable, Sendable {
-    public var id: Int
-    public var communityId: Int
-    public var modPersonId: Int
-    public var published: Date
-    public var reason: String?
-    public var hidden: Bool
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let communityId: Int
+    /// Lemmy availability: all versions
+    public let modPersonId: Int
+    /// Lemmy availability: all versions
+    public let when_: Date
+    /// Lemmy availability: all versions
+    public let reason: String?
+    /// Lemmy availability: all versions
+    public let hidden: Bool
 }
 
 public extension ApiModHideCommunity {
@@ -24,33 +30,8 @@ public extension ApiModHideCommunity {
         case id = "id"
         case communityId = "community_id"
         case modPersonId = "mod_person_id"
-        case published = "published"
         case when_ = "when_"
         case reason = "reason"
         case hidden = "hidden"
-    }
-
-    init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(Int.self, forKey: .id)
-        self.communityId = try container.decode(Int.self, forKey: .communityId)
-        self.modPersonId = try container.decode(Int.self, forKey: .modPersonId)
-        self.published = try (
-            container.decodeIfPresent(Date.self, forKey: .published)
-            ?? container.decode(Date.self, forKey: .when_)
-        )
-        self.reason = try container.decodeIfPresent(String?.self, forKey: .reason) ?? nil
-        self.hidden = try container.decode(Bool.self, forKey: .hidden)
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(id, forKey: .id)
-        try container.encode(communityId, forKey: .communityId)
-        try container.encode(modPersonId, forKey: .modPersonId)
-        try container.encode(published, forKey: .published)
-        try container.encode(published, forKey: .when_)
-        try container.encode(reason, forKey: .reason)
-        try container.encode(hidden, forKey: .hidden)
     }
 }

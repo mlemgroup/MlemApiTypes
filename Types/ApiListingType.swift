@@ -9,10 +9,14 @@
 
 import Foundation
 
-// ListingType.ts
+/// Lemmy availability: all versions
 public enum ApiListingType: String, Codable, Sendable {
+    /// Lemmy availability: all versions
     case all = "All"
+    /// Lemmy availability: all versions
     case local = "Local"
+    /// Lemmy availability: all versions
     case subscribed = "Subscribed"
-    case moderatorView = "ModeratorView" /// Added in 0.19.0
+    /// Lemmy availability: available from 0.19.0 onwards
+    case moderatorView = "ModeratorView"
 }

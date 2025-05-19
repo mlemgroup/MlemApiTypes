@@ -9,65 +9,109 @@
 
 import Foundation
 
-// LocalUser.ts
+/// Lemmy availability: all versions
 public struct ApiLocalUser: Codable, Hashable, Sendable {
-    public var id: Int
-    public var personId: Int
-    public var email: String?
-    public var showNsfw: Bool
-    public var theme: String
-    /// Removed in 1.0.0
-    public var defaultSortType: ApiSortType?
-    public var defaultListingType: ApiListingType
-    public var interfaceLanguage: String
-    public var showAvatars: Bool
-    public var sendNotificationsToEmail: Bool
-    /// Removed in 0.19.0
-    public var validatorTime: String?
-    /// Removed in 1.0.0
-    public var showScores: Bool?
-    public var showBotAccounts: Bool
-    public var showReadPosts: Bool
-    /// Removed in 0.19.0
-    public var showNewPostNotifs: Bool?
-    public var emailVerified: Bool
-    public var acceptedApplication: Bool
-    /// Removed in 0.19.0
-    public var totp2faUrl: String?
-    /// Added in 0.18.1
-    public var openLinksInNewTab: Bool?
-    /// Added in 0.19.0
-    public var blurNsfw: Bool?
-    /// Added in 0.19.0, removed in 1.0.0
-    public var autoExpand: Bool?
-    /// Added in 0.19.0
-    public var infiniteScrollEnabled: Bool?
-    /// Added in 0.19.0
-    public var admin: Bool?
-    /// Added in 0.19.0
-    public var postListingMode: ApiPostListingMode?
-    /// Added in 0.19.0
-    public var totp2faEnabled: Bool?
-    /// Added in 0.19.0
-    public var enableKeyboardNavigation: Bool?
-    /// Added in 0.19.0
-    public var enableAnimatedImages: Bool?
-    /// Added in 0.19.0
-    public var collapseBotComments: Bool?
-    /// Added in 1.0.0
-    public var defaultPostSortType: ApiPostSortType?
-    /// Added in 1.0.0
-    public var enablePrivateMessages: Bool?
-    /// Added in 1.0.0
-    public var defaultCommentSortType: ApiCommentSortType?
-    /// Added in 1.0.0
-    public var autoMarkFetchedPostsAsRead: Bool?
-    /// Added in 1.0.0
-    public var lastDonationNotification: String?
-    /// Added in 1.0.0
-    public var hideMedia: Bool?
-    /// Added in 1.0.0
-    public var defaultPostTimeRangeSeconds: Int?
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// The person_id for the local user.
+    /// Lemmy availability: all versions
+    public let personId: Int
+    /// Lemmy availability: all versions
+    public let email: String?
+    /// Whether to show NSFW content.
+    /// Lemmy availability: all versions
+    public let showNsfw: Bool
+    /// Lemmy availability: all versions
+    public let theme: String
+    /// Lemmy availability: unavailable after 0.19.11
+    public let defaultSortType: ApiSortType?
+    /// Lemmy availability: all versions
+    public let defaultListingType: ApiListingType
+    /// Lemmy availability: all versions
+    public let interfaceLanguage: String
+    /// Whether to show avatars.
+    /// Lemmy availability: all versions
+    public let showAvatars: Bool
+    /// Lemmy availability: all versions
+    public let sendNotificationsToEmail: Bool
+    /// A validation ID used in logging out sessions.
+    /// Lemmy availability: unavailable after 0.18.5
+    public let validatorTime: Date?
+    /// Whether to show comment / post scores.
+    /// Lemmy availability: unavailable after 0.19.11
+    public let showScores: Bool?
+    /// Whether to show bot accounts.
+    /// Lemmy availability: all versions
+    public let showBotAccounts: Bool
+    /// Whether to show read posts.
+    /// Lemmy availability: all versions
+    public let showReadPosts: Bool
+    /// Whether to show new posts as notifications.
+    /// Lemmy availability: unavailable after 0.18.5
+    public let showNewPostNotifs: Bool?
+    /// Whether their email has been verified.
+    /// Lemmy availability: all versions
+    public let emailVerified: Bool
+    /// Whether their registration application has been accepted.
+    /// Lemmy availability: all versions
+    public let acceptedApplication: Bool
+    /// A URL to add their 2-factor auth.
+    /// Lemmy availability: unavailable after 0.18.5
+    public let totp2faUrl: String?
+    /// Open links in a new tab.
+    /// Lemmy availability: available from 0.18.1 onwards
+    public let openLinksInNewTab: Bool?
+    /// Whether infinite scroll is enabled.
+    /// Lemmy availability: available from 0.18.3 onwards
+    public let infiniteScrollEnabled: Bool?
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let blurNsfw: Bool?
+    /// Lemmy availability: available between 0.19.0 and 0.19.11
+    public let autoExpand: Bool?
+    /// Whether the person is an admin.
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let admin: Bool?
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let postListingMode: ApiPostListingMode?
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let totp2faEnabled: Bool?
+    /// Whether to allow keyboard navigation (for browsing and interacting with posts and comments).
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let enableKeyboardNavigation: Bool?
+    /// Whether user avatars and inline images in the UI that are gifs should be allowed to play or should be paused
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let enableAnimatedImages: Bool?
+    /// Whether to auto-collapse bot comments.
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let collapseBotComments: Bool?
+    /// The last time a donation request was shown to this user. If this is more than a year ago,
+    /// a new notification request should be shown.
+    /// Lemmy availability: available from 0.19.11 onwards
+    public let lastDonationNotification: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let defaultPostSortType: ApiPostSortType?
+    /// Whether a user can send / receive private messages
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let enablePrivateMessages: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let defaultCommentSortType: ApiCommentSortType?
+    /// Whether to automatically mark fetched posts as read.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let autoMarkFetchedPostsAsRead: Bool?
+    /// Whether to hide posts containing images/videos
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let hideMedia: Bool?
+    /// A default time range limit to apply to post sorts, in seconds.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let defaultPostTimeRangeSeconds: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let showScore: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let showUpvotes: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let showDownvotes: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let showUpvotePercentage: Bool?
 }
 
 public extension ApiLocalUser {
@@ -91,21 +135,25 @@ public extension ApiLocalUser {
         case acceptedApplication = "accepted_application"
         case totp2faUrl = "totp_2fa_url"
         case openLinksInNewTab = "open_links_in_new_tab"
+        case infiniteScrollEnabled = "infinite_scroll_enabled"
         case blurNsfw = "blur_nsfw"
         case autoExpand = "auto_expand"
-        case infiniteScrollEnabled = "infinite_scroll_enabled"
         case admin = "admin"
         case postListingMode = "post_listing_mode"
         case totp2faEnabled = "totp_2fa_enabled"
         case enableKeyboardNavigation = "enable_keyboard_navigation"
         case enableAnimatedImages = "enable_animated_images"
         case collapseBotComments = "collapse_bot_comments"
+        case lastDonationNotification = "last_donation_notification"
         case defaultPostSortType = "default_post_sort_type"
         case enablePrivateMessages = "enable_private_messages"
         case defaultCommentSortType = "default_comment_sort_type"
         case autoMarkFetchedPostsAsRead = "auto_mark_fetched_posts_as_read"
-        case lastDonationNotification = "last_donation_notification"
         case hideMedia = "hide_media"
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
+        case showScore = "show_score"
+        case showUpvotes = "show_upvotes"
+        case showDownvotes = "show_downvotes"
+        case showUpvotePercentage = "show_upvote_percentage"
     }
 }

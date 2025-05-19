@@ -9,10 +9,12 @@
 
 import Foundation
 
-// DeletePrivateMessage.ts
+/// Lemmy availability: all versions
 public struct ApiDeletePrivateMessage: Codable, Hashable, Sendable {
-    public var privateMessageId: Int
-    public var deleted: Bool
+    /// Lemmy availability: all versions
+    public let privateMessageId: Int
+    /// Lemmy availability: all versions
+    public let deleted: Bool
 }
 
 public extension ApiDeletePrivateMessage {

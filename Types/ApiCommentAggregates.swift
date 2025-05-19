@@ -9,22 +9,25 @@
 
 import Foundation
 
-// CommentAggregates.ts
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiCommentAggregates: Codable, Hashable, Sendable {
-    /// Removed in 0.19.0
-    public var id: Int?
-    public var commentId: Int
-    public var score: Int
-    public var upvotes: Int
-    public var downvotes: Int
-    public var published: Date
-    public var childCount: Int
-    /// Removed in 0.19.0
-    public var hotRank: Int?
-    /// Added in 1.0.0
-    public var reportCount: Int?
-    /// Added in 1.0.0
-    public var unresolvedReportCount: Int?
+    /// Lemmy availability: unavailable after 0.18.5
+    public let id: Int?
+    /// Lemmy availability: all versions
+    public let commentId: Int
+    /// Lemmy availability: all versions
+    public let score: Int
+    /// Lemmy availability: all versions
+    public let upvotes: Int
+    /// Lemmy availability: all versions
+    public let downvotes: Int
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// The total number of children in this comment branch.
+    /// Lemmy availability: all versions
+    public let childCount: Int
+    /// Lemmy availability: unavailable after 0.18.5
+    public let hotRank: Int?
 }
 
 public extension ApiCommentAggregates {
@@ -37,7 +40,5 @@ public extension ApiCommentAggregates {
         case published = "published"
         case childCount = "child_count"
         case hotRank = "hot_rank"
-        case reportCount = "report_count"
-        case unresolvedReportCount = "unresolved_report_count"
     }
 }

@@ -9,10 +9,12 @@
 
 import Foundation
 
-// ResolvePostReport.ts
+/// Lemmy availability: all versions
 public struct ApiResolvePostReport: Codable, Hashable, Sendable {
-    public var reportId: Int
-    public var resolved: Bool
+    /// Lemmy availability: all versions
+    public let reportId: Int
+    /// Lemmy availability: all versions
+    public let resolved: Bool
 }
 
 public extension ApiResolvePostReport {

@@ -9,13 +9,16 @@
 
 import Foundation
 
-// ImageUpload.ts
-/// Added in 0.19.0, removed in 0.19.4
+/// Lemmy availability: available between 0.19.0 and 0.19.11
 public struct ApiImageUpload: Codable, Hashable, Sendable {
-    public var localUserId: Int
-    public var pictrsAlias: String
-    public var pictrsDeleteToken: String
-    public var published: Date
+    /// Lemmy availability: all versions
+    public let localUserId: Int
+    /// Lemmy availability: all versions
+    public let pictrsAlias: String
+    /// Lemmy availability: all versions
+    public let pictrsDeleteToken: String
+    /// Lemmy availability: all versions
+    public let published: Date
 }
 
 public extension ApiImageUpload {

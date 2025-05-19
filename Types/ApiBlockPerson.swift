@@ -9,10 +9,12 @@
 
 import Foundation
 
-// BlockPerson.ts
+/// Lemmy availability: all versions
 public struct ApiBlockPerson: Codable, Hashable, Sendable {
-    public var personId: Int
-    public var block: Bool
+    /// Lemmy availability: all versions
+    public let personId: Int
+    /// Lemmy availability: all versions
+    public let block: Bool
 }
 
 public extension ApiBlockPerson {

@@ -9,17 +9,27 @@
 
 import Foundation
 
-// PrivateMessageReport.ts
+/// Lemmy availability: all versions
 public struct ApiPrivateMessageReport: Codable, Hashable, Sendable {
-    public var id: Int
-    public var creatorId: Int
-    public var privateMessageId: Int
-    public var originalPmText: String
-    public var reason: String
-    public var resolved: Bool
-    public var resolverId: Int?
-    public var published: Date
-    public var updated: Date?
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let creatorId: Int
+    /// Lemmy availability: all versions
+    public let privateMessageId: Int
+    /// The original text.
+    /// Lemmy availability: all versions
+    public let originalPmText: String
+    /// Lemmy availability: all versions
+    public let reason: String
+    /// Lemmy availability: all versions
+    public let resolved: Bool
+    /// Lemmy availability: all versions
+    public let resolverId: Int?
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// Lemmy availability: all versions
+    public let updated: Date?
 }
 
 public extension ApiPrivateMessageReport {

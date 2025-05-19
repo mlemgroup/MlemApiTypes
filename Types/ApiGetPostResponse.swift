@@ -9,13 +9,17 @@
 
 import Foundation
 
-// GetPostResponse.ts
+/// Lemmy availability: all versions
 public struct ApiGetPostResponse: Codable, Hashable, Sendable {
-    public var postView: ApiPostView
-    public var communityView: ApiCommunityView
-    /// Removed in 1.0.0
-    public var moderators: [ApiCommunityModeratorView]?
-    public var crossPosts: [ApiPostView]
+    /// Lemmy availability: all versions
+    public let postView: ApiPostView
+    /// Lemmy availability: all versions
+    public let communityView: ApiCommunityView
+    /// Lemmy availability: unavailable after 0.19.11
+    public let moderators: [ApiCommunityModeratorView]?
+    /// A list of cross-posts, or other times / communities this link has been posted to.
+    /// Lemmy availability: all versions
+    public let crossPosts: [ApiPostView]
 }
 
 public extension ApiGetPostResponse {

@@ -9,10 +9,13 @@
 
 import Foundation
 
-// CreatePostLike.ts
+/// Lemmy availability: all versions
 public struct ApiCreatePostLike: Codable, Hashable, Sendable {
-    public var postId: Int
-    public var score: Int
+    /// Lemmy availability: all versions
+    public let postId: Int
+    /// Score must be -1, 0, or 1.
+    /// Lemmy availability: all versions
+    public let score: Int
 }
 
 public extension ApiCreatePostLike {

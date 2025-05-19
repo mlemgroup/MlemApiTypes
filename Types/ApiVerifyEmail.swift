@@ -9,9 +9,10 @@
 
 import Foundation
 
-// VerifyEmail.ts
+/// Lemmy availability: all versions
 public struct ApiVerifyEmail: Codable, Hashable, Sendable {
-    public var token: String
+    /// Lemmy availability: all versions
+    public let token: String
 }
 
 public extension ApiVerifyEmail {

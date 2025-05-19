@@ -9,10 +9,10 @@
 
 import Foundation
 
-// GetRegistrationApplication.ts
-/// Added in 0.19.6
+/// Lemmy availability: available from 0.19.6 onwards
 public struct ApiGetRegistrationApplication: Codable, Hashable, Sendable {
-    public var personId: Int
+    /// Lemmy availability: all versions
+    public let personId: Int
 }
 
 public extension ApiGetRegistrationApplication {

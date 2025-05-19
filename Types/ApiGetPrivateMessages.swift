@@ -9,14 +9,16 @@
 
 import Foundation
 
-// GetPrivateMessages.ts
-/// Removed in 1.0.0
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiGetPrivateMessages: Codable, Hashable, Sendable {
-    public var unreadOnly: Bool?
-    public var page: Int?
-    public var limit: Int?
-    /// Added in 0.19.0
-    public var creatorId: Int?
+    /// Lemmy availability: all versions
+    public let unreadOnly: Bool?
+    /// Lemmy availability: all versions
+    public let page: Int?
+    /// Lemmy availability: all versions
+    public let limit: Int?
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let creatorId: Int?
 }
 
 public extension ApiGetPrivateMessages {

@@ -9,14 +9,18 @@
 
 import Foundation
 
-// Tagline.ts
+/// Lemmy availability: all versions
 public struct ApiTagline: Codable, Hashable, Sendable {
-    public var id: Int
-    /// Removed in 1.0.0
-    public var localSiteId: Int?
-    public var content: String
-    public var published: Date
-    public var updated: Date?
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: unavailable after 0.19.11
+    public let localSiteId: Int?
+    /// Lemmy availability: all versions
+    public let content: String
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// Lemmy availability: all versions
+    public let updated: Date?
 }
 
 public extension ApiTagline {

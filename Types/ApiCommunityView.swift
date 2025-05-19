@@ -9,16 +9,24 @@
 
 import Foundation
 
-// CommunityView.ts
+/// Lemmy availability: all versions
 public struct ApiCommunityView: Codable, Hashable, Sendable {
-    public var community: ApiCommunity
-    public var subscribed: ApiSubscribedType
-    public var blocked: Bool
-    public var counts: ApiCommunityAggregates
-    /// Added in 0.19.4
-    public var bannedFromCommunity: Bool?
-    /// Added in 1.0.0
-    public var canMod: Bool?
+    /// Lemmy availability: all versions
+    public let community: ApiCommunity
+    /// Lemmy availability: unavailable after 0.19.11
+    public let subscribed: ApiSubscribedType?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let blocked: Bool?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let counts: ApiCommunityAggregates?
+    /// Lemmy availability: available between 0.19.4 and 0.19.11
+    public let bannedFromCommunity: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let communityActions: ApiCommunityActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let instanceActions: ApiInstanceActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let canMod: Bool?
 }
 
 public extension ApiCommunityView {
@@ -28,6 +36,8 @@ public extension ApiCommunityView {
         case blocked = "blocked"
         case counts = "counts"
         case bannedFromCommunity = "banned_from_community"
+        case communityActions = "community_actions"
+        case instanceActions = "instance_actions"
         case canMod = "can_mod"
     }
 }

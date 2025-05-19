@@ -9,13 +9,16 @@
 
 import Foundation
 
-// LocalSiteUrlBlocklist.ts
-/// Added in 0.19.4
+/// Lemmy availability: available from 0.19.4 onwards
 public struct ApiLocalSiteUrlBlocklist: Codable, Hashable, Sendable {
-    public var id: Int
-    public var url: String
-    public var published: Date
-    public var updated: Date?
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let url: String
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// Lemmy availability: all versions
+    public let updated: Date?
 }
 
 public extension ApiLocalSiteUrlBlocklist {

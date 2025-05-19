@@ -9,10 +9,12 @@
 
 import Foundation
 
-// TransferCommunity.ts
+/// Lemmy availability: all versions
 public struct ApiTransferCommunity: Codable, Hashable, Sendable {
-    public var communityId: Int
-    public var personId: Int
+    /// Lemmy availability: all versions
+    public let communityId: Int
+    /// Lemmy availability: all versions
+    public let personId: Int
 }
 
 public extension ApiTransferCommunity {

@@ -9,13 +9,16 @@
 
 import Foundation
 
-// EditComment.ts
+/// Lemmy availability: all versions
 public struct ApiEditComment: Codable, Hashable, Sendable {
-    public var commentId: Int
-    public var content: String?
-    public var languageId: Int?
-    /// Removed in 0.19.0
-    public var formId: String?
+    /// Lemmy availability: all versions
+    public let commentId: Int
+    /// Lemmy availability: all versions
+    public let content: String?
+    /// Lemmy availability: all versions
+    public let languageId: Int?
+    /// Lemmy availability: unavailable after 0.18.5
+    public let formId: String?
 }
 
 public extension ApiEditComment {

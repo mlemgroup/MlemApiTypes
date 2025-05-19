@@ -9,9 +9,10 @@
 
 import Foundation
 
-// AddAdminResponse.ts
+/// Lemmy availability: all versions
 public struct ApiAddAdminResponse: Codable, Hashable, Sendable {
-    public var admins: [ApiPersonView]
+    /// Lemmy availability: all versions
+    public let admins: [ApiPersonView]
 }
 
 public extension ApiAddAdminResponse {

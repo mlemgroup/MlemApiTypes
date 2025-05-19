@@ -9,10 +9,12 @@
 
 import Foundation
 
-// GetPost.ts
+/// Lemmy availability: all versions
 public struct ApiGetPost: Codable, Hashable, Sendable {
-    public var id: Int?
-    public var commentId: Int?
+    /// Lemmy availability: all versions
+    public let id: Int?
+    /// Lemmy availability: all versions
+    public let commentId: Int?
 }
 
 public extension ApiGetPost {

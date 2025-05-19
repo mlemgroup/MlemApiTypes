@@ -9,10 +9,10 @@
 
 import Foundation
 
-// GenerateTotpSecretResponse.ts
-/// Added in 0.19.0
+/// Lemmy availability: available from 0.19.0 onwards
 public struct ApiGenerateTotpSecretResponse: Codable, Hashable, Sendable {
-    public var totpSecretUrl: String
+    /// Lemmy availability: all versions
+    public let totpSecretUrl: String
 }
 
 public extension ApiGenerateTotpSecretResponse {

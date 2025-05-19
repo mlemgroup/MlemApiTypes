@@ -9,10 +9,11 @@
 
 import Foundation
 
-// ResolveObject.ts
+/// Lemmy availability: all versions
 public struct ApiResolveObject: Codable, Hashable, Sendable {
-    // swiftlint:disable:next identifier_name
-    public var q: String
+    /// Can be the full url, or a shortened version like: !fediverse@lemmy.ml
+    /// Lemmy availability: all versions
+    public let q: String
 }
 
 public extension ApiResolveObject {

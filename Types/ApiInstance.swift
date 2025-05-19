@@ -9,14 +9,20 @@
 
 import Foundation
 
-// Instance.ts
+/// Lemmy availability: all versions
 public struct ApiInstance: Codable, Hashable, Sendable {
-    public var id: Int
-    public var domain: String
-    public var published: Date
-    public var updated: Date?
-    public var software: String?
-    public var version: String?
+    /// Lemmy availability: all versions
+    public let id: Int
+    /// Lemmy availability: all versions
+    public let domain: String
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// Lemmy availability: all versions
+    public let updated: Date?
+    /// Lemmy availability: all versions
+    public let software: String?
+    /// Lemmy availability: all versions
+    public let version: String?
 }
 
 public extension ApiInstance {

@@ -9,39 +9,54 @@
 
 import Foundation
 
-// GetPosts.ts
+/// Lemmy availability: all versions
 public struct ApiGetPosts: Codable, Hashable, Sendable {
-    public var type_: ApiListingType?
-    public var sort: ApiSortType?
-    public var page: Int?
-    public var limit: Int?
-    public var communityId: Int?
-    public var communityName: String?
-    public var savedOnly: Bool?
-    /// Added in 0.19.0
-    public var likedOnly: Bool?
-    /// Added in 0.19.0
-    public var dislikedOnly: Bool?
-    /// Added in 0.19.0
-    public var pageCursor: String?
-    /// Added in 0.19.4
-    public var showHidden: Bool?
-    /// Added in 0.19.6
-    public var showRead: Bool?
-    /// Added in 0.19.6
-    public var showNsfw: Bool?
-    /// Added in 1.0.0
-    public var timeRangeSeconds: Int?
-    /// Added in 1.0.0
-    public var readOnly: Bool?
-    /// Added in 1.0.0
-    public var hideMedia: Bool?
-    /// Added in 1.0.0
-    public var markAsRead: Bool?
-    /// Added in 1.0.0
-    public var noCommentsOnly: Bool?
-    /// Added in 1.0.0
-    public var pageBack: Bool?
+    /// Lemmy availability: all versions
+    public let type_: ApiListingType?
+    /// Lemmy availability: all versions
+    public let sort: ApiSortType?
+    /// Lemmy availability: all versions
+    public let page: Int?
+    /// Lemmy availability: all versions
+    public let limit: Int?
+    /// Lemmy availability: all versions
+    public let communityId: Int?
+    /// Lemmy availability: all versions
+    public let communityName: String?
+    /// Lemmy availability: all versions
+    public let savedOnly: Bool?
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let likedOnly: Bool?
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let dislikedOnly: Bool?
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let pageCursor: String?
+    /// Lemmy availability: available from 0.19.4 onwards
+    public let showHidden: Bool?
+    /// If true, then show the read posts (even if your user setting is to hide them)
+    /// Lemmy availability: available from 0.19.6 onwards
+    public let showRead: Bool?
+    /// If true, then show the nsfw posts (even if your user setting is to hide them)
+    /// Lemmy availability: available from 0.19.6 onwards
+    public let showNsfw: Bool?
+    /// Filter to within a given time range, in seconds.
+    /// IE 60 would give results for the past minute.
+    /// Use Zero to override the local_site and local_user time_range.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let timeRangeSeconds: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let readOnly: Bool?
+    /// If false, then show posts with media attached (even if your user setting is to hide them)
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let hideMedia: Bool?
+    /// Whether to automatically mark fetched posts as read.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let markAsRead: Bool?
+    /// If true, then only show posts with no comments
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let noCommentsOnly: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let pageBack: Bool?
 }
 
 public extension ApiGetPosts {

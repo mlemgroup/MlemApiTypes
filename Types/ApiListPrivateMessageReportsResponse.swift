@@ -9,10 +9,10 @@
 
 import Foundation
 
-// ListPrivateMessageReportsResponse.ts
-/// Removed in 1.0.0
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiListPrivateMessageReportsResponse: Codable, Hashable, Sendable {
-    public var privateMessageReports: [ApiPrivateMessageReportView]
+    /// Lemmy availability: all versions
+    public let privateMessageReports: [ApiPrivateMessageReportView]
 }
 
 public extension ApiListPrivateMessageReportsResponse {

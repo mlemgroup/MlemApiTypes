@@ -9,13 +9,16 @@
 
 import Foundation
 
-// ListInbox.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiListInbox: Codable, Hashable, Sendable {
-    public var type_: ApiInboxDataType?
-    public var unreadOnly: Bool?
-    public var pageCursor: String?
-    public var pageBack: Bool?
+    /// Lemmy availability: all versions
+    public let type_: ApiInboxDataType?
+    /// Lemmy availability: all versions
+    public let unreadOnly: Bool?
+    /// Lemmy availability: all versions
+    public let pageCursor: String?
+    /// Lemmy availability: all versions
+    public let pageBack: Bool?
 }
 
 public extension ApiListInbox {

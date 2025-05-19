@@ -9,13 +9,16 @@
 
 import Foundation
 
-// AdminBlockInstanceParams.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiAdminBlockInstanceParams: Codable, Hashable, Sendable {
-    public var instance: String
-    public var block: Bool
-    public var reason: String?
-    public var expires: String?
+    /// Lemmy availability: all versions
+    public let instance: String
+    /// Lemmy availability: all versions
+    public let block: Bool
+    /// Lemmy availability: all versions
+    public let reason: String?
+    /// Lemmy availability: all versions
+    public let expires: Date?
 }
 
 public extension ApiAdminBlockInstanceParams {

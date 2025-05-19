@@ -9,15 +9,20 @@
 
 import Foundation
 
-// ListPostReports.ts
-/// Removed in 1.0.0
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiListPostReports: Codable, Hashable, Sendable {
-    public var page: Int?
-    public var limit: Int?
-    public var unresolvedOnly: Bool?
-    public var communityId: Int?
-    /// Added in 0.19.4
-    public var postId: Int?
+    /// Lemmy availability: all versions
+    public let page: Int?
+    /// Lemmy availability: all versions
+    public let limit: Int?
+    /// Only shows the unresolved reports
+    /// Lemmy availability: all versions
+    public let unresolvedOnly: Bool?
+    /// if no community is given, it returns reports for all communities moderated by the auth user
+    /// Lemmy availability: all versions
+    public let communityId: Int?
+    /// Lemmy availability: available from 0.19.4 onwards
+    public let postId: Int?
 }
 
 public extension ApiListPostReports {

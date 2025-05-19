@@ -9,29 +9,44 @@
 
 import Foundation
 
-// LocalSiteRateLimit.ts
+/// Lemmy availability: all versions
 public struct ApiLocalSiteRateLimit: Codable, Hashable, Sendable {
-    /// Removed in 0.19.0
-    public var id: Int?
-    public var localSiteId: Int
-    public var message: Int
-    public var messagePerSecond: Int
-    public var post: Int
-    public var postPerSecond: Int
-    public var register: Int
-    public var registerPerSecond: Int
-    public var image: Int
-    public var imagePerSecond: Int
-    public var comment: Int
-    public var commentPerSecond: Int
-    public var search: Int
-    public var searchPerSecond: Int
-    public var published: Date
-    public var updated: Date?
-    /// Added in 0.19.0
-    public var importUserSettings: Int?
-    /// Added in 0.19.0
-    public var importUserSettingsPerSecond: Int?
+    /// Lemmy availability: unavailable after 0.18.5
+    public let id: Int?
+    /// Lemmy availability: all versions
+    public let localSiteId: Int
+    /// Lemmy availability: all versions
+    public let message: Int
+    /// Lemmy availability: all versions
+    public let messagePerSecond: Int
+    /// Lemmy availability: all versions
+    public let post: Int
+    /// Lemmy availability: all versions
+    public let postPerSecond: Int
+    /// Lemmy availability: all versions
+    public let register: Int
+    /// Lemmy availability: all versions
+    public let registerPerSecond: Int
+    /// Lemmy availability: all versions
+    public let image: Int
+    /// Lemmy availability: all versions
+    public let imagePerSecond: Int
+    /// Lemmy availability: all versions
+    public let comment: Int
+    /// Lemmy availability: all versions
+    public let commentPerSecond: Int
+    /// Lemmy availability: all versions
+    public let search: Int
+    /// Lemmy availability: all versions
+    public let searchPerSecond: Int
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// Lemmy availability: all versions
+    public let updated: Date?
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let importUserSettings: Int?
+    /// Lemmy availability: available from 0.19.0 onwards
+    public let importUserSettingsPerSecond: Int?
 }
 
 public extension ApiLocalSiteRateLimit {

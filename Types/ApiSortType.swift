@@ -9,26 +9,44 @@
 
 import Foundation
 
-// SortType.ts
-/// Removed in 1.0.0
+/// Lemmy availability: unavailable after 0.19.11
 public enum ApiSortType: String, Codable, Sendable {
+    /// Lemmy availability: all versions
     case active = "Active"
+    /// Lemmy availability: all versions
     case hot = "Hot"
+    /// Lemmy availability: all versions
     case new = "New"
+    /// Lemmy availability: all versions
     case old = "Old"
+    /// Lemmy availability: all versions
     case topDay = "TopDay"
+    /// Lemmy availability: all versions
     case topWeek = "TopWeek"
+    /// Lemmy availability: all versions
     case topMonth = "TopMonth"
+    /// Lemmy availability: all versions
     case topYear = "TopYear"
+    /// Lemmy availability: all versions
     case topAll = "TopAll"
+    /// Lemmy availability: all versions
     case mostComments = "MostComments"
+    /// Lemmy availability: all versions
     case newComments = "NewComments"
+    /// Lemmy availability: all versions
     case topHour = "TopHour"
+    /// Lemmy availability: all versions
     case topSixHour = "TopSixHour"
+    /// Lemmy availability: all versions
     case topTwelveHour = "TopTwelveHour"
-    case topThreeMonths = "TopThreeMonths" /// Added in 0.18.1
-    case topSixMonths = "TopSixMonths" /// Added in 0.18.1
-    case topNineMonths = "TopNineMonths" /// Added in 0.18.1
-    case controversial = "Controversial" /// Added in 0.19.0
-    case scaled = "Scaled" /// Added in 0.19.0
+    /// Lemmy availability: available from 0.18.1 onwards
+    case topThreeMonths = "TopThreeMonths"
+    /// Lemmy availability: available from 0.18.1 onwards
+    case topSixMonths = "TopSixMonths"
+    /// Lemmy availability: available from 0.18.1 onwards
+    case topNineMonths = "TopNineMonths"
+    /// Lemmy availability: available from 0.19.0 onwards
+    case controversial = "Controversial"
+    /// Lemmy availability: available from 0.19.0 onwards
+    case scaled = "Scaled"
 }

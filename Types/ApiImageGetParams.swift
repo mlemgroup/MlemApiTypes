@@ -9,11 +9,12 @@
 
 import Foundation
 
-// ImageGetParams.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiImageGetParams: Codable, Hashable, Sendable {
-    public var fileType: String?
-    public var maxSize: Int?
+    /// Lemmy availability: all versions
+    public let fileType: String?
+    /// Lemmy availability: all versions
+    public let maxSize: Int?
 }
 
 public extension ApiImageGetParams {

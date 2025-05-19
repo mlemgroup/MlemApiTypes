@@ -9,6 +9,7 @@
 
 import Foundation
 
+/// Lemmy availability: all versions
 public struct GetCommentRequest: ApiGetRequest {
     public typealias Parameters = ApiGetComment
     public typealias Response = ApiCommentResponse
@@ -20,7 +21,7 @@ public struct GetCommentRequest: ApiGetRequest {
       endpoint: SiteVersion.EndpointVersion,
       id: Int
     ) {
-        self.path = endpoint == .v3 ? "api/v3/comment" : "api/v4/comment"
+        self.path = endpoint == .v4 ? "api/v4/comment" : "api/v3/comment"
         self.parameters = .init(
             id: id
         )

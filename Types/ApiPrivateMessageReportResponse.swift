@@ -9,9 +9,10 @@
 
 import Foundation
 
-// PrivateMessageReportResponse.ts
+/// Lemmy availability: all versions
 public struct ApiPrivateMessageReportResponse: Codable, Hashable, Sendable {
-    public var privateMessageReportView: ApiPrivateMessageReportView
+    /// Lemmy availability: all versions
+    public let privateMessageReportView: ApiPrivateMessageReportView
 }
 
 public extension ApiPrivateMessageReportResponse {

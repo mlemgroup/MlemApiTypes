@@ -9,11 +9,12 @@
 
 import Foundation
 
-// UserBlockInstanceParams.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiUserBlockInstanceParams: Codable, Hashable, Sendable {
-    public var instanceId: Int
-    public var block: Bool
+    /// Lemmy availability: all versions
+    public let instanceId: Int
+    /// Lemmy availability: all versions
+    public let block: Bool
 }
 
 public extension ApiUserBlockInstanceParams {

@@ -9,14 +9,18 @@
 
 import Foundation
 
-// OAuthAccount.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiOAuthAccount: Codable, Hashable, Sendable {
-    public var localUserId: Int
-    public var oauthProviderId: Int
-    public var oauthUserId: String
-    public var published: Date
-    public var updated: Date?
+    /// Lemmy availability: all versions
+    public let localUserId: Int
+    /// Lemmy availability: all versions
+    public let oauthProviderId: Int
+    /// Lemmy availability: all versions
+    public let oauthUserId: String
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// Lemmy availability: all versions
+    public let updated: Date?
 }
 
 public extension ApiOAuthAccount {

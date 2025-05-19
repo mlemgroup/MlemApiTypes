@@ -9,13 +9,16 @@
 
 import Foundation
 
-// PendingFollow.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiPendingFollow: Codable, Hashable, Sendable {
-    public var person: ApiPerson
-    public var community: ApiCommunity
-    public var isNewInstance: Bool
-    public var subscribed: ApiSubscribedType
+    /// Lemmy availability: all versions
+    public let person: ApiPerson
+    /// Lemmy availability: all versions
+    public let community: ApiCommunity
+    /// Lemmy availability: all versions
+    public let isNewInstance: Bool
+    /// Lemmy availability: all versions
+    public let followState: ApiCommunityFollowerState?
 }
 
 public extension ApiPendingFollow {
@@ -23,6 +26,6 @@ public extension ApiPendingFollow {
         case person = "person"
         case community = "community"
         case isNewInstance = "is_new_instance"
-        case subscribed = "subscribed"
+        case followState = "follow_state"
     }
 }

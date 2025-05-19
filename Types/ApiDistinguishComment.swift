@@ -9,10 +9,12 @@
 
 import Foundation
 
-// DistinguishComment.ts
+/// Lemmy availability: all versions
 public struct ApiDistinguishComment: Codable, Hashable, Sendable {
-    public var commentId: Int
-    public var distinguished: Bool
+    /// Lemmy availability: all versions
+    public let commentId: Int
+    /// Lemmy availability: all versions
+    public let distinguished: Bool
 }
 
 public extension ApiDistinguishComment {

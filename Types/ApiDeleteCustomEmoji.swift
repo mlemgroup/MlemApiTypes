@@ -9,9 +9,10 @@
 
 import Foundation
 
-// DeleteCustomEmoji.ts
+/// Lemmy availability: all versions
 public struct ApiDeleteCustomEmoji: Codable, Hashable, Sendable {
-    public var id: Int
+    /// Lemmy availability: all versions
+    public let id: Int
 }
 
 public extension ApiDeleteCustomEmoji {

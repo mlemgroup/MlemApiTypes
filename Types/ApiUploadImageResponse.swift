@@ -9,11 +9,12 @@
 
 import Foundation
 
-// UploadImageResponse.ts
-/// Added in 1.0.0
+/// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiUploadImageResponse: Codable, Hashable, Sendable {
-    public var imageUrl: String
-    public var filename: String
+    /// Lemmy availability: all versions
+    public let imageUrl: URL
+    /// Lemmy availability: all versions
+    public let filename: String
 }
 
 public extension ApiUploadImageResponse {

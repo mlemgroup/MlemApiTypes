@@ -9,10 +9,12 @@
 
 import Foundation
 
-// CreatePrivateMessage.ts
+/// Lemmy availability: all versions
 public struct ApiCreatePrivateMessage: Codable, Hashable, Sendable {
-    public var content: String
-    public var recipientId: Int
+    /// Lemmy availability: all versions
+    public let content: String
+    /// Lemmy availability: all versions
+    public let recipientId: Int
 }
 
 public extension ApiCreatePrivateMessage {
