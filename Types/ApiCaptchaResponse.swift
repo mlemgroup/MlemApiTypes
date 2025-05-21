@@ -11,10 +11,10 @@ import Foundation
 
 /// Lemmy availability: all versions
 public struct ApiCaptchaResponse: Codable, Hashable, Sendable {
-    /// A Base64 encoded png  
+    /// A Base64 encoded png
     /// Lemmy availability: all versions
     public let png: String
-    /// A Base64 encoded wav audio  
+    /// A Base64 encoded wav audio
     /// Lemmy availability: all versions
     public let wav: String
     /// The UUID for the captcha item.

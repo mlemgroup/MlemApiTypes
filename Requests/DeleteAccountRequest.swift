@@ -20,7 +20,7 @@ public struct DeleteAccountRequest: ApiPostRequest {
     init(
       endpoint: SiteVersion.EndpointVersion,
       password: String,
-      deleteContent: Bool?
+      deleteContent: Bool
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/delete" : "api/v3/user/delete_account"
         self.body = .init(

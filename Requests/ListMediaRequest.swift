@@ -20,12 +20,16 @@ public struct ListMediaRequest: ApiGetRequest {
     init(
       endpoint: SiteVersion.EndpointVersion,
       page: Int?,
-      limit: Int?
+      limit: Int?,
+      pageCursor: String?,
+      pageBack: Bool?
     ) {
-        self.path = endpoint == .v4 ? "api/v4/account/list_media" : "api/v3/account/list_media"
+        self.path = endpoint == .v4 ? "api/v4/account/media/list" : "api/v3/account/list_media"
         self.parameters = .init(
             page: page,
-            limit: limit
+            limit: limit,
+            pageCursor: pageCursor,
+            pageBack: pageBack
         )
     }
 }

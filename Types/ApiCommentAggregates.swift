@@ -11,8 +11,6 @@ import Foundation
 
 /// Lemmy availability: unavailable after 0.19.11
 public struct ApiCommentAggregates: Codable, Hashable, Sendable {
-    /// Lemmy availability: unavailable after 0.18.5
-    public let id: Int?
     /// Lemmy availability: all versions
     public let commentId: Int
     /// Lemmy availability: all versions
@@ -26,19 +24,15 @@ public struct ApiCommentAggregates: Codable, Hashable, Sendable {
     /// The total number of children in this comment branch.
     /// Lemmy availability: all versions
     public let childCount: Int
-    /// Lemmy availability: unavailable after 0.18.5
-    public let hotRank: Int?
 }
 
 public extension ApiCommentAggregates {
     enum CodingKeys: String, CodingKey {
-        case id = "id"
         case commentId = "comment_id"
         case score = "score"
         case upvotes = "upvotes"
         case downvotes = "downvotes"
         case published = "published"
         case childCount = "child_count"
-        case hotRank = "hot_rank"
     }
 }

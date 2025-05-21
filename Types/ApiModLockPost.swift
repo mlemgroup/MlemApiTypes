@@ -23,6 +23,8 @@ public struct ApiModLockPost: Codable, Hashable, Sendable {
     public let when_: Date?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let published: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let reason: String?
 }
 
 public extension ApiModLockPost {
@@ -33,5 +35,6 @@ public extension ApiModLockPost {
         case locked = "locked"
         case when_ = "when_"
         case published = "published"
+        case reason = "reason"
     }
 }

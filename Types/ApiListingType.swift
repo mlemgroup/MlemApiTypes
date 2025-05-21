@@ -17,6 +17,6 @@ public enum ApiListingType: String, Codable, Sendable {
     case local = "Local"
     /// Lemmy availability: all versions
     case subscribed = "Subscribed"
-    /// Lemmy availability: available from 0.19.0 onwards
+    /// Lemmy availability: all versions
     case moderatorView = "ModeratorView"
 }

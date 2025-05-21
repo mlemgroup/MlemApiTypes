@@ -11,8 +11,6 @@ import Foundation
 
 /// Lemmy availability: unavailable after 0.19.11
 public struct ApiSiteAggregates: Codable, Hashable, Sendable {
-    /// Lemmy availability: unavailable after 0.18.5
-    public let id: Int?
     /// Lemmy availability: all versions
     public let siteId: Int
     /// Lemmy availability: all versions
@@ -39,7 +37,6 @@ public struct ApiSiteAggregates: Codable, Hashable, Sendable {
 
 public extension ApiSiteAggregates {
     enum CodingKeys: String, CodingKey {
-        case id = "id"
         case siteId = "site_id"
         case users = "users"
         case posts = "posts"

@@ -19,6 +19,6 @@ public enum ApiCommentSortType: String, Codable, Sendable {
     case new = "New"
     /// Lemmy availability: all versions
     case old = "Old"
-    /// Lemmy availability: available from 0.19.0 onwards
+    /// Lemmy availability: all versions
     case controversial = "Controversial"
 }

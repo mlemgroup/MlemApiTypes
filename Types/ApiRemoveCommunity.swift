@@ -17,8 +17,6 @@ public struct ApiRemoveCommunity: Codable, Hashable, Sendable {
     public let removed: Bool
     /// Lemmy availability: all versions
     public let reason: String?
-    /// Lemmy availability: unavailable after 0.18.5
-    public let expires: Int?
 }
 
 public extension ApiRemoveCommunity {
@@ -26,6 +24,5 @@ public extension ApiRemoveCommunity {
         case communityId = "community_id"
         case removed = "removed"
         case reason = "reason"
-        case expires = "expires"
     }
 }

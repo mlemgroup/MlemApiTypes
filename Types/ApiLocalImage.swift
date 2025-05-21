@@ -11,7 +11,7 @@ import Foundation
 
 /// Lemmy availability: available from 0.19.4 onwards
 public struct ApiLocalImage: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.11
     public let localUserId: Int?
     /// Lemmy availability: all versions
     public let pictrsAlias: String
@@ -19,6 +19,11 @@ public struct ApiLocalImage: Codable, Hashable, Sendable {
     public let pictrsDeleteToken: String?
     /// Lemmy availability: all versions
     public let published: Date
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let personId: Int?
+    /// This means the image is an auto-generated thumbnail, for a post.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let thumbnailForPostId: Int?
 }
 
 public extension ApiLocalImage {
@@ -27,5 +32,7 @@ public extension ApiLocalImage {
         case pictrsAlias = "pictrs_alias"
         case pictrsDeleteToken = "pictrs_delete_token"
         case published = "published"
+        case personId = "person_id"
+        case thumbnailForPostId = "thumbnail_for_post_id"
     }
 }

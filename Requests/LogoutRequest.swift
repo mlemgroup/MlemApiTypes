@@ -9,7 +9,7 @@
 
 import Foundation
 
-/// Lemmy availability: available from 0.19.0 onwards
+/// Lemmy availability: all versions
 public struct LogoutRequest: ApiPostRequest {
     public typealias Body = Int
     public typealias Response = Int

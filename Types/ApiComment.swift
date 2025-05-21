@@ -56,6 +56,10 @@ public struct ApiComment: Codable, Hashable, Sendable {
     public let reportCount: Int?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let unresolvedReportCount: Int?
+    /// If a local user comments in a remote community, the comment is hidden until it is confirmed
+    /// accepted by the community (by receiving it back via federation).
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let federationPending: Bool?
 }
 
 public extension ApiComment {
@@ -79,5 +83,6 @@ public extension ApiComment {
         case childCount = "child_count"
         case reportCount = "report_count"
         case unresolvedReportCount = "unresolved_report_count"
+        case federationPending = "federation_pending"
     }
 }

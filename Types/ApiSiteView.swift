@@ -19,6 +19,8 @@ public struct ApiSiteView: Codable, Hashable, Sendable {
     public let localSiteRateLimit: ApiLocalSiteRateLimit
     /// Lemmy availability: unavailable after 0.19.11
     public let counts: ApiSiteAggregates?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let instance: ApiInstance?
 }
 
 public extension ApiSiteView {
@@ -27,5 +29,6 @@ public extension ApiSiteView {
         case localSite = "local_site"
         case localSiteRateLimit = "local_site_rate_limit"
         case counts = "counts"
+        case instance = "instance"
     }
 }

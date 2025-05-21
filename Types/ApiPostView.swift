@@ -20,6 +20,10 @@ public struct ApiPostView: Codable, Hashable, Sendable {
     /// Lemmy availability: unavailable after 0.19.11
     public let creatorBannedFromCommunity: Bool?
     /// Lemmy availability: unavailable after 0.19.11
+    public let creatorIsModerator: Bool?
+    /// Lemmy availability: all versions
+    public let creatorIsAdmin: Bool
+    /// Lemmy availability: unavailable after 0.19.11
     public let counts: ApiPostAggregates?
     /// Lemmy availability: unavailable after 0.19.11
     public let subscribed: ApiSubscribedType?
@@ -33,10 +37,6 @@ public struct ApiPostView: Codable, Hashable, Sendable {
     public let myVote: Int?
     /// Lemmy availability: unavailable after 0.19.11
     public let unreadComments: Int?
-    /// Lemmy availability: available between 0.19.0 and 0.19.11
-    public let creatorIsModerator: Bool?
-    /// Lemmy availability: available from 0.19.0 onwards
-    public let creatorIsAdmin: Bool?
     /// Lemmy availability: available between 0.19.4 and 0.19.11
     public let bannedFromCommunity: Bool?
     /// Lemmy availability: available between 0.19.4 and 0.19.11
@@ -52,9 +52,17 @@ public struct ApiPostView: Codable, Hashable, Sendable {
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let instanceActions: ApiInstanceActions?
     /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let creatorHomeInstanceActions: ApiInstanceActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let creatorLocalInstanceActions: ApiInstanceActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
     public let creatorCommunityActions: ApiCommunityActions?
     /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let tags: [ApiTag]?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
     public let canMod: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let creatorBanned: Bool?
 }
 
 public extension ApiPostView {
@@ -63,6 +71,8 @@ public extension ApiPostView {
         case creator = "creator"
         case community = "community"
         case creatorBannedFromCommunity = "creator_banned_from_community"
+        case creatorIsModerator = "creator_is_moderator"
+        case creatorIsAdmin = "creator_is_admin"
         case counts = "counts"
         case subscribed = "subscribed"
         case saved = "saved"
@@ -70,8 +80,6 @@ public extension ApiPostView {
         case creatorBlocked = "creator_blocked"
         case myVote = "my_vote"
         case unreadComments = "unread_comments"
-        case creatorIsModerator = "creator_is_moderator"
-        case creatorIsAdmin = "creator_is_admin"
         case bannedFromCommunity = "banned_from_community"
         case hidden = "hidden"
         case imageDetails = "image_details"
@@ -79,7 +87,11 @@ public extension ApiPostView {
         case personActions = "person_actions"
         case postActions = "post_actions"
         case instanceActions = "instance_actions"
+        case creatorHomeInstanceActions = "creator_home_instance_actions"
+        case creatorLocalInstanceActions = "creator_local_instance_actions"
         case creatorCommunityActions = "creator_community_actions"
+        case tags = "tags"
         case canMod = "can_mod"
+        case creatorBanned = "creator_banned"
     }
 }

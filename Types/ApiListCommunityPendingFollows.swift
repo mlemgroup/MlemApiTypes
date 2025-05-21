@@ -18,7 +18,9 @@ public struct ApiListCommunityPendingFollows: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let allCommunities: Bool?
     /// Lemmy availability: all versions
-    public let page: Int?
+    public let pageCursor: String?
+    /// Lemmy availability: all versions
+    public let pageBack: Bool?
     /// Lemmy availability: all versions
     public let limit: Int?
 }
@@ -27,7 +29,8 @@ public extension ApiListCommunityPendingFollows {
     enum CodingKeys: String, CodingKey {
         case pendingOnly = "pending_only"
         case allCommunities = "all_communities"
-        case page = "page"
+        case pageCursor = "page_cursor"
+        case pageBack = "page_back"
         case limit = "limit"
     }
 }

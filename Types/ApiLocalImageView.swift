@@ -15,11 +15,14 @@ public struct ApiLocalImageView: Codable, Hashable, Sendable {
     public let localImage: ApiLocalImage
     /// Lemmy availability: all versions
     public let person: ApiPerson
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let post: ApiPost?
 }
 
 public extension ApiLocalImageView {
     enum CodingKeys: String, CodingKey {
         case localImage = "local_image"
         case person = "person"
+        case post = "post"
     }
 }

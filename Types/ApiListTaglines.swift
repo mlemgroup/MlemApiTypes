@@ -12,14 +12,17 @@ import Foundation
 /// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiListTaglines: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
-    public let page: Int?
+    public let pageCursor: String?
+    /// Lemmy availability: all versions
+    public let pageBack: Bool?
     /// Lemmy availability: all versions
     public let limit: Int?
 }
 
 public extension ApiListTaglines {
     enum CodingKeys: String, CodingKey {
-        case page = "page"
+        case pageCursor = "page_cursor"
+        case pageBack = "page_back"
         case limit = "limit"
     }
 }

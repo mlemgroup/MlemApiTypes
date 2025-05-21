@@ -21,13 +21,17 @@ public struct ListRegistrationApplicationsRequest: ApiGetRequest {
       endpoint: SiteVersion.EndpointVersion,
       unreadOnly: Bool?,
       page: Int?,
-      limit: Int?
+      limit: Int?,
+      pageCursor: String?,
+      pageBack: Bool?
     ) {
         self.path = endpoint == .v4 ? "api/v4/admin/registration_application/list" : "api/v3/admin/registration_application/list"
         self.parameters = .init(
             unreadOnly: unreadOnly,
             page: page,
-            limit: limit
+            limit: limit,
+            pageCursor: pageCursor,
+            pageBack: pageBack
         )
     }
 }

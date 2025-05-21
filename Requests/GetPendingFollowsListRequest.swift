@@ -20,13 +20,15 @@ public struct GetPendingFollowsListRequest: ApiGetRequest {
     init(
       pendingOnly: Bool?,
       allCommunities: Bool?,
-      page: Int?,
+      pageCursor: String?,
+      pageBack: Bool?,
       limit: Int?
     ) {
         self.parameters = .init(
             pendingOnly: pendingOnly,
             allCommunities: allCommunities,
-            page: page,
+            pageCursor: pageCursor,
+            pageBack: pageBack,
             limit: limit
         )
     }

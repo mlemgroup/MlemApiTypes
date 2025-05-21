@@ -9,7 +9,7 @@
 
 import Foundation
 
-/// Lemmy availability: available from 0.19.0 onwards
+/// Lemmy availability: all versions
 public struct UserBlockInstanceRequest: ApiPostRequest {
     public typealias Body = ApiBlockInstance
     public typealias Response = UserBlockInstanceResponseUnion

@@ -15,7 +15,8 @@ public struct ApiGetPosts: Codable, Hashable, Sendable {
     public let type_: ApiListingType?
     /// Lemmy availability: all versions
     public let sort: ApiSortType?
-    /// Lemmy availability: all versions
+    /// DEPRECATED, use page_cursor
+    /// Lemmy availability: unavailable after 0.19.11
     public let page: Int?
     /// Lemmy availability: all versions
     public let limit: Int?
@@ -23,13 +24,13 @@ public struct ApiGetPosts: Codable, Hashable, Sendable {
     public let communityId: Int?
     /// Lemmy availability: all versions
     public let communityName: String?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.11
     public let savedOnly: Bool?
-    /// Lemmy availability: available from 0.19.0 onwards
+    /// Lemmy availability: all versions
     public let likedOnly: Bool?
-    /// Lemmy availability: available from 0.19.0 onwards
+    /// Lemmy availability: all versions
     public let dislikedOnly: Bool?
-    /// Lemmy availability: available from 0.19.0 onwards
+    /// Lemmy availability: all versions
     public let pageCursor: String?
     /// Lemmy availability: available from 0.19.4 onwards
     public let showHidden: Bool?
@@ -44,8 +45,6 @@ public struct ApiGetPosts: Codable, Hashable, Sendable {
     /// Use Zero to override the local_site and local_user time_range.
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let timeRangeSeconds: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let readOnly: Bool?
     /// If false, then show posts with media attached (even if your user setting is to hide them)
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let hideMedia: Bool?
@@ -75,7 +74,6 @@ public extension ApiGetPosts {
         case showRead = "show_read"
         case showNsfw = "show_nsfw"
         case timeRangeSeconds = "time_range_seconds"
-        case readOnly = "read_only"
         case hideMedia = "hide_media"
         case markAsRead = "mark_as_read"
         case noCommentsOnly = "no_comments_only"

@@ -54,7 +54,7 @@ public struct ApiEditSite: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let applicationEmailAdmins: Bool?
     /// Whether to hide moderator names from the modlog.
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.11
     public let hideModlogModNames: Bool?
     /// A list of allowed discussion languages.
     /// Lemmy availability: all versions
@@ -101,9 +101,6 @@ public struct ApiEditSite: Codable, Hashable, Sendable {
     /// Enables federation debugging.
     /// Lemmy availability: unavailable after 0.19.11
     public let federationDebug: Bool?
-    /// The number of federation workers.
-    /// Lemmy availability: unavailable after 0.18.0
-    public let federationWorkerCount: Int?
     /// Whether to enable captchas for signups.
     /// Lemmy availability: all versions
     public let captchaEnabled: Bool?
@@ -161,13 +158,12 @@ public struct ApiEditSite: Codable, Hashable, Sendable {
     /// What kind of comment downvotes your site allows.
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let commentDownvotes: ApiFederationMode?
-    /// If this is true, users will never see the dialog asking to support Lemmy development with
-    /// donations.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let disableDonationDialog: Bool?
     /// Block NSFW content being created
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let disallowNsfwContent: Bool?
+    /// Dont send email notifications to users for new replies, mentions etc
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let disableEmailNotifications: Bool?
 }
 
 public extension ApiEditSite {
@@ -205,7 +201,6 @@ public extension ApiEditSite {
         case rateLimitSearchPerSecond = "rate_limit_search_per_second"
         case federationEnabled = "federation_enabled"
         case federationDebug = "federation_debug"
-        case federationWorkerCount = "federation_worker_count"
         case captchaEnabled = "captcha_enabled"
         case captchaDifficulty = "captcha_difficulty"
         case allowedInstances = "allowed_instances"
@@ -225,7 +220,7 @@ public extension ApiEditSite {
         case postDownvotes = "post_downvotes"
         case commentUpvotes = "comment_upvotes"
         case commentDownvotes = "comment_downvotes"
-        case disableDonationDialog = "disable_donation_dialog"
         case disallowNsfwContent = "disallow_nsfw_content"
+        case disableEmailNotifications = "disable_email_notifications"
     }
 }

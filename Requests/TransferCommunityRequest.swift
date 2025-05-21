@@ -12,7 +12,7 @@ import Foundation
 /// Lemmy availability: all versions
 public struct TransferCommunityRequest: ApiPostRequest {
     public typealias Body = ApiTransferCommunity
-    public typealias Response = TransferCommunityResponseUnion
+    public typealias Response = ApiGetCommunityResponse
     
     public let path: String
     public let body: Body?
@@ -27,19 +27,5 @@ public struct TransferCommunityRequest: ApiPostRequest {
             communityId: communityId,
             personId: personId
         )
-    }
-}
-
-public enum TransferCommunityResponseUnion: Decodable {
-    case apiCommunityResponse(ApiCommunityResponse)
-    case apiGetCommunityResponse(ApiGetCommunityResponse)
-    
-    public init(from decoder: Decoder) throws {
-        if let value = try? ApiCommunityResponse(from: decoder) {
-            self = .apiCommunityResponse(value)
-            return
-        }
-        let value = try ApiGetCommunityResponse(from: decoder)
-        self = .apiGetCommunityResponse(value)
     }
 }

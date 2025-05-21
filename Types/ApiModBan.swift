@@ -27,6 +27,8 @@ public struct ApiModBan: Codable, Hashable, Sendable {
     public let when_: Date?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let published: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let instanceId: Int?
 }
 
 public extension ApiModBan {
@@ -39,5 +41,6 @@ public extension ApiModBan {
         case expires = "expires"
         case when_ = "when_"
         case published = "published"
+        case instanceId = "instance_id"
     }
 }

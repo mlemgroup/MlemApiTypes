@@ -11,17 +11,15 @@ import Foundation
 
 /// Lemmy availability: all versions
 public struct GetSiteRequest: ApiGetRequest {
-    public typealias Parameters = ApiGetSite
+    public typealias Parameters = Int
     public typealias Response = ApiGetSiteResponse
     
     public let path: String
-    public let parameters: Parameters?
+    public let parameters: Parameters? = nil
     
     init(
       endpoint: SiteVersion.EndpointVersion
     ) {
         self.path = endpoint == .v4 ? "api/v4/site" : "api/v3/site"
-        self.parameters = .init(
-        )
     }
 }

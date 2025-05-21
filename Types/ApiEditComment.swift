@@ -17,8 +17,6 @@ public struct ApiEditComment: Codable, Hashable, Sendable {
     public let content: String?
     /// Lemmy availability: all versions
     public let languageId: Int?
-    /// Lemmy availability: unavailable after 0.18.5
-    public let formId: String?
 }
 
 public extension ApiEditComment {
@@ -26,6 +24,5 @@ public extension ApiEditComment {
         case commentId = "comment_id"
         case content = "content"
         case languageId = "language_id"
-        case formId = "form_id"
     }
 }

@@ -17,7 +17,7 @@ public struct ApiGetPrivateMessages: Codable, Hashable, Sendable {
     public let page: Int?
     /// Lemmy availability: all versions
     public let limit: Int?
-    /// Lemmy availability: available from 0.19.0 onwards
+    /// Lemmy availability: all versions
     public let creatorId: Int?
 }
 

@@ -22,6 +22,8 @@ public struct ApiListPersonContent: Codable, Hashable, Sendable {
     public let pageCursor: String?
     /// Lemmy availability: all versions
     public let pageBack: Bool?
+    /// Lemmy availability: all versions
+    public let limit: Int?
 }
 
 public extension ApiListPersonContent {
@@ -31,5 +33,6 @@ public extension ApiListPersonContent {
         case username = "username"
         case pageCursor = "page_cursor"
         case pageBack = "page_back"
+        case limit = "limit"
     }
 }

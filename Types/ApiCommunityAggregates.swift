@@ -11,8 +11,6 @@ import Foundation
 
 /// Lemmy availability: unavailable after 0.19.11
 public struct ApiCommunityAggregates: Codable, Hashable, Sendable {
-    /// Lemmy availability: unavailable after 0.18.5
-    public let id: Int?
     /// Lemmy availability: all versions
     public let communityId: Int
     /// Lemmy availability: all versions
@@ -35,15 +33,12 @@ public struct ApiCommunityAggregates: Codable, Hashable, Sendable {
     /// The number of users with any activity in the last year.
     /// Lemmy availability: all versions
     public let usersActiveHalfYear: Int
-    /// Lemmy availability: unavailable after 0.18.5
-    public let hotRank: Int?
     /// Lemmy availability: available from 0.19.4 onwards
     public let subscribersLocal: Int?
 }
 
 public extension ApiCommunityAggregates {
     enum CodingKeys: String, CodingKey {
-        case id = "id"
         case communityId = "community_id"
         case subscribers = "subscribers"
         case posts = "posts"
@@ -53,7 +48,6 @@ public extension ApiCommunityAggregates {
         case usersActiveWeek = "users_active_week"
         case usersActiveMonth = "users_active_month"
         case usersActiveHalfYear = "users_active_half_year"
-        case hotRank = "hot_rank"
         case subscribersLocal = "subscribers_local"
     }
 }

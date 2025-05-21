@@ -17,7 +17,7 @@ public struct ApiGetComments: Codable, Hashable, Sendable {
     public let sort: ApiCommentSortType?
     /// Lemmy availability: all versions
     public let maxDepth: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.11
     public let page: Int?
     /// Lemmy availability: all versions
     public let limit: Int?
@@ -31,14 +31,18 @@ public struct ApiGetComments: Codable, Hashable, Sendable {
     public let parentId: Int?
     /// Lemmy availability: unavailable after 0.19.11
     public let savedOnly: Bool?
-    /// Lemmy availability: available from 0.19.0 onwards
+    /// Lemmy availability: all versions
     public let likedOnly: Bool?
-    /// Lemmy availability: available from 0.19.0 onwards
+    /// Lemmy availability: all versions
     public let dislikedOnly: Bool?
     /// Filter to within a given time range, in seconds.
     /// IE 60 would give results for the past minute.
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let timeRangeSeconds: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let pageCursor: String?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let pageBack: Bool?
 }
 
 public extension ApiGetComments {
@@ -56,5 +60,7 @@ public extension ApiGetComments {
         case likedOnly = "liked_only"
         case dislikedOnly = "disliked_only"
         case timeRangeSeconds = "time_range_seconds"
+        case pageCursor = "page_cursor"
+        case pageBack = "page_back"
     }
 }

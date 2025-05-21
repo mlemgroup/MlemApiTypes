@@ -27,6 +27,8 @@ public struct ApiCommunityView: Codable, Hashable, Sendable {
     public let instanceActions: ApiInstanceActions?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let canMod: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let postTags: [ApiTag]?
 }
 
 public extension ApiCommunityView {
@@ -39,5 +41,6 @@ public extension ApiCommunityView {
         case communityActions = "community_actions"
         case instanceActions = "instance_actions"
         case canMod = "can_mod"
+        case postTags = "post_tags"
     }
 }

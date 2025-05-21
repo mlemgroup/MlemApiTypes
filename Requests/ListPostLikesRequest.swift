@@ -21,13 +21,17 @@ public struct ListPostLikesRequest: ApiGetRequest {
       endpoint: SiteVersion.EndpointVersion,
       postId: Int,
       page: Int?,
-      limit: Int?
+      limit: Int?,
+      pageCursor: String?,
+      pageBack: Bool?
     ) {
         self.path = endpoint == .v4 ? "api/v4/post/like/list" : "api/v3/post/like/list"
         self.parameters = .init(
             postId: postId,
             page: page,
-            limit: limit
+            limit: limit,
+            pageCursor: pageCursor,
+            pageBack: pageBack
         )
     }
 }

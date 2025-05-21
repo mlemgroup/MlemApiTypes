@@ -1,5 +1,5 @@
 //
-//  GetModlogRequest.swift
+//  GetModLogRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -10,7 +10,7 @@
 import Foundation
 
 /// Lemmy availability: all versions
-public struct GetModlogRequest: ApiGetRequest {
+public struct GetModLogRequest: ApiGetRequest {
     public typealias Parameters = ApiGetModlog
     public typealias Response = ApiGetModlogResponse
     

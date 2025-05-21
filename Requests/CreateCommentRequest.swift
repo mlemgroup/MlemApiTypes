@@ -22,16 +22,14 @@ public struct CreateCommentRequest: ApiPostRequest {
       content: String,
       postId: Int,
       parentId: Int?,
-      languageId: Int?,
-      formId: String?
+      languageId: Int?
     ) {
         self.path = endpoint == .v4 ? "api/v4/comment" : "api/v3/comment"
         self.body = .init(
             content: content,
             postId: postId,
             parentId: parentId,
-            languageId: languageId,
-            formId: formId
+            languageId: languageId
         )
     }
 }

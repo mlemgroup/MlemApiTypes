@@ -13,8 +13,8 @@ import Foundation
 public struct ApiDeleteAccount: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let password: String
-    /// Lemmy availability: available from 0.19.0 onwards
-    public let deleteContent: Bool?
+    /// Lemmy availability: all versions
+    public let deleteContent: Bool
 }
 
 public extension ApiDeleteAccount {

@@ -21,15 +21,13 @@ public struct RemoveCommunityRequest: ApiPostRequest {
       endpoint: SiteVersion.EndpointVersion,
       communityId: Int,
       removed: Bool,
-      reason: String?,
-      expires: Int?
+      reason: String?
     ) {
         self.path = endpoint == .v4 ? "api/v4/community/remove" : "api/v3/community/remove"
         self.body = .init(
             communityId: communityId,
             removed: removed,
-            reason: reason,
-            expires: expires
+            reason: reason
         )
     }
 }

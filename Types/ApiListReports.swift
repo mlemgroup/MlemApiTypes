@@ -27,6 +27,8 @@ public struct ApiListReports: Codable, Hashable, Sendable {
     public let pageCursor: String?
     /// Lemmy availability: all versions
     public let pageBack: Bool?
+    /// Lemmy availability: all versions
+    public let limit: Int?
     /// Only for admins: also show reports with `violates_instance_rules=false`
     /// Lemmy availability: all versions
     public let showCommunityRuleViolations: Bool?
@@ -43,6 +45,7 @@ public extension ApiListReports {
         case communityId = "community_id"
         case pageCursor = "page_cursor"
         case pageBack = "page_back"
+        case limit = "limit"
         case showCommunityRuleViolations = "show_community_rule_violations"
         case myReportsOnly = "my_reports_only"
     }
