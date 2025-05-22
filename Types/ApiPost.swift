@@ -92,6 +92,10 @@ public struct ApiPost: Codable, Hashable, Sendable {
     public let reportCount: Int?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let unresolvedReportCount: Int?
+    /// If a local user posts in a remote community, the comment is hidden until it is confirmed
+    /// accepted by the community (by receiving it back via federation).
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let federationPending: Bool?
 }
 
 public extension ApiPost {
@@ -127,5 +131,6 @@ public extension ApiPost {
         case newestCommentTime = "newest_comment_time"
         case reportCount = "report_count"
         case unresolvedReportCount = "unresolved_report_count"
+        case federationPending = "federation_pending"
     }
 }

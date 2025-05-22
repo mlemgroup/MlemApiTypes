@@ -21,13 +21,15 @@ public struct ListInboxRequest: ApiGetRequest {
       type_: ApiInboxDataType?,
       unreadOnly: Bool?,
       pageCursor: String?,
-      pageBack: Bool?
+      pageBack: Bool?,
+      limit: Int?
     ) {
         self.parameters = .init(
             type_: type_,
             unreadOnly: unreadOnly,
             pageCursor: pageCursor,
-            pageBack: pageBack
+            pageBack: pageBack,
+            limit: limit
         )
     }
 }

@@ -19,6 +19,8 @@ public struct ApiLocalUserView: Codable, Hashable, Sendable {
     public let counts: ApiPersonAggregates?
     /// Lemmy availability: available between 0.19.4 and 0.19.11
     public let localUserVoteDisplayMode: ApiLocalUserVoteDisplayMode?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let instanceActions: ApiInstanceActions?
 }
 
 public extension ApiLocalUserView {
@@ -27,5 +29,6 @@ public extension ApiLocalUserView {
         case person = "person"
         case counts = "counts"
         case localUserVoteDisplayMode = "local_user_vote_display_mode"
+        case instanceActions = "instance_actions"
     }
 }

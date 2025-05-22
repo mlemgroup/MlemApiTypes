@@ -11,8 +11,6 @@ import Foundation
 
 /// Lemmy availability: all versions
 public struct ApiLocalSiteRateLimit: Codable, Hashable, Sendable {
-    /// Lemmy availability: unavailable after 0.18.5
-    public let id: Int?
     /// Lemmy availability: all versions
     public let localSiteId: Int
     /// Lemmy availability: all versions
@@ -43,15 +41,14 @@ public struct ApiLocalSiteRateLimit: Codable, Hashable, Sendable {
     public let published: Date
     /// Lemmy availability: all versions
     public let updated: Date?
-    /// Lemmy availability: available from 0.19.0 onwards
-    public let importUserSettings: Int?
-    /// Lemmy availability: available from 0.19.0 onwards
-    public let importUserSettingsPerSecond: Int?
+    /// Lemmy availability: all versions
+    public let importUserSettings: Int
+    /// Lemmy availability: all versions
+    public let importUserSettingsPerSecond: Int
 }
 
 public extension ApiLocalSiteRateLimit {
     enum CodingKeys: String, CodingKey {
-        case id = "id"
         case localSiteId = "local_site_id"
         case message = "message"
         case messagePerSecond = "message_per_second"

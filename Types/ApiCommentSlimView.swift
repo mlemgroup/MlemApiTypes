@@ -24,9 +24,15 @@ public struct ApiCommentSlimView: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let instanceActions: ApiInstanceActions?
     /// Lemmy availability: all versions
+    public let creatorHomeInstanceActions: ApiInstanceActions?
+    /// Lemmy availability: all versions
+    public let creatorLocalInstanceActions: ApiInstanceActions?
+    /// Lemmy availability: all versions
     public let creatorIsAdmin: Bool
     /// Lemmy availability: all versions
     public let canMod: Bool
+    /// Lemmy availability: all versions
+    public let creatorBanned: Bool
 }
 
 public extension ApiCommentSlimView {
@@ -37,7 +43,10 @@ public extension ApiCommentSlimView {
         case personActions = "person_actions"
         case creatorCommunityActions = "creator_community_actions"
         case instanceActions = "instance_actions"
+        case creatorHomeInstanceActions = "creator_home_instance_actions"
+        case creatorLocalInstanceActions = "creator_local_instance_actions"
         case creatorIsAdmin = "creator_is_admin"
         case canMod = "can_mod"
+        case creatorBanned = "creator_banned"
     }
 }

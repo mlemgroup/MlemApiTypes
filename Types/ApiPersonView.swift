@@ -15,8 +15,14 @@ public struct ApiPersonView: Codable, Hashable, Sendable {
     public let person: ApiPerson
     /// Lemmy availability: unavailable after 0.19.11
     public let counts: ApiPersonAggregates?
-    /// Lemmy availability: available from 0.19.0 onwards
-    public let isAdmin: Bool?
+    /// Lemmy availability: all versions
+    public let isAdmin: Bool
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let homeInstanceActions: ApiInstanceActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let localInstanceActions: ApiInstanceActions?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let creatorBanned: Bool?
 }
 
 public extension ApiPersonView {
@@ -24,5 +30,8 @@ public extension ApiPersonView {
         case person = "person"
         case counts = "counts"
         case isAdmin = "is_admin"
+        case homeInstanceActions = "home_instance_actions"
+        case localInstanceActions = "local_instance_actions"
+        case creatorBanned = "creator_banned"
     }
 }

@@ -9,7 +9,7 @@
 
 import Foundation
 
-/// Lemmy availability: available from 0.19.0 onwards
+/// Lemmy availability: all versions
 public struct ApiLoginToken: Codable, Hashable, Sendable {
     /// Jwt token for this login
     /// Lemmy availability: all versions

@@ -12,7 +12,7 @@ import Foundation
 /// Lemmy availability: all versions
 public struct DeleteCustomEmojiRequest: ApiPostRequest {
     public typealias Body = ApiDeleteCustomEmoji
-    public typealias Response = DeleteCustomEmojiResponseUnion
+    public typealias Response = ApiSuccessResponse
     
     public let path: String
     public let body: Body?
@@ -25,19 +25,5 @@ public struct DeleteCustomEmojiRequest: ApiPostRequest {
         self.body = .init(
             id: id
         )
-    }
-}
-
-public enum DeleteCustomEmojiResponseUnion: Decodable {
-    case apiCustomEmojiResponse(ApiCustomEmojiResponse)
-    case apiSuccessResponse(ApiSuccessResponse)
-    
-    public init(from decoder: Decoder) throws {
-        if let value = try? ApiCustomEmojiResponse(from: decoder) {
-            self = .apiCustomEmojiResponse(value)
-            return
-        }
-        let value = try ApiSuccessResponse(from: decoder)
-        self = .apiSuccessResponse(value)
     }
 }

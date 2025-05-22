@@ -43,6 +43,8 @@ public struct ApiGetSiteResponse: Codable, Hashable, Sendable {
     /// banners can be set.
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let imageUploadDisabled: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let activePlugins: [ApiPluginMetadata]?
 }
 
 public extension ApiGetSiteResponse {
@@ -60,5 +62,6 @@ public extension ApiGetSiteResponse {
         case oauthProviders = "oauth_providers"
         case adminOauthProviders = "admin_oauth_providers"
         case imageUploadDisabled = "image_upload_disabled"
+        case activePlugins = "active_plugins"
     }
 }

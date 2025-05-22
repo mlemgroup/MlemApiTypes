@@ -16,7 +16,7 @@ public struct ApiTag: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let apId: ActorIdentifier
     /// Lemmy availability: all versions
-    public let name: String
+    public let displayName: String
     /// the community that owns this tag
     /// Lemmy availability: all versions
     public let communityId: Int
@@ -32,7 +32,7 @@ public extension ApiTag {
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case apId = "ap_id"
-        case name = "name"
+        case displayName = "display_name"
         case communityId = "community_id"
         case published = "published"
         case updated = "updated"

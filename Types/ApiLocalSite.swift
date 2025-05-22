@@ -45,8 +45,8 @@ public struct ApiLocalSite: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let legalInformation: String?
     /// Whether to hide mod names on the modlog.
-    /// Lemmy availability: all versions
-    public let hideModlogModNames: Bool
+    /// Lemmy availability: unavailable after 0.19.11
+    public let hideModlogModNames: Bool?
     /// Whether new applications email admins.
     /// Lemmy availability: all versions
     public let applicationEmailAdmins: Bool
@@ -59,9 +59,6 @@ public struct ApiLocalSite: Codable, Hashable, Sendable {
     /// Whether federation is enabled.
     /// Lemmy availability: all versions
     public let federationEnabled: Bool
-    /// The number of concurrent federation http workers.
-    /// Lemmy availability: unavailable after 0.18.0
-    public let federationWorkerCount: Int?
     /// Whether captcha is enabled.
     /// Lemmy availability: all versions
     public let captchaEnabled: Bool
@@ -79,8 +76,8 @@ public struct ApiLocalSite: Codable, Hashable, Sendable {
     public let reportsEmailAdmins: Bool
     /// Whether to sign outgoing Activitypub fetches with private key of local instance. Some
     /// Fediverse instances and platforms require this.
-    /// Lemmy availability: available from 0.19.0 onwards
-    public let federationSignedFetch: Bool?
+    /// Lemmy availability: all versions
+    public let federationSignedFetch: Bool
     /// Default value for [LocalSite.post_listing_mode]
     /// Lemmy availability: available from 0.19.4 onwards
     public let defaultPostListingMode: ApiPostListingMode?
@@ -108,10 +105,6 @@ public struct ApiLocalSite: Codable, Hashable, Sendable {
     /// What kind of comment downvotes your site allows.
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let commentDownvotes: ApiFederationMode?
-    /// If this is true, users will never see the dialog asking to support Lemmy development with
-    /// donations.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let disableDonationDialog: Bool?
     /// A default time range limit to apply to post sorts, in seconds.
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let defaultPostTimeRangeSeconds: Int?
@@ -138,6 +131,9 @@ public struct ApiLocalSite: Codable, Hashable, Sendable {
     /// The number of users with any activity in the last half year.
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let usersActiveHalfYear: Int?
+    /// Dont send email notifications to users for new replies, mentions etc
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let disableEmailNotifications: Bool?
 }
 
 public extension ApiLocalSite {
@@ -159,7 +155,6 @@ public extension ApiLocalSite {
         case slurFilterRegex = "slur_filter_regex"
         case actorNameMaxLength = "actor_name_max_length"
         case federationEnabled = "federation_enabled"
-        case federationWorkerCount = "federation_worker_count"
         case captchaEnabled = "captcha_enabled"
         case captchaDifficulty = "captcha_difficulty"
         case published = "published"
@@ -176,7 +171,6 @@ public extension ApiLocalSite {
         case postDownvotes = "post_downvotes"
         case commentUpvotes = "comment_upvotes"
         case commentDownvotes = "comment_downvotes"
-        case disableDonationDialog = "disable_donation_dialog"
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
         case disallowNsfwContent = "disallow_nsfw_content"
         case users = "users"
@@ -187,5 +181,6 @@ public extension ApiLocalSite {
         case usersActiveWeek = "users_active_week"
         case usersActiveMonth = "users_active_month"
         case usersActiveHalfYear = "users_active_half_year"
+        case disableEmailNotifications = "disable_email_notifications"
     }
 }

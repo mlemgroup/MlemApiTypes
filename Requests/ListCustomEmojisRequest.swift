@@ -18,16 +18,10 @@ public struct ListCustomEmojisRequest: ApiGetRequest {
     public let parameters: Parameters?
     
     init(
-      page: Int?,
-      limit: Int?,
-      category: String?,
-      ignorePageLimits: Bool?
+      category: String?
     ) {
         self.parameters = .init(
-            page: page,
-            limit: limit,
-            category: category,
-            ignorePageLimits: ignorePageLimits
+            category: category
         )
     }
 }

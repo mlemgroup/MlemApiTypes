@@ -18,11 +18,13 @@ public struct ListTaglinesRequest: ApiGetRequest {
     public let parameters: Parameters?
     
     init(
-      page: Int?,
+      pageCursor: String?,
+      pageBack: Bool?,
       limit: Int?
     ) {
         self.parameters = .init(
-            page: page,
+            pageCursor: pageCursor,
+            pageBack: pageBack,
             limit: limit
         )
     }

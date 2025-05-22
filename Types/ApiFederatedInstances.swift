@@ -12,11 +12,11 @@ import Foundation
 /// Lemmy availability: all versions
 public struct ApiFederatedInstances: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
-    public let linked: [ApiInstance]
+    public let linked: [InstanceWithFederationStateBridge]
     /// Lemmy availability: all versions
-    public let allowed: [ApiInstance]
+    public let allowed: [InstanceWithFederationStateBridge]
     /// Lemmy availability: all versions
-    public let blocked: [ApiInstance]
+    public let blocked: [InstanceWithFederationStateBridge]
 }
 
 public extension ApiFederatedInstances {

@@ -11,18 +11,19 @@ import Foundation
 
 /// Lemmy availability: all versions
 public struct ApiMarkPostAsRead: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions, made optional in 0.19.0
+    /// TODO: deprecated, send `post_ids` instead
+    /// Lemmy availability: all versions
     public let postId: Int?
+    /// Lemmy availability: unavailable after 0.19.11
+    public let postIds: [Int]?
     /// Lemmy availability: all versions
     public let read: Bool
-    /// Lemmy availability: available between 0.19.0 and 0.19.11
-    public let postIds: [Int]?
 }
 
 public extension ApiMarkPostAsRead {
     enum CodingKeys: String, CodingKey {
         case postId = "post_id"
-        case read = "read"
         case postIds = "post_ids"
+        case read = "read"
     }
 }

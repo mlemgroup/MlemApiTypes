@@ -30,7 +30,9 @@ public struct ListCommentsSlimRequest: ApiGetRequest {
       savedOnly: Bool?,
       likedOnly: Bool?,
       dislikedOnly: Bool?,
-      timeRangeSeconds: Int?
+      timeRangeSeconds: Int?,
+      pageCursor: String?,
+      pageBack: Bool?
     ) {
         self.parameters = .init(
             type_: type_,
@@ -45,7 +47,9 @@ public struct ListCommentsSlimRequest: ApiGetRequest {
             savedOnly: savedOnly,
             likedOnly: likedOnly,
             dislikedOnly: dislikedOnly,
-            timeRangeSeconds: timeRangeSeconds
+            timeRangeSeconds: timeRangeSeconds,
+            pageCursor: pageCursor,
+            pageBack: pageBack
         )
     }
 }

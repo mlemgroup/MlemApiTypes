@@ -21,19 +21,23 @@ public struct ListCommunitiesRequest: ApiGetRequest {
       endpoint: SiteVersion.EndpointVersion,
       type_: ApiListingType?,
       sort: ApiSortType?,
+      showNsfw: Bool?,
       page: Int?,
       limit: Int?,
-      showNsfw: Bool?,
-      timeRangeSeconds: Int?
+      timeRangeSeconds: Int?,
+      pageCursor: String?,
+      pageBack: Bool?
     ) {
         self.path = endpoint == .v4 ? "api/v4/community/list" : "api/v3/community/list"
         self.parameters = .init(
             type_: type_,
             sort: sort,
+            showNsfw: showNsfw,
             page: page,
             limit: limit,
-            showNsfw: showNsfw,
-            timeRangeSeconds: timeRangeSeconds
+            timeRangeSeconds: timeRangeSeconds,
+            pageCursor: pageCursor,
+            pageBack: pageBack
         )
     }
 }

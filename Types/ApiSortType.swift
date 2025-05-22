@@ -39,14 +39,14 @@ public enum ApiSortType: String, Codable, Sendable {
     case topSixHour = "TopSixHour"
     /// Lemmy availability: all versions
     case topTwelveHour = "TopTwelveHour"
-    /// Lemmy availability: available from 0.18.1 onwards
+    /// Lemmy availability: all versions
     case topThreeMonths = "TopThreeMonths"
-    /// Lemmy availability: available from 0.18.1 onwards
+    /// Lemmy availability: all versions
     case topSixMonths = "TopSixMonths"
-    /// Lemmy availability: available from 0.18.1 onwards
+    /// Lemmy availability: all versions
     case topNineMonths = "TopNineMonths"
-    /// Lemmy availability: available from 0.19.0 onwards
+    /// Lemmy availability: all versions
     case controversial = "Controversial"
-    /// Lemmy availability: available from 0.19.0 onwards
+    /// Lemmy availability: all versions
     case scaled = "Scaled"
 }

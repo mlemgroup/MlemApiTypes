@@ -9,19 +9,17 @@
 
 import Foundation
 
-/// Lemmy availability: available from 0.18.1 onwards
+/// Lemmy availability: all versions
 public struct GetCaptchaRequest: ApiGetRequest {
-    public typealias Parameters = ApiGetCaptcha
+    public typealias Parameters = Int
     public typealias Response = ApiGetCaptchaResponse
     
     public let path: String
-    public let parameters: Parameters?
+    public let parameters: Parameters? = nil
     
     init(
       endpoint: SiteVersion.EndpointVersion
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/auth/get_captcha" : "api/v3/user/get_captcha"
-        self.parameters = .init(
-        )
     }
 }

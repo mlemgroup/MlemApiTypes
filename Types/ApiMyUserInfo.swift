@@ -20,11 +20,13 @@ public struct ApiMyUserInfo: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let communityBlocks: [ApiCommunityBlockView]
     /// Lemmy availability: all versions
+    public let instanceBlocks: [ApiInstanceBlockView]
+    /// Lemmy availability: all versions
     public let personBlocks: [ApiPersonBlockView]
     /// Lemmy availability: all versions
     public let discussionLanguages: [Int]
-    /// Lemmy availability: available from 0.19.0 onwards
-    public let instanceBlocks: [ApiInstanceBlockView]?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let keywordBlocks: [String]?
 }
 
 public extension ApiMyUserInfo {
@@ -33,8 +35,9 @@ public extension ApiMyUserInfo {
         case follows = "follows"
         case moderates = "moderates"
         case communityBlocks = "community_blocks"
+        case instanceBlocks = "instance_blocks"
         case personBlocks = "person_blocks"
         case discussionLanguages = "discussion_languages"
-        case instanceBlocks = "instance_blocks"
+        case keywordBlocks = "keyword_blocks"
     }
 }

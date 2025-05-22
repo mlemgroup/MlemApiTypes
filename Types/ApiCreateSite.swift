@@ -41,7 +41,7 @@ public struct ApiCreateSite: Codable, Hashable, Sendable {
     public let legalInformation: String?
     /// Lemmy availability: all versions
     public let applicationEmailAdmins: Bool?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.11
     public let hideModlogModNames: Bool?
     /// Lemmy availability: all versions
     public let discussionLanguages: [Int]?
@@ -77,8 +77,6 @@ public struct ApiCreateSite: Codable, Hashable, Sendable {
     public let federationEnabled: Bool?
     /// Lemmy availability: unavailable after 0.19.11
     public let federationDebug: Bool?
-    /// Lemmy availability: unavailable after 0.18.0
-    public let federationWorkerCount: Int?
     /// Lemmy availability: all versions
     public let captchaEnabled: Bool?
     /// Lemmy availability: all versions
@@ -114,9 +112,9 @@ public struct ApiCreateSite: Codable, Hashable, Sendable {
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let commentDownvotes: ApiFederationMode?
     /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let disableDonationDialog: Bool?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
     public let disallowNsfwContent: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let disableEmailNotifications: Bool?
 }
 
 public extension ApiCreateSite {
@@ -154,7 +152,6 @@ public extension ApiCreateSite {
         case rateLimitSearchPerSecond = "rate_limit_search_per_second"
         case federationEnabled = "federation_enabled"
         case federationDebug = "federation_debug"
-        case federationWorkerCount = "federation_worker_count"
         case captchaEnabled = "captcha_enabled"
         case captchaDifficulty = "captcha_difficulty"
         case allowedInstances = "allowed_instances"
@@ -172,7 +169,7 @@ public extension ApiCreateSite {
         case postDownvotes = "post_downvotes"
         case commentUpvotes = "comment_upvotes"
         case commentDownvotes = "comment_downvotes"
-        case disableDonationDialog = "disable_donation_dialog"
         case disallowNsfwContent = "disallow_nsfw_content"
+        case disableEmailNotifications = "disable_email_notifications"
     }
 }

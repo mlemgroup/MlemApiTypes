@@ -17,7 +17,7 @@ public struct ApiGetModlog: Codable, Hashable, Sendable {
     public let communityId: Int?
     /// Lemmy availability: unavailable after 0.19.11
     public let page: Int?
-    /// Lemmy availability: unavailable after 0.19.11
+    /// Lemmy availability: all versions
     public let limit: Int?
     /// Lemmy availability: all versions
     public let type_: ApiModlogActionType?

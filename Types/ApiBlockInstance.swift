@@ -9,7 +9,7 @@
 
 import Foundation
 
-/// Lemmy availability: available between 0.19.0 and 0.19.11
+/// Lemmy availability: unavailable after 0.19.11
 public struct ApiBlockInstance: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let instanceId: Int

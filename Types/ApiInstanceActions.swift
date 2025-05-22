@@ -18,6 +18,12 @@ public struct ApiInstanceActions: Codable, Hashable, Sendable {
     /// When the instance was blocked.
     /// Lemmy availability: all versions
     public let blocked: Date?
+    /// When this user received a site ban.
+    /// Lemmy availability: all versions
+    public let receivedBan: Date?
+    /// When their ban expires.
+    /// Lemmy availability: all versions
+    public let banExpires: Date?
 }
 
 public extension ApiInstanceActions {
@@ -25,5 +31,7 @@ public extension ApiInstanceActions {
         case personId = "person_id"
         case instanceId = "instance_id"
         case blocked = "blocked"
+        case receivedBan = "received_ban"
+        case banExpires = "ban_expires"
     }
 }

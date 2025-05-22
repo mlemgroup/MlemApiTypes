@@ -9,7 +9,7 @@
 
 import Foundation
 
-/// Lemmy availability: available from 0.19.0 onwards
+/// Lemmy availability: all versions
 public struct ApiInstanceWithFederationState: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let instance: ApiInstance

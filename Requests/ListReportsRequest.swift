@@ -24,6 +24,7 @@ public struct ListReportsRequest: ApiGetRequest {
       communityId: Int?,
       pageCursor: String?,
       pageBack: Bool?,
+      limit: Int?,
       showCommunityRuleViolations: Bool?,
       myReportsOnly: Bool?
     ) {
@@ -34,6 +35,7 @@ public struct ListReportsRequest: ApiGetRequest {
             communityId: communityId,
             pageCursor: pageCursor,
             pageBack: pageBack,
+            limit: limit,
             showCommunityRuleViolations: showCommunityRuleViolations,
             myReportsOnly: myReportsOnly
         )

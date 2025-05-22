@@ -22,8 +22,8 @@ public struct ApiPerson: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let avatar: URL?
     /// Whether the person is banned.
-    /// Lemmy availability: all versions
-    public let banned: Bool
+    /// Lemmy availability: unavailable after 0.19.11
+    public let banned: Bool?
     /// Lemmy availability: all versions
     public let published: Date
     /// Lemmy availability: all versions
@@ -46,14 +46,11 @@ public struct ApiPerson: Codable, Hashable, Sendable {
     /// A matrix id, usually given an @person:matrix.org
     /// Lemmy availability: all versions
     public let matrixUserId: String?
-    /// Whether the person is an admin.
-    /// Lemmy availability: unavailable after 0.18.5
-    public let admin: Bool?
     /// Whether the person is a bot account.
     /// Lemmy availability: all versions
     public let botAccount: Bool
     /// When their ban, if it exists, expires, if at all.
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.11
     public let banExpires: Date?
     /// Lemmy availability: all versions
     public let instanceId: Int
@@ -81,7 +78,6 @@ public extension ApiPerson {
         case banner = "banner"
         case deleted = "deleted"
         case matrixUserId = "matrix_user_id"
-        case admin = "admin"
         case botAccount = "bot_account"
         case banExpires = "ban_expires"
         case instanceId = "instance_id"

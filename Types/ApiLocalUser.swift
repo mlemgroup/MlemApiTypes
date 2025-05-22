@@ -34,9 +34,6 @@ public struct ApiLocalUser: Codable, Hashable, Sendable {
     public let showAvatars: Bool
     /// Lemmy availability: all versions
     public let sendNotificationsToEmail: Bool
-    /// A validation ID used in logging out sessions.
-    /// Lemmy availability: unavailable after 0.18.5
-    public let validatorTime: Date?
     /// Whether to show comment / post scores.
     /// Lemmy availability: unavailable after 0.19.11
     public let showScores: Bool?
@@ -46,44 +43,38 @@ public struct ApiLocalUser: Codable, Hashable, Sendable {
     /// Whether to show read posts.
     /// Lemmy availability: all versions
     public let showReadPosts: Bool
-    /// Whether to show new posts as notifications.
-    /// Lemmy availability: unavailable after 0.18.5
-    public let showNewPostNotifs: Bool?
     /// Whether their email has been verified.
     /// Lemmy availability: all versions
     public let emailVerified: Bool
     /// Whether their registration application has been accepted.
     /// Lemmy availability: all versions
     public let acceptedApplication: Bool
-    /// A URL to add their 2-factor auth.
-    /// Lemmy availability: unavailable after 0.18.5
-    public let totp2faUrl: String?
     /// Open links in a new tab.
-    /// Lemmy availability: available from 0.18.1 onwards
-    public let openLinksInNewTab: Bool?
-    /// Whether infinite scroll is enabled.
-    /// Lemmy availability: available from 0.18.3 onwards
-    public let infiniteScrollEnabled: Bool?
-    /// Lemmy availability: available from 0.19.0 onwards
-    public let blurNsfw: Bool?
-    /// Lemmy availability: available between 0.19.0 and 0.19.11
+    /// Lemmy availability: all versions
+    public let openLinksInNewTab: Bool
+    /// Lemmy availability: all versions
+    public let blurNsfw: Bool
+    /// Lemmy availability: unavailable after 0.19.11
     public let autoExpand: Bool?
+    /// Whether infinite scroll is enabled.
+    /// Lemmy availability: all versions
+    public let infiniteScrollEnabled: Bool
     /// Whether the person is an admin.
-    /// Lemmy availability: available from 0.19.0 onwards
-    public let admin: Bool?
-    /// Lemmy availability: available from 0.19.0 onwards
-    public let postListingMode: ApiPostListingMode?
-    /// Lemmy availability: available from 0.19.0 onwards
-    public let totp2faEnabled: Bool?
+    /// Lemmy availability: all versions
+    public let admin: Bool
+    /// Lemmy availability: all versions
+    public let postListingMode: ApiPostListingMode
+    /// Lemmy availability: all versions
+    public let totp2faEnabled: Bool
     /// Whether to allow keyboard navigation (for browsing and interacting with posts and comments).
-    /// Lemmy availability: available from 0.19.0 onwards
-    public let enableKeyboardNavigation: Bool?
+    /// Lemmy availability: all versions
+    public let enableKeyboardNavigation: Bool
     /// Whether user avatars and inline images in the UI that are gifs should be allowed to play or should be paused
-    /// Lemmy availability: available from 0.19.0 onwards
-    public let enableAnimatedImages: Bool?
+    /// Lemmy availability: all versions
+    public let enableAnimatedImages: Bool
     /// Whether to auto-collapse bot comments.
-    /// Lemmy availability: available from 0.19.0 onwards
-    public let collapseBotComments: Bool?
+    /// Lemmy availability: all versions
+    public let collapseBotComments: Bool
     /// The last time a donation request was shown to this user. If this is more than a year ago,
     /// a new notification request should be shown.
     /// Lemmy availability: available from 0.19.11 onwards
@@ -109,7 +100,7 @@ public struct ApiLocalUser: Codable, Hashable, Sendable {
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let showUpvotes: Bool?
     /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let showDownvotes: Bool?
+    public let showDownvotes: ApiVoteShow?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let showUpvotePercentage: Bool?
 }
@@ -126,18 +117,15 @@ public extension ApiLocalUser {
         case interfaceLanguage = "interface_language"
         case showAvatars = "show_avatars"
         case sendNotificationsToEmail = "send_notifications_to_email"
-        case validatorTime = "validator_time"
         case showScores = "show_scores"
         case showBotAccounts = "show_bot_accounts"
         case showReadPosts = "show_read_posts"
-        case showNewPostNotifs = "show_new_post_notifs"
         case emailVerified = "email_verified"
         case acceptedApplication = "accepted_application"
-        case totp2faUrl = "totp_2fa_url"
         case openLinksInNewTab = "open_links_in_new_tab"
-        case infiniteScrollEnabled = "infinite_scroll_enabled"
         case blurNsfw = "blur_nsfw"
         case autoExpand = "auto_expand"
+        case infiniteScrollEnabled = "infinite_scroll_enabled"
         case admin = "admin"
         case postListingMode = "post_listing_mode"
         case totp2faEnabled = "totp_2fa_enabled"

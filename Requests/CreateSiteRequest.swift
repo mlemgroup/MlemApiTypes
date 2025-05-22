@@ -52,7 +52,6 @@ public struct CreateSiteRequest: ApiPostRequest {
       rateLimitSearchPerSecond: Int?,
       federationEnabled: Bool?,
       federationDebug: Bool?,
-      federationWorkerCount: Int?,
       captchaEnabled: Bool?,
       captchaDifficulty: String?,
       allowedInstances: [String]?,
@@ -70,8 +69,8 @@ public struct CreateSiteRequest: ApiPostRequest {
       postDownvotes: ApiFederationMode?,
       commentUpvotes: ApiFederationMode?,
       commentDownvotes: ApiFederationMode?,
-      disableDonationDialog: Bool?,
-      disallowNsfwContent: Bool?
+      disallowNsfwContent: Bool?,
+      disableEmailNotifications: Bool?
     ) {
         self.path = endpoint == .v4 ? "api/v4/site" : "api/v3/site"
         self.body = .init(
@@ -108,7 +107,6 @@ public struct CreateSiteRequest: ApiPostRequest {
             rateLimitSearchPerSecond: rateLimitSearchPerSecond,
             federationEnabled: federationEnabled,
             federationDebug: federationDebug,
-            federationWorkerCount: federationWorkerCount,
             captchaEnabled: captchaEnabled,
             captchaDifficulty: captchaDifficulty,
             allowedInstances: allowedInstances,
@@ -126,8 +124,8 @@ public struct CreateSiteRequest: ApiPostRequest {
             postDownvotes: postDownvotes,
             commentUpvotes: commentUpvotes,
             commentDownvotes: commentDownvotes,
-            disableDonationDialog: disableDonationDialog,
-            disallowNsfwContent: disallowNsfwContent
+            disallowNsfwContent: disallowNsfwContent,
+            disableEmailNotifications: disableEmailNotifications
         )
     }
 }

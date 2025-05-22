@@ -27,7 +27,7 @@ public struct ApiSearch: Codable, Hashable, Sendable {
     public let listingType: ApiListingType?
     /// Lemmy availability: unavailable after 0.19.11
     public let page: Int?
-    /// Lemmy availability: unavailable after 0.19.11
+    /// Lemmy availability: all versions
     public let limit: Int?
     /// Lemmy availability: available between 0.19.6 and 0.19.11
     public let postTitleOnly: Bool?

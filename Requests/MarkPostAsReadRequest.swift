@@ -20,28 +20,28 @@ public struct MarkPostAsReadRequest: ApiPostRequest {
     init(
       endpoint: SiteVersion.EndpointVersion,
       postId: Int?,
-      read: Bool,
-      postIds: [Int]?
+      postIds: [Int]?,
+      read: Bool
     ) {
         self.path = endpoint == .v4 ? "api/v4/post/mark_as_read" : "api/v3/post/mark_as_read"
         self.body = .init(
             postId: postId,
-            read: read,
-            postIds: postIds
+            postIds: postIds,
+            read: read
         )
     }
 }
 
 public enum MarkPostAsReadResponseUnion: Decodable {
-    case apiPostResponse(ApiPostResponse)
     case apiSuccessResponse(ApiSuccessResponse)
+    case apiPostResponse(ApiPostResponse)
     
     public init(from decoder: Decoder) throws {
-        if let value = try? ApiPostResponse(from: decoder) {
-            self = .apiPostResponse(value)
+        if let value = try? ApiSuccessResponse(from: decoder) {
+            self = .apiSuccessResponse(value)
             return
         }
-        let value = try ApiSuccessResponse(from: decoder)
-        self = .apiSuccessResponse(value)
+        let value = try ApiPostResponse(from: decoder)
+        self = .apiPostResponse(value)
     }
 }

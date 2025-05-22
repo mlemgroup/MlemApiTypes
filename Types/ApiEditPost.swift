@@ -30,11 +30,11 @@ public struct ApiEditPost: Codable, Hashable, Sendable {
     /// Instead of fetching a thumbnail, use a custom one.
     /// Lemmy availability: available from 0.19.4 onwards
     public let customThumbnail: String?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let tags: [Int]?
     /// Time when this post should be scheduled. Null means publish immediately.
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let scheduledPublishTime: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let tags: [Int]?
 }
 
 public extension ApiEditPost {
@@ -47,7 +47,7 @@ public extension ApiEditPost {
         case languageId = "language_id"
         case altText = "alt_text"
         case customThumbnail = "custom_thumbnail"
-        case tags = "tags"
         case scheduledPublishTime = "scheduled_publish_time"
+        case tags = "tags"
     }
 }

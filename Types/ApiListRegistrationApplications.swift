@@ -14,10 +14,14 @@ public struct ApiListRegistrationApplications: Codable, Hashable, Sendable {
     /// Only shows the unread applications (IE those without an admin actor)
     /// Lemmy availability: all versions
     public let unreadOnly: Bool?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.11
     public let page: Int?
     /// Lemmy availability: all versions
     public let limit: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let pageCursor: String?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let pageBack: Bool?
 }
 
 public extension ApiListRegistrationApplications {
@@ -25,5 +29,7 @@ public extension ApiListRegistrationApplications {
         case unreadOnly = "unread_only"
         case page = "page"
         case limit = "limit"
+        case pageCursor = "page_cursor"
+        case pageBack = "page_back"
     }
 }

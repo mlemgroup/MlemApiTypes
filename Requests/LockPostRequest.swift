@@ -20,12 +20,14 @@ public struct LockPostRequest: ApiPostRequest {
     init(
       endpoint: SiteVersion.EndpointVersion,
       postId: Int,
-      locked: Bool
+      locked: Bool,
+      reason: String?
     ) {
         self.path = endpoint == .v4 ? "api/v4/post/lock" : "api/v3/post/lock"
         self.body = .init(
             postId: postId,
-            locked: locked
+            locked: locked,
+            reason: reason
         )
     }
 }
