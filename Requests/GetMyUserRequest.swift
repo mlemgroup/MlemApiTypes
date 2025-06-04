@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: available from 1.0.0-alpha onwards
-public struct GetMyUserRequest: ApiGetRequest {
+public struct GetMyUserRequest: GetRequest {
     public typealias Parameters = Int
     public typealias Response = ApiMyUserInfo
     

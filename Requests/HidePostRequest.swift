@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: available from 0.19.4 onwards
-public struct HidePostRequest: ApiPostRequest {
+public struct HidePostRequest: PostRequest {
     public typealias Body = ApiHidePost
     public typealias Response = HidePostResponseUnion
     

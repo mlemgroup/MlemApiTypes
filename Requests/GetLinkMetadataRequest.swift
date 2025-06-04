@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct GetLinkMetadataRequest: ApiGetRequest {
+public struct GetLinkMetadataRequest: GetRequest {
     public typealias Parameters = ApiGetSiteMetadata
     public typealias Response = ApiGetSiteMetadataResponse
     

@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct GetCommentRequest: ApiGetRequest {
+public struct GetCommentRequest: GetRequest {
     public typealias Parameters = ApiGetComment
     public typealias Response = ApiCommentResponse
     

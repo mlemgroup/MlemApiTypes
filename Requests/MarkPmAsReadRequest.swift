@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct MarkPmAsReadRequest: ApiPostRequest {
+public struct MarkPmAsReadRequest: PostRequest {
     public typealias Body = ApiMarkPrivateMessageAsRead
     public typealias Response = MarkPmAsReadResponseUnion
     

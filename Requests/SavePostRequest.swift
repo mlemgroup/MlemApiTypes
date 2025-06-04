@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct SavePostRequest: ApiPutRequest {
+public struct SavePostRequest: PutRequest {
     public typealias Body = ApiSavePost
     public typealias Response = ApiPostResponse
     

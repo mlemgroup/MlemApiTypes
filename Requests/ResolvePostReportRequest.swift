@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct ResolvePostReportRequest: ApiPutRequest {
+public struct ResolvePostReportRequest: PutRequest {
     public typealias Body = ApiResolvePostReport
     public typealias Response = ApiPostReportResponse
     

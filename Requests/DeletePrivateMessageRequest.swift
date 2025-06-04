@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct DeletePrivateMessageRequest: ApiPostRequest {
+public struct DeletePrivateMessageRequest: PostRequest {
     public typealias Body = ApiDeletePrivateMessage
     public typealias Response = ApiPrivateMessageResponse
     

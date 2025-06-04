@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct LeaveAdminRequest: ApiPostRequest {
+public struct LeaveAdminRequest: PostRequest {
     public typealias Body = Int
     public typealias Response = ApiGetSiteResponse
     

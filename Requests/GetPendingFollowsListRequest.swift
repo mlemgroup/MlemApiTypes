@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: available from 1.0.0-alpha onwards
-public struct GetPendingFollowsListRequest: ApiGetRequest {
+public struct GetPendingFollowsListRequest: GetRequest {
     public typealias Parameters = ApiListCommunityPendingFollows
     public typealias Response = ApiListCommunityPendingFollowsResponse
     

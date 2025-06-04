@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct ApproveRegistrationApplicationRequest: ApiPutRequest {
+public struct ApproveRegistrationApplicationRequest: PutRequest {
     public typealias Body = ApiApproveRegistrationApplication
     public typealias Response = ApiRegistrationApplicationResponse
     

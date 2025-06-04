@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: available from 0.19.4 onwards
-public struct ListAllMediaRequest: ApiGetRequest {
+public struct ListAllMediaRequest: GetRequest {
     public typealias Parameters = ApiListMedia
     public typealias Response = ApiListMediaResponse
     

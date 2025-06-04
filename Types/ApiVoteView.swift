@@ -8,6 +8,7 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: available from 0.19.2 onwards
 public struct ApiVoteView: Codable, Hashable, Sendable {
@@ -17,8 +18,6 @@ public struct ApiVoteView: Codable, Hashable, Sendable {
     public let score: Int
     /// Lemmy availability: available from 0.19.4 onwards
     public let creatorBannedFromCommunity: Bool?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let itemId: Int?
 }
 
 public extension ApiVoteView {
@@ -26,6 +25,5 @@ public extension ApiVoteView {
         case creator = "creator"
         case score = "score"
         case creatorBannedFromCommunity = "creator_banned_from_community"
-        case itemId = "item_id"
     }
 }

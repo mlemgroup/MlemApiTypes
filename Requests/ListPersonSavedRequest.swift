@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: available from 1.0.0-alpha onwards
-public struct ListPersonSavedRequest: ApiGetRequest {
+public struct ListPersonSavedRequest: GetRequest {
     public typealias Parameters = ApiListPersonSaved
     public typealias Response = ApiListPersonSavedResponse
     

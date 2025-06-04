@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: available from 1.0.0-alpha onwards
-public struct CreateTaglineRequest: ApiPostRequest {
+public struct CreateTaglineRequest: PostRequest {
     public typealias Body = ApiCreateTagline
     public typealias Response = ApiTaglineResponse
     

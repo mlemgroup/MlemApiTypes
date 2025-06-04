@@ -8,13 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiCommentActions: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
-    public let personId: Int
-    /// Lemmy availability: all versions
-    public let commentId: Int
     /// The like / score for the comment.
     /// Lemmy availability: all versions
     public let likeScore: Int?
@@ -28,8 +25,6 @@ public struct ApiCommentActions: Codable, Hashable, Sendable {
 
 public extension ApiCommentActions {
     enum CodingKeys: String, CodingKey {
-        case personId = "person_id"
-        case commentId = "comment_id"
         case likeScore = "like_score"
         case liked = "liked"
         case saved = "saved"

@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct BanFromSiteRequest: ApiPostRequest {
+public struct BanFromSiteRequest: PostRequest {
     public typealias Body = ApiBanPerson
     public typealias Response = ApiBanPersonResponse
     

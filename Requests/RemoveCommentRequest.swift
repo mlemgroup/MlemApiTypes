@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct RemoveCommentRequest: ApiPostRequest {
+public struct RemoveCommentRequest: PostRequest {
     public typealias Body = ApiRemoveComment
     public typealias Response = ApiCommentResponse
     

@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct CreateCustomEmojiRequest: ApiPostRequest {
+public struct CreateCustomEmojiRequest: PostRequest {
     public typealias Body = ApiCreateCustomEmoji
     public typealias Response = ApiCustomEmojiResponse
     

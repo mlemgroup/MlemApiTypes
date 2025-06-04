@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: available from 0.19.11 onwards
-public struct DonationDialogShownRequest: ApiPostRequest {
+public struct DonationDialogShownRequest: PostRequest {
     public typealias Body = Int
     public typealias Response = ApiSuccessResponse
     

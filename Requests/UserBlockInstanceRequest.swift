@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct UserBlockInstanceRequest: ApiPostRequest {
+public struct UserBlockInstanceRequest: PostRequest {
     public typealias Body = ApiBlockInstance
     public typealias Response = UserBlockInstanceResponseUnion
     
