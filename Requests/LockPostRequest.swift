@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct LockPostRequest: ApiPostRequest {
+public struct LockPostRequest: PostRequest {
     public typealias Body = ApiLockPost
     public typealias Response = ApiPostResponse
     

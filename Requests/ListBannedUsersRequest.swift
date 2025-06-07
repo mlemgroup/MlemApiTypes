@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: unavailable after 0.19.11
-public struct ListBannedUsersRequest: ApiGetRequest {
+public struct ListBannedUsersRequest: GetRequest {
     public typealias Parameters = Int
     public typealias Response = ApiBannedPersonsResponse
     

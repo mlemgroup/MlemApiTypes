@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct SearchRequest: ApiGetRequest {
+public struct SearchRequest: GetRequest {
     public typealias Parameters = ApiSearch
     public typealias Response = ApiSearchResponse
     
@@ -35,6 +36,7 @@ public struct SearchRequest: ApiGetRequest {
       postUrlOnly: Bool?,
       likedOnly: Bool?,
       dislikedOnly: Bool?,
+      showNsfw: Bool?,
       pageCursor: String?,
       pageBack: Bool?
     ) {
@@ -56,6 +58,7 @@ public struct SearchRequest: ApiGetRequest {
             postUrlOnly: postUrlOnly,
             likedOnly: likedOnly,
             dislikedOnly: dislikedOnly,
+            showNsfw: showNsfw,
             pageCursor: pageCursor,
             pageBack: pageBack
         )

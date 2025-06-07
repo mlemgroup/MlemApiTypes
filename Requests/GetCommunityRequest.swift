@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct GetCommunityRequest: ApiGetRequest {
+public struct GetCommunityRequest: GetRequest {
     public typealias Parameters = ApiGetCommunity
     public typealias Response = ApiGetCommunityResponse
     

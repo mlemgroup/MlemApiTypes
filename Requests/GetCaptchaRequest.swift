@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct GetCaptchaRequest: ApiGetRequest {
+public struct GetCaptchaRequest: GetRequest {
     public typealias Parameters = Int
     public typealias Response = ApiGetCaptchaResponse
     

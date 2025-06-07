@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct FollowCommunityRequest: ApiPostRequest {
+public struct FollowCommunityRequest: PostRequest {
     public typealias Body = ApiFollowCommunity
     public typealias Response = ApiCommunityResponse
     

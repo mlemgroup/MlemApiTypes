@@ -8,6 +8,7 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
 public struct ApiGetComments: Codable, Hashable, Sendable {
@@ -31,9 +32,9 @@ public struct ApiGetComments: Codable, Hashable, Sendable {
     public let parentId: Int?
     /// Lemmy availability: unavailable after 0.19.11
     public let savedOnly: Bool?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.11
     public let likedOnly: Bool?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.11
     public let dislikedOnly: Bool?
     /// Filter to within a given time range, in seconds.
     /// IE 60 would give results for the past minute.

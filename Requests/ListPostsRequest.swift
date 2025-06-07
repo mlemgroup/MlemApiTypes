@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct ListPostsRequest: ApiGetRequest {
+public struct ListPostsRequest: GetRequest {
     public typealias Parameters = ApiGetPosts
     public typealias Response = ApiGetPostsResponse
     

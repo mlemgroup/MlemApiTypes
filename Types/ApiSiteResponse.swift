@@ -8,13 +8,14 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
 public struct ApiSiteResponse: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let siteView: ApiSiteView
-    /// Lemmy availability: all versions
-    public let taglines: [ApiTagline]
+    /// Lemmy availability: unavailable after 0.19.11
+    public let taglines: [ApiTagline]?
 }
 
 public extension ApiSiteResponse {

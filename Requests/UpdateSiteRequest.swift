@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct UpdateSiteRequest: ApiPutRequest {
+public struct UpdateSiteRequest: PutRequest {
     public typealias Body = ApiEditSite
     public typealias Response = ApiSiteResponse
     

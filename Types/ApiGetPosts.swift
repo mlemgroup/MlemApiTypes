@@ -8,6 +8,7 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
 public struct ApiGetPosts: Codable, Hashable, Sendable {
@@ -26,9 +27,9 @@ public struct ApiGetPosts: Codable, Hashable, Sendable {
     public let communityName: String?
     /// Lemmy availability: unavailable after 0.19.11
     public let savedOnly: Bool?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.11
     public let likedOnly: Bool?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.11
     public let dislikedOnly: Bool?
     /// Lemmy availability: all versions
     public let pageCursor: String?

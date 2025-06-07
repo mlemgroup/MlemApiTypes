@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct ResetPasswordRequest: ApiPostRequest {
+public struct ResetPasswordRequest: PostRequest {
     public typealias Body = ApiPasswordReset
     public typealias Response = ApiSuccessResponse
     

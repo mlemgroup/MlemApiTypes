@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct UpdateCommunityRequest: ApiPutRequest {
+public struct UpdateCommunityRequest: PutRequest {
     public typealias Body = ApiEditCommunity
     public typealias Response = ApiCommunityResponse
     

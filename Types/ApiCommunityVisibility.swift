@@ -8,6 +8,7 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: available from 0.19.4 onwards
 public enum ApiCommunityVisibility: String, Codable, Sendable {

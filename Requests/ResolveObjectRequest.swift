@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct ResolveObjectRequest: ApiGetRequest {
+public struct ResolveObjectRequest: GetRequest {
     public typealias Parameters = ApiResolveObject
     public typealias Response = ApiResolveObjectResponse
     

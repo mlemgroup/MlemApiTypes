@@ -8,6 +8,7 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
 public struct ApiHideCommunity: Codable, Hashable, Sendable {

@@ -8,6 +8,7 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiModChangeCommunityVisibility: Codable, Hashable, Sendable {
@@ -20,8 +21,6 @@ public struct ApiModChangeCommunityVisibility: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let published: Date
     /// Lemmy availability: all versions
-    public let reason: String?
-    /// Lemmy availability: all versions
     public let visibility: ApiCommunityVisibility
 }
 
@@ -31,7 +30,6 @@ public extension ApiModChangeCommunityVisibility {
         case communityId = "community_id"
         case modPersonId = "mod_person_id"
         case published = "published"
-        case reason = "reason"
         case visibility = "visibility"
     }
 }

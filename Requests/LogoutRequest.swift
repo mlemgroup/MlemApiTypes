@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct LogoutRequest: ApiPostRequest {
+public struct LogoutRequest: PostRequest {
     public typealias Body = Int
     public typealias Response = Int
     

@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct CreatePostRequest: ApiPostRequest {
+public struct CreatePostRequest: PostRequest {
     public typealias Body = ApiCreatePost
     public typealias Response = ApiPostResponse
     

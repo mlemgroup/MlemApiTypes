@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: unavailable after 0.19.11
-public struct HideCommunityRequest: ApiPutRequest {
+public struct HideCommunityRequest: PutRequest {
     public typealias Body = ApiHideCommunity
     public typealias Response = ApiSuccessResponse
     

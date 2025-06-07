@@ -8,13 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiPostActions: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
-    public let postId: Int
-    /// Lemmy availability: all versions
-    public let personId: Int
     /// When the post was read.
     /// Lemmy availability: all versions
     public let read: Date?
@@ -41,8 +38,6 @@ public struct ApiPostActions: Codable, Hashable, Sendable {
 
 public extension ApiPostActions {
     enum CodingKeys: String, CodingKey {
-        case postId = "post_id"
-        case personId = "person_id"
         case read = "read"
         case readComments = "read_comments"
         case readCommentsAmount = "read_comments_amount"

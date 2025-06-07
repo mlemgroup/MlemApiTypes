@@ -8,13 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: available from 1.0.0-alpha onwards
 public struct ApiCommunityActions: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
-    public let communityId: Int
-    /// Lemmy availability: all versions
-    public let personId: Int
     /// When the community was followed.
     /// Lemmy availability: all versions
     public let followed: Date?
@@ -22,8 +19,6 @@ public struct ApiCommunityActions: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let followState: ApiCommunityFollowerState?
     /// The approver of the community follow.
-    /// Lemmy availability: all versions
-    public let followApproverId: Int?
     /// When the community was blocked.
     /// Lemmy availability: all versions
     public let blocked: Date?
@@ -40,11 +35,8 @@ public struct ApiCommunityActions: Codable, Hashable, Sendable {
 
 public extension ApiCommunityActions {
     enum CodingKeys: String, CodingKey {
-        case communityId = "community_id"
-        case personId = "person_id"
         case followed = "followed"
         case followState = "follow_state"
-        case followApproverId = "follow_approver_id"
         case blocked = "blocked"
         case becameModerator = "became_moderator"
         case receivedBan = "received_ban"

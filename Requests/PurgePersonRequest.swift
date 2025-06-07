@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct PurgePersonRequest: ApiPostRequest {
+public struct PurgePersonRequest: PostRequest {
     public typealias Body = ApiPurgePerson
     public typealias Response = ApiSuccessResponse
     

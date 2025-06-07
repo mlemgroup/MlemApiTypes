@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct UpdateTotpRequest: ApiPostRequest {
+public struct UpdateTotpRequest: PostRequest {
     public typealias Body = ApiUpdateTotp
     public typealias Response = ApiUpdateTotpResponse
     

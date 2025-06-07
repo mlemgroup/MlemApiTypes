@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct SaveUserSettingsRequest: ApiPutRequest {
+public struct SaveUserSettingsRequest: PutRequest {
     public typealias Body = ApiSaveUserSettings
     public typealias Response = ApiSuccessResponse
     

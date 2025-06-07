@@ -8,6 +8,7 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
 public struct ApiSearch: Codable, Hashable, Sendable {
@@ -45,6 +46,9 @@ public struct ApiSearch: Codable, Hashable, Sendable {
     public let likedOnly: Bool?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let dislikedOnly: Bool?
+    /// If true, then show the nsfw posts (even if your user setting is to hide them)
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let showNsfw: Bool?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let pageCursor: String?
     /// Lemmy availability: available from 1.0.0-alpha onwards
@@ -69,6 +73,7 @@ public extension ApiSearch {
         case postUrlOnly = "post_url_only"
         case likedOnly = "liked_only"
         case dislikedOnly = "disliked_only"
+        case showNsfw = "show_nsfw"
         case pageCursor = "page_cursor"
         case pageBack = "page_back"
     }

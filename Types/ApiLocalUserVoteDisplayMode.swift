@@ -8,6 +8,7 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: available between 0.19.4 and 0.19.11
 public struct ApiLocalUserVoteDisplayMode: Codable, Hashable, Sendable {

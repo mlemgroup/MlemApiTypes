@@ -8,9 +8,10 @@
 // ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
 
 import Foundation
+import Rest
 
 /// Lemmy availability: all versions
-public struct LikeCommentRequest: ApiPostRequest {
+public struct LikeCommentRequest: PostRequest {
     public typealias Body = ApiCreateCommentLike
     public typealias Response = ApiCommentResponse
     
