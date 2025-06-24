@@ -14,6 +14,7 @@ public struct PieFedGetSiteResponse: Codable, Hashable, Sendable {
     public let myUser: PieFedMyUserInfo?
     public let site: PieFedSite
     public let version: String
+    public let admins: [PieFedPersonView]
 }
 
 public extension PieFedGetSiteResponse {
@@ -21,5 +22,6 @@ public extension PieFedGetSiteResponse {
         case myUser = "my_user"
         case site = "site"
         case version = "version"
+        case admins = "admins"
     }
 }

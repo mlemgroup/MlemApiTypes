@@ -15,6 +15,7 @@ public struct PieFedPerson: Codable, Hashable, Sendable {
     public let avatar: URL?
     public let banned: Bool
     public let banner: URL?
+    public let about: String?
     public let bot: Bool
     public let deleted: Bool
     public let id: Int
@@ -31,6 +32,7 @@ public extension PieFedPerson {
         case avatar = "avatar"
         case banned = "banned"
         case banner = "banner"
+        case about = "about"
         case bot = "bot"
         case deleted = "deleted"
         case id = "id"
