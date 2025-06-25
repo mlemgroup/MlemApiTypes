@@ -18,13 +18,13 @@ public struct PieFedCreateCommentRequest: PostRequest {
     public let body: Body?
     
     init(
-      content: String,
+      body: String,
       postId: Int,
       parentId: Int?,
       languageId: Int?
     ) {
         self.body = .init(
-            content: content,
+            body: body,
             postId: postId,
             parentId: parentId,
             languageId: languageId

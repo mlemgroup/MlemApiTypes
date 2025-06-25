@@ -12,9 +12,9 @@ import Rest
 
 public struct PieFedLoginRequest: PostRequest {
     public typealias Body = PieFedLogin
-    public typealias Response = Int
+    public typealias Response = PieFedLoginResponse
     
-    public let path: String = "api/alpha/user/verify_credentials"
+    public let path: String = "api/alpha/user/login"
     public let body: Body?
     
     init(

@@ -19,7 +19,6 @@ public struct PieFedCommentReplyView: Codable, Hashable, Sendable {
     public let recipient: PieFedPerson
     public let counts: PieFedCommentAggregates
     public let creatorBannedFromCommunity: Bool
-    public let bannedFromCommunity: Bool
     public let creatorIsModerator: Bool
     public let creatorIsAdmin: Bool
     public let subscribed: PieFedSubscribedType
@@ -38,7 +37,6 @@ public extension PieFedCommentReplyView {
         case recipient = "recipient"
         case counts = "counts"
         case creatorBannedFromCommunity = "creator_banned_from_community"
-        case bannedFromCommunity = "banned_from_community"
         case creatorIsModerator = "creator_is_moderator"
         case creatorIsAdmin = "creator_is_admin"
         case subscribed = "subscribed"

@@ -14,7 +14,7 @@ public struct PieFedSaveCommentRequest: PutRequest {
     public typealias Body = PieFedSaveComment
     public typealias Response = PieFedCommentResponse
     
-    public let path: String = "api/alpha/comment/subscribe"
+    public let path: String = "api/alpha/comment/save"
     public let body: Body?
     
     init(

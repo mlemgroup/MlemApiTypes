@@ -1,5 +1,5 @@
 //
-//  PieFedEditCommentRequest.swift
+//  PieFedSubscribeCommentRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -10,22 +10,20 @@
 import Foundation
 import Rest
 
-public struct PieFedEditCommentRequest: PutRequest {
-    public typealias Body = PieFedEditComment
+public struct PieFedSubscribeCommentRequest: PutRequest {
+    public typealias Body = PieFedSubscribeComment
     public typealias Response = PieFedCommentResponse
     
-    public let path: String = "api/alpha/comment"
+    public let path: String = "api/alpha/comment/subscribe"
     public let body: Body?
     
     init(
       commentId: Int,
-      body: String?,
-      languageId: Int?
+      subscribe: Bool
     ) {
         self.body = .init(
             commentId: commentId,
-            body: body,
-            languageId: languageId
+            subscribe: subscribe
         )
     }
 }
