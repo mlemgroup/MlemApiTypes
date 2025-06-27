@@ -1,0 +1,31 @@
+//
+//  PieFedAddModToCommunityRequest.swift
+//  Mlem
+//
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
+//
+
+// ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
+
+import Foundation
+import Rest
+
+public struct PieFedAddModToCommunityRequest: PostRequest {
+    public typealias Body = PieFedAddModToCommunity
+    public typealias Response = PieFedAddModToCommunityResponse
+    
+    public let path: String = "api/alpha/community/mod"
+    public let body: Body?
+    
+    init(
+      communityId: Int,
+      personId: Int,
+      added: Bool
+    ) {
+        self.body = .init(
+            communityId: communityId,
+            personId: personId,
+            added: added
+        )
+    }
+}

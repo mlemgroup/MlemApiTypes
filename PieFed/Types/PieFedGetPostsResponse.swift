@@ -1,0 +1,21 @@
+//
+//  PieFedGetPostsResponse.swift
+//  Mlem
+//
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
+//
+
+// ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
+
+import Foundation
+import Rest
+
+public struct PieFedGetPostsResponse: Codable, Hashable, Sendable {
+    public let posts: [PieFedPostView]
+}
+
+public extension PieFedGetPostsResponse {
+    enum CodingKeys: String, CodingKey {
+        case posts = "posts"
+    }
+}
