@@ -26,7 +26,9 @@ public struct PieFedGetCommentsRequest: GetRequest {
       communityId: Int?,
       postId: Int?,
       parentId: Int?,
-      personId: Int?
+      personId: Int?,
+      likedOnly: Bool?,
+      savedOnly: Bool?
     ) {
         self.parameters = .init(
             type_: type_,
@@ -37,7 +39,9 @@ public struct PieFedGetCommentsRequest: GetRequest {
             communityId: communityId,
             postId: postId,
             parentId: parentId,
-            personId: personId
+            personId: personId,
+            likedOnly: likedOnly,
+            savedOnly: savedOnly
         )
     }
 }

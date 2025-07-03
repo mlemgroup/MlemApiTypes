@@ -19,6 +19,7 @@ public struct PieFedGetPosts: Codable, Hashable, Sendable {
     public let personId: Int?
     public let communityName: String?
     public let likedOnly: Bool?
+    public let savedOnly: Bool?
 }
 
 public extension PieFedGetPosts {
@@ -31,5 +32,6 @@ public extension PieFedGetPosts {
         case personId = "person_id"
         case communityName = "community_name"
         case likedOnly = "liked_only"
+        case savedOnly = "saved_only"
     }
 }
