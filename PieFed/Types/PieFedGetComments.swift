@@ -20,6 +20,8 @@ public struct PieFedGetComments: Codable, Hashable, Sendable {
     public let postId: Int?
     public let parentId: Int?
     public let personId: Int?
+    public let likedOnly: Bool?
+    public let savedOnly: Bool?
 }
 
 public extension PieFedGetComments {
@@ -33,5 +35,7 @@ public extension PieFedGetComments {
         case postId = "post_id"
         case parentId = "parent_id"
         case personId = "person_id"
+        case likedOnly = "liked_only"
+        case savedOnly = "saved_only"
     }
 }

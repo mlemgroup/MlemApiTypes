@@ -25,7 +25,8 @@ public struct PieFedGetPostsRequest: GetRequest {
       communityId: Int?,
       personId: Int?,
       communityName: String?,
-      likedOnly: Bool?
+      likedOnly: Bool?,
+      savedOnly: Bool?
     ) {
         self.parameters = .init(
             type_: type_,
@@ -35,7 +36,8 @@ public struct PieFedGetPostsRequest: GetRequest {
             communityId: communityId,
             personId: personId,
             communityName: communityName,
-            likedOnly: likedOnly
+            likedOnly: likedOnly,
+            savedOnly: savedOnly
         )
     }
 }
