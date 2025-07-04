@@ -12,7 +12,7 @@ import Rest
 
 public struct PieFedMarkPostAsReadRequest: PostRequest {
     public typealias Body = PieFedMarkPostAsRead
-    public typealias Response = Int
+    public typealias Response = PieFedSuccessResponse
     
     public let path: String = "api/alpha/post/mark_as_read"
     public let body: Body?
