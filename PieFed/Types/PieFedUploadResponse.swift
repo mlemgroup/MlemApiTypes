@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 public struct PieFedUploadResponse: Codable, Hashable, Sendable {
-    public let url: String
+    public let url: URL
 }
 
 public extension PieFedUploadResponse {
