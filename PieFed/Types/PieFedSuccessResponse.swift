@@ -1,5 +1,5 @@
 //
-//  PieFedUploadResponse.swift
+//  PieFedSuccessResponse.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -10,12 +10,12 @@
 import Foundation
 import Rest
 
-public struct PieFedUploadResponse: Codable, Hashable, Sendable {
-    public let url: URL
+public struct PieFedSuccessResponse: Codable, Hashable, Sendable {
+    public let success: Bool
 }
 
-public extension PieFedUploadResponse {
+public extension PieFedSuccessResponse {
     enum CodingKeys: String, CodingKey {
-        case url = "url"
+        case success = "success"
     }
 }
