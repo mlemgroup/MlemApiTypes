@@ -1,0 +1,35 @@
+//
+//  LemmyGetPersonDetailsResponse.swift
+//  Mlem
+//
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
+//
+
+// ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
+
+import Foundation
+import Rest
+
+/// Lemmy availability: all versions
+public struct LemmyGetPersonDetailsResponse: Codable, Hashable, Sendable {
+    /// Lemmy availability: all versions
+    public let personView: LemmyPersonView
+    /// Lemmy availability: unavailable after 0.19.12
+    public let comments: [LemmyCommentView]?
+    /// Lemmy availability: unavailable after 0.19.12
+    public let posts: [LemmyPostView]?
+    /// Lemmy availability: all versions
+    public let moderates: [LemmyCommunityModeratorView]
+    /// Lemmy availability: available from 0.19.4 onwards
+    public let site: LemmySite?
+}
+
+public extension LemmyGetPersonDetailsResponse {
+    enum CodingKeys: String, CodingKey {
+        case personView = "person_view"
+        case comments = "comments"
+        case posts = "posts"
+        case moderates = "moderates"
+        case site = "site"
+    }
+}

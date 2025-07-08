@@ -1,0 +1,35 @@
+//
+//  LemmyModBanFromCommunityView.swift
+//  Mlem
+//
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
+//
+
+// ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
+
+import Foundation
+import Rest
+
+/// Lemmy availability: all versions
+public struct LemmyModBanFromCommunityView: Codable, Hashable, Sendable {
+    /// Lemmy availability: all versions
+    public let modBanFromCommunity: LemmyModBanFromCommunity
+    /// Lemmy availability: all versions
+    public let moderator: LemmyPerson?
+    /// Lemmy availability: all versions
+    public let community: LemmyCommunity
+    /// Lemmy availability: unavailable after 0.19.12
+    public let bannedPerson: LemmyPerson?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let otherPerson: LemmyPerson?
+}
+
+public extension LemmyModBanFromCommunityView {
+    enum CodingKeys: String, CodingKey {
+        case modBanFromCommunity = "mod_ban_from_community"
+        case moderator = "moderator"
+        case community = "community"
+        case bannedPerson = "banned_person"
+        case otherPerson = "other_person"
+    }
+}

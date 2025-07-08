@@ -1,0 +1,39 @@
+//
+//  LemmyCommentAggregates.swift
+//  Mlem
+//
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
+//
+
+// ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
+
+import Foundation
+import Rest
+
+/// Lemmy availability: unavailable after 0.19.12
+public struct LemmyCommentAggregates: Codable, Hashable, Sendable {
+    /// Lemmy availability: all versions
+    public let commentId: Int
+    /// Lemmy availability: all versions
+    public let score: Int
+    /// Lemmy availability: all versions
+    public let upvotes: Int
+    /// Lemmy availability: all versions
+    public let downvotes: Int
+    /// Lemmy availability: all versions
+    public let published: Date
+    /// The total number of children in this comment branch.
+    /// Lemmy availability: all versions
+    public let childCount: Int
+}
+
+public extension LemmyCommentAggregates {
+    enum CodingKeys: String, CodingKey {
+        case commentId = "comment_id"
+        case score = "score"
+        case upvotes = "upvotes"
+        case downvotes = "downvotes"
+        case published = "published"
+        case childCount = "child_count"
+    }
+}
