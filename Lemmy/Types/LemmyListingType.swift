@@ -20,4 +20,6 @@ public enum LemmyListingType: String, Codable, Sendable {
     case subscribed = "Subscribed"
     /// Lemmy availability: all versions
     case moderatorView = "ModeratorView"
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    case suggested = "Suggested"
 }

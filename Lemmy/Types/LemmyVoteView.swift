@@ -18,6 +18,8 @@ public struct LemmyVoteView: Codable, Hashable, Sendable {
     public let score: Int
     /// Lemmy availability: available from 0.19.4 onwards
     public let creatorBannedFromCommunity: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let creatorBanned: Bool?
 }
 
 public extension LemmyVoteView {
@@ -25,5 +27,6 @@ public extension LemmyVoteView {
         case creator = "creator"
         case score = "score"
         case creatorBannedFromCommunity = "creator_banned_from_community"
+        case creatorBanned = "creator_banned"
     }
 }

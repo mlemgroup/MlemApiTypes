@@ -66,9 +66,9 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     /// The captcha difficulty.
     /// Lemmy availability: all versions
     public let captchaDifficulty: String
-    /// Lemmy availability: all versions
-    public let published: Date
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
+    public let published: Date?
+    /// Lemmy availability: unavailable after 0.19.12
     public let updated: Date?
     /// Lemmy availability: all versions
     public let registrationMode: LemmyRegistrationMode
@@ -85,6 +85,10 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     /// Default value for [LocalUser.post_listing_mode]
     /// Lemmy availability: available between 0.19.4 and 0.19.12
     public let defaultSortType: LemmySortType?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let publishedAt: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let updatedAt: Date?
     /// Default value for [LocalUser.post_sort_type]
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let defaultPostSortType: LemmyPostSortType?
@@ -135,6 +139,10 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     /// Dont send email notifications to users for new replies, mentions etc
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let disableEmailNotifications: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let suggestedCommunities: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let multiCommFollower: Int?
 }
 
 public extension LemmyLocalSite {
@@ -165,6 +173,8 @@ public extension LemmyLocalSite {
         case federationSignedFetch = "federation_signed_fetch"
         case defaultPostListingMode = "default_post_listing_mode"
         case defaultSortType = "default_sort_type"
+        case publishedAt = "published_at"
+        case updatedAt = "updated_at"
         case defaultPostSortType = "default_post_sort_type"
         case defaultCommentSortType = "default_comment_sort_type"
         case oauthRegistration = "oauth_registration"
@@ -183,5 +193,7 @@ public extension LemmyLocalSite {
         case usersActiveMonth = "users_active_month"
         case usersActiveHalfYear = "users_active_half_year"
         case disableEmailNotifications = "disable_email_notifications"
+        case suggestedCommunities = "suggested_communities"
+        case multiCommFollower = "multi_comm_follower"
     }
 }

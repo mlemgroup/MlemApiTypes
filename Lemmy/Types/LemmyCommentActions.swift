@@ -17,16 +17,16 @@ public struct LemmyCommentActions: Codable, Hashable, Sendable {
     public let likeScore: Int?
     /// When the comment was liked.
     /// Lemmy availability: all versions
-    public let liked: Date?
+    public let likedAt: Date?
     /// When the comment was saved.
     /// Lemmy availability: all versions
-    public let saved: Date?
+    public let savedAt: Date?
 }
 
 public extension LemmyCommentActions {
     enum CodingKeys: String, CodingKey {
         case likeScore = "like_score"
-        case liked = "liked"
-        case saved = "saved"
+        case likedAt = "liked_at"
+        case savedAt = "saved_at"
     }
 }

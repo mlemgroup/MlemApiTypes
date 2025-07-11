@@ -23,9 +23,9 @@ public struct LemmyComment: Codable, Hashable, Sendable {
     /// Whether the comment has been removed.
     /// Lemmy availability: all versions
     public let removed: Bool
-    /// Lemmy availability: all versions
-    public let published: Date
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
+    public let published: Date?
+    /// Lemmy availability: unavailable after 0.19.12
     public let updated: Date?
     /// Whether the comment has been deleted by its creator.
     /// Lemmy availability: all versions
@@ -44,6 +44,10 @@ public struct LemmyComment: Codable, Hashable, Sendable {
     public let distinguished: Bool
     /// Lemmy availability: all versions
     public let languageId: Int
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let publishedAt: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let updatedAt: Date?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let score: Int?
     /// Lemmy availability: available from 1.0.0-alpha onwards
@@ -78,6 +82,8 @@ public extension LemmyComment {
         case path = "path"
         case distinguished = "distinguished"
         case languageId = "language_id"
+        case publishedAt = "published_at"
+        case updatedAt = "updated_at"
         case score = "score"
         case upvotes = "upvotes"
         case downvotes = "downvotes"

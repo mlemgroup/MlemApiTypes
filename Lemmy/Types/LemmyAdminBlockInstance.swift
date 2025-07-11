@@ -23,9 +23,9 @@ public struct LemmyAdminBlockInstance: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let reason: String?
     /// Lemmy availability: all versions
-    public let expires: Date?
+    public let expiresAt: Date?
     /// Lemmy availability: all versions
-    public let published: Date
+    public let publishedAt: Date
 }
 
 public extension LemmyAdminBlockInstance {
@@ -35,7 +35,7 @@ public extension LemmyAdminBlockInstance {
         case adminPersonId = "admin_person_id"
         case blocked = "blocked"
         case reason = "reason"
-        case expires = "expires"
-        case published = "published"
+        case expiresAt = "expires_at"
+        case publishedAt = "published_at"
     }
 }

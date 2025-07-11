@@ -20,7 +20,7 @@ public struct LemmySearchRequest: GetRequest {
     
     init(
       endpoint: SiteVersion.EndpointVersion,
-      q: String?,
+      q: String,
       communityId: Int?,
       communityName: String?,
       creatorId: Int?,
@@ -30,7 +30,6 @@ public struct LemmySearchRequest: GetRequest {
       page: Int?,
       limit: Int?,
       postTitleOnly: Bool?,
-      searchTerm: String?,
       timeRangeSeconds: Int?,
       titleOnly: Bool?,
       postUrlOnly: Bool?,
@@ -52,7 +51,6 @@ public struct LemmySearchRequest: GetRequest {
             page: page,
             limit: limit,
             postTitleOnly: postTitleOnly,
-            searchTerm: searchTerm,
             timeRangeSeconds: timeRangeSeconds,
             titleOnly: titleOnly,
             postUrlOnly: postUrlOnly,

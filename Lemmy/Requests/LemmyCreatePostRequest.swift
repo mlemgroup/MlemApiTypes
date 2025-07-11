@@ -30,7 +30,7 @@ public struct LemmyCreatePostRequest: PostRequest {
       altText: String?,
       customThumbnail: String?,
       tags: [Int]?,
-      scheduledPublishTime: Int?
+      scheduledPublishTimeAt: Int?
     ) {
         self.path = endpoint == .v4 ? "api/v4/post" : "api/v3/post"
         self.body = .init(
@@ -44,7 +44,7 @@ public struct LemmyCreatePostRequest: PostRequest {
             altText: altText,
             customThumbnail: customThumbnail,
             tags: tags,
-            scheduledPublishTime: scheduledPublishTime
+            scheduledPublishTimeAt: scheduledPublishTimeAt
         )
     }
 }

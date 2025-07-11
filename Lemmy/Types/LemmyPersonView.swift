@@ -19,9 +19,7 @@ public struct LemmyPersonView: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let isAdmin: Bool
     /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let homeInstanceActions: LemmyInstanceActions?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let localInstanceActions: LemmyInstanceActions?
+    public let personActions: LemmyPersonActions?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let creatorBanned: Bool?
 }
@@ -31,8 +29,7 @@ public extension LemmyPersonView {
         case person = "person"
         case counts = "counts"
         case isAdmin = "is_admin"
-        case homeInstanceActions = "home_instance_actions"
-        case localInstanceActions = "local_instance_actions"
+        case personActions = "person_actions"
         case creatorBanned = "creator_banned"
     }
 }

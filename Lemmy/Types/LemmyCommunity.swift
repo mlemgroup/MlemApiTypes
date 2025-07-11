@@ -25,9 +25,9 @@ public struct LemmyCommunity: Codable, Hashable, Sendable {
     /// Whether the community is removed by a mod.
     /// Lemmy availability: all versions
     public let removed: Bool
-    /// Lemmy availability: all versions
-    public let published: Date
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
+    public let published: Date?
+    /// Lemmy availability: unavailable after 0.19.12
     public let updated: Date?
     /// Whether the community has been deleted by its creator.
     /// Lemmy availability: all versions
@@ -62,6 +62,10 @@ public struct LemmyCommunity: Codable, Hashable, Sendable {
     /// A sidebar for the community in markdown.
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let sidebar: String?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let publishedAt: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let updatedAt: Date?
     /// The federated ap_id.
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let apId: ActorIdentifier?
@@ -114,6 +118,8 @@ public extension LemmyCommunity {
         case instanceId = "instance_id"
         case visibility = "visibility"
         case sidebar = "sidebar"
+        case publishedAt = "published_at"
+        case updatedAt = "updated_at"
         case apId = "ap_id"
         case subscribers = "subscribers"
         case posts = "posts"

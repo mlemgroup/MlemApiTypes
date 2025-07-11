@@ -112,6 +112,9 @@ public struct LemmySaveUserSettings: Codable, Hashable, Sendable {
     /// Whether to hide posts containing images/videos.
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let hideMedia: Bool?
+    /// Whether to show vote totals given to others.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let showPersonVotes: Bool?
 }
 
 public extension LemmySaveUserSettings {
@@ -152,5 +155,6 @@ public extension LemmySaveUserSettings {
         case enablePrivateMessages = "enable_private_messages"
         case autoMarkFetchedPostsAsRead = "auto_mark_fetched_posts_as_read"
         case hideMedia = "hide_media"
+        case showPersonVotes = "show_person_votes"
     }
 }

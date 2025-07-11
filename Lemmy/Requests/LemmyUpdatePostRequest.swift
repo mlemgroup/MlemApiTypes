@@ -28,7 +28,7 @@ public struct LemmyUpdatePostRequest: PutRequest {
       languageId: Int?,
       altText: String?,
       customThumbnail: String?,
-      scheduledPublishTime: Int?,
+      scheduledPublishTimeAt: Int?,
       tags: [Int]?
     ) {
         self.path = endpoint == .v4 ? "api/v4/post" : "api/v3/post"
@@ -41,7 +41,7 @@ public struct LemmyUpdatePostRequest: PutRequest {
             languageId: languageId,
             altText: altText,
             customThumbnail: customThumbnail,
-            scheduledPublishTime: scheduledPublishTime,
+            scheduledPublishTimeAt: scheduledPublishTimeAt,
             tags: tags
         )
     }

@@ -25,7 +25,8 @@ public struct LemmyBanFromSiteRequest: PostRequest {
       removeData: Bool?,
       reason: String?,
       expires: Int?,
-      removeOrRestoreData: Bool?
+      removeOrRestoreData: Bool?,
+      expiresAt: Int?
     ) {
         self.path = endpoint == .v4 ? "api/v4/admin/ban" : "api/v3/user/ban"
         self.body = .init(
@@ -34,7 +35,8 @@ public struct LemmyBanFromSiteRequest: PostRequest {
             removeData: removeData,
             reason: reason,
             expires: expires,
-            removeOrRestoreData: removeOrRestoreData
+            removeOrRestoreData: removeOrRestoreData,
+            expiresAt: expiresAt
         )
     }
 }

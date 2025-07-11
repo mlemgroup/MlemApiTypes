@@ -22,10 +22,10 @@ public struct LemmyCommentView: Codable, Hashable, Sendable {
     public let community: LemmyCommunity
     /// Lemmy availability: unavailable after 0.19.12
     public let counts: LemmyCommentAggregates?
-    /// Lemmy availability: unavailable after 0.19.12
-    public let creatorBannedFromCommunity: Bool?
-    /// Lemmy availability: unavailable after 0.19.12
-    public let creatorIsModerator: Bool?
+    /// Lemmy availability: all versions
+    public let creatorBannedFromCommunity: Bool
+    /// Lemmy availability: all versions
+    public let creatorIsModerator: Bool
     /// Lemmy availability: all versions
     public let creatorIsAdmin: Bool
     /// Lemmy availability: unavailable after 0.19.12
@@ -46,12 +46,6 @@ public struct LemmyCommentView: Codable, Hashable, Sendable {
     public let personActions: LemmyPersonActions?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let instanceActions: LemmyInstanceActions?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let creatorHomeInstanceActions: LemmyInstanceActions?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let creatorLocalInstanceActions: LemmyInstanceActions?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let creatorCommunityActions: LemmyCommunityActions?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let postTags: [LemmyTag]?
     /// Lemmy availability: available from 1.0.0-alpha onwards
@@ -79,9 +73,6 @@ public extension LemmyCommentView {
         case commentActions = "comment_actions"
         case personActions = "person_actions"
         case instanceActions = "instance_actions"
-        case creatorHomeInstanceActions = "creator_home_instance_actions"
-        case creatorLocalInstanceActions = "creator_local_instance_actions"
-        case creatorCommunityActions = "creator_community_actions"
         case postTags = "post_tags"
         case canMod = "can_mod"
         case creatorBanned = "creator_banned"

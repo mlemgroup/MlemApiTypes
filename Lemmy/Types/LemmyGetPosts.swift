@@ -46,6 +46,8 @@ public struct LemmyGetPosts: Codable, Hashable, Sendable {
     /// Use Zero to override the local_site and local_user time_range.
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let timeRangeSeconds: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let multiCommunityId: Int?
     /// If false, then show posts with media attached (even if your user setting is to hide them)
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let hideMedia: Bool?
@@ -75,6 +77,7 @@ public extension LemmyGetPosts {
         case showRead = "show_read"
         case showNsfw = "show_nsfw"
         case timeRangeSeconds = "time_range_seconds"
+        case multiCommunityId = "multi_community_id"
         case hideMedia = "hide_media"
         case markAsRead = "mark_as_read"
         case noCommentsOnly = "no_comments_only"

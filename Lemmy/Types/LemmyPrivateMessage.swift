@@ -24,9 +24,9 @@ public struct LemmyPrivateMessage: Codable, Hashable, Sendable {
     public let deleted: Bool
     /// Lemmy availability: all versions
     public let read: Bool
-    /// Lemmy availability: all versions
-    public let published: Date
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
+    public let published: Date?
+    /// Lemmy availability: unavailable after 0.19.12
     public let updated: Date?
     /// Lemmy availability: all versions
     public let apId: ActorIdentifier
@@ -34,6 +34,10 @@ public struct LemmyPrivateMessage: Codable, Hashable, Sendable {
     public let local: Bool
     /// Lemmy availability: available from 0.19.10 onwards
     public let removed: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let publishedAt: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let updatedAt: Date?
 }
 
 public extension LemmyPrivateMessage {
@@ -49,5 +53,7 @@ public extension LemmyPrivateMessage {
         case apId = "ap_id"
         case local = "local"
         case removed = "removed"
+        case publishedAt = "published_at"
+        case updatedAt = "updated_at"
     }
 }

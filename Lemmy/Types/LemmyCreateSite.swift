@@ -50,29 +50,29 @@ public struct LemmyCreateSite: Codable, Hashable, Sendable {
     public let slurFilterRegex: String?
     /// Lemmy availability: all versions
     public let actorNameMaxLength: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitMessage: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitMessagePerSecond: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitPost: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitPostPerSecond: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitRegister: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitRegisterPerSecond: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitImage: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitImagePerSecond: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitComment: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitCommentPerSecond: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitSearch: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitSearchPerSecond: Int?
     /// Lemmy availability: all versions
     public let federationEnabled: Bool?
@@ -103,6 +103,34 @@ public struct LemmyCreateSite: Codable, Hashable, Sendable {
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let defaultCommentSortType: LemmyCommentSortType?
     /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitMessageMaxRequests: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitMessageIntervalSeconds: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitPostMaxRequests: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitPostIntervalSeconds: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitRegisterMaxRequests: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitRegisterIntervalSeconds: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitImageMaxRequests: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitImageIntervalSeconds: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitCommentMaxRequests: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitCommentIntervalSeconds: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitSearchMaxRequests: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitSearchIntervalSeconds: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitImportUserSettingsMaxRequests: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitImportUserSettingsIntervalSeconds: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
     public let oauthRegistration: Bool?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let postUpvotes: LemmyFederationMode?
@@ -116,6 +144,8 @@ public struct LemmyCreateSite: Codable, Hashable, Sendable {
     public let disallowNsfwContent: Bool?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let disableEmailNotifications: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let suggestedCommunities: Int?
 }
 
 public extension LemmyCreateSite {
@@ -165,6 +195,20 @@ public extension LemmyCreateSite {
         case defaultPostSortType = "default_post_sort_type"
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
         case defaultCommentSortType = "default_comment_sort_type"
+        case rateLimitMessageMaxRequests = "rate_limit_message_max_requests"
+        case rateLimitMessageIntervalSeconds = "rate_limit_message_interval_seconds"
+        case rateLimitPostMaxRequests = "rate_limit_post_max_requests"
+        case rateLimitPostIntervalSeconds = "rate_limit_post_interval_seconds"
+        case rateLimitRegisterMaxRequests = "rate_limit_register_max_requests"
+        case rateLimitRegisterIntervalSeconds = "rate_limit_register_interval_seconds"
+        case rateLimitImageMaxRequests = "rate_limit_image_max_requests"
+        case rateLimitImageIntervalSeconds = "rate_limit_image_interval_seconds"
+        case rateLimitCommentMaxRequests = "rate_limit_comment_max_requests"
+        case rateLimitCommentIntervalSeconds = "rate_limit_comment_interval_seconds"
+        case rateLimitSearchMaxRequests = "rate_limit_search_max_requests"
+        case rateLimitSearchIntervalSeconds = "rate_limit_search_interval_seconds"
+        case rateLimitImportUserSettingsMaxRequests = "rate_limit_import_user_settings_max_requests"
+        case rateLimitImportUserSettingsIntervalSeconds = "rate_limit_import_user_settings_interval_seconds"
         case oauthRegistration = "oauth_registration"
         case postUpvotes = "post_upvotes"
         case postDownvotes = "post_downvotes"
@@ -172,5 +216,6 @@ public extension LemmyCreateSite {
         case commentDownvotes = "comment_downvotes"
         case disallowNsfwContent = "disallow_nsfw_content"
         case disableEmailNotifications = "disable_email_notifications"
+        case suggestedCommunities = "suggested_communities"
     }
 }

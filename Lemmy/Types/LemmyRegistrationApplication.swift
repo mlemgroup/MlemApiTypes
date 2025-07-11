@@ -22,8 +22,10 @@ public struct LemmyRegistrationApplication: Codable, Hashable, Sendable {
     public let adminId: Int?
     /// Lemmy availability: all versions
     public let denyReason: String?
-    /// Lemmy availability: all versions
-    public let published: Date
+    /// Lemmy availability: unavailable after 0.19.12
+    public let published: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let publishedAt: Date?
 }
 
 public extension LemmyRegistrationApplication {
@@ -34,5 +36,6 @@ public extension LemmyRegistrationApplication {
         case adminId = "admin_id"
         case denyReason = "deny_reason"
         case published = "published"
+        case publishedAt = "published_at"
     }
 }

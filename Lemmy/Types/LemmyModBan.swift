@@ -22,12 +22,14 @@ public struct LemmyModBan: Codable, Hashable, Sendable {
     public let reason: String?
     /// Lemmy availability: all versions
     public let banned: Bool
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let expires: Date?
     /// Lemmy availability: unavailable after 0.19.12
     public let when_: Date?
     /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let published: Date?
+    public let expiresAt: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let publishedAt: Date?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let instanceId: Int?
 }
@@ -41,7 +43,8 @@ public extension LemmyModBan {
         case banned = "banned"
         case expires = "expires"
         case when_ = "when_"
-        case published = "published"
+        case expiresAt = "expires_at"
+        case publishedAt = "published_at"
         case instanceId = "instance_id"
     }
 }

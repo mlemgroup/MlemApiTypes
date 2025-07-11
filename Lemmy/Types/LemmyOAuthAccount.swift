@@ -19,9 +19,9 @@ public struct LemmyOAuthAccount: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let oauthUserId: String
     /// Lemmy availability: all versions
-    public let published: Date
+    public let publishedAt: Date
     /// Lemmy availability: all versions
-    public let updated: Date?
+    public let updatedAt: Date?
 }
 
 public extension LemmyOAuthAccount {
@@ -29,7 +29,7 @@ public extension LemmyOAuthAccount {
         case localUserId = "local_user_id"
         case oauthProviderId = "oauth_provider_id"
         case oauthUserId = "oauth_user_id"
-        case published = "published"
-        case updated = "updated"
+        case publishedAt = "published_at"
+        case updatedAt = "updated_at"
     }
 }

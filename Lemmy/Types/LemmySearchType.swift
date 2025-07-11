@@ -24,4 +24,6 @@ public enum LemmySearchType: String, Codable, Sendable {
     case users = "Users"
     /// Lemmy availability: unavailable after 0.19.12
     case url = "Url"
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    case multiCommunities = "MultiCommunities"
 }

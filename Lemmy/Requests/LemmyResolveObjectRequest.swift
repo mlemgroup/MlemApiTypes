@@ -13,7 +13,7 @@ import Rest
 /// Lemmy availability: all versions
 public struct LemmyResolveObjectRequest: GetRequest {
     public typealias Parameters = LemmyResolveObject
-    public typealias Response = LemmyResolveObjectResponse
+    public typealias Response = LemmyResolveObjectResponseUnion
     
     public let path: String
     public let parameters: Parameters?
@@ -26,5 +26,19 @@ public struct LemmyResolveObjectRequest: GetRequest {
         self.parameters = .init(
             q: q
         )
+    }
+}
+
+public enum LemmyResolveObjectResponseUnion: Decodable {
+    case lemmyResolveObjectResponse(LemmyResolveObjectResponse)
+    case lemmySearchResponse(LemmySearchResponse)
+    
+    public init(from decoder: Decoder) throws {
+        if let value = try? LemmyResolveObjectResponse(from: decoder) {
+            self = .lemmyResolveObjectResponse(value)
+            return
+        }
+        let value = try LemmySearchResponse(from: decoder)
+        self = .lemmySearchResponse(value)
     }
 }

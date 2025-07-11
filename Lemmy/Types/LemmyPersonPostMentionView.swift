@@ -33,12 +33,6 @@ public struct LemmyPersonPostMentionView: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let instanceActions: LemmyInstanceActions?
     /// Lemmy availability: all versions
-    public let creatorHomeInstanceActions: LemmyInstanceActions?
-    /// Lemmy availability: all versions
-    public let creatorLocalInstanceActions: LemmyInstanceActions?
-    /// Lemmy availability: all versions
-    public let creatorCommunityActions: LemmyCommunityActions?
-    /// Lemmy availability: all versions
     public let postTags: [LemmyTag]
     /// Lemmy availability: all versions
     public let creatorIsAdmin: Bool
@@ -46,6 +40,10 @@ public struct LemmyPersonPostMentionView: Codable, Hashable, Sendable {
     public let canMod: Bool
     /// Lemmy availability: all versions
     public let creatorBanned: Bool
+    /// Lemmy availability: all versions
+    public let creatorIsModerator: Bool
+    /// Lemmy availability: all versions
+    public let creatorBannedFromCommunity: Bool
 }
 
 public extension LemmyPersonPostMentionView {
@@ -60,12 +58,11 @@ public extension LemmyPersonPostMentionView {
         case personActions = "person_actions"
         case postActions = "post_actions"
         case instanceActions = "instance_actions"
-        case creatorHomeInstanceActions = "creator_home_instance_actions"
-        case creatorLocalInstanceActions = "creator_local_instance_actions"
-        case creatorCommunityActions = "creator_community_actions"
         case postTags = "post_tags"
         case creatorIsAdmin = "creator_is_admin"
         case canMod = "can_mod"
         case creatorBanned = "creator_banned"
+        case creatorIsModerator = "creator_is_moderator"
+        case creatorBannedFromCommunity = "creator_banned_from_community"
     }
 }

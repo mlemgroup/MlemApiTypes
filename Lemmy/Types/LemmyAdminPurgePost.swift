@@ -23,7 +23,7 @@ public struct LemmyAdminPurgePost: Codable, Hashable, Sendable {
     /// Lemmy availability: unavailable after 0.19.12
     public let when_: Date?
     /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let published: Date?
+    public let publishedAt: Date?
 }
 
 public extension LemmyAdminPurgePost {
@@ -33,6 +33,6 @@ public extension LemmyAdminPurgePost {
         case communityId = "community_id"
         case reason = "reason"
         case when_ = "when_"
-        case published = "published"
+        case publishedAt = "published_at"
     }
 }

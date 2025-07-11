@@ -22,12 +22,17 @@ public struct LemmyBanFromCommunity: Codable, Hashable, Sendable {
     public let removeData: Bool?
     /// Lemmy availability: all versions
     public let reason: String?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let expires: Int?
     /// Optionally remove or restore all their data. Useful for new troll accounts.
     /// If ban is true, then this means remove. If ban is false, it means restore.
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let removeOrRestoreData: Bool?
+    /// A time that the ban will expire, in unix epoch seconds.
+    /// 
+    /// An i64 unix timestamp is used for a simpler API client implementation.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let expiresAt: Int?
 }
 
 public extension LemmyBanFromCommunity {
@@ -39,5 +44,6 @@ public extension LemmyBanFromCommunity {
         case reason = "reason"
         case expires = "expires"
         case removeOrRestoreData = "remove_or_restore_data"
+        case expiresAt = "expires_at"
     }
 }

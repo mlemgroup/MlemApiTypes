@@ -25,7 +25,7 @@ public struct LemmyModFeaturePost: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let isFeaturedCommunity: Bool
     /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let published: Date?
+    public let publishedAt: Date?
 }
 
 public extension LemmyModFeaturePost {
@@ -36,6 +36,6 @@ public extension LemmyModFeaturePost {
         case featured = "featured"
         case when_ = "when_"
         case isFeaturedCommunity = "is_featured_community"
-        case published = "published"
+        case publishedAt = "published_at"
     }
 }

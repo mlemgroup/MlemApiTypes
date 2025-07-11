@@ -18,10 +18,10 @@ public struct LemmyPostView: Codable, Hashable, Sendable {
     public let creator: LemmyPerson
     /// Lemmy availability: all versions
     public let community: LemmyCommunity
-    /// Lemmy availability: unavailable after 0.19.12
-    public let creatorBannedFromCommunity: Bool?
-    /// Lemmy availability: unavailable after 0.19.12
-    public let creatorIsModerator: Bool?
+    /// Lemmy availability: all versions
+    public let creatorBannedFromCommunity: Bool
+    /// Lemmy availability: all versions
+    public let creatorIsModerator: Bool
     /// Lemmy availability: all versions
     public let creatorIsAdmin: Bool
     /// Lemmy availability: unavailable after 0.19.12
@@ -53,12 +53,6 @@ public struct LemmyPostView: Codable, Hashable, Sendable {
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let instanceActions: LemmyInstanceActions?
     /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let creatorHomeInstanceActions: LemmyInstanceActions?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let creatorLocalInstanceActions: LemmyInstanceActions?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let creatorCommunityActions: LemmyCommunityActions?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
     public let tags: [LemmyTag]?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let canMod: Bool?
@@ -88,9 +82,6 @@ public extension LemmyPostView {
         case personActions = "person_actions"
         case postActions = "post_actions"
         case instanceActions = "instance_actions"
-        case creatorHomeInstanceActions = "creator_home_instance_actions"
-        case creatorLocalInstanceActions = "creator_local_instance_actions"
-        case creatorCommunityActions = "creator_community_actions"
         case tags = "tags"
         case canMod = "can_mod"
         case creatorBanned = "creator_banned"

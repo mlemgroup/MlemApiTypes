@@ -20,8 +20,10 @@ public struct LemmyCommentReply: Codable, Hashable, Sendable {
     public let commentId: Int
     /// Lemmy availability: all versions
     public let read: Bool
-    /// Lemmy availability: all versions
-    public let published: Date
+    /// Lemmy availability: unavailable after 0.19.12
+    public let published: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let publishedAt: Date?
 }
 
 public extension LemmyCommentReply {
@@ -31,5 +33,6 @@ public extension LemmyCommentReply {
         case commentId = "comment_id"
         case read = "read"
         case published = "published"
+        case publishedAt = "published_at"
     }
 }

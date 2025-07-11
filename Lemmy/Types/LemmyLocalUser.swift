@@ -78,7 +78,7 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     public let collapseBotComments: Bool
     /// The last time a donation request was shown to this user. If this is more than a year ago,
     /// a new notification request should be shown.
-    /// Lemmy availability: available from 0.19.11 onwards
+    /// Lemmy availability: available between 0.19.11 and 0.19.12
     public let lastDonationNotification: Date?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let defaultPostSortType: LemmyPostSortType?
@@ -90,6 +90,10 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     /// Whether to automatically mark fetched posts as read.
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let autoMarkFetchedPostsAsRead: Bool?
+    /// The last time a donation request was shown to this user. If this is more than a year ago,
+    /// a new notification request should be shown.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let lastDonationNotificationAt: Date?
     /// Whether to hide posts containing images/videos
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let hideMedia: Bool?
@@ -104,6 +108,8 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     public let showDownvotes: LemmyVoteShow?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let showUpvotePercentage: Bool?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let showPersonVotes: Bool?
 }
 
 public extension LemmyLocalUser {
@@ -138,11 +144,13 @@ public extension LemmyLocalUser {
         case enablePrivateMessages = "enable_private_messages"
         case defaultCommentSortType = "default_comment_sort_type"
         case autoMarkFetchedPostsAsRead = "auto_mark_fetched_posts_as_read"
+        case lastDonationNotificationAt = "last_donation_notification_at"
         case hideMedia = "hide_media"
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
         case showScore = "show_score"
         case showUpvotes = "show_upvotes"
         case showDownvotes = "show_downvotes"
         case showUpvotePercentage = "show_upvote_percentage"
+        case showPersonVotes = "show_person_votes"
     }
 }

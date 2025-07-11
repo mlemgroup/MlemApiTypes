@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Lemmy availability: unavailable after 0.19.12
 public struct LemmyResolveObjectResponse: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let comment: LemmyCommentView?

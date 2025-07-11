@@ -22,13 +22,13 @@ public struct LemmyAdminBlockInstanceRequest: PostRequest {
       instance: String,
       block: Bool,
       reason: String?,
-      expires: Date?
+      expiresAt: Date?
     ) {
         self.body = .init(
             instance: instance,
             block: block,
             reason: reason,
-            expires: expires
+            expiresAt: expiresAt
         )
     }
 }

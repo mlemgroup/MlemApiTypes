@@ -12,8 +12,8 @@ import Rest
 
 /// Lemmy availability: all versions
 public struct LemmySearch: Codable, Hashable, Sendable {
-    /// Lemmy availability: unavailable after 0.19.12
-    public let q: String?
+    /// Lemmy availability: all versions
+    public let q: String
     /// Lemmy availability: all versions
     public let communityId: Int?
     /// Lemmy availability: all versions
@@ -32,8 +32,6 @@ public struct LemmySearch: Codable, Hashable, Sendable {
     public let limit: Int?
     /// Lemmy availability: available between 0.19.6 and 0.19.12
     public let postTitleOnly: Bool?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let searchTerm: String?
     /// Filter to within a given time range, in seconds.
     /// IE 60 would give results for the past minute.
     /// Lemmy availability: available from 1.0.0-alpha onwards
@@ -67,7 +65,6 @@ public extension LemmySearch {
         case page = "page"
         case limit = "limit"
         case postTitleOnly = "post_title_only"
-        case searchTerm = "search_term"
         case timeRangeSeconds = "time_range_seconds"
         case titleOnly = "title_only"
         case postUrlOnly = "post_url_only"

@@ -21,7 +21,7 @@ public struct LemmyPersonPostMention: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let read: Bool
     /// Lemmy availability: all versions
-    public let published: Date
+    public let publishedAt: Date
 }
 
 public extension LemmyPersonPostMention {
@@ -30,6 +30,6 @@ public extension LemmyPersonPostMention {
         case recipientId = "recipient_id"
         case postId = "post_id"
         case read = "read"
-        case published = "published"
+        case publishedAt = "published_at"
     }
 }

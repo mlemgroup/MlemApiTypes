@@ -19,7 +19,7 @@ public struct LemmyAdminBlockInstanceParams: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let reason: String?
     /// Lemmy availability: all versions
-    public let expires: Date?
+    public let expiresAt: Date?
 }
 
 public extension LemmyAdminBlockInstanceParams {
@@ -27,6 +27,6 @@ public extension LemmyAdminBlockInstanceParams {
         case instance = "instance"
         case block = "block"
         case reason = "reason"
-        case expires = "expires"
+        case expiresAt = "expires_at"
     }
 }

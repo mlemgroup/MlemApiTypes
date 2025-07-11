@@ -32,9 +32,9 @@ public struct LemmyPost: Codable, Hashable, Sendable {
     /// Whether the post is locked.
     /// Lemmy availability: all versions
     public let locked: Bool
-    /// Lemmy availability: all versions
-    public let published: Date
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
+    public let published: Date?
+    /// Lemmy availability: unavailable after 0.19.12
     public let updated: Date?
     /// Whether the post is deleted.
     /// Lemmy availability: all versions
@@ -73,9 +73,13 @@ public struct LemmyPost: Codable, Hashable, Sendable {
     /// An optional alt_text, usable for image posts.
     /// Lemmy availability: available from 0.19.4 onwards
     public let altText: String?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let publishedAt: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let updatedAt: Date?
     /// Time at which the post will be published. None means publish immediately.
     /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let scheduledPublishTime: Date?
+    public let scheduledPublishTimeAt: Date?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let comments: Int?
     /// Lemmy availability: available from 1.0.0-alpha onwards
@@ -87,7 +91,7 @@ public struct LemmyPost: Codable, Hashable, Sendable {
     /// A newest comment time, limited to 2 days, to prevent necrobumping
     /// The time of the newest comment in the post.
     /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let newestCommentTime: Date?
+    public let newestCommentTimeAt: Date?
     /// A rank that amplifies smaller communities
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let reportCount: Int?
@@ -124,12 +128,14 @@ public extension LemmyPost {
         case featuredLocal = "featured_local"
         case urlContentType = "url_content_type"
         case altText = "alt_text"
-        case scheduledPublishTime = "scheduled_publish_time"
+        case publishedAt = "published_at"
+        case updatedAt = "updated_at"
+        case scheduledPublishTimeAt = "scheduled_publish_time_at"
         case comments = "comments"
         case score = "score"
         case upvotes = "upvotes"
         case downvotes = "downvotes"
-        case newestCommentTime = "newest_comment_time"
+        case newestCommentTimeAt = "newest_comment_time_at"
         case reportCount = "report_count"
         case unresolvedReportCount = "unresolved_report_count"
         case federationPending = "federation_pending"

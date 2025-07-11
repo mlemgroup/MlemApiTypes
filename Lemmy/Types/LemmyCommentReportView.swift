@@ -45,8 +45,6 @@ public struct LemmyCommentReportView: Codable, Hashable, Sendable {
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let commentActions: LemmyCommentActions?
     /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let creatorCommunityActions: LemmyCommunityActions?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
     public let personActions: LemmyPersonActions?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let communityActions: LemmyCommunityActions?
@@ -70,7 +68,6 @@ public extension LemmyCommentReportView {
         case subscribed = "subscribed"
         case saved = "saved"
         case commentActions = "comment_actions"
-        case creatorCommunityActions = "creator_community_actions"
         case personActions = "person_actions"
         case communityActions = "community_actions"
     }

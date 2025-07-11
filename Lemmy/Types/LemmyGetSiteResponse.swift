@@ -18,7 +18,7 @@ public struct LemmyGetSiteResponse: Codable, Hashable, Sendable {
     public let admins: [LemmyPersonView]
     /// Lemmy availability: all versions
     public let version: String
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let myUser: LemmyMyUserInfo?
     /// Lemmy availability: all versions
     public let allLanguages: [LemmyLanguage]

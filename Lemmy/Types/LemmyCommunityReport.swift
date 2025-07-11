@@ -37,9 +37,9 @@ public struct LemmyCommunityReport: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let resolverId: Int?
     /// Lemmy availability: all versions
-    public let published: Date
+    public let publishedAt: Date
     /// Lemmy availability: all versions
-    public let updated: Date?
+    public let updatedAt: Date?
 }
 
 public extension LemmyCommunityReport {
@@ -56,7 +56,7 @@ public extension LemmyCommunityReport {
         case reason = "reason"
         case resolved = "resolved"
         case resolverId = "resolver_id"
-        case published = "published"
-        case updated = "updated"
+        case publishedAt = "published_at"
+        case updatedAt = "updated_at"
     }
 }

@@ -33,7 +33,7 @@ public struct LemmyEditPost: Codable, Hashable, Sendable {
     public let customThumbnail: String?
     /// Time when this post should be scheduled. Null means publish immediately.
     /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let scheduledPublishTime: Int?
+    public let scheduledPublishTimeAt: Int?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let tags: [Int]?
 }
@@ -48,7 +48,7 @@ public extension LemmyEditPost {
         case languageId = "language_id"
         case altText = "alt_text"
         case customThumbnail = "custom_thumbnail"
-        case scheduledPublishTime = "scheduled_publish_time"
+        case scheduledPublishTimeAt = "scheduled_publish_time_at"
         case tags = "tags"
     }
 }

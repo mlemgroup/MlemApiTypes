@@ -19,9 +19,9 @@ public struct LemmySite: Codable, Hashable, Sendable {
     /// A sidebar for the site in markdown.
     /// Lemmy availability: all versions
     public let sidebar: String?
-    /// Lemmy availability: all versions
-    public let published: Date
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
+    public let published: Date?
+    /// Lemmy availability: unavailable after 0.19.12
     public let updated: Date?
     /// An icon URL.
     /// Lemmy availability: all versions
@@ -51,6 +51,10 @@ public struct LemmySite: Codable, Hashable, Sendable {
     /// when the site is first opened by a user.
     /// Lemmy availability: available from 0.19.4 onwards
     public let contentWarning: String?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let publishedAt: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let updatedAt: Date?
     /// The federated ap_id.
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let apId: ActorIdentifier?
@@ -73,6 +77,8 @@ public extension LemmySite {
         case publicKey = "public_key"
         case instanceId = "instance_id"
         case contentWarning = "content_warning"
+        case publishedAt = "published_at"
+        case updatedAt = "updated_at"
         case apId = "ap_id"
     }
 }

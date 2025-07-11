@@ -21,7 +21,7 @@ public struct LemmyLocalUserView: Codable, Hashable, Sendable {
     /// Lemmy availability: available between 0.19.4 and 0.19.12
     public let localUserVoteDisplayMode: LemmyLocalUserVoteDisplayMode?
     /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let instanceActions: LemmyInstanceActions?
+    public let banned: Bool?
 }
 
 public extension LemmyLocalUserView {
@@ -30,6 +30,6 @@ public extension LemmyLocalUserView {
         case person = "person"
         case counts = "counts"
         case localUserVoteDisplayMode = "local_user_vote_display_mode"
-        case instanceActions = "instance_actions"
+        case banned = "banned"
     }
 }

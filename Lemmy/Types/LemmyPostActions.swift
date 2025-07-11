@@ -14,36 +14,36 @@ import Rest
 public struct LemmyPostActions: Codable, Hashable, Sendable {
     /// When the post was read.
     /// Lemmy availability: all versions
-    public let read: Date?
+    public let readAt: Date?
     /// When was the last time you read the comments.
     /// Lemmy availability: all versions
-    public let readComments: Date?
+    public let readCommentsAt: Date?
     /// The number of comments you read last. Subtract this from total comments to get an unread
     /// count.
     /// Lemmy availability: all versions
     public let readCommentsAmount: Int?
     /// When the post was saved.
     /// Lemmy availability: all versions
-    public let saved: Date?
+    public let savedAt: Date?
     /// When the post was liked.
     /// Lemmy availability: all versions
-    public let liked: Date?
+    public let likedAt: Date?
     /// The like / score of the post.
     /// Lemmy availability: all versions
     public let likeScore: Int?
     /// When the post was hidden.
     /// Lemmy availability: all versions
-    public let hidden: Date?
+    public let hiddenAt: Date?
 }
 
 public extension LemmyPostActions {
     enum CodingKeys: String, CodingKey {
-        case read = "read"
-        case readComments = "read_comments"
+        case readAt = "read_at"
+        case readCommentsAt = "read_comments_at"
         case readCommentsAmount = "read_comments_amount"
-        case saved = "saved"
-        case liked = "liked"
+        case savedAt = "saved_at"
+        case likedAt = "liked_at"
         case likeScore = "like_score"
-        case hidden = "hidden"
+        case hiddenAt = "hidden_at"
     }
 }

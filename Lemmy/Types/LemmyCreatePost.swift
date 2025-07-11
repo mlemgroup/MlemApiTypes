@@ -38,7 +38,7 @@ public struct LemmyCreatePost: Codable, Hashable, Sendable {
     public let tags: [Int]?
     /// Time when this post should be scheduled. Null means publish immediately.
     /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let scheduledPublishTime: Int?
+    public let scheduledPublishTimeAt: Int?
 }
 
 public extension LemmyCreatePost {
@@ -53,6 +53,6 @@ public extension LemmyCreatePost {
         case altText = "alt_text"
         case customThumbnail = "custom_thumbnail"
         case tags = "tags"
-        case scheduledPublishTime = "scheduled_publish_time"
+        case scheduledPublishTimeAt = "scheduled_publish_time_at"
     }
 }

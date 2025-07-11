@@ -22,9 +22,9 @@ public struct LemmyTag: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let communityId: Int
     /// Lemmy availability: all versions
-    public let published: Date
+    public let publishedAt: Date
     /// Lemmy availability: all versions
-    public let updated: Date?
+    public let updatedAt: Date?
     /// Lemmy availability: all versions
     public let deleted: Bool
 }
@@ -35,8 +35,8 @@ public extension LemmyTag {
         case apId = "ap_id"
         case displayName = "display_name"
         case communityId = "community_id"
-        case published = "published"
-        case updated = "updated"
+        case publishedAt = "published_at"
+        case updatedAt = "updated_at"
         case deleted = "deleted"
     }
 }

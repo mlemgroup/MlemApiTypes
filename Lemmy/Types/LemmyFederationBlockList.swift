@@ -15,18 +15,18 @@ public struct LemmyFederationBlockList: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let instanceId: Int
     /// Lemmy availability: all versions
-    public let published: Date
+    public let publishedAt: Date
     /// Lemmy availability: all versions
-    public let updated: Date?
+    public let updatedAt: Date?
     /// Lemmy availability: all versions
-    public let expires: Date?
+    public let expiresAt: Date?
 }
 
 public extension LemmyFederationBlockList {
     enum CodingKeys: String, CodingKey {
         case instanceId = "instance_id"
-        case published = "published"
-        case updated = "updated"
-        case expires = "expires"
+        case publishedAt = "published_at"
+        case updatedAt = "updated_at"
+        case expiresAt = "expires_at"
     }
 }

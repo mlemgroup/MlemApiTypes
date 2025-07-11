@@ -67,34 +67,34 @@ public struct LemmyEditSite: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let actorNameMaxLength: Int?
     /// The number of messages allowed in a given time frame.
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitMessage: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitMessagePerSecond: Int?
     /// The number of posts allowed in a given time frame.
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitPost: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitPostPerSecond: Int?
     /// The number of registrations allowed in a given time frame.
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitRegister: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitRegisterPerSecond: Int?
     /// The number of image uploads allowed in a given time frame.
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitImage: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitImagePerSecond: Int?
     /// The number of comments allowed in a given time frame.
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitComment: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitCommentPerSecond: Int?
     /// The number of searches allowed in a given time frame.
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitSearch: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let rateLimitSearchPerSecond: Int?
     /// Whether to enable federation.
     /// Lemmy availability: all versions
@@ -144,6 +144,41 @@ public struct LemmyEditSite: Codable, Hashable, Sendable {
     /// The default comment sort, usually "hot"
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let defaultCommentSortType: LemmyCommentSortType?
+    /// The number of messages allowed in a given time frame.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitMessageMaxRequests: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitMessageIntervalSeconds: Int?
+    /// The number of posts allowed in a given time frame.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitPostMaxRequests: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitPostIntervalSeconds: Int?
+    /// The number of registrations allowed in a given time frame.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitRegisterMaxRequests: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitRegisterIntervalSeconds: Int?
+    /// The number of image uploads allowed in a given time frame.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitImageMaxRequests: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitImageIntervalSeconds: Int?
+    /// The number of comments allowed in a given time frame.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitCommentMaxRequests: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitCommentIntervalSeconds: Int?
+    /// The number of searches allowed in a given time frame.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitSearchMaxRequests: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitSearchIntervalSeconds: Int?
+    /// The number of settings imports or exports allowed in a given time frame.
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitImportUserSettingsMaxRequests: Int?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let rateLimitImportUserSettingsIntervalSeconds: Int?
     /// Whether or not external auth methods can auto-register users.
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let oauthRegistration: Bool?
@@ -165,6 +200,9 @@ public struct LemmyEditSite: Codable, Hashable, Sendable {
     /// Dont send email notifications to users for new replies, mentions etc
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let disableEmailNotifications: Bool?
+    /// A multicommunity with suggested communities which is shown on the homepage
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let suggestedCommunities: Int?
 }
 
 public extension LemmyEditSite {
@@ -216,6 +254,20 @@ public extension LemmyEditSite {
         case defaultPostSortType = "default_post_sort_type"
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
         case defaultCommentSortType = "default_comment_sort_type"
+        case rateLimitMessageMaxRequests = "rate_limit_message_max_requests"
+        case rateLimitMessageIntervalSeconds = "rate_limit_message_interval_seconds"
+        case rateLimitPostMaxRequests = "rate_limit_post_max_requests"
+        case rateLimitPostIntervalSeconds = "rate_limit_post_interval_seconds"
+        case rateLimitRegisterMaxRequests = "rate_limit_register_max_requests"
+        case rateLimitRegisterIntervalSeconds = "rate_limit_register_interval_seconds"
+        case rateLimitImageMaxRequests = "rate_limit_image_max_requests"
+        case rateLimitImageIntervalSeconds = "rate_limit_image_interval_seconds"
+        case rateLimitCommentMaxRequests = "rate_limit_comment_max_requests"
+        case rateLimitCommentIntervalSeconds = "rate_limit_comment_interval_seconds"
+        case rateLimitSearchMaxRequests = "rate_limit_search_max_requests"
+        case rateLimitSearchIntervalSeconds = "rate_limit_search_interval_seconds"
+        case rateLimitImportUserSettingsMaxRequests = "rate_limit_import_user_settings_max_requests"
+        case rateLimitImportUserSettingsIntervalSeconds = "rate_limit_import_user_settings_interval_seconds"
         case oauthRegistration = "oauth_registration"
         case postUpvotes = "post_upvotes"
         case postDownvotes = "post_downvotes"
@@ -223,5 +275,6 @@ public extension LemmyEditSite {
         case commentDownvotes = "comment_downvotes"
         case disallowNsfwContent = "disallow_nsfw_content"
         case disableEmailNotifications = "disable_email_notifications"
+        case suggestedCommunities = "suggested_communities"
     }
 }

@@ -55,7 +55,8 @@ public struct LemmySaveUserSettingsRequest: PutRequest {
       blockingKeywords: [String]?,
       enablePrivateMessages: Bool?,
       autoMarkFetchedPostsAsRead: Bool?,
-      hideMedia: Bool?
+      hideMedia: Bool?,
+      showPersonVotes: Bool?
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/settings/save" : "api/v3/user/save_user_settings"
         self.body = .init(
@@ -94,7 +95,8 @@ public struct LemmySaveUserSettingsRequest: PutRequest {
             blockingKeywords: blockingKeywords,
             enablePrivateMessages: enablePrivateMessages,
             autoMarkFetchedPostsAsRead: autoMarkFetchedPostsAsRead,
-            hideMedia: hideMedia
+            hideMedia: hideMedia,
+            showPersonVotes: showPersonVotes
         )
     }
 }

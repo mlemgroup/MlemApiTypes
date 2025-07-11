@@ -16,10 +16,14 @@ public struct LemmyLocalSiteUrlBlocklist: Codable, Hashable, Sendable {
     public let id: Int
     /// Lemmy availability: all versions
     public let url: String
-    /// Lemmy availability: all versions
-    public let published: Date
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
+    public let published: Date?
+    /// Lemmy availability: unavailable after 0.19.12
     public let updated: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let publishedAt: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let updatedAt: Date?
 }
 
 public extension LemmyLocalSiteUrlBlocklist {
@@ -28,5 +32,7 @@ public extension LemmyLocalSiteUrlBlocklist {
         case url = "url"
         case published = "published"
         case updated = "updated"
+        case publishedAt = "published_at"
+        case updatedAt = "updated_at"
     }
 }

@@ -23,7 +23,7 @@ public struct LemmyAdminAllowInstance: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let reason: String?
     /// Lemmy availability: all versions
-    public let published: Date
+    public let publishedAt: Date
 }
 
 public extension LemmyAdminAllowInstance {
@@ -33,6 +33,6 @@ public extension LemmyAdminAllowInstance {
         case adminPersonId = "admin_person_id"
         case allowed = "allowed"
         case reason = "reason"
-        case published = "published"
+        case publishedAt = "published_at"
     }
 }

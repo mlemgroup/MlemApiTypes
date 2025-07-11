@@ -25,9 +25,9 @@ public struct LemmyPerson: Codable, Hashable, Sendable {
     /// Whether the person is banned.
     /// Lemmy availability: unavailable after 0.19.12
     public let banned: Bool?
-    /// Lemmy availability: all versions
-    public let published: Date
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
+    public let published: Date?
+    /// Lemmy availability: unavailable after 0.19.12
     public let updated: Date?
     /// The federated actor_id.
     /// Lemmy availability: unavailable after 0.19.12
@@ -55,6 +55,10 @@ public struct LemmyPerson: Codable, Hashable, Sendable {
     public let banExpires: Date?
     /// Lemmy availability: all versions
     public let instanceId: Int
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let publishedAt: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let updatedAt: Date?
     /// The federated ap_id.
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let apId: ActorIdentifier?
@@ -82,6 +86,8 @@ public extension LemmyPerson {
         case botAccount = "bot_account"
         case banExpires = "ban_expires"
         case instanceId = "instance_id"
+        case publishedAt = "published_at"
+        case updatedAt = "updated_at"
         case apId = "ap_id"
         case postCount = "post_count"
         case commentCount = "comment_count"

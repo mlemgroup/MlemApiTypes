@@ -56,9 +56,9 @@ public struct LemmyOAuthProvider: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let enabled: Bool
     /// Lemmy availability: all versions
-    public let published: Date
+    public let publishedAt: Date
     /// Lemmy availability: all versions
-    public let updated: Date?
+    public let updatedAt: Date?
     /// switch to enable or disable PKCE
     /// Lemmy availability: all versions
     public let usePkce: Bool
@@ -78,8 +78,8 @@ public extension LemmyOAuthProvider {
         case autoVerifyEmail = "auto_verify_email"
         case accountLinkingEnabled = "account_linking_enabled"
         case enabled = "enabled"
-        case published = "published"
-        case updated = "updated"
+        case publishedAt = "published_at"
+        case updatedAt = "updated_at"
         case usePkce = "use_pkce"
     }
 }

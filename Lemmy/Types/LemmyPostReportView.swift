@@ -47,8 +47,6 @@ public struct LemmyPostReportView: Codable, Hashable, Sendable {
     /// Lemmy availability: available between 0.19.4 and 0.19.12
     public let unreadComments: Int?
     /// Lemmy availability: available from 1.0.0-alpha onwards
-    public let creatorCommunityActions: LemmyCommunityActions?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
     public let communityActions: LemmyCommunityActions?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let postActions: LemmyPostActions?
@@ -75,7 +73,6 @@ public extension LemmyPostReportView {
         case hidden = "hidden"
         case creatorBlocked = "creator_blocked"
         case unreadComments = "unread_comments"
-        case creatorCommunityActions = "creator_community_actions"
         case communityActions = "community_actions"
         case postActions = "post_actions"
         case personActions = "person_actions"

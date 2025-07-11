@@ -20,6 +20,8 @@ public enum LemmySearchCombinedView: Codable, Hashable, Sendable {
     case community(LemmyCommunityView)
     /// Lemmy availability: all versions
     case person(LemmyPersonView)
+    /// Lemmy availability: all versions
+    case multiCommunity(LemmyMultiCommunityView)
     
     enum CodingKeys: CodingKey { case type_ }
     
@@ -31,6 +33,7 @@ public enum LemmySearchCombinedView: Codable, Hashable, Sendable {
         case "Comment": .comment(try .init(from: decoder))
         case "Community": .community(try .init(from: decoder))
         case "Person": .person(try .init(from: decoder))
+        case "MultiCommunity": .multiCommunity(try .init(from: decoder))
         default: throw DecodingError.dataCorrupted(
             .init(codingPath: decoder.codingPath, debugDescription: "Unknown value of 'type_': '\(type ?? "nil")'.")
         )
@@ -51,6 +54,9 @@ public enum LemmySearchCombinedView: Codable, Hashable, Sendable {
             try value.encode(to: encoder)
         case let .person(value):
             try container.encode("Person", forKey: .type_)
+            try value.encode(to: encoder)
+        case let .multiCommunity(value):
+            try container.encode("MultiCommunity", forKey: .type_)
             try value.encode(to: encoder)
         }
     }

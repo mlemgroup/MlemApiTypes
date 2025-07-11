@@ -19,7 +19,7 @@ public struct LemmyModChangeCommunityVisibility: Codable, Hashable, Sendable {
     /// Lemmy availability: all versions
     public let modPersonId: Int
     /// Lemmy availability: all versions
-    public let published: Date
+    public let publishedAt: Date
     /// Lemmy availability: all versions
     public let visibility: LemmyCommunityVisibility
 }
@@ -29,7 +29,7 @@ public extension LemmyModChangeCommunityVisibility {
         case id = "id"
         case communityId = "community_id"
         case modPersonId = "mod_person_id"
-        case published = "published"
+        case publishedAt = "published_at"
         case visibility = "visibility"
     }
 }

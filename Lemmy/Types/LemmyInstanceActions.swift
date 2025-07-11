@@ -14,19 +14,19 @@ import Rest
 public struct LemmyInstanceActions: Codable, Hashable, Sendable {
     /// When the instance was blocked.
     /// Lemmy availability: all versions
-    public let blocked: Date?
+    public let blockedAt: Date?
     /// When this user received a site ban.
     /// Lemmy availability: all versions
-    public let receivedBan: Date?
+    public let receivedBanAt: Date?
     /// When their ban expires.
     /// Lemmy availability: all versions
-    public let banExpires: Date?
+    public let banExpiresAt: Date?
 }
 
 public extension LemmyInstanceActions {
     enum CodingKeys: String, CodingKey {
-        case blocked = "blocked"
-        case receivedBan = "received_ban"
-        case banExpires = "ban_expires"
+        case blockedAt = "blocked_at"
+        case receivedBanAt = "received_ban_at"
+        case banExpiresAt = "ban_expires_at"
     }
 }

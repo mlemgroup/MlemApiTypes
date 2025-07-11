@@ -67,13 +67,28 @@ public struct LemmyUpdateSiteRequest: PutRequest {
       defaultPostSortType: LemmyPostSortType?,
       defaultPostTimeRangeSeconds: Int?,
       defaultCommentSortType: LemmyCommentSortType?,
+      rateLimitMessageMaxRequests: Int?,
+      rateLimitMessageIntervalSeconds: Int?,
+      rateLimitPostMaxRequests: Int?,
+      rateLimitPostIntervalSeconds: Int?,
+      rateLimitRegisterMaxRequests: Int?,
+      rateLimitRegisterIntervalSeconds: Int?,
+      rateLimitImageMaxRequests: Int?,
+      rateLimitImageIntervalSeconds: Int?,
+      rateLimitCommentMaxRequests: Int?,
+      rateLimitCommentIntervalSeconds: Int?,
+      rateLimitSearchMaxRequests: Int?,
+      rateLimitSearchIntervalSeconds: Int?,
+      rateLimitImportUserSettingsMaxRequests: Int?,
+      rateLimitImportUserSettingsIntervalSeconds: Int?,
       oauthRegistration: Bool?,
       postUpvotes: LemmyFederationMode?,
       postDownvotes: LemmyFederationMode?,
       commentUpvotes: LemmyFederationMode?,
       commentDownvotes: LemmyFederationMode?,
       disallowNsfwContent: Bool?,
-      disableEmailNotifications: Bool?
+      disableEmailNotifications: Bool?,
+      suggestedCommunities: Int?
     ) {
         self.path = endpoint == .v4 ? "api/v4/site" : "api/v3/site"
         self.body = .init(
@@ -124,13 +139,28 @@ public struct LemmyUpdateSiteRequest: PutRequest {
             defaultPostSortType: defaultPostSortType,
             defaultPostTimeRangeSeconds: defaultPostTimeRangeSeconds,
             defaultCommentSortType: defaultCommentSortType,
+            rateLimitMessageMaxRequests: rateLimitMessageMaxRequests,
+            rateLimitMessageIntervalSeconds: rateLimitMessageIntervalSeconds,
+            rateLimitPostMaxRequests: rateLimitPostMaxRequests,
+            rateLimitPostIntervalSeconds: rateLimitPostIntervalSeconds,
+            rateLimitRegisterMaxRequests: rateLimitRegisterMaxRequests,
+            rateLimitRegisterIntervalSeconds: rateLimitRegisterIntervalSeconds,
+            rateLimitImageMaxRequests: rateLimitImageMaxRequests,
+            rateLimitImageIntervalSeconds: rateLimitImageIntervalSeconds,
+            rateLimitCommentMaxRequests: rateLimitCommentMaxRequests,
+            rateLimitCommentIntervalSeconds: rateLimitCommentIntervalSeconds,
+            rateLimitSearchMaxRequests: rateLimitSearchMaxRequests,
+            rateLimitSearchIntervalSeconds: rateLimitSearchIntervalSeconds,
+            rateLimitImportUserSettingsMaxRequests: rateLimitImportUserSettingsMaxRequests,
+            rateLimitImportUserSettingsIntervalSeconds: rateLimitImportUserSettingsIntervalSeconds,
             oauthRegistration: oauthRegistration,
             postUpvotes: postUpvotes,
             postDownvotes: postDownvotes,
             commentUpvotes: commentUpvotes,
             commentDownvotes: commentDownvotes,
             disallowNsfwContent: disallowNsfwContent,
-            disableEmailNotifications: disableEmailNotifications
+            disableEmailNotifications: disableEmailNotifications,
+            suggestedCommunities: suggestedCommunities
         )
     }
 }

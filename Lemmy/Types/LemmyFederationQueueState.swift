@@ -17,14 +17,19 @@ public struct LemmyFederationQueueState: Codable, Hashable, Sendable {
     /// the last successfully sent activity id
     /// Lemmy availability: all versions
     public let lastSuccessfulId: Int?
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let lastSuccessfulPublishedTime: Date?
     /// how many failed attempts have been made to send the next activity
     /// Lemmy availability: all versions
     public let failCount: Int
     /// timestamp of the last retry attempt (when the last failing activity was resent)
-    /// Lemmy availability: all versions
+    /// Lemmy availability: unavailable after 0.19.12
     public let lastRetry: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let lastSuccessfulPublishedTimeAt: Date?
+    /// timestamp of the last retry attempt (when the last failing activity was resent)
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let lastRetryAt: Date?
 }
 
 public extension LemmyFederationQueueState {
@@ -34,5 +39,7 @@ public extension LemmyFederationQueueState {
         case lastSuccessfulPublishedTime = "last_successful_published_time"
         case failCount = "fail_count"
         case lastRetry = "last_retry"
+        case lastSuccessfulPublishedTimeAt = "last_successful_published_time_at"
+        case lastRetryAt = "last_retry_at"
     }
 }

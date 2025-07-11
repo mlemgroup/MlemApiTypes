@@ -18,8 +18,10 @@ public struct LemmyLocalImage: Codable, Hashable, Sendable {
     public let pictrsAlias: String
     /// Lemmy availability: unavailable after 0.19.12
     public let pictrsDeleteToken: String?
-    /// Lemmy availability: all versions
-    public let published: Date
+    /// Lemmy availability: unavailable after 0.19.12
+    public let published: Date?
+    /// Lemmy availability: available from 1.0.0-alpha onwards
+    public let publishedAt: Date?
     /// Lemmy availability: available from 1.0.0-alpha onwards
     public let personId: Int?
     /// This means the image is an auto-generated thumbnail, for a post.
@@ -33,6 +35,7 @@ public extension LemmyLocalImage {
         case pictrsAlias = "pictrs_alias"
         case pictrsDeleteToken = "pictrs_delete_token"
         case published = "published"
+        case publishedAt = "published_at"
         case personId = "person_id"
         case thumbnailForPostId = "thumbnail_for_post_id"
     }
