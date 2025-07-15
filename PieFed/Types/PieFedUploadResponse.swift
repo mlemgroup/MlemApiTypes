@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct PieFedUploadResponse: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let url: String
+    public let url: URL
 }
 
 public extension PieFedUploadResponse {
