@@ -10,6 +10,7 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedGetNotificationStatusRequest: GetRequest {
     public typealias Parameters = PieFedGetNotificationStatus
     public typealias Response = PieFedNotificationsResponse

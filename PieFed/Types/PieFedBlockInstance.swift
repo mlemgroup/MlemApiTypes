@@ -10,8 +10,11 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedBlockInstance: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let instanceId: Int
+    /// Available on all versions
     public let block: Bool
 }
 

@@ -10,7 +10,9 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedPersonResponse: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let personView: PieFedPersonView
 }
 

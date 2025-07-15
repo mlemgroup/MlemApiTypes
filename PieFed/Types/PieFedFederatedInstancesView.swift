@@ -10,9 +10,13 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedFederatedInstancesView: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let linked: [PieFedInstanceWithoutFederationState]
+    /// Available on all versions
     public let allowed: [PieFedInstanceWithoutFederationState]
+    /// Available on all versions
     public let blocked: [PieFedInstanceWithoutFederationState]
 }
 

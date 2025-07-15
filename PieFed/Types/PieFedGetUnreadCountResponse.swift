@@ -10,9 +10,13 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedGetUnreadCountResponse: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let replies: Int
+    /// Available on all versions
     public let mentions: Int
+    /// Available on all versions
     public let privateMessages: Int
 }
 

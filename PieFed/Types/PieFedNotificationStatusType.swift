@@ -10,8 +10,12 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public enum PieFedNotificationStatusType: String, Codable, Sendable {
+    /// Available on all versions
     case all = "All"
+    /// Available on all versions
     case new = "New"
+    /// Available on all versions
     case read = "Read"
 }

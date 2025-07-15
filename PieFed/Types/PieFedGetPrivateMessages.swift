@@ -10,10 +10,15 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedGetPrivateMessages: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let unreadOnly: Bool?
+    /// Available on all versions
     public let page: Int?
+    /// Available on all versions
     public let limit: Int?
+    /// Unavailable after 1.0.0
     public let creatorId: Int?
 }
 

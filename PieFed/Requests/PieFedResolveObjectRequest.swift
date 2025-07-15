@@ -10,6 +10,7 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedResolveObjectRequest: GetRequest {
     public typealias Parameters = PieFedResolveObject
     public typealias Response = PieFedResolveObjectResponse

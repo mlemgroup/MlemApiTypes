@@ -10,10 +10,15 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedGetReplies: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let sort: PieFedCommentSortType?
+    /// Available on all versions
     public let page: Int?
+    /// Available on all versions
     public let limit: Int?
+    /// Available on all versions
     public let unreadOnly: Bool?
 }
 

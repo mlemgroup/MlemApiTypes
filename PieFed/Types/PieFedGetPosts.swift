@@ -10,15 +10,25 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedGetPosts: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let type_: PieFedListingType?
+    /// Available on all versions
     public let sort: PieFedSortType?
+    /// Available on all versions
     public let pageCursor: Int?
+    /// Available on all versions
     public let limit: Int?
+    /// Available on all versions
     public let communityId: Int?
+    /// Available on all versions
     public let personId: Int?
+    /// Available on all versions
     public let communityName: String?
+    /// Available on all versions
     public let likedOnly: Bool?
+    /// Available on all versions
     public let savedOnly: Bool?
 }
 

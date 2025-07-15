@@ -10,6 +10,7 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedEditPostRequest: PutRequest {
     public typealias Body = PieFedEditPost
     public typealias Response = PieFedPostResponse

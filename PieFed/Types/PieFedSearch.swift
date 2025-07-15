@@ -10,12 +10,19 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedSearch: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let q: String
+    /// Available on all versions
     public let type_: PieFedSearchType?
+    /// Available on all versions
     public let sort: PieFedSortType?
+    /// Available on all versions
     public let listingType: PieFedListingType?
+    /// Available on all versions
     public let page: Int?
+    /// Available on all versions
     public let limit: Int?
 }
 

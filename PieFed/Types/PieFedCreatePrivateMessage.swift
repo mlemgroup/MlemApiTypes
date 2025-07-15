@@ -10,8 +10,11 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedCreatePrivateMessage: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let content: String
+    /// Available on all versions
     public let recipientId: Int
 }
 

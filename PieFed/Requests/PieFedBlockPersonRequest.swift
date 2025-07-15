@@ -10,6 +10,7 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedBlockPersonRequest: PostRequest {
     public typealias Body = PieFedBlockPerson
     public typealias Response = PieFedBlockPersonResponse

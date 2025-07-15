@@ -10,8 +10,11 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedSubscribeCommunity: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let communityId: Int
+    /// Available on all versions
     public let subscribe: Bool
 }
 

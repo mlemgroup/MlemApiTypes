@@ -10,19 +10,33 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedComment: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let id: Int
+    /// Available on all versions
     public let userId: Int
+    /// Available on all versions
     public let postId: Int
+    /// Available on all versions
     public let body: String
+    /// Available on all versions
     public let removed: Bool
+    /// Available on all versions
     public let published: Date
+    /// Available on all versions
     public let updated: Date?
+    /// Available on all versions
     public let deleted: Bool
+    /// Available on all versions
     public let apId: ActorIdentifier
+    /// Available on all versions
     public let local: Bool
+    /// Available on all versions
     public let path: String
+    /// Available on all versions
     public let distinguished: Bool?
+    /// Available on all versions
     public let languageId: Int
 }
 

@@ -10,6 +10,7 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedGetPersonDetailsRequest: GetRequest {
     public typealias Parameters = PieFedGetPersonDetails
     public typealias Response = PieFedGetPersonDetailsResponse

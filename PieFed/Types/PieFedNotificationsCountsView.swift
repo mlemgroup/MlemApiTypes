@@ -10,9 +10,13 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedNotificationsCountsView: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let newNotifications: Int
+    /// Available on all versions
     public let readNotifications: Int
+    /// Available on all versions
     public let totalNotifications: Int?
 }
 

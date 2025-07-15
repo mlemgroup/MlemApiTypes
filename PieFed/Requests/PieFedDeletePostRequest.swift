@@ -10,6 +10,7 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedDeletePostRequest: PostRequest {
     public typealias Body = PieFedDeletePost
     public typealias Response = PieFedPostResponse

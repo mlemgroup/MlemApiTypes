@@ -10,13 +10,21 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedNotificationsItemCommentMentionView: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let notifId: Int?
+    /// Available on all versions
     public let notifType: Int?
+    /// Available on all versions
     public let notifSubtype: String?
+    /// Available on all versions
     public let author: PieFedPerson?
+    /// Available on all versions
     public let comment: PieFedComment?
+    /// Available on all versions
     public let commentId: Int?
+    /// Available on all versions
     public let notifBody: String?
 }
 

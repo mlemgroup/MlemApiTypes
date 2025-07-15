@@ -10,11 +10,17 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedListCommunities: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let type_: PieFedListingType?
+    /// Available on all versions
     public let sort: PieFedCommunitySortType?
+    /// Available on all versions
     public let showNsfw: Bool?
+    /// Available on all versions
     public let page: Int?
+    /// Available on all versions
     public let limit: Int?
 }
 

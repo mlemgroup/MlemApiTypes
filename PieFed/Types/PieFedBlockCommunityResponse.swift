@@ -10,8 +10,11 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedBlockCommunityResponse: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let communityView: PieFedCommunityView
+    /// Available on all versions
     public let blocked: Bool
 }
 

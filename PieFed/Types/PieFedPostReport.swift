@@ -10,17 +10,29 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedPostReport: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let id: Int
+    /// Available on all versions
     public let creatorId: Int
+    /// Available on all versions
     public let postId: Int
+    /// Available on all versions
     public let originalPostName: String
+    /// Available on all versions
     public let originalPostUrl: String?
+    /// Available on all versions
     public let originalPostBody: String?
+    /// Available on all versions
     public let reason: String
+    /// Available on all versions
     public let resolved: Bool
+    /// Available on all versions
     public let resolverId: Int?
+    /// Available on all versions
     public let published: Date
+    /// Available on all versions
     public let updated: Date?
 }
 

@@ -10,17 +10,29 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedGetComments: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let type_: PieFedListingType?
+    /// Available on all versions
     public let sort: PieFedCommentSortType?
+    /// Available on all versions
     public let maxDepth: Int?
+    /// Available on all versions
     public let page: Int?
+    /// Available on all versions
     public let limit: Int?
+    /// Available on all versions
     public let communityId: Int?
+    /// Available on all versions
     public let postId: Int?
+    /// Available on all versions
     public let parentId: Int?
+    /// Available on all versions
     public let personId: Int?
+    /// Available on all versions
     public let likedOnly: Bool?
+    /// Available on all versions
     public let savedOnly: Bool?
 }
 

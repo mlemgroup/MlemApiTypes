@@ -10,10 +10,15 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedGetSiteResponse: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let myUser: PieFedMyUserInfo?
+    /// Available on all versions
     public let site: PieFedSite
+    /// Available on all versions
     public let version: String
+    /// Available on all versions
     public let admins: [PieFedPersonView]
 }
 

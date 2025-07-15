@@ -10,14 +10,23 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public enum PieFedNotificationsResponseChild: Codable, Hashable, Sendable {
+    /// Available on all versions
     case notificationsItemUserView(PieFedNotificationsItemUserView)
+    /// Available on all versions
     case notificationsItemCommunityView(PieFedNotificationsItemCommunityView)
+    /// Available on all versions
     case notificationsItemTopicView(PieFedNotificationsItemTopicView)
+    /// Available on all versions
     case notificationsItemPostView(PieFedNotificationsItemPostView)
+    /// Available on all versions
     case notificationsItemReplyView(PieFedNotificationsItemReplyView)
+    /// Available on all versions
     case notificationsItemFeedView(PieFedNotificationsItemFeedView)
+    /// Available on all versions
     case notificationsItemPostMentionView(PieFedNotificationsItemPostMentionView)
+    /// Available on all versions
     case notificationsItemCommentMentionView(PieFedNotificationsItemCommentMentionView)
     
     enum CodingKeys: CodingKey { case type_ }

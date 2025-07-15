@@ -10,8 +10,11 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedMarkReplyAsRead: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let commentReplyId: Int
+    /// Available on all versions
     public let read: Bool
 }
 

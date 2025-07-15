@@ -10,6 +10,7 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedSaveUserSettingsRequest: PutRequest {
     public typealias Body = PieFedSaveUserSettings
     public typealias Response = Int

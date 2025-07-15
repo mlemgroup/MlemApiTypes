@@ -10,9 +10,13 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedAddModToCommunity: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let communityId: Int
+    /// Available on all versions
     public let personId: Int
+    /// Available on all versions
     public let added: Bool
 }
 

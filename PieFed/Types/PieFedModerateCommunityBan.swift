@@ -10,10 +10,15 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedModerateCommunityBan: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let communityId: Int
+    /// Available on all versions
     public let userId: Int
+    /// Available on all versions
     public let reason: String
+    /// Available on all versions
     public let expiredAt: String
 }
 

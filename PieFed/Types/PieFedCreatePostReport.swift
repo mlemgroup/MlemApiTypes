@@ -10,8 +10,11 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedCreatePostReport: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let postId: Int
+    /// Available on all versions
     public let reason: String
 }
 

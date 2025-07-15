@@ -10,9 +10,13 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedMarkPostAsRead: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let postIds: [Int]?
+    /// Available on all versions
     public let postId: Int?
+    /// Available on all versions
     public let read: Bool
 }
 

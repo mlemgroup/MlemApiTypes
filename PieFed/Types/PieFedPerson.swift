@@ -10,20 +10,36 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedPerson: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let actorId: ActorIdentifier
+    /// Available on all versions
     public let avatar: URL?
+    /// Available on all versions
     public let banned: Bool
+    /// Available on all versions
     public let banner: URL?
+    /// Available on all versions
     public let about: String?
+    /// Available on all versions
     public let bot: Bool
+    /// Available on all versions
     public let deleted: Bool
+    /// Available on all versions
     public let id: Int
+    /// Available on all versions
     public let instanceId: Int
+    /// Available on all versions
     public let local: Bool
+    /// Available on all versions
     public let published: Date
+    /// Available on all versions
     public let title: String?
+    /// Available on all versions
     public let userName: String
+    /// Available from 1.0.1-dev onwards
+    public let flair: String?
 }
 
 public extension PieFedPerson {
@@ -41,5 +57,6 @@ public extension PieFedPerson {
         case published = "published"
         case title = "title"
         case userName = "user_name"
+        case flair = "flair"
     }
 }

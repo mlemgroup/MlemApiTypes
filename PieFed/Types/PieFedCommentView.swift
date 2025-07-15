@@ -10,20 +10,35 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedCommentView: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let comment: PieFedComment
+    /// Available on all versions
     public let creator: PieFedPerson
+    /// Available on all versions
     public let post: PieFedPost
+    /// Available on all versions
     public let community: PieFedCommunity
+    /// Available on all versions
     public let counts: PieFedCommentAggregates
+    /// Available on all versions
     public let creatorBannedFromCommunity: Bool
+    /// Available on all versions
     public let bannedFromCommunity: Bool
+    /// Available on all versions
     public let creatorIsModerator: Bool
+    /// Available on all versions
     public let creatorIsAdmin: Bool
+    /// Available on all versions
     public let subscribed: PieFedSubscribedType
+    /// Available on all versions
     public let saved: Bool
+    /// Available on all versions
     public let activityAlert: Bool
+    /// Available on all versions
     public let creatorBlocked: Bool
+    /// Available on all versions
     public let myVote: Int?
 }
 

@@ -10,16 +10,27 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedCreateCommunity: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let name: String
+    /// Available on all versions
     public let title: String
+    /// Available on all versions
     public let description: String?
+    /// Available on all versions
     public let rules: String?
+    /// Available on all versions
     public let iconUrl: URL?
+    /// Available on all versions
     public let bannerUrl: URL?
+    /// Available on all versions
     public let nsfw: Bool?
+    /// Available on all versions
     public let restrictedToMods: Bool?
+    /// Available on all versions
     public let localOnly: Bool?
+    /// Available on all versions
     public let discussionLanguages: [Int]?
 }
 

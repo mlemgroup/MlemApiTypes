@@ -10,15 +10,25 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedSite: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let actorId: ActorIdentifier
+    /// Available on all versions
     public let allLanguages: [PieFedLanguageView]?
+    /// Available on all versions
     public let description: String?
+    /// Available on all versions
     public let enableDownvotes: Bool?
+    /// Available on all versions
     public let icon: URL?
+    /// Available on all versions
     public let name: String
+    /// Available on all versions
     public let registrationMode: PieFedRegistrationMode?
+    /// Available on all versions
     public let sidebar: String?
+    /// Available on all versions
     public let userCount: Int?
 }
 

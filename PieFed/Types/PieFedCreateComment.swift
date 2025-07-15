@@ -10,10 +10,15 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedCreateComment: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let body: String
+    /// Available on all versions
     public let postId: Int
+    /// Available on all versions
     public let parentId: Int?
+    /// Available on all versions
     public let languageId: Int?
 }
 

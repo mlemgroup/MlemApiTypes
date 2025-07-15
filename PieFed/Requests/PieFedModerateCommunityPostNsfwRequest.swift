@@ -10,6 +10,7 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedModerateCommunityPostNsfwRequest: PostRequest {
     public typealias Body = PieFedModerateCommunityPostNsfw
     public typealias Response = PieFedPostView

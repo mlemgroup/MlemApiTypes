@@ -10,6 +10,7 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedGetCommentRequest: GetRequest {
     public typealias Parameters = PieFedGetComment
     public typealias Response = PieFedCommentResponse

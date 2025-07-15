@@ -10,6 +10,7 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedAddModToCommunityRequest: PostRequest {
     public typealias Body = PieFedAddModToCommunity
     public typealias Response = PieFedAddModToCommunityResponse

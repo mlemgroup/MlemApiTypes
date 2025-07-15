@@ -10,6 +10,7 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedBlockInstanceRequest: PostRequest {
     public typealias Body = PieFedBlockInstance
     public typealias Response = PieFedBlockInstanceResponse

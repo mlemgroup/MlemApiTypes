@@ -10,10 +10,15 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedNotificationsResponse: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let counts: PieFedNotificationsCountsView
+    /// Available on all versions
     public let items: [PieFedNotificationsResponseChild]
+    /// Available on all versions
     public let status: String
+    /// Available on all versions
     public let user: String
 }
 

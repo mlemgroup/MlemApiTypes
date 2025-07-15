@@ -10,9 +10,13 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedRemoveComment: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let commentId: Int
+    /// Available on all versions
     public let removed: Bool
+    /// Available on all versions
     public let reason: String?
 }
 

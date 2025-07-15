@@ -10,9 +10,13 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedLocalUserView: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let counts: PieFedPersonAggregates
+    /// Available on all versions
     public let localUser: PieFedLocalUser
+    /// Available on all versions
     public let person: PieFedPerson
 }
 

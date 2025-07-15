@@ -10,9 +10,13 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedSaveUserSettings: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let showNsfw: Bool?
+    /// Available on all versions
     public let showReadPosts: Bool?
+    /// Available on all versions
     public let bio: String?
 }
 

@@ -10,8 +10,11 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedPersonBlockView: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let person: PieFedPerson
+    /// Available on all versions
     public let target: PieFedPerson
 }
 

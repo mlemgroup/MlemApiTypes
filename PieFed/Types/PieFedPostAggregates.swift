@@ -10,13 +10,21 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedPostAggregates: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let postId: Int
+    /// Available on all versions
     public let comments: Int
+    /// Available on all versions
     public let score: Int
+    /// Available on all versions
     public let upvotes: Int
+    /// Available on all versions
     public let downvotes: Int
+    /// Available on all versions
     public let published: Date
+    /// Available on all versions
     public let newestCommentTime: String
 }
 

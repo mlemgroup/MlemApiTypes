@@ -10,10 +10,15 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedSearchResponse: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let type_: PieFedSearchType
+    /// Available on all versions
     public let posts: [PieFedPostView]
+    /// Available on all versions
     public let communities: [PieFedCommunityView]
+    /// Available on all versions
     public let users: [PieFedPersonView]
 }
 

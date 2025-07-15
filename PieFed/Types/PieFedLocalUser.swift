@@ -10,12 +10,19 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedLocalUser: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let defaultListingType: PieFedListingType
+    /// Available on all versions
     public let defaultSortType: PieFedSortType
+    /// Available on all versions
     public let showBotAccounts: Bool
+    /// Available on all versions
     public let showNsfw: Bool
+    /// Available on all versions
     public let showReadPosts: Bool
+    /// Available on all versions
     public let showScores: Bool
 }
 

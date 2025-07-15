@@ -10,12 +10,19 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedModerateCommunityUnBanResponse: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let reason: String?
+    /// Available on all versions
     public let expiredAt: String?
+    /// Available on all versions
     public let community: PieFedCommunityView?
+    /// Available on all versions
     public let bannedUser: PieFedPerson?
+    /// Available on all versions
     public let bannedBy: PieFedPerson?
+    /// Available on all versions
     public let expired: Bool?
 }
 

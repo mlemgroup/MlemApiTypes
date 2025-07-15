@@ -10,8 +10,11 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedEditNotificationState: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let notifId: Int?
+    /// Available on all versions
     public let readState: Bool?
 }
 

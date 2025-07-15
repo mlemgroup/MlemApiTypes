@@ -10,10 +10,15 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedPersonView: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let person: PieFedPerson
+    /// Available on all versions
     public let counts: PieFedPersonAggregates
+    /// Available on all versions
     public let isAdmin: Bool
+    /// Available on all versions
     public let activityAlert: Bool
 }
 

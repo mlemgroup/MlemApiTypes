@@ -10,6 +10,7 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedMarkAllRepliesReadRequest: PostRequest {
     public typealias Body = Int
     public typealias Response = PieFedGetRepliesResponse

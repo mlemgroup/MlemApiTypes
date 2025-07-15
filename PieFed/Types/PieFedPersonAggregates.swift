@@ -10,9 +10,13 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedPersonAggregates: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let commentCount: Int
+    /// Available on all versions
     public let personId: Int
+    /// Available on all versions
     public let postCount: Int
 }
 

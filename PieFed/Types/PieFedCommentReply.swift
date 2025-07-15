@@ -10,11 +10,17 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedCommentReply: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let id: Int
+    /// Available on all versions
     public let recipientId: Int
+    /// Available on all versions
     public let commentId: Int
+    /// Available on all versions
     public let read: Bool
+    /// Available on all versions
     public let published: Date
 }
 

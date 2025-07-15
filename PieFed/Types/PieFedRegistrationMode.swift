@@ -10,8 +10,12 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public enum PieFedRegistrationMode: String, Codable, Sendable {
+    /// Available on all versions
     case closed = "Closed"
+    /// Available on all versions
     case requireApplication = "RequireApplication"
+    /// Available on all versions
     case open = "Open"
 }

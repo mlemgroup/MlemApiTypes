@@ -10,8 +10,11 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedGetCommunity: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let id: Int?
+    /// Available on all versions
     public let name: String?
 }
 

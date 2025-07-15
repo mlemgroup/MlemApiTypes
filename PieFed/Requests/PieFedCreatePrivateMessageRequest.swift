@@ -10,6 +10,7 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedCreatePrivateMessageRequest: PostRequest {
     public typealias Body = PieFedCreatePrivateMessage
     public typealias Response = PieFedPrivateMessageResponse

@@ -10,7 +10,9 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedImageUpload: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let file: String
 }
 

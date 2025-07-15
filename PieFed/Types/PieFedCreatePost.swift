@@ -10,12 +10,19 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedCreatePost: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let title: String
+    /// Available on all versions
     public let communityId: Int
+    /// Available on all versions
     public let url: URL?
+    /// Available on all versions
     public let body: String?
+    /// Available on all versions
     public let nsfw: Bool?
+    /// Available on all versions
     public let languageId: Int?
 }
 

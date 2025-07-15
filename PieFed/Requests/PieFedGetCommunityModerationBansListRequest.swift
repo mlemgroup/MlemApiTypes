@@ -10,6 +10,7 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedGetCommunityModerationBansListRequest: GetRequest {
     public typealias Parameters = PieFedGetCommunityModerationBansList
     public typealias Response = PieFedModerationCommunityBansListResponse

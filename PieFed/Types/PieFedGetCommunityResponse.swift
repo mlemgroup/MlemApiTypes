@@ -10,10 +10,15 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedGetCommunityResponse: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let communityView: PieFedCommunityView
+    /// Available on all versions
     public let site: PieFedSite?
+    /// Available on all versions
     public let moderators: [PieFedCommunityModeratorView]
+    /// Available on all versions
     public let discussionLanguages: [Int]
 }
 

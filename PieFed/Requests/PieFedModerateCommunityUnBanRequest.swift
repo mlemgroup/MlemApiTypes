@@ -10,6 +10,7 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedModerateCommunityUnBanRequest: PutRequest {
     public typealias Body = PieFedModerateCommunityUnBan
     public typealias Response = PieFedCommunityModerationBanItem

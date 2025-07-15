@@ -10,6 +10,7 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedLoginRequest: PostRequest {
     public typealias Body = PieFedLogin
     public typealias Response = PieFedLoginResponse

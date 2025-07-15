@@ -10,12 +10,19 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedInstanceWithoutFederationState: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let id: Int
+    /// Available on all versions
     public let domain: String
+    /// Available on all versions
     public let published: String
+    /// Available on all versions
     public let updated: String?
+    /// Available on all versions
     public let software: String?
+    /// Available on all versions
     public let version: String?
 }
 

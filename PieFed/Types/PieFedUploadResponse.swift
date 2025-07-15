@@ -10,8 +10,10 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedUploadResponse: Codable, Hashable, Sendable {
-    public let url: URL
+    /// Available on all versions
+    public let url: String
 }
 
 public extension PieFedUploadResponse {

@@ -10,6 +10,7 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedSubscribeCommentRequest: PutRequest {
     public typealias Body = PieFedSubscribeComment
     public typealias Response = PieFedCommentResponse

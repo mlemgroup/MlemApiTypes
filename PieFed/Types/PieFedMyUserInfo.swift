@@ -10,13 +10,21 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedMyUserInfo: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let communityBlocks: [PieFedCommunityBlockView]
+    /// Available on all versions
     public let discussionLanguages: [PieFedLanguageView]
+    /// Available on all versions
     public let follows: [PieFedCommunityFollowerView]
+    /// Available on all versions
     public let instanceBlocks: [PieFedInstanceBlockView]
+    /// Available on all versions
     public let localUserView: PieFedLocalUserView
+    /// Available on all versions
     public let moderates: [PieFedCommunityModeratorView]
+    /// Available on all versions
     public let personBlocks: [PieFedPersonBlockView]
 }
 

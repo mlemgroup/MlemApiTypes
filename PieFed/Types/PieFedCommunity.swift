@@ -10,25 +10,46 @@
 import Foundation
 import Rest
 
+/// Available on all versions
 public struct PieFedCommunity: Codable, Hashable, Sendable {
+    /// Available on all versions
     public let actorId: ActorIdentifier
+    /// Available on all versions
     public let apDomain: String?
+    /// Available on all versions
     public let banned: Bool?
+    /// Available on all versions
     public let banner: URL?
+    /// Available on all versions
     public let deleted: Bool
+    /// Available on all versions
     public let description: String?
+    /// Available on all versions
     public let hidden: Bool
+    /// Available on all versions
     public let icon: URL?
+    /// Available on all versions
     public let id: Int
+    /// Available on all versions
     public let instanceId: Int
+    /// Available on all versions
     public let local: Bool
+    /// Available on all versions
     public let name: String
+    /// Available on all versions
     public let nsfw: Bool
+    /// Available on all versions
     public let published: Date
+    /// Available on all versions
     public let removed: Bool
+    /// Available on all versions
     public let restrictedToMods: Bool
+    /// Available on all versions
     public let title: String
+    /// Available on all versions
     public let updated: Date?
+    /// Available from 1.0.1-dev onwards
+    public let postingWarning: String?
 }
 
 public extension PieFedCommunity {
@@ -51,5 +72,6 @@ public extension PieFedCommunity {
         case restrictedToMods = "restricted_to_mods"
         case title = "title"
         case updated = "updated"
+        case postingWarning = "posting_warning"
     }
 }
