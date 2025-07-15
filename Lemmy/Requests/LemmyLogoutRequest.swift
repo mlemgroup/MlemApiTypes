@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyLogoutRequest: PostRequest {
     public typealias Body = Int
     public typealias Response = Int

@@ -10,96 +10,96 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyPost: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let id: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let name: String
     /// An optional link / url for the post.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let url: URL?
     /// An optional post body, in markdown.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let body: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityId: Int
     /// Whether the post is removed.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let removed: Bool
     /// Whether the post is locked.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let locked: Bool
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let published: Date?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let updated: Date?
     /// Whether the post is deleted.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let deleted: Bool
     /// Whether the post is NSFW.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let nsfw: Bool
     /// A title for the link.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let embedTitle: String?
     /// A description for the link.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let embedDescription: String?
     /// A thumbnail picture url.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let thumbnailUrl: URL?
     /// The federated activity id / ap_id.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let apId: ActorIdentifier
     /// Whether the post is local.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let local: Bool
     /// A video url for the link.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let embedVideoUrl: URL?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let languageId: Int
     /// Whether the post is featured to its community.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let featuredCommunity: Bool
     /// Whether the post is featured to its site.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let featuredLocal: Bool
-    /// Lemmy availability: available from 0.19.4 onwards
+    /// Available from 0.19.4 onwards
     public let urlContentType: String?
     /// An optional alt_text, usable for image posts.
-    /// Lemmy availability: available from 0.19.4 onwards
+    /// Available from 0.19.4 onwards
     public let altText: String?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let publishedAt: Date?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let updatedAt: Date?
     /// Time at which the post will be published. None means publish immediately.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let scheduledPublishTimeAt: Date?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let comments: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let score: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let upvotes: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let downvotes: Int?
     /// A newest comment time, limited to 2 days, to prevent necrobumping
     /// The time of the newest comment in the post.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let newestCommentTimeAt: Date?
     /// A rank that amplifies smaller communities
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let reportCount: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let unresolvedReportCount: Int?
     /// If a local user posts in a remote community, the comment is hidden until it is confirmed
     /// accepted by the community (by receiving it back via federation).
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let federationPending: Bool?
 }
 

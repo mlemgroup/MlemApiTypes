@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 0.19.4 onwards
+/// Available from 0.19.4 onwards
 public struct LemmyListMediaRequest: GetRequest {
     public typealias Parameters = LemmyListMedia
     public typealias Response = LemmyListMediaResponse

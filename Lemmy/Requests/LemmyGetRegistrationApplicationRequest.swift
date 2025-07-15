@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 0.19.6 onwards
+/// Available from 0.19.6 onwards
 public struct LemmyGetRegistrationApplicationRequest: GetRequest {
     public typealias Parameters = LemmyGetRegistrationApplication
     public typealias Response = LemmyRegistrationApplicationResponse

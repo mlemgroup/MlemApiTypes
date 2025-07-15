@@ -10,35 +10,35 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyUserSettingsBackup: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let displayName: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let bio: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let avatar: URL?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let banner: URL?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let matrixId: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let botAccount: Bool?
     /// TODO: might be worth making a separate struct for settings backup, to avoid breakage in case
     /// fields are renamed, and to avoid storing unnecessary fields like person_id or email
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let settings: LemmyLocalUser?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let followedCommunities: [URL]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let savedPosts: [URL]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let savedComments: [URL]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let blockedCommunities: [URL]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let blockedUsers: [URL]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let blockedInstances: [String]
 }
 

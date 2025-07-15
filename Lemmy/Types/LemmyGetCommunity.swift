@@ -10,12 +10,12 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyGetCommunity: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let id: Int?
     /// Example: star_trek , or star_trek@xyz.tld
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let name: String?
 }
 

@@ -10,16 +10,16 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public enum LemmyInboxDataType: String, Codable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case all = "All"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case commentReply = "CommentReply"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case commentMention = "CommentMention"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case postMention = "PostMention"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case privateMessage = "PrivateMessage"
 }

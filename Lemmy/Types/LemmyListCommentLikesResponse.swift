@@ -10,14 +10,14 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 0.19.2 onwards
+/// Available from 0.19.2 onwards
 public struct LemmyListCommentLikesResponse: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let commentLikes: [LemmyVoteView]
     /// the pagination cursor to use to fetch the next page
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let nextPage: String?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let prevPage: String?
 }
 

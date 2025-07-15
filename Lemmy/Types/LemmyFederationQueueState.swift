@@ -10,25 +10,25 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyFederationQueueState: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let instanceId: Int
     /// the last successfully sent activity id
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let lastSuccessfulId: Int?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let lastSuccessfulPublishedTime: Date?
     /// how many failed attempts have been made to send the next activity
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let failCount: Int
     /// timestamp of the last retry attempt (when the last failing activity was resent)
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let lastRetry: Date?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let lastSuccessfulPublishedTimeAt: Date?
     /// timestamp of the last retry attempt (when the last failing activity was resent)
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let lastRetryAt: Date?
 }
 

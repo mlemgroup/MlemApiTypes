@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyCreatePrivateMessageRequest: PostRequest {
     public typealias Body = LemmyCreatePrivateMessage
     public typealias Response = LemmyPrivateMessageResponse

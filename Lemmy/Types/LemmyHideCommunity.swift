@@ -10,13 +10,13 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyHideCommunity: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let hidden: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let reason: String?
 }
 

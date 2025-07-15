@@ -10,198 +10,198 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyEditSite: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let name: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let sidebar: String?
     /// A shorter, one line description of your site.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let description: String?
     /// A url for your site's icon.
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let icon: String?
     /// A url for your site's banner.
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let banner: String?
     /// Whether to enable downvotes.
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let enableDownvotes: Bool?
     /// Whether to enable NSFW.
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let enableNsfw: Bool?
     /// Limits community creation to admins only.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityCreationAdminOnly: Bool?
     /// Whether to require email verification.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let requireEmailVerification: Bool?
     /// Your application question form. This is in markdown, and can be many questions.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let applicationQuestion: String?
     /// Whether your instance is public, or private.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let privateInstance: Bool?
     /// The default theme. Usually "browser"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let defaultTheme: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let defaultPostListingType: LemmyListingType?
     /// An optional page of legal information
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let legalInformation: String?
     /// Whether to email admins when receiving a new application.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let applicationEmailAdmins: Bool?
     /// Whether to hide moderator names from the modlog.
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let hideModlogModNames: Bool?
     /// A list of allowed discussion languages.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let discussionLanguages: [Int]?
     /// A regex string of items to filter.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let slurFilterRegex: String?
     /// The max length of actor names.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let actorNameMaxLength: Int?
     /// The number of messages allowed in a given time frame.
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let rateLimitMessage: Int?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let rateLimitMessagePerSecond: Int?
     /// The number of posts allowed in a given time frame.
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let rateLimitPost: Int?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let rateLimitPostPerSecond: Int?
     /// The number of registrations allowed in a given time frame.
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let rateLimitRegister: Int?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let rateLimitRegisterPerSecond: Int?
     /// The number of image uploads allowed in a given time frame.
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let rateLimitImage: Int?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let rateLimitImagePerSecond: Int?
     /// The number of comments allowed in a given time frame.
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let rateLimitComment: Int?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let rateLimitCommentPerSecond: Int?
     /// The number of searches allowed in a given time frame.
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let rateLimitSearch: Int?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let rateLimitSearchPerSecond: Int?
     /// Whether to enable federation.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let federationEnabled: Bool?
     /// Enables federation debugging.
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let federationDebug: Bool?
     /// Whether to enable captchas for signups.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let captchaEnabled: Bool?
     /// The captcha difficulty. Can be easy, medium, or hard
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let captchaDifficulty: String?
     /// A list of allowed instances. If none are set, federation is open.
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let allowedInstances: [String]?
     /// A list of blocked instances.
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let blockedInstances: [String]?
     /// A list of taglines shown at the top of the front page.
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let taglines: [String]?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let registrationMode: LemmyRegistrationMode?
     /// Whether to email admins for new reports.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let reportsEmailAdmins: Bool?
     /// The default sort, usually "active"
-    /// Lemmy availability: available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.12
     public let defaultSortType: LemmySortType?
     /// A list of blocked URLs
-    /// Lemmy availability: available from 0.19.4 onwards
+    /// Available from 0.19.4 onwards
     public let blockedUrls: [String]?
     /// If present, nsfw content is visible by default. Should be displayed by frontends/clients
     /// when the site is first opened by a user.
-    /// Lemmy availability: available from 0.19.4 onwards
+    /// Available from 0.19.4 onwards
     public let contentWarning: String?
     /// Default value for [LocalUser.post_listing_mode]
-    /// Lemmy availability: available from 0.19.4 onwards
+    /// Available from 0.19.4 onwards
     public let defaultPostListingMode: LemmyPostListingMode?
     /// The default post sort, usually "active"
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let defaultPostSortType: LemmyPostSortType?
     /// A default time range limit to apply to post sorts, in seconds. 0 means none.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let defaultPostTimeRangeSeconds: Int?
     /// The default comment sort, usually "hot"
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let defaultCommentSortType: LemmyCommentSortType?
     /// The number of messages allowed in a given time frame.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let rateLimitMessageMaxRequests: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let rateLimitMessageIntervalSeconds: Int?
     /// The number of posts allowed in a given time frame.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let rateLimitPostMaxRequests: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let rateLimitPostIntervalSeconds: Int?
     /// The number of registrations allowed in a given time frame.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let rateLimitRegisterMaxRequests: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let rateLimitRegisterIntervalSeconds: Int?
     /// The number of image uploads allowed in a given time frame.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let rateLimitImageMaxRequests: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let rateLimitImageIntervalSeconds: Int?
     /// The number of comments allowed in a given time frame.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let rateLimitCommentMaxRequests: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let rateLimitCommentIntervalSeconds: Int?
     /// The number of searches allowed in a given time frame.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let rateLimitSearchMaxRequests: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let rateLimitSearchIntervalSeconds: Int?
     /// The number of settings imports or exports allowed in a given time frame.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let rateLimitImportUserSettingsMaxRequests: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let rateLimitImportUserSettingsIntervalSeconds: Int?
     /// Whether or not external auth methods can auto-register users.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let oauthRegistration: Bool?
     /// What kind of post upvotes your site allows.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let postUpvotes: LemmyFederationMode?
     /// What kind of post downvotes your site allows.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let postDownvotes: LemmyFederationMode?
     /// What kind of comment upvotes your site allows.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let commentUpvotes: LemmyFederationMode?
     /// What kind of comment downvotes your site allows.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let commentDownvotes: LemmyFederationMode?
     /// Block NSFW content being created
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let disallowNsfwContent: Bool?
     /// Dont send email notifications to users for new replies, mentions etc
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let disableEmailNotifications: Bool?
     /// A multicommunity with suggested communities which is shown on the homepage
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let suggestedCommunities: Int?
 }
 

@@ -10,15 +10,15 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: unavailable after 0.19.3
+/// Unavailable after 0.19.3
 public struct LemmySiteMetadata: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let title: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let description: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let image: URL?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let embedVideoUrl: URL?
 }
 

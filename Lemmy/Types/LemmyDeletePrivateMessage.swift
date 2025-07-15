@@ -10,11 +10,11 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyDeletePrivateMessage: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let privateMessageId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let deleted: Bool
 }
 

@@ -10,12 +10,12 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public enum LemmyCommunityFollowerState: String, Codable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case accepted = "Accepted"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case pending = "Pending"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case approvalRequired = "ApprovalRequired"
 }

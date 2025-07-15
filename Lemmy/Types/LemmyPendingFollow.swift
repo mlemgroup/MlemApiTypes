@@ -10,15 +10,15 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyPendingFollow: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let person: LemmyPerson
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let community: LemmyCommunity
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let isNewInstance: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let followState: LemmyCommunityFollowerState?
 }
 

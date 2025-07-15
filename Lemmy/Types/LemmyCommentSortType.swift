@@ -10,16 +10,16 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public enum LemmyCommentSortType: String, Codable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case hot = "Hot"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case top = "Top"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case new = "New"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case old = "Old"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case controversial = "Controversial"
 }

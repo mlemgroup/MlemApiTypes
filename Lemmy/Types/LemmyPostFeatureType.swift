@@ -10,10 +10,10 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public enum LemmyPostFeatureType: String, Codable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case local = "Local"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case community = "Community"
 }

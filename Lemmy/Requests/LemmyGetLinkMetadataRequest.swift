@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyGetLinkMetadataRequest: GetRequest {
     public typealias Parameters = LemmyGetSiteMetadata
     public typealias Response = LemmyGetSiteMetadataResponse

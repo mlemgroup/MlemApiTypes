@@ -10,22 +10,22 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyGetPersonDetails: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let personId: Int?
     /// Example: dessalines , or dessalines@xyz.tld
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let username: String?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let sort: LemmySortType?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let page: Int?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let limit: Int?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let communityId: Int?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let savedOnly: Bool?
 }
 

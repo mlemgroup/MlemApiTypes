@@ -10,15 +10,15 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyRegistrationApplicationView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let registrationApplication: LemmyRegistrationApplication
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorLocalUser: LemmyLocalUser
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creator: LemmyPerson
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let admin: LemmyPerson?
 }
 

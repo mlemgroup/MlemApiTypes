@@ -10,23 +10,23 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: unavailable after 0.19.12
+/// Unavailable after 0.19.12
 public struct LemmyPostAggregates: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let postId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let comments: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let score: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let upvotes: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let downvotes: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let published: Date
     /// A newest comment time, limited to 2 days, to prevent necrobumping
     /// The time of the newest comment in the post.
-    /// Lemmy availability: available from 0.19.2 onwards
+    /// Available from 0.19.2 onwards
     public let newestCommentTime: Date?
 }
 

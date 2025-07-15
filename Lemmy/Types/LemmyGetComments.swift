@@ -10,39 +10,39 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyGetComments: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let type_: LemmyListingType?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let sort: LemmyCommentSortType?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let maxDepth: Int?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let page: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let limit: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityId: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityName: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let postId: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let parentId: Int?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let savedOnly: Bool?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let likedOnly: Bool?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let dislikedOnly: Bool?
     /// Filter to within a given time range, in seconds.
     /// IE 60 would give results for the past minute.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let timeRangeSeconds: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let pageCursor: String?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let pageBack: Bool?
 }
 

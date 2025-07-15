@@ -10,11 +10,11 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyCustomEmojiView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let customEmoji: LemmyCustomEmoji
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let keywords: [LemmyCustomEmojiKeyword]
 }
 

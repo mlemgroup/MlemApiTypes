@@ -10,54 +10,54 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyGetPosts: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let type_: LemmyListingType?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let sort: LemmySortType?
     /// DEPRECATED, use page_cursor
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let page: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let limit: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityId: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityName: String?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let savedOnly: Bool?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let likedOnly: Bool?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let dislikedOnly: Bool?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let pageCursor: String?
-    /// Lemmy availability: available from 0.19.4 onwards
+    /// Available from 0.19.4 onwards
     public let showHidden: Bool?
     /// If true, then show the read posts (even if your user setting is to hide them)
-    /// Lemmy availability: available from 0.19.6 onwards
+    /// Available from 0.19.6 onwards
     public let showRead: Bool?
     /// If true, then show the nsfw posts (even if your user setting is to hide them)
-    /// Lemmy availability: available from 0.19.6 onwards
+    /// Available from 0.19.6 onwards
     public let showNsfw: Bool?
     /// Filter to within a given time range, in seconds.
     /// IE 60 would give results for the past minute.
     /// Use Zero to override the local_site and local_user time_range.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let timeRangeSeconds: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let multiCommunityId: Int?
     /// If false, then show posts with media attached (even if your user setting is to hide them)
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let hideMedia: Bool?
     /// Whether to automatically mark fetched posts as read.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let markAsRead: Bool?
     /// If true, then only show posts with no comments
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let noCommentsOnly: Bool?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let pageBack: Bool?
 }
 

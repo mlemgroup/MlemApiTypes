@@ -10,15 +10,15 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public enum LemmyInboxCombinedView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case commentReply(LemmyCommentReplyView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case commentMention(LemmyPersonCommentMentionView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case postMention(LemmyPersonPostMentionView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case privateMessage(LemmyPrivateMessageView)
     
     enum CodingKeys: CodingKey { case type_ }

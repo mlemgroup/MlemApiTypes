@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyUserBlockInstanceRequest: PostRequest {
     public typealias Body = LemmyBlockInstance
     public typealias Response = LemmyUserBlockInstanceResponseUnion

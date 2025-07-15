@@ -10,13 +10,13 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyPrivateMessageView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let privateMessage: LemmyPrivateMessage
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creator: LemmyPerson
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let recipient: LemmyPerson
 }
 

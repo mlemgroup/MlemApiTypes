@@ -10,13 +10,13 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public enum LemmyPostOrCommentOrPrivateMessage: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case post(LemmyPost)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case comment(LemmyComment)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case privateMessage(LemmyPrivateMessage)
     
     enum CodingKeys: CodingKey { case type_ }

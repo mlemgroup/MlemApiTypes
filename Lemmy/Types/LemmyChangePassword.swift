@@ -10,13 +10,13 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyChangePassword: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let newPassword: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let newPasswordVerify: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let oldPassword: String
 }
 

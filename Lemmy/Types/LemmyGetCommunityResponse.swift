@@ -10,15 +10,15 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyGetCommunityResponse: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityView: LemmyCommunityView
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let site: LemmySite?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let moderators: [LemmyCommunityModeratorView]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let discussionLanguages: [Int]
 }
 

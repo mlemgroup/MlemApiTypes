@@ -10,13 +10,13 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyCreatePostReport: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let postId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let reason: String
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let violatesInstanceRules: Bool?
 }
 

@@ -10,11 +10,11 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: unavailable after 0.19.12
+/// Unavailable after 0.19.12
 public struct LemmyPersonBlockView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let person: LemmyPerson
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let target: LemmyPerson
 }
 

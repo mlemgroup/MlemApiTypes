@@ -10,60 +10,60 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyComment: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let id: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let postId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let content: String
     /// Whether the comment has been removed.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let removed: Bool
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let published: Date?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let updated: Date?
     /// Whether the comment has been deleted by its creator.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let deleted: Bool
     /// The federated activity id / ap_id.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let apId: ActorIdentifier
     /// Whether the comment is local.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let local: Bool
     /// The path / tree location of a comment, separated by dots, ending with the comment's id. Ex: 0.24.27
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let path: String
     /// Whether the comment has been distinguished(speaking officially) by a mod.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let distinguished: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let languageId: Int
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let publishedAt: Date?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let updatedAt: Date?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let score: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let upvotes: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let downvotes: Int?
     /// The total number of children in this comment branch.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let childCount: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let reportCount: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let unresolvedReportCount: Int?
     /// If a local user comments in a remote community, the comment is hidden until it is confirmed
     /// accepted by the community (by receiving it back via federation).
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let federationPending: Bool?
 }
 

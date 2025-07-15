@@ -10,33 +10,33 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyCreateOAuthProvider: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let displayName: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let issuer: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let authorizationEndpoint: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let tokenEndpoint: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let userinfoEndpoint: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let idClaim: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let clientId: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let clientSecret: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let scopes: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let autoVerifyEmail: Bool?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let accountLinkingEnabled: Bool?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let usePkce: Bool?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let enabled: Bool?
 }
 

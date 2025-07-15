@@ -10,17 +10,17 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyModRemovePostView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let modRemovePost: LemmyModRemovePost
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let moderator: LemmyPerson?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let post: LemmyPost
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let community: LemmyCommunity
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let otherPerson: LemmyPerson?
 }
 

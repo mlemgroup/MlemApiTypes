@@ -10,15 +10,15 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public enum LemmyReportCombinedView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case post(LemmyPostReportView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case comment(LemmyCommentReportView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case privateMessage(LemmyPrivateMessageReportView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case community(LemmyCommunityReportView)
     
     enum CodingKeys: CodingKey { case type_ }

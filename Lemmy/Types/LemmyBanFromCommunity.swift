@@ -10,28 +10,28 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyBanFromCommunity: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let personId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let ban: Bool
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let removeData: Bool?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let reason: String?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let expires: Int?
     /// Optionally remove or restore all their data. Useful for new troll accounts.
     /// If ban is true, then this means remove. If ban is false, it means restore.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let removeOrRestoreData: Bool?
     /// A time that the ban will expire, in unix epoch seconds.
     /// 
     /// An i64 unix timestamp is used for a simpler API client implementation.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let expiresAt: Int?
 }
 

@@ -10,13 +10,13 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyApproveCommunityPendingFollower: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let followerId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let approve: Bool
 }
 

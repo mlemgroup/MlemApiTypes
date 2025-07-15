@@ -10,12 +10,12 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public enum LemmyPostListingMode: String, Codable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case list = "List"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case card = "Card"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case smallCard = "SmallCard"
 }

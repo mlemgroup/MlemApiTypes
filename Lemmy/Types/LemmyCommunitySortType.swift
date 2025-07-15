@@ -10,32 +10,32 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public enum LemmyCommunitySortType: String, Codable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case activeSixMonths = "ActiveSixMonths"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case activeMonthly = "ActiveMonthly"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case activeWeekly = "ActiveWeekly"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case activeDaily = "ActiveDaily"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case hot = "Hot"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case new = "New"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case old = "Old"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case nameAsc = "NameAsc"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case nameDesc = "NameDesc"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case comments = "Comments"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case posts = "Posts"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case subscribers = "Subscribers"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case subscribersLocal = "SubscribersLocal"
 }

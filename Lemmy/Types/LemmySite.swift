@@ -10,53 +10,53 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmySite: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let id: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let name: String
     /// A sidebar for the site in markdown.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let sidebar: String?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let published: Date?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let updated: Date?
     /// An icon URL.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let icon: URL?
     /// A banner url.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let banner: URL?
     /// A shorter, one-line description of the site.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let description: String?
     /// The federated actor_id.
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let actorId: ActorIdentifier?
     /// The time the site was last refreshed.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let lastRefreshedAt: Date
     /// The site inbox
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let inboxUrl: URL
-    /// Lemmy availability: unavailable after 0.19.3
+    /// Unavailable after 0.19.3
     public let privateKey: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let publicKey: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let instanceId: Int
     /// If present, nsfw content is visible by default. Should be displayed by frontends/clients
     /// when the site is first opened by a user.
-    /// Lemmy availability: available from 0.19.4 onwards
+    /// Available from 0.19.4 onwards
     public let contentWarning: String?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let publishedAt: Date?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let updatedAt: Date?
     /// The federated ap_id.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let apId: ActorIdentifier?
 }
 

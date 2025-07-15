@@ -10,14 +10,14 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyGetPostsResponse: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let posts: [LemmyPostView]
     /// the pagination cursor to use to fetch the next page
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let nextPage: String?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let prevPage: String?
 }
 

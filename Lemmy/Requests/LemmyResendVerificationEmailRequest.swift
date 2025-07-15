@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyResendVerificationEmailRequest: PostRequest {
     public typealias Body = LemmyResendVerificationEmail
     public typealias Response = LemmySuccessResponse

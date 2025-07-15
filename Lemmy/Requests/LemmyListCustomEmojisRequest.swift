@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyListCustomEmojisRequest: GetRequest {
     public typealias Parameters = LemmyListCustomEmojis
     public typealias Response = LemmyListCustomEmojisResponse

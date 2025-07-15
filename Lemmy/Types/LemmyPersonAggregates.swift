@@ -10,13 +10,13 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: unavailable after 0.19.12
+/// Unavailable after 0.19.12
 public struct LemmyPersonAggregates: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let personId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let postCount: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let commentCount: Int
 }
 

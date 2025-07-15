@@ -10,13 +10,13 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyAdminAllowInstanceView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let adminAllowInstance: LemmyAdminAllowInstance
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let instance: LemmyInstance
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let admin: LemmyPerson?
 }
 

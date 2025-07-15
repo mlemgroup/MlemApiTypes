@@ -10,23 +10,23 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyMyUserInfo: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let localUserView: LemmyLocalUserView
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let follows: [LemmyCommunityFollowerView]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let moderates: [LemmyCommunityModeratorView]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityBlocks: [LemmyCommunityBlockView]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let instanceBlocks: [LemmyInstanceBlockView]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let personBlocks: [LemmyPersonBlockView]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let discussionLanguages: [Int]
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let keywordBlocks: [String]?
 }
 

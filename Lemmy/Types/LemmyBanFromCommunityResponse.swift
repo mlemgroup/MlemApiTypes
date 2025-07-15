@@ -10,11 +10,11 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyBanFromCommunityResponse: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let personView: LemmyPersonView
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let banned: Bool
 }
 

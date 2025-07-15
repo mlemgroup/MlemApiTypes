@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyResolveObjectRequest: GetRequest {
     public typealias Parameters = LemmyResolveObject
     public typealias Response = LemmyResolveObjectResponseUnion

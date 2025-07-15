@@ -10,20 +10,20 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public enum LemmySearchType: String, Codable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case all = "All"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case comments = "Comments"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case posts = "Posts"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case communities = "Communities"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case users = "Users"
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     case url = "Url"
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     case multiCommunities = "MultiCommunities"
 }

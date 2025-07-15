@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyDeletePostRequest: PostRequest {
     public typealias Body = LemmyDeletePost
     public typealias Response = LemmyPostResponse

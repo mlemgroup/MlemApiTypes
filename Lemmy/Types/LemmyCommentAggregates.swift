@@ -10,20 +10,20 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: unavailable after 0.19.12
+/// Unavailable after 0.19.12
 public struct LemmyCommentAggregates: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let commentId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let score: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let upvotes: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let downvotes: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let published: Date
     /// The total number of children in this comment branch.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let childCount: Int
 }
 

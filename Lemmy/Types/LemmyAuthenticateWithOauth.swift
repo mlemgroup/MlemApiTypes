@@ -10,23 +10,23 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyAuthenticateWithOauth: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let code: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let oauthProviderId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let redirectUri: URL
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let showNsfw: Bool?
     /// Username is mandatory at registration time
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let username: String?
     /// An answer is mandatory if require application is enabled on the server
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let answer: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let pkceCodeVerifier: String?
 }
 

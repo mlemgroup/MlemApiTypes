@@ -10,24 +10,24 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public enum LemmyPostSortType: String, Codable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case active = "Active"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case hot = "Hot"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case new = "New"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case old = "Old"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case top = "Top"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case mostComments = "MostComments"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case newComments = "NewComments"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case controversial = "Controversial"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case scaled = "Scaled"
 }

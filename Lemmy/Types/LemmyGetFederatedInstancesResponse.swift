@@ -10,10 +10,10 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyGetFederatedInstancesResponse: Codable, Hashable, Sendable {
     /// Optional, because federation may be disabled.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let federatedInstances: LemmyFederatedInstances?
 }
 

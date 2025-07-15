@@ -10,10 +10,10 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyResolveObject: Codable, Hashable, Sendable {
     /// Can be the full url, or a shortened version like: !fediverse@lemmy.ml
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let q: String
 }
 

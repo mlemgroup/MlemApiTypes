@@ -10,29 +10,29 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: unavailable after 0.19.12
+/// Unavailable after 0.19.12
 public struct LemmySiteAggregates: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let siteId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let users: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let posts: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let comments: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communities: Int
     /// The number of users with any activity in the last day.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let usersActiveDay: Int
     /// The number of users with any activity in the last week.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let usersActiveWeek: Int
     /// The number of users with any activity in the last month.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let usersActiveMonth: Int
     /// The number of users with any activity in the last half year.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let usersActiveHalfYear: Int
 }
 

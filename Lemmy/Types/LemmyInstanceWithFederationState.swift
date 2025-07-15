@@ -10,12 +10,12 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyInstanceWithFederationState: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let instance: LemmyInstance
     /// if federation to this instance is or was active, show state of outgoing federation to this instance
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let federationState: LemmyReadableFederationState?
 }
 

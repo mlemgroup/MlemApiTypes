@@ -10,16 +10,16 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyCommentActions: Codable, Hashable, Sendable {
     /// The like / score for the comment.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let likeScore: Int?
     /// When the comment was liked.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let likedAt: Date?
     /// When the comment was saved.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let savedAt: Date?
 }
 

@@ -10,13 +10,13 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 0.19.4 onwards
+/// Available from 0.19.4 onwards
 public struct LemmyHidePost: Codable, Hashable, Sendable {
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let postIds: [Int]?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let hide: Bool
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let postId: Int?
 }
 

@@ -10,23 +10,23 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: unavailable after 0.19.12
+/// Unavailable after 0.19.12
 public struct LemmyModlogListParams: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityId: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let modPersonId: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let otherPersonId: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let page: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let limit: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let hideModlogNames: Bool
-    /// Lemmy availability: available from 0.19.4 onwards
+    /// Available from 0.19.4 onwards
     public let postId: Int?
-    /// Lemmy availability: available from 0.19.4 onwards
+    /// Available from 0.19.4 onwards
     public let commentId: Int?
 }
 

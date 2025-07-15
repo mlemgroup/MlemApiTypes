@@ -10,19 +10,19 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyExportDataResponse: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let inbox: [LemmyPostOrCommentOrPrivateMessage]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let content: [LemmyPostOrCommentOrPrivateMessage]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let readPosts: [URL]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let liked: [URL]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let moderates: [URL]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let settings: LemmyUserSettingsBackup
 }
 

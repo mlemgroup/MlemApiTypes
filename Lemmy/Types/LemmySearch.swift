@@ -10,46 +10,46 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmySearch: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let q: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityId: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityName: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorId: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let type_: LemmySearchType?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let sort: SearchSortTypeBridge
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let listingType: LemmyListingType?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let page: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let limit: Int?
-    /// Lemmy availability: available between 0.19.6 and 0.19.12
+    /// Available between 0.19.6 and 0.19.12
     public let postTitleOnly: Bool?
     /// Filter to within a given time range, in seconds.
     /// IE 60 would give results for the past minute.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let timeRangeSeconds: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let titleOnly: Bool?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let postUrlOnly: Bool?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let likedOnly: Bool?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let dislikedOnly: Bool?
     /// If true, then show the nsfw posts (even if your user setting is to hide them)
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let showNsfw: Bool?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let pageCursor: String?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let pageBack: Bool?
 }
 

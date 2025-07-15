@@ -10,19 +10,19 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyListCommunityPendingFollows: Codable, Hashable, Sendable {
     /// Only shows the unapproved applications
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let pendingOnly: Bool?
     /// Only for admins, show pending follows for communities which you dont moderate
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let allCommunities: Bool?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let pageCursor: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let pageBack: Bool?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let limit: Int?
 }
 

@@ -10,16 +10,16 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public enum LemmyReportType: String, Codable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case all = "All"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case posts = "Posts"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case comments = "Comments"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case privateMessages = "PrivateMessages"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case communities = "Communities"
 }

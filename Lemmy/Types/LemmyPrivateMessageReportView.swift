@@ -10,18 +10,22 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyPrivateMessageReportView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let privateMessageReport: LemmyPrivateMessageReport
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let privateMessage: LemmyPrivateMessage
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let privateMessageCreator: LemmyPerson
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creator: LemmyPerson
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let resolver: LemmyPerson?
+    /// Available from 1.0.0-alpha onwards
+    public let creatorIsAdmin: Bool?
+    /// Available from 1.0.0-alpha onwards
+    public let creatorBanned: Bool?
 }
 
 public extension LemmyPrivateMessageReportView {
@@ -31,5 +35,7 @@ public extension LemmyPrivateMessageReportView {
         case privateMessageCreator = "private_message_creator"
         case creator = "creator"
         case resolver = "resolver"
+        case creatorIsAdmin = "creator_is_admin"
+        case creatorBanned = "creator_banned"
     }
 }

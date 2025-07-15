@@ -10,17 +10,17 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available between 0.19.4 and 0.19.12
+/// Available between 0.19.4 and 0.19.12
 public struct LemmyLocalUserVoteDisplayMode: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let localUserId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let score: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let upvotes: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let downvotes: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let upvotePercentage: Bool
 }
 

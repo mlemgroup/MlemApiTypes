@@ -10,31 +10,31 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyGetModlog: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let modPersonId: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityId: Int?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let page: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let limit: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let type_: LemmyModlogActionType?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let otherPersonId: Int?
-    /// Lemmy availability: available from 0.19.4 onwards
+    /// Available from 0.19.4 onwards
     public let postId: Int?
-    /// Lemmy availability: available from 0.19.4 onwards
+    /// Available from 0.19.4 onwards
     public let commentId: Int?
     /// Filter by listing type. When not using All, it will remove the non-community modlog entries,
     /// such as site bans, instance blocks, adding an admin, etc.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let listingType: LemmyListingType?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let pageCursor: String?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let pageBack: Bool?
 }
 

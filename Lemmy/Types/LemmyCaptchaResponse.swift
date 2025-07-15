@@ -10,16 +10,16 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyCaptchaResponse: Codable, Hashable, Sendable {
     /// A Base64 encoded png
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let png: String
     /// A Base64 encoded wav audio
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let wav: String
     /// The UUID for the captcha item.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let uuid: String
 }
 

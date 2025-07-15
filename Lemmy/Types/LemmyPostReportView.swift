@@ -10,48 +10,50 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyPostReportView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let postReport: LemmyPostReport
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let post: LemmyPost
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let community: LemmyCommunity
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creator: LemmyPerson
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let postCreator: LemmyPerson
-    /// Lemmy availability: unavailable after 0.19.12
-    public let creatorBannedFromCommunity: Bool?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Available on all versions
+    public let creatorBannedFromCommunity: Bool
+    /// Unavailable after 0.19.12
     public let myVote: Int?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let counts: LemmyPostAggregates?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let resolver: LemmyPerson?
-    /// Lemmy availability: available between 0.19.4 and 0.19.12
+    /// Available from 0.19.4 onwards
     public let creatorIsModerator: Bool?
-    /// Lemmy availability: available from 0.19.4 onwards
+    /// Available from 0.19.4 onwards
     public let creatorIsAdmin: Bool?
-    /// Lemmy availability: available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.12
     public let subscribed: LemmySubscribedType?
-    /// Lemmy availability: available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.12
     public let saved: Bool?
-    /// Lemmy availability: available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.12
     public let read: Bool?
-    /// Lemmy availability: available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.12
     public let hidden: Bool?
-    /// Lemmy availability: available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.12
     public let creatorBlocked: Bool?
-    /// Lemmy availability: available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.12
     public let unreadComments: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let communityActions: LemmyCommunityActions?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let postActions: LemmyPostActions?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let personActions: LemmyPersonActions?
+    /// Available from 1.0.0-alpha onwards
+    public let creatorBanned: Bool?
 }
 
 public extension LemmyPostReportView {
@@ -76,5 +78,6 @@ public extension LemmyPostReportView {
         case communityActions = "community_actions"
         case postActions = "post_actions"
         case personActions = "person_actions"
+        case creatorBanned = "creator_banned"
     }
 }

@@ -10,51 +10,51 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyPersonCommentMentionView: Codable, Hashable, Sendable {
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let personMention: LemmyPersonCommentMention?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let comment: LemmyComment
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creator: LemmyPerson
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let post: LemmyPost
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let community: LemmyCommunity
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let recipient: LemmyPerson
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let counts: LemmyCommentAggregates?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorBannedFromCommunity: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorIsModerator: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorIsAdmin: Bool
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let subscribed: LemmySubscribedType?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let saved: Bool?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let creatorBlocked: Bool?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let myVote: Int?
-    /// Lemmy availability: available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.12
     public let bannedFromCommunity: Bool?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let personCommentMention: LemmyPersonCommentMention?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let communityActions: LemmyCommunityActions?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let commentActions: LemmyCommentActions?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let personActions: LemmyPersonActions?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let instanceActions: LemmyInstanceActions?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let canMod: Bool?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let creatorBanned: Bool?
 }
 

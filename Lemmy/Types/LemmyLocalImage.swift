@@ -10,22 +10,22 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 0.19.4 onwards
+/// Available from 0.19.4 onwards
 public struct LemmyLocalImage: Codable, Hashable, Sendable {
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let localUserId: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let pictrsAlias: String
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let pictrsDeleteToken: String?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let published: Date?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let publishedAt: Date?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let personId: Int?
     /// This means the image is an auto-generated thumbnail, for a post.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let thumbnailForPostId: Int?
 }
 

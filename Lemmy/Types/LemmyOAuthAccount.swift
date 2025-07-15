@@ -10,17 +10,17 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyOAuthAccount: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let localUserId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let oauthProviderId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let oauthUserId: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let publishedAt: Date
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let updatedAt: Date?
 }
 

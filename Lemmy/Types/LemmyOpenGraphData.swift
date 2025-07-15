@@ -10,15 +10,15 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 0.19.4 onwards
+/// Available from 0.19.4 onwards
 public struct LemmyOpenGraphData: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let title: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let description: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let image: URL?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let embedVideoUrl: URL?
 }
 

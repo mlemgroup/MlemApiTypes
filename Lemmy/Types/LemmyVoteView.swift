@@ -10,15 +10,15 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 0.19.2 onwards
+/// Available from 0.19.2 onwards
 public struct LemmyVoteView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creator: LemmyPerson
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let score: Int
-    /// Lemmy availability: available from 0.19.4 onwards
+    /// Available from 0.19.4 onwards
     public let creatorBannedFromCommunity: Bool?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let creatorBanned: Bool?
 }
 

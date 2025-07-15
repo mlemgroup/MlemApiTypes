@@ -10,12 +10,12 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: unavailable after 0.19.12
+/// Unavailable after 0.19.12
 public enum LemmySubscribedType: String, Codable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case subscribed = "Subscribed"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case notSubscribed = "NotSubscribed"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case pending = "Pending"
 }

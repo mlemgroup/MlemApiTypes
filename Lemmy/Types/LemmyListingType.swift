@@ -10,16 +10,16 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public enum LemmyListingType: String, Codable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case all = "All"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case local = "Local"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case subscribed = "Subscribed"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case moderatorView = "ModeratorView"
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     case suggested = "Suggested"
 }

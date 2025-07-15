@@ -10,38 +10,38 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyPostReport: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let id: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let postId: Int
     /// The original post title.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let originalPostName: String
     /// The original post url.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let originalPostUrl: URL?
     /// The original post body.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let originalPostBody: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let reason: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let resolved: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let resolverId: Int?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let published: Date?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let updated: Date?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let publishedAt: Date?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let updatedAt: Date?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let violatesInstanceRules: Bool?
 }
 

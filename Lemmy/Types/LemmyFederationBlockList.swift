@@ -10,15 +10,15 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyFederationBlockList: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let instanceId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let publishedAt: Date
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let updatedAt: Date?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let expiresAt: Date?
 }
 

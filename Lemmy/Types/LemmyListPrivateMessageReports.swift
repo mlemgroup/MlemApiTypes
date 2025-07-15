@@ -10,14 +10,14 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: unavailable after 0.19.12
+/// Unavailable after 0.19.12
 public struct LemmyListPrivateMessageReports: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let page: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let limit: Int?
     /// Only shows the unresolved reports
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let unresolvedOnly: Bool?
 }
 

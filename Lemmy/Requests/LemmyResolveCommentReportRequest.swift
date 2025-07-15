@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyResolveCommentReportRequest: PutRequest {
     public typealias Body = LemmyResolveCommentReport
     public typealias Response = LemmyCommentReportResponse

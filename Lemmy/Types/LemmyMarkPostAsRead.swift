@@ -10,14 +10,14 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyMarkPostAsRead: Codable, Hashable, Sendable {
     /// TODO: deprecated, send `post_ids` instead
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let postId: Int?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let postIds: [Int]?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let read: Bool
 }
 

@@ -10,39 +10,39 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyPersonPostMentionView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let personPostMention: LemmyPersonPostMention
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let recipient: LemmyPerson
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let post: LemmyPost
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creator: LemmyPerson
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let community: LemmyCommunity
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let imageDetails: LemmyImageDetails?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityActions: LemmyCommunityActions?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let personActions: LemmyPersonActions?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let postActions: LemmyPostActions?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let instanceActions: LemmyInstanceActions?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let postTags: [LemmyTag]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorIsAdmin: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let canMod: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorBanned: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorIsModerator: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorBannedFromCommunity: Bool
 }
 

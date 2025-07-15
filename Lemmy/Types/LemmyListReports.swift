@@ -10,31 +10,31 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyListReports: Codable, Hashable, Sendable {
     /// Only shows the unresolved reports
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let unresolvedOnly: Bool?
     /// Filter the type of report.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let type_: LemmyReportType?
     /// Filter by the post id. Can return either comment or post reports.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let postId: Int?
     /// if no community is given, it returns reports for all communities moderated by the auth user
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityId: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let pageCursor: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let pageBack: Bool?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let limit: Int?
     /// Only for admins: also show reports with `violates_instance_rules=false`
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let showCommunityRuleViolations: Bool?
     /// If true, view all your created reports. Works for non-admins/mods also.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let myReportsOnly: Bool?
 }
 

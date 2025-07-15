@@ -10,25 +10,25 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyListCommunities: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let type_: LemmyListingType?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let sort: LemmySortType?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let showNsfw: Bool?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let page: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let limit: Int?
     /// Filter to within a given time range, in seconds.
     /// IE 60 would give results for the past minute.
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let timeRangeSeconds: Int?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let pageCursor: String?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let pageBack: Bool?
 }
 

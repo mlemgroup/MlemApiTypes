@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: unavailable after 0.19.12
+/// Unavailable after 0.19.12
 public struct LemmyListPostReportsRequest: GetRequest {
     public typealias Parameters = LemmyListPostReports
     public typealias Response = LemmyListPostReportsResponse

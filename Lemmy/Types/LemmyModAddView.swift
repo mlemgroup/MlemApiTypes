@@ -10,15 +10,15 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyModAddView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let modAdd: LemmyModAdd
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let moderator: LemmyPerson?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let moddedPerson: LemmyPerson?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let otherPerson: LemmyPerson?
 }
 

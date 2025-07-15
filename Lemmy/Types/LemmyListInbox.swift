@@ -10,17 +10,17 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyListInbox: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let type_: LemmyInboxDataType?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let unreadOnly: Bool?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let pageCursor: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let pageBack: Bool?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let limit: Int?
 }
 

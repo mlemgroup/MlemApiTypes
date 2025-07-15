@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyUpdateCustomEmojiRequest: PutRequest {
     public typealias Body = LemmyEditCustomEmoji
     public typealias Response = LemmyCustomEmojiResponse

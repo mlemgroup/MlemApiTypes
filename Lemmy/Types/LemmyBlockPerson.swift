@@ -10,11 +10,11 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyBlockPerson: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let personId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let block: Bool
 }
 

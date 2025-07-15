@@ -10,11 +10,11 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyAdminPurgeCommunityView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let adminPurgeCommunity: LemmyAdminPurgeCommunity
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let admin: LemmyPerson?
 }
 

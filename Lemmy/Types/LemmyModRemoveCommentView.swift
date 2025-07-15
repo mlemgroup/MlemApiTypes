@@ -10,21 +10,21 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyModRemoveCommentView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let modRemoveComment: LemmyModRemoveComment
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let moderator: LemmyPerson?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let comment: LemmyComment
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let commenter: LemmyPerson?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let post: LemmyPost
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let community: LemmyCommunity
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let otherPerson: LemmyPerson?
 }
 

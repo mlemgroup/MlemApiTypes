@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyFollowCommunityRequest: PostRequest {
     public typealias Body = LemmyFollowCommunity
     public typealias Response = LemmyCommunityResponse

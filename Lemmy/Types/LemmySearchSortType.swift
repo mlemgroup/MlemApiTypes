@@ -10,12 +10,12 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public enum LemmySearchSortType: String, Codable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case new = "New"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case top = "Top"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case old = "Old"
 }

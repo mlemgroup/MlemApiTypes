@@ -10,44 +10,46 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyCommentReportView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let commentReport: LemmyCommentReport
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let comment: LemmyComment
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let post: LemmyPost
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let community: LemmyCommunity
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creator: LemmyPerson
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let commentCreator: LemmyPerson
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let counts: LemmyCommentAggregates?
-    /// Lemmy availability: unavailable after 0.19.12
-    public let creatorBannedFromCommunity: Bool?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Available on all versions
+    public let creatorBannedFromCommunity: Bool
+    /// Unavailable after 0.19.12
     public let myVote: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let resolver: LemmyPerson?
-    /// Lemmy availability: available between 0.19.4 and 0.19.12
+    /// Available from 0.19.4 onwards
     public let creatorIsModerator: Bool?
-    /// Lemmy availability: available from 0.19.4 onwards
+    /// Available from 0.19.4 onwards
     public let creatorIsAdmin: Bool?
-    /// Lemmy availability: available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.12
     public let creatorBlocked: Bool?
-    /// Lemmy availability: available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.12
     public let subscribed: LemmySubscribedType?
-    /// Lemmy availability: available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.12
     public let saved: Bool?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let commentActions: LemmyCommentActions?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let personActions: LemmyPersonActions?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let communityActions: LemmyCommunityActions?
+    /// Available from 1.0.0-alpha onwards
+    public let creatorBanned: Bool?
 }
 
 public extension LemmyCommentReportView {
@@ -70,5 +72,6 @@ public extension LemmyCommentReportView {
         case commentActions = "comment_actions"
         case personActions = "person_actions"
         case communityActions = "community_actions"
+        case creatorBanned = "creator_banned"
     }
 }

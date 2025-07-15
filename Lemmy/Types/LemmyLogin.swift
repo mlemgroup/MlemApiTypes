@@ -10,14 +10,14 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyLogin: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let usernameOrEmail: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let password: String
     /// May be required, if totp is enabled for their account.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let totp2faToken: String?
 }
 

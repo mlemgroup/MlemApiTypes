@@ -10,33 +10,33 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyPrivateMessage: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let id: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let recipientId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let content: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let deleted: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let read: Bool
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let published: Date?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let updated: Date?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let apId: ActorIdentifier
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let local: Bool
-    /// Lemmy availability: available from 0.19.10 onwards
+    /// Available from 0.19.10 onwards
     public let removed: Bool?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let publishedAt: Date?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let updatedAt: Date?
 }
 

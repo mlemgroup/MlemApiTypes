@@ -10,16 +10,16 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyGetPostResponse: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let postView: LemmyPostView
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityView: LemmyCommunityView
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let moderators: [LemmyCommunityModeratorView]?
     /// A list of cross-posts, or other times / communities this link has been posted to.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let crossPosts: [LemmyPostView]
 }
 

@@ -10,17 +10,17 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyGetPersonDetailsResponse: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let personView: LemmyPersonView
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let comments: [LemmyCommentView]?
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let posts: [LemmyPostView]?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let moderates: [LemmyCommunityModeratorView]
-    /// Lemmy availability: available from 0.19.4 onwards
+    /// Available from 0.19.4 onwards
     public let site: LemmySite?
 }
 

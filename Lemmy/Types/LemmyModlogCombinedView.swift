@@ -10,41 +10,41 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public enum LemmyModlogCombinedView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case adminAllowInstance(LemmyAdminAllowInstanceView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case adminBlockInstance(LemmyAdminBlockInstanceView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case adminPurgeComment(LemmyAdminPurgeCommentView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case adminPurgeCommunity(LemmyAdminPurgeCommunityView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case adminPurgePerson(LemmyAdminPurgePersonView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case adminPurgePost(LemmyAdminPurgePostView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case modAdd(LemmyModAddView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case modAddCommunity(LemmyModAddCommunityView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case modBan(LemmyModBanView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case modBanFromCommunity(LemmyModBanFromCommunityView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case modFeaturePost(LemmyModFeaturePostView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case modChangeCommunityVisibility(LemmyModChangeCommunityVisibilityView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case modLockPost(LemmyModLockPostView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case modRemoveComment(LemmyModRemoveCommentView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case modRemoveCommunity(LemmyModRemoveCommunityView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case modRemovePost(LemmyModRemovePostView)
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case modTransferCommunity(LemmyModTransferCommunityView)
     
     enum CodingKeys: CodingKey { case type_ }

@@ -10,16 +10,16 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyInstanceActions: Codable, Hashable, Sendable {
     /// When the instance was blocked.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let blockedAt: Date?
     /// When this user received a site ban.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let receivedBanAt: Date?
     /// When their ban expires.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let banExpiresAt: Date?
 }
 

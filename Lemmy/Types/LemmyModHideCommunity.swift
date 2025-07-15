@@ -10,19 +10,19 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: unavailable after 0.19.12
+/// Unavailable after 0.19.12
 public struct LemmyModHideCommunity: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let id: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let modPersonId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let when_: Date
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let reason: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let hidden: Bool
 }
 

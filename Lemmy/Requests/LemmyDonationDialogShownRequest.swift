@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 0.19.11 onwards
+/// Available from 0.19.11 onwards
 public struct LemmyDonationDialogShownRequest: PostRequest {
     public typealias Body = Int
     public typealias Response = LemmySuccessResponse

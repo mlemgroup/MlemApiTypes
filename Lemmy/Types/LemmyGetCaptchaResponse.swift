@@ -10,10 +10,10 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyGetCaptchaResponse: Codable, Hashable, Sendable {
     /// Will be None if captchas are disabled.
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let ok: LemmyCaptchaResponse?
 }
 

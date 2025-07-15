@@ -10,17 +10,17 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmySiteView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let site: LemmySite
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let localSite: LemmyLocalSite
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let localSiteRateLimit: LemmyLocalSiteRateLimit
-    /// Lemmy availability: unavailable after 0.19.12
+    /// Unavailable after 0.19.12
     public let counts: LemmySiteAggregates?
-    /// Lemmy availability: available from 1.0.0-alpha onwards
+    /// Available from 1.0.0-alpha onwards
     public let instance: LemmyInstance?
 }
 

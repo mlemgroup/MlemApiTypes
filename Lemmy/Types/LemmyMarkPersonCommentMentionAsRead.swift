@@ -10,11 +10,11 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyMarkPersonCommentMentionAsRead: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let personCommentMentionId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let read: Bool
 }
 

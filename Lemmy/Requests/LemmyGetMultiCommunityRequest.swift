@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyGetMultiCommunityRequest: GetRequest {
     public typealias Parameters = LemmyGetMultiCommunity
     public typealias Response = LemmyGetMultiCommunityResponse

@@ -10,29 +10,29 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyMultiCommunity: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let id: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let instanceId: Int
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let name: String
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let title: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let description: String?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let local: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let deleted: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let apId: ActorIdentifier
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let publishedAt: Date
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let updatedAt: Date?
 }
 

@@ -10,19 +10,19 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: unavailable after 0.19.12
+/// Unavailable after 0.19.12
 public struct LemmyListPostReports: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let page: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let limit: Int?
     /// Only shows the unresolved reports
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let unresolvedOnly: Bool?
     /// if no community is given, it returns reports for all communities moderated by the auth user
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let communityId: Int?
-    /// Lemmy availability: available from 0.19.4 onwards
+    /// Available from 0.19.4 onwards
     public let postId: Int?
 }
 

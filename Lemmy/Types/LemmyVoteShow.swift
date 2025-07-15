@@ -10,12 +10,12 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public enum LemmyVoteShow: String, Codable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case show = "Show"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case showForOthers = "ShowForOthers"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case hide = "Hide"
 }

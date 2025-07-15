@@ -10,15 +10,15 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: unavailable after 0.19.12
+/// Unavailable after 0.19.12
 public struct LemmyGetReplies: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let sort: LemmyCommentSortType?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let page: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let limit: Int?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let unreadOnly: Bool?
 }
 

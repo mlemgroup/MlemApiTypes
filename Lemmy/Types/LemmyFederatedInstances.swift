@@ -10,13 +10,13 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public struct LemmyFederatedInstances: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let linked: [InstanceWithFederationStateBridge]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let allowed: [InstanceWithFederationStateBridge]
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let blocked: [InstanceWithFederationStateBridge]
 }
 

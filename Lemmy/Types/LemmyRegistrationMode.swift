@@ -10,12 +10,12 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: all versions
+/// Available on all versions
 public enum LemmyRegistrationMode: String, Codable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case closed = "Closed"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case requireApplication = "RequireApplication"
-    /// Lemmy availability: all versions
+    /// Available on all versions
     case open = "Open"
 }

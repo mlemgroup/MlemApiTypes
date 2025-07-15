@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyFollowMultiCommunityRequest: PostRequest {
     public typealias Body = LemmyFollowMultiCommunity
     public typealias Response = LemmySuccessResponse

@@ -10,27 +10,27 @@
 import Foundation
 import Rest
 
-/// Lemmy availability: available from 1.0.0-alpha onwards
+/// Available from 1.0.0-alpha onwards
 public struct LemmyCommentSlimView: Codable, Hashable, Sendable {
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let comment: LemmyComment
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creator: LemmyPerson
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let commentActions: LemmyCommentActions?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let personActions: LemmyPersonActions?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let instanceActions: LemmyInstanceActions?
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorIsAdmin: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let canMod: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorBanned: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorIsModerator: Bool
-    /// Lemmy availability: all versions
+    /// Available on all versions
     public let creatorBannedFromCommunity: Bool
 }
 
