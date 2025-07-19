@@ -34,6 +34,8 @@ public struct LemmyPostActions: Codable, Hashable, Sendable {
     /// When the post was hidden.
     /// Available on all versions
     public let hiddenAt: Date?
+    /// Available on all versions
+    public let notifications: LemmyPostNotificationsMode?
 }
 
 public extension LemmyPostActions {
@@ -45,5 +47,6 @@ public extension LemmyPostActions {
         case likedAt = "liked_at"
         case likeScore = "like_score"
         case hiddenAt = "hidden_at"
+        case notifications = "notifications"
     }
 }

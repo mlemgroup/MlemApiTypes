@@ -14,8 +14,8 @@ import Rest
 public struct LemmyCommentResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let commentView: LemmyCommentView
-    /// Available on all versions
-    public let recipientIds: [Int]
+    /// Unavailable after 0.19.12
+    public let recipientIds: [Int]?
 }
 
 public extension LemmyCommentResponse {

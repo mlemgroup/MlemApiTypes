@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.12
 public struct LemmyPersonCommentMention: Codable, Hashable, Sendable {
     /// Available on all versions
     public let id: Int
@@ -20,10 +20,8 @@ public struct LemmyPersonCommentMention: Codable, Hashable, Sendable {
     public let commentId: Int
     /// Available on all versions
     public let read: Bool
-    /// Unavailable after 0.19.12
-    public let published: Date?
-    /// Available from 1.0.0-alpha onwards
-    public let publishedAt: Date?
+    /// Available on all versions
+    public let published: Date
 }
 
 public extension LemmyPersonCommentMention {
@@ -33,6 +31,5 @@ public extension LemmyPersonCommentMention {
         case commentId = "comment_id"
         case read = "read"
         case published = "published"
-        case publishedAt = "published_at"
     }
 }

@@ -1,5 +1,5 @@
 //
-//  LemmyListInboxResponse.swift
+//  LemmyListNotificationsResponse.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,9 +11,9 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyListInboxResponse: Codable, Hashable, Sendable {
+public struct LemmyListNotificationsResponse: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let inbox: [LemmyInboxCombinedView]
+    public let notifications: [LemmyNotificationView]
     /// the pagination cursor to use to fetch the next page
     /// Available on all versions
     public let nextPage: String?
@@ -21,9 +21,9 @@ public struct LemmyListInboxResponse: Codable, Hashable, Sendable {
     public let prevPage: String?
 }
 
-public extension LemmyListInboxResponse {
+public extension LemmyListNotificationsResponse {
     enum CodingKeys: String, CodingKey {
-        case inbox = "inbox"
+        case notifications = "notifications"
         case nextPage = "next_page"
         case prevPage = "prev_page"
     }

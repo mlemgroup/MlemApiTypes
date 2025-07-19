@@ -1,5 +1,5 @@
 //
-//  LemmyInboxDataType.swift
+//  LemmyNotificationDataType.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,15 +11,15 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public enum LemmyInboxDataType: String, Codable, Sendable {
+public enum LemmyNotificationDataType: String, Codable, Sendable {
     /// Available on all versions
     case all = "All"
     /// Available on all versions
-    case commentReply = "CommentReply"
+    case reply = "Reply"
     /// Available on all versions
-    case commentMention = "CommentMention"
-    /// Available on all versions
-    case postMention = "PostMention"
+    case mention = "Mention"
     /// Available on all versions
     case privateMessage = "PrivateMessage"
+    /// Available on all versions
+    case subscribed = "Subscribed"
 }

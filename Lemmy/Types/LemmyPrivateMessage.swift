@@ -22,8 +22,8 @@ public struct LemmyPrivateMessage: Codable, Hashable, Sendable {
     public let content: String
     /// Available on all versions
     public let deleted: Bool
-    /// Available on all versions
-    public let read: Bool
+    /// Unavailable after 0.19.12
+    public let read: Bool?
     /// Unavailable after 0.19.12
     public let published: Date?
     /// Unavailable after 0.19.12

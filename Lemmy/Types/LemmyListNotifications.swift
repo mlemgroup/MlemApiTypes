@@ -1,5 +1,5 @@
 //
-//  LemmyListInbox.swift
+//  LemmyListNotifications.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,9 +11,9 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyListInbox: Codable, Hashable, Sendable {
+public struct LemmyListNotifications: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let type_: LemmyInboxDataType?
+    public let type_: LemmyNotificationDataType?
     /// Available on all versions
     public let unreadOnly: Bool?
     /// Available on all versions
@@ -24,7 +24,7 @@ public struct LemmyListInbox: Codable, Hashable, Sendable {
     public let limit: Int?
 }
 
-public extension LemmyListInbox {
+public extension LemmyListNotifications {
     enum CodingKeys: String, CodingKey {
         case type_ = "type_"
         case unreadOnly = "unread_only"

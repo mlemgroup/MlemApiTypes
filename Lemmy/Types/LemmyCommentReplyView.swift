@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.12
 public struct LemmyCommentReplyView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let commentReply: LemmyCommentReply
@@ -24,38 +24,24 @@ public struct LemmyCommentReplyView: Codable, Hashable, Sendable {
     public let community: LemmyCommunity
     /// Available on all versions
     public let recipient: LemmyPerson
-    /// Unavailable after 0.19.12
-    public let counts: LemmyCommentAggregates?
+    /// Available on all versions
+    public let counts: LemmyCommentAggregates
     /// Available on all versions
     public let creatorBannedFromCommunity: Bool
     /// Available on all versions
     public let creatorIsModerator: Bool
     /// Available on all versions
     public let creatorIsAdmin: Bool
-    /// Unavailable after 0.19.12
-    public let subscribed: LemmySubscribedType?
-    /// Unavailable after 0.19.12
-    public let saved: Bool?
-    /// Unavailable after 0.19.12
-    public let creatorBlocked: Bool?
-    /// Unavailable after 0.19.12
+    /// Available on all versions
+    public let subscribed: LemmySubscribedType
+    /// Available on all versions
+    public let saved: Bool
+    /// Available on all versions
+    public let creatorBlocked: Bool
+    /// Available on all versions
     public let myVote: Int?
-    /// Available between 0.19.4 and 0.19.12
+    /// Available from 0.19.4 onwards
     public let bannedFromCommunity: Bool?
-    /// Available from 1.0.0-alpha onwards
-    public let communityActions: LemmyCommunityActions?
-    /// Available from 1.0.0-alpha onwards
-    public let commentActions: LemmyCommentActions?
-    /// Available from 1.0.0-alpha onwards
-    public let personActions: LemmyPersonActions?
-    /// Available from 1.0.0-alpha onwards
-    public let instanceActions: LemmyInstanceActions?
-    /// Available from 1.0.0-alpha onwards
-    public let postTags: [LemmyTag]?
-    /// Available from 1.0.0-alpha onwards
-    public let canMod: Bool?
-    /// Available from 1.0.0-alpha onwards
-    public let creatorBanned: Bool?
 }
 
 public extension LemmyCommentReplyView {
@@ -75,12 +61,5 @@ public extension LemmyCommentReplyView {
         case creatorBlocked = "creator_blocked"
         case myVote = "my_vote"
         case bannedFromCommunity = "banned_from_community"
-        case communityActions = "community_actions"
-        case commentActions = "comment_actions"
-        case personActions = "person_actions"
-        case instanceActions = "instance_actions"
-        case postTags = "post_tags"
-        case canMod = "can_mod"
-        case creatorBanned = "creator_banned"
     }
 }

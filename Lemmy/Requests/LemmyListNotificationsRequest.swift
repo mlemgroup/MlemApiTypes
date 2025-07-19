@@ -1,5 +1,5 @@
 //
-//  LemmyListInboxRequest.swift
+//  LemmyListNotificationsRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,15 +11,15 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyListInboxRequest: GetRequest {
-    public typealias Parameters = LemmyListInbox
-    public typealias Response = LemmyListInboxResponse
+public struct LemmyListNotificationsRequest: GetRequest {
+    public typealias Parameters = LemmyListNotifications
+    public typealias Response = LemmyListNotificationsResponse
     
-    public let path: String = "api/v4/account/inbox"
+    public let path: String = "api/v4/account/notifications"
     public let parameters: Parameters?
     
     init(
-      type_: LemmyInboxDataType?,
+      type_: LemmyNotificationDataType?,
       unreadOnly: Bool?,
       pageCursor: String?,
       pageBack: Bool?,

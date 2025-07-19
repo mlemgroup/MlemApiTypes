@@ -1,5 +1,5 @@
 //
-//  LemmyMarkPostMentionAsReadRequest.swift
+//  LemmyMarkNotificationAsReadRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,19 +11,19 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyMarkPostMentionAsReadRequest: PostRequest {
-    public typealias Body = LemmyMarkPersonPostMentionAsRead
+public struct LemmyMarkNotificationAsReadRequest: PostRequest {
+    public typealias Body = LemmyMarkNotificationAsRead
     public typealias Response = LemmySuccessResponse
     
-    public let path: String = "api/v4/account/mention/post/mark_as_read"
+    public let path: String = "api/v4/account/mark_as_read"
     public let body: Body?
     
     init(
-      personPostMentionId: Int,
+      notificationId: Int,
       read: Bool
     ) {
         self.body = .init(
-            personPostMentionId: personPostMentionId,
+            notificationId: notificationId,
             read: read
         )
     }
