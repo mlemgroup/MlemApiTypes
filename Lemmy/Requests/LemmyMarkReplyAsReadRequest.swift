@@ -10,37 +10,21 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.12
 public struct LemmyMarkReplyAsReadRequest: PostRequest {
     public typealias Body = LemmyMarkCommentReplyAsRead
-    public typealias Response = LemmyMarkReplyAsReadResponseUnion
+    public typealias Response = LemmyCommentReplyResponse
     
-    public let path: String
+    public let path: String = "api/v3/comment/mark_as_read"
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
       commentReplyId: Int,
       read: Bool
     ) {
-        self.path = endpoint == .v4 ? "api/v4/comment/mark_as_read" : "api/v3/comment/mark_as_read"
         self.body = .init(
             commentReplyId: commentReplyId,
             read: read
         )
-    }
-}
-
-public enum LemmyMarkReplyAsReadResponseUnion: Decodable {
-    case lemmyCommentReplyResponse(LemmyCommentReplyResponse)
-    case lemmySuccessResponse(LemmySuccessResponse)
-    
-    public init(from decoder: Decoder) throws {
-        if let value = try? LemmyCommentReplyResponse(from: decoder) {
-            self = .lemmyCommentReplyResponse(value)
-            return
-        }
-        let value = try LemmySuccessResponse(from: decoder)
-        self = .lemmySuccessResponse(value)
     }
 }

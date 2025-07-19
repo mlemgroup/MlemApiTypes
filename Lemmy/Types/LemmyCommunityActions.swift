@@ -31,6 +31,8 @@ public struct LemmyCommunityActions: Codable, Hashable, Sendable {
     /// When their ban expires.
     /// Available on all versions
     public let banExpiresAt: Date?
+    /// Available on all versions
+    public let notifications: LemmyCommunityNotificationsMode?
 }
 
 public extension LemmyCommunityActions {
@@ -41,5 +43,6 @@ public extension LemmyCommunityActions {
         case becameModeratorAt = "became_moderator_at"
         case receivedBanAt = "received_ban_at"
         case banExpiresAt = "ban_expires_at"
+        case notifications = "notifications"
     }
 }

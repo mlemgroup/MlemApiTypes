@@ -1,5 +1,5 @@
 //
-//  LemmyMarkPersonPostMentionAsRead.swift
+//  LemmyMarkNotificationAsRead.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,16 +11,16 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyMarkPersonPostMentionAsRead: Codable, Hashable, Sendable {
+public struct LemmyMarkNotificationAsRead: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let personPostMentionId: Int
+    public let notificationId: Int
     /// Available on all versions
     public let read: Bool
 }
 
-public extension LemmyMarkPersonPostMentionAsRead {
+public extension LemmyMarkNotificationAsRead {
     enum CodingKeys: String, CodingKey {
-        case personPostMentionId = "person_post_mention_id"
+        case notificationId = "notification_id"
         case read = "read"
     }
 }

@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyExportDataResponse: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let inbox: [LemmyPostOrCommentOrPrivateMessage]
+    public let notifications: [LemmyPostOrCommentOrPrivateMessage]
     /// Available on all versions
     public let content: [LemmyPostOrCommentOrPrivateMessage]
     /// Available on all versions
@@ -28,7 +28,7 @@ public struct LemmyExportDataResponse: Codable, Hashable, Sendable {
 
 public extension LemmyExportDataResponse {
     enum CodingKeys: String, CodingKey {
-        case inbox = "inbox"
+        case notifications = "notifications"
         case content = "content"
         case readPosts = "read_posts"
         case liked = "liked"
