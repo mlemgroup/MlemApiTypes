@@ -13,26 +13,26 @@ import Rest
 /// Available on all versions
 public struct PieFedModerateCommunityBanResponse: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let reason: String?
+    public let reason: String
     /// Available on all versions
-    public let expiredAt: String?
+    public let expiredAt: String
     /// Available on all versions
-    public let community: PieFedCommunityView?
+    public let community: PieFedCommunity
     /// Available on all versions
-    public let bannedUser: PieFedPerson?
+    public let bannedUser: PieFedPerson
     /// Available on all versions
-    public let bannedBy: PieFedPerson?
+    public let bannedBy: PieFedPerson
     /// Available on all versions
-    public let expired: Bool?
+    public let expired: Bool
 }
 
 public extension PieFedModerateCommunityBanResponse {
     enum CodingKeys: String, CodingKey {
         case reason = "reason"
-        case expiredAt = "expired_at"
+        case expiredAt = "expiredAt"
         case community = "community"
-        case bannedUser = "banned_user"
-        case bannedBy = "banned_by"
+        case bannedUser = "bannedUser"
+        case bannedBy = "bannedBy"
         case expired = "expired"
     }
 }
