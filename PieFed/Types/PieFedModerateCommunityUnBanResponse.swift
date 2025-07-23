@@ -29,10 +29,10 @@ public struct PieFedModerateCommunityUnBanResponse: Codable, Hashable, Sendable 
 public extension PieFedModerateCommunityUnBanResponse {
     enum CodingKeys: String, CodingKey {
         case reason = "reason"
-        case expiredAt = "expiredAt"
+        case expiredAt = "expired_at"
         case community = "community"
-        case bannedUser = "bannedUser"
-        case bannedBy = "bannedBy"
+        case bannedUser = "banned_user"
+        case bannedBy = "banned_by"
         case expired = "expired"
     }
 }

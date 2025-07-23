@@ -27,6 +27,6 @@ public extension PieFedModerateCommunityBan {
         case communityId = "community_id"
         case userId = "user_id"
         case reason = "reason"
-        case expiredAt = "expiredAt"
+        case expiredAt = "expired_at"
     }
 }
