@@ -42,7 +42,7 @@ public extension PieFedCommunityAggregates {
         case postCount = "post_count"
         case postReplyCount = "post_reply_count"
         case published = "published"
-        case active6monthly = "active6monthly"
+        case active6monthly = "active_6monthly"
         case activeDaily = "active_daily"
         case activeMonthly = "active_monthly"
         case activeWeekly = "active_weekly"

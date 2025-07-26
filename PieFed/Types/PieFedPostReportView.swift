@@ -33,15 +33,9 @@ public struct PieFedPostReportView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let saved: Bool
     /// Available on all versions
-    public let read: Bool
-    /// Available on all versions
-    public let hidden: Bool
-    /// Available on all versions
     public let creatorBlocked: Bool
     /// Available on all versions
     public let myVote: Int?
-    /// Available on all versions
-    public let unreadComments: Int
     /// Available on all versions
     public let counts: PieFedPostAggregates
     /// Available on all versions
@@ -60,11 +54,8 @@ public extension PieFedPostReportView {
         case creatorIsAdmin = "creator_is_admin"
         case subscribed = "subscribed"
         case saved = "saved"
-        case read = "read"
-        case hidden = "hidden"
         case creatorBlocked = "creator_blocked"
         case myVote = "my_vote"
-        case unreadComments = "unread_comments"
         case counts = "counts"
         case resolver = "resolver"
     }
