@@ -22,17 +22,17 @@ public enum LemmyModlogActionType: String, Codable, Sendable {
     case modFeaturePost = "ModFeaturePost"
     /// Available on all versions
     case modRemoveComment = "ModRemoveComment"
-    /// Available on all versions
+    /// Unavailable after 0.19.12
     case modRemoveCommunity = "ModRemoveCommunity"
     /// Available on all versions
     case modBanFromCommunity = "ModBanFromCommunity"
-    /// Available on all versions
+    /// Unavailable after 0.19.12
     case modAddCommunity = "ModAddCommunity"
     /// Available on all versions
     case modTransferCommunity = "ModTransferCommunity"
-    /// Available on all versions
+    /// Unavailable after 0.19.12
     case modAdd = "ModAdd"
-    /// Available on all versions
+    /// Unavailable after 0.19.12
     case modBan = "ModBan"
     /// Unavailable after 0.19.12
     case modHideCommunity = "ModHideCommunity"
@@ -44,6 +44,14 @@ public enum LemmyModlogActionType: String, Codable, Sendable {
     case adminPurgePost = "AdminPurgePost"
     /// Available on all versions
     case adminPurgeComment = "AdminPurgeComment"
+    /// Available from 1.0.0-alpha onwards
+    case adminRemoveCommunity = "AdminRemoveCommunity"
+    /// Available from 1.0.0-alpha onwards
+    case modAddToCommunity = "ModAddToCommunity"
+    /// Available from 1.0.0-alpha onwards
+    case adminAdd = "AdminAdd"
+    /// Available from 1.0.0-alpha onwards
+    case adminBan = "AdminBan"
     /// Available from 1.0.0-alpha onwards
     case modChangeCommunityVisibility = "ModChangeCommunityVisibility"
     /// Available from 1.0.0-alpha onwards

@@ -97,6 +97,9 @@ public struct LemmySaveUserSettings: Codable, Hashable, Sendable {
     /// A default time range limit to apply to post sorts, in seconds. 0 means none.
     /// Available from 1.0.0-alpha onwards
     public let defaultPostTimeRangeSeconds: Int?
+    /// A default fetch limit for number of items returned.
+    /// Available from 1.0.0-alpha onwards
+    public let defaultItemsPerPage: Int?
     /// The default comment sort, usually "hot"
     /// Available from 1.0.0-alpha onwards
     public let defaultCommentSortType: LemmyCommentSortType?
@@ -150,6 +153,7 @@ public extension LemmySaveUserSettings {
         case showUpvotePercentage = "show_upvote_percentage"
         case defaultPostSortType = "default_post_sort_type"
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
+        case defaultItemsPerPage = "default_items_per_page"
         case defaultCommentSortType = "default_comment_sort_type"
         case blockingKeywords = "blocking_keywords"
         case enablePrivateMessages = "enable_private_messages"

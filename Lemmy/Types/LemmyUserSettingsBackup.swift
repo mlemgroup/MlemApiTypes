@@ -38,8 +38,11 @@ public struct LemmyUserSettingsBackup: Codable, Hashable, Sendable {
     public let blockedCommunities: [URL]
     /// Available on all versions
     public let blockedUsers: [URL]
+    /// the name used by v0.19
     /// Available on all versions
-    public let blockedInstances: [String]
+    public let blockedInstancesCommunities: [String]
+    /// Available on all versions
+    public let blockedInstancesPersons: [String]
 }
 
 public extension LemmyUserSettingsBackup {
@@ -56,6 +59,7 @@ public extension LemmyUserSettingsBackup {
         case savedComments = "saved_comments"
         case blockedCommunities = "blocked_communities"
         case blockedUsers = "blocked_users"
-        case blockedInstances = "blocked_instances"
+        case blockedInstancesCommunities = "blocked_instances_communities"
+        case blockedInstancesPersons = "blocked_instances_persons"
     }
 }

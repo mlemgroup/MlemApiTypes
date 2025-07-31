@@ -1,5 +1,5 @@
 //
-//  LemmyModAdd.swift
+//  LemmyAdminAdd.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct LemmyModAdd: Codable, Hashable, Sendable {
+public struct LemmyAdminAdd: Codable, Hashable, Sendable {
     /// Available on all versions
     public let id: Int
     /// Available on all versions
@@ -26,7 +26,7 @@ public struct LemmyModAdd: Codable, Hashable, Sendable {
     public let publishedAt: Date?
 }
 
-public extension LemmyModAdd {
+public extension LemmyAdminAdd {
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case modPersonId = "mod_person_id"

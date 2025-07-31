@@ -21,17 +21,17 @@ public struct LemmyGetModlogResponse: Codable, Hashable, Sendable {
     /// Unavailable after 0.19.12
     public let removedComments: [LemmyModRemoveCommentView]?
     /// Unavailable after 0.19.12
-    public let removedCommunities: [LemmyModRemoveCommunityView]?
+    public let removedCommunities: [LemmyAdminRemoveCommunityView]?
     /// Unavailable after 0.19.12
     public let bannedFromCommunity: [LemmyModBanFromCommunityView]?
     /// Unavailable after 0.19.12
-    public let banned: [LemmyModBanView]?
+    public let banned: [LemmyAdminBanView]?
     /// Unavailable after 0.19.12
-    public let addedToCommunity: [LemmyModAddCommunityView]?
+    public let addedToCommunity: [LemmyModAddToCommunityView]?
     /// Unavailable after 0.19.12
     public let transferredToCommunity: [LemmyModTransferCommunityView]?
     /// Unavailable after 0.19.12
-    public let added: [LemmyModAddView]?
+    public let added: [LemmyAdminAddView]?
     /// Unavailable after 0.19.12
     public let adminPurgedPersons: [LemmyAdminPurgePersonView]?
     /// Unavailable after 0.19.12

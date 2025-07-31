@@ -25,11 +25,11 @@ public enum LemmyModlogCombinedView: Codable, Hashable, Sendable {
     /// Available on all versions
     case adminPurgePost(LemmyAdminPurgePostView)
     /// Available on all versions
-    case modAdd(LemmyModAddView)
+    case adminAdd(LemmyAdminAddView)
     /// Available on all versions
-    case modAddCommunity(LemmyModAddCommunityView)
+    case modAddToCommunity(LemmyModAddToCommunityView)
     /// Available on all versions
-    case modBan(LemmyModBanView)
+    case adminBan(LemmyAdminBanView)
     /// Available on all versions
     case modBanFromCommunity(LemmyModBanFromCommunityView)
     /// Available on all versions
@@ -41,7 +41,7 @@ public enum LemmyModlogCombinedView: Codable, Hashable, Sendable {
     /// Available on all versions
     case modRemoveComment(LemmyModRemoveCommentView)
     /// Available on all versions
-    case modRemoveCommunity(LemmyModRemoveCommunityView)
+    case adminRemoveCommunity(LemmyAdminRemoveCommunityView)
     /// Available on all versions
     case modRemovePost(LemmyModRemovePostView)
     /// Available on all versions
@@ -59,15 +59,15 @@ public enum LemmyModlogCombinedView: Codable, Hashable, Sendable {
         case "AdminPurgeCommunity": .adminPurgeCommunity(try .init(from: decoder))
         case "AdminPurgePerson": .adminPurgePerson(try .init(from: decoder))
         case "AdminPurgePost": .adminPurgePost(try .init(from: decoder))
-        case "ModAdd": .modAdd(try .init(from: decoder))
-        case "ModAddCommunity": .modAddCommunity(try .init(from: decoder))
-        case "ModBan": .modBan(try .init(from: decoder))
+        case "AdminAdd": .adminAdd(try .init(from: decoder))
+        case "ModAddToCommunity": .modAddToCommunity(try .init(from: decoder))
+        case "AdminBan": .adminBan(try .init(from: decoder))
         case "ModBanFromCommunity": .modBanFromCommunity(try .init(from: decoder))
         case "ModFeaturePost": .modFeaturePost(try .init(from: decoder))
         case "ModChangeCommunityVisibility": .modChangeCommunityVisibility(try .init(from: decoder))
         case "ModLockPost": .modLockPost(try .init(from: decoder))
         case "ModRemoveComment": .modRemoveComment(try .init(from: decoder))
-        case "ModRemoveCommunity": .modRemoveCommunity(try .init(from: decoder))
+        case "AdminRemoveCommunity": .adminRemoveCommunity(try .init(from: decoder))
         case "ModRemovePost": .modRemovePost(try .init(from: decoder))
         case "ModTransferCommunity": .modTransferCommunity(try .init(from: decoder))
         default: throw DecodingError.dataCorrupted(
@@ -97,14 +97,14 @@ public enum LemmyModlogCombinedView: Codable, Hashable, Sendable {
         case let .adminPurgePost(value):
             try container.encode("AdminPurgePost", forKey: .type_)
             try value.encode(to: encoder)
-        case let .modAdd(value):
-            try container.encode("ModAdd", forKey: .type_)
+        case let .adminAdd(value):
+            try container.encode("AdminAdd", forKey: .type_)
             try value.encode(to: encoder)
-        case let .modAddCommunity(value):
-            try container.encode("ModAddCommunity", forKey: .type_)
+        case let .modAddToCommunity(value):
+            try container.encode("ModAddToCommunity", forKey: .type_)
             try value.encode(to: encoder)
-        case let .modBan(value):
-            try container.encode("ModBan", forKey: .type_)
+        case let .adminBan(value):
+            try container.encode("AdminBan", forKey: .type_)
             try value.encode(to: encoder)
         case let .modBanFromCommunity(value):
             try container.encode("ModBanFromCommunity", forKey: .type_)
@@ -121,8 +121,8 @@ public enum LemmyModlogCombinedView: Codable, Hashable, Sendable {
         case let .modRemoveComment(value):
             try container.encode("ModRemoveComment", forKey: .type_)
             try value.encode(to: encoder)
-        case let .modRemoveCommunity(value):
-            try container.encode("ModRemoveCommunity", forKey: .type_)
+        case let .adminRemoveCommunity(value):
+            try container.encode("AdminRemoveCommunity", forKey: .type_)
             try value.encode(to: encoder)
         case let .modRemovePost(value):
             try container.encode("ModRemovePost", forKey: .type_)

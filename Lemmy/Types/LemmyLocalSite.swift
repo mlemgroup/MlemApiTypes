@@ -143,6 +143,8 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     public let suggestedCommunities: Int?
     /// Available from 1.0.0-alpha onwards
     public let multiCommFollower: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let defaultItemsPerPage: Int?
 }
 
 public extension LemmyLocalSite {
@@ -195,5 +197,6 @@ public extension LemmyLocalSite {
         case disableEmailNotifications = "disable_email_notifications"
         case suggestedCommunities = "suggested_communities"
         case multiCommFollower = "multi_comm_follower"
+        case defaultItemsPerPage = "default_items_per_page"
     }
 }

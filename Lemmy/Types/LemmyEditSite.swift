@@ -141,6 +141,9 @@ public struct LemmyEditSite: Codable, Hashable, Sendable {
     /// A default time range limit to apply to post sorts, in seconds. 0 means none.
     /// Available from 1.0.0-alpha onwards
     public let defaultPostTimeRangeSeconds: Int?
+    /// A default fetch limit for number of items returned.
+    /// Available from 1.0.0-alpha onwards
+    public let defaultItemsPerPage: Int?
     /// The default comment sort, usually "hot"
     /// Available from 1.0.0-alpha onwards
     public let defaultCommentSortType: LemmyCommentSortType?
@@ -253,6 +256,7 @@ public extension LemmyEditSite {
         case defaultPostListingMode = "default_post_listing_mode"
         case defaultPostSortType = "default_post_sort_type"
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
+        case defaultItemsPerPage = "default_items_per_page"
         case defaultCommentSortType = "default_comment_sort_type"
         case rateLimitMessageMaxRequests = "rate_limit_message_max_requests"
         case rateLimitMessageIntervalSeconds = "rate_limit_message_interval_seconds"

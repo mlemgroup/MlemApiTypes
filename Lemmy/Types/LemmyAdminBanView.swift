@@ -1,5 +1,5 @@
 //
-//  LemmyModAddCommunityView.swift
+//  LemmyAdminBanView.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,25 +11,25 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct LemmyModAddCommunityView: Codable, Hashable, Sendable {
-    /// Available on all versions
-    public let modAddCommunity: LemmyModAddCommunity
+public struct LemmyAdminBanView: Codable, Hashable, Sendable {
+    /// Unavailable after 0.19.12
+    public let modBan: LemmyAdminBan?
     /// Available on all versions
     public let moderator: LemmyPerson?
-    /// Available on all versions
-    public let community: LemmyCommunity
     /// Unavailable after 0.19.12
-    public let moddedPerson: LemmyPerson?
+    public let bannedPerson: LemmyPerson?
+    /// Available from 1.0.0-alpha onwards
+    public let adminBan: LemmyAdminBan?
     /// Available from 1.0.0-alpha onwards
     public let otherPerson: LemmyPerson?
 }
 
-public extension LemmyModAddCommunityView {
+public extension LemmyAdminBanView {
     enum CodingKeys: String, CodingKey {
-        case modAddCommunity = "mod_add_community"
+        case modBan = "mod_ban"
         case moderator = "moderator"
-        case community = "community"
-        case moddedPerson = "modded_person"
+        case bannedPerson = "banned_person"
+        case adminBan = "admin_ban"
         case otherPerson = "other_person"
     }
 }
