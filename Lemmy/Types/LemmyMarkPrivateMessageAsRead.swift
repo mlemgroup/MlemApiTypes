@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.12
 public struct LemmyMarkPrivateMessageAsRead: Codable, Hashable, Sendable {
     /// Available on all versions
     public let privateMessageId: Int

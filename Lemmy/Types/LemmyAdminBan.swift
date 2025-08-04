@@ -1,5 +1,5 @@
 //
-//  LemmyModBan.swift
+//  LemmyAdminBan.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct LemmyModBan: Codable, Hashable, Sendable {
+public struct LemmyAdminBan: Codable, Hashable, Sendable {
     /// Available on all versions
     public let id: Int
     /// Available on all versions
@@ -34,7 +34,7 @@ public struct LemmyModBan: Codable, Hashable, Sendable {
     public let instanceId: Int?
 }
 
-public extension LemmyModBan {
+public extension LemmyAdminBan {
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case modPersonId = "mod_person_id"

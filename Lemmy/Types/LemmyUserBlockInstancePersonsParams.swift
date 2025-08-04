@@ -1,5 +1,5 @@
 //
-//  LemmyUserBlockInstanceParams.swift
+//  LemmyUserBlockInstancePersonsParams.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,14 +11,14 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyUserBlockInstanceParams: Codable, Hashable, Sendable {
+public struct LemmyUserBlockInstancePersonsParams: Codable, Hashable, Sendable {
     /// Available on all versions
     public let instanceId: Int
     /// Available on all versions
     public let block: Bool
 }
 
-public extension LemmyUserBlockInstanceParams {
+public extension LemmyUserBlockInstancePersonsParams {
     enum CodingKeys: String, CodingKey {
         case instanceId = "instance_id"
         case block = "block"

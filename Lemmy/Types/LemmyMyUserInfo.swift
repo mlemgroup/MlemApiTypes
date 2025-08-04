@@ -20,12 +20,16 @@ public struct LemmyMyUserInfo: Codable, Hashable, Sendable {
     public let moderates: [LemmyCommunityModeratorView]
     /// Available on all versions
     public let communityBlocks: [LemmyCommunityBlockView]
-    /// Available on all versions
-    public let instanceBlocks: [LemmyInstanceBlockView]
+    /// Unavailable after 0.19.12
+    public let instanceBlocks: [LemmyInstanceBlockView]?
     /// Available on all versions
     public let personBlocks: [LemmyPersonBlockView]
     /// Available on all versions
     public let discussionLanguages: [Int]
+    /// Available from 1.0.0-alpha onwards
+    public let instanceCommunitiesBlocks: [LemmyInstance]?
+    /// Available from 1.0.0-alpha onwards
+    public let instancePersonsBlocks: [LemmyInstance]?
     /// Available from 1.0.0-alpha onwards
     public let keywordBlocks: [String]?
 }
@@ -39,6 +43,8 @@ public extension LemmyMyUserInfo {
         case instanceBlocks = "instance_blocks"
         case personBlocks = "person_blocks"
         case discussionLanguages = "discussion_languages"
+        case instanceCommunitiesBlocks = "instance_communities_blocks"
+        case instancePersonsBlocks = "instance_persons_blocks"
         case keywordBlocks = "keyword_blocks"
     }
 }

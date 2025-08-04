@@ -20,11 +20,13 @@ public struct LemmyUpdateCommunityTagRequest: PutRequest {
     
     init(
       tagId: Int,
-      displayName: String
+      displayName: String?,
+      description: String?
     ) {
         self.body = .init(
             tagId: tagId,
-            displayName: displayName
+            displayName: displayName,
+            description: description
         )
     }
 }

@@ -20,11 +20,15 @@ public struct LemmyCreateCommunityTagRequest: PostRequest {
     
     init(
       communityId: Int,
-      displayName: String
+      name: String,
+      displayName: String?,
+      description: String?
     ) {
         self.body = .init(
             communityId: communityId,
-            displayName: displayName
+            name: name,
+            displayName: displayName,
+            description: description
         )
     }
 }

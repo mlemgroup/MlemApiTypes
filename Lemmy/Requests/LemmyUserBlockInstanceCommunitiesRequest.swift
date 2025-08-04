@@ -1,5 +1,5 @@
 //
-//  LemmyUserBlockInstanceRequest.swift
+//  LemmyUserBlockInstanceCommunitiesRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,9 +11,9 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct LemmyUserBlockInstanceRequest: PostRequest {
+public struct LemmyUserBlockInstanceCommunitiesRequest: PostRequest {
     public typealias Body = LemmyBlockInstance
-    public typealias Response = LemmyUserBlockInstanceResponseUnion
+    public typealias Response = LemmyUserBlockInstanceCommunitiesResponseUnion
     
     public let path: String
     public let body: Body?
@@ -23,7 +23,7 @@ public struct LemmyUserBlockInstanceRequest: PostRequest {
       instanceId: Int,
       block: Bool
     ) {
-        self.path = endpoint == .v4 ? "api/v4/account/block/instance" : "api/v3/site/block"
+        self.path = endpoint == .v4 ? "api/v4/account/block/instance/communities" : "api/v3/site/block"
         self.body = .init(
             instanceId: instanceId,
             block: block
@@ -31,7 +31,7 @@ public struct LemmyUserBlockInstanceRequest: PostRequest {
     }
 }
 
-public enum LemmyUserBlockInstanceResponseUnion: Decodable {
+public enum LemmyUserBlockInstanceCommunitiesResponseUnion: Decodable {
     case lemmyBlockInstanceResponse(LemmyBlockInstanceResponse)
     case lemmySuccessResponse(LemmySuccessResponse)
     

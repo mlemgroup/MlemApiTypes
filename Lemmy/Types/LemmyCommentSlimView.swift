@@ -21,8 +21,6 @@ public struct LemmyCommentSlimView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let personActions: LemmyPersonActions?
     /// Available on all versions
-    public let instanceActions: LemmyInstanceActions?
-    /// Available on all versions
     public let creatorIsAdmin: Bool
     /// Available on all versions
     public let canMod: Bool
@@ -40,7 +38,6 @@ public extension LemmyCommentSlimView {
         case creator = "creator"
         case commentActions = "comment_actions"
         case personActions = "person_actions"
-        case instanceActions = "instance_actions"
         case creatorIsAdmin = "creator_is_admin"
         case canMod = "can_mod"
         case creatorBanned = "creator_banned"

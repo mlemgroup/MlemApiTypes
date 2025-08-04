@@ -110,6 +110,8 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     public let showUpvotePercentage: Bool?
     /// Available from 1.0.0-alpha onwards
     public let showPersonVotes: Bool?
+    /// Available from 1.0.0-alpha onwards
+    public let defaultItemsPerPage: Int?
 }
 
 public extension LemmyLocalUser {
@@ -152,5 +154,6 @@ public extension LemmyLocalUser {
         case showDownvotes = "show_downvotes"
         case showUpvotePercentage = "show_upvote_percentage"
         case showPersonVotes = "show_person_votes"
+        case defaultItemsPerPage = "default_items_per_page"
     }
 }
