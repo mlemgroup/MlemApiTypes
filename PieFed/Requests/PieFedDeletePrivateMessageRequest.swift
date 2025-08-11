@@ -19,11 +19,11 @@ public struct PieFedDeletePrivateMessageRequest: PostRequest {
     public let body: Body?
     
     init(
-      privateMessageId: Int,
+      messageId: Int,
       deleted: Bool
     ) {
         self.body = .init(
-            privateMessageId: privateMessageId,
+            messageId: messageId,
             deleted: deleted
         )
     }

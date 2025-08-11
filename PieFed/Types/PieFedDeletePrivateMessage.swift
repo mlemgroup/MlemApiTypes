@@ -13,14 +13,14 @@ import Rest
 /// Available from 1.1.0 onwards
 public struct PieFedDeletePrivateMessage: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let privateMessageId: Int
+    public let messageId: Int
     /// Available on all versions
     public let deleted: Bool
 }
 
 public extension PieFedDeletePrivateMessage {
     enum CodingKeys: String, CodingKey {
-        case privateMessageId = "private_message_id"
+        case messageId = "message_id"
         case deleted = "deleted"
     }
 }
