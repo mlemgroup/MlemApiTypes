@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.0.1-dev onwards
+/// Available from 1.1.0 onwards
 public struct PieFedGetPrivateMessagesConversation: Codable, Hashable, Sendable {
     /// Available on all versions
     public let page: Int?

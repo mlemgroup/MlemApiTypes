@@ -48,7 +48,7 @@ public struct PieFedPost: Codable, Hashable, Sendable {
     public let sticky: Bool
     /// Available on all versions
     public let altText: String?
-    /// Available from 1.0.1-dev onwards
+    /// Available from 1.1.0 onwards
     public let smallThumbnailUrl: URL?
 }
 

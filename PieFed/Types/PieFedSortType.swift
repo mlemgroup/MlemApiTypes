@@ -32,14 +32,14 @@ public enum PieFedSortType: String, Codable, Sendable {
     case topMonth = "TopMonth"
     /// Available on all versions
     case scaled = "Scaled"
-    /// Available from 1.0.1-dev onwards
+    /// Available from 1.1.0 onwards
     case topThreeMonths = "TopThreeMonths"
-    /// Available from 1.0.1-dev onwards
+    /// Available from 1.1.0 onwards
     case topSixMonths = "TopSixMonths"
-    /// Available from 1.0.1-dev onwards
+    /// Available from 1.1.0 onwards
     case topNineMonths = "TopNineMonths"
-    /// Available from 1.0.1-dev onwards
+    /// Available from 1.1.0 onwards
     case topYear = "TopYear"
-    /// Available from 1.0.1-dev onwards
+    /// Available from 1.1.0 onwards
     case topAll = "TopAll"
 }

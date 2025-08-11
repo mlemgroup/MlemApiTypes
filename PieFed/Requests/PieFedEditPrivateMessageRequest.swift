@@ -1,5 +1,5 @@
 //
-//  PieFedMarkPrivateMessageAsReadRequest.swift
+//  PieFedEditPrivateMessageRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,20 +11,20 @@ import Foundation
 import Rest
 
 /// Available from 1.1.0 onwards
-public struct PieFedMarkPrivateMessageAsReadRequest: PostRequest {
-    public typealias Body = PieFedMarkPrivateMessageAsRead
+public struct PieFedEditPrivateMessageRequest: PutRequest {
+    public typealias Body = PieFedEditPrivateMessage
     public typealias Response = PieFedPrivateMessageResponse
     
-    public let path: String = "api/alpha/private_message/mark_as_read"
+    public let path: String = "api/alpha/private_message"
     public let body: Body?
     
     init(
       privateMessageId: Int,
-      read: Bool
+      content: String
     ) {
         self.body = .init(
             privateMessageId: privateMessageId,
-            read: read
+            content: content
         )
     }
 }

@@ -24,13 +24,13 @@ public struct PieFedCommunityAggregates: Codable, Hashable, Sendable {
     public let postReplyCount: Int
     /// Available on all versions
     public let published: Date
-    /// Available from 1.0.1-dev onwards
+    /// Available from 1.1.0 onwards
     public let active6monthly: Int?
-    /// Available from 1.0.1-dev onwards
+    /// Available from 1.1.0 onwards
     public let activeDaily: Int?
-    /// Available from 1.0.1-dev onwards
+    /// Available from 1.1.0 onwards
     public let activeMonthly: Int?
-    /// Available from 1.0.1-dev onwards
+    /// Available from 1.1.0 onwards
     public let activeWeekly: Int?
 }
 
