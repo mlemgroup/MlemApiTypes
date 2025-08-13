@@ -48,7 +48,7 @@ public struct PieFedCommunity: Codable, Hashable, Sendable {
     public let title: String
     /// Available on all versions
     public let updated: Date?
-    /// Available from 1.0.1-dev onwards
+    /// Available from 1.1.0 onwards
     public let postingWarning: String?
 }
 

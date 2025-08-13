@@ -38,7 +38,7 @@ public struct PieFedPerson: Codable, Hashable, Sendable {
     public let title: String?
     /// Available on all versions
     public let userName: String
-    /// Available from 1.0.1-dev onwards
+    /// Available from 1.1.0 onwards
     public let flair: String?
 }
 
