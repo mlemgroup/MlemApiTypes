@@ -20,6 +20,14 @@ public struct LemmyOpenGraphData: Codable, Hashable, Sendable {
     public let image: URL?
     /// Available on all versions
     public let embedVideoUrl: URL?
+    /// Available from 1.0.0-alpha onwards
+    public let imageWidth: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let imageHeight: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let videoWidth: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let videoHeight: Int?
 }
 
 public extension LemmyOpenGraphData {
@@ -28,5 +36,9 @@ public extension LemmyOpenGraphData {
         case description = "description"
         case image = "image"
         case embedVideoUrl = "embed_video_url"
+        case imageWidth = "image_width"
+        case imageHeight = "image_height"
+        case videoWidth = "video_width"
+        case videoHeight = "video_height"
     }
 }
