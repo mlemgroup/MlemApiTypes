@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public struct PieFedCreatePostReportRequest: PostRequest {
-    public typealias Body = PieFedCreatePostReport
+    public typealias Body = PieFedReportPost
     public typealias Response = PieFedPostReportResponse
     
     public let path: String = "api/alpha/post/report"

@@ -12,19 +12,21 @@ import Rest
 
 /// Available on all versions
 public struct PieFedCreateCommentLikeRequest: PostRequest {
-    public typealias Body = PieFedCreateCommentLike
-    public typealias Response = PieFedCommentResponse
+    public typealias Body = PieFedLikeComment
+    public typealias Response = PieFedGetCommentResponse
     
     public let path: String = "api/alpha/comment/like"
     public let body: Body?
     
     init(
       commentId: Int,
-      score: Int
+      score: Int,
+      `private`: Bool?
     ) {
         self.body = .init(
             commentId: commentId,
-            score: score
+            score: score,
+            `private`: `private`
         )
     }
 }

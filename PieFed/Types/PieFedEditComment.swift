@@ -18,6 +18,8 @@ public struct PieFedEditComment: Codable, Hashable, Sendable {
     public let body: String?
     /// Available on all versions
     public let languageId: Int?
+    /// Available from 1.1.0 onwards
+    public let distinguished: Bool?
 }
 
 public extension PieFedEditComment {
@@ -25,5 +27,6 @@ public extension PieFedEditComment {
         case commentId = "comment_id"
         case body = "body"
         case languageId = "language_id"
+        case distinguished = "distinguished"
     }
 }

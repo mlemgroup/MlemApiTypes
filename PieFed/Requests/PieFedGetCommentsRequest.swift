@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct PieFedGetCommentsRequest: GetRequest {
     public typealias Parameters = PieFedGetComments
-    public typealias Response = PieFedGetCommentsResponse
+    public typealias Response = PieFedListCommentsResponse
     
     public let path: String = "api/alpha/comment/list"
     public let parameters: Parameters?
@@ -29,7 +29,8 @@ public struct PieFedGetCommentsRequest: GetRequest {
       parentId: Int?,
       personId: Int?,
       likedOnly: Bool?,
-      savedOnly: Bool?
+      savedOnly: Bool?,
+      depthFirst: Bool?
     ) {
         self.parameters = .init(
             type_: type_,
@@ -42,7 +43,8 @@ public struct PieFedGetCommentsRequest: GetRequest {
             parentId: parentId,
             personId: personId,
             likedOnly: likedOnly,
-            savedOnly: savedOnly
+            savedOnly: savedOnly,
+            depthFirst: depthFirst
         )
     }
 }

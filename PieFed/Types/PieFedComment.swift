@@ -38,6 +38,8 @@ public struct PieFedComment: Codable, Hashable, Sendable {
     public let distinguished: Bool?
     /// Available on all versions
     public let languageId: Int
+    /// Available from 1.1.0 onwards
+    public let locked: Bool?
 }
 
 public extension PieFedComment {
@@ -55,5 +57,6 @@ public extension PieFedComment {
         case path = "path"
         case distinguished = "distinguished"
         case languageId = "language_id"
+        case locked = "locked"
     }
 }

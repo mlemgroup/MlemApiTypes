@@ -20,6 +20,8 @@ public struct PieFedSearchResponse: Codable, Hashable, Sendable {
     public let communities: [PieFedCommunityView]
     /// Available on all versions
     public let users: [PieFedPersonView]
+    /// Available from 1.1.0 onwards
+    public let comments: [PieFedCommentView]?
 }
 
 public extension PieFedSearchResponse {
@@ -28,5 +30,6 @@ public extension PieFedSearchResponse {
         case posts = "posts"
         case communities = "communities"
         case users = "users"
+        case comments = "comments"
     }
 }

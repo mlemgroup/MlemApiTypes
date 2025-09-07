@@ -42,6 +42,12 @@ public struct PieFedCommentReportView: Codable, Hashable, Sendable {
     public let myVote: Int?
     /// Available on all versions
     public let resolver: PieFedPerson?
+    /// Available from 1.1.0 onwards
+    public let activityAlert: Bool?
+    /// Available from 1.1.0 onwards
+    public let bannedFromCommunity: Bool?
+    /// Available from 1.1.0 onwards
+    public let canAuthUserModerate: Bool?
 }
 
 public extension PieFedCommentReportView {
@@ -61,5 +67,8 @@ public extension PieFedCommentReportView {
         case saved = "saved"
         case myVote = "my_vote"
         case resolver = "resolver"
+        case activityAlert = "activity_alert"
+        case bannedFromCommunity = "banned_from_community"
+        case canAuthUserModerate = "can_auth_user_moderate"
     }
 }

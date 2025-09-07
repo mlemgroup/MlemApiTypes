@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public struct PieFedSubscribePersonRequest: PutRequest {
-    public typealias Body = PieFedSubscribePerson
+    public typealias Body = PieFedUserSubscribe
     public typealias Response = PieFedPersonResponse
     
     public let path: String = "api/alpha/user/subscribe"

@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct PieFedDeleteCommentRequest: PostRequest {
     public typealias Body = PieFedDeleteComment
-    public typealias Response = PieFedCommentResponse
+    public typealias Response = PieFedGetCommentResponse
     
     public let path: String = "api/alpha/comment/delete"
     public let body: Body?

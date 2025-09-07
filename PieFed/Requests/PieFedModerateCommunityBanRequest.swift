@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public struct PieFedModerateCommunityBanRequest: PostRequest {
-    public typealias Body = PieFedModerateCommunityBan
+    public typealias Body = PieFedCommunityModerationBan
     public typealias Response = PieFedCommunityModerationBanItem
     
     public let path: String = "api/alpha/community/moderate/ban"
@@ -22,13 +22,17 @@ public struct PieFedModerateCommunityBanRequest: PostRequest {
       communityId: Int,
       userId: Int,
       reason: String,
-      expiredAt: String
+      expiredAt: String?,
+      expiresAt: Date?,
+      permanent: Bool?
     ) {
         self.body = .init(
             communityId: communityId,
             userId: userId,
             reason: reason,
-            expiredAt: expiredAt
+            expiredAt: expiredAt,
+            expiresAt: expiresAt,
+            permanent: permanent
         )
     }
 }

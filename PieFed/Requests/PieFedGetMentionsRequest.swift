@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.1.0 onwards
 public struct PieFedGetMentionsRequest: GetRequest {
     public typealias Parameters = PieFedGetReplies
-    public typealias Response = PieFedGetRepliesResponse
+    public typealias Response = PieFedUserRepliesResponse
     
     public let path: String = "api/alpha/user/mentions"
     public let parameters: Parameters?

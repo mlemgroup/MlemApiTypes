@@ -40,6 +40,8 @@ public struct PieFedCommentReplyView: Codable, Hashable, Sendable {
     public let creatorBlocked: Bool
     /// Available on all versions
     public let myVote: Int?
+    /// Available from 1.1.0 onwards
+    public let activityAlert: Bool?
 }
 
 public extension PieFedCommentReplyView {
@@ -58,5 +60,6 @@ public extension PieFedCommentReplyView {
         case saved = "saved"
         case creatorBlocked = "creator_blocked"
         case myVote = "my_vote"
+        case activityAlert = "activity_alert"
     }
 }

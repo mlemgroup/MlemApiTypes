@@ -12,8 +12,8 @@ import Rest
 
 /// Available on all versions
 public struct PieFedLoginRequest: PostRequest {
-    public typealias Body = PieFedLogin
-    public typealias Response = PieFedLoginResponse
+    public typealias Body = PieFedUserLogin
+    public typealias Response = PieFedUserLoginResponse
     
     public let path: String = "api/alpha/user/login"
     public let body: Body?

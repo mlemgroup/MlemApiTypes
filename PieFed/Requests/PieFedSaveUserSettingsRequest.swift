@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public struct PieFedSaveUserSettingsRequest: PutRequest {
-    public typealias Body = PieFedSaveUserSettings
+    public typealias Body = PieFedUserSaveSettings
     public typealias Response = Int
     
     public let path: String = "api/alpha/user/save_user_settings"
@@ -21,12 +21,22 @@ public struct PieFedSaveUserSettingsRequest: PutRequest {
     init(
       showNsfw: Bool?,
       showReadPosts: Bool?,
-      bio: String?
+      bio: String?,
+      avatar: URL?,
+      cover: URL?,
+      defaultCommentSortType: String?,
+      defaultSortType: String?,
+      showNsfl: Bool?
     ) {
         self.body = .init(
             showNsfw: showNsfw,
             showReadPosts: showReadPosts,
-            bio: bio
+            bio: bio,
+            avatar: avatar,
+            cover: cover,
+            defaultCommentSortType: defaultCommentSortType,
+            defaultSortType: defaultSortType,
+            showNsfl: showNsfl
         )
     }
 }

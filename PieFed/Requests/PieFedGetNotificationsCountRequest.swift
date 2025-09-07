@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct PieFedGetNotificationsCountRequest: GetRequest {
     public typealias Parameters = Int
-    public typealias Response = PieFedNotificationsCountResponse
+    public typealias Response = PieFedUserNotificationsCountResponse
     
     public let path: String = "api/alpha/user/notifications_count"
     public let parameters: Parameters? = nil
