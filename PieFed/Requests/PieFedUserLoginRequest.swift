@@ -1,5 +1,5 @@
 //
-//  PieFedLoginRequest.swift
+//  PieFedUserLoginRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct PieFedLoginRequest: PostRequest {
+public struct PieFedUserLoginRequest: PostRequest {
     public typealias Body = PieFedUserLogin
     public typealias Response = PieFedUserLoginResponse
     

@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct PieFedSaveUserSettingsRequest: PutRequest {
     public typealias Body = PieFedUserSaveSettings
-    public typealias Response = Int
+    public typealias Response = PieFedUserSaveSettingsResponse
     
     public let path: String = "api/alpha/user/save_user_settings"
     public let body: Body?

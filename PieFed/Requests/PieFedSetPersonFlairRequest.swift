@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.1.0 onwards
 public struct PieFedSetPersonFlairRequest: PostRequest {
     public typealias Body = PieFedUserSetFlair
-    public typealias Response = PieFedPersonResponse
+    public typealias Response = PieFedUserSetFlairResponse
     
     public let path: String = "api/alpha/user/set_flair"
     public let body: Body?
