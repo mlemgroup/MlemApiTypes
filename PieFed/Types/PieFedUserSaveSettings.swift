@@ -19,9 +19,9 @@ public struct PieFedUserSaveSettings: Codable, Hashable, Sendable {
     /// Available on all versions
     public let bio: String?
     /// Available from 1.1.0 onwards
-    public let avatar: URL?
+    public let avatar: String?
     /// Available from 1.1.0 onwards
-    public let cover: URL?
+    public let cover: String?
     /// Available from 1.1.0 onwards
     public let defaultCommentSortType: String?
     /// Available from 1.1.0 onwards

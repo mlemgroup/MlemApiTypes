@@ -22,8 +22,8 @@ public struct PieFedSaveUserSettingsRequest: PutRequest {
       showNsfw: Bool?,
       showReadPosts: Bool?,
       bio: String?,
-      avatar: URL?,
-      cover: URL?,
+      avatar: String?,
+      cover: String?,
       defaultCommentSortType: String?,
       defaultSortType: String?,
       showNsfl: Bool?
