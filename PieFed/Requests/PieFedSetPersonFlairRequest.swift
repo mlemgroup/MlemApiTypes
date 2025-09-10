@@ -12,15 +12,15 @@ import Rest
 
 /// Available from 1.1.0 onwards
 public struct PieFedSetPersonFlairRequest: PostRequest {
-    public typealias Body = PieFedSetPersonFlair
-    public typealias Response = PieFedPersonResponse
+    public typealias Body = PieFedUserSetFlair
+    public typealias Response = PieFedUserSetFlairResponse
     
     public let path: String = "api/alpha/user/set_flair"
     public let body: Body?
     
     init(
       communityId: Int,
-      flairText: String
+      flairText: String?
     ) {
         self.body = .init(
             communityId: communityId,

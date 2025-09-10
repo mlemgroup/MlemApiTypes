@@ -12,8 +12,8 @@ import Rest
 
 /// Available on all versions
 public struct PieFedBlockPersonRequest: PostRequest {
-    public typealias Body = PieFedBlockPerson
-    public typealias Response = PieFedBlockPersonResponse
+    public typealias Body = PieFedUserBlock
+    public typealias Response = PieFedUserBlockResponse
     
     public let path: String = "api/alpha/user/block"
     public let body: Body?

@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct PieFedCreateCommentRequest: PostRequest {
     public typealias Body = PieFedCreateComment
-    public typealias Response = PieFedCommentResponse
+    public typealias Response = PieFedGetCommentResponse
     
     public let path: String = "api/alpha/comment"
     public let body: Body?

@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct PieFedGetPersonDetailsRequest: GetRequest {
     public typealias Parameters = PieFedGetPersonDetails
-    public typealias Response = PieFedGetPersonDetailsResponse
+    public typealias Response = PieFedGetUserResponse
     
     public let path: String = "api/alpha/user"
     public let parameters: Parameters?

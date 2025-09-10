@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct PieFedEditCommentRequest: PutRequest {
     public typealias Body = PieFedEditComment
-    public typealias Response = PieFedCommentResponse
+    public typealias Response = PieFedGetCommentResponse
     
     public let path: String = "api/alpha/comment"
     public let body: Body?
@@ -21,12 +21,14 @@ public struct PieFedEditCommentRequest: PutRequest {
     init(
       commentId: Int,
       body: String?,
-      languageId: Int?
+      languageId: Int?,
+      distinguished: Bool?
     ) {
         self.body = .init(
             commentId: commentId,
             body: body,
-            languageId: languageId
+            languageId: languageId,
+            distinguished: distinguished
         )
     }
 }

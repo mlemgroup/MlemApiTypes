@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public struct PieFedModerateCommunityPostNsfwRequest: PostRequest {
-    public typealias Body = PieFedModerateCommunityPostNsfw
+    public typealias Body = PieFedCommunityModerationNsfw
     public typealias Response = PieFedPostView
     
     public let path: String = "api/alpha/community/moderate/post/nsfw"

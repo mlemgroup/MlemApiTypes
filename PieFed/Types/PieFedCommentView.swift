@@ -40,6 +40,8 @@ public struct PieFedCommentView: Codable, Hashable, Sendable {
     public let creatorBlocked: Bool
     /// Available on all versions
     public let myVote: Int?
+    /// Available from 1.1.0 onwards
+    public let canAuthUserModerate: Bool?
 }
 
 public extension PieFedCommentView {
@@ -58,5 +60,6 @@ public extension PieFedCommentView {
         case activityAlert = "activity_alert"
         case creatorBlocked = "creator_blocked"
         case myVote = "my_vote"
+        case canAuthUserModerate = "can_auth_user_moderate"
     }
 }

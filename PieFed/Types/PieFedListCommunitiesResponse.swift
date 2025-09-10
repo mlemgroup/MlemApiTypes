@@ -14,10 +14,13 @@ import Rest
 public struct PieFedListCommunitiesResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let communities: [PieFedCommunityView]
+    /// Available from 1.1.0 onwards
+    public let nextPage: String?
 }
 
 public extension PieFedListCommunitiesResponse {
     enum CodingKeys: String, CodingKey {
         case communities = "communities"
+        case nextPage = "next_page"
     }
 }

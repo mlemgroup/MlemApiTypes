@@ -12,8 +12,8 @@ import Rest
 
 /// Available on all versions
 public struct PieFedAddModToCommunityRequest: PostRequest {
-    public typealias Body = PieFedAddModToCommunity
-    public typealias Response = PieFedAddModToCommunityResponse
+    public typealias Body = PieFedModCommunity
+    public typealias Response = PieFedModCommunityResponse
     
     public let path: String = "api/alpha/community/mod"
     public let body: Body?

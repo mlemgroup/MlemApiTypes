@@ -12,8 +12,8 @@ import Rest
 
 /// Available on all versions
 public struct PieFedMarkReplyAsReadRequest: PostRequest {
-    public typealias Body = PieFedMarkReplyAsRead
-    public typealias Response = PieFedCommentReplyResponse
+    public typealias Body = PieFedMarkCommentAsRead
+    public typealias Response = PieFedGetCommentReplyResponse
     
     public let path: String = "api/alpha/comment/mark_as_read"
     public let body: Body?

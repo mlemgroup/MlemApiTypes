@@ -34,6 +34,8 @@ public struct PieFedGetComments: Codable, Hashable, Sendable {
     public let likedOnly: Bool?
     /// Available on all versions
     public let savedOnly: Bool?
+    /// Available from 1.1.0 onwards
+    public let depthFirst: Bool?
 }
 
 public extension PieFedGetComments {
@@ -49,5 +51,6 @@ public extension PieFedGetComments {
         case personId = "person_id"
         case likedOnly = "liked_only"
         case savedOnly = "saved_only"
+        case depthFirst = "depth_first"
     }
 }

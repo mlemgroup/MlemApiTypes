@@ -24,6 +24,8 @@ public struct PieFedCommunityModerationBanItem: Codable, Hashable, Sendable {
     public let bannedBy: PieFedPerson
     /// Available on all versions
     public let expired: Bool
+    /// Available from 1.1.0 onwards
+    public let expiresAt: Date?
 }
 
 public extension PieFedCommunityModerationBanItem {
@@ -34,5 +36,6 @@ public extension PieFedCommunityModerationBanItem {
         case bannedUser = "banned_user"
         case bannedBy = "banned_by"
         case expired = "expired"
+        case expiresAt = "expires_at"
     }
 }

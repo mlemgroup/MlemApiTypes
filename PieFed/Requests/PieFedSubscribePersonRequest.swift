@@ -12,8 +12,8 @@ import Rest
 
 /// Available on all versions
 public struct PieFedSubscribePersonRequest: PutRequest {
-    public typealias Body = PieFedSubscribePerson
-    public typealias Response = PieFedPersonResponse
+    public typealias Body = PieFedUserSubscribe
+    public typealias Response = PieFedUserSubscribeResponse
     
     public let path: String = "api/alpha/user/subscribe"
     public let body: Body?

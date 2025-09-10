@@ -24,6 +24,10 @@ public struct PieFedLocalUser: Codable, Hashable, Sendable {
     public let showReadPosts: Bool
     /// Available on all versions
     public let showScores: Bool
+    /// Available from 1.1.0 onwards
+    public let defaultCommentSortType: String?
+    /// Available from 1.1.0 onwards
+    public let showNsfl: Bool?
 }
 
 public extension PieFedLocalUser {
@@ -34,5 +38,7 @@ public extension PieFedLocalUser {
         case showNsfw = "show_nsfw"
         case showReadPosts = "show_read_posts"
         case showScores = "show_scores"
+        case defaultCommentSortType = "default_comment_sort_type"
+        case showNsfl = "show_nsfl"
     }
 }
