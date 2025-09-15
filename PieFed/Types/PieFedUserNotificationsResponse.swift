@@ -18,11 +18,11 @@ public struct PieFedUserNotificationsResponse: Codable, Hashable, Sendable {
     public let items: [PieFedNotificationsResponseChild]
     /// Available on all versions
     public let status: String
-    /// Available on all versions
+    /// Unavailable after 1.1.0
     public let user: String?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let username: String?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let nextPage: Int?
 }
 

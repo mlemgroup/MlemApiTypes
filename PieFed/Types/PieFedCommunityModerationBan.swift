@@ -18,11 +18,11 @@ public struct PieFedCommunityModerationBan: Codable, Hashable, Sendable {
     public let userId: Int
     /// Available on all versions
     public let reason: String
-    /// Available on all versions
+    /// Unavailable after 1.1.0
     public let expiredAt: String?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let expiresAt: Date?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let permanent: Bool?
 }
 

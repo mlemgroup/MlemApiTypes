@@ -1,5 +1,5 @@
 //
-//  PieFedCreatePostLikeRequest.swift
+//  PieFedLikePostRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct PieFedCreatePostLikeRequest: PostRequest {
+public struct PieFedLikePostRequest: PostRequest {
     public typealias Body = PieFedCreatePostLike
     public typealias Response = PieFedPostResponse
     

@@ -24,9 +24,9 @@ public struct PieFedLocalUser: Codable, Hashable, Sendable {
     public let showReadPosts: Bool
     /// Available on all versions
     public let showScores: Bool
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let defaultCommentSortType: String?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let showNsfl: Bool?
 }
 

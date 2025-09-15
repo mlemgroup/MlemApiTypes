@@ -40,7 +40,7 @@ public struct PieFedCommentView: Codable, Hashable, Sendable {
     public let creatorBlocked: Bool
     /// Available on all versions
     public let myVote: Int?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let canAuthUserModerate: Bool?
 }
 

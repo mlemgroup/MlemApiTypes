@@ -42,6 +42,8 @@ public struct PieFedPostView: Codable, Hashable, Sendable {
     public let myVote: Int?
     /// Available on all versions
     public let unreadComments: Int
+    /// Available from 1.2.0 onwards
+    public let flairList: [PieFedCommunityFlair]?
 }
 
 public extension PieFedPostView {
@@ -61,5 +63,6 @@ public extension PieFedPostView {
         case hidden = "hidden"
         case myVote = "my_vote"
         case unreadComments = "unread_comments"
+        case flairList = "flair_list"
     }
 }

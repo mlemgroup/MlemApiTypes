@@ -1,5 +1,5 @@
 //
-//  PieFedGetPostsResponse.swift
+//  PieFedListPostsResponse.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,13 +11,16 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct PieFedGetPostsResponse: Codable, Hashable, Sendable {
+public struct PieFedListPostsResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let posts: [PieFedPostView]
+    /// Available from 1.2.0 onwards
+    public let nextPage: String?
 }
 
-public extension PieFedGetPostsResponse {
+public extension PieFedListPostsResponse {
     enum CodingKeys: String, CodingKey {
         case posts = "posts"
+        case nextPage = "next_page"
     }
 }

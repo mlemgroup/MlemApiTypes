@@ -1,5 +1,5 @@
 //
-//  PieFedGetPrivateMessages.swift
+//  PieFedListPrivateMessages.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct PieFedGetPrivateMessages: Codable, Hashable, Sendable {
+public struct PieFedListPrivateMessages: Codable, Hashable, Sendable {
     /// Available on all versions
     public let unreadOnly: Bool?
     /// Available on all versions
@@ -22,7 +22,7 @@ public struct PieFedGetPrivateMessages: Codable, Hashable, Sendable {
     public let creatorId: Int?
 }
 
-public extension PieFedGetPrivateMessages {
+public extension PieFedListPrivateMessages {
     enum CodingKeys: String, CodingKey {
         case unreadOnly = "unread_only"
         case page = "page"

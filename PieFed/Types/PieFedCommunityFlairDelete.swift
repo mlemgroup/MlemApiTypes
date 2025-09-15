@@ -1,5 +1,5 @@
 //
-//  PieFedUploadResponse.swift
+//  PieFedCommunityFlairDelete.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -10,14 +10,14 @@
 import Foundation
 import Rest
 
-/// Available on all versions
-public struct PieFedUploadResponse: Codable, Hashable, Sendable {
+/// Available from 1.2.0 onwards
+public struct PieFedCommunityFlairDelete: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let url: URL
+    public let flairId: Int
 }
 
-public extension PieFedUploadResponse {
+public extension PieFedCommunityFlairDelete {
     enum CodingKeys: String, CodingKey {
-        case url = "url"
+        case flairId = "flair_id"
     }
 }

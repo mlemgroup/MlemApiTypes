@@ -18,15 +18,15 @@ public struct PieFedUserSaveSettings: Codable, Hashable, Sendable {
     public let showReadPosts: Bool?
     /// Available on all versions
     public let bio: String?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let avatar: String?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let cover: String?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let defaultCommentSortType: String?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let defaultSortType: String?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let showNsfl: Bool?
 }
 

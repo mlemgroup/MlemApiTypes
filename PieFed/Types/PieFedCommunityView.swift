@@ -22,6 +22,8 @@ public struct PieFedCommunityView: Codable, Hashable, Sendable {
     public let counts: PieFedCommunityAggregates
     /// Available on all versions
     public let activityAlert: Bool
+    /// Available from 1.2.0 onwards
+    public let flairList: [PieFedCommunityFlair]?
 }
 
 public extension PieFedCommunityView {
@@ -31,5 +33,6 @@ public extension PieFedCommunityView {
         case blocked = "blocked"
         case counts = "counts"
         case activityAlert = "activity_alert"
+        case flairList = "flair_list"
     }
 }

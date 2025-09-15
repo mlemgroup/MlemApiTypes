@@ -32,7 +32,7 @@ public struct PieFedEditCommunity: Codable, Hashable, Sendable {
     public let localOnly: Bool?
     /// Available on all versions
     public let discussionLanguages: [Int]?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let communityId: Int?
 }
 

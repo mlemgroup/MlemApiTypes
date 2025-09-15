@@ -1,5 +1,5 @@
 //
-//  PieFedGetPosts.swift
+//  PieFedListPosts.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,12 +11,12 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct PieFedGetPosts: Codable, Hashable, Sendable {
+public struct PieFedListPosts: Codable, Hashable, Sendable {
     /// Available on all versions
     public let type_: PieFedListingType?
     /// Available on all versions
     public let sort: PieFedSortType?
-    /// Available on all versions
+    /// Unavailable after 1.1.0
     public let pageCursor: Int?
     /// Available on all versions
     public let limit: Int?
@@ -30,9 +30,17 @@ public struct PieFedGetPosts: Codable, Hashable, Sendable {
     public let likedOnly: Bool?
     /// Available on all versions
     public let savedOnly: Bool?
+    /// Available from 1.2.0 onwards
+    public let q: String?
+    /// Available from 1.2.0 onwards
+    public let page: Int?
+    /// Available from 1.2.0 onwards
+    public let feedId: Int?
+    /// Available from 1.2.0 onwards
+    public let topicId: Int?
 }
 
-public extension PieFedGetPosts {
+public extension PieFedListPosts {
     enum CodingKeys: String, CodingKey {
         case type_ = "type_"
         case sort = "sort"
@@ -43,5 +51,9 @@ public extension PieFedGetPosts {
         case communityName = "community_name"
         case likedOnly = "liked_only"
         case savedOnly = "saved_only"
+        case q = "q"
+        case page = "page"
+        case feedId = "feed_id"
+        case topicId = "topic_id"
     }
 }
