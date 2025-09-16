@@ -26,6 +26,8 @@ public struct PieFedPostAggregates: Codable, Hashable, Sendable {
     public let published: Date
     /// Available on all versions
     public let newestCommentTime: String
+    /// Available from 1.2.0 onwards
+    public let crossPosts: Int?
 }
 
 public extension PieFedPostAggregates {
@@ -37,5 +39,6 @@ public extension PieFedPostAggregates {
         case downvotes = "downvotes"
         case published = "published"
         case newestCommentTime = "newest_comment_time"
+        case crossPosts = "cross_posts"
     }
 }
