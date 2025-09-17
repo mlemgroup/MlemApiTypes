@@ -24,7 +24,9 @@ public struct PieFedSearchRequest: GetRequest {
       sort: PieFedSortType?,
       listingType: PieFedListingType?,
       page: Int?,
-      limit: Int?
+      limit: Int?,
+      communityName: String?,
+      communityId: Int?
     ) {
         self.parameters = .init(
             q: q,
@@ -32,7 +34,9 @@ public struct PieFedSearchRequest: GetRequest {
             sort: sort,
             listingType: listingType,
             page: page,
-            limit: limit
+            limit: limit,
+            communityName: communityName,
+            communityId: communityId
         )
     }
 }

@@ -16,9 +16,9 @@ public struct PieFedReportComment: Codable, Hashable, Sendable {
     public let commentId: Int
     /// Available on all versions
     public let reason: String
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let description: String?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let reportRemote: Bool?
 }
 

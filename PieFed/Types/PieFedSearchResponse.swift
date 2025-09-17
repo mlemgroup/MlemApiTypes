@@ -20,7 +20,7 @@ public struct PieFedSearchResponse: Codable, Hashable, Sendable {
     public let communities: [PieFedCommunityView]
     /// Available on all versions
     public let users: [PieFedPersonView]
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let comments: [PieFedCommentView]?
 }
 

@@ -24,6 +24,10 @@ public struct PieFedSearch: Codable, Hashable, Sendable {
     public let page: Int?
     /// Available on all versions
     public let limit: Int?
+    /// Available from 1.2.0 onwards
+    public let communityName: String?
+    /// Available from 1.2.0 onwards
+    public let communityId: Int?
 }
 
 public extension PieFedSearch {
@@ -34,5 +38,7 @@ public extension PieFedSearch {
         case listingType = "listing_type"
         case page = "page"
         case limit = "limit"
+        case communityName = "community_name"
+        case communityId = "community_id"
     }
 }

@@ -1,5 +1,5 @@
 //
-//  PieFedCreateCommentLikeRequest.swift
+//  PieFedLikeCommentRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct PieFedCreateCommentLikeRequest: PostRequest {
+public struct PieFedLikeCommentRequest: PostRequest {
     public typealias Body = PieFedLikeComment
     public typealias Response = PieFedGetCommentResponse
     

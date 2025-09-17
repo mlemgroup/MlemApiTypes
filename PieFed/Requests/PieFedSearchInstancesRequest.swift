@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.1.0 onwards
+/// Available from 1.2.0 onwards
 public struct PieFedSearchInstancesRequest: GetRequest {
     public typealias Parameters = PieFedSearchInstances
     public typealias Response = PieFedGetSiteInstanceChooserSearchResponse

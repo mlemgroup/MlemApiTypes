@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.1.0 onwards
 public struct PieFedGetPrivateMessagesConversationRequest: GetRequest {
     public typealias Parameters = PieFedGetPrivateMessagesConversation
-    public typealias Response = PieFedPrivateMessagesResponse
+    public typealias Response = PieFedGetPrivateMessageConversationResponse
     
     public let path: String = "api/alpha/private_message/conversation"
     public let parameters: Parameters?

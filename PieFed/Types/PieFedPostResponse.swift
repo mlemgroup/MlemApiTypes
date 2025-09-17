@@ -14,10 +14,19 @@ import Rest
 public struct PieFedPostResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let postView: PieFedPostView
+    /// Available from 1.2.0 onwards
+    public let communityView: PieFedCommunityView?
+    /// Available from 1.2.0 onwards
+    public let moderators: [PieFedCommunityModeratorView]?
+    /// Available from 1.2.0 onwards
+    public let crossPosts: [PieFedPostView]?
 }
 
 public extension PieFedPostResponse {
     enum CodingKeys: String, CodingKey {
         case postView = "post_view"
+        case communityView = "community_view"
+        case moderators = "moderators"
+        case crossPosts = "cross_posts"
     }
 }

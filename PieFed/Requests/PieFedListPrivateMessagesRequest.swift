@@ -1,5 +1,5 @@
 //
-//  PieFedGetPrivateMessagesRequest.swift
+//  PieFedListPrivateMessagesRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,9 +11,9 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct PieFedGetPrivateMessagesRequest: GetRequest {
-    public typealias Parameters = PieFedGetPrivateMessages
-    public typealias Response = PieFedPrivateMessagesResponse
+public struct PieFedListPrivateMessagesRequest: GetRequest {
+    public typealias Parameters = PieFedListPrivateMessages
+    public typealias Response = PieFedListPrivateMessagesResponse
     
     public let path: String = "api/alpha/private_message/list"
     public let parameters: Parameters?

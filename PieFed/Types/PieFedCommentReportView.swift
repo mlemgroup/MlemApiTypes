@@ -42,11 +42,11 @@ public struct PieFedCommentReportView: Codable, Hashable, Sendable {
     public let myVote: Int?
     /// Available on all versions
     public let resolver: PieFedPerson?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let activityAlert: Bool?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let bannedFromCommunity: Bool?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let canAuthUserModerate: Bool?
 }
 

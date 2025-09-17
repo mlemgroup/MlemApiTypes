@@ -14,7 +14,7 @@ import Rest
 public struct PieFedListCommunitiesResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let communities: [PieFedCommunityView]
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let nextPage: String?
 }
 

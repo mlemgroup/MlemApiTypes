@@ -16,7 +16,7 @@ public struct PieFedGetCommunityModerationBansList: Codable, Hashable, Sendable 
     public let communityId: Int?
     /// Available on all versions
     public let page: Int?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let limit: Int?
 }
 

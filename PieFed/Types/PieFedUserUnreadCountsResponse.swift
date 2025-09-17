@@ -18,7 +18,7 @@ public struct PieFedUserUnreadCountsResponse: Codable, Hashable, Sendable {
     public let mentions: Int
     /// Available on all versions
     public let privateMessages: Int
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let other: Int?
 }
 

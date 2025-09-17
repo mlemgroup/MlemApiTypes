@@ -34,7 +34,7 @@ public struct PieFedGetComments: Codable, Hashable, Sendable {
     public let likedOnly: Bool?
     /// Available on all versions
     public let savedOnly: Bool?
-    /// Available from 1.1.0 onwards
+    /// Available from 1.2.0 onwards
     public let depthFirst: Bool?
 }
 
