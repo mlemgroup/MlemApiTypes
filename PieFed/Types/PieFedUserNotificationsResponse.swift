@@ -23,7 +23,7 @@ public struct PieFedUserNotificationsResponse: Codable, Hashable, Sendable {
     /// Available from 1.2.0 onwards
     public let username: String?
     /// Available from 1.2.0 onwards
-    public let nextPage: Int?
+    public let nextPage: String?
 }
 
 public extension PieFedUserNotificationsResponse {
