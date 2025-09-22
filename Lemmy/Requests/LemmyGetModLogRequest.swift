@@ -19,7 +19,7 @@ public struct LemmyGetModLogRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       modPersonId: Int?,
       communityId: Int?,
       page: Int?,

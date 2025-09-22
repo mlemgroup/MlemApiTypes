@@ -19,7 +19,7 @@ public struct LemmyLogoutRequest: PostRequest {
     public let body: Body? = nil
     
     init(
-      endpoint: SiteVersion.EndpointVersion
+      endpoint: LemmyEndpointVersion
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/auth/logout" : "api/v3/user/logout"
     }

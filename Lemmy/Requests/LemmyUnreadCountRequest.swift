@@ -19,7 +19,7 @@ public struct LemmyUnreadCountRequest: GetRequest {
     public let parameters: Parameters? = nil
     
     init(
-      endpoint: SiteVersion.EndpointVersion
+      endpoint: LemmyEndpointVersion
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/unread_count" : "api/v3/user/unread_count"
     }

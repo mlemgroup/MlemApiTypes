@@ -19,7 +19,7 @@ public struct LemmyReportCountRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       communityId: Int?
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/report_count" : "api/v3/user/report_count"

@@ -19,7 +19,7 @@ public struct LemmyValidateAuthRequest: GetRequest {
     public let parameters: Parameters? = nil
     
     init(
-      endpoint: SiteVersion.EndpointVersion
+      endpoint: LemmyEndpointVersion
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/validate_auth" : "api/v3/user/validate_auth"
     }

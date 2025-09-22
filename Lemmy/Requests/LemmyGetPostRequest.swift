@@ -19,7 +19,7 @@ public struct LemmyGetPostRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       id: Int?,
       commentId: Int?
     ) {

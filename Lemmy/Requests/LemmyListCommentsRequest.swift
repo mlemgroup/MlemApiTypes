@@ -19,7 +19,7 @@ public struct LemmyListCommentsRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       type_: LemmyListingType?,
       sort: LemmyCommentSortType?,
       maxDepth: Int?,

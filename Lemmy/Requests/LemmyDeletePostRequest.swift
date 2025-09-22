@@ -19,7 +19,7 @@ public struct LemmyDeletePostRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       postId: Int,
       deleted: Bool
     ) {

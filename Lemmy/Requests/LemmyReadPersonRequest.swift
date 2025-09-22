@@ -19,7 +19,7 @@ public struct LemmyReadPersonRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       personId: Int?,
       username: String?,
       sort: LemmySortType?,

@@ -19,7 +19,7 @@ public struct LemmyChangePasswordAfterResetRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       token: String,
       password: String,
       passwordVerify: String

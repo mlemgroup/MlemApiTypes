@@ -19,7 +19,7 @@ public struct LemmySearchRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       q: String,
       communityId: Int?,
       communityName: String?,

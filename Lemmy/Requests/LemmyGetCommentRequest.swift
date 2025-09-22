@@ -19,7 +19,7 @@ public struct LemmyGetCommentRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       id: Int
     ) {
         self.path = endpoint == .v4 ? "api/v4/comment" : "api/v3/comment"

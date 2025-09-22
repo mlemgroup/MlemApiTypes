@@ -19,7 +19,7 @@ public struct LemmyGetCaptchaRequest: GetRequest {
     public let parameters: Parameters? = nil
     
     init(
-      endpoint: SiteVersion.EndpointVersion
+      endpoint: LemmyEndpointVersion
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/auth/get_captcha" : "api/v3/user/get_captcha"
     }

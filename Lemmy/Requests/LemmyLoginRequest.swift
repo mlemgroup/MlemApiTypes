@@ -19,7 +19,7 @@ public struct LemmyLoginRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       usernameOrEmail: String,
       password: String,
       totp2faToken: String?

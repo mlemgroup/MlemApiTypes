@@ -19,7 +19,7 @@ public struct LemmyResolvePmReportRequest: PutRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       reportId: Int,
       resolved: Bool
     ) {

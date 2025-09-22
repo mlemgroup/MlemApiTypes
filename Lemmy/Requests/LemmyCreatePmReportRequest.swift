@@ -19,7 +19,7 @@ public struct LemmyCreatePmReportRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       privateMessageId: Int,
       reason: String
     ) {

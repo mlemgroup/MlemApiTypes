@@ -19,7 +19,7 @@ public struct LemmyListAllMediaRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       page: Int?,
       limit: Int?,
       pageCursor: String?,

@@ -19,7 +19,7 @@ public struct LemmyUpdateCommunityRequest: PutRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       communityId: Int,
       title: String?,
       description: String?,

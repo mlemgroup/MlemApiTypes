@@ -19,7 +19,7 @@ public struct LemmyDeleteCustomEmojiRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       id: Int
     ) {
         self.path = endpoint == .v4 ? "api/v4/custom_emoji/delete" : "api/v3/custom_emoji/delete"

@@ -19,7 +19,7 @@ public struct LemmyUpdateTotpRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       totpToken: String,
       enabled: Bool
     ) {

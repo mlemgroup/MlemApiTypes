@@ -19,7 +19,7 @@ public struct LemmySaveUserSettingsRequest: PutRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       showNsfw: Bool?,
       blurNsfw: Bool?,
       autoExpand: Bool?,

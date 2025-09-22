@@ -19,7 +19,7 @@ public struct LemmyListCommentLikesRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       commentId: Int,
       page: Int?,
       limit: Int?,

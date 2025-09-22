@@ -19,7 +19,7 @@ public struct LemmyUpdatePostRequest: PutRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       postId: Int,
       name: String?,
       url: URL?,

@@ -19,7 +19,7 @@ public struct LemmyRemoveCommentRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       commentId: Int,
       removed: Bool,
       reason: String?

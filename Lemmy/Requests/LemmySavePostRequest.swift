@@ -19,7 +19,7 @@ public struct LemmySavePostRequest: PutRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       postId: Int,
       save: Bool
     ) {

@@ -19,7 +19,7 @@ public struct LemmyGenerateTotpSecretRequest: PostRequest {
     public let body: Body? = nil
     
     init(
-      endpoint: SiteVersion.EndpointVersion
+      endpoint: LemmyEndpointVersion
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/auth/totp/generate" : "api/v3/user/totp/generate"
     }

@@ -19,7 +19,7 @@ public struct LemmyUpdatePrivateMessageRequest: PutRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       privateMessageId: Int,
       content: String
     ) {

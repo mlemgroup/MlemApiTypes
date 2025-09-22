@@ -19,7 +19,7 @@ public struct LemmyFollowCommunityRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       communityId: Int,
       follow: Bool
     ) {

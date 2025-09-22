@@ -19,7 +19,7 @@ public struct LemmyUserBlockInstanceCommunitiesRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       instanceId: Int,
       block: Bool
     ) {
