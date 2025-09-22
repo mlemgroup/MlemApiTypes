@@ -19,7 +19,7 @@ public struct LemmyUpdateCustomEmojiRequest: PutRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       id: Int,
       category: String,
       imageUrl: URL,

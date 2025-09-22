@@ -19,7 +19,7 @@ public struct LemmyVerifyEmailRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       token: String
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/auth/verify_email" : "api/v3/user/verify_email"

@@ -19,7 +19,7 @@ public struct LemmyMarkAllNotificationsReadRequest: PostRequest {
     public let body: Body? = nil
     
     init(
-      endpoint: SiteVersion.EndpointVersion
+      endpoint: LemmyEndpointVersion
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/mark_as_read/all" : "api/v3/user/mark_all_as_read"
     }

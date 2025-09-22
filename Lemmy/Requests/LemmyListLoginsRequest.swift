@@ -19,7 +19,7 @@ public struct LemmyListLoginsRequest: GetRequest {
     public let parameters: Parameters? = nil
     
     init(
-      endpoint: SiteVersion.EndpointVersion
+      endpoint: LemmyEndpointVersion
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/list_logins" : "api/v3/user/list_logins"
     }

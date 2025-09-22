@@ -19,7 +19,7 @@ public struct LemmyGetSiteRequest: GetRequest {
     public let parameters: Parameters? = nil
     
     init(
-      endpoint: SiteVersion.EndpointVersion
+      endpoint: LemmyEndpointVersion
     ) {
         self.path = endpoint == .v4 ? "api/v4/site" : "api/v3/site"
     }

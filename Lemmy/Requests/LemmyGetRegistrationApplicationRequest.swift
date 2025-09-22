@@ -19,7 +19,7 @@ public struct LemmyGetRegistrationApplicationRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       personId: Int
     ) {
         self.path = endpoint == .v4 ? "api/v4/admin/registration_application" : "api/v3/admin/registration_application"

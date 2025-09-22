@@ -19,7 +19,7 @@ public struct LemmyResetPasswordRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       email: String
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/auth/password_reset" : "api/v3/user/password_reset"

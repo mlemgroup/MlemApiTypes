@@ -19,7 +19,7 @@ public struct LemmyResolveObjectRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       q: String
     ) {
         self.path = endpoint == .v4 ? "api/v4/resolve_object" : "api/v3/resolve_object"

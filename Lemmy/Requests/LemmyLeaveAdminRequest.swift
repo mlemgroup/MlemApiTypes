@@ -19,7 +19,7 @@ public struct LemmyLeaveAdminRequest: PostRequest {
     public let body: Body? = nil
     
     init(
-      endpoint: SiteVersion.EndpointVersion
+      endpoint: LemmyEndpointVersion
     ) {
         self.path = endpoint == .v4 ? "api/v4/admin/leave" : "api/v3/user/leave_admin"
     }

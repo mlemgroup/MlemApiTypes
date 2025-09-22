@@ -19,7 +19,7 @@ public struct LemmyApproveRegistrationApplicationRequest: PutRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       id: Int,
       approve: Bool,
       denyReason: String?

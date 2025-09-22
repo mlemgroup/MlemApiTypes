@@ -19,7 +19,7 @@ public struct LemmyLockPostRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       postId: Int,
       locked: Bool,
       reason: String?

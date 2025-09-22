@@ -19,7 +19,7 @@ public struct LemmyDonationDialogShownRequest: PostRequest {
     public let body: Body? = nil
     
     init(
-      endpoint: SiteVersion.EndpointVersion
+      endpoint: LemmyEndpointVersion
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/donation_dialog_shown" : "api/v3/user/donation_dialog_shown"
     }

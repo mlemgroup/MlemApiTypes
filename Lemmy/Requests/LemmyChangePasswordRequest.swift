@@ -19,7 +19,7 @@ public struct LemmyChangePasswordRequest: PutRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       newPassword: String,
       newPasswordVerify: String,
       oldPassword: String

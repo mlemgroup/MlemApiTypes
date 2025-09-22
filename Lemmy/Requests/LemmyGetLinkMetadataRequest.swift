@@ -19,7 +19,7 @@ public struct LemmyGetLinkMetadataRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       url: URL
     ) {
         self.path = endpoint == .v4 ? "api/v4/post/site_metadata" : "api/v3/post/site_metadata"

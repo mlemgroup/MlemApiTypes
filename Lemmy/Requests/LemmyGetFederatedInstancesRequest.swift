@@ -19,7 +19,7 @@ public struct LemmyGetFederatedInstancesRequest: GetRequest {
     public let parameters: Parameters? = nil
     
     init(
-      endpoint: SiteVersion.EndpointVersion
+      endpoint: LemmyEndpointVersion
     ) {
         self.path = endpoint == .v4 ? "api/v4/federated_instances" : "api/v3/federated_instances"
     }

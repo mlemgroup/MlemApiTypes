@@ -19,7 +19,7 @@ public struct LemmyListRegistrationApplicationsRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       unreadOnly: Bool?,
       page: Int?,
       limit: Int?,

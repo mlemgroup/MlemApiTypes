@@ -19,7 +19,7 @@ public struct LemmyBanFromSiteRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       personId: Int,
       ban: Bool,
       removeData: Bool?,

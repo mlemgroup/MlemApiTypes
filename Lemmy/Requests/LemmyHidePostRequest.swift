@@ -19,7 +19,7 @@ public struct LemmyHidePostRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       postIds: [Int]?,
       hide: Bool,
       postId: Int?

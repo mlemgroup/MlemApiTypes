@@ -19,7 +19,7 @@ public struct LemmyDeletePrivateMessageRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       privateMessageId: Int,
       deleted: Bool
     ) {

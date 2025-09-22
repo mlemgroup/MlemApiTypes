@@ -19,7 +19,7 @@ public struct LemmyDistinguishCommentRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       commentId: Int,
       distinguished: Bool
     ) {

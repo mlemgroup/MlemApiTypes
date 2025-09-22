@@ -19,7 +19,7 @@ public struct LemmyListCommunitiesRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       type_: LemmyListingType?,
       sort: CommunitySortTypeBridge,
       showNsfw: Bool?,

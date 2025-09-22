@@ -19,7 +19,7 @@ public struct LemmyLikePostRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       postId: Int,
       score: Int
     ) {

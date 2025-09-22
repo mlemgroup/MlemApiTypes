@@ -19,7 +19,7 @@ public struct LemmyRegisterRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       username: String,
       password: String,
       passwordVerify: String,

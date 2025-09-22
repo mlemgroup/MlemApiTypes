@@ -19,7 +19,7 @@ public struct LemmyPurgePostRequest: PostRequest {
     public let body: Body?
     
     init(
-      endpoint: SiteVersion.EndpointVersion,
+      endpoint: LemmyEndpointVersion,
       postId: Int,
       reason: String?
     ) {
