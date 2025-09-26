@@ -32,7 +32,7 @@ public struct PieFedPostReport: Codable, Hashable, Sendable {
     public let resolverId: Int?
     /// Available on all versions
     public let published: Date
-    /// Available on all versions
+    /// Unavailable after 1.1.0
     public let updated: Date?
 }
 

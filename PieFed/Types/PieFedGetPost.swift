@@ -14,7 +14,7 @@ import Rest
 public struct PieFedGetPost: Codable, Hashable, Sendable {
     /// Available on all versions
     public let id: Int?
-    /// Available on all versions
+    /// Unavailable after 1.1.0
     public let commentId: Int?
 }
 
