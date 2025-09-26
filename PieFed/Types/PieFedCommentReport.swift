@@ -24,7 +24,7 @@ public struct PieFedCommentReport: Codable, Hashable, Sendable {
     public let reason: String
     /// Available on all versions
     public let resolved: Bool
-    /// Available on all versions
+    /// Unavailable after 1.1.0
     public let resolverId: Int?
     /// Available on all versions
     public let published: Date

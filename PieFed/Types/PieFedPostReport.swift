@@ -20,7 +20,7 @@ public struct PieFedPostReport: Codable, Hashable, Sendable {
     public let postId: Int
     /// Available on all versions
     public let originalPostName: String
-    /// Available on all versions
+    /// Unavailable after 1.1.0
     public let originalPostUrl: String?
     /// Available on all versions
     public let originalPostBody: String?
@@ -28,7 +28,7 @@ public struct PieFedPostReport: Codable, Hashable, Sendable {
     public let reason: String
     /// Available on all versions
     public let resolved: Bool
-    /// Available on all versions
+    /// Unavailable after 1.1.0
     public let resolverId: Int?
     /// Available on all versions
     public let published: Date
