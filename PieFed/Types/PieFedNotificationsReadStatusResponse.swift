@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 1.1.0
 public enum PieFedNotificationsReadStatusResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     case notificationsItemUserView(PieFedNotificationsItemUserView)

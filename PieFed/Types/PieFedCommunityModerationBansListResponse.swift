@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.2.0 onwards
+/// Available on all versions
 public struct PieFedCommunityModerationBansListResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let items: [PieFedCommunityModerationBanItem]?

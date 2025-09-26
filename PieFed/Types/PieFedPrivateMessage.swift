@@ -26,7 +26,7 @@ public struct PieFedPrivateMessage: Codable, Hashable, Sendable {
     public let read: Bool
     /// Available on all versions
     public let published: Date
-    /// Available on all versions
+    /// Unavailable after 1.1.0
     public let updated: Date?
     /// Available on all versions
     public let apId: ActorIdentifier

@@ -12,8 +12,8 @@ import Rest
 
 /// Available from 1.1.0 onwards
 public struct PieFedDeletePrivateMessage: Codable, Hashable, Sendable {
-    /// Available on all versions
-    public let messageId: Int
+    /// Unavailable after 1.1.0
+    public let messageId: Int?
     /// Available on all versions
     public let deleted: Bool
     /// Available from 1.2.0 onwards

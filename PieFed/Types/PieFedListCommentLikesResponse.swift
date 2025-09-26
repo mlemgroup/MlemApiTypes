@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.2.0 onwards
 public struct PieFedListCommentLikesResponse: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let commentLikes: [PieFedCommentLikeView]?
+    public let commentLikes: [PieFedCommentLikeView]
     /// Available on all versions
     public let nextPage: String?
 }

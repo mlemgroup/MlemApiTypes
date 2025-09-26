@@ -10,12 +10,12 @@
 import Foundation
 import Rest
 
-/// Available from 1.2.0 onwards
+/// Available on all versions
 public struct PieFedUserNotificationState: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let notifId: Int
+    public let notifId: Int?
     /// Available on all versions
-    public let readState: Bool
+    public let readState: Bool?
 }
 
 public extension PieFedUserNotificationState {

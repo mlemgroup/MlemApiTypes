@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 1.1.0
 public struct PieFedErrorResponseLogin: Codable, Hashable, Sendable {
     /// Available on all versions
     public let error: String?

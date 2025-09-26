@@ -16,7 +16,7 @@ public struct PieFedListPosts: Codable, Hashable, Sendable {
     public let type_: PieFedListingType?
     /// Available on all versions
     public let sort: PieFedSortType?
-    /// Unavailable after 1.1.0
+    /// Available on all versions
     public let pageCursor: Int?
     /// Available on all versions
     public let limit: Int?

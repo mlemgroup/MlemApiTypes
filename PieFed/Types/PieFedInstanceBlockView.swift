@@ -16,7 +16,7 @@ public struct PieFedInstanceBlockView: Codable, Hashable, Sendable {
     public let person: PieFedPerson
     /// Available on all versions
     public let instance: PieFedInstance
-    /// Available on all versions
+    /// Unavailable after 1.1.0
     public let site: PieFedSite?
 }
 

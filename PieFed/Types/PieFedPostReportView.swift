@@ -34,11 +34,11 @@ public struct PieFedPostReportView: Codable, Hashable, Sendable {
     public let saved: Bool
     /// Available on all versions
     public let creatorBlocked: Bool
-    /// Available on all versions
+    /// Unavailable after 1.1.0
     public let myVote: Int?
     /// Available on all versions
     public let counts: PieFedPostAggregates
-    /// Available on all versions
+    /// Unavailable after 1.1.0
     public let resolver: PieFedPerson?
 }
 

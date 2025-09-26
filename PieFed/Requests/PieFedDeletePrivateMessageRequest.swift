@@ -19,7 +19,7 @@ public struct PieFedDeletePrivateMessageRequest: PostRequest {
     public let body: Body?
     
     init(
-      messageId: Int,
+      messageId: Int?,
       deleted: Bool,
       privateMessageId: Int?
     ) {

@@ -12,8 +12,8 @@ import Rest
 
 /// Available on all versions
 public struct PieFedEditCommunity: Codable, Hashable, Sendable {
-    /// Available on all versions
-    public let id: Int
+    /// Unavailable after 1.1.0
+    public let id: Int?
     /// Available on all versions
     public let title: String?
     /// Available on all versions
