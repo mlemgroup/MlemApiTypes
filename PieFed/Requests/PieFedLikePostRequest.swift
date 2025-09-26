@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public struct PieFedLikePostRequest: PostRequest {
-    public typealias Body = PieFedCreatePostLike
+    public typealias Body = PieFedLikePost
     public typealias Response = PieFedPostResponse
     
     public let path: String = "api/alpha/post/like"
@@ -20,11 +20,13 @@ public struct PieFedLikePostRequest: PostRequest {
     
     init(
       postId: Int,
-      score: Int
+      score: Int,
+      `private`: Bool?
     ) {
         self.body = .init(
             postId: postId,
-            score: score
+            score: score,
+            `private`: `private`
         )
     }
 }
