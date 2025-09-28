@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public struct PieFedModerateCommunityUnBanRequest: PutRequest {
-    public typealias Body = PieFedModerateCommunityUnBan
+    public typealias Body = PieFedCommunityModerationUnban
     public typealias Response = PieFedCommunityModerationBanItem
     
     public let path: String = "api/alpha/community/moderate/unban"

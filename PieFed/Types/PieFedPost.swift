@@ -50,6 +50,10 @@ public struct PieFedPost: Codable, Hashable, Sendable {
     public let altText: String?
     /// Available from 1.1.0 onwards
     public let smallThumbnailUrl: URL?
+    /// Available from 1.2.0 onwards
+    public let imageDetails: PieFedWidthHeight?
+    /// Available from 1.2.0 onwards
+    public let crossPosts: [PieFedMiniCrossPosts]?
 }
 
 public extension PieFedPost {
@@ -73,5 +77,7 @@ public extension PieFedPost {
         case sticky = "sticky"
         case altText = "alt_text"
         case smallThumbnailUrl = "small_thumbnail_url"
+        case imageDetails = "image_details"
+        case crossPosts = "cross_posts"
     }
 }

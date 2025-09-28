@@ -40,7 +40,7 @@ public struct PieFedCommentReportView: Codable, Hashable, Sendable {
     public let saved: Bool
     /// Available on all versions
     public let myVote: Int?
-    /// Available on all versions
+    /// Unavailable after 1.1.0
     public let resolver: PieFedPerson?
     /// Available from 1.2.0 onwards
     public let activityAlert: Bool?

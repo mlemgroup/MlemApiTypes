@@ -19,7 +19,7 @@ public struct PieFedEditCommunityRequest: PutRequest {
     public let body: Body?
     
     init(
-      id: Int,
+      id: Int?,
       title: String?,
       description: String?,
       rules: String?,

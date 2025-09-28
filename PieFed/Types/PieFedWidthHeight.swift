@@ -1,5 +1,5 @@
 //
-//  PieFedCreatePostLike.swift
+//  PieFedWidthHeight.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -10,17 +10,17 @@
 import Foundation
 import Rest
 
-/// Available on all versions
-public struct PieFedCreatePostLike: Codable, Hashable, Sendable {
+/// Available from 1.2.0 onwards
+public struct PieFedWidthHeight: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let postId: Int
+    public let width: Int?
     /// Available on all versions
-    public let score: Int
+    public let height: Int?
 }
 
-public extension PieFedCreatePostLike {
+public extension PieFedWidthHeight {
     enum CodingKeys: String, CodingKey {
-        case postId = "post_id"
-        case score = "score"
+        case width = "width"
+        case height = "height"
     }
 }
