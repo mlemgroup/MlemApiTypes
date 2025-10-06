@@ -12,16 +12,16 @@ import Rest
 
 /// Available on all versions
 public struct PieFedCommunityModerationBanItem: Codable, Hashable, Sendable {
-    /// Available on all versions, made optional in 1.2.0
-    public let reason: String?
+    /// Available on all versions
+    public let reason: String
     /// Available on all versions
     public let expiredAt: String
-    /// Available on all versions, made optional in 1.2.0
-    public let community: PieFedCommunity?
-    /// Available on all versions, made optional in 1.2.0
-    public let bannedUser: PieFedPerson?
-    /// Available on all versions, made optional in 1.2.0
-    public let bannedBy: PieFedPerson?
+    /// Available on all versions
+    public let community: PieFedCommunity
+    /// Available on all versions
+    public let bannedUser: PieFedPerson
+    /// Available on all versions
+    public let bannedBy: PieFedPerson
     /// Available on all versions, made optional in 1.2.0
     public let expired: Bool?
     /// Available from 1.2.0 onwards
