@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.2.0 onwards
+/// Available from 1.2.1 onwards
 public struct PieFedMiniCrossPosts: Codable, Hashable, Sendable {
     /// Available on all versions
     public let postId: Int?

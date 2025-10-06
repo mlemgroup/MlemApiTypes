@@ -16,7 +16,7 @@ public struct PieFedDeletePrivateMessage: Codable, Hashable, Sendable {
     public let messageId: Int?
     /// Available on all versions
     public let deleted: Bool
-    /// Available from 1.2.0 onwards
+    /// Available from 1.2.1 onwards
     public let privateMessageId: Int?
 }
 

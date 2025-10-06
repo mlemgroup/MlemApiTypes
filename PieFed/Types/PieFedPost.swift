@@ -50,9 +50,9 @@ public struct PieFedPost: Codable, Hashable, Sendable {
     public let altText: String?
     /// Available from 1.1.0 onwards
     public let smallThumbnailUrl: URL?
-    /// Available from 1.2.0 onwards
+    /// Available from 1.2.1 onwards
     public let imageDetails: PieFedWidthHeight?
-    /// Available from 1.2.0 onwards
+    /// Available from 1.2.1 onwards
     public let crossPosts: [PieFedMiniCrossPosts]?
 }
 
