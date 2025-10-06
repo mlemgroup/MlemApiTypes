@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Unavailable after 0.19.12
+/// Unavailable after 0.19.13
 public struct LemmyModlogListParams: Codable, Hashable, Sendable {
     /// Available on all versions
     public let communityId: Int?

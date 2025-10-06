@@ -1,5 +1,5 @@
 //
-//  LemmyDeleteCommentRequest.swift
+//  LemmyLockCommentRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -10,23 +10,23 @@
 import Foundation
 import Rest
 
-/// Available on all versions
-public struct LemmyDeleteCommentRequest: PostRequest {
-    public typealias Body = LemmyDeleteComment
+/// Available from 1.0.0-alpha onwards
+public struct LemmyLockCommentRequest: PostRequest {
+    public typealias Body = LemmyLockComment
     public typealias Response = LemmyCommentResponse
     
-    public let path: String
+    public let path: String = "api/v4/comment/lock"
     public let body: Body?
     
     init(
-      endpoint: LemmyEndpointVersion,
       commentId: Int,
-      deleted: Bool
+      locked: Bool,
+      reason: String
     ) {
-        self.path = endpoint == .v4 ? "api/v4/comment/delete" : "api/v3/comment/delete"
         self.body = .init(
             commentId: commentId,
-            deleted: deleted
+            locked: locked,
+            reason: reason
         )
     }
 }

@@ -55,6 +55,7 @@ public struct LemmySaveUserSettingsRequest: PutRequest {
       defaultCommentSortType: LemmyCommentSortType?,
       blockingKeywords: [String]?,
       enablePrivateMessages: Bool?,
+      showScore: Bool?,
       autoMarkFetchedPostsAsRead: Bool?,
       hideMedia: Bool?,
       showPersonVotes: Bool?
@@ -96,6 +97,7 @@ public struct LemmySaveUserSettingsRequest: PutRequest {
             defaultCommentSortType: defaultCommentSortType,
             blockingKeywords: blockingKeywords,
             enablePrivateMessages: enablePrivateMessages,
+            showScore: showScore,
             autoMarkFetchedPostsAsRead: autoMarkFetchedPostsAsRead,
             hideMedia: hideMedia,
             showPersonVotes: showPersonVotes

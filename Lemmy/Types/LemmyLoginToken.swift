@@ -16,7 +16,7 @@ public struct LemmyLoginToken: Codable, Hashable, Sendable {
     /// Available on all versions
     public let userId: Int
     /// Time of login
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let published: Date?
     /// IP address where login was made from, allows invalidating logins by IP address.
     /// Could be stored in truncated format, or store derived information for better privacy.

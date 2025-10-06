@@ -21,10 +21,10 @@ public struct LemmyEditCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
     public let description: String?
     /// An icon URL.
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let icon: String?
     /// A banner URL.
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let banner: String?
     /// Whether its an NSFW community.
     /// Available on all versions

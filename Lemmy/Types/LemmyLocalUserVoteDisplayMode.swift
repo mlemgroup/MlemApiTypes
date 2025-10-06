@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available between 0.19.4 and 0.19.12
+/// Available between 0.19.4 and 0.19.13
 public struct LemmyLocalUserVoteDisplayMode: Codable, Hashable, Sendable {
     /// Available on all versions
     public let localUserId: Int

@@ -21,7 +21,7 @@ public struct LemmyAdminAllowInstanceRequest: PostRequest {
     init(
       instance: String,
       allow: Bool,
-      reason: String?
+      reason: String
     ) {
         self.body = .init(
             instance: instance,

@@ -18,7 +18,7 @@ public struct LemmyModBanFromCommunityView: Codable, Hashable, Sendable {
     public let moderator: LemmyPerson?
     /// Available on all versions
     public let community: LemmyCommunity
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let bannedPerson: LemmyPerson?
     /// Available from 1.0.0-alpha onwards
     public let otherPerson: LemmyPerson?

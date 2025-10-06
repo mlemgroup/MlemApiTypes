@@ -1,5 +1,5 @@
 //
-//  LemmyAdminBlockInstanceParams.swift
+//  LemmyLockComment.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,22 +11,19 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyAdminBlockInstanceParams: Codable, Hashable, Sendable {
+public struct LemmyLockComment: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let instance: String
+    public let commentId: Int
     /// Available on all versions
-    public let block: Bool
+    public let locked: Bool
     /// Available on all versions
     public let reason: String
-    /// Available on all versions
-    public let expiresAt: Date?
 }
 
-public extension LemmyAdminBlockInstanceParams {
+public extension LemmyLockComment {
     enum CodingKeys: String, CodingKey {
-        case instance = "instance"
-        case block = "block"
+        case commentId = "comment_id"
+        case locked = "locked"
         case reason = "reason"
-        case expiresAt = "expires_at"
     }
 }

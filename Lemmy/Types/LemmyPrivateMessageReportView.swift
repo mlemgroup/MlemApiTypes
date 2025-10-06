@@ -26,6 +26,8 @@ public struct LemmyPrivateMessageReportView: Codable, Hashable, Sendable {
     public let creatorIsAdmin: Bool?
     /// Available from 1.0.0-alpha onwards
     public let creatorBanned: Bool?
+    /// Available from 1.0.0-alpha onwards
+    public let creatorBanExpiresAt: Date?
 }
 
 public extension LemmyPrivateMessageReportView {
@@ -37,5 +39,6 @@ public extension LemmyPrivateMessageReportView {
         case resolver = "resolver"
         case creatorIsAdmin = "creator_is_admin"
         case creatorBanned = "creator_banned"
+        case creatorBanExpiresAt = "creator_ban_expires_at"
     }
 }

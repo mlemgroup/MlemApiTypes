@@ -15,7 +15,7 @@ public struct LemmyListRegistrationApplications: Codable, Hashable, Sendable {
     /// Only shows the unread applications (IE those without an admin actor)
     /// Available on all versions
     public let unreadOnly: Bool?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let page: Int?
     /// Available on all versions
     public let limit: Int?

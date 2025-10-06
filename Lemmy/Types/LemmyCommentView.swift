@@ -20,7 +20,7 @@ public struct LemmyCommentView: Codable, Hashable, Sendable {
     public let post: LemmyPost
     /// Available on all versions
     public let community: LemmyCommunity
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let counts: LemmyCommentAggregates?
     /// Available on all versions
     public let creatorBannedFromCommunity: Bool
@@ -28,15 +28,15 @@ public struct LemmyCommentView: Codable, Hashable, Sendable {
     public let creatorIsModerator: Bool
     /// Available on all versions
     public let creatorIsAdmin: Bool
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let subscribed: LemmySubscribedType?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let saved: Bool?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let creatorBlocked: Bool?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let myVote: Int?
-    /// Available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.13
     public let bannedFromCommunity: Bool?
     /// Available from 1.0.0-alpha onwards
     public let communityActions: LemmyCommunityActions?
@@ -50,6 +50,10 @@ public struct LemmyCommentView: Codable, Hashable, Sendable {
     public let canMod: Bool?
     /// Available from 1.0.0-alpha onwards
     public let creatorBanned: Bool?
+    /// Available from 1.0.0-alpha onwards
+    public let creatorBanExpiresAt: Date?
+    /// Available from 1.0.0-alpha onwards
+    public let creatorCommunityBanExpiresAt: Date?
 }
 
 public extension LemmyCommentView {
@@ -73,5 +77,7 @@ public extension LemmyCommentView {
         case postTags = "post_tags"
         case canMod = "can_mod"
         case creatorBanned = "creator_banned"
+        case creatorBanExpiresAt = "creator_ban_expires_at"
+        case creatorCommunityBanExpiresAt = "creator_community_ban_expires_at"
     }
 }

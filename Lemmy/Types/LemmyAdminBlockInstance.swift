@@ -21,7 +21,7 @@ public struct LemmyAdminBlockInstance: Codable, Hashable, Sendable {
     /// Available on all versions
     public let blocked: Bool
     /// Available on all versions
-    public let reason: String?
+    public let reason: String
     /// Available on all versions
     public let expiresAt: Date?
     /// Available on all versions

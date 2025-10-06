@@ -16,7 +16,7 @@ public struct LemmyGetPostResponse: Codable, Hashable, Sendable {
     public let postView: LemmyPostView
     /// Available on all versions
     public let communityView: LemmyCommunityView
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let moderators: [LemmyCommunityModeratorView]?
     /// A list of cross-posts, or other times / communities this link has been posted to.
     /// Available on all versions

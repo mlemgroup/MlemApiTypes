@@ -22,7 +22,7 @@ public struct LemmyRegistrationApplication: Codable, Hashable, Sendable {
     public let adminId: Int?
     /// Available on all versions
     public let denyReason: String?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let published: Date?
     /// Available from 1.0.0-alpha onwards
     public let publishedAt: Date?

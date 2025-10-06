@@ -12,35 +12,35 @@ import Rest
 
 /// Available on all versions
 public struct LemmyGetModlogResponse: Codable, Hashable, Sendable {
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let removedPosts: [LemmyModRemovePostView]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let lockedPosts: [LemmyModLockPostView]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let featuredPosts: [LemmyModFeaturePostView]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let removedComments: [LemmyModRemoveCommentView]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let removedCommunities: [LemmyAdminRemoveCommunityView]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let bannedFromCommunity: [LemmyModBanFromCommunityView]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let banned: [LemmyAdminBanView]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let addedToCommunity: [LemmyModAddToCommunityView]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let transferredToCommunity: [LemmyModTransferCommunityView]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let added: [LemmyAdminAddView]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let adminPurgedPersons: [LemmyAdminPurgePersonView]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let adminPurgedCommunities: [LemmyAdminPurgeCommunityView]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let adminPurgedPosts: [LemmyAdminPurgePostView]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let adminPurgedComments: [LemmyAdminPurgeCommentView]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let hiddenCommunities: [LemmyModHideCommunityView]?
     /// Available from 1.0.0-alpha onwards
     public let modlog: [LemmyModlogCombinedView]?

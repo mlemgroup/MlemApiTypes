@@ -27,7 +27,11 @@ public struct LemmyCommunityReportView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let creatorBanned: Bool
     /// Available on all versions
+    public let creatorBanExpiresAt: Date?
+    /// Available on all versions
     public let creatorBannedFromCommunity: Bool
+    /// Available on all versions
+    public let creatorCommunityBanExpiresAt: Date?
 }
 
 public extension LemmyCommunityReportView {
@@ -39,6 +43,8 @@ public extension LemmyCommunityReportView {
         case creatorIsAdmin = "creator_is_admin"
         case creatorIsModerator = "creator_is_moderator"
         case creatorBanned = "creator_banned"
+        case creatorBanExpiresAt = "creator_ban_expires_at"
         case creatorBannedFromCommunity = "creator_banned_from_community"
+        case creatorCommunityBanExpiresAt = "creator_community_ban_expires_at"
     }
 }

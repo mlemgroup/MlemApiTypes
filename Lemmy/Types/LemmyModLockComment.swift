@@ -1,5 +1,5 @@
 //
-//  LemmyModAddToCommunity.swift
+//  LemmyModLockComment.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -10,32 +10,29 @@
 import Foundation
 import Rest
 
-/// Available on all versions
-public struct LemmyModAddToCommunity: Codable, Hashable, Sendable {
+/// Available from 1.0.0-alpha onwards
+public struct LemmyModLockComment: Codable, Hashable, Sendable {
     /// Available on all versions
     public let id: Int
     /// Available on all versions
     public let modPersonId: Int
     /// Available on all versions
-    public let otherPersonId: Int
+    public let commentId: Int
     /// Available on all versions
-    public let communityId: Int
+    public let locked: Bool
     /// Available on all versions
-    public let removed: Bool
-    /// Unavailable after 0.19.13
-    public let when_: Date?
-    /// Available from 1.0.0-alpha onwards
-    public let publishedAt: Date?
+    public let reason: String
+    /// Available on all versions
+    public let publishedAt: Date
 }
 
-public extension LemmyModAddToCommunity {
+public extension LemmyModLockComment {
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case modPersonId = "mod_person_id"
-        case otherPersonId = "other_person_id"
-        case communityId = "community_id"
-        case removed = "removed"
-        case when_ = "when_"
+        case commentId = "comment_id"
+        case locked = "locked"
+        case reason = "reason"
         case publishedAt = "published_at"
     }
 }

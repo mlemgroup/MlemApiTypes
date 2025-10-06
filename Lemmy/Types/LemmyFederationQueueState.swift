@@ -17,13 +17,13 @@ public struct LemmyFederationQueueState: Codable, Hashable, Sendable {
     /// the last successfully sent activity id
     /// Available on all versions
     public let lastSuccessfulId: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let lastSuccessfulPublishedTime: Date?
     /// how many failed attempts have been made to send the next activity
     /// Available on all versions
     public let failCount: Int
     /// timestamp of the last retry attempt (when the last failing activity was resent)
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let lastRetry: Date?
     /// Available from 1.0.0-alpha onwards
     public let lastSuccessfulPublishedTimeAt: Date?

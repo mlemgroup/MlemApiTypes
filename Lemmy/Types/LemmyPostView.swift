@@ -24,23 +24,23 @@ public struct LemmyPostView: Codable, Hashable, Sendable {
     public let creatorIsModerator: Bool
     /// Available on all versions
     public let creatorIsAdmin: Bool
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let counts: LemmyPostAggregates?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let subscribed: LemmySubscribedType?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let saved: Bool?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let read: Bool?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let creatorBlocked: Bool?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let myVote: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let unreadComments: Int?
-    /// Available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.13
     public let bannedFromCommunity: Bool?
-    /// Available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.13
     public let hidden: Bool?
     /// Available from 0.19.6 onwards
     public let imageDetails: LemmyImageDetails?
@@ -56,6 +56,10 @@ public struct LemmyPostView: Codable, Hashable, Sendable {
     public let canMod: Bool?
     /// Available from 1.0.0-alpha onwards
     public let creatorBanned: Bool?
+    /// Available from 1.0.0-alpha onwards
+    public let creatorBanExpiresAt: Date?
+    /// Available from 1.0.0-alpha onwards
+    public let creatorCommunityBanExpiresAt: Date?
 }
 
 public extension LemmyPostView {
@@ -82,5 +86,7 @@ public extension LemmyPostView {
         case tags = "tags"
         case canMod = "can_mod"
         case creatorBanned = "creator_banned"
+        case creatorBanExpiresAt = "creator_ban_expires_at"
+        case creatorCommunityBanExpiresAt = "creator_community_ban_expires_at"
     }
 }

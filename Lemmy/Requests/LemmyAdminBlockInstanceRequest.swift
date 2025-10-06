@@ -21,7 +21,7 @@ public struct LemmyAdminBlockInstanceRequest: PostRequest {
     init(
       instance: String,
       block: Bool,
-      reason: String?,
+      reason: String,
       expiresAt: Date?
     ) {
         self.body = .init(
