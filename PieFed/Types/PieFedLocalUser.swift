@@ -14,8 +14,8 @@ import Rest
 public struct PieFedLocalUser: Codable, Hashable, Sendable {
     /// Available on all versions
     public let defaultListingType: PieFedListingType
-    /// Available on all versions
-    public let defaultSortType: PieFedSortType
+    /// Available on all versions, made optional in 1.2.1
+    public let defaultSortType: PieFedSortType?
     /// Available on all versions
     public let showBotAccounts: Bool
     /// Available on all versions
@@ -25,7 +25,7 @@ public struct PieFedLocalUser: Codable, Hashable, Sendable {
     /// Available on all versions
     public let showScores: Bool
     /// Available from 1.2.0 onwards
-    public let defaultCommentSortType: String?
+    public let defaultCommentSortType: PieFedCommentSortType?
     /// Available from 1.2.0 onwards
     public let showNsfl: Bool?
 }

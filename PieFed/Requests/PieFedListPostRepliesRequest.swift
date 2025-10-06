@@ -21,7 +21,7 @@ public struct PieFedListPostRepliesRequest: GetRequest {
     init(
       postId: Int?,
       parentId: Int?,
-      sort: String?,
+      sort: PieFedCommentSortType?,
       maxDepth: Int?,
       page: String?,
       limit: Int?

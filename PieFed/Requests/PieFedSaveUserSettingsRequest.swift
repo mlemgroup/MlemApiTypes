@@ -24,8 +24,8 @@ public struct PieFedSaveUserSettingsRequest: PutRequest {
       bio: String?,
       avatar: String?,
       cover: String?,
-      defaultCommentSortType: String?,
-      defaultSortType: String?,
+      defaultCommentSortType: PieFedCommentSortType?,
+      defaultSortType: PieFedSortType?,
       showNsfl: Bool?
     ) {
         self.body = .init(

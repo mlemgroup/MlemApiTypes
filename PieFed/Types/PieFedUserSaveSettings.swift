@@ -23,9 +23,9 @@ public struct PieFedUserSaveSettings: Codable, Hashable, Sendable {
     /// Available from 1.2.0 onwards
     public let cover: String?
     /// Available from 1.2.0 onwards
-    public let defaultCommentSortType: String?
+    public let defaultCommentSortType: PieFedCommentSortType?
     /// Available from 1.2.0 onwards
-    public let defaultSortType: String?
+    public let defaultSortType: PieFedSortType?
     /// Available from 1.2.0 onwards
     public let showNsfl: Bool?
 }

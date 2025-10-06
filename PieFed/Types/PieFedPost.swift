@@ -54,6 +54,8 @@ public struct PieFedPost: Codable, Hashable, Sendable {
     public let imageDetails: PieFedWidthHeight?
     /// Available from 1.2.1 onwards
     public let crossPosts: [PieFedMiniCrossPosts]?
+    /// Available from 1.3.0-dev onwards
+    public let postType: PieFedPostType?
 }
 
 public extension PieFedPost {
@@ -79,5 +81,6 @@ public extension PieFedPost {
         case smallThumbnailUrl = "small_thumbnail_url"
         case imageDetails = "image_details"
         case crossPosts = "cross_posts"
+        case postType = "post_type"
     }
 }

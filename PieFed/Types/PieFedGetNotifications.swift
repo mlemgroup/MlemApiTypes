@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.2.0 onwards
 public struct PieFedGetNotifications: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let status: String
+    public let status: PieFedNotificationStatusType
     /// Available on all versions
     public let limit: Int?
     /// Available on all versions

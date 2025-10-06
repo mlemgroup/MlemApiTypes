@@ -21,7 +21,7 @@ public struct PieFedFeaturePostRequest: PostRequest {
     init(
       postId: Int,
       featured: Bool,
-      featureType: PieFedPostFeatureType
+      featureType: PieFedPostFeatureType?
     ) {
         self.body = .init(
             postId: postId,
