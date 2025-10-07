@@ -16,9 +16,9 @@ public struct LemmyLocalSiteUrlBlocklist: Codable, Hashable, Sendable {
     public let id: Int
     /// Available on all versions
     public let url: String
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let published: Date?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let updated: Date?
     /// Available from 1.0.0-alpha onwards
     public let publishedAt: Date?

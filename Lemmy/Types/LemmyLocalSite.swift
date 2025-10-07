@@ -20,10 +20,10 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     /// Available on all versions
     public let siteSetup: Bool
     /// Whether downvotes are enabled.
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let enableDownvotes: Bool?
     /// Whether NSFW is enabled.
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let enableNsfw: Bool?
     /// Whether only admins can create communities.
     /// Available on all versions
@@ -46,7 +46,7 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     /// Available on all versions
     public let legalInformation: String?
     /// Whether to hide mod names on the modlog.
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let hideModlogModNames: Bool?
     /// Whether new applications email admins.
     /// Available on all versions
@@ -55,8 +55,8 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     /// Available on all versions
     public let slurFilterRegex: String?
     /// The max actor name length.
-    /// Available on all versions
-    public let actorNameMaxLength: Int
+    /// Unavailable after 0.19.13
+    public let actorNameMaxLength: Int?
     /// Whether federation is enabled.
     /// Available on all versions
     public let federationEnabled: Bool
@@ -66,9 +66,9 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     /// The captcha difficulty.
     /// Available on all versions
     public let captchaDifficulty: String
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let published: Date?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let updated: Date?
     /// Available on all versions
     public let registrationMode: LemmyRegistrationMode
@@ -83,7 +83,7 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     /// Available from 0.19.4 onwards
     public let defaultPostListingMode: LemmyPostListingMode?
     /// Default value for [LocalUser.post_listing_mode]
-    /// Available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.13
     public let defaultSortType: LemmySortType?
     /// Available from 1.0.0-alpha onwards
     public let publishedAt: Date?
@@ -142,8 +142,6 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     /// Available from 1.0.0-alpha onwards
     public let suggestedCommunities: Int?
     /// Available from 1.0.0-alpha onwards
-    public let multiCommFollower: Int?
-    /// Available from 1.0.0-alpha onwards
     public let defaultItemsPerPage: Int?
 }
 
@@ -196,7 +194,6 @@ public extension LemmyLocalSite {
         case usersActiveHalfYear = "users_active_half_year"
         case disableEmailNotifications = "disable_email_notifications"
         case suggestedCommunities = "suggested_communities"
-        case multiCommFollower = "multi_comm_follower"
         case defaultItemsPerPage = "default_items_per_page"
     }
 }

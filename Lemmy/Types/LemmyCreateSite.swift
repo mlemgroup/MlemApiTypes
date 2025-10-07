@@ -18,13 +18,13 @@ public struct LemmyCreateSite: Codable, Hashable, Sendable {
     public let sidebar: String?
     /// Available on all versions
     public let description: String?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let icon: String?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let banner: String?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let enableDownvotes: Bool?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let enableNsfw: Bool?
     /// Available on all versions
     public let communityCreationAdminOnly: Bool?
@@ -42,55 +42,55 @@ public struct LemmyCreateSite: Codable, Hashable, Sendable {
     public let legalInformation: String?
     /// Available on all versions
     public let applicationEmailAdmins: Bool?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let hideModlogModNames: Bool?
     /// Available on all versions
     public let discussionLanguages: [Int]?
     /// Available on all versions
     public let slurFilterRegex: String?
-    /// Available on all versions
+    /// Unavailable after 0.19.13
     public let actorNameMaxLength: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let rateLimitMessage: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let rateLimitMessagePerSecond: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let rateLimitPost: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let rateLimitPostPerSecond: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let rateLimitRegister: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let rateLimitRegisterPerSecond: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let rateLimitImage: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let rateLimitImagePerSecond: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let rateLimitComment: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let rateLimitCommentPerSecond: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let rateLimitSearch: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let rateLimitSearchPerSecond: Int?
     /// Available on all versions
     public let federationEnabled: Bool?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let federationDebug: Bool?
     /// Available on all versions
     public let captchaEnabled: Bool?
     /// Available on all versions
     public let captchaDifficulty: String?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let allowedInstances: [String]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let blockedInstances: [String]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let taglines: [String]?
     /// Available on all versions
     public let registrationMode: LemmyRegistrationMode?
-    /// Available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.13
     public let defaultSortType: LemmySortType?
     /// Available from 0.19.4 onwards
     public let contentWarning: String?

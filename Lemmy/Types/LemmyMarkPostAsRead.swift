@@ -15,7 +15,7 @@ public struct LemmyMarkPostAsRead: Codable, Hashable, Sendable {
     /// TODO: deprecated, send `post_ids` instead
     /// Available on all versions
     public let postId: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let postIds: [Int]?
     /// Available on all versions
     public let read: Bool

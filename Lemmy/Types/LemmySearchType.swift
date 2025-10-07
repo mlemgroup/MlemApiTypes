@@ -22,7 +22,7 @@ public enum LemmySearchType: String, Codable, Sendable {
     case communities = "Communities"
     /// Available on all versions
     case users = "Users"
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     case url = "Url"
     /// Available from 1.0.0-alpha onwards
     case multiCommunities = "MultiCommunities"

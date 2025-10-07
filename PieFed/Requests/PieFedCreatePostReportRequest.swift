@@ -20,11 +20,15 @@ public struct PieFedCreatePostReportRequest: PostRequest {
     
     init(
       postId: Int,
-      reason: String
+      reason: String,
+      description: String?,
+      reportRemote: Bool?
     ) {
         self.body = .init(
             postId: postId,
-            reason: reason
+            reason: reason,
+            description: description,
+            reportRemote: reportRemote
         )
     }
 }

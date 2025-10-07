@@ -14,7 +14,7 @@ import Rest
 public enum LemmyCommunityVisibility: String, Codable, Sendable {
     /// Available on all versions
     case `public` = "Public"
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     case localOnly = "LocalOnly"
     /// Available from 1.0.0-alpha onwards
     case unlisted = "Unlisted"

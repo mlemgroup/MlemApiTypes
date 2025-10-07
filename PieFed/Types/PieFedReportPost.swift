@@ -16,11 +16,17 @@ public struct PieFedReportPost: Codable, Hashable, Sendable {
     public let postId: Int
     /// Available on all versions
     public let reason: String
+    /// Available from 1.3.0-dev onwards
+    public let description: String?
+    /// Available from 1.3.0-dev onwards
+    public let reportRemote: Bool?
 }
 
 public extension PieFedReportPost {
     enum CodingKeys: String, CodingKey {
         case postId = "post_id"
         case reason = "reason"
+        case description = "description"
+        case reportRemote = "report_remote"
     }
 }

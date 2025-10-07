@@ -23,9 +23,9 @@ public struct LemmyComment: Codable, Hashable, Sendable {
     /// Whether the comment has been removed.
     /// Available on all versions
     public let removed: Bool
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let published: Date?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let updated: Date?
     /// Whether the comment has been deleted by its creator.
     /// Available on all versions
@@ -65,6 +65,9 @@ public struct LemmyComment: Codable, Hashable, Sendable {
     /// accepted by the community (by receiving it back via federation).
     /// Available from 1.0.0-alpha onwards
     public let federationPending: Bool?
+    /// Whether the comment is locked.
+    /// Available from 1.0.0-alpha onwards
+    public let locked: Bool?
 }
 
 public extension LemmyComment {
@@ -91,5 +94,6 @@ public extension LemmyComment {
         case reportCount = "report_count"
         case unresolvedReportCount = "unresolved_report_count"
         case federationPending = "federation_pending"
+        case locked = "locked"
     }
 }

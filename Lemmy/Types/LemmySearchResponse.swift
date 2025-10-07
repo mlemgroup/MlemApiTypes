@@ -12,15 +12,15 @@ import Rest
 
 /// Available on all versions
 public struct LemmySearchResponse: Codable, Hashable, Sendable {
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let type_: LemmySearchType?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let comments: [LemmyCommentView]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let posts: [LemmyPostView]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let communities: [LemmyCommunityView]?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let users: [LemmyPersonView]?
     /// Available from 1.0.0-alpha onwards
     public let results: [LemmySearchCombinedView]?

@@ -16,8 +16,8 @@ public struct PieFedFeaturePost: Codable, Hashable, Sendable {
     public let postId: Int
     /// Available on all versions
     public let featured: Bool
-    /// Available on all versions
-    public let featureType: PieFedPostFeatureType
+    /// Available on all versions, made optional in 1.3.0-dev
+    public let featureType: PieFedPostFeatureType?
 }
 
 public extension PieFedFeaturePost {

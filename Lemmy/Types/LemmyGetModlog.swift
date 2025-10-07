@@ -16,7 +16,7 @@ public struct LemmyGetModlog: Codable, Hashable, Sendable {
     public let modPersonId: Int?
     /// Available on all versions
     public let communityId: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let page: Int?
     /// Available on all versions
     public let limit: Int?

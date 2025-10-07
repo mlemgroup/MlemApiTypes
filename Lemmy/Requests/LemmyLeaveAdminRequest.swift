@@ -10,17 +10,15 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.13
 public struct LemmyLeaveAdminRequest: PostRequest {
     public typealias Body = Int
     public typealias Response = LemmyGetSiteResponse
     
-    public let path: String
+    public let path: String = "api/v3/user/leave_admin"
     public let body: Body? = nil
     
     init(
-      endpoint: LemmyEndpointVersion
     ) {
-        self.path = endpoint == .v4 ? "api/v4/admin/leave" : "api/v3/user/leave_admin"
     }
 }

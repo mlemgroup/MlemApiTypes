@@ -1,5 +1,5 @@
 //
-//  LemmyNotificationTypes.swift
+//  LemmyNotificationType.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public enum LemmyNotificationTypes: String, Codable, Sendable {
+public enum LemmyNotificationType: String, Codable, Sendable {
     /// Available on all versions
     case mention = "Mention"
     /// Available on all versions
@@ -20,4 +20,6 @@ public enum LemmyNotificationTypes: String, Codable, Sendable {
     case subscribed = "Subscribed"
     /// Available on all versions
     case privateMessage = "PrivateMessage"
+    /// Available on all versions
+    case modAction = "ModAction"
 }

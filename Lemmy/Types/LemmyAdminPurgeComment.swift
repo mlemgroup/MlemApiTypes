@@ -20,7 +20,7 @@ public struct LemmyAdminPurgeComment: Codable, Hashable, Sendable {
     public let postId: Int
     /// Available on all versions
     public let reason: String?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let when_: Date?
     /// Available from 1.0.0-alpha onwards
     public let publishedAt: Date?

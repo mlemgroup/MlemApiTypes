@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public enum PieFedPostFeatureType: String, Codable, Sendable {
-    /// Available on all versions
+    /// Unavailable after 1.2.2
     case local = "Local"
     /// Available on all versions
     case community = "Community"

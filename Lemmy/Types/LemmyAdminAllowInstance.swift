@@ -21,7 +21,7 @@ public struct LemmyAdminAllowInstance: Codable, Hashable, Sendable {
     /// Available on all versions
     public let allowed: Bool
     /// Available on all versions
-    public let reason: String?
+    public let reason: String
     /// Available on all versions
     public let publishedAt: Date
 }

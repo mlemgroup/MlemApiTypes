@@ -12,11 +12,11 @@ import Rest
 
 /// Available on all versions
 public struct LemmyGetUnreadCountResponse: Codable, Hashable, Sendable {
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let replies: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let mentions: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let privateMessages: Int?
     /// Available from 1.0.0-alpha onwards
     public let count: Int?

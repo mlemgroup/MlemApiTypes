@@ -35,7 +35,7 @@ public struct PieFedPostSetFlairResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let saved: Bool
     /// Available on all versions
-    public let subscribed: String
+    public let subscribed: PieFedSubscribedType
     /// Available on all versions
     public let unreadComments: Int
     /// Available on all versions

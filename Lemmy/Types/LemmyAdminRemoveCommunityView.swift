@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public struct LemmyAdminRemoveCommunityView: Codable, Hashable, Sendable {
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let modRemoveCommunity: LemmyAdminRemoveCommunity?
     /// Available on all versions
     public let moderator: LemmyPerson?

@@ -12,13 +12,13 @@ import Rest
 
 /// Available from 0.19.4 onwards
 public struct LemmyLocalImage: Codable, Hashable, Sendable {
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let localUserId: Int?
     /// Available on all versions
     public let pictrsAlias: String
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let pictrsDeleteToken: String?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let published: Date?
     /// Available from 1.0.0-alpha onwards
     public let publishedAt: Date?

@@ -23,7 +23,7 @@ public struct PieFedUserNotificationItemView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let notifType: Int
     /// Available on all versions
-    public let status: String
+    public let status: PieFedNotificationStatusType
     /// Available on all versions
     public let comment: PieFedComment?
     /// Available on all versions

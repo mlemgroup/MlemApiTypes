@@ -18,7 +18,7 @@ public struct LemmySiteView: Codable, Hashable, Sendable {
     public let localSite: LemmyLocalSite
     /// Available on all versions
     public let localSiteRateLimit: LemmyLocalSiteRateLimit
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let counts: LemmySiteAggregates?
     /// Available from 1.0.0-alpha onwards
     public let instance: LemmyInstance?

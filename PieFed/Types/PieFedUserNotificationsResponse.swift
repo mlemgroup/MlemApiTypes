@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct PieFedUserNotificationsResponse: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let counts: PieFedNotificationsCounts
+    public let counts: PieFedUserNotificationsCounts
     /// Available on all versions
     public let items: [PieFedUserNotificationItemView]
     /// Available on all versions

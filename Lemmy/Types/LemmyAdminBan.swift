@@ -22,9 +22,9 @@ public struct LemmyAdminBan: Codable, Hashable, Sendable {
     public let reason: String?
     /// Available on all versions
     public let banned: Bool
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let expires: Date?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let when_: Date?
     /// Available from 1.0.0-alpha onwards
     public let expiresAt: Date?

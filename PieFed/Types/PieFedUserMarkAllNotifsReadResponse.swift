@@ -10,10 +10,10 @@
 import Foundation
 import Rest
 
-/// Available from 1.2.0 onwards
+/// Available on all versions
 public struct PieFedUserMarkAllNotifsReadResponse: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let markAllNotificationsAsRead: String
+    public let markAllNotificationsAsRead: String?
 }
 
 public extension PieFedUserMarkAllNotifsReadResponse {

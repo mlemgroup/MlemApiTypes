@@ -12,7 +12,7 @@ import Rest
 
 /// Available from 0.19.4 onwards
 public struct LemmyListMedia: Codable, Hashable, Sendable {
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let page: Int?
     /// Available on all versions
     public let limit: Int?

@@ -24,11 +24,11 @@ public struct LemmyCommentReportView: Codable, Hashable, Sendable {
     public let creator: LemmyPerson
     /// Available on all versions
     public let commentCreator: LemmyPerson
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let counts: LemmyCommentAggregates?
     /// Available on all versions
     public let creatorBannedFromCommunity: Bool
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let myVote: Int?
     /// Available on all versions
     public let resolver: LemmyPerson?
@@ -36,11 +36,11 @@ public struct LemmyCommentReportView: Codable, Hashable, Sendable {
     public let creatorIsModerator: Bool?
     /// Available from 0.19.4 onwards
     public let creatorIsAdmin: Bool?
-    /// Available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.13
     public let creatorBlocked: Bool?
-    /// Available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.13
     public let subscribed: LemmySubscribedType?
-    /// Available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.13
     public let saved: Bool?
     /// Available from 1.0.0-alpha onwards
     public let commentActions: LemmyCommentActions?
@@ -50,6 +50,10 @@ public struct LemmyCommentReportView: Codable, Hashable, Sendable {
     public let communityActions: LemmyCommunityActions?
     /// Available from 1.0.0-alpha onwards
     public let creatorBanned: Bool?
+    /// Available from 1.0.0-alpha onwards
+    public let creatorBanExpiresAt: Date?
+    /// Available from 1.0.0-alpha onwards
+    public let creatorCommunityBanExpiresAt: Date?
 }
 
 public extension LemmyCommentReportView {
@@ -73,5 +77,7 @@ public extension LemmyCommentReportView {
         case personActions = "person_actions"
         case communityActions = "community_actions"
         case creatorBanned = "creator_banned"
+        case creatorBanExpiresAt = "creator_ban_expires_at"
+        case creatorCommunityBanExpiresAt = "creator_community_ban_expires_at"
     }
 }

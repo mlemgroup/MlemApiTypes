@@ -14,7 +14,7 @@ import Rest
 public struct LemmyCustomEmoji: Codable, Hashable, Sendable {
     /// Available on all versions
     public let id: Int
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let localSiteId: Int?
     /// Available on all versions
     public let shortcode: String
@@ -24,9 +24,9 @@ public struct LemmyCustomEmoji: Codable, Hashable, Sendable {
     public let altText: String
     /// Available on all versions
     public let category: String
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let published: Date?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let updated: Date?
     /// Available from 1.0.0-alpha onwards
     public let publishedAt: Date?

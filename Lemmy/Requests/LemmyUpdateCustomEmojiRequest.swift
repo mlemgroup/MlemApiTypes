@@ -21,10 +21,11 @@ public struct LemmyUpdateCustomEmojiRequest: PutRequest {
     init(
       endpoint: LemmyEndpointVersion,
       id: Int,
-      category: String,
-      imageUrl: URL,
-      altText: String,
-      keywords: [String]
+      category: String?,
+      imageUrl: URL?,
+      altText: String?,
+      keywords: [String]?,
+      shortcode: String?
     ) {
         self.path = endpoint == .v4 ? "api/v4/custom_emoji" : "api/v3/custom_emoji"
         self.body = .init(
@@ -32,7 +33,8 @@ public struct LemmyUpdateCustomEmojiRequest: PutRequest {
             category: category,
             imageUrl: imageUrl,
             altText: altText,
-            keywords: keywords
+            keywords: keywords,
+            shortcode: shortcode
         )
     }
 }

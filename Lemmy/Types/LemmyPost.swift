@@ -32,9 +32,9 @@ public struct LemmyPost: Codable, Hashable, Sendable {
     /// Whether the post is locked.
     /// Available on all versions
     public let locked: Bool
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let published: Date?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let updated: Date?
     /// Whether the post is deleted.
     /// Available on all versions
@@ -101,6 +101,10 @@ public struct LemmyPost: Codable, Hashable, Sendable {
     /// accepted by the community (by receiving it back via federation).
     /// Available from 1.0.0-alpha onwards
     public let federationPending: Bool?
+    /// Available from 1.0.0-alpha onwards
+    public let embedVideoWidth: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let embedVideoHeight: Int?
 }
 
 public extension LemmyPost {
@@ -139,5 +143,7 @@ public extension LemmyPost {
         case reportCount = "report_count"
         case unresolvedReportCount = "unresolved_report_count"
         case federationPending = "federation_pending"
+        case embedVideoWidth = "embed_video_width"
+        case embedVideoHeight = "embed_video_height"
     }
 }

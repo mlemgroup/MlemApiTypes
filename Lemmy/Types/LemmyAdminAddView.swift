@@ -12,11 +12,11 @@ import Rest
 
 /// Available on all versions
 public struct LemmyAdminAddView: Codable, Hashable, Sendable {
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let modAdd: LemmyAdminAdd?
     /// Available on all versions
     public let moderator: LemmyPerson?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let moddedPerson: LemmyPerson?
     /// Available from 1.0.0-alpha onwards
     public let adminAdd: LemmyAdminAdd?

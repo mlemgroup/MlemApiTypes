@@ -18,7 +18,7 @@ public struct LemmyModRemoveCommentView: Codable, Hashable, Sendable {
     public let moderator: LemmyPerson?
     /// Available on all versions
     public let comment: LemmyComment
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let commenter: LemmyPerson?
     /// Available on all versions
     public let post: LemmyPost

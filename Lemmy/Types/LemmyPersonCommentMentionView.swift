@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Unavailable after 0.19.12
+/// Unavailable after 0.19.13
 public struct LemmyPersonCommentMentionView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let personMention: LemmyPersonCommentMention

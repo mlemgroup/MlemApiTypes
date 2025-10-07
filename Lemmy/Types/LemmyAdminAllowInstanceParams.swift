@@ -17,7 +17,7 @@ public struct LemmyAdminAllowInstanceParams: Codable, Hashable, Sendable {
     /// Available on all versions
     public let allow: Bool
     /// Available on all versions
-    public let reason: String?
+    public let reason: String
 }
 
 public extension LemmyAdminAllowInstanceParams {

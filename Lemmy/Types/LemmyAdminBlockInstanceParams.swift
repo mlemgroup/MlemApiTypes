@@ -17,7 +17,7 @@ public struct LemmyAdminBlockInstanceParams: Codable, Hashable, Sendable {
     /// Available on all versions
     public let block: Bool
     /// Available on all versions
-    public let reason: String?
+    public let reason: String
     /// Available on all versions
     public let expiresAt: Date?
 }

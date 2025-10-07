@@ -46,6 +46,8 @@ public enum LemmyModlogCombinedView: Codable, Hashable, Sendable {
     case modRemovePost(LemmyModRemovePostView)
     /// Available on all versions
     case modTransferCommunity(LemmyModTransferCommunityView)
+    /// Available on all versions
+    case modLockComment(LemmyModLockCommentView)
     
     enum CodingKeys: CodingKey { case type_ }
     
@@ -70,6 +72,7 @@ public enum LemmyModlogCombinedView: Codable, Hashable, Sendable {
         case "AdminRemoveCommunity": .adminRemoveCommunity(try .init(from: decoder))
         case "ModRemovePost": .modRemovePost(try .init(from: decoder))
         case "ModTransferCommunity": .modTransferCommunity(try .init(from: decoder))
+        case "ModLockComment": .modLockComment(try .init(from: decoder))
         default: throw DecodingError.dataCorrupted(
             .init(codingPath: decoder.codingPath, debugDescription: "Unknown value of 'type_': '\(type ?? "nil")'.")
         )
@@ -129,6 +132,9 @@ public enum LemmyModlogCombinedView: Codable, Hashable, Sendable {
             try value.encode(to: encoder)
         case let .modTransferCommunity(value):
             try container.encode("ModTransferCommunity", forKey: .type_)
+            try value.encode(to: encoder)
+        case let .modLockComment(value):
+            try container.encode("ModLockComment", forKey: .type_)
             try value.encode(to: encoder)
         }
     }

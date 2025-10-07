@@ -17,7 +17,7 @@ public struct PieFedListPostReplies: Codable, Hashable, Sendable {
     /// Available on all versions
     public let parentId: Int?
     /// Available on all versions
-    public let sort: String?
+    public let sort: PieFedCommentSortType?
     /// Available on all versions
     public let maxDepth: Int?
     /// Available on all versions

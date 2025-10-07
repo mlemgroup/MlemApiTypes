@@ -24,9 +24,9 @@ public struct LemmyPostReportView: Codable, Hashable, Sendable {
     public let postCreator: LemmyPerson
     /// Available on all versions
     public let creatorBannedFromCommunity: Bool
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let myVote: Int?
-    /// Unavailable after 0.19.12
+    /// Unavailable after 0.19.13
     public let counts: LemmyPostAggregates?
     /// Available on all versions
     public let resolver: LemmyPerson?
@@ -34,17 +34,17 @@ public struct LemmyPostReportView: Codable, Hashable, Sendable {
     public let creatorIsModerator: Bool?
     /// Available from 0.19.4 onwards
     public let creatorIsAdmin: Bool?
-    /// Available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.13
     public let subscribed: LemmySubscribedType?
-    /// Available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.13
     public let saved: Bool?
-    /// Available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.13
     public let read: Bool?
-    /// Available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.13
     public let hidden: Bool?
-    /// Available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.13
     public let creatorBlocked: Bool?
-    /// Available between 0.19.4 and 0.19.12
+    /// Available between 0.19.4 and 0.19.13
     public let unreadComments: Int?
     /// Available from 1.0.0-alpha onwards
     public let communityActions: LemmyCommunityActions?
@@ -54,6 +54,10 @@ public struct LemmyPostReportView: Codable, Hashable, Sendable {
     public let personActions: LemmyPersonActions?
     /// Available from 1.0.0-alpha onwards
     public let creatorBanned: Bool?
+    /// Available from 1.0.0-alpha onwards
+    public let creatorBanExpiresAt: Date?
+    /// Available from 1.0.0-alpha onwards
+    public let creatorCommunityBanExpiresAt: Date?
 }
 
 public extension LemmyPostReportView {
@@ -79,5 +83,7 @@ public extension LemmyPostReportView {
         case postActions = "post_actions"
         case personActions = "person_actions"
         case creatorBanned = "creator_banned"
+        case creatorBanExpiresAt = "creator_ban_expires_at"
+        case creatorCommunityBanExpiresAt = "creator_community_ban_expires_at"
     }
 }
