@@ -15,7 +15,7 @@ public struct PieFedCommunityModerationBanItem: Codable, Hashable, Sendable {
     /// Available on all versions
     public let reason: String
     /// Available on all versions
-    public let expiredAt: String
+    public let expiredAt: Date?
     /// Available on all versions
     public let community: PieFedCommunity
     /// Available on all versions
