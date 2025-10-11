@@ -1,5 +1,5 @@
 //
-//  LemmyGetMultiCommunity.swift
+//  LemmyPersonResponse.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,16 +11,13 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyGetMultiCommunity: Codable, Hashable, Sendable {
+public struct LemmyPersonResponse: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let id: Int?
-    /// Available on all versions
-    public let name: String?
+    public let personView: LemmyPersonView
 }
 
-public extension LemmyGetMultiCommunity {
+public extension LemmyPersonResponse {
     enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case name = "name"
+        case personView = "person_view"
     }
 }

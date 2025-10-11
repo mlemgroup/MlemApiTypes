@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyUserNotePersonRequest: PostRequest {
     public typealias Body = LemmyNotePerson
-    public typealias Response = LemmySuccessResponse
+    public typealias Response = LemmyPersonResponse
     
     public let path: String = "api/v4/person/note"
     public let body: Body?
