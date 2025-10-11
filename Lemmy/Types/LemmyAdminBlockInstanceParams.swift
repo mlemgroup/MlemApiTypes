@@ -18,8 +18,11 @@ public struct LemmyAdminBlockInstanceParams: Codable, Hashable, Sendable {
     public let block: Bool
     /// Available on all versions
     public let reason: String
+    /// A time that the block will expire, in unix epoch seconds.
+    /// 
+    /// An i64 unix timestamp is used for a simpler API client implementation.
     /// Available on all versions
-    public let expiresAt: Date?
+    public let expiresAt: Int?
 }
 
 public extension LemmyAdminBlockInstanceParams {
