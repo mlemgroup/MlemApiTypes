@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct LemmyUserBlockCommunityRequest: PostRequest {
     public typealias Body = LemmyBlockCommunity
-    public typealias Response = LemmyUserBlockCommunityResponseUnion
+    public typealias Response = LemmyCommunityResponse
     
     public let path: String
     public let body: Body?
@@ -28,19 +28,5 @@ public struct LemmyUserBlockCommunityRequest: PostRequest {
             communityId: communityId,
             block: block
         )
-    }
-}
-
-public enum LemmyUserBlockCommunityResponseUnion: Decodable {
-    case lemmyBlockCommunityResponse(LemmyBlockCommunityResponse)
-    case lemmyCommunityResponse(LemmyCommunityResponse)
-    
-    public init(from decoder: Decoder) throws {
-        if let value = try? LemmyBlockCommunityResponse(from: decoder) {
-            self = .lemmyBlockCommunityResponse(value)
-            return
-        }
-        let value = try LemmyCommunityResponse(from: decoder)
-        self = .lemmyCommunityResponse(value)
     }
 }
