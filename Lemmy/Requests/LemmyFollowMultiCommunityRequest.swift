@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyFollowMultiCommunityRequest: PostRequest {
     public typealias Body = LemmyFollowMultiCommunity
-    public typealias Response = LemmySuccessResponse
+    public typealias Response = LemmyMultiCommunityResponse
     
     public let path: String = "api/v4/multi_community/follow"
     public let body: Body?

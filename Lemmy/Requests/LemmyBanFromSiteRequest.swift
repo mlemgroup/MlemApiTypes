@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct LemmyBanFromSiteRequest: PostRequest {
     public typealias Body = LemmyBanPerson
-    public typealias Response = LemmyBanPersonResponse
+    public typealias Response = LemmyPersonResponse
     
     public let path: String
     public let body: Body?

@@ -1,5 +1,5 @@
 //
-//  LemmyGetMultiCommunity.swift
+//  LemmyMultiCommunityResponse.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,16 +11,13 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyGetMultiCommunity: Codable, Hashable, Sendable {
+public struct LemmyMultiCommunityResponse: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let id: Int?
-    /// Available on all versions
-    public let name: String?
+    public let multiCommunityView: LemmyMultiCommunityView
 }
 
-public extension LemmyGetMultiCommunity {
+public extension LemmyMultiCommunityResponse {
     enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case name = "name"
+        case multiCommunityView = "multi_community_view"
     }
 }

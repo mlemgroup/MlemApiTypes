@@ -1,5 +1,5 @@
 //
-//  LemmyGetMultiCommunityRequest.swift
+//  LemmyReadMultiCommunityRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyGetMultiCommunityRequest: GetRequest {
+public struct LemmyReadMultiCommunityRequest: GetRequest {
     public typealias Parameters = LemmyGetMultiCommunity
     public typealias Response = LemmyGetMultiCommunityResponse
     
@@ -19,10 +19,12 @@ public struct LemmyGetMultiCommunityRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      id: Int
+      id: Int?,
+      name: String?
     ) {
         self.parameters = .init(
-            id: id
+            id: id,
+            name: name
         )
     }
 }

@@ -15,12 +15,15 @@ public struct LemmyMultiCommunityView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let multi: LemmyMultiCommunity
     /// Available on all versions
+    public let followState: LemmyCommunityFollowerState?
+    /// Available on all versions
     public let owner: LemmyPerson
 }
 
 public extension LemmyMultiCommunityView {
     enum CodingKeys: String, CodingKey {
         case multi = "multi"
+        case followState = "follow_state"
         case owner = "owner"
     }
 }
