@@ -10,18 +10,14 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.13
 public struct LemmyAdminAddView: Codable, Hashable, Sendable {
-    /// Unavailable after 0.19.13
-    public let modAdd: LemmyAdminAdd?
+    /// Available on all versions
+    public let modAdd: LemmyAdminAdd
     /// Available on all versions
     public let moderator: LemmyPerson?
-    /// Unavailable after 0.19.13
-    public let moddedPerson: LemmyPerson?
-    /// Available from 1.0.0-alpha onwards
-    public let adminAdd: LemmyAdminAdd?
-    /// Available from 1.0.0-alpha onwards
-    public let otherPerson: LemmyPerson?
+    /// Available on all versions
+    public let moddedPerson: LemmyPerson
 }
 
 public extension LemmyAdminAddView {
@@ -29,7 +25,5 @@ public extension LemmyAdminAddView {
         case modAdd = "mod_add"
         case moderator = "moderator"
         case moddedPerson = "modded_person"
-        case adminAdd = "admin_add"
-        case otherPerson = "other_person"
     }
 }

@@ -1,5 +1,5 @@
 //
-//  LemmyListCommunityPendingFollows.swift
+//  LemmyGetFederatedInstances.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,13 +11,11 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyListCommunityPendingFollows: Codable, Hashable, Sendable {
-    /// Only shows the unapproved applications
+public struct LemmyGetFederatedInstances: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let unreadOnly: Bool?
-    /// Only for admins, show pending follows for communities which you dont moderate
+    public let domainFilter: String?
     /// Available on all versions
-    public let allCommunities: Bool?
+    public let kind: LemmyGetFederatedInstancesKind
     /// Available on all versions
     public let pageCursor: String?
     /// Available on all versions
@@ -26,10 +24,10 @@ public struct LemmyListCommunityPendingFollows: Codable, Hashable, Sendable {
     public let limit: Int?
 }
 
-public extension LemmyListCommunityPendingFollows {
+public extension LemmyGetFederatedInstances {
     enum CodingKeys: String, CodingKey {
-        case unreadOnly = "unread_only"
-        case allCommunities = "all_communities"
+        case domainFilter = "domain_filter"
+        case kind = "kind"
         case pageCursor = "page_cursor"
         case pageBack = "page_back"
         case limit = "limit"

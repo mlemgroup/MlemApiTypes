@@ -26,6 +26,8 @@ public struct LemmyRegistrationApplication: Codable, Hashable, Sendable {
     public let published: Date?
     /// Available from 1.0.0-alpha onwards
     public let publishedAt: Date?
+    /// Available from 1.0.0-alpha onwards
+    public let updatedAt: Date?
 }
 
 public extension LemmyRegistrationApplication {
@@ -37,5 +39,6 @@ public extension LemmyRegistrationApplication {
         case denyReason = "deny_reason"
         case published = "published"
         case publishedAt = "published_at"
+        case updatedAt = "updated_at"
     }
 }

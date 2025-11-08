@@ -1,5 +1,5 @@
 //
-//  LemmyModlogActionType.swift
+//  LemmyModlogKind.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,14 +11,14 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public enum LemmyModlogActionType: String, Codable, Sendable {
-    /// Available on all versions
+public enum LemmyModlogKind: String, Codable, Sendable {
+    /// Unavailable after 0.19.13
     case all = "All"
     /// Available on all versions
     case modRemovePost = "ModRemovePost"
     /// Available on all versions
     case modLockPost = "ModLockPost"
-    /// Available on all versions
+    /// Unavailable after 0.19.13
     case modFeaturePost = "ModFeaturePost"
     /// Available on all versions
     case modRemoveComment = "ModRemoveComment"
@@ -45,19 +45,23 @@ public enum LemmyModlogActionType: String, Codable, Sendable {
     /// Available on all versions
     case adminPurgeComment = "AdminPurgeComment"
     /// Available from 1.0.0-alpha onwards
-    case modLockComment = "ModLockComment"
-    /// Available from 1.0.0-alpha onwards
-    case adminRemoveCommunity = "AdminRemoveCommunity"
-    /// Available from 1.0.0-alpha onwards
-    case modAddToCommunity = "ModAddToCommunity"
-    /// Available from 1.0.0-alpha onwards
     case adminAdd = "AdminAdd"
     /// Available from 1.0.0-alpha onwards
     case adminBan = "AdminBan"
     /// Available from 1.0.0-alpha onwards
-    case modChangeCommunityVisibility = "ModChangeCommunityVisibility"
+    case adminAllowInstance = "AdminAllowInstance"
     /// Available from 1.0.0-alpha onwards
     case adminBlockInstance = "AdminBlockInstance"
     /// Available from 1.0.0-alpha onwards
-    case adminAllowInstance = "AdminAllowInstance"
+    case modAddToCommunity = "ModAddToCommunity"
+    /// Available from 1.0.0-alpha onwards
+    case adminFeaturePostSite = "AdminFeaturePostSite"
+    /// Available from 1.0.0-alpha onwards
+    case modFeaturePostCommunity = "ModFeaturePostCommunity"
+    /// Available from 1.0.0-alpha onwards
+    case modChangeCommunityVisibility = "ModChangeCommunityVisibility"
+    /// Available from 1.0.0-alpha onwards
+    case adminRemoveCommunity = "AdminRemoveCommunity"
+    /// Available from 1.0.0-alpha onwards
+    case modLockComment = "ModLockComment"
 }

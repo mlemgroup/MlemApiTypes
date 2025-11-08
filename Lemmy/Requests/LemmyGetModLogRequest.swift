@@ -24,7 +24,7 @@ public struct LemmyGetModLogRequest: GetRequest {
       communityId: Int?,
       page: Int?,
       limit: Int?,
-      type_: LemmyModlogActionType?,
+      type_: LemmyModlogKind?,
       otherPersonId: Int?,
       postId: Int?,
       commentId: Int?,

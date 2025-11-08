@@ -14,10 +14,13 @@ import Rest
 public struct LemmyMarkManyPostsAsRead: Codable, Hashable, Sendable {
     /// Available on all versions
     public let postIds: [Int]
+    /// Available on all versions
+    public let read: Bool
 }
 
 public extension LemmyMarkManyPostsAsRead {
     enum CodingKeys: String, CodingKey {
         case postIds = "post_ids"
+        case read = "read"
     }
 }

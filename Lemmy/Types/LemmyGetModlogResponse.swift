@@ -43,7 +43,7 @@ public struct LemmyGetModlogResponse: Codable, Hashable, Sendable {
     /// Unavailable after 0.19.13
     public let hiddenCommunities: [LemmyModHideCommunityView]?
     /// Available from 1.0.0-alpha onwards
-    public let modlog: [LemmyModlogCombinedView]?
+    public let modlog: [LemmyModlogView]?
     /// the pagination cursor to use to fetch the next page
     /// Available from 1.0.0-alpha onwards
     public let nextPage: String?

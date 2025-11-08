@@ -21,7 +21,7 @@ public struct LemmyGetModlog: Codable, Hashable, Sendable {
     /// Available on all versions
     public let limit: Int?
     /// Available on all versions
-    public let type_: LemmyModlogActionType?
+    public let type_: LemmyModlogKind?
     /// Available on all versions
     public let otherPersonId: Int?
     /// Available from 0.19.4 onwards

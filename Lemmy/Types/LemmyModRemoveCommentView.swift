@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.13
 public struct LemmyModRemoveCommentView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let modRemoveComment: LemmyModRemoveComment
@@ -18,14 +18,12 @@ public struct LemmyModRemoveCommentView: Codable, Hashable, Sendable {
     public let moderator: LemmyPerson?
     /// Available on all versions
     public let comment: LemmyComment
-    /// Unavailable after 0.19.13
-    public let commenter: LemmyPerson?
+    /// Available on all versions
+    public let commenter: LemmyPerson
     /// Available on all versions
     public let post: LemmyPost
     /// Available on all versions
     public let community: LemmyCommunity
-    /// Available from 1.0.0-alpha onwards
-    public let otherPerson: LemmyPerson?
 }
 
 public extension LemmyModRemoveCommentView {
@@ -36,6 +34,5 @@ public extension LemmyModRemoveCommentView {
         case commenter = "commenter"
         case post = "post"
         case community = "community"
-        case otherPerson = "other_person"
     }
 }

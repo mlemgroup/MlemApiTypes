@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.13
 public struct LemmyAdminPurgePerson: Codable, Hashable, Sendable {
     /// Available on all versions
     public let id: Int
@@ -18,10 +18,8 @@ public struct LemmyAdminPurgePerson: Codable, Hashable, Sendable {
     public let adminPersonId: Int
     /// Available on all versions
     public let reason: String?
-    /// Unavailable after 0.19.13
-    public let when_: Date?
-    /// Available from 1.0.0-alpha onwards
-    public let publishedAt: Date?
+    /// Available on all versions
+    public let when_: Date
 }
 
 public extension LemmyAdminPurgePerson {
@@ -30,6 +28,5 @@ public extension LemmyAdminPurgePerson {
         case adminPersonId = "admin_person_id"
         case reason = "reason"
         case when_ = "when_"
-        case publishedAt = "published_at"
     }
 }

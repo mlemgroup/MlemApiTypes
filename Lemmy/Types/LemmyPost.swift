@@ -80,6 +80,10 @@ public struct LemmyPost: Codable, Hashable, Sendable {
     /// Time at which the post will be published. None means publish immediately.
     /// Available from 1.0.0-alpha onwards
     public let scheduledPublishTimeAt: Date?
+    /// A newest comment time, limited to 2 days, to prevent necrobumping
+    /// The time of the newest comment in the post, if the post has any comments.
+    /// Available from 1.0.0-alpha onwards
+    public let newestCommentTimeAt: Date?
     /// Available from 1.0.0-alpha onwards
     public let comments: Int?
     /// Available from 1.0.0-alpha onwards
@@ -88,10 +92,6 @@ public struct LemmyPost: Codable, Hashable, Sendable {
     public let upvotes: Int?
     /// Available from 1.0.0-alpha onwards
     public let downvotes: Int?
-    /// A newest comment time, limited to 2 days, to prevent necrobumping
-    /// The time of the newest comment in the post.
-    /// Available from 1.0.0-alpha onwards
-    public let newestCommentTimeAt: Date?
     /// A rank that amplifies smaller communities
     /// Available from 1.0.0-alpha onwards
     public let reportCount: Int?
@@ -135,11 +135,11 @@ public extension LemmyPost {
         case publishedAt = "published_at"
         case updatedAt = "updated_at"
         case scheduledPublishTimeAt = "scheduled_publish_time_at"
+        case newestCommentTimeAt = "newest_comment_time_at"
         case comments = "comments"
         case score = "score"
         case upvotes = "upvotes"
         case downvotes = "downvotes"
-        case newestCommentTimeAt = "newest_comment_time_at"
         case reportCount = "report_count"
         case unresolvedReportCount = "unresolved_report_count"
         case federationPending = "federation_pending"

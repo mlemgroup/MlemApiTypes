@@ -14,12 +14,15 @@ import Rest
 public struct LemmyVoteView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let creator: LemmyPerson
-    /// Available on all versions
-    public let score: Int
+    /// Unavailable after 0.19.13
+    public let score: Int?
     /// Available from 0.19.4 onwards
     public let creatorBannedFromCommunity: Bool?
     /// Available from 1.0.0-alpha onwards
     public let creatorBanned: Bool?
+    /// True means Upvote, False means Downvote.
+    /// Available from 1.0.0-alpha onwards
+    public let isUpvote: Bool?
 }
 
 public extension LemmyVoteView {
@@ -28,5 +31,6 @@ public extension LemmyVoteView {
         case score = "score"
         case creatorBannedFromCommunity = "creator_banned_from_community"
         case creatorBanned = "creator_banned"
+        case isUpvote = "is_upvote"
     }
 }

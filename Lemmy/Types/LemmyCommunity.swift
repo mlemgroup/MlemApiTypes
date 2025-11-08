@@ -89,11 +89,11 @@ public struct LemmyCommunity: Codable, Hashable, Sendable {
     public let usersActiveHalfYear: Int?
     /// Available from 1.0.0-alpha onwards
     public let subscribersLocal: Int?
+    /// Number of any interactions over the last month.
     /// Available from 1.0.0-alpha onwards
     public let reportCount: Int?
     /// Available from 1.0.0-alpha onwards
     public let unresolvedReportCount: Int?
-    /// Number of any interactions over the last month.
     /// Available from 1.0.0-alpha onwards
     public let localRemoved: Bool?
 }

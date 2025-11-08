@@ -1,5 +1,5 @@
 //
-//  LemmyCommunityFollowerState.swift
+//  LemmyGetFederatedInstancesKind.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,13 +11,13 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public enum LemmyCommunityFollowerState: String, Codable, Sendable {
+public enum LemmyGetFederatedInstancesKind: String, Codable, Sendable {
     /// Available on all versions
-    case accepted = "Accepted"
+    case all = "All"
     /// Available on all versions
-    case pending = "Pending"
+    case linked = "Linked"
     /// Available on all versions
-    case approvalRequired = "ApprovalRequired"
+    case allowed = "Allowed"
     /// Available on all versions
-    case denied = "Denied"
+    case blocked = "Blocked"
 }

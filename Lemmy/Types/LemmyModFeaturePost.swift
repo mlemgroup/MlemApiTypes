@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.13
 public struct LemmyModFeaturePost: Codable, Hashable, Sendable {
     /// Available on all versions
     public let id: Int
@@ -20,12 +20,10 @@ public struct LemmyModFeaturePost: Codable, Hashable, Sendable {
     public let postId: Int
     /// Available on all versions
     public let featured: Bool
-    /// Unavailable after 0.19.13
-    public let when_: Date?
+    /// Available on all versions
+    public let when_: Date
     /// Available on all versions
     public let isFeaturedCommunity: Bool
-    /// Available from 1.0.0-alpha onwards
-    public let publishedAt: Date?
 }
 
 public extension LemmyModFeaturePost {
@@ -36,6 +34,5 @@ public extension LemmyModFeaturePost {
         case featured = "featured"
         case when_ = "when_"
         case isFeaturedCommunity = "is_featured_community"
-        case publishedAt = "published_at"
     }
 }

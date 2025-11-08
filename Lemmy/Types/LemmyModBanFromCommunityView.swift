@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.13
 public struct LemmyModBanFromCommunityView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let modBanFromCommunity: LemmyModBanFromCommunity
@@ -18,10 +18,8 @@ public struct LemmyModBanFromCommunityView: Codable, Hashable, Sendable {
     public let moderator: LemmyPerson?
     /// Available on all versions
     public let community: LemmyCommunity
-    /// Unavailable after 0.19.13
-    public let bannedPerson: LemmyPerson?
-    /// Available from 1.0.0-alpha onwards
-    public let otherPerson: LemmyPerson?
+    /// Available on all versions
+    public let bannedPerson: LemmyPerson
 }
 
 public extension LemmyModBanFromCommunityView {
@@ -30,6 +28,5 @@ public extension LemmyModBanFromCommunityView {
         case moderator = "moderator"
         case community = "community"
         case bannedPerson = "banned_person"
-        case otherPerson = "other_person"
     }
 }

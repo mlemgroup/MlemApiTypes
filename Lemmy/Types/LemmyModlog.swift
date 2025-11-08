@@ -1,5 +1,5 @@
 //
-//  LemmyModChangeCommunityVisibility.swift
+//  LemmyModlog.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,25 +11,28 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyModChangeCommunityVisibility: Codable, Hashable, Sendable {
+public struct LemmyModlog: Codable, Hashable, Sendable {
     /// Available on all versions
     public let id: Int
     /// Available on all versions
-    public let communityId: Int
+    public let kind: LemmyModlogKind
     /// Available on all versions
-    public let modPersonId: Int
+    public let isRevert: Bool
+    /// Available on all versions
+    public let reason: String?
+    /// Available on all versions
+    public let expiresAt: Date?
     /// Available on all versions
     public let publishedAt: Date
-    /// Available on all versions
-    public let visibility: LemmyCommunityVisibility
 }
 
-public extension LemmyModChangeCommunityVisibility {
+public extension LemmyModlog {
     enum CodingKeys: String, CodingKey {
         case id = "id"
-        case communityId = "community_id"
-        case modPersonId = "mod_person_id"
+        case kind = "kind"
+        case isRevert = "is_revert"
+        case reason = "reason"
+        case expiresAt = "expires_at"
         case publishedAt = "published_at"
-        case visibility = "visibility"
     }
 }

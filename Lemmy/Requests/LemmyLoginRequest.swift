@@ -22,13 +22,15 @@ public struct LemmyLoginRequest: PostRequest {
       endpoint: LemmyEndpointVersion,
       usernameOrEmail: String,
       password: String,
-      totp2faToken: String?
+      totp2faToken: String?,
+      stayLoggedIn: Bool?
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/auth/login" : "api/v3/user/login"
         self.body = .init(
             usernameOrEmail: usernameOrEmail,
             password: password,
-            totp2faToken: totp2faToken
+            totp2faToken: totp2faToken,
+            stayLoggedIn: stayLoggedIn
         )
     }
 }

@@ -35,6 +35,9 @@ public struct LemmyRegister: Codable, Hashable, Sendable {
     /// An answer is mandatory if require application is enabled on the server
     /// Available on all versions
     public let answer: String?
+    /// If this is true the login is valid forever, otherwise it expires after one week.
+    /// Available from 1.0.0-alpha onwards
+    public let stayLoggedIn: Bool?
 }
 
 public extension LemmyRegister {
@@ -48,5 +51,6 @@ public extension LemmyRegister {
         case captchaAnswer = "captcha_answer"
         case honeypot = "honeypot"
         case answer = "answer"
+        case stayLoggedIn = "stay_logged_in"
     }
 }

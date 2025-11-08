@@ -19,6 +19,9 @@ public struct LemmyLogin: Codable, Hashable, Sendable {
     /// May be required, if totp is enabled for their account.
     /// Available on all versions
     public let totp2faToken: String?
+    /// If this is true the login is valid forever, otherwise it expires after one week.
+    /// Available from 1.0.0-alpha onwards
+    public let stayLoggedIn: Bool?
 }
 
 public extension LemmyLogin {
@@ -26,5 +29,6 @@ public extension LemmyLogin {
         case usernameOrEmail = "username_or_email"
         case password = "password"
         case totp2faToken = "totp_2fa_token"
+        case stayLoggedIn = "stay_logged_in"
     }
 }
