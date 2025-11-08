@@ -28,6 +28,8 @@ public struct PieFedUserSaveSettings: Codable, Hashable, Sendable {
     public let defaultSortType: PieFedSortType?
     /// Available from 1.2.0 onwards
     public let showNsfl: Bool?
+    /// Available from 1.3.0-dev onwards
+    public let extraFields: [PieFedNewUserExtraField]?
 }
 
 public extension PieFedUserSaveSettings {
@@ -40,5 +42,6 @@ public extension PieFedUserSaveSettings {
         case defaultCommentSortType = "default_comment_sort_type"
         case defaultSortType = "default_sort_type"
         case showNsfl = "show_nsfl"
+        case extraFields = "extra_fields"
     }
 }

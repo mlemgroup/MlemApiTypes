@@ -38,7 +38,7 @@ public struct PieFedCommentReplyView: Codable, Hashable, Sendable {
     public let saved: Bool
     /// Available on all versions
     public let creatorBlocked: Bool
-    /// Available on all versions
+    /// Available on all versions, made non-optional in 1.2.0
     public let myVote: Int?
     /// Available from 1.2.0 onwards
     public let activityAlert: Bool?

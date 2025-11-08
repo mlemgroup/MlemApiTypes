@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public struct PieFedGetCommunityModerationBansList: Codable, Hashable, Sendable {
-    /// Available on all versions
+    /// Available on all versions, made non-optional in 1.2.0
     public let communityId: Int?
     /// Available on all versions
     public let page: Int?

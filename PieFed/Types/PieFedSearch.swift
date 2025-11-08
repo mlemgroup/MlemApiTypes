@@ -14,7 +14,7 @@ import Rest
 public struct PieFedSearch: Codable, Hashable, Sendable {
     /// Available on all versions
     public let q: String
-    /// Available on all versions
+    /// Available on all versions, made non-optional in 1.2.0
     public let type_: PieFedSearchType?
     /// Available on all versions
     public let sort: PieFedSortType?

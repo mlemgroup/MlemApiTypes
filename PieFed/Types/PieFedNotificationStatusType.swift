@@ -14,7 +14,7 @@ import Rest
 public enum PieFedNotificationStatusType: String, Codable, Sendable {
     /// Available on all versions
     case all = "All"
-    /// Unavailable after 1.1.0
+    /// Available on all versions
     case new = "New"
     /// Available on all versions
     case read = "Read"

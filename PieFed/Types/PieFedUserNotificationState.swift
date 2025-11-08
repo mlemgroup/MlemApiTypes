@@ -12,9 +12,9 @@ import Rest
 
 /// Available on all versions
 public struct PieFedUserNotificationState: Codable, Hashable, Sendable {
-    /// Available on all versions
+    /// Available on all versions, made non-optional in 1.2.0
     public let notifId: Int?
-    /// Available on all versions
+    /// Available on all versions, made non-optional in 1.2.0
     public let readState: Bool?
 }
 

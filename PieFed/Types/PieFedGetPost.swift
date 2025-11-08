@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public struct PieFedGetPost: Codable, Hashable, Sendable {
-    /// Available on all versions
+    /// Available on all versions, made non-optional in 1.2.0
     public let id: Int?
     /// Unavailable after 1.1.0
     public let commentId: Int?

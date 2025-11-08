@@ -17,7 +17,7 @@ public struct PieFedUserNotificationsResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let items: [PieFedUserNotificationItemView]
     /// Available on all versions
-    public let status: String
+    public let status: PieFedNotificationStatusType
     /// Unavailable after 1.1.0
     public let user: String?
     /// Available from 1.2.0 onwards
