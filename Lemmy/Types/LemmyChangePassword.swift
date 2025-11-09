@@ -18,6 +18,9 @@ public struct LemmyChangePassword: Codable, Hashable, Sendable {
     public let newPasswordVerify: String
     /// Available on all versions
     public let oldPassword: String
+    /// If this is true the login is valid forever, otherwise it expires after one week.
+    /// Available from 1.0.0-alpha onwards
+    public let stayLoggedIn: Bool?
 }
 
 public extension LemmyChangePassword {
@@ -25,5 +28,6 @@ public extension LemmyChangePassword {
         case newPassword = "new_password"
         case newPasswordVerify = "new_password_verify"
         case oldPassword = "old_password"
+        case stayLoggedIn = "stay_logged_in"
     }
 }

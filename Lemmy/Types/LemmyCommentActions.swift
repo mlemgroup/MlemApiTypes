@@ -12,21 +12,21 @@ import Rest
 
 /// Available from 1.0.0-alpha onwards
 public struct LemmyCommentActions: Codable, Hashable, Sendable {
-    /// The like / score for the comment.
+    /// When the comment was upvoted or downvoted.
     /// Available on all versions
-    public let likeScore: Int?
-    /// When the comment was liked.
-    /// Available on all versions
-    public let likedAt: Date?
+    public let votedAt: Date?
     /// When the comment was saved.
     /// Available on all versions
     public let savedAt: Date?
+    /// True if upvoted, false if downvoted. Upvote is greater than downvote.
+    /// Available on all versions
+    public let voteIsUpvote: Bool?
 }
 
 public extension LemmyCommentActions {
     enum CodingKeys: String, CodingKey {
-        case likeScore = "like_score"
-        case likedAt = "liked_at"
+        case votedAt = "voted_at"
         case savedAt = "saved_at"
+        case voteIsUpvote = "vote_is_upvote"
     }
 }

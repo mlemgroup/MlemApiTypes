@@ -14,7 +14,7 @@ import Rest
 public struct PieFedEditComment: Codable, Hashable, Sendable {
     /// Available on all versions
     public let commentId: Int
-    /// Available on all versions
+    /// Available on all versions, made non-optional in 1.2.0
     public let body: String?
     /// Available on all versions
     public let languageId: Int?

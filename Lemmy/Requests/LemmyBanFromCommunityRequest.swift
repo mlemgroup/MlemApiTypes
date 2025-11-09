@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct LemmyBanFromCommunityRequest: PostRequest {
     public typealias Body = LemmyBanFromCommunity
-    public typealias Response = LemmyBanFromCommunityResponse
+    public typealias Response = LemmyBanFromCommunityResponseUnion
     
     public let path: String
     public let body: Body?
@@ -40,5 +40,19 @@ public struct LemmyBanFromCommunityRequest: PostRequest {
             removeOrRestoreData: removeOrRestoreData,
             expiresAt: expiresAt
         )
+    }
+}
+
+public enum LemmyBanFromCommunityResponseUnion: Decodable {
+    case lemmyBanFromCommunityResponse(LemmyBanFromCommunityResponse)
+    case lemmyPersonResponse(LemmyPersonResponse)
+    
+    public init(from decoder: Decoder) throws {
+        if let value = try? LemmyBanFromCommunityResponse(from: decoder) {
+            self = .lemmyBanFromCommunityResponse(value)
+            return
+        }
+        let value = try LemmyPersonResponse(from: decoder)
+        self = .lemmyPersonResponse(value)
     }
 }

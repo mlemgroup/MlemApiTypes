@@ -22,6 +22,8 @@ public struct LemmyGetPersonDetailsResponse: Codable, Hashable, Sendable {
     public let moderates: [LemmyCommunityModeratorView]
     /// Available from 0.19.4 onwards
     public let site: LemmySite?
+    /// Available from 1.0.0-alpha onwards
+    public let multiCommunitiesCreated: [LemmyMultiCommunityView]?
 }
 
 public extension LemmyGetPersonDetailsResponse {
@@ -31,5 +33,6 @@ public extension LemmyGetPersonDetailsResponse {
         case posts = "posts"
         case moderates = "moderates"
         case site = "site"
+        case multiCommunitiesCreated = "multi_communities_created"
     }
 }

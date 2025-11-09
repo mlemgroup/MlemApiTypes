@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.13
 public struct LemmyModLockPost: Codable, Hashable, Sendable {
     /// Available on all versions
     public let id: Int
@@ -20,12 +20,8 @@ public struct LemmyModLockPost: Codable, Hashable, Sendable {
     public let postId: Int
     /// Available on all versions
     public let locked: Bool
-    /// Unavailable after 0.19.13
-    public let when_: Date?
-    /// Available from 1.0.0-alpha onwards
-    public let publishedAt: Date?
-    /// Available from 1.0.0-alpha onwards
-    public let reason: String?
+    /// Available on all versions
+    public let when_: Date
 }
 
 public extension LemmyModLockPost {
@@ -35,7 +31,5 @@ public extension LemmyModLockPost {
         case postId = "post_id"
         case locked = "locked"
         case when_ = "when_"
-        case publishedAt = "published_at"
-        case reason = "reason"
     }
 }

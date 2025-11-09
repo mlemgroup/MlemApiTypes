@@ -28,7 +28,8 @@ public struct LemmyRegisterRequest: PostRequest {
       captchaUuid: String?,
       captchaAnswer: String?,
       honeypot: String?,
-      answer: String?
+      answer: String?,
+      stayLoggedIn: Bool?
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/auth/register" : "api/v3/user/register"
         self.body = .init(
@@ -40,7 +41,8 @@ public struct LemmyRegisterRequest: PostRequest {
             captchaUuid: captchaUuid,
             captchaAnswer: captchaAnswer,
             honeypot: honeypot,
-            answer: answer
+            answer: answer,
+            stayLoggedIn: stayLoggedIn
         )
     }
 }

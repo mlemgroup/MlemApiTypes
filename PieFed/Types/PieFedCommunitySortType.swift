@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public enum PieFedCommunitySortType: String, Codable, Sendable {
-    /// Unavailable after 1.1.0
+    /// Available on all versions
     case active = "Active"
     /// Available on all versions
     case new = "New"

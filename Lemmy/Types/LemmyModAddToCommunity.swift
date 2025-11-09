@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.13
 public struct LemmyModAddToCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
     public let id: Int
@@ -22,10 +22,8 @@ public struct LemmyModAddToCommunity: Codable, Hashable, Sendable {
     public let communityId: Int
     /// Available on all versions
     public let removed: Bool
-    /// Unavailable after 0.19.13
-    public let when_: Date?
-    /// Available from 1.0.0-alpha onwards
-    public let publishedAt: Date?
+    /// Available on all versions
+    public let when_: Date
 }
 
 public extension LemmyModAddToCommunity {
@@ -36,6 +34,5 @@ public extension LemmyModAddToCommunity {
         case communityId = "community_id"
         case removed = "removed"
         case when_ = "when_"
-        case publishedAt = "published_at"
     }
 }

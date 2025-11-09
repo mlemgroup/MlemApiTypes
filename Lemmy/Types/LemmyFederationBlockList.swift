@@ -13,8 +13,6 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyFederationBlockList: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let instanceId: Int
-    /// Available on all versions
     public let publishedAt: Date
     /// Available on all versions
     public let updatedAt: Date?
@@ -24,7 +22,6 @@ public struct LemmyFederationBlockList: Codable, Hashable, Sendable {
 
 public extension LemmyFederationBlockList {
     enum CodingKeys: String, CodingKey {
-        case instanceId = "instance_id"
         case publishedAt = "published_at"
         case updatedAt = "updated_at"
         case expiresAt = "expires_at"

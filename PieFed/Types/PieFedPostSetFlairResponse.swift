@@ -44,6 +44,8 @@ public struct PieFedPostSetFlairResponse: Codable, Hashable, Sendable {
     public let myVote: Int?
     /// Available on all versions
     public let flairList: [PieFedCommunityFlair]?
+    /// Available from 1.3.0-dev onwards
+    public let canAuthUserModerate: Bool?
 }
 
 public extension PieFedPostSetFlairResponse {
@@ -64,5 +66,6 @@ public extension PieFedPostSetFlairResponse {
         case activityAlert = "activity_alert"
         case myVote = "my_vote"
         case flairList = "flair_list"
+        case canAuthUserModerate = "can_auth_user_moderate"
     }
 }

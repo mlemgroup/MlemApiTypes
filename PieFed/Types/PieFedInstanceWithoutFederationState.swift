@@ -17,9 +17,9 @@ public struct PieFedInstanceWithoutFederationState: Codable, Hashable, Sendable 
     /// Available on all versions
     public let domain: String
     /// Available on all versions
-    public let published: String
+    public let published: Date
     /// Available on all versions
-    public let updated: String?
+    public let updated: Date?
     /// Available on all versions
     public let software: String?
     /// Available on all versions

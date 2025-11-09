@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.13
 public struct LemmyAdminBan: Codable, Hashable, Sendable {
     /// Available on all versions
     public let id: Int
@@ -22,16 +22,10 @@ public struct LemmyAdminBan: Codable, Hashable, Sendable {
     public let reason: String?
     /// Available on all versions
     public let banned: Bool
-    /// Unavailable after 0.19.13
+    /// Available on all versions
     public let expires: Date?
-    /// Unavailable after 0.19.13
-    public let when_: Date?
-    /// Available from 1.0.0-alpha onwards
-    public let expiresAt: Date?
-    /// Available from 1.0.0-alpha onwards
-    public let publishedAt: Date?
-    /// Available from 1.0.0-alpha onwards
-    public let instanceId: Int?
+    /// Available on all versions
+    public let when_: Date
 }
 
 public extension LemmyAdminBan {
@@ -43,8 +37,5 @@ public extension LemmyAdminBan {
         case banned = "banned"
         case expires = "expires"
         case when_ = "when_"
-        case expiresAt = "expires_at"
-        case publishedAt = "published_at"
-        case instanceId = "instance_id"
     }
 }

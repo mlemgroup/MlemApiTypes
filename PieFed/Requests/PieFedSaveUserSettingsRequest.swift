@@ -26,7 +26,8 @@ public struct PieFedSaveUserSettingsRequest: PutRequest {
       cover: String?,
       defaultCommentSortType: PieFedCommentSortType?,
       defaultSortType: PieFedSortType?,
-      showNsfl: Bool?
+      showNsfl: Bool?,
+      extraFields: [PieFedNewUserExtraField]?
     ) {
         self.body = .init(
             showNsfw: showNsfw,
@@ -36,7 +37,8 @@ public struct PieFedSaveUserSettingsRequest: PutRequest {
             cover: cover,
             defaultCommentSortType: defaultCommentSortType,
             defaultSortType: defaultSortType,
-            showNsfl: showNsfl
+            showNsfl: showNsfl,
+            extraFields: extraFields
         )
     }
 }

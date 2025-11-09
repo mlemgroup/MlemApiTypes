@@ -14,7 +14,7 @@ import Rest
 public struct LemmyListCommunityPendingFollows: Codable, Hashable, Sendable {
     /// Only shows the unapproved applications
     /// Available on all versions
-    public let pendingOnly: Bool?
+    public let unreadOnly: Bool?
     /// Only for admins, show pending follows for communities which you dont moderate
     /// Available on all versions
     public let allCommunities: Bool?
@@ -28,7 +28,7 @@ public struct LemmyListCommunityPendingFollows: Codable, Hashable, Sendable {
 
 public extension LemmyListCommunityPendingFollows {
     enum CodingKeys: String, CodingKey {
-        case pendingOnly = "pending_only"
+        case unreadOnly = "unread_only"
         case allCommunities = "all_communities"
         case pageCursor = "page_cursor"
         case pageBack = "page_back"

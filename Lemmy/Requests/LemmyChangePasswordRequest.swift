@@ -22,13 +22,15 @@ public struct LemmyChangePasswordRequest: PutRequest {
       endpoint: LemmyEndpointVersion,
       newPassword: String,
       newPasswordVerify: String,
-      oldPassword: String
+      oldPassword: String,
+      stayLoggedIn: Bool?
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/auth/change_password" : "api/v3/user/change_password"
         self.body = .init(
             newPassword: newPassword,
             newPasswordVerify: newPasswordVerify,
-            oldPassword: oldPassword
+            oldPassword: oldPassword,
+            stayLoggedIn: stayLoggedIn
         )
     }
 }

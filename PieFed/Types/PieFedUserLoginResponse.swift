@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public struct PieFedUserLoginResponse: Codable, Hashable, Sendable {
-    /// Available on all versions
+    /// Available on all versions, made non-optional in 1.2.0
     public let jwt: String?
 }
 

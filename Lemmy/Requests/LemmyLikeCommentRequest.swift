@@ -21,12 +21,14 @@ public struct LemmyLikeCommentRequest: PostRequest {
     init(
       endpoint: LemmyEndpointVersion,
       commentId: Int,
-      score: Int
+      score: Int?,
+      isUpvote: Bool?
     ) {
         self.path = endpoint == .v4 ? "api/v4/comment/like" : "api/v3/comment/like"
         self.body = .init(
             commentId: commentId,
-            score: score
+            score: score,
+            isUpvote: isUpvote
         )
     }
 }

@@ -18,4 +18,6 @@ public enum LemmyCommunityFollowerState: String, Codable, Sendable {
     case pending = "Pending"
     /// Available on all versions
     case approvalRequired = "ApprovalRequired"
+    /// Available on all versions
+    case denied = "Denied"
 }

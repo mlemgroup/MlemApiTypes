@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyAdminBlockInstanceRequest: PostRequest {
     public typealias Body = LemmyAdminBlockInstanceParams
-    public typealias Response = LemmySuccessResponse
+    public typealias Response = LemmyFederatedInstanceView
     
     public let path: String = "api/v4/admin/instance/block"
     public let body: Body?

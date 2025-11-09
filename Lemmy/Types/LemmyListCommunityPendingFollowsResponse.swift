@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyListCommunityPendingFollowsResponse: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let items: [LemmyPendingFollow]
+    public let items: [LemmyPendingFollowerView]
     /// the pagination cursor to use to fetch the next page
     /// Available on all versions
     public let nextPage: String?

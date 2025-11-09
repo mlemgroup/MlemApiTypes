@@ -25,7 +25,7 @@ public struct PieFedPostAggregates: Codable, Hashable, Sendable {
     /// Available on all versions
     public let published: Date
     /// Available on all versions
-    public let newestCommentTime: String
+    public let newestCommentTime: Date
     /// Available from 1.2.1 onwards
     public let crossPosts: Int?
 }

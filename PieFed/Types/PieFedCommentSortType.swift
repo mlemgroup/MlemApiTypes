@@ -20,4 +20,8 @@ public enum PieFedCommentSortType: String, Codable, Sendable {
     case new = "New"
     /// Available on all versions
     case old = "Old"
+    /// Available from 1.3.0-dev onwards
+    case topAll = "TopAll"
+    /// Available from 1.3.0-dev onwards
+    case controversial = "Controversial"
 }

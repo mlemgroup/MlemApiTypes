@@ -46,6 +46,11 @@ public struct LemmyGetSiteResponse: Codable, Hashable, Sendable {
     public let imageUploadDisabled: Bool?
     /// Available from 1.0.0-alpha onwards
     public let activePlugins: [LemmyPluginMetadata]?
+    /// The number of seconds between the last application published, and approved / denied time.
+    /// 
+    /// Useful for estimating when your application will be approved.
+    /// Available from 1.0.0-alpha onwards
+    public let lastApplicationDurationSeconds: Int?
 }
 
 public extension LemmyGetSiteResponse {
@@ -64,5 +69,6 @@ public extension LemmyGetSiteResponse {
         case adminOauthProviders = "admin_oauth_providers"
         case imageUploadDisabled = "image_upload_disabled"
         case activePlugins = "active_plugins"
+        case lastApplicationDurationSeconds = "last_application_duration_seconds"
     }
 }

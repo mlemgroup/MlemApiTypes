@@ -21,12 +21,14 @@ public struct PieFedGetPrivateMessagesConversationRequest: GetRequest {
     init(
       page: Int?,
       limit: Int?,
-      personId: Int
+      personId: Int?,
+      conversationId: Int?
     ) {
         self.parameters = .init(
             page: page,
             limit: limit,
-            personId: personId
+            personId: personId,
+            conversationId: conversationId
         )
     }
 }

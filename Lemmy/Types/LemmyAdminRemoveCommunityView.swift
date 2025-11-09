@@ -10,16 +10,14 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.13
 public struct LemmyAdminRemoveCommunityView: Codable, Hashable, Sendable {
-    /// Unavailable after 0.19.13
-    public let modRemoveCommunity: LemmyAdminRemoveCommunity?
+    /// Available on all versions
+    public let modRemoveCommunity: LemmyAdminRemoveCommunity
     /// Available on all versions
     public let moderator: LemmyPerson?
     /// Available on all versions
     public let community: LemmyCommunity
-    /// Available from 1.0.0-alpha onwards
-    public let adminRemoveCommunity: LemmyAdminRemoveCommunity?
 }
 
 public extension LemmyAdminRemoveCommunityView {
@@ -27,6 +25,5 @@ public extension LemmyAdminRemoveCommunityView {
         case modRemoveCommunity = "mod_remove_community"
         case moderator = "moderator"
         case community = "community"
-        case adminRemoveCommunity = "admin_remove_community"
     }
 }

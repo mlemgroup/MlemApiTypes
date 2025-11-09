@@ -19,14 +19,14 @@ public struct LemmyGetPendingFollowsListRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      pendingOnly: Bool?,
+      unreadOnly: Bool?,
       allCommunities: Bool?,
       pageCursor: String?,
       pageBack: Bool?,
       limit: Int?
     ) {
         self.parameters = .init(
-            pendingOnly: pendingOnly,
+            unreadOnly: unreadOnly,
             allCommunities: allCommunities,
             pageCursor: pageCursor,
             pageBack: pageBack,

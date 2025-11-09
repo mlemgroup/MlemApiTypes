@@ -25,7 +25,8 @@ public struct LemmyAuthenticateWithOauthRequest: PostRequest {
       showNsfw: Bool?,
       username: String?,
       answer: String?,
-      pkceCodeVerifier: String?
+      pkceCodeVerifier: String?,
+      stayLoggedIn: Bool?
     ) {
         self.body = .init(
             code: code,
@@ -34,7 +35,8 @@ public struct LemmyAuthenticateWithOauthRequest: PostRequest {
             showNsfw: showNsfw,
             username: username,
             answer: answer,
-            pkceCodeVerifier: pkceCodeVerifier
+            pkceCodeVerifier: pkceCodeVerifier,
+            stayLoggedIn: stayLoggedIn
         )
     }
 }

@@ -19,10 +19,12 @@ public struct LemmyMarkPostsAsReadRequest: PostRequest {
     public let body: Body?
     
     init(
-      postIds: [Int]
+      postIds: [Int],
+      read: Bool
     ) {
         self.body = .init(
-            postIds: postIds
+            postIds: postIds,
+            read: read
         )
     }
 }

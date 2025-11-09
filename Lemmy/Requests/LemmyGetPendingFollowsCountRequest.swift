@@ -12,17 +12,13 @@ import Rest
 
 /// Available from 1.0.0-alpha onwards
 public struct LemmyGetPendingFollowsCountRequest: GetRequest {
-    public typealias Parameters = LemmyGetCommunityPendingFollowsCount
+    public typealias Parameters = Int
     public typealias Response = LemmyGetCommunityPendingFollowsCountResponse
     
     public let path: String = "api/v4/community/pending_follows/count"
-    public let parameters: Parameters?
+    public let parameters: Parameters? = nil
     
     init(
-      communityId: Int
     ) {
-        self.parameters = .init(
-            communityId: communityId
-        )
     }
 }

@@ -22,7 +22,7 @@ public struct PieFedPostReport: Codable, Hashable, Sendable {
     public let originalPostName: String
     /// Unavailable after 1.1.0
     public let originalPostUrl: String?
-    /// Available on all versions
+    /// Available on all versions, made non-optional in 1.2.0
     public let originalPostBody: String?
     /// Available on all versions
     public let reason: String

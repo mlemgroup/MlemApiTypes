@@ -18,6 +18,8 @@ public struct PieFedPrivateMessageView: Codable, Hashable, Sendable {
     public let creator: PieFedPerson
     /// Available on all versions
     public let recipient: PieFedPerson
+    /// Available from 1.3.0-dev onwards
+    public let conversationId: Int?
 }
 
 public extension PieFedPrivateMessageView {
@@ -25,5 +27,6 @@ public extension PieFedPrivateMessageView {
         case privateMessage = "private_message"
         case creator = "creator"
         case recipient = "recipient"
+        case conversationId = "conversation_id"
     }
 }
