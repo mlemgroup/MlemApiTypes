@@ -11,11 +11,12 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct LemmyDeletePostRequest: PostRequest {
+public struct LemmyDeletePostRequest: RequestWithBody {
     public typealias Body = LemmyDeletePost
     public typealias Response = LemmyPostResponse
     
     public let path: String
+    public let method: RequestWithBodyMethod
     public let body: Body?
     
     init(
@@ -23,7 +24,8 @@ public struct LemmyDeletePostRequest: PostRequest {
       postId: Int,
       deleted: Bool
     ) {
-        self.path = endpoint == .v4 ? "api/v4/post/delete" : "api/v3/post/delete"
+        self.path = endpoint == .v4 ? "api/v4/post" : "api/v3/post/delete"
+        self.method = endpoint == .v4 ? .delete : .post
         self.body = .init(
             postId: postId,
             deleted: deleted

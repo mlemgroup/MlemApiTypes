@@ -11,11 +11,11 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyDeleteTaglineRequest: PostRequest {
+public struct LemmyDeleteTaglineRequest: DeleteRequest {
     public typealias Body = LemmyDeleteTagline
     public typealias Response = LemmySuccessResponse
     
-    public let path: String = "api/v4/admin/tagline/delete"
+    public let path: String = "api/v4/admin/tagline"
     public let body: Body?
     
     init(
