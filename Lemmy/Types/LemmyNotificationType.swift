@@ -13,13 +13,13 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public enum LemmyNotificationType: String, Codable, Sendable {
     /// Available on all versions
-    case mention = "Mention"
+    case mention = "mention"
     /// Available on all versions
-    case reply = "Reply"
+    case reply = "reply"
     /// Available on all versions
-    case subscribed = "Subscribed"
+    case subscribed = "subscribed"
     /// Available on all versions
-    case privateMessage = "PrivateMessage"
+    case privateMessage = "private_message"
     /// Available on all versions
-    case modAction = "ModAction"
+    case modAction = "mod_action"
 }

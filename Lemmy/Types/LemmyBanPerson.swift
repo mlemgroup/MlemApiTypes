@@ -19,7 +19,7 @@ public struct LemmyBanPerson: Codable, Hashable, Sendable {
     /// Optionally remove all their data. Useful for new troll accounts.
     /// Unavailable after 0.19.13
     public let removeData: Bool?
-    /// Available on all versions
+    /// Available on all versions, made non-optional in 1.0.0-alpha
     public let reason: String?
     /// Unavailable after 0.19.13
     public let expires: Int?

@@ -13,13 +13,13 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public enum LemmyReportType: String, Codable, Sendable {
     /// Available on all versions
-    case all = "All"
+    case all = "all"
     /// Available on all versions
-    case posts = "Posts"
+    case posts = "posts"
     /// Available on all versions
-    case comments = "Comments"
+    case comments = "comments"
     /// Available on all versions
-    case privateMessages = "PrivateMessages"
+    case privateMessages = "private_messages"
     /// Available on all versions
-    case communities = "Communities"
+    case communities = "communities"
 }

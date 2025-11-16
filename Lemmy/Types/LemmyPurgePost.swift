@@ -14,7 +14,7 @@ import Rest
 public struct LemmyPurgePost: Codable, Hashable, Sendable {
     /// Available on all versions
     public let postId: Int
-    /// Available on all versions
+    /// Available on all versions, made non-optional in 1.0.0-alpha
     public let reason: String?
 }
 

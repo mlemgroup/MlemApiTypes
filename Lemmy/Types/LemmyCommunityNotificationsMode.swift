@@ -13,11 +13,11 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public enum LemmyCommunityNotificationsMode: String, Codable, Sendable {
     /// Available on all versions
-    case allPostsAndComments = "AllPostsAndComments"
+    case allPostsAndComments = "all_posts_and_comments"
     /// Available on all versions
-    case allPosts = "AllPosts"
+    case allPosts = "all_posts"
     /// Available on all versions
-    case repliesAndMentions = "RepliesAndMentions"
+    case repliesAndMentions = "replies_and_mentions"
     /// Available on all versions
-    case mute = "Mute"
+    case mute = "mute"
 }

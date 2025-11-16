@@ -13,11 +13,11 @@ import Rest
 /// Unavailable after 0.19.13
 public struct LemmyFederatedInstances: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let linked: [InstanceWithFederationStateBridge]
+    public let linked: [LemmyInstanceWithFederationStateBridge]
     /// Available on all versions
-    public let allowed: [InstanceWithFederationStateBridge]
+    public let allowed: [LemmyInstanceWithFederationStateBridge]
     /// Available on all versions
-    public let blocked: [InstanceWithFederationStateBridge]
+    public let blocked: [LemmyInstanceWithFederationStateBridge]
 }
 
 public extension LemmyFederatedInstances {

@@ -15,7 +15,7 @@ public struct LemmyListNotificationsRequest: GetRequest {
     public typealias Parameters = LemmyListNotifications
     public typealias Response = LemmyListNotificationsResponse
     
-    public let path: String = "api/v4/account/notifications"
+    public let path: String = "api/v4/account/notification/list"
     public let parameters: Parameters?
     
     init(

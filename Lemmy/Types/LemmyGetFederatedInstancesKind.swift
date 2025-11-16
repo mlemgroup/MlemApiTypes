@@ -13,11 +13,11 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public enum LemmyGetFederatedInstancesKind: String, Codable, Sendable {
     /// Available on all versions
-    case all = "All"
+    case all = "all"
     /// Available on all versions
-    case linked = "Linked"
+    case linked = "linked"
     /// Available on all versions
-    case allowed = "Allowed"
+    case allowed = "allowed"
     /// Available on all versions
-    case blocked = "Blocked"
+    case blocked = "blocked"
 }

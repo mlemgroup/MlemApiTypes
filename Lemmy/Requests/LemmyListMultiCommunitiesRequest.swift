@@ -19,12 +19,22 @@ public struct LemmyListMultiCommunitiesRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
+      type_: LemmyMultiCommunityListingType?,
+      sort: LemmyMultiCommunitySortType?,
       creatorId: Int?,
-      followedOnly: Bool?
+      timeRangeSeconds: Int?,
+      pageCursor: String?,
+      pageBack: Bool?,
+      limit: Int?
     ) {
         self.parameters = .init(
+            type_: type_,
+            sort: sort,
             creatorId: creatorId,
-            followedOnly: followedOnly
+            timeRangeSeconds: timeRangeSeconds,
+            pageCursor: pageCursor,
+            pageBack: pageBack,
+            limit: limit
         )
     }
 }

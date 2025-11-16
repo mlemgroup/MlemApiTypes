@@ -15,7 +15,7 @@ public struct LemmyListCommunities: Codable, Hashable, Sendable {
     /// Available on all versions
     public let type_: LemmyListingType?
     /// Available on all versions
-    public let sort: CommunitySortTypeBridge
+    public let sort: LemmyCommunitySortTypeBridge
     /// Available on all versions
     public let showNsfw: Bool?
     /// Unavailable after 0.19.13

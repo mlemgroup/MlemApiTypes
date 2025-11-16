@@ -34,6 +34,12 @@ public struct LemmyMultiCommunity: Codable, Hashable, Sendable {
     public let publishedAt: Date
     /// Available on all versions
     public let updatedAt: Date?
+    /// Available on all versions
+    public let subscribers: Int
+    /// Available on all versions
+    public let subscribersLocal: Int
+    /// Available on all versions
+    public let communities: Int
 }
 
 public extension LemmyMultiCommunity {
@@ -49,5 +55,8 @@ public extension LemmyMultiCommunity {
         case apId = "ap_id"
         case publishedAt = "published_at"
         case updatedAt = "updated_at"
+        case subscribers = "subscribers"
+        case subscribersLocal = "subscribers_local"
+        case communities = "communities"
     }
 }

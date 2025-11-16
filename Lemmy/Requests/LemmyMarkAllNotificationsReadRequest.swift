@@ -21,7 +21,7 @@ public struct LemmyMarkAllNotificationsReadRequest: PostRequest {
     init(
       endpoint: LemmyEndpointVersion
     ) {
-        self.path = endpoint == .v4 ? "api/v4/account/mark_as_read/all" : "api/v3/user/mark_all_as_read"
+        self.path = endpoint == .v4 ? "api/v4/account/notification/mark_as_read/all" : "api/v3/user/mark_all_as_read"
     }
 }
 

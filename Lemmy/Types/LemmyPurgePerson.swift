@@ -14,7 +14,7 @@ import Rest
 public struct LemmyPurgePerson: Codable, Hashable, Sendable {
     /// Available on all versions
     public let personId: Int
-    /// Available on all versions
+    /// Available on all versions, made non-optional in 1.0.0-alpha
     public let reason: String?
 }
 

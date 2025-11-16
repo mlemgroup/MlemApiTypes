@@ -13,9 +13,9 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public enum LemmyLikeType: String, Codable, Sendable {
     /// Available on all versions
-    case all = "All"
+    case all = "all"
     /// Available on all versions
-    case likedOnly = "LikedOnly"
+    case likedOnly = "liked_only"
     /// Available on all versions
-    case dislikedOnly = "DislikedOnly"
+    case dislikedOnly = "disliked_only"
 }

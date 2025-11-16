@@ -13,21 +13,21 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public enum LemmyPostSortType: String, Codable, Sendable {
     /// Available on all versions
-    case active = "Active"
+    case active = "active"
     /// Available on all versions
-    case hot = "Hot"
+    case hot = "hot"
     /// Available on all versions
-    case new = "New"
+    case new = "new"
     /// Available on all versions
-    case old = "Old"
+    case old = "old"
     /// Available on all versions
-    case top = "Top"
+    case top = "top"
     /// Available on all versions
-    case mostComments = "MostComments"
+    case mostComments = "most_comments"
     /// Available on all versions
-    case newComments = "NewComments"
+    case newComments = "new_comments"
     /// Available on all versions
-    case controversial = "Controversial"
+    case controversial = "controversial"
     /// Available on all versions
-    case scaled = "Scaled"
+    case scaled = "scaled"
 }

@@ -15,7 +15,7 @@ public struct LemmyMarkNotificationAsReadRequest: PostRequest {
     public typealias Body = LemmyMarkNotificationAsRead
     public typealias Response = LemmySuccessResponse
     
-    public let path: String = "api/v4/account/mark_as_read"
+    public let path: String = "api/v4/account/notification/mark_as_read"
     public let body: Body?
     
     init(
