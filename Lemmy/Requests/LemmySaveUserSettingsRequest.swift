@@ -47,7 +47,7 @@ public struct LemmySaveUserSettingsRequest: PutRequest {
       enableAnimatedImages: Bool?,
       collapseBotComments: Bool?,
       showUpvotes: Bool?,
-      showDownvotes: Bool?,
+      showDownvotes: LemmyVoteShowBridge?,
       showUpvotePercentage: Bool?,
       defaultPostSortType: LemmyPostSortType?,
       defaultPostTimeRangeSeconds: Int?,

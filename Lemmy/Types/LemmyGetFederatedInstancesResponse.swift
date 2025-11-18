@@ -10,14 +10,13 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Available from 1.0.0-alpha onwards
 public struct LemmyGetFederatedInstancesResponse: Codable, Hashable, Sendable {
-    /// Optional, because federation may be disabled.
     /// Available on all versions
-    public let federatedInstances: LemmyFederatedInstances?
-    /// Available from 1.0.0-alpha onwards
+    public let federatedInstances: [LemmyFederatedInstanceView]
+    /// Available on all versions
     public let nextPage: String?
-    /// Available from 1.0.0-alpha onwards
+    /// Available on all versions
     public let prevPage: String?
 }
 

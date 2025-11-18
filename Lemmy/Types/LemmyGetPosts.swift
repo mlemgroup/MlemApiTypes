@@ -15,7 +15,7 @@ public struct LemmyGetPosts: Codable, Hashable, Sendable {
     /// Available on all versions
     public let type_: LemmyListingType?
     /// Available on all versions
-    public let sort: PostSortTypeBridge
+    public let sort: LemmyPostSortTypeBridge
     /// DEPRECATED, use page_cursor
     /// Unavailable after 0.19.13
     public let page: Int?

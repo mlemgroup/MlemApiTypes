@@ -1,5 +1,5 @@
 //
-//  LemmyNotificationDataType.swift
+//  LemmyMultiCommunitySortType.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,17 +11,19 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public enum LemmyNotificationDataType: String, Codable, Sendable {
+public enum LemmyMultiCommunitySortType: String, Codable, Sendable {
     /// Available on all versions
-    case all = "all"
+    case new = "new"
     /// Available on all versions
-    case reply = "reply"
+    case old = "old"
     /// Available on all versions
-    case mention = "mention"
+    case nameAsc = "name_asc"
     /// Available on all versions
-    case privateMessage = "private_message"
+    case nameDesc = "name_desc"
     /// Available on all versions
-    case subscribed = "subscribed"
+    case communities = "communities"
     /// Available on all versions
-    case modAction = "mod_action"
+    case subscribers = "subscribers"
+    /// Available on all versions
+    case subscribersLocal = "subscribers_local"
 }

@@ -19,11 +19,11 @@ public struct LemmyMyUserInfo: Codable, Hashable, Sendable {
     /// Available on all versions
     public let moderates: [LemmyCommunityModeratorView]
     /// Available on all versions
-    public let communityBlocks: [LemmyCommunityBlockView]
+    public let communityBlocks: [LemmyCommunityBlockBridge]
     /// Unavailable after 0.19.13
     public let instanceBlocks: [LemmyInstanceBlockView]?
     /// Available on all versions
-    public let personBlocks: [LemmyPersonBlockView]
+    public let personBlocks: [LemmyPersonBlockBridge]
     /// Available on all versions
     public let discussionLanguages: [Int]
     /// Available from 1.0.0-alpha onwards

@@ -21,6 +21,6 @@ public struct LemmyUnreadCountRequest: GetRequest {
     init(
       endpoint: LemmyEndpointVersion
     ) {
-        self.path = endpoint == .v4 ? "api/v4/account/unread_count" : "api/v3/user/unread_count"
+        self.path = endpoint == .v4 ? "api/v4/account/notification/count" : "api/v3/user/unread_count"
     }
 }

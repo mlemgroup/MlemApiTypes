@@ -21,7 +21,7 @@ public struct LemmyListLoginsRequest: GetRequest {
     init(
       endpoint: LemmyEndpointVersion
     ) {
-        self.path = endpoint == .v4 ? "api/v4/account/list_logins" : "api/v3/user/list_logins"
+        self.path = endpoint == .v4 ? "api/v4/account/login/list" : "api/v3/user/list_logins"
     }
 }
 

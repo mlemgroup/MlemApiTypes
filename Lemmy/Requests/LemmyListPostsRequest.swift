@@ -21,7 +21,7 @@ public struct LemmyListPostsRequest: GetRequest {
     init(
       endpoint: LemmyEndpointVersion,
       type_: LemmyListingType?,
-      sort: PostSortTypeBridge,
+      sort: LemmyPostSortTypeBridge,
       page: Int?,
       limit: Int?,
       communityId: Int?,

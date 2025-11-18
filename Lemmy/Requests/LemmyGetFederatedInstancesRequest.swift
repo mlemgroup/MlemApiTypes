@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct LemmyGetFederatedInstancesRequest: GetRequest {
     public typealias Parameters = Int
-    public typealias Response = LemmyGetFederatedInstancesResponse
+    public typealias Response = LemmyGetFederatedInstancesResponseUnion
     
     public let path: String
     public let parameters: Parameters? = nil
@@ -22,5 +22,19 @@ public struct LemmyGetFederatedInstancesRequest: GetRequest {
       endpoint: LemmyEndpointVersion
     ) {
         self.path = endpoint == .v4 ? "api/v4/federated_instances" : "api/v3/federated_instances"
+    }
+}
+
+public enum LemmyGetFederatedInstancesResponseUnion: Decodable {
+    case lemmyLegacyGetFederatedInstancesResponse(LemmyLegacyGetFederatedInstancesResponse)
+    case lemmyGetFederatedInstancesResponse(LemmyGetFederatedInstancesResponse)
+    
+    public init(from decoder: Decoder) throws {
+        if let value = try? LemmyLegacyGetFederatedInstancesResponse(from: decoder) {
+            self = .lemmyLegacyGetFederatedInstancesResponse(value)
+            return
+        }
+        let value = try LemmyGetFederatedInstancesResponse(from: decoder)
+        self = .lemmyGetFederatedInstancesResponse(value)
     }
 }

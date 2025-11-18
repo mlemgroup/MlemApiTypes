@@ -13,11 +13,11 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public enum LemmyCommunityFollowerState: String, Codable, Sendable {
     /// Available on all versions
-    case accepted = "Accepted"
+    case accepted = "accepted"
     /// Available on all versions
-    case pending = "Pending"
+    case pending = "pending"
     /// Available on all versions
-    case approvalRequired = "ApprovalRequired"
+    case approvalRequired = "approval_required"
     /// Available on all versions
-    case denied = "Denied"
+    case denied = "denied"
 }

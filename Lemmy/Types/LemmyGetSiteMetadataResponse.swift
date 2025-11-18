@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct LemmyGetSiteMetadataResponse: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let metadata: LemmySiteMetadata
+    public let metadata: LemmyLinkMetadata
 }
 
 public extension LemmyGetSiteMetadataResponse {

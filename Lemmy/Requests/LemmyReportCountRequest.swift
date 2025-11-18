@@ -22,7 +22,7 @@ public struct LemmyReportCountRequest: GetRequest {
       endpoint: LemmyEndpointVersion,
       communityId: Int?
     ) {
-        self.path = endpoint == .v4 ? "api/v4/account/report_count" : "api/v3/user/report_count"
+        self.path = endpoint == .v4 ? "api/v4/report/count" : "api/v3/user/report_count"
         self.parameters = .init(
             communityId: communityId
         )

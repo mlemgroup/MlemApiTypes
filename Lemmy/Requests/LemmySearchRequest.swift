@@ -25,7 +25,7 @@ public struct LemmySearchRequest: GetRequest {
       communityName: String?,
       creatorId: Int?,
       type_: LemmySearchType?,
-      sort: SearchSortTypeBridge,
+      sort: LemmySearchSortTypeBridge,
       listingType: LemmyListingType?,
       page: Int?,
       limit: Int?,

@@ -23,7 +23,7 @@ public struct LemmySearch: Codable, Hashable, Sendable {
     /// Available on all versions
     public let type_: LemmySearchType?
     /// Available on all versions
-    public let sort: SearchSortTypeBridge
+    public let sort: LemmySearchSortTypeBridge
     /// Available on all versions
     public let listingType: LemmyListingType?
     /// Unavailable after 0.19.13

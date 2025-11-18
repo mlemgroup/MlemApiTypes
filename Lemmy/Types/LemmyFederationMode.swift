@@ -13,9 +13,9 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public enum LemmyFederationMode: String, Codable, Sendable {
     /// Available on all versions
-    case all = "All"
+    case all = "all"
     /// Available on all versions
-    case local = "Local"
+    case local = "local"
     /// Available on all versions
-    case disable = "Disable"
+    case disable = "disable"
 }

@@ -20,7 +20,7 @@ public struct LemmyBanFromCommunity: Codable, Hashable, Sendable {
     public let ban: Bool
     /// Unavailable after 0.19.13
     public let removeData: Bool?
-    /// Available on all versions
+    /// Available on all versions, made non-optional in 1.0.0-alpha
     public let reason: String?
     /// Unavailable after 0.19.13
     public let expires: Int?

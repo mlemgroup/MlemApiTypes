@@ -88,7 +88,7 @@ public struct LemmySaveUserSettings: Codable, Hashable, Sendable {
     /// Available from 0.19.4 onwards
     public let showUpvotes: Bool?
     /// Available from 0.19.4 onwards
-    public let showDownvotes: Bool?
+    public let showDownvotes: LemmyVoteShowBridge?
     /// Available from 0.19.4 onwards
     public let showUpvotePercentage: Bool?
     /// The default post sort, usually "active"

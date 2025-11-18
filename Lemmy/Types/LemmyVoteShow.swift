@@ -13,9 +13,9 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public enum LemmyVoteShow: String, Codable, Sendable {
     /// Available on all versions
-    case show = "Show"
+    case show = "show"
     /// Available on all versions
-    case showForOthers = "ShowForOthers"
+    case showForOthers = "show_for_others"
     /// Available on all versions
-    case hide = "Hide"
+    case hide = "hide"
 }
