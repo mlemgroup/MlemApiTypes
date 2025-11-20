@@ -42,7 +42,7 @@ public struct PieFedPerson: Codable, Hashable, Sendable {
     public let flair: String?
     /// Available from 1.2.0 onwards
     public let aboutHtml: String?
-    /// Available from 1.3.0-dev onwards
+    /// Available from 1.3.0 onwards
     public let extraFields: [PieFedUserExtraField]?
 }
 

@@ -18,7 +18,7 @@ public struct PieFedPrivateMessageView: Codable, Hashable, Sendable {
     public let creator: PieFedPerson
     /// Available on all versions
     public let recipient: PieFedPerson
-    /// Available from 1.3.0-dev onwards
+    /// Available from 1.3.0 onwards
     public let conversationId: Int?
 }
 

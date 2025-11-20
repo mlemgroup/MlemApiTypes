@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.3.0-dev onwards
+/// Available from 1.3.0 onwards
 public struct PieFedLeaveConversationRequest: PostRequest {
     public typealias Body = PieFedLeaveConversation
     public typealias Response = Int

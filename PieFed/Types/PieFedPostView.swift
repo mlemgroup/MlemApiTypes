@@ -44,7 +44,7 @@ public struct PieFedPostView: Codable, Hashable, Sendable {
     public let unreadComments: Int
     /// Available from 1.2.0 onwards
     public let flairList: [PieFedCommunityFlair]?
-    /// Available from 1.3.0-dev onwards
+    /// Available from 1.3.0 onwards
     public let canAuthUserModerate: Bool?
 }
 

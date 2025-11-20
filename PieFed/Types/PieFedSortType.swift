@@ -44,6 +44,6 @@ public enum PieFedSortType: String, Codable, Sendable {
     case topAll = "TopAll"
     /// Available from 1.2.0 onwards
     case top = "Top"
-    /// Available from 1.3.0-dev onwards
+    /// Available from 1.3.0 onwards
     case old = "Old"
 }

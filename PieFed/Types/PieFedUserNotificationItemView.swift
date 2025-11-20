@@ -34,7 +34,7 @@ public struct PieFedUserNotificationItemView: Codable, Hashable, Sendable {
     public let post: PieFedPostView?
     /// Available on all versions
     public let postId: Int?
-    /// Available from 1.3.0-dev onwards
+    /// Available from 1.3.0 onwards
     public let commentView: PieFedCommentView?
 }
 

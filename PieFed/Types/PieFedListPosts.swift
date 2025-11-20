@@ -38,7 +38,7 @@ public struct PieFedListPosts: Codable, Hashable, Sendable {
     public let feedId: Int?
     /// Available from 1.2.0 onwards
     public let topicId: Int?
-    /// Available from 1.3.0-dev onwards
+    /// Available from 1.3.0 onwards
     public let ignoreSticky: Bool?
 }
 

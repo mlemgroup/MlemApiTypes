@@ -28,7 +28,7 @@ public struct PieFedUserSaveSettings: Codable, Hashable, Sendable {
     public let defaultSortType: PieFedSortType?
     /// Available from 1.2.0 onwards
     public let showNsfl: Bool?
-    /// Available from 1.3.0-dev onwards
+    /// Available from 1.3.0 onwards
     public let extraFields: [PieFedNewUserExtraField]?
 }
 

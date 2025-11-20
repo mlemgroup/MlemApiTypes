@@ -16,9 +16,9 @@ public struct PieFedGetPrivateMessagesConversation: Codable, Hashable, Sendable 
     public let page: Int?
     /// Available on all versions
     public let limit: Int?
-    /// Available on all versions, made optional in 1.3.0-dev
+    /// Available on all versions, made optional in 1.3.0
     public let personId: Int?
-    /// Available from 1.3.0-dev onwards
+    /// Available from 1.3.0 onwards
     public let conversationId: Int?
 }
 
