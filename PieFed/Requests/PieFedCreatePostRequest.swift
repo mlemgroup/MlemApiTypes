@@ -24,7 +24,9 @@ public struct PieFedCreatePostRequest: PostRequest {
       url: URL?,
       body: String?,
       nsfw: Bool?,
-      languageId: Int?
+      languageId: Int?,
+      event: PieFedPostEvent?,
+      poll: PieFedPostPoll?
     ) {
         self.body = .init(
             title: title,
@@ -32,7 +34,9 @@ public struct PieFedCreatePostRequest: PostRequest {
             url: url,
             body: body,
             nsfw: nsfw,
-            languageId: languageId
+            languageId: languageId,
+            event: event,
+            poll: poll
         )
     }
 }

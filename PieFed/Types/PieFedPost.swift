@@ -56,6 +56,14 @@ public struct PieFedPost: Codable, Hashable, Sendable {
     public let crossPosts: [PieFedMiniCrossPosts]?
     /// Available from 1.3.0 onwards
     public let postType: PieFedPostType?
+    /// Available from 1.4.0-dev onwards
+    public let tags: String?
+    /// Available from 1.4.0-dev onwards
+    public let flair: String?
+    /// Available from 1.4.0-dev onwards
+    public let event: PieFedPostEvent?
+    /// Available from 1.4.0-dev onwards
+    public let poll: PieFedPostPoll?
 }
 
 public extension PieFedPost {
@@ -82,5 +90,9 @@ public extension PieFedPost {
         case imageDetails = "image_details"
         case crossPosts = "cross_posts"
         case postType = "post_type"
+        case tags = "tags"
+        case flair = "flair"
+        case event = "event"
+        case poll = "poll"
     }
 }

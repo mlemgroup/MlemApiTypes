@@ -24,7 +24,11 @@ public struct PieFedEditPostRequest: PutRequest {
       url: URL?,
       body: String?,
       nsfw: Bool?,
-      languageId: Int?
+      languageId: Int?,
+      event: PieFedPostEvent?,
+      poll: PieFedPostPoll?,
+      tags: String?,
+      flair: String?
     ) {
         self.body = .init(
             postId: postId,
@@ -32,7 +36,11 @@ public struct PieFedEditPostRequest: PutRequest {
             url: url,
             body: body,
             nsfw: nsfw,
-            languageId: languageId
+            languageId: languageId,
+            event: event,
+            poll: poll,
+            tags: tags,
+            flair: flair
         )
     }
 }
