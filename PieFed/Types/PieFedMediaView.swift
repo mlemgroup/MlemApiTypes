@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.3.0-dev onwards
 public struct PieFedMediaView: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let url: String?
+    public let url: URL?
     /// Available on all versions
     public let name: String?
 }

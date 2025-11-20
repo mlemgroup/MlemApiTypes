@@ -37,7 +37,7 @@ public struct PieFedPostReplyView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let saved: Bool
     /// Available on all versions
-    public let subscribed: String
+    public let subscribed: PieFedSubscribedType
     /// Available on all versions
     public let myVote: Int?
     /// Available on all versions

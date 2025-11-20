@@ -20,4 +20,6 @@ public enum PieFedCommunitySortType: String, Codable, Sendable {
     case hot = "Hot"
     /// Available from 1.2.0 onwards
     case top = "Top"
+    /// Available from 1.3.0-dev onwards
+    case topAll = "TopAll"
 }
