@@ -20,6 +20,6 @@ public enum PieFedSearchType: String, Codable, Sendable {
     case users = "Users"
     /// Available on all versions
     case url = "Url"
-    /// Available from 1.3.0-dev onwards
+    /// Available from 1.3.0 onwards
     case comments = "Comments"
 }

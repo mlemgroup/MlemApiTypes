@@ -1,5 +1,5 @@
 //
-//  PieFedMediaView.swift
+//  PieFedUserSetNote.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -10,17 +10,17 @@
 import Foundation
 import Rest
 
-/// Available from 1.3.0 onwards
-public struct PieFedMediaView: Codable, Hashable, Sendable {
+/// Available from 1.4.0-dev onwards
+public struct PieFedUserSetNote: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let url: URL?
+    public let personId: Int
     /// Available on all versions
-    public let name: String?
+    public let note: String?
 }
 
-public extension PieFedMediaView {
+public extension PieFedUserSetNote {
     enum CodingKeys: String, CodingKey {
-        case url = "url"
-        case name = "name"
+        case personId = "person_id"
+        case note = "note"
     }
 }
