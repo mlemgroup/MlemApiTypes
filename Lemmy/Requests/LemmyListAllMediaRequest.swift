@@ -35,14 +35,14 @@ public struct LemmyListAllMediaRequest: GetRequest {
 
 public enum LemmyListAllMediaResponseUnion: Decodable {
     case lemmyListMediaResponse(LemmyListMediaResponse)
-    case pagedResponse(PagedResponse<LocalImageView>)
+    case lemmyPagedResponse(LemmyPagedResponse<LemmyLocalImageView>)
     
     public init(from decoder: Decoder) throws {
         if let value = try? LemmyListMediaResponse(from: decoder) {
             self = .lemmyListMediaResponse(value)
             return
         }
-        let value = try PagedResponse<LocalImageView>(from: decoder)
-        self = .pagedResponse(value)
+        let value = try LemmyPagedResponse<LemmyLocalImageView>(from: decoder)
+        self = .lemmyPagedResponse(value)
     }
 }

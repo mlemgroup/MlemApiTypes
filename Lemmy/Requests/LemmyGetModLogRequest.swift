@@ -49,14 +49,14 @@ public struct LemmyGetModLogRequest: GetRequest {
 
 public enum LemmyGetModLogResponseUnion: Decodable {
     case lemmyGetModlogResponse(LemmyGetModlogResponse)
-    case pagedResponse(PagedResponse<ModlogView>)
+    case lemmyPagedResponse(LemmyPagedResponse<LemmyModlogView>)
     
     public init(from decoder: Decoder) throws {
         if let value = try? LemmyGetModlogResponse(from: decoder) {
             self = .lemmyGetModlogResponse(value)
             return
         }
-        let value = try PagedResponse<ModlogView>(from: decoder)
-        self = .pagedResponse(value)
+        let value = try LemmyPagedResponse<LemmyModlogView>(from: decoder)
+        self = .lemmyPagedResponse(value)
     }
 }

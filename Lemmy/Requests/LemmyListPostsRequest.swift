@@ -67,14 +67,14 @@ public struct LemmyListPostsRequest: GetRequest {
 
 public enum LemmyListPostsResponseUnion: Decodable {
     case lemmyGetPostsResponse(LemmyGetPostsResponse)
-    case pagedResponse(PagedResponse<PostView>)
+    case lemmyPagedResponse(LemmyPagedResponse<LemmyPostView>)
     
     public init(from decoder: Decoder) throws {
         if let value = try? LemmyGetPostsResponse(from: decoder) {
             self = .lemmyGetPostsResponse(value)
             return
         }
-        let value = try PagedResponse<PostView>(from: decoder)
-        self = .pagedResponse(value)
+        let value = try LemmyPagedResponse<LemmyPostView>(from: decoder)
+        self = .lemmyPagedResponse(value)
     }
 }

@@ -37,14 +37,14 @@ public struct LemmyListCommentLikesRequest: GetRequest {
 
 public enum LemmyListCommentLikesResponseUnion: Decodable {
     case lemmyListCommentLikesResponse(LemmyListCommentLikesResponse)
-    case pagedResponse(PagedResponse<VoteView>)
+    case lemmyPagedResponse(LemmyPagedResponse<LemmyVoteView>)
     
     public init(from decoder: Decoder) throws {
         if let value = try? LemmyListCommentLikesResponse(from: decoder) {
             self = .lemmyListCommentLikesResponse(value)
             return
         }
-        let value = try PagedResponse<VoteView>(from: decoder)
-        self = .pagedResponse(value)
+        let value = try LemmyPagedResponse<LemmyVoteView>(from: decoder)
+        self = .lemmyPagedResponse(value)
     }
 }

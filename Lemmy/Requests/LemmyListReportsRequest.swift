@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyListReportsRequest: GetRequest {
     public typealias Parameters = LemmyListReports
-    public typealias Response = PagedResponse<ReportCombinedView>
+    public typealias Response = LemmyPagedResponse<LemmyReportCombinedView>
     
     public let path: String = "api/v4/report/list"
     public let parameters: Parameters?

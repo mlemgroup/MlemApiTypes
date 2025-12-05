@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyListMultiCommunitiesRequest: GetRequest {
     public typealias Parameters = LemmyListMultiCommunities
-    public typealias Response = PagedResponse<MultiCommunityView>
+    public typealias Response = LemmyPagedResponse<LemmyMultiCommunityView>
     
     public let path: String = "api/v4/multi_community/list"
     public let parameters: Parameters?

@@ -27,14 +27,14 @@ public struct LemmyGetFederatedInstancesRequest: GetRequest {
 
 public enum LemmyGetFederatedInstancesResponseUnion: Decodable {
     case lemmyLegacyGetFederatedInstancesResponse(LemmyLegacyGetFederatedInstancesResponse)
-    case pagedResponse(PagedResponse<FederatedInstanceView>)
+    case lemmyPagedResponse(LemmyPagedResponse<LemmyFederatedInstanceView>)
     
     public init(from decoder: Decoder) throws {
         if let value = try? LemmyLegacyGetFederatedInstancesResponse(from: decoder) {
             self = .lemmyLegacyGetFederatedInstancesResponse(value)
             return
         }
-        let value = try PagedResponse<FederatedInstanceView>(from: decoder)
-        self = .pagedResponse(value)
+        let value = try LemmyPagedResponse<LemmyFederatedInstanceView>(from: decoder)
+        self = .lemmyPagedResponse(value)
     }
 }

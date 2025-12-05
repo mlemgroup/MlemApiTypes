@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyListPersonHiddenRequest: GetRequest {
     public typealias Parameters = LemmyListPersonHidden
-    public typealias Response = PagedResponse<PostView>
+    public typealias Response = LemmyPagedResponse<LemmyPostView>
     
     public let path: String = "api/v4/account/hidden"
     public let parameters: Parameters?

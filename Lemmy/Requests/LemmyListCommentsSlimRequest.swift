@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyListCommentsSlimRequest: GetRequest {
     public typealias Parameters = LemmyGetComments
-    public typealias Response = PagedResponse<CommentSlimView>
+    public typealias Response = LemmyPagedResponse<LemmyCommentSlimView>
     
     public let path: String = "api/v4/comment/list/slim"
     public let parameters: Parameters?

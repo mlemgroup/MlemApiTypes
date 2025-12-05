@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyGetPendingFollowsListRequest: GetRequest {
     public typealias Parameters = LemmyListCommunityPendingFollows
-    public typealias Response = PagedResponse<PendingFollowerView>
+    public typealias Response = LemmyPagedResponse<LemmyPendingFollowerView>
     
     public let path: String = "api/v4/community/pending_follows/list"
     public let parameters: Parameters?

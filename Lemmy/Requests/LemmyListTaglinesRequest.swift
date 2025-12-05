@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyListTaglinesRequest: GetRequest {
     public typealias Parameters = LemmyListTaglines
-    public typealias Response = PagedResponse<Tagline>
+    public typealias Response = LemmyPagedResponse<LemmyTagline>
     
     public let path: String = "api/v4/admin/tagline/list"
     public let parameters: Parameters?

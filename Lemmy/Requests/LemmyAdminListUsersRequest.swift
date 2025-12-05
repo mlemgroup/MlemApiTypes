@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyAdminListUsersRequest: GetRequest {
     public typealias Parameters = LemmyAdminListUsers
-    public typealias Response = PagedResponse<LocalUserView>
+    public typealias Response = LemmyPagedResponse<LemmyLocalUserView>
     
     public let path: String = "api/v4/admin/users"
     public let parameters: Parameters?

@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyListPersonSavedRequest: GetRequest {
     public typealias Parameters = LemmyListPersonSaved
-    public typealias Response = PagedResponse<PostCommentCombinedView>
+    public typealias Response = LemmyPagedResponse<LemmyPostCommentCombinedView>
     
     public let path: String = "api/v4/account/saved"
     public let parameters: Parameters?

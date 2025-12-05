@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyListNotificationsRequest: GetRequest {
     public typealias Parameters = LemmyListNotifications
-    public typealias Response = PagedResponse<NotificationView>
+    public typealias Response = LemmyPagedResponse<LemmyNotificationView>
     
     public let path: String = "api/v4/account/notification/list"
     public let parameters: Parameters?
