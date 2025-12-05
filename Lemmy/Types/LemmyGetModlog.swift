@@ -34,8 +34,6 @@ public struct LemmyGetModlog: Codable, Hashable, Sendable {
     public let listingType: LemmyListingType?
     /// Available from 1.0.0-alpha onwards
     public let pageCursor: String?
-    /// Available from 1.0.0-alpha onwards
-    public let pageBack: Bool?
 }
 
 public extension LemmyGetModlog {
@@ -50,6 +48,5 @@ public extension LemmyGetModlog {
         case commentId = "comment_id"
         case listingType = "listing_type"
         case pageCursor = "page_cursor"
-        case pageBack = "page_back"
     }
 }

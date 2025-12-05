@@ -1,5 +1,5 @@
 //
-//  LemmyPersonContentCombinedView.swift
+//  LemmyPostCommentCombinedView.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public enum LemmyPersonContentCombinedView: Codable, Hashable, Sendable {
+public enum LemmyPostCommentCombinedView: Codable, Hashable, Sendable {
     /// Available on all versions
     case post(LemmyPostView)
     /// Available on all versions

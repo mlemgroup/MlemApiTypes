@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyListReportsRequest: GetRequest {
     public typealias Parameters = LemmyListReports
-    public typealias Response = LemmyListReportsResponse
+    public typealias Response = LemmyPagedResponse<LemmyReportCombinedView>
     
     public let path: String = "api/v4/report/list"
     public let parameters: Parameters?
@@ -24,7 +24,6 @@ public struct LemmyListReportsRequest: GetRequest {
       postId: Int?,
       communityId: Int?,
       pageCursor: String?,
-      pageBack: Bool?,
       limit: Int?,
       showCommunityRuleViolations: Bool?,
       myReportsOnly: Bool?
@@ -35,7 +34,6 @@ public struct LemmyListReportsRequest: GetRequest {
             postId: postId,
             communityId: communityId,
             pageCursor: pageCursor,
-            pageBack: pageBack,
             limit: limit,
             showCommunityRuleViolations: showCommunityRuleViolations,
             myReportsOnly: myReportsOnly

@@ -10,21 +10,14 @@
 import Foundation
 import Rest
 
-/// Available from 0.19.4 onwards
+/// Available between 0.19.4 and 0.19.13
 public struct LemmyListMediaResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let images: [LemmyLocalImageView]
-    /// the pagination cursor to use to fetch the next page
-    /// Available from 1.0.0-alpha onwards
-    public let nextPage: String?
-    /// Available from 1.0.0-alpha onwards
-    public let prevPage: String?
 }
 
 public extension LemmyListMediaResponse {
     enum CodingKeys: String, CodingKey {
         case images = "images"
-        case nextPage = "next_page"
-        case prevPage = "prev_page"
     }
 }

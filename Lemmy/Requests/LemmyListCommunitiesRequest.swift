@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct LemmyListCommunitiesRequest: GetRequest {
     public typealias Parameters = LemmyListCommunities
-    public typealias Response = LemmyListCommunitiesResponse
+    public typealias Response = LemmyListCommunitiesResponseUnion
     
     public let path: String
     public let parameters: Parameters?
@@ -26,8 +26,7 @@ public struct LemmyListCommunitiesRequest: GetRequest {
       page: Int?,
       limit: Int?,
       timeRangeSeconds: Int?,
-      pageCursor: String?,
-      pageBack: Bool?
+      pageCursor: String?
     ) {
         self.path = endpoint == .v4 ? "api/v4/community/list" : "api/v3/community/list"
         self.parameters = .init(
@@ -37,8 +36,21 @@ public struct LemmyListCommunitiesRequest: GetRequest {
             page: page,
             limit: limit,
             timeRangeSeconds: timeRangeSeconds,
-            pageCursor: pageCursor,
-            pageBack: pageBack
+            pageCursor: pageCursor
         )
+    }
+}
+
+public enum LemmyListCommunitiesResponseUnion: Decodable {
+    case lemmyListCommunitiesResponse(LemmyListCommunitiesResponse)
+    case lemmyPagedResponse(LemmyPagedResponse<LemmyCommunityView>)
+    
+    public init(from decoder: Decoder) throws {
+        if let value = try? LemmyListCommunitiesResponse(from: decoder) {
+            self = .lemmyListCommunitiesResponse(value)
+            return
+        }
+        let value = try LemmyPagedResponse<LemmyCommunityView>(from: decoder)
+        self = .lemmyPagedResponse(value)
     }
 }

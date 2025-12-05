@@ -18,8 +18,6 @@ public struct LemmyListMedia: Codable, Hashable, Sendable {
     public let limit: Int?
     /// Available from 1.0.0-alpha onwards
     public let pageCursor: String?
-    /// Available from 1.0.0-alpha onwards
-    public let pageBack: Bool?
 }
 
 public extension LemmyListMedia {
@@ -27,6 +25,5 @@ public extension LemmyListMedia {
         case page = "page"
         case limit = "limit"
         case pageCursor = "page_cursor"
-        case pageBack = "page_back"
     }
 }

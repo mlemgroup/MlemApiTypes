@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyListCommentsSlimRequest: GetRequest {
     public typealias Parameters = LemmyGetComments
-    public typealias Response = LemmyGetCommentsSlimResponse
+    public typealias Response = LemmyPagedResponse<LemmyCommentSlimView>
     
     public let path: String = "api/v4/comment/list/slim"
     public let parameters: Parameters?
@@ -32,8 +32,7 @@ public struct LemmyListCommentsSlimRequest: GetRequest {
       likedOnly: Bool?,
       dislikedOnly: Bool?,
       timeRangeSeconds: Int?,
-      pageCursor: String?,
-      pageBack: Bool?
+      pageCursor: String?
     ) {
         self.parameters = .init(
             type_: type_,
@@ -49,8 +48,7 @@ public struct LemmyListCommentsSlimRequest: GetRequest {
             likedOnly: likedOnly,
             dislikedOnly: dislikedOnly,
             timeRangeSeconds: timeRangeSeconds,
-            pageCursor: pageCursor,
-            pageBack: pageBack
+            pageCursor: pageCursor
         )
     }
 }

@@ -25,8 +25,6 @@ public struct LemmyListMultiCommunities: Codable, Hashable, Sendable {
     /// Available on all versions
     public let pageCursor: String?
     /// Available on all versions
-    public let pageBack: Bool?
-    /// Available on all versions
     public let limit: Int?
 }
 
@@ -37,7 +35,6 @@ public extension LemmyListMultiCommunities {
         case creatorId = "creator_id"
         case timeRangeSeconds = "time_range_seconds"
         case pageCursor = "page_cursor"
-        case pageBack = "page_back"
         case limit = "limit"
     }
 }

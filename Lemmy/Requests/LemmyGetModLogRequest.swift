@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct LemmyGetModLogRequest: GetRequest {
     public typealias Parameters = LemmyGetModlog
-    public typealias Response = LemmyGetModlogResponse
+    public typealias Response = LemmyGetModLogResponseUnion
     
     public let path: String
     public let parameters: Parameters?
@@ -29,8 +29,7 @@ public struct LemmyGetModLogRequest: GetRequest {
       postId: Int?,
       commentId: Int?,
       listingType: LemmyListingType?,
-      pageCursor: String?,
-      pageBack: Bool?
+      pageCursor: String?
     ) {
         self.path = endpoint == .v4 ? "api/v4/modlog" : "api/v3/modlog"
         self.parameters = .init(
@@ -43,8 +42,21 @@ public struct LemmyGetModLogRequest: GetRequest {
             postId: postId,
             commentId: commentId,
             listingType: listingType,
-            pageCursor: pageCursor,
-            pageBack: pageBack
+            pageCursor: pageCursor
         )
+    }
+}
+
+public enum LemmyGetModLogResponseUnion: Decodable {
+    case lemmyGetModlogResponse(LemmyGetModlogResponse)
+    case lemmyPagedResponse(LemmyPagedResponse<LemmyModlogView>)
+    
+    public init(from decoder: Decoder) throws {
+        if let value = try? LemmyGetModlogResponse(from: decoder) {
+            self = .lemmyGetModlogResponse(value)
+            return
+        }
+        let value = try LemmyPagedResponse<LemmyModlogView>(from: decoder)
+        self = .lemmyPagedResponse(value)
     }
 }

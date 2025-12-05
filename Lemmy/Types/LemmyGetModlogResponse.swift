@@ -10,45 +10,38 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.13
 public struct LemmyGetModlogResponse: Codable, Hashable, Sendable {
-    /// Unavailable after 0.19.13
-    public let removedPosts: [LemmyModRemovePostView]?
-    /// Unavailable after 0.19.13
-    public let lockedPosts: [LemmyModLockPostView]?
-    /// Unavailable after 0.19.13
-    public let featuredPosts: [LemmyModFeaturePostView]?
-    /// Unavailable after 0.19.13
-    public let removedComments: [LemmyModRemoveCommentView]?
-    /// Unavailable after 0.19.13
-    public let removedCommunities: [LemmyAdminRemoveCommunityView]?
-    /// Unavailable after 0.19.13
-    public let bannedFromCommunity: [LemmyModBanFromCommunityView]?
-    /// Unavailable after 0.19.13
-    public let banned: [LemmyAdminBanView]?
-    /// Unavailable after 0.19.13
-    public let addedToCommunity: [LemmyModAddToCommunityView]?
-    /// Unavailable after 0.19.13
-    public let transferredToCommunity: [LemmyModTransferCommunityView]?
-    /// Unavailable after 0.19.13
-    public let added: [LemmyAdminAddView]?
-    /// Unavailable after 0.19.13
-    public let adminPurgedPersons: [LemmyAdminPurgePersonView]?
-    /// Unavailable after 0.19.13
-    public let adminPurgedCommunities: [LemmyAdminPurgeCommunityView]?
-    /// Unavailable after 0.19.13
-    public let adminPurgedPosts: [LemmyAdminPurgePostView]?
-    /// Unavailable after 0.19.13
-    public let adminPurgedComments: [LemmyAdminPurgeCommentView]?
-    /// Unavailable after 0.19.13
-    public let hiddenCommunities: [LemmyModHideCommunityView]?
-    /// Available from 1.0.0-alpha onwards
-    public let modlog: [LemmyModlogView]?
-    /// the pagination cursor to use to fetch the next page
-    /// Available from 1.0.0-alpha onwards
-    public let nextPage: String?
-    /// Available from 1.0.0-alpha onwards
-    public let prevPage: String?
+    /// Available on all versions
+    public let removedPosts: [LemmyModRemovePostView]
+    /// Available on all versions
+    public let lockedPosts: [LemmyModLockPostView]
+    /// Available on all versions
+    public let featuredPosts: [LemmyModFeaturePostView]
+    /// Available on all versions
+    public let removedComments: [LemmyModRemoveCommentView]
+    /// Available on all versions
+    public let removedCommunities: [LemmyAdminRemoveCommunityView]
+    /// Available on all versions
+    public let bannedFromCommunity: [LemmyModBanFromCommunityView]
+    /// Available on all versions
+    public let banned: [LemmyAdminBanView]
+    /// Available on all versions
+    public let addedToCommunity: [LemmyModAddToCommunityView]
+    /// Available on all versions
+    public let transferredToCommunity: [LemmyModTransferCommunityView]
+    /// Available on all versions
+    public let added: [LemmyAdminAddView]
+    /// Available on all versions
+    public let adminPurgedPersons: [LemmyAdminPurgePersonView]
+    /// Available on all versions
+    public let adminPurgedCommunities: [LemmyAdminPurgeCommunityView]
+    /// Available on all versions
+    public let adminPurgedPosts: [LemmyAdminPurgePostView]
+    /// Available on all versions
+    public let adminPurgedComments: [LemmyAdminPurgeCommentView]
+    /// Available on all versions
+    public let hiddenCommunities: [LemmyModHideCommunityView]
 }
 
 public extension LemmyGetModlogResponse {
@@ -68,8 +61,5 @@ public extension LemmyGetModlogResponse {
         case adminPurgedPosts = "admin_purged_posts"
         case adminPurgedComments = "admin_purged_comments"
         case hiddenCommunities = "hidden_communities"
-        case modlog = "modlog"
-        case nextPage = "next_page"
-        case prevPage = "prev_page"
     }
 }

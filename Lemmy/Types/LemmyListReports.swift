@@ -27,8 +27,6 @@ public struct LemmyListReports: Codable, Hashable, Sendable {
     /// Available on all versions
     public let pageCursor: String?
     /// Available on all versions
-    public let pageBack: Bool?
-    /// Available on all versions
     public let limit: Int?
     /// Only for admins: also show reports with `violates_instance_rules=false`
     /// Available on all versions
@@ -45,7 +43,6 @@ public extension LemmyListReports {
         case postId = "post_id"
         case communityId = "community_id"
         case pageCursor = "page_cursor"
-        case pageBack = "page_back"
         case limit = "limit"
         case showCommunityRuleViolations = "show_community_rule_violations"
         case myReportsOnly = "my_reports_only"
