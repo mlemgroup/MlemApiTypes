@@ -21,8 +21,6 @@ public struct LemmyListCommunityPendingFollows: Codable, Hashable, Sendable {
     /// Available on all versions
     public let pageCursor: String?
     /// Available on all versions
-    public let pageBack: Bool?
-    /// Available on all versions
     public let limit: Int?
 }
 
@@ -31,7 +29,6 @@ public extension LemmyListCommunityPendingFollows {
         case unreadOnly = "unread_only"
         case allCommunities = "all_communities"
         case pageCursor = "page_cursor"
-        case pageBack = "page_back"
         case limit = "limit"
     }
 }

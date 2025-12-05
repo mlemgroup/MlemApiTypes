@@ -49,8 +49,6 @@ public struct LemmySearch: Codable, Hashable, Sendable {
     public let showNsfw: Bool?
     /// Available from 1.0.0-alpha onwards
     public let pageCursor: String?
-    /// Available from 1.0.0-alpha onwards
-    public let pageBack: Bool?
 }
 
 public extension LemmySearch {
@@ -72,6 +70,5 @@ public extension LemmySearch {
         case dislikedOnly = "disliked_only"
         case showNsfw = "show_nsfw"
         case pageCursor = "page_cursor"
-        case pageBack = "page_back"
     }
 }

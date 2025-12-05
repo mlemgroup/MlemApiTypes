@@ -20,8 +20,6 @@ public struct LemmyListPostLikes: Codable, Hashable, Sendable {
     public let limit: Int?
     /// Available from 1.0.0-alpha onwards
     public let pageCursor: String?
-    /// Available from 1.0.0-alpha onwards
-    public let pageBack: Bool?
 }
 
 public extension LemmyListPostLikes {
@@ -30,6 +28,5 @@ public extension LemmyListPostLikes {
         case page = "page"
         case limit = "limit"
         case pageCursor = "page_cursor"
-        case pageBack = "page_back"
     }
 }

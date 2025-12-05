@@ -59,8 +59,6 @@ public struct LemmyGetPosts: Codable, Hashable, Sendable {
     /// If true, then only show posts with no comments
     /// Available from 1.0.0-alpha onwards
     public let noCommentsOnly: Bool?
-    /// Available from 1.0.0-alpha onwards
-    public let pageBack: Bool?
 }
 
 public extension LemmyGetPosts {
@@ -84,6 +82,5 @@ public extension LemmyGetPosts {
         case hideMedia = "hide_media"
         case markAsRead = "mark_as_read"
         case noCommentsOnly = "no_comments_only"
-        case pageBack = "page_back"
     }
 }

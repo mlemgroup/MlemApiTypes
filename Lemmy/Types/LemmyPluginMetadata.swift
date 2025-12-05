@@ -15,9 +15,9 @@ public struct LemmyPluginMetadata: Codable, Hashable, Sendable {
     /// Available on all versions
     public let name: String
     /// Available on all versions
-    public let url: URL
+    public let url: URL?
     /// Available on all versions
-    public let description: String
+    public let description: String?
 }
 
 public extension LemmyPluginMetadata {

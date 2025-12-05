@@ -19,8 +19,6 @@ public struct LemmyListPersonLiked: Codable, Hashable, Sendable {
     /// Available on all versions
     public let pageCursor: String?
     /// Available on all versions
-    public let pageBack: Bool?
-    /// Available on all versions
     public let limit: Int?
 }
 
@@ -29,7 +27,6 @@ public extension LemmyListPersonLiked {
         case type_ = "type_"
         case likeType = "like_type"
         case pageCursor = "page_cursor"
-        case pageBack = "page_back"
         case limit = "limit"
     }
 }

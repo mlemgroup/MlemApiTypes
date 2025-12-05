@@ -28,8 +28,6 @@ public struct LemmyListCommunities: Codable, Hashable, Sendable {
     public let timeRangeSeconds: Int?
     /// Available from 1.0.0-alpha onwards
     public let pageCursor: String?
-    /// Available from 1.0.0-alpha onwards
-    public let pageBack: Bool?
 }
 
 public extension LemmyListCommunities {
@@ -41,6 +39,5 @@ public extension LemmyListCommunities {
         case limit = "limit"
         case timeRangeSeconds = "time_range_seconds"
         case pageCursor = "page_cursor"
-        case pageBack = "page_back"
     }
 }

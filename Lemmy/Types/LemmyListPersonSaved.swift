@@ -17,8 +17,6 @@ public struct LemmyListPersonSaved: Codable, Hashable, Sendable {
     /// Available on all versions
     public let pageCursor: String?
     /// Available on all versions
-    public let pageBack: Bool?
-    /// Available on all versions
     public let limit: Int?
 }
 
@@ -26,7 +24,6 @@ public extension LemmyListPersonSaved {
     enum CodingKeys: String, CodingKey {
         case type_ = "type_"
         case pageCursor = "page_cursor"
-        case pageBack = "page_back"
         case limit = "limit"
     }
 }
