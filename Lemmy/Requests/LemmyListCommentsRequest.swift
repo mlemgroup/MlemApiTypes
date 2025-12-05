@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct LemmyListCommentsRequest: GetRequest {
     public typealias Parameters = LemmyGetComments
-    public typealias Response = LemmyGetCommentsResponse
+    public typealias Response = LemmyListCommentsResponseUnion
     
     public let path: String
     public let parameters: Parameters?
@@ -33,8 +33,7 @@ public struct LemmyListCommentsRequest: GetRequest {
       likedOnly: Bool?,
       dislikedOnly: Bool?,
       timeRangeSeconds: Int?,
-      pageCursor: String?,
-      pageBack: Bool?
+      pageCursor: String?
     ) {
         self.path = endpoint == .v4 ? "api/v4/comment/list" : "api/v3/comment/list"
         self.parameters = .init(
@@ -51,8 +50,21 @@ public struct LemmyListCommentsRequest: GetRequest {
             likedOnly: likedOnly,
             dislikedOnly: dislikedOnly,
             timeRangeSeconds: timeRangeSeconds,
-            pageCursor: pageCursor,
-            pageBack: pageBack
+            pageCursor: pageCursor
         )
+    }
+}
+
+public enum LemmyListCommentsResponseUnion: Decodable {
+    case lemmyGetCommentsResponse(LemmyGetCommentsResponse)
+    case pagedResponse(PagedResponse<CommentView>)
+    
+    public init(from decoder: Decoder) throws {
+        if let value = try? LemmyGetCommentsResponse(from: decoder) {
+            self = .lemmyGetCommentsResponse(value)
+            return
+        }
+        let value = try PagedResponse<CommentView>(from: decoder)
+        self = .pagedResponse(value)
     }
 }

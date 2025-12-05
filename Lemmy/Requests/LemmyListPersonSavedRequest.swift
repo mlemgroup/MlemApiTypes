@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyListPersonSavedRequest: GetRequest {
     public typealias Parameters = LemmyListPersonSaved
-    public typealias Response = LemmyListPersonSavedResponse
+    public typealias Response = PagedResponse<PostCommentCombinedView>
     
     public let path: String = "api/v4/account/saved"
     public let parameters: Parameters?
@@ -21,13 +21,11 @@ public struct LemmyListPersonSavedRequest: GetRequest {
     init(
       type_: LemmyPersonContentType?,
       pageCursor: String?,
-      pageBack: Bool?,
       limit: Int?
     ) {
         self.parameters = .init(
             type_: type_,
             pageCursor: pageCursor,
-            pageBack: pageBack,
             limit: limit
         )
     }

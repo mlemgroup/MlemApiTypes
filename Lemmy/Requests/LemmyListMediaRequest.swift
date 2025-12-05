@@ -13,7 +13,7 @@ import Rest
 /// Available from 0.19.4 onwards
 public struct LemmyListMediaRequest: GetRequest {
     public typealias Parameters = LemmyListMedia
-    public typealias Response = LemmyListMediaResponse
+    public typealias Response = LemmyListMediaResponseUnion
     
     public let path: String
     public let parameters: Parameters?
@@ -22,15 +22,27 @@ public struct LemmyListMediaRequest: GetRequest {
       endpoint: LemmyEndpointVersion,
       page: Int?,
       limit: Int?,
-      pageCursor: String?,
-      pageBack: Bool?
+      pageCursor: String?
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/media/list" : "api/v3/account/list_media"
         self.parameters = .init(
             page: page,
             limit: limit,
-            pageCursor: pageCursor,
-            pageBack: pageBack
+            pageCursor: pageCursor
         )
+    }
+}
+
+public enum LemmyListMediaResponseUnion: Decodable {
+    case lemmyListMediaResponse(LemmyListMediaResponse)
+    case pagedResponse(PagedResponse<LocalImageView>)
+    
+    public init(from decoder: Decoder) throws {
+        if let value = try? LemmyListMediaResponse(from: decoder) {
+            self = .lemmyListMediaResponse(value)
+            return
+        }
+        let value = try PagedResponse<LocalImageView>(from: decoder)
+        self = .pagedResponse(value)
     }
 }

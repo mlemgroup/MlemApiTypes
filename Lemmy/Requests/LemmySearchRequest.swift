@@ -36,8 +36,7 @@ public struct LemmySearchRequest: GetRequest {
       likedOnly: Bool?,
       dislikedOnly: Bool?,
       showNsfw: Bool?,
-      pageCursor: String?,
-      pageBack: Bool?
+      pageCursor: String?
     ) {
         self.path = endpoint == .v4 ? "api/v4/search" : "api/v3/search"
         self.parameters = .init(
@@ -57,8 +56,7 @@ public struct LemmySearchRequest: GetRequest {
             likedOnly: likedOnly,
             dislikedOnly: dislikedOnly,
             showNsfw: showNsfw,
-            pageCursor: pageCursor,
-            pageBack: pageBack
+            pageCursor: pageCursor
         )
     }
 }

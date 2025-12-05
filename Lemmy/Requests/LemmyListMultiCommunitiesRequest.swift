@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyListMultiCommunitiesRequest: GetRequest {
     public typealias Parameters = LemmyListMultiCommunities
-    public typealias Response = LemmyListMultiCommunitiesResponse
+    public typealias Response = PagedResponse<MultiCommunityView>
     
     public let path: String = "api/v4/multi_community/list"
     public let parameters: Parameters?
@@ -24,7 +24,6 @@ public struct LemmyListMultiCommunitiesRequest: GetRequest {
       creatorId: Int?,
       timeRangeSeconds: Int?,
       pageCursor: String?,
-      pageBack: Bool?,
       limit: Int?
     ) {
         self.parameters = .init(
@@ -33,7 +32,6 @@ public struct LemmyListMultiCommunitiesRequest: GetRequest {
             creatorId: creatorId,
             timeRangeSeconds: timeRangeSeconds,
             pageCursor: pageCursor,
-            pageBack: pageBack,
             limit: limit
         )
     }

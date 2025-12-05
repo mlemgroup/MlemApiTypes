@@ -13,7 +13,7 @@ import Rest
 /// Available on all versions
 public struct LemmyListPostsRequest: GetRequest {
     public typealias Parameters = LemmyGetPosts
-    public typealias Response = LemmyGetPostsResponse
+    public typealias Response = LemmyListPostsResponseUnion
     
     public let path: String
     public let parameters: Parameters?
@@ -38,8 +38,7 @@ public struct LemmyListPostsRequest: GetRequest {
       multiCommunityName: String?,
       hideMedia: Bool?,
       markAsRead: Bool?,
-      noCommentsOnly: Bool?,
-      pageBack: Bool?
+      noCommentsOnly: Bool?
     ) {
         self.path = endpoint == .v4 ? "api/v4/post/list" : "api/v3/post/list"
         self.parameters = .init(
@@ -61,8 +60,21 @@ public struct LemmyListPostsRequest: GetRequest {
             multiCommunityName: multiCommunityName,
             hideMedia: hideMedia,
             markAsRead: markAsRead,
-            noCommentsOnly: noCommentsOnly,
-            pageBack: pageBack
+            noCommentsOnly: noCommentsOnly
         )
+    }
+}
+
+public enum LemmyListPostsResponseUnion: Decodable {
+    case lemmyGetPostsResponse(LemmyGetPostsResponse)
+    case pagedResponse(PagedResponse<PostView>)
+    
+    public init(from decoder: Decoder) throws {
+        if let value = try? LemmyGetPostsResponse(from: decoder) {
+            self = .lemmyGetPostsResponse(value)
+            return
+        }
+        let value = try PagedResponse<PostView>(from: decoder)
+        self = .pagedResponse(value)
     }
 }
