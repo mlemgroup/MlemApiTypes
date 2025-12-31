@@ -46,6 +46,8 @@ public struct PieFedPostView: Codable, Hashable, Sendable {
     public let flairList: [PieFedCommunityFlair]?
     /// Available from 1.3.0 onwards
     public let canAuthUserModerate: Bool?
+    /// Available from 1.4.0-dev onwards
+    public let altText: String?
 }
 
 public extension PieFedPostView {
@@ -67,5 +69,6 @@ public extension PieFedPostView {
         case unreadComments = "unread_comments"
         case flairList = "flair_list"
         case canAuthUserModerate = "can_auth_user_moderate"
+        case altText = "alt_text"
     }
 }

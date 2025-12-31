@@ -1,5 +1,5 @@
 //
-//  PieFedRateCommunity.swift
+//  PieFedMarkCommentAsAnswer.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,16 +11,16 @@ import Foundation
 import Rest
 
 /// Available from 1.4.0-dev onwards
-public struct PieFedRateCommunity: Codable, Hashable, Sendable {
+public struct PieFedMarkCommentAsAnswer: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let communityId: Int
+    public let commentReplyId: Int
     /// Available on all versions
-    public let rating: Int?
+    public let answer: Bool
 }
 
-public extension PieFedRateCommunity {
+public extension PieFedMarkCommentAsAnswer {
     enum CodingKeys: String, CodingKey {
-        case communityId = "community_id"
-        case rating = "rating"
+        case commentReplyId = "comment_reply_id"
+        case answer = "answer"
     }
 }

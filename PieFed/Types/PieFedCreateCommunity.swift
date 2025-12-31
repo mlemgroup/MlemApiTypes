@@ -32,6 +32,8 @@ public struct PieFedCreateCommunity: Codable, Hashable, Sendable {
     public let localOnly: Bool?
     /// Available on all versions
     public let discussionLanguages: [Int]?
+    /// Available from 1.4.0-dev onwards
+    public let questionAnswer: Bool?
 }
 
 public extension PieFedCreateCommunity {
@@ -46,5 +48,6 @@ public extension PieFedCreateCommunity {
         case restrictedToMods = "restricted_to_mods"
         case localOnly = "local_only"
         case discussionLanguages = "discussion_languages"
+        case questionAnswer = "question_answer"
     }
 }

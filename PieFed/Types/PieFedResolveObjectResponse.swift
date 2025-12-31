@@ -20,6 +20,8 @@ public struct PieFedResolveObjectResponse: Codable, Hashable, Sendable {
     public let community: PieFedCommunityView?
     /// Available on all versions
     public let person: PieFedPersonView?
+    /// Available from 1.4.0-dev onwards
+    public let feed: PieFedFeedView?
 }
 
 public extension PieFedResolveObjectResponse {
@@ -28,5 +30,6 @@ public extension PieFedResolveObjectResponse {
         case post = "post"
         case community = "community"
         case person = "person"
+        case feed = "feed"
     }
 }

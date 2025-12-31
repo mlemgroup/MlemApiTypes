@@ -57,9 +57,13 @@ public struct PieFedPost: Codable, Hashable, Sendable {
     /// Available from 1.3.0 onwards
     public let postType: PieFedPostType?
     /// Available from 1.4.0-dev onwards
+    public let aiGenerated: Bool?
+    /// Available from 1.4.0-dev onwards
     public let tags: String?
     /// Available from 1.4.0-dev onwards
     public let flair: String?
+    /// Available from 1.4.0-dev onwards
+    public let emojiReactions: [PieFedReactions]?
     /// Available from 1.4.0-dev onwards
     public let event: PieFedPostEvent?
     /// Available from 1.4.0-dev onwards
@@ -90,8 +94,10 @@ public extension PieFedPost {
         case imageDetails = "image_details"
         case crossPosts = "cross_posts"
         case postType = "post_type"
+        case aiGenerated = "ai_generated"
         case tags = "tags"
         case flair = "flair"
+        case emojiReactions = "emoji_reactions"
         case event = "event"
         case poll = "poll"
     }

@@ -29,7 +29,8 @@ public struct PieFedEditCommunityRequest: PutRequest {
       restrictedToMods: Bool?,
       localOnly: Bool?,
       discussionLanguages: [Int]?,
-      communityId: Int?
+      communityId: Int?,
+      questionAnswer: Bool?
     ) {
         self.body = .init(
             id: id,
@@ -42,7 +43,8 @@ public struct PieFedEditCommunityRequest: PutRequest {
             restrictedToMods: restrictedToMods,
             localOnly: localOnly,
             discussionLanguages: discussionLanguages,
-            communityId: communityId
+            communityId: communityId,
+            questionAnswer: questionAnswer
         )
     }
 }

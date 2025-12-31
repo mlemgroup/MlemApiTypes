@@ -40,6 +40,10 @@ public struct PieFedComment: Codable, Hashable, Sendable {
     public let languageId: Int
     /// Available from 1.2.0 onwards
     public let locked: Bool?
+    /// Available from 1.4.0-dev onwards
+    public let answer: Bool?
+    /// Available from 1.4.0-dev onwards
+    public let emojiReactions: [PieFedReactions]?
 }
 
 public extension PieFedComment {
@@ -58,5 +62,7 @@ public extension PieFedComment {
         case distinguished = "distinguished"
         case languageId = "language_id"
         case locked = "locked"
+        case answer = "answer"
+        case emojiReactions = "emoji_reactions"
     }
 }

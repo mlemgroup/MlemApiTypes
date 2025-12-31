@@ -20,6 +20,10 @@ public struct PieFedCommunityFlairDeleteResponse: Codable, Hashable, Sendable {
     public let moderators: [PieFedCommunityModeratorView]
     /// Available on all versions
     public let site: PieFedSite?
+    /// Available from 1.4.0-dev onwards
+    public let canRate: Bool?
+    /// Available from 1.4.0-dev onwards
+    public let myRating: Int?
 }
 
 public extension PieFedCommunityFlairDeleteResponse {
@@ -28,5 +32,7 @@ public extension PieFedCommunityFlairDeleteResponse {
         case discussionLanguages = "discussion_languages"
         case moderators = "moderators"
         case site = "site"
+        case canRate = "can_rate"
+        case myRating = "my_rating"
     }
 }

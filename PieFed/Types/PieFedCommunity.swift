@@ -50,6 +50,10 @@ public struct PieFedCommunity: Codable, Hashable, Sendable {
     public let updated: Date?
     /// Available from 1.1.0 onwards
     public let postingWarning: String?
+    /// Available from 1.4.0-dev onwards
+    public let aiGenerated: Bool?
+    /// Available from 1.4.0-dev onwards
+    public let questionAnswer: Bool?
 }
 
 public extension PieFedCommunity {
@@ -73,5 +77,7 @@ public extension PieFedCommunity {
         case title = "title"
         case updated = "updated"
         case postingWarning = "posting_warning"
+        case aiGenerated = "ai_generated"
+        case questionAnswer = "question_answer"
     }
 }

@@ -21,12 +21,14 @@ public struct PieFedLikePostRequest: PostRequest {
     init(
       postId: Int,
       score: Int,
-      `private`: Bool?
+      `private`: Bool?,
+      emoji: String?
     ) {
         self.body = .init(
             postId: postId,
             score: score,
-            `private`: `private`
+            `private`: `private`,
+            emoji: emoji
         )
     }
 }

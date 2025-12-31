@@ -27,11 +27,11 @@ public struct PieFedGetSiteInstanceChooserSearchResponseItem: Codable, Hashable,
     /// Available on all versions
     public let sidebar: String
     /// Available on all versions
-    public let logoUrl: String
+    public let logoUrl: URL
     /// Available on all versions
     public let maturity: String
     /// Available on all versions
-    public let tosUrl: String
+    public let tosUrl: URL
     /// Available on all versions
     public let uptime: String
     /// Available on all versions

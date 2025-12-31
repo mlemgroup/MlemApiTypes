@@ -29,11 +29,11 @@ public struct PieFedGetSiteInstanceChooserResponse: Codable, Hashable, Sendable 
     /// Available on all versions
     public let sidebar: String
     /// Available on all versions
-    public let logoUrl: String
+    public let logoUrl: URL
     /// Available on all versions
     public let maturity: String
     /// Available on all versions
-    public let tosUrl: String
+    public let tosUrl: URL
     /// Available on all versions
     public let mau: Int
     /// Available on all versions

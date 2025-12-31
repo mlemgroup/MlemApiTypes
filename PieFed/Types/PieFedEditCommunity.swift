@@ -34,6 +34,8 @@ public struct PieFedEditCommunity: Codable, Hashable, Sendable {
     public let discussionLanguages: [Int]?
     /// Available from 1.2.0 onwards
     public let communityId: Int?
+    /// Available from 1.4.0-dev onwards
+    public let questionAnswer: Bool?
 }
 
 public extension PieFedEditCommunity {
@@ -49,5 +51,6 @@ public extension PieFedEditCommunity {
         case localOnly = "local_only"
         case discussionLanguages = "discussion_languages"
         case communityId = "community_id"
+        case questionAnswer = "question_answer"
     }
 }

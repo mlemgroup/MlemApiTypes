@@ -28,7 +28,8 @@ public struct PieFedCreateCommunityRequest: PostRequest {
       nsfw: Bool?,
       restrictedToMods: Bool?,
       localOnly: Bool?,
-      discussionLanguages: [Int]?
+      discussionLanguages: [Int]?,
+      questionAnswer: Bool?
     ) {
         self.body = .init(
             name: name,
@@ -40,7 +41,8 @@ public struct PieFedCreateCommunityRequest: PostRequest {
             nsfw: nsfw,
             restrictedToMods: restrictedToMods,
             localOnly: localOnly,
-            discussionLanguages: discussionLanguages
+            discussionLanguages: discussionLanguages,
+            questionAnswer: questionAnswer
         )
     }
 }
