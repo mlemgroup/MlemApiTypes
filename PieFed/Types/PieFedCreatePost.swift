@@ -24,13 +24,13 @@ public struct PieFedCreatePost: Codable, Hashable, Sendable {
     public let nsfw: Bool?
     /// Available on all versions
     public let languageId: Int?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let altText: String?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let aiGenerated: Bool?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let event: PieFedPostEvent?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let poll: PieFedPostPoll?
 }
 

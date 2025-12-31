@@ -46,7 +46,7 @@ public struct PieFedPostSetFlairResponse: Codable, Hashable, Sendable {
     public let flairList: [PieFedCommunityFlair]?
     /// Available from 1.3.0 onwards
     public let canAuthUserModerate: Bool?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let altText: String?
 }
 

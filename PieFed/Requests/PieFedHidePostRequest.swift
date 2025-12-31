@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.4.0-dev onwards
+/// Available from 1.4.0 onwards
 public struct PieFedHidePostRequest: PostRequest {
     public typealias Body = PieFedHidePost
     public typealias Response = PieFedGetPostResponse

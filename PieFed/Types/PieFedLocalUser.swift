@@ -28,37 +28,37 @@ public struct PieFedLocalUser: Codable, Hashable, Sendable {
     public let defaultCommentSortType: PieFedCommentSortType?
     /// Available from 1.2.0 onwards
     public let showNsfl: Bool?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let acceptPrivateMessages: PieFedPrivateMessagePermissionsType?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let botVisibility: PieFedContentVisibilityType?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let aiVisibility: PieFedContentVisibilityType?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let communityKeywordFilter: [String]?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let emailUnread: Bool?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let federateVotes: Bool?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let feedAutoFollow: Bool?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let feedAutoLeave: Bool?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let hideLowQuality: Bool?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let indexable: Bool?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let newsletter: Bool?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let nsflVisibility: PieFedContentVisibilityType?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let nsfwVisibility: PieFedContentVisibilityType?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let replyCollapseThreshold: Int?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let replyHideThreshold: Int?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let searchable: Bool?
 }
 

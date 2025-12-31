@@ -56,17 +56,17 @@ public struct PieFedPost: Codable, Hashable, Sendable {
     public let crossPosts: [PieFedMiniCrossPosts]?
     /// Available from 1.3.0 onwards
     public let postType: PieFedPostType?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let aiGenerated: Bool?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let tags: String?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let flair: String?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let emojiReactions: [PieFedReactions]?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let event: PieFedPostEvent?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let poll: PieFedPostPoll?
 }
 

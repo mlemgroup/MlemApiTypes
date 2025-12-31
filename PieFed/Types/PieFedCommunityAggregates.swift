@@ -32,9 +32,9 @@ public struct PieFedCommunityAggregates: Codable, Hashable, Sendable {
     public let activeMonthly: Int?
     /// Available from 1.1.0 onwards
     public let activeWeekly: Int?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let averageRating: Double?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let totalRatings: Int?
 }
 

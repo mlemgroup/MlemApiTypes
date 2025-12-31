@@ -34,7 +34,7 @@ public struct PieFedEditCommunity: Codable, Hashable, Sendable {
     public let discussionLanguages: [Int]?
     /// Available from 1.2.0 onwards
     public let communityId: Int?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let questionAnswer: Bool?
 }
 

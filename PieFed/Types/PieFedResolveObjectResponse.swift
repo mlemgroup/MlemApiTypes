@@ -20,7 +20,7 @@ public struct PieFedResolveObjectResponse: Codable, Hashable, Sendable {
     public let community: PieFedCommunityView?
     /// Available on all versions
     public let person: PieFedPersonView?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let feed: PieFedFeedView?
 }
 

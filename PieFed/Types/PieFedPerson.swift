@@ -44,7 +44,7 @@ public struct PieFedPerson: Codable, Hashable, Sendable {
     public let aboutHtml: String?
     /// Available from 1.3.0 onwards
     public let extraFields: [PieFedUserExtraField]?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let note: String?
 }
 

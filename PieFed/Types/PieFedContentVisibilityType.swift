@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.4.0-dev onwards
+/// Available from 1.4.0 onwards
 public enum PieFedContentVisibilityType: String, Codable, Sendable {
     /// Available on all versions
     case show = "Show"

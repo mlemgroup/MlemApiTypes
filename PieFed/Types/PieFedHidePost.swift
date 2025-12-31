@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.4.0-dev onwards
+/// Available from 1.4.0 onwards
 public struct PieFedHidePost: Codable, Hashable, Sendable {
     /// Available on all versions
     public let postId: Int

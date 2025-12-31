@@ -20,9 +20,9 @@ public struct PieFedCommunityFlairDeleteResponse: Codable, Hashable, Sendable {
     public let moderators: [PieFedCommunityModeratorView]
     /// Available on all versions
     public let site: PieFedSite?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let canRate: Bool?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let myRating: Int?
 }
 

@@ -50,9 +50,9 @@ public struct PieFedCommunity: Codable, Hashable, Sendable {
     public let updated: Date?
     /// Available from 1.1.0 onwards
     public let postingWarning: String?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let aiGenerated: Bool?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let questionAnswer: Bool?
 }
 
