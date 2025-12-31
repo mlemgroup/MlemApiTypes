@@ -33,7 +33,7 @@ public struct PieFedLocalUser: Codable, Hashable, Sendable {
     /// Available from 1.4.0 onwards
     public let botVisibility: PieFedContentVisibilityType?
     /// Available from 1.4.0 onwards
-    public let aiVisibility: PieFedContentVisibilityType?
+    public let aiVisibility: PieFedAiVisibilityType?
     /// Available from 1.4.0 onwards
     public let communityKeywordFilter: [String]?
     /// Available from 1.4.0 onwards

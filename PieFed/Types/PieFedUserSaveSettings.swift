@@ -57,7 +57,7 @@ public struct PieFedUserSaveSettings: Codable, Hashable, Sendable {
     /// Available from 1.4.0 onwards
     public let nsfwVisibility: PieFedContentVisibilityType?
     /// Available from 1.4.0 onwards
-    public let genaiVisibility: PieFedContentVisibilityType?
+    public let genaiVisibility: PieFedAiVisibilityType?
     /// Available from 1.4.0 onwards
     public let replyCollapseThreshold: Int?
     /// Available from 1.4.0 onwards

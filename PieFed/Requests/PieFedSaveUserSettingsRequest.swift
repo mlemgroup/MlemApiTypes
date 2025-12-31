@@ -41,7 +41,7 @@ public struct PieFedSaveUserSettingsRequest: PutRequest {
       newsletter: Bool?,
       nsflVisibility: PieFedContentVisibilityType?,
       nsfwVisibility: PieFedContentVisibilityType?,
-      genaiVisibility: PieFedContentVisibilityType?,
+      genaiVisibility: PieFedAiVisibilityType?,
       replyCollapseThreshold: Int?,
       replyHideThreshold: Int?,
       searchable: Bool?
