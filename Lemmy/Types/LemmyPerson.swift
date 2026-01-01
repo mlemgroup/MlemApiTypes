@@ -23,14 +23,14 @@ public struct LemmyPerson: Codable, Hashable, Sendable {
     /// Available on all versions
     public let avatar: URL?
     /// Whether the person is banned.
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let banned: Bool?
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let published: Date?
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let updated: Date?
     /// The federated actor_id.
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let actorId: ActorIdentifier?
     /// An optional bio, in markdown.
     /// Available on all versions
@@ -51,7 +51,7 @@ public struct LemmyPerson: Codable, Hashable, Sendable {
     /// Available on all versions
     public let botAccount: Bool
     /// When their ban, if it exists, expires, if at all.
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let banExpires: Date?
     /// Available on all versions
     public let instanceId: Int

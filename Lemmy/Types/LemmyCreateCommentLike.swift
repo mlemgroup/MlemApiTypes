@@ -15,7 +15,7 @@ public struct LemmyCreateCommentLike: Codable, Hashable, Sendable {
     /// Available on all versions
     public let commentId: Int
     /// Must be -1, 0, or 1 .
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let score: Int?
     /// True means Upvote, False means Downvote, and None means remove vote.
     /// Available from 1.0.0-alpha onwards

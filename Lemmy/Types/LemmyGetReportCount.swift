@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.15
 public struct LemmyGetReportCount: Codable, Hashable, Sendable {
     /// Available on all versions
     public let communityId: Int?

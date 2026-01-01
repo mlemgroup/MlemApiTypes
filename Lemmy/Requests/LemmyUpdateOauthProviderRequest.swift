@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyUpdateOauthProviderRequest: PutRequest {
     public typealias Body = LemmyEditOAuthProvider
-    public typealias Response = LemmyOAuthProvider
+    public typealias Response = LemmyAdminOAuthProvider
     
     public let path: String = "api/v4/oauth_provider"
     public let body: Body?

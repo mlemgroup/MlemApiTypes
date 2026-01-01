@@ -10,16 +10,14 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.15
 public struct LemmyGetUnreadCountResponse: Codable, Hashable, Sendable {
-    /// Unavailable after 0.19.13
-    public let replies: Int?
-    /// Unavailable after 0.19.13
-    public let mentions: Int?
-    /// Unavailable after 0.19.13
-    public let privateMessages: Int?
-    /// Available from 1.0.0-alpha onwards
-    public let count: Int?
+    /// Available on all versions
+    public let replies: Int
+    /// Available on all versions
+    public let mentions: Int
+    /// Available on all versions
+    public let privateMessages: Int
 }
 
 public extension LemmyGetUnreadCountResponse {
@@ -27,6 +25,5 @@ public extension LemmyGetUnreadCountResponse {
         case replies = "replies"
         case mentions = "mentions"
         case privateMessages = "private_messages"
-        case count = "count"
     }
 }

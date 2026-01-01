@@ -12,15 +12,15 @@ import Rest
 
 /// Available on all versions
 public struct LemmySearchResponse: Codable, Hashable, Sendable {
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let type_: LemmySearchType?
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let comments: [LemmyCommentView]?
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let posts: [LemmyPostView]?
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let communities: [LemmyCommunityView]?
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let users: [LemmyPersonView]?
     /// If `Search.q` contains an ActivityPub ID (eg `https://lemmy.world/comment/1`) or an
     /// identifier (eg `!fediverse@lemmy.ml`) then this field contains the resolved object.

@@ -10,17 +10,15 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.15
 public struct LemmyGetUnreadRegistrationApplicationCountRequest: GetRequest {
     public typealias Parameters = Int
     public typealias Response = LemmyGetUnreadRegistrationApplicationCountResponse
     
-    public let path: String
+    public let path: String = "api/v3/admin/registration_application/count"
     public let parameters: Parameters? = nil
     
     init(
-      endpoint: LemmyEndpointVersion
     ) {
-        self.path = endpoint == .v4 ? "api/v4/admin/registration_application/count" : "api/v3/admin/registration_application/count"
     }
 }

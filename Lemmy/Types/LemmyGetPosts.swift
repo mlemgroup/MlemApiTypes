@@ -17,7 +17,7 @@ public struct LemmyGetPosts: Codable, Hashable, Sendable {
     /// Available on all versions
     public let sort: LemmyPostSortTypeBridge
     /// DEPRECATED, use page_cursor
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let page: Int?
     /// Available on all versions
     public let limit: Int?
@@ -25,11 +25,11 @@ public struct LemmyGetPosts: Codable, Hashable, Sendable {
     public let communityId: Int?
     /// Available on all versions
     public let communityName: String?
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let savedOnly: Bool?
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let likedOnly: Bool?
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let dislikedOnly: Bool?
     /// Available on all versions
     public let pageCursor: String?

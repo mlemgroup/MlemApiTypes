@@ -10,19 +10,17 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.15
 public struct LemmyReportCountRequest: GetRequest {
     public typealias Parameters = LemmyGetReportCount
     public typealias Response = LemmyGetReportCountResponse
     
-    public let path: String
+    public let path: String = "api/v3/user/report_count"
     public let parameters: Parameters?
     
     init(
-      endpoint: LemmyEndpointVersion,
       communityId: Int?
     ) {
-        self.path = endpoint == .v4 ? "api/v4/report/count" : "api/v3/user/report_count"
         self.parameters = .init(
             communityId: communityId
         )
