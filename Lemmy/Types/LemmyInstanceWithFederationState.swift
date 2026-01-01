@@ -19,9 +19,9 @@ public struct LemmyInstanceWithFederationState: Codable, Hashable, Sendable {
     public let id: Int
     /// Available on all versions
     public let domain: String
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let published: Date?
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let updated: Date?
     /// Available on all versions
     public let software: String?

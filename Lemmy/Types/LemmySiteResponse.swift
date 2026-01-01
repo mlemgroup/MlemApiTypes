@@ -14,7 +14,7 @@ import Rest
 public struct LemmySiteResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let siteView: LemmySiteView
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let taglines: [LemmyTagline]?
 }
 

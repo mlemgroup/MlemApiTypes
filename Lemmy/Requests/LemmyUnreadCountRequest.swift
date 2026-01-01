@@ -10,17 +10,15 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.15
 public struct LemmyUnreadCountRequest: GetRequest {
     public typealias Parameters = Int
     public typealias Response = LemmyGetUnreadCountResponse
     
-    public let path: String
+    public let path: String = "api/v3/user/unread_count"
     public let parameters: Parameters? = nil
     
     init(
-      endpoint: LemmyEndpointVersion
     ) {
-        self.path = endpoint == .v4 ? "api/v4/account/notification/count" : "api/v3/user/unread_count"
     }
 }

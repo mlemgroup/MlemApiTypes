@@ -10,18 +10,16 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.15
 public struct LemmyGetReportCountResponse: Codable, Hashable, Sendable {
-    /// Unavailable after 0.19.13
+    /// Available on all versions
     public let communityId: Int?
-    /// Unavailable after 0.19.13
-    public let commentReports: Int?
-    /// Unavailable after 0.19.13
-    public let postReports: Int?
-    /// Unavailable after 0.19.13
+    /// Available on all versions
+    public let commentReports: Int
+    /// Available on all versions
+    public let postReports: Int
+    /// Available on all versions
     public let privateMessageReports: Int?
-    /// Available from 1.0.0-alpha onwards
-    public let count: Int?
 }
 
 public extension LemmyGetReportCountResponse {
@@ -30,6 +28,5 @@ public extension LemmyGetReportCountResponse {
         case commentReports = "comment_reports"
         case postReports = "post_reports"
         case privateMessageReports = "private_message_reports"
-        case count = "count"
     }
 }

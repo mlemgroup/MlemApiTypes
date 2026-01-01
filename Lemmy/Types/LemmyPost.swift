@@ -32,9 +32,9 @@ public struct LemmyPost: Codable, Hashable, Sendable {
     /// Whether the post is locked.
     /// Available on all versions
     public let locked: Bool
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let published: Date?
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let updated: Date?
     /// Whether the post is deleted.
     /// Available on all versions

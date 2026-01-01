@@ -20,7 +20,7 @@ public struct LemmyCommentView: Codable, Hashable, Sendable {
     public let post: LemmyPost
     /// Available on all versions
     public let community: LemmyCommunity
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let counts: LemmyCommentAggregates?
     /// Available on all versions
     public let creatorBannedFromCommunity: Bool
@@ -28,15 +28,15 @@ public struct LemmyCommentView: Codable, Hashable, Sendable {
     public let creatorIsModerator: Bool
     /// Available on all versions
     public let creatorIsAdmin: Bool
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let subscribed: LemmySubscribedType?
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let saved: Bool?
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let creatorBlocked: Bool?
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let myVote: Int?
-    /// Available between 0.19.4 and 0.19.13
+    /// Available between 0.19.4 and 0.19.15
     public let bannedFromCommunity: Bool?
     /// Available from 1.0.0-alpha onwards
     public let communityActions: LemmyCommunityActions?

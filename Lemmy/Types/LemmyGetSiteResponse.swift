@@ -18,17 +18,17 @@ public struct LemmyGetSiteResponse: Codable, Hashable, Sendable {
     public let admins: [LemmyPersonView]
     /// Available on all versions
     public let version: String
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let myUser: LemmyMyUserInfo?
     /// Available on all versions
     public let allLanguages: [LemmyLanguage]
     /// Available on all versions
     public let discussionLanguages: [Int]
     /// A list of taglines shown at the top of the front page.
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let taglines: [LemmyTagline]?
     /// A list of custom emojis your site supports.
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let customEmojis: [LemmyCustomEmojiView]?
     /// Available from 0.19.4 onwards
     public let blockedUrls: [LemmyLocalSiteUrlBlocklist]?
@@ -39,7 +39,7 @@ public struct LemmyGetSiteResponse: Codable, Hashable, Sendable {
     /// Available from 1.0.0-alpha onwards
     public let oauthProviders: [LemmyPublicOAuthProvider]?
     /// Available from 1.0.0-alpha onwards
-    public let adminOauthProviders: [LemmyOAuthProvider]?
+    public let adminOauthProviders: [LemmyAdminOAuthProvider]?
     /// If true then uploads for post images or markdown images are disabled. Only avatars, icons and
     /// banners can be set.
     /// Available from 1.0.0-alpha onwards
