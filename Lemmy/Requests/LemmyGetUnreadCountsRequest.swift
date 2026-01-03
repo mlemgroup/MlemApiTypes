@@ -1,5 +1,5 @@
 //
-//  LemmyGetPendingFollowsCountRequest.swift
+//  LemmyGetUnreadCountsRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,11 +11,11 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyGetPendingFollowsCountRequest: GetRequest {
+public struct LemmyGetUnreadCountsRequest: GetRequest {
     public typealias Parameters = Int
-    public typealias Response = LemmyGetCommunityPendingFollowsCountResponse
+    public typealias Response = LemmyUnreadCountsResponse
     
-    public let path: String = "api/v4/community/pending_follows/count"
+    public let path: String = "api/v4/account/unread_counts"
     public let parameters: Parameters? = nil
     
     init(

@@ -10,6 +10,6 @@
 import Foundation
 import Rest
 
-/// Unavailable after 0.19.13
+/// Unavailable after 0.19.15
 public struct LemmyPaginationCursor: Codable, Hashable, Sendable {
 }

@@ -23,9 +23,9 @@ public struct LemmyComment: Codable, Hashable, Sendable {
     /// Whether the comment has been removed.
     /// Available on all versions
     public let removed: Bool
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let published: Date?
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let updated: Date?
     /// Whether the comment has been deleted by its creator.
     /// Available on all versions

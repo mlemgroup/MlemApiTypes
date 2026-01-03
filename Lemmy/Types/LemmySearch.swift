@@ -26,11 +26,11 @@ public struct LemmySearch: Codable, Hashable, Sendable {
     public let sort: LemmySearchSortTypeBridge
     /// Available on all versions
     public let listingType: LemmyListingType?
-    /// Unavailable after 0.19.13
+    /// Unavailable after 0.19.15
     public let page: Int?
     /// Available on all versions
     public let limit: Int?
-    /// Available between 0.19.6 and 0.19.13
+    /// Available between 0.19.6 and 0.19.15
     public let postTitleOnly: Bool?
     /// Filter to within a given time range, in seconds.
     /// IE 60 would give results for the past minute.

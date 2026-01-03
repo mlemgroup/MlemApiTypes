@@ -1,5 +1,5 @@
 //
-//  LemmyOAuthProvider.swift
+//  LemmyAdminOAuthProvider.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyOAuthProvider: Codable, Hashable, Sendable {
+public struct LemmyAdminOAuthProvider: Codable, Hashable, Sendable {
     /// Available on all versions
     public let id: Int
     /// The OAuth 2.0 provider name displayed to the user on the Login page
@@ -64,7 +64,7 @@ public struct LemmyOAuthProvider: Codable, Hashable, Sendable {
     public let usePkce: Bool
 }
 
-public extension LemmyOAuthProvider {
+public extension LemmyAdminOAuthProvider {
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case displayName = "display_name"
