@@ -1,5 +1,5 @@
 //
-//  PieFedPollVoteRequest.swift
+//  PieFedHidePostRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,20 +11,20 @@ import Foundation
 import Rest
 
 /// Available from 1.4.0 onwards
-public struct PieFedPollVoteRequest: PostRequest {
-    public typealias Body = PieFedPollVote
-    public typealias Response = PieFedPollVoteResponse
+public struct PieFedHidePostRequest: PostRequest {
+    public typealias Body = PieFedHidePost
+    public typealias Response = PieFedGetPostResponse
     
-    public let path: String = "api/alpha/post/poll_vote"
+    public let path: String = "api/alpha/post/hide"
     public let body: Body?
     
     init(
       postId: Int,
-      choiceId: [Int]
+      hidden: Bool
     ) {
         self.body = .init(
             postId: postId,
-            choiceId: choiceId
+            hidden: hidden
         )
     }
 }

@@ -20,6 +20,10 @@ public struct PieFedGetCommunityResponse: Codable, Hashable, Sendable {
     public let moderators: [PieFedCommunityModeratorView]
     /// Available on all versions
     public let discussionLanguages: [Int]
+    /// Available from 1.4.0 onwards
+    public let canRate: Bool?
+    /// Available from 1.4.0 onwards
+    public let myRating: Int?
 }
 
 public extension PieFedGetCommunityResponse {
@@ -28,5 +32,7 @@ public extension PieFedGetCommunityResponse {
         case site = "site"
         case moderators = "moderators"
         case discussionLanguages = "discussion_languages"
+        case canRate = "can_rate"
+        case myRating = "my_rating"
     }
 }

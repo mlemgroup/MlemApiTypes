@@ -18,6 +18,8 @@ public struct PieFedLikePost: Codable, Hashable, Sendable {
     public let score: Int
     /// Available from 1.2.0 onwards
     public let `private`: Bool?
+    /// Available from 1.4.0 onwards
+    public let emoji: String?
 }
 
 public extension PieFedLikePost {
@@ -25,5 +27,6 @@ public extension PieFedLikePost {
         case postId = "post_id"
         case score = "score"
         case `private` = "private"
+        case emoji = "emoji"
     }
 }

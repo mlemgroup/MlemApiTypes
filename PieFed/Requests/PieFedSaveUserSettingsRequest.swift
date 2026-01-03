@@ -27,7 +27,24 @@ public struct PieFedSaveUserSettingsRequest: PutRequest {
       defaultCommentSortType: PieFedCommentSortType?,
       defaultSortType: PieFedSortType?,
       showNsfl: Bool?,
-      extraFields: [PieFedNewUserExtraField]?
+      extraFields: [PieFedNewUserExtraField]?,
+      acceptPrivateMessages: PieFedPrivateMessagePermissionsType?,
+      bot: Bool?,
+      botVisibility: PieFedContentVisibilityType?,
+      communityKeywordFilter: [String]?,
+      emailUnread: Bool?,
+      federateVotes: Bool?,
+      feedAutoFollow: Bool?,
+      feedAutoLeave: Bool?,
+      hideLowQuality: Bool?,
+      indexable: Bool?,
+      newsletter: Bool?,
+      nsflVisibility: PieFedContentVisibilityType?,
+      nsfwVisibility: PieFedContentVisibilityType?,
+      genaiVisibility: PieFedAiVisibilityType?,
+      replyCollapseThreshold: Int?,
+      replyHideThreshold: Int?,
+      searchable: Bool?
     ) {
         self.body = .init(
             showNsfw: showNsfw,
@@ -38,7 +55,24 @@ public struct PieFedSaveUserSettingsRequest: PutRequest {
             defaultCommentSortType: defaultCommentSortType,
             defaultSortType: defaultSortType,
             showNsfl: showNsfl,
-            extraFields: extraFields
+            extraFields: extraFields,
+            acceptPrivateMessages: acceptPrivateMessages,
+            bot: bot,
+            botVisibility: botVisibility,
+            communityKeywordFilter: communityKeywordFilter,
+            emailUnread: emailUnread,
+            federateVotes: federateVotes,
+            feedAutoFollow: feedAutoFollow,
+            feedAutoLeave: feedAutoLeave,
+            hideLowQuality: hideLowQuality,
+            indexable: indexable,
+            newsletter: newsletter,
+            nsflVisibility: nsflVisibility,
+            nsfwVisibility: nsfwVisibility,
+            genaiVisibility: genaiVisibility,
+            replyCollapseThreshold: replyCollapseThreshold,
+            replyHideThreshold: replyHideThreshold,
+            searchable: searchable
         )
     }
 }

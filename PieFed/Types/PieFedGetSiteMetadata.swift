@@ -1,5 +1,5 @@
 //
-//  PieFedPollVote.swift
+//  PieFedGetSiteMetadata.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,16 +11,13 @@ import Foundation
 import Rest
 
 /// Available from 1.4.0 onwards
-public struct PieFedPollVote: Codable, Hashable, Sendable {
+public struct PieFedGetSiteMetadata: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let postId: Int
-    /// Available on all versions
-    public let choiceId: [Int]
+    public let url: String?
 }
 
-public extension PieFedPollVote {
+public extension PieFedGetSiteMetadata {
     enum CodingKeys: String, CodingKey {
-        case postId = "post_id"
-        case choiceId = "choice_id"
+        case url = "url"
     }
 }

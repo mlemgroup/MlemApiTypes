@@ -1,5 +1,5 @@
 //
-//  PieFedPollChoice.swift
+//  PieFedReactions.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,22 +11,22 @@ import Foundation
 import Rest
 
 /// Available from 1.4.0 onwards
-public struct PieFedPollChoice: Codable, Hashable, Sendable {
+public struct PieFedReactions: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let id: Int
+    public let url: String?
     /// Available on all versions
-    public let choiceText: String
+    public let token: String?
     /// Available on all versions
-    public let sortOrder: Int
+    public let authors: [String]?
     /// Available on all versions
-    public let numVotes: Int?
+    public let count: Int?
 }
 
-public extension PieFedPollChoice {
+public extension PieFedReactions {
     enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case choiceText = "choice_text"
-        case sortOrder = "sort_order"
-        case numVotes = "num_votes"
+        case url = "url"
+        case token = "token"
+        case authors = "authors"
+        case count = "count"
     }
 }

@@ -24,13 +24,15 @@ public struct PieFedEditPost: Codable, Hashable, Sendable {
     public let nsfw: Bool?
     /// Available on all versions
     public let languageId: Int?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
+    public let altText: String?
+    /// Available from 1.4.0 onwards
     public let event: PieFedPostEvent?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let poll: PieFedPostPoll?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let tags: String?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let flair: String?
 }
 
@@ -42,6 +44,7 @@ public extension PieFedEditPost {
         case body = "body"
         case nsfw = "nsfw"
         case languageId = "language_id"
+        case altText = "alt_text"
         case event = "event"
         case poll = "poll"
         case tags = "tags"

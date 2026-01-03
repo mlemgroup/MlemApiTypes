@@ -32,8 +32,10 @@ public struct PieFedCommunityAggregates: Codable, Hashable, Sendable {
     public let activeMonthly: Int?
     /// Available from 1.1.0 onwards
     public let activeWeekly: Int?
-    /// Available from 1.4.0-dev onwards
+    /// Available from 1.4.0 onwards
     public let averageRating: Double?
+    /// Available from 1.4.0 onwards
+    public let totalRatings: Int?
 }
 
 public extension PieFedCommunityAggregates {
@@ -49,5 +51,6 @@ public extension PieFedCommunityAggregates {
         case activeMonthly = "active_monthly"
         case activeWeekly = "active_weekly"
         case averageRating = "average_rating"
+        case totalRatings = "total_ratings"
     }
 }

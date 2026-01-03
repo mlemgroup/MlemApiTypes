@@ -25,6 +25,8 @@ public struct PieFedCreatePostRequest: PostRequest {
       body: String?,
       nsfw: Bool?,
       languageId: Int?,
+      altText: String?,
+      aiGenerated: Bool?,
       event: PieFedPostEvent?,
       poll: PieFedPostPoll?
     ) {
@@ -35,6 +37,8 @@ public struct PieFedCreatePostRequest: PostRequest {
             body: body,
             nsfw: nsfw,
             languageId: languageId,
+            altText: altText,
+            aiGenerated: aiGenerated,
             event: event,
             poll: poll
         )
