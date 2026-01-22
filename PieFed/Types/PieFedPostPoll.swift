@@ -15,7 +15,7 @@ public struct PieFedPostPoll: Codable, Hashable, Sendable {
     /// Available on all versions
     public let endPoll: Date?
     /// Available on all versions
-    public let mode: String
+    public let mode: PieFedPostPollMode
     /// Available on all versions
     public let localOnly: Bool?
     /// Available on all versions
