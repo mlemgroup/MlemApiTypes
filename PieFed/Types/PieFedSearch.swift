@@ -28,6 +28,10 @@ public struct PieFedSearch: Codable, Hashable, Sendable {
     public let communityName: String?
     /// Available from 1.2.0 onwards
     public let communityId: Int?
+    /// Available from 1.5.0 onwards
+    public let minimumUpvotes: Int?
+    /// Available from 1.5.0 onwards
+    public let nsfw: PieFedSearchNsfwVisibility?
 }
 
 public extension PieFedSearch {
@@ -40,5 +44,7 @@ public extension PieFedSearch {
         case limit = "limit"
         case communityName = "community_name"
         case communityId = "community_id"
+        case minimumUpvotes = "minimum_upvotes"
+        case nsfw = "nsfw"
     }
 }
