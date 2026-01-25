@@ -26,7 +26,9 @@ public struct PieFedSearchRequest: GetRequest {
       page: Int?,
       limit: Int?,
       communityName: String?,
-      communityId: Int?
+      communityId: Int?,
+      minimumUpvotes: Int?,
+      nsfw: PieFedSearchNsfwVisibility?
     ) {
         self.parameters = .init(
             q: q,
@@ -36,7 +38,9 @@ public struct PieFedSearchRequest: GetRequest {
             page: page,
             limit: limit,
             communityName: communityName,
-            communityId: communityId
+            communityId: communityId,
+            minimumUpvotes: minimumUpvotes,
+            nsfw: nsfw
         )
     }
 }

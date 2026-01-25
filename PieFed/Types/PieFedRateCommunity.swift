@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.4.0 onwards
+/// Available between 1.4.0 and 1.4.0
 public struct PieFedRateCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
     public let communityId: Int
