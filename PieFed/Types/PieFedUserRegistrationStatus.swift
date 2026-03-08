@@ -1,5 +1,5 @@
 //
-//  PieFedPostFeatureType.swift
+//  PieFedUserRegistrationStatus.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -10,10 +10,10 @@
 import Foundation
 import Rest
 
-/// Available on all versions
-public enum PieFedPostFeatureType: String, Codable, Sendable {
+/// Available from 1.7.0 onwards
+public enum PieFedUserRegistrationStatus: String, Codable, Sendable {
     /// Available on all versions
-    case local = "Local"
+    case approved = "approved"
     /// Available on all versions
-    case community = "Community"
+    case awaitingreview = "awaiting review"
 }

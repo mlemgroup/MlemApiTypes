@@ -68,6 +68,8 @@ public struct PieFedPost: Codable, Hashable, Sendable {
     public let event: PieFedPostEvent?
     /// Available from 1.4.0 onwards
     public let poll: PieFedPostPoll?
+    /// Available from 1.7.0 onwards
+    public let instanceSticky: Bool?
 }
 
 public extension PieFedPost {
@@ -100,5 +102,6 @@ public extension PieFedPost {
         case emojiReactions = "emoji_reactions"
         case event = "event"
         case poll = "poll"
+        case instanceSticky = "instance_sticky"
     }
 }
