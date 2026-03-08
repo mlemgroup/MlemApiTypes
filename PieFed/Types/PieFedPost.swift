@@ -68,7 +68,7 @@ public struct PieFedPost: Codable, Hashable, Sendable {
     public let event: PieFedPostEvent?
     /// Available from 1.4.0 onwards
     public let poll: PieFedPostPoll?
-    /// Available from 1.7.0 onwards
+    /// Available from 1.6.10 onwards
     public let instanceSticky: Bool?
 }
 

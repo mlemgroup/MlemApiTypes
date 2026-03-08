@@ -32,9 +32,9 @@ public struct PieFedSite: Codable, Hashable, Sendable {
     public let userCount: Int?
     /// Available from 1.1.0 onwards
     public let sidebarMd: String?
-    /// Available from 1.7.0 onwards
+    /// Available from 1.6.10 onwards
     public let announcementMd: String?
-    /// Available from 1.7.0 onwards
+    /// Available from 1.6.10 onwards
     public let announcement: String?
 }
 

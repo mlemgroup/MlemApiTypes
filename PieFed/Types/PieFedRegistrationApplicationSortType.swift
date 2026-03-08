@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.7.0 onwards
+/// Available from 1.6.10 onwards
 public enum PieFedRegistrationApplicationSortType: String, Codable, Sendable {
     /// Available on all versions
     case old = "Old"
