@@ -22,4 +22,14 @@ public enum PieFedCommunitySortType: String, Codable, Sendable {
     case top = "Top"
     /// Available from 1.3.0 onwards
     case topAll = "TopAll"
+    /// Available from 1.6.10 onwards
+    case old = "Old"
+    /// Available from 1.6.10 onwards
+    case topPosts = "TopPosts"
+    /// Available from 1.6.10 onwards
+    case topSubscribers = "TopSubscribers"
+    /// Available from 1.6.10 onwards
+    case newFederated = "NewFederated"
+    /// Available from 1.6.10 onwards
+    case oldFederated = "OldFederated"
 }
