@@ -26,6 +26,9 @@ public struct LemmyListCommunitiesRequest: GetRequest {
       page: Int?,
       limit: Int?,
       timeRangeSeconds: Int?,
+      multiCommunityId: Int?,
+      searchTerm: String?,
+      searchTitleOnly: Bool?,
       pageCursor: String?
     ) {
         self.path = endpoint == .v4 ? "api/v4/community/list" : "api/v3/community/list"
@@ -36,6 +39,9 @@ public struct LemmyListCommunitiesRequest: GetRequest {
             page: page,
             limit: limit,
             timeRangeSeconds: timeRangeSeconds,
+            multiCommunityId: multiCommunityId,
+            searchTerm: searchTerm,
+            searchTitleOnly: searchTitleOnly,
             pageCursor: pageCursor
         )
     }

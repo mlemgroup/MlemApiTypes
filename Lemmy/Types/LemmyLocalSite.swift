@@ -140,9 +140,35 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     /// Available from 1.0.0-alpha onwards
     public let disableEmailNotifications: Bool?
     /// Available from 1.0.0-alpha onwards
-    public let suggestedCommunities: Int?
+    public let suggestedMultiCommunityId: Int?
     /// Available from 1.0.0-alpha onwards
     public let defaultItemsPerPage: Int?
+    /// A mode for setting how pictrs handles images.
+    /// Available from 1.0.0-alpha onwards
+    public let imageMode: LemmyImageMode?
+    /// Allows bypassing proxy for specific image hosts when using [[ImageMode.ProxyAllImages]]. Use
+    /// a comma-delimited string.
+    /// 
+    /// Example: i.imgur.com,postimg.cc
+    /// Available from 1.0.0-alpha onwards
+    public let imageProxyBypassDomains: String?
+    /// Available from 1.0.0-alpha onwards
+    public let imageUploadTimeoutSeconds: Int?
+    /// These are pixel sizes. Larger images are automatically downscaled.
+    /// Available from 1.0.0-alpha onwards
+    public let imageMaxThumbnailSize: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let imageMaxAvatarSize: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let imageMaxBannerSize: Int?
+    /// This affects post and comment images, but not avatar and banner sizes.
+    /// Available from 1.0.0-alpha onwards
+    public let imageMaxUploadSize: Int?
+    /// This affects post and comment images, but not avatars and banners.
+    /// Available from 1.0.0-alpha onwards
+    public let imageAllowVideoUploads: Bool?
+    /// Available from 1.0.0-alpha onwards
+    public let imageUploadDisabled: Bool?
 }
 
 public extension LemmyLocalSite {
@@ -193,7 +219,16 @@ public extension LemmyLocalSite {
         case usersActiveMonth = "users_active_month"
         case usersActiveHalfYear = "users_active_half_year"
         case disableEmailNotifications = "disable_email_notifications"
-        case suggestedCommunities = "suggested_communities"
+        case suggestedMultiCommunityId = "suggested_multi_community_id"
         case defaultItemsPerPage = "default_items_per_page"
+        case imageMode = "image_mode"
+        case imageProxyBypassDomains = "image_proxy_bypass_domains"
+        case imageUploadTimeoutSeconds = "image_upload_timeout_seconds"
+        case imageMaxThumbnailSize = "image_max_thumbnail_size"
+        case imageMaxAvatarSize = "image_max_avatar_size"
+        case imageMaxBannerSize = "image_max_banner_size"
+        case imageMaxUploadSize = "image_max_upload_size"
+        case imageAllowVideoUploads = "image_allow_video_uploads"
+        case imageUploadDisabled = "image_upload_disabled"
     }
 }

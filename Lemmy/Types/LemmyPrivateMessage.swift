@@ -38,6 +38,8 @@ public struct LemmyPrivateMessage: Codable, Hashable, Sendable {
     public let publishedAt: Date?
     /// Available from 1.0.0-alpha onwards
     public let updatedAt: Date?
+    /// Available from 1.0.0-alpha onwards
+    public let deletedByRecipient: Bool?
 }
 
 public extension LemmyPrivateMessage {
@@ -55,5 +57,6 @@ public extension LemmyPrivateMessage {
         case removed = "removed"
         case publishedAt = "published_at"
         case updatedAt = "updated_at"
+        case deletedByRecipient = "deleted_by_recipient"
     }
 }

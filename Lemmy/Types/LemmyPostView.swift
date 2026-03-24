@@ -51,7 +51,7 @@ public struct LemmyPostView: Codable, Hashable, Sendable {
     /// Available from 1.0.0-alpha onwards
     public let postActions: LemmyPostActions?
     /// Available from 1.0.0-alpha onwards
-    public let tags: [LemmyTag]?
+    public let tags: LemmyCommunityTagsView?
     /// Available from 1.0.0-alpha onwards
     public let canMod: Bool?
     /// Available from 1.0.0-alpha onwards

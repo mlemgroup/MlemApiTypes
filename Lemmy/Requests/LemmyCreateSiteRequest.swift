@@ -62,8 +62,10 @@ public struct LemmyCreateSiteRequest: PostRequest {
       defaultSortType: LemmySortType?,
       contentWarning: String?,
       defaultPostListingMode: LemmyPostListingMode?,
+      summary: String?,
       defaultPostSortType: LemmyPostSortType?,
       defaultPostTimeRangeSeconds: Int?,
+      defaultItemsPerPage: Int?,
       defaultCommentSortType: LemmyCommentSortType?,
       rateLimitMessageMaxRequests: Int?,
       rateLimitMessageIntervalSeconds: Int?,
@@ -80,13 +82,24 @@ public struct LemmyCreateSiteRequest: PostRequest {
       rateLimitImportUserSettingsMaxRequests: Int?,
       rateLimitImportUserSettingsIntervalSeconds: Int?,
       oauthRegistration: Bool?,
+      reportsEmailAdmins: Bool?,
+      federationSignedFetch: Bool?,
       postUpvotes: LemmyFederationMode?,
       postDownvotes: LemmyFederationMode?,
       commentUpvotes: LemmyFederationMode?,
       commentDownvotes: LemmyFederationMode?,
       disallowNsfwContent: Bool?,
       disableEmailNotifications: Bool?,
-      suggestedCommunities: Int?
+      suggestedMultiCommunityId: Int?,
+      imageMode: LemmyImageMode?,
+      imageProxyBypassDomains: String?,
+      imageUploadTimeoutSeconds: Int?,
+      imageMaxThumbnailSize: Int?,
+      imageMaxAvatarSize: Int?,
+      imageMaxBannerSize: Int?,
+      imageMaxUploadSize: Int?,
+      imageAllowVideoUploads: Bool?,
+      imageUploadDisabled: Bool?
     ) {
         self.path = endpoint == .v4 ? "api/v4/site" : "api/v3/site"
         self.body = .init(
@@ -132,8 +145,10 @@ public struct LemmyCreateSiteRequest: PostRequest {
             defaultSortType: defaultSortType,
             contentWarning: contentWarning,
             defaultPostListingMode: defaultPostListingMode,
+            summary: summary,
             defaultPostSortType: defaultPostSortType,
             defaultPostTimeRangeSeconds: defaultPostTimeRangeSeconds,
+            defaultItemsPerPage: defaultItemsPerPage,
             defaultCommentSortType: defaultCommentSortType,
             rateLimitMessageMaxRequests: rateLimitMessageMaxRequests,
             rateLimitMessageIntervalSeconds: rateLimitMessageIntervalSeconds,
@@ -150,13 +165,24 @@ public struct LemmyCreateSiteRequest: PostRequest {
             rateLimitImportUserSettingsMaxRequests: rateLimitImportUserSettingsMaxRequests,
             rateLimitImportUserSettingsIntervalSeconds: rateLimitImportUserSettingsIntervalSeconds,
             oauthRegistration: oauthRegistration,
+            reportsEmailAdmins: reportsEmailAdmins,
+            federationSignedFetch: federationSignedFetch,
             postUpvotes: postUpvotes,
             postDownvotes: postDownvotes,
             commentUpvotes: commentUpvotes,
             commentDownvotes: commentDownvotes,
             disallowNsfwContent: disallowNsfwContent,
             disableEmailNotifications: disableEmailNotifications,
-            suggestedCommunities: suggestedCommunities
+            suggestedMultiCommunityId: suggestedMultiCommunityId,
+            imageMode: imageMode,
+            imageProxyBypassDomains: imageProxyBypassDomains,
+            imageUploadTimeoutSeconds: imageUploadTimeoutSeconds,
+            imageMaxThumbnailSize: imageMaxThumbnailSize,
+            imageMaxAvatarSize: imageMaxAvatarSize,
+            imageMaxBannerSize: imageMaxBannerSize,
+            imageMaxUploadSize: imageMaxUploadSize,
+            imageAllowVideoUploads: imageAllowVideoUploads,
+            imageUploadDisabled: imageUploadDisabled
         )
     }
 }

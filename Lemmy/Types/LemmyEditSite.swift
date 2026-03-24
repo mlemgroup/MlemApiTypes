@@ -135,6 +135,9 @@ public struct LemmyEditSite: Codable, Hashable, Sendable {
     /// Default value for [LocalUser.post_listing_mode]
     /// Available from 0.19.4 onwards
     public let defaultPostListingMode: LemmyPostListingMode?
+    /// A shorter, one line description of your site.
+    /// Available from 1.0.0-alpha onwards
+    public let summary: String?
     /// The default post sort, usually "active"
     /// Available from 1.0.0-alpha onwards
     public let defaultPostSortType: LemmyPostSortType?
@@ -147,6 +150,10 @@ public struct LemmyEditSite: Codable, Hashable, Sendable {
     /// The default comment sort, usually "hot"
     /// Available from 1.0.0-alpha onwards
     public let defaultCommentSortType: LemmyCommentSortType?
+    /// Whether to sign outgoing Activitypub fetches with private key of local instance. Some
+    /// Fediverse instances and platforms require this.
+    /// Available from 1.0.0-alpha onwards
+    public let federationSignedFetch: Bool?
     /// The number of messages allowed in a given time frame.
     /// Available from 1.0.0-alpha onwards
     public let rateLimitMessageMaxRequests: Int?
@@ -203,9 +210,33 @@ public struct LemmyEditSite: Codable, Hashable, Sendable {
     /// Dont send email notifications to users for new replies, mentions etc
     /// Available from 1.0.0-alpha onwards
     public let disableEmailNotifications: Bool?
-    /// A multicommunity with suggested communities which is shown on the homepage
+    /// A multicommunity with suggested communities which is shown on the homepage. Sending a zero
+    /// erases this field.
     /// Available from 1.0.0-alpha onwards
-    public let suggestedCommunities: Int?
+    public let suggestedMultiCommunityId: Int?
+    /// A mode for setting how pictrs handles images.
+    /// Available from 1.0.0-alpha onwards
+    public let imageMode: LemmyImageMode?
+    /// Allows bypassing proxy for specific image hosts when using [[ImageMode.ProxyAllImages]]. Use
+    /// a comma-delimited string.
+    /// 
+    /// Example: i.imgur.com,postimg.cc
+    /// Available from 1.0.0-alpha onwards
+    public let imageProxyBypassDomains: String?
+    /// Available from 1.0.0-alpha onwards
+    public let imageUploadTimeoutSeconds: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let imageMaxThumbnailSize: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let imageMaxAvatarSize: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let imageMaxBannerSize: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let imageMaxUploadSize: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let imageAllowVideoUploads: Bool?
+    /// Available from 1.0.0-alpha onwards
+    public let imageUploadDisabled: Bool?
 }
 
 public extension LemmyEditSite {
@@ -254,10 +285,12 @@ public extension LemmyEditSite {
         case blockedUrls = "blocked_urls"
         case contentWarning = "content_warning"
         case defaultPostListingMode = "default_post_listing_mode"
+        case summary = "summary"
         case defaultPostSortType = "default_post_sort_type"
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
         case defaultItemsPerPage = "default_items_per_page"
         case defaultCommentSortType = "default_comment_sort_type"
+        case federationSignedFetch = "federation_signed_fetch"
         case rateLimitMessageMaxRequests = "rate_limit_message_max_requests"
         case rateLimitMessageIntervalSeconds = "rate_limit_message_interval_seconds"
         case rateLimitPostMaxRequests = "rate_limit_post_max_requests"
@@ -279,6 +312,15 @@ public extension LemmyEditSite {
         case commentDownvotes = "comment_downvotes"
         case disallowNsfwContent = "disallow_nsfw_content"
         case disableEmailNotifications = "disable_email_notifications"
-        case suggestedCommunities = "suggested_communities"
+        case suggestedMultiCommunityId = "suggested_multi_community_id"
+        case imageMode = "image_mode"
+        case imageProxyBypassDomains = "image_proxy_bypass_domains"
+        case imageUploadTimeoutSeconds = "image_upload_timeout_seconds"
+        case imageMaxThumbnailSize = "image_max_thumbnail_size"
+        case imageMaxAvatarSize = "image_max_avatar_size"
+        case imageMaxBannerSize = "image_max_banner_size"
+        case imageMaxUploadSize = "image_max_upload_size"
+        case imageAllowVideoUploads = "image_allow_video_uploads"
+        case imageUploadDisabled = "image_upload_disabled"
     }
 }

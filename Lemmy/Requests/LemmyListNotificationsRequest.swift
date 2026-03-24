@@ -21,12 +21,14 @@ public struct LemmyListNotificationsRequest: GetRequest {
     init(
       type_: LemmyNotificationDataType?,
       unreadOnly: Bool?,
+      creatorId: Int?,
       pageCursor: String?,
       limit: Int?
     ) {
         self.parameters = .init(
             type_: type_,
             unreadOnly: unreadOnly,
+            creatorId: creatorId,
             pageCursor: pageCursor,
             limit: limit
         )

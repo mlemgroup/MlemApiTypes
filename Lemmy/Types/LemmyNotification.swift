@@ -30,6 +30,8 @@ public struct LemmyNotification: Codable, Hashable, Sendable {
     public let privateMessageId: Int?
     /// Available on all versions
     public let modlogId: Int?
+    /// Available on all versions
+    public let creatorId: Int
 }
 
 public extension LemmyNotification {
@@ -43,5 +45,6 @@ public extension LemmyNotification {
         case postId = "post_id"
         case privateMessageId = "private_message_id"
         case modlogId = "modlog_id"
+        case creatorId = "creator_id"
     }
 }

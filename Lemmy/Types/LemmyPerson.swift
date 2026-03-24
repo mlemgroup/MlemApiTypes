@@ -63,6 +63,8 @@ public struct LemmyPerson: Codable, Hashable, Sendable {
     /// Available from 1.0.0-alpha onwards
     public let apId: ActorIdentifier?
     /// Available from 1.0.0-alpha onwards
+    public let lastRefreshedAt: Date?
+    /// Available from 1.0.0-alpha onwards
     public let postCount: Int?
     /// Available from 1.0.0-alpha onwards
     public let commentCount: Int?
@@ -89,6 +91,7 @@ public extension LemmyPerson {
         case publishedAt = "published_at"
         case updatedAt = "updated_at"
         case apId = "ap_id"
+        case lastRefreshedAt = "last_refreshed_at"
         case postCount = "post_count"
         case commentCount = "comment_count"
     }

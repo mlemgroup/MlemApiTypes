@@ -21,11 +21,13 @@ public struct LemmyAdminListUsersRequest: GetRequest {
     init(
       bannedOnly: Bool?,
       pageCursor: String?,
+      sort: LemmyLocalUserSortType?,
       limit: Int?
     ) {
         self.parameters = .init(
             bannedOnly: bannedOnly,
             pageCursor: pageCursor,
+            sort: sort,
             limit: limit
         )
     }

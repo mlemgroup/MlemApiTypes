@@ -27,6 +27,12 @@ public struct LemmyListCommunities: Codable, Hashable, Sendable {
     /// Available from 1.0.0-alpha onwards
     public let timeRangeSeconds: Int?
     /// Available from 1.0.0-alpha onwards
+    public let multiCommunityId: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let searchTerm: String?
+    /// Available from 1.0.0-alpha onwards
+    public let searchTitleOnly: Bool?
+    /// Available from 1.0.0-alpha onwards
     public let pageCursor: String?
 }
 
@@ -38,6 +44,9 @@ public extension LemmyListCommunities {
         case page = "page"
         case limit = "limit"
         case timeRangeSeconds = "time_range_seconds"
+        case multiCommunityId = "multi_community_id"
+        case searchTerm = "search_term"
+        case searchTitleOnly = "search_title_only"
         case pageCursor = "page_cursor"
     }
 }

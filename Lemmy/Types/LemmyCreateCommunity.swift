@@ -40,6 +40,9 @@ public struct LemmyCreateCommunity: Codable, Hashable, Sendable {
     /// A sidebar for the community in markdown.
     /// Available from 1.0.0-alpha onwards
     public let sidebar: String?
+    /// A shorter, one line summary of your community.
+    /// Available from 1.0.0-alpha onwards
+    public let summary: String?
 }
 
 public extension LemmyCreateCommunity {
@@ -54,5 +57,6 @@ public extension LemmyCreateCommunity {
         case discussionLanguages = "discussion_languages"
         case visibility = "visibility"
         case sidebar = "sidebar"
+        case summary = "summary"
     }
 }

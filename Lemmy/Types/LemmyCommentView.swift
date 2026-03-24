@@ -45,7 +45,7 @@ public struct LemmyCommentView: Codable, Hashable, Sendable {
     /// Available from 1.0.0-alpha onwards
     public let personActions: LemmyPersonActions?
     /// Available from 1.0.0-alpha onwards
-    public let postTags: [LemmyTag]?
+    public let tags: LemmyCommunityTagsView?
     /// Available from 1.0.0-alpha onwards
     public let canMod: Bool?
     /// Available from 1.0.0-alpha onwards
@@ -74,7 +74,7 @@ public extension LemmyCommentView {
         case communityActions = "community_actions"
         case commentActions = "comment_actions"
         case personActions = "person_actions"
-        case postTags = "post_tags"
+        case tags = "tags"
         case canMod = "can_mod"
         case creatorBanned = "creator_banned"
         case creatorBanExpiresAt = "creator_ban_expires_at"

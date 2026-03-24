@@ -19,7 +19,9 @@ public struct LemmyCreateCommunityTag: Codable, Hashable, Sendable {
     /// Available on all versions
     public let displayName: String?
     /// Available on all versions
-    public let description: String?
+    public let summary: String?
+    /// Available on all versions
+    public let color: LemmyTagColor?
 }
 
 public extension LemmyCreateCommunityTag {
@@ -27,6 +29,7 @@ public extension LemmyCreateCommunityTag {
         case communityId = "community_id"
         case name = "name"
         case displayName = "display_name"
-        case description = "description"
+        case summary = "summary"
+        case color = "color"
     }
 }

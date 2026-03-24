@@ -40,10 +40,6 @@ public struct LemmyGetSiteResponse: Codable, Hashable, Sendable {
     public let oauthProviders: [LemmyPublicOAuthProvider]?
     /// Available from 1.0.0-alpha onwards
     public let adminOauthProviders: [LemmyAdminOAuthProvider]?
-    /// If true then uploads for post images or markdown images are disabled. Only avatars, icons and
-    /// banners can be set.
-    /// Available from 1.0.0-alpha onwards
-    public let imageUploadDisabled: Bool?
     /// Available from 1.0.0-alpha onwards
     public let activePlugins: [LemmyPluginMetadata]?
     /// The number of seconds between the last application published, and approved / denied time.
@@ -51,6 +47,8 @@ public struct LemmyGetSiteResponse: Codable, Hashable, Sendable {
     /// Useful for estimating when your application will be approved.
     /// Available from 1.0.0-alpha onwards
     public let lastApplicationDurationSeconds: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let captchaEnabled: Bool?
 }
 
 public extension LemmyGetSiteResponse {
@@ -67,8 +65,8 @@ public extension LemmyGetSiteResponse {
         case tagline = "tagline"
         case oauthProviders = "oauth_providers"
         case adminOauthProviders = "admin_oauth_providers"
-        case imageUploadDisabled = "image_upload_disabled"
         case activePlugins = "active_plugins"
         case lastApplicationDurationSeconds = "last_application_duration_seconds"
+        case captchaEnabled = "captcha_enabled"
     }
 }

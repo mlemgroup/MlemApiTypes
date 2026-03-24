@@ -38,7 +38,10 @@ public struct LemmyListPostsRequest: GetRequest {
       multiCommunityName: String?,
       hideMedia: Bool?,
       markAsRead: Bool?,
-      noCommentsOnly: Bool?
+      noCommentsOnly: Bool?,
+      searchTerm: String?,
+      searchTitleOnly: Bool?,
+      searchUrlOnly: Bool?
     ) {
         self.path = endpoint == .v4 ? "api/v4/post/list" : "api/v3/post/list"
         self.parameters = .init(
@@ -60,7 +63,10 @@ public struct LemmyListPostsRequest: GetRequest {
             multiCommunityName: multiCommunityName,
             hideMedia: hideMedia,
             markAsRead: markAsRead,
-            noCommentsOnly: noCommentsOnly
+            noCommentsOnly: noCommentsOnly,
+            searchTerm: searchTerm,
+            searchTitleOnly: searchTitleOnly,
+            searchUrlOnly: searchUrlOnly
         )
     }
 }

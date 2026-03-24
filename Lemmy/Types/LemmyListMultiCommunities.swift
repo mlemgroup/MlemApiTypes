@@ -23,6 +23,10 @@ public struct LemmyListMultiCommunities: Codable, Hashable, Sendable {
     /// Available on all versions
     public let timeRangeSeconds: Int?
     /// Available on all versions
+    public let searchTerm: String?
+    /// Available on all versions
+    public let searchTitleOnly: Bool?
+    /// Available on all versions
     public let pageCursor: String?
     /// Available on all versions
     public let limit: Int?
@@ -34,6 +38,8 @@ public extension LemmyListMultiCommunities {
         case sort = "sort"
         case creatorId = "creator_id"
         case timeRangeSeconds = "time_range_seconds"
+        case searchTerm = "search_term"
+        case searchTitleOnly = "search_title_only"
         case pageCursor = "page_cursor"
         case limit = "limit"
     }

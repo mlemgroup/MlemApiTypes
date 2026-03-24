@@ -23,6 +23,8 @@ public struct LemmyListMultiCommunitiesRequest: GetRequest {
       sort: LemmyMultiCommunitySortType?,
       creatorId: Int?,
       timeRangeSeconds: Int?,
+      searchTerm: String?,
+      searchTitleOnly: Bool?,
       pageCursor: String?,
       limit: Int?
     ) {
@@ -31,6 +33,8 @@ public struct LemmyListMultiCommunitiesRequest: GetRequest {
             sort: sort,
             creatorId: creatorId,
             timeRangeSeconds: timeRangeSeconds,
+            searchTerm: searchTerm,
+            searchTitleOnly: searchTitleOnly,
             pageCursor: pageCursor,
             limit: limit
         )

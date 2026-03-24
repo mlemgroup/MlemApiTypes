@@ -33,7 +33,8 @@ public struct LemmyListCommentsRequest: GetRequest {
       likedOnly: Bool?,
       dislikedOnly: Bool?,
       timeRangeSeconds: Int?,
-      pageCursor: String?
+      pageCursor: String?,
+      searchTerm: String?
     ) {
         self.path = endpoint == .v4 ? "api/v4/comment/list" : "api/v3/comment/list"
         self.parameters = .init(
@@ -50,7 +51,8 @@ public struct LemmyListCommentsRequest: GetRequest {
             likedOnly: likedOnly,
             dislikedOnly: dislikedOnly,
             timeRangeSeconds: timeRangeSeconds,
-            pageCursor: pageCursor
+            pageCursor: pageCursor,
+            searchTerm: searchTerm
         )
     }
 }

@@ -14,10 +14,13 @@ import Rest
 public struct LemmyDeleteCommunityTag: Codable, Hashable, Sendable {
     /// Available on all versions
     public let tagId: Int
+    /// Available on all versions
+    public let delete: Bool
 }
 
 public extension LemmyDeleteCommunityTag {
     enum CodingKeys: String, CodingKey {
         case tagId = "tag_id"
+        case delete = "delete"
     }
 }

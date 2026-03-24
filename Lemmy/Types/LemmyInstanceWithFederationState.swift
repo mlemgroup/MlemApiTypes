@@ -27,11 +27,6 @@ public struct LemmyInstanceWithFederationState: Codable, Hashable, Sendable {
     public let software: String?
     /// Available on all versions
     public let version: String?
-    /// Available from 1.0.0-alpha onwards
-    public let publishedAt: Date?
-    /// When the instance was updated.
-    /// Available from 1.0.0-alpha onwards
-    public let updatedAt: Date?
 }
 
 public extension LemmyInstanceWithFederationState {
@@ -43,7 +38,5 @@ public extension LemmyInstanceWithFederationState {
         case updated = "updated"
         case software = "software"
         case version = "version"
-        case publishedAt = "published_at"
-        case updatedAt = "updated_at"
     }
 }

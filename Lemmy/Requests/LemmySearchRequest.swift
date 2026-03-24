@@ -20,7 +20,7 @@ public struct LemmySearchRequest: GetRequest {
     
     init(
       endpoint: LemmyEndpointVersion,
-      q: String,
+      q: String?,
       communityId: Int?,
       communityName: String?,
       creatorId: Int?,
@@ -30,13 +30,8 @@ public struct LemmySearchRequest: GetRequest {
       page: Int?,
       limit: Int?,
       postTitleOnly: Bool?,
-      timeRangeSeconds: Int?,
-      titleOnly: Bool?,
-      postUrlOnly: Bool?,
-      likedOnly: Bool?,
-      dislikedOnly: Bool?,
-      showNsfw: Bool?,
-      pageCursor: String?
+      searchTerm: String?,
+      searchTitleOnly: Bool?
     ) {
         self.path = endpoint == .v4 ? "api/v4/search" : "api/v3/search"
         self.parameters = .init(
@@ -50,13 +45,8 @@ public struct LemmySearchRequest: GetRequest {
             page: page,
             limit: limit,
             postTitleOnly: postTitleOnly,
-            timeRangeSeconds: timeRangeSeconds,
-            titleOnly: titleOnly,
-            postUrlOnly: postUrlOnly,
-            likedOnly: likedOnly,
-            dislikedOnly: dislikedOnly,
-            showNsfw: showNsfw,
-            pageCursor: pageCursor
+            searchTerm: searchTerm,
+            searchTitleOnly: searchTitleOnly
         )
     }
 }

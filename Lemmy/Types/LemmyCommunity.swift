@@ -70,6 +70,11 @@ public struct LemmyCommunity: Codable, Hashable, Sendable {
     /// Available from 1.0.0-alpha onwards
     public let apId: ActorIdentifier?
     /// Available from 1.0.0-alpha onwards
+    public let lastRefreshedAt: Date?
+    /// A shorter, one-line summary.
+    /// Available from 1.0.0-alpha onwards
+    public let summary: String?
+    /// Available from 1.0.0-alpha onwards
     public let subscribers: Int?
     /// Available from 1.0.0-alpha onwards
     public let posts: Int?
@@ -121,6 +126,8 @@ public extension LemmyCommunity {
         case publishedAt = "published_at"
         case updatedAt = "updated_at"
         case apId = "ap_id"
+        case lastRefreshedAt = "last_refreshed_at"
+        case summary = "summary"
         case subscribers = "subscribers"
         case posts = "posts"
         case comments = "comments"
