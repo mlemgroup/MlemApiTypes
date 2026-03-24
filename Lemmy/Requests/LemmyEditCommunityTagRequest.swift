@@ -1,5 +1,5 @@
 //
-//  LemmyUpdateCommunityTagRequest.swift
+//  LemmyEditCommunityTagRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,9 +11,9 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyUpdateCommunityTagRequest: PutRequest {
-    public typealias Body = LemmyUpdateCommunityTag
-    public typealias Response = LemmyTag
+public struct LemmyEditCommunityTagRequest: PutRequest {
+    public typealias Body = LemmyEditCommunityTag
+    public typealias Response = LemmyCommunityTag
     
     public let path: String = "api/v4/community/tag"
     public let body: Body?
@@ -21,12 +21,14 @@ public struct LemmyUpdateCommunityTagRequest: PutRequest {
     init(
       tagId: Int,
       displayName: String?,
-      description: String?
+      summary: String?,
+      color: LemmyTagColor?
     ) {
         self.body = .init(
             tagId: tagId,
             displayName: displayName,
-            description: description
+            summary: summary,
+            color: color
         )
     }
 }

@@ -1,5 +1,5 @@
 //
-//  LemmyUpdateCommunityRequest.swift
+//  LemmyEditCommunityRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct LemmyUpdateCommunityRequest: PutRequest {
+public struct LemmyEditCommunityRequest: PutRequest {
     public typealias Body = LemmyEditCommunity
     public typealias Response = LemmyCommunityResponse
     
@@ -29,7 +29,8 @@ public struct LemmyUpdateCommunityRequest: PutRequest {
       postingRestrictedToMods: Bool?,
       discussionLanguages: [Int]?,
       visibility: LemmyCommunityVisibility?,
-      sidebar: String?
+      sidebar: String?,
+      summary: String?
     ) {
         self.path = endpoint == .v4 ? "api/v4/community" : "api/v3/community"
         self.body = .init(
@@ -42,7 +43,8 @@ public struct LemmyUpdateCommunityRequest: PutRequest {
             postingRestrictedToMods: postingRestrictedToMods,
             discussionLanguages: discussionLanguages,
             visibility: visibility,
-            sidebar: sidebar
+            sidebar: sidebar,
+            summary: summary
         )
     }
 }

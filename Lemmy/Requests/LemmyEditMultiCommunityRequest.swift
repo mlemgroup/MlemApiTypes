@@ -1,5 +1,5 @@
 //
-//  LemmyUpdateMultiCommunityRequest.swift
+//  LemmyEditMultiCommunityRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,8 +11,8 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyUpdateMultiCommunityRequest: PutRequest {
-    public typealias Body = LemmyUpdateMultiCommunity
+public struct LemmyEditMultiCommunityRequest: PutRequest {
+    public typealias Body = LemmyEditMultiCommunity
     public typealias Response = LemmyMultiCommunityResponse
     
     public let path: String = "api/v4/multi_community"
@@ -21,13 +21,15 @@ public struct LemmyUpdateMultiCommunityRequest: PutRequest {
     init(
       id: Int,
       title: String?,
-      description: String?,
+      summary: String?,
+      sidebar: String?,
       deleted: Bool?
     ) {
         self.body = .init(
             id: id,
             title: title,
-            description: description,
+            summary: summary,
+            sidebar: sidebar,
             deleted: deleted
         )
     }

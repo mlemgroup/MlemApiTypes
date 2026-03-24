@@ -1,5 +1,5 @@
 //
-//  LemmyUpdateCustomEmojiRequest.swift
+//  LemmyEditCustomEmojiRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct LemmyUpdateCustomEmojiRequest: PutRequest {
+public struct LemmyEditCustomEmojiRequest: PutRequest {
     public typealias Body = LemmyEditCustomEmoji
     public typealias Response = LemmyCustomEmojiResponse
     

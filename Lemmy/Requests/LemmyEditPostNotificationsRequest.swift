@@ -1,5 +1,5 @@
 //
-//  LemmyModUpdatePostRequest.swift
+//  LemmyEditPostNotificationsRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,22 +11,20 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyModUpdatePostRequest: PutRequest {
-    public typealias Body = LemmyModEditPost
-    public typealias Response = LemmyPostResponse
+public struct LemmyEditPostNotificationsRequest: PostRequest {
+    public typealias Body = LemmyEditPostNotifications
+    public typealias Response = LemmySuccessResponse
     
-    public let path: String = "api/v4/post/mod_update"
+    public let path: String = "api/v4/post/notifications"
     public let body: Body?
     
     init(
       postId: Int,
-      nsfw: Bool?,
-      tags: [Int]?
+      mode: LemmyPostNotificationsMode
     ) {
         self.body = .init(
             postId: postId,
-            nsfw: nsfw,
-            tags: tags
+            mode: mode
         )
     }
 }

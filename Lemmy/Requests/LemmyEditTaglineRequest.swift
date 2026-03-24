@@ -1,5 +1,5 @@
 //
-//  LemmyUpdateTaglineRequest.swift
+//  LemmyEditTaglineRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,8 +11,8 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyUpdateTaglineRequest: PutRequest {
-    public typealias Body = LemmyUpdateTagline
+public struct LemmyEditTaglineRequest: PutRequest {
+    public typealias Body = LemmyEditTagline
     public typealias Response = LemmyTaglineResponse
     
     public let path: String = "api/v4/admin/tagline"

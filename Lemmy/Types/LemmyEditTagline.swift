@@ -1,5 +1,5 @@
 //
-//  LemmyUpdatePostNotifications.swift
+//  LemmyEditTagline.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,16 +11,16 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyUpdatePostNotifications: Codable, Hashable, Sendable {
+public struct LemmyEditTagline: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let postId: Int
+    public let id: Int
     /// Available on all versions
-    public let mode: LemmyPostNotificationsMode
+    public let content: String
 }
 
-public extension LemmyUpdatePostNotifications {
+public extension LemmyEditTagline {
     enum CodingKeys: String, CodingKey {
-        case postId = "post_id"
-        case mode = "mode"
+        case id = "id"
+        case content = "content"
     }
 }

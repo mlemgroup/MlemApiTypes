@@ -1,5 +1,5 @@
 //
-//  LemmyUpdateSiteRequest.swift
+//  LemmyEditSiteRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct LemmyUpdateSiteRequest: PutRequest {
+public struct LemmyEditSiteRequest: PutRequest {
     public typealias Body = LemmyEditSite
     public typealias Response = LemmySiteResponse
     
@@ -64,10 +64,12 @@ public struct LemmyUpdateSiteRequest: PutRequest {
       blockedUrls: [String]?,
       contentWarning: String?,
       defaultPostListingMode: LemmyPostListingMode?,
+      summary: String?,
       defaultPostSortType: LemmyPostSortType?,
       defaultPostTimeRangeSeconds: Int?,
       defaultItemsPerPage: Int?,
       defaultCommentSortType: LemmyCommentSortType?,
+      federationSignedFetch: Bool?,
       rateLimitMessageMaxRequests: Int?,
       rateLimitMessageIntervalSeconds: Int?,
       rateLimitPostMaxRequests: Int?,
@@ -89,7 +91,16 @@ public struct LemmyUpdateSiteRequest: PutRequest {
       commentDownvotes: LemmyFederationMode?,
       disallowNsfwContent: Bool?,
       disableEmailNotifications: Bool?,
-      suggestedCommunities: Int?
+      suggestedMultiCommunityId: Int?,
+      imageMode: LemmyImageMode?,
+      imageProxyBypassDomains: String?,
+      imageUploadTimeoutSeconds: Int?,
+      imageMaxThumbnailSize: Int?,
+      imageMaxAvatarSize: Int?,
+      imageMaxBannerSize: Int?,
+      imageMaxUploadSize: Int?,
+      imageAllowVideoUploads: Bool?,
+      imageUploadDisabled: Bool?
     ) {
         self.path = endpoint == .v4 ? "api/v4/site" : "api/v3/site"
         self.body = .init(
@@ -137,10 +148,12 @@ public struct LemmyUpdateSiteRequest: PutRequest {
             blockedUrls: blockedUrls,
             contentWarning: contentWarning,
             defaultPostListingMode: defaultPostListingMode,
+            summary: summary,
             defaultPostSortType: defaultPostSortType,
             defaultPostTimeRangeSeconds: defaultPostTimeRangeSeconds,
             defaultItemsPerPage: defaultItemsPerPage,
             defaultCommentSortType: defaultCommentSortType,
+            federationSignedFetch: federationSignedFetch,
             rateLimitMessageMaxRequests: rateLimitMessageMaxRequests,
             rateLimitMessageIntervalSeconds: rateLimitMessageIntervalSeconds,
             rateLimitPostMaxRequests: rateLimitPostMaxRequests,
@@ -162,7 +175,16 @@ public struct LemmyUpdateSiteRequest: PutRequest {
             commentDownvotes: commentDownvotes,
             disallowNsfwContent: disallowNsfwContent,
             disableEmailNotifications: disableEmailNotifications,
-            suggestedCommunities: suggestedCommunities
+            suggestedMultiCommunityId: suggestedMultiCommunityId,
+            imageMode: imageMode,
+            imageProxyBypassDomains: imageProxyBypassDomains,
+            imageUploadTimeoutSeconds: imageUploadTimeoutSeconds,
+            imageMaxThumbnailSize: imageMaxThumbnailSize,
+            imageMaxAvatarSize: imageMaxAvatarSize,
+            imageMaxBannerSize: imageMaxBannerSize,
+            imageMaxUploadSize: imageMaxUploadSize,
+            imageAllowVideoUploads: imageAllowVideoUploads,
+            imageUploadDisabled: imageUploadDisabled
         )
     }
 }
