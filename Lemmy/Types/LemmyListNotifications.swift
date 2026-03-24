@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyListNotifications: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let type_: LemmyNotificationTypeFilter?
+    public let type_: LemmyNotificationType?
     /// Available on all versions
     public let unreadOnly: Bool?
     /// Available on all versions
