@@ -1,5 +1,5 @@
 //
-//  LemmyTagsView.swift
+//  LemmyCommunityTagsView.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,5 +11,5 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyTagsView: Codable, Hashable, Sendable {
+public struct LemmyCommunityTagsView: Codable, Hashable, Sendable {
 }
