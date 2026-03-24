@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available between 0.19.2 and 0.19.15
+/// Available between 0.19.2 and 0.19.17
 public struct LemmyListCommentLikesResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let commentLikes: [LemmyVoteView]

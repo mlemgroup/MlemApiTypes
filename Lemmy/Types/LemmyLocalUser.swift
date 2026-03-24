@@ -24,7 +24,7 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     public let showNsfw: Bool
     /// Available on all versions
     public let theme: String
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let defaultSortType: LemmySortType?
     /// Available on all versions
     public let defaultListingType: LemmyListingType
@@ -36,7 +36,7 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     /// Available on all versions
     public let sendNotificationsToEmail: Bool
     /// Whether to show comment / post scores.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let showScores: Bool?
     /// Whether to show bot accounts.
     /// Available on all versions
@@ -55,7 +55,7 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     public let openLinksInNewTab: Bool
     /// Available on all versions
     public let blurNsfw: Bool
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let autoExpand: Bool?
     /// Whether infinite scroll is enabled.
     /// Available on all versions
@@ -68,7 +68,7 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     /// Available on all versions
     public let totp2faEnabled: Bool
     /// Whether to allow keyboard navigation (for browsing and interacting with posts and comments).
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let enableKeyboardNavigation: Bool?
     /// Whether user avatars and inline images in the UI that are gifs should be allowed to play or should be paused
     /// Available on all versions
@@ -78,7 +78,7 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     public let collapseBotComments: Bool
     /// The last time a donation request was shown to this user. If this is more than a year ago,
     /// a new notification request should be shown.
-    /// Available between 0.19.11 and 0.19.15
+    /// Available between 0.19.11 and 0.19.17
     public let lastDonationNotification: Date?
     /// Available from 1.0.0-alpha onwards
     public let defaultPostSortType: LemmyPostSortType?

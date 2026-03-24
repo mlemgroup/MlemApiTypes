@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.17
 public struct LemmyUpdateTotp: Codable, Hashable, Sendable {
     /// Available on all versions
     public let totpToken: String

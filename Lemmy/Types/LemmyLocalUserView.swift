@@ -16,9 +16,9 @@ public struct LemmyLocalUserView: Codable, Hashable, Sendable {
     public let localUser: LemmyLocalUser
     /// Available on all versions
     public let person: LemmyPerson
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let counts: LemmyPersonAggregates?
-    /// Available between 0.19.4 and 0.19.15
+    /// Available between 0.19.4 and 0.19.17
     public let localUserVoteDisplayMode: LemmyLocalUserVoteDisplayMode?
     /// Available from 1.0.0-alpha onwards
     public let banned: Bool?

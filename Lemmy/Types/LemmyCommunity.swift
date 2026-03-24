@@ -20,14 +20,14 @@ public struct LemmyCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
     public let title: String
     /// A sidebar / markdown description.
-    /// Available on all versions
+    /// Unavailable after 0.19.17
     public let description: String?
     /// Whether the community is removed by a mod.
     /// Available on all versions
     public let removed: Bool
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let published: Date?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let updated: Date?
     /// Whether the community has been deleted by its creator.
     /// Available on all versions
@@ -36,7 +36,7 @@ public struct LemmyCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
     public let nsfw: Bool
     /// The federated actor_id.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let actorId: ActorIdentifier?
     /// Whether the community is local.
     /// Available on all versions
@@ -48,7 +48,7 @@ public struct LemmyCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
     public let banner: URL?
     /// Whether the community is hidden.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let hidden: Bool?
     /// Whether posting is restricted to mods only.
     /// Available on all versions

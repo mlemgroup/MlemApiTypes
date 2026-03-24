@@ -14,7 +14,7 @@ import Rest
 public struct LemmyPersonView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let person: LemmyPerson
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let counts: LemmyPersonAggregates?
     /// Available on all versions
     public let isAdmin: Bool

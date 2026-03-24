@@ -10,23 +10,23 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.17
 public struct LemmyReadableFederationState: Codable, Hashable, Sendable {
     /// timestamp of the next retry attempt (null if fail count is 0)
-    /// Unavailable after 0.19.15
+    /// Available on all versions
     public let nextRetry: Date?
     /// Available on all versions
     public let instanceId: Int
     /// the last successfully sent activity id
     /// Available on all versions
     public let lastSuccessfulId: Int?
-    /// Unavailable after 0.19.15
+    /// Available on all versions
     public let lastSuccessfulPublishedTime: Date?
     /// how many failed attempts have been made to send the next activity
     /// Available on all versions
     public let failCount: Int
     /// timestamp of the last retry attempt (when the last failing activity was resent)
-    /// Unavailable after 0.19.15
+    /// Available on all versions
     public let lastRetry: Date?
     /// timestamp of the next retry attempt (null if fail count is 0)
     /// Available from 1.0.0-alpha onwards

@@ -24,23 +24,23 @@ public struct LemmyPostView: Codable, Hashable, Sendable {
     public let creatorIsModerator: Bool
     /// Available on all versions
     public let creatorIsAdmin: Bool
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let counts: LemmyPostAggregates?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let subscribed: LemmySubscribedType?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let saved: Bool?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let read: Bool?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let creatorBlocked: Bool?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let myVote: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let unreadComments: Int?
-    /// Available between 0.19.4 and 0.19.15
+    /// Available between 0.19.4 and 0.19.17
     public let bannedFromCommunity: Bool?
-    /// Available between 0.19.4 and 0.19.15
+    /// Available between 0.19.4 and 0.19.17
     public let hidden: Bool?
     /// Available from 0.19.6 onwards
     public let imageDetails: LemmyImageDetails?

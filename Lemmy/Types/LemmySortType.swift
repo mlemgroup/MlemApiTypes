@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Unavailable after 0.19.15
+/// Unavailable after 0.19.17
 public enum LemmySortType: String, Codable, Sendable {
     /// Available on all versions
     case active = "Active"

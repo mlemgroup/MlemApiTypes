@@ -20,7 +20,7 @@ public struct LemmyMyUserInfo: Codable, Hashable, Sendable {
     public let moderates: [LemmyCommunityModeratorView]
     /// Available on all versions
     public let communityBlocks: [LemmyCommunityBlockBridge]
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let instanceBlocks: [LemmyInstanceBlockView]?
     /// Available on all versions
     public let personBlocks: [LemmyPersonBlockBridge]

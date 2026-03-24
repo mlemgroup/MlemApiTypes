@@ -17,19 +17,19 @@ public struct LemmyEditSite: Codable, Hashable, Sendable {
     /// Available on all versions
     public let sidebar: String?
     /// A shorter, one line description of your site.
-    /// Available on all versions
+    /// Unavailable after 0.19.17
     public let description: String?
     /// A url for your site's icon.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let icon: String?
     /// A url for your site's banner.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let banner: String?
     /// Whether to enable downvotes.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let enableDownvotes: Bool?
     /// Whether to enable NSFW.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let enableNsfw: Bool?
     /// Limits community creation to admins only.
     /// Available on all versions
@@ -55,7 +55,7 @@ public struct LemmyEditSite: Codable, Hashable, Sendable {
     /// Available on all versions
     public let applicationEmailAdmins: Bool?
     /// Whether to hide moderator names from the modlog.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let hideModlogModNames: Bool?
     /// A list of allowed discussion languages.
     /// Available on all versions
@@ -64,58 +64,58 @@ public struct LemmyEditSite: Codable, Hashable, Sendable {
     /// Available on all versions
     public let slurFilterRegex: String?
     /// The max length of actor names.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let actorNameMaxLength: Int?
     /// The number of messages allowed in a given time frame.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let rateLimitMessage: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let rateLimitMessagePerSecond: Int?
     /// The number of posts allowed in a given time frame.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let rateLimitPost: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let rateLimitPostPerSecond: Int?
     /// The number of registrations allowed in a given time frame.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let rateLimitRegister: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let rateLimitRegisterPerSecond: Int?
     /// The number of image uploads allowed in a given time frame.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let rateLimitImage: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let rateLimitImagePerSecond: Int?
     /// The number of comments allowed in a given time frame.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let rateLimitComment: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let rateLimitCommentPerSecond: Int?
     /// The number of searches allowed in a given time frame.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let rateLimitSearch: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let rateLimitSearchPerSecond: Int?
     /// Whether to enable federation.
     /// Available on all versions
     public let federationEnabled: Bool?
     /// Enables federation debugging.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let federationDebug: Bool?
     /// Whether to enable captchas for signups.
-    /// Available on all versions
+    /// Unavailable after 0.19.17
     public let captchaEnabled: Bool?
     /// The captcha difficulty. Can be easy, medium, or hard
-    /// Available on all versions
+    /// Unavailable after 0.19.17
     public let captchaDifficulty: String?
     /// A list of allowed instances. If none are set, federation is open.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let allowedInstances: [String]?
     /// A list of blocked instances.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let blockedInstances: [String]?
     /// A list of taglines shown at the top of the front page.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let taglines: [String]?
     /// Available on all versions
     public let registrationMode: LemmyRegistrationMode?
@@ -123,7 +123,7 @@ public struct LemmyEditSite: Codable, Hashable, Sendable {
     /// Available on all versions
     public let reportsEmailAdmins: Bool?
     /// The default sort, usually "active"
-    /// Available between 0.19.4 and 0.19.15
+    /// Available between 0.19.4 and 0.19.17
     public let defaultSortType: LemmySortType?
     /// A list of blocked URLs
     /// Available from 0.19.4 onwards

@@ -22,11 +22,11 @@ public struct LemmyPrivateMessage: Codable, Hashable, Sendable {
     public let content: String
     /// Available on all versions
     public let deleted: Bool
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let read: Bool?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let published: Date?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let updated: Date?
     /// Available on all versions
     public let apId: ActorIdentifier
