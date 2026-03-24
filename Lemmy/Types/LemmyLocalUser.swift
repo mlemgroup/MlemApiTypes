@@ -71,8 +71,8 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     /// Unavailable after 0.19.17
     public let enableKeyboardNavigation: Bool?
     /// Whether user avatars and inline images in the UI that are gifs should be allowed to play or should be paused
-    /// Available on all versions
-    public let enableAnimatedImages: Bool
+    /// Unavailable after 0.19.17
+    public let enableAnimatedImages: Bool?
     /// Whether to auto-collapse bot comments.
     /// Available on all versions
     public let collapseBotComments: Bool
@@ -82,13 +82,17 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     public let lastDonationNotification: Date?
     /// Available from 1.0.0-alpha onwards
     public let defaultPostSortType: LemmyPostSortType?
+    /// Whether user avatars and inline images in the UI that are gifs should be allowed to play or
+    /// should be paused
+    /// Available from 1.0.0-alpha onwards
+    public let animatedImagesEnabled: Bool?
     /// The last time a donation request was shown to this user. If this is more than a year ago,
     /// a new notification request should be shown.
     /// Available from 1.0.0-alpha onwards
     public let lastDonationNotificationAt: Date?
     /// Whether a user can send / receive private messages
     /// Available from 1.0.0-alpha onwards
-    public let enablePrivateMessages: Bool?
+    public let privateMessagesEnabled: Bool?
     /// Available from 1.0.0-alpha onwards
     public let defaultCommentSortType: LemmyCommentSortType?
     /// Whether to automatically mark fetched posts as read.
@@ -143,8 +147,9 @@ public extension LemmyLocalUser {
         case collapseBotComments = "collapse_bot_comments"
         case lastDonationNotification = "last_donation_notification"
         case defaultPostSortType = "default_post_sort_type"
+        case animatedImagesEnabled = "animated_images_enabled"
         case lastDonationNotificationAt = "last_donation_notification_at"
-        case enablePrivateMessages = "enable_private_messages"
+        case privateMessagesEnabled = "private_messages_enabled"
         case defaultCommentSortType = "default_comment_sort_type"
         case autoMarkFetchedPostsAsRead = "auto_mark_fetched_posts_as_read"
         case hideMedia = "hide_media"

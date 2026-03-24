@@ -35,7 +35,7 @@ public struct LemmyEditSite: Codable, Hashable, Sendable {
     /// Available on all versions
     public let communityCreationAdminOnly: Bool?
     /// Whether to require email verification.
-    /// Available on all versions
+    /// Unavailable after 0.19.17
     public let requireEmailVerification: Bool?
     /// Your application question form. This is in markdown, and can be many questions.
     /// Available on all versions
@@ -138,6 +138,9 @@ public struct LemmyEditSite: Codable, Hashable, Sendable {
     /// A shorter, one line description of your site.
     /// Available from 1.0.0-alpha onwards
     public let summary: String?
+    /// Whether to require email verification.
+    /// Available from 1.0.0-alpha onwards
+    public let emailVerificationRequired: Bool?
     /// The default post sort, usually "active"
     /// Available from 1.0.0-alpha onwards
     public let defaultPostSortType: LemmyPostSortType?
@@ -206,10 +209,10 @@ public struct LemmyEditSite: Codable, Hashable, Sendable {
     public let commentDownvotes: LemmyFederationMode?
     /// Block NSFW content being created
     /// Available from 1.0.0-alpha onwards
-    public let disallowNsfwContent: Bool?
+    public let nsfwContentDisallowed: Bool?
     /// Dont send email notifications to users for new replies, mentions etc
     /// Available from 1.0.0-alpha onwards
-    public let disableEmailNotifications: Bool?
+    public let emailNotificationsDisabled: Bool?
     /// A multicommunity with suggested communities which is shown on the homepage. Sending a zero
     /// erases this field.
     /// Available from 1.0.0-alpha onwards
@@ -286,6 +289,7 @@ public extension LemmyEditSite {
         case contentWarning = "content_warning"
         case defaultPostListingMode = "default_post_listing_mode"
         case summary = "summary"
+        case emailVerificationRequired = "email_verification_required"
         case defaultPostSortType = "default_post_sort_type"
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
         case defaultItemsPerPage = "default_items_per_page"
@@ -310,8 +314,8 @@ public extension LemmyEditSite {
         case postDownvotes = "post_downvotes"
         case commentUpvotes = "comment_upvotes"
         case commentDownvotes = "comment_downvotes"
-        case disallowNsfwContent = "disallow_nsfw_content"
-        case disableEmailNotifications = "disable_email_notifications"
+        case nsfwContentDisallowed = "nsfw_content_disallowed"
+        case emailNotificationsDisabled = "email_notifications_disabled"
         case suggestedMultiCommunityId = "suggested_multi_community_id"
         case imageMode = "image_mode"
         case imageProxyBypassDomains = "image_proxy_bypass_domains"

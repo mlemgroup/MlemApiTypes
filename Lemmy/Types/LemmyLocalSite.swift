@@ -29,8 +29,8 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     /// Available on all versions
     public let communityCreationAdminOnly: Bool
     /// Whether emails are required.
-    /// Available on all versions
-    public let requireEmailVerification: Bool
+    /// Unavailable after 0.19.17
+    public let requireEmailVerification: Bool?
     /// An optional registration application questionnaire in markdown.
     /// Available on all versions
     public let applicationQuestion: String?
@@ -85,6 +85,9 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     /// Default value for [LocalUser.post_listing_mode]
     /// Available between 0.19.4 and 0.19.17
     public let defaultSortType: LemmySortType?
+    /// Whether emails are required.
+    /// Available from 1.0.0-alpha onwards
+    public let emailVerificationRequired: Bool?
     /// Available from 1.0.0-alpha onwards
     public let publishedAt: Date?
     /// Available from 1.0.0-alpha onwards
@@ -115,7 +118,7 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     public let defaultPostTimeRangeSeconds: Int?
     /// Block NSFW content being created
     /// Available from 1.0.0-alpha onwards
-    public let disallowNsfwContent: Bool?
+    public let nsfwContentDisallowed: Bool?
     /// Available from 1.0.0-alpha onwards
     public let users: Int?
     /// Available from 1.0.0-alpha onwards
@@ -138,7 +141,7 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     public let usersActiveHalfYear: Int?
     /// Dont send email notifications to users for new replies, mentions etc
     /// Available from 1.0.0-alpha onwards
-    public let disableEmailNotifications: Bool?
+    public let emailNotificationsDisabled: Bool?
     /// Available from 1.0.0-alpha onwards
     public let suggestedMultiCommunityId: Int?
     /// Available from 1.0.0-alpha onwards
@@ -199,6 +202,7 @@ public extension LemmyLocalSite {
         case federationSignedFetch = "federation_signed_fetch"
         case defaultPostListingMode = "default_post_listing_mode"
         case defaultSortType = "default_sort_type"
+        case emailVerificationRequired = "email_verification_required"
         case publishedAt = "published_at"
         case updatedAt = "updated_at"
         case defaultPostSortType = "default_post_sort_type"
@@ -209,7 +213,7 @@ public extension LemmyLocalSite {
         case commentUpvotes = "comment_upvotes"
         case commentDownvotes = "comment_downvotes"
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
-        case disallowNsfwContent = "disallow_nsfw_content"
+        case nsfwContentDisallowed = "nsfw_content_disallowed"
         case users = "users"
         case posts = "posts"
         case comments = "comments"
@@ -218,7 +222,7 @@ public extension LemmyLocalSite {
         case usersActiveWeek = "users_active_week"
         case usersActiveMonth = "users_active_month"
         case usersActiveHalfYear = "users_active_half_year"
-        case disableEmailNotifications = "disable_email_notifications"
+        case emailNotificationsDisabled = "email_notifications_disabled"
         case suggestedMultiCommunityId = "suggested_multi_community_id"
         case defaultItemsPerPage = "default_items_per_page"
         case imageMode = "image_mode"

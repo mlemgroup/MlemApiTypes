@@ -80,7 +80,7 @@ public struct LemmySaveUserSettings: Codable, Hashable, Sendable {
     /// Unavailable after 0.19.17
     public let enableKeyboardNavigation: Bool?
     /// Whether user avatars or inline images in the UI that are gifs should be allowed to play or should be paused
-    /// Available on all versions
+    /// Unavailable after 0.19.17
     public let enableAnimatedImages: Bool?
     /// Whether to auto-collapse bot comments.
     /// Available on all versions
@@ -106,9 +106,13 @@ public struct LemmySaveUserSettings: Codable, Hashable, Sendable {
     /// A list of keywords used for blocking posts having them in title,url or body.
     /// Available from 1.0.0-alpha onwards
     public let blockingKeywords: [String]?
+    /// Whether user avatars or inline images in the UI that are gifs should be allowed to play or
+    /// should be paused
+    /// Available from 1.0.0-alpha onwards
+    public let animatedImagesEnabled: Bool?
     /// Whether a user can send / receive private messages
     /// Available from 1.0.0-alpha onwards
-    public let enablePrivateMessages: Bool?
+    public let privateMessagesEnabled: Bool?
     /// Some vote display mode settings
     /// Available from 1.0.0-alpha onwards
     public let showScore: Bool?
@@ -159,7 +163,8 @@ public extension LemmySaveUserSettings {
         case defaultItemsPerPage = "default_items_per_page"
         case defaultCommentSortType = "default_comment_sort_type"
         case blockingKeywords = "blocking_keywords"
-        case enablePrivateMessages = "enable_private_messages"
+        case animatedImagesEnabled = "animated_images_enabled"
+        case privateMessagesEnabled = "private_messages_enabled"
         case showScore = "show_score"
         case autoMarkFetchedPostsAsRead = "auto_mark_fetched_posts_as_read"
         case hideMedia = "hide_media"

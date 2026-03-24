@@ -28,7 +28,7 @@ public struct LemmyCreateSite: Codable, Hashable, Sendable {
     public let enableNsfw: Bool?
     /// Available on all versions
     public let communityCreationAdminOnly: Bool?
-    /// Available on all versions
+    /// Unavailable after 0.19.17
     public let requireEmailVerification: Bool?
     /// Available on all versions
     public let applicationQuestion: String?
@@ -99,6 +99,8 @@ public struct LemmyCreateSite: Codable, Hashable, Sendable {
     /// Available from 1.0.0-alpha onwards
     public let summary: String?
     /// Available from 1.0.0-alpha onwards
+    public let emailVerificationRequired: Bool?
+    /// Available from 1.0.0-alpha onwards
     public let defaultPostSortType: LemmyPostSortType?
     /// Available from 1.0.0-alpha onwards
     public let defaultPostTimeRangeSeconds: Int?
@@ -149,9 +151,9 @@ public struct LemmyCreateSite: Codable, Hashable, Sendable {
     /// Available from 1.0.0-alpha onwards
     public let commentDownvotes: LemmyFederationMode?
     /// Available from 1.0.0-alpha onwards
-    public let disallowNsfwContent: Bool?
+    public let nsfwContentDisallowed: Bool?
     /// Available from 1.0.0-alpha onwards
-    public let disableEmailNotifications: Bool?
+    public let emailNotificationsDisabled: Bool?
     /// Available from 1.0.0-alpha onwards
     public let suggestedMultiCommunityId: Int?
     /// Available from 1.0.0-alpha onwards
@@ -219,6 +221,7 @@ public extension LemmyCreateSite {
         case contentWarning = "content_warning"
         case defaultPostListingMode = "default_post_listing_mode"
         case summary = "summary"
+        case emailVerificationRequired = "email_verification_required"
         case defaultPostSortType = "default_post_sort_type"
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
         case defaultItemsPerPage = "default_items_per_page"
@@ -244,8 +247,8 @@ public extension LemmyCreateSite {
         case postDownvotes = "post_downvotes"
         case commentUpvotes = "comment_upvotes"
         case commentDownvotes = "comment_downvotes"
-        case disallowNsfwContent = "disallow_nsfw_content"
-        case disableEmailNotifications = "disable_email_notifications"
+        case nsfwContentDisallowed = "nsfw_content_disallowed"
+        case emailNotificationsDisabled = "email_notifications_disabled"
         case suggestedMultiCommunityId = "suggested_multi_community_id"
         case imageMode = "image_mode"
         case imageProxyBypassDomains = "image_proxy_bypass_domains"
