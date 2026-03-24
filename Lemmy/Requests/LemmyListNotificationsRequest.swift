@@ -19,7 +19,7 @@ public struct LemmyListNotificationsRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      type_: LemmyNotificationDataType?,
+      type_: LemmyNotificationTypeFilter?,
       unreadOnly: Bool?,
       creatorId: Int?,
       pageCursor: String?,
