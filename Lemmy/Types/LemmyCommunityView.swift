@@ -14,20 +14,20 @@ import Rest
 public struct LemmyCommunityView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let community: LemmyCommunity
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let subscribed: LemmySubscribedType?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let blocked: Bool?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let counts: LemmyCommunityAggregates?
-    /// Available between 0.19.4 and 0.19.15
+    /// Available between 0.19.4 and 0.19.17
     public let bannedFromCommunity: Bool?
     /// Available from 1.0.0-alpha onwards
     public let communityActions: LemmyCommunityActions?
     /// Available from 1.0.0-alpha onwards
     public let canMod: Bool?
     /// Available from 1.0.0-alpha onwards
-    public let postTags: [LemmyTag]?
+    public let tags: LemmyCommunityTagsView?
 }
 
 public extension LemmyCommunityView {
@@ -39,6 +39,6 @@ public extension LemmyCommunityView {
         case bannedFromCommunity = "banned_from_community"
         case communityActions = "community_actions"
         case canMod = "can_mod"
-        case postTags = "post_tags"
+        case tags = "tags"
     }
 }

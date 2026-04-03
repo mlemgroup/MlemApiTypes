@@ -17,11 +17,11 @@ public struct LemmyBanPerson: Codable, Hashable, Sendable {
     /// Available on all versions
     public let ban: Bool
     /// Optionally remove all their data. Useful for new troll accounts.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let removeData: Bool?
     /// Available on all versions, made non-optional in 1.0.0-alpha
     public let reason: String?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let expires: Int?
     /// Optionally remove or restore all their data. Useful for new troll accounts.
     /// If ban is true, then this means remove. If ban is false, it means restore.

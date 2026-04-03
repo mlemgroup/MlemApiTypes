@@ -29,7 +29,8 @@ public struct LemmyCreateCommunityRequest: PostRequest {
       postingRestrictedToMods: Bool?,
       discussionLanguages: [Int]?,
       visibility: LemmyCommunityVisibility?,
-      sidebar: String?
+      sidebar: String?,
+      summary: String?
     ) {
         self.path = endpoint == .v4 ? "api/v4/community" : "api/v3/community"
         self.body = .init(
@@ -42,7 +43,8 @@ public struct LemmyCreateCommunityRequest: PostRequest {
             postingRestrictedToMods: postingRestrictedToMods,
             discussionLanguages: discussionLanguages,
             visibility: visibility,
-            sidebar: sidebar
+            sidebar: sidebar,
+            summary: summary
         )
     }
 }

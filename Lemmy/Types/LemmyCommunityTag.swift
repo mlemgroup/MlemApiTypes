@@ -1,5 +1,5 @@
 //
-//  LemmyTag.swift
+//  LemmyCommunityTag.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyTag: Codable, Hashable, Sendable {
+public struct LemmyCommunityTag: Codable, Hashable, Sendable {
     /// Available on all versions
     public let id: Int
     /// Available on all versions
@@ -21,7 +21,7 @@ public struct LemmyTag: Codable, Hashable, Sendable {
     /// Available on all versions
     public let displayName: String?
     /// Available on all versions
-    public let description: String?
+    public let summary: String?
     /// The community that this tag belongs to
     /// Available on all versions
     public let communityId: Int
@@ -31,18 +31,21 @@ public struct LemmyTag: Codable, Hashable, Sendable {
     public let updatedAt: Date?
     /// Available on all versions
     public let deleted: Bool
+    /// Available on all versions
+    public let color: LemmyTagColor
 }
 
-public extension LemmyTag {
+public extension LemmyCommunityTag {
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case apId = "ap_id"
         case name = "name"
         case displayName = "display_name"
-        case description = "description"
+        case summary = "summary"
         case communityId = "community_id"
         case publishedAt = "published_at"
         case updatedAt = "updated_at"
         case deleted = "deleted"
+        case color = "color"
     }
 }

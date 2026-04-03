@@ -22,13 +22,15 @@ public struct LemmyRemoveCommentRequest: PostRequest {
       endpoint: LemmyEndpointVersion,
       commentId: Int,
       removed: Bool,
-      reason: String?
+      reason: String?,
+      removeChildren: Bool?
     ) {
         self.path = endpoint == .v4 ? "api/v4/comment/remove" : "api/v3/comment/remove"
         self.body = .init(
             commentId: commentId,
             removed: removed,
-            reason: reason
+            reason: reason,
+            removeChildren: removeChildren
         )
     }
 }

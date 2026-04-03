@@ -18,6 +18,10 @@ public struct LemmyRemoveComment: Codable, Hashable, Sendable {
     public let removed: Bool
     /// Available on all versions, made non-optional in 1.0.0-alpha
     public let reason: String?
+    /// Setting this will override whatever `removed` was set to,
+    /// leave as null or unset to act just on the comment itself.
+    /// Available from 1.0.0-alpha onwards
+    public let removeChildren: Bool?
 }
 
 public extension LemmyRemoveComment {
@@ -25,5 +29,6 @@ public extension LemmyRemoveComment {
         case commentId = "comment_id"
         case removed = "removed"
         case reason = "reason"
+        case removeChildren = "remove_children"
     }
 }

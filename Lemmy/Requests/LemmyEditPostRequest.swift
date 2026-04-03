@@ -1,5 +1,5 @@
 //
-//  LemmyUpdatePostRequest.swift
+//  LemmyEditPostRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct LemmyUpdatePostRequest: PutRequest {
+public struct LemmyEditPostRequest: PutRequest {
     public typealias Body = LemmyEditPost
     public typealias Response = LemmyPostResponse
     

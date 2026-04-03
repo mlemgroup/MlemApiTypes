@@ -16,6 +16,8 @@ public struct LemmyCreateCommentReport: Codable, Hashable, Sendable {
     public let commentId: Int
     /// Available on all versions
     public let reason: String
+    /// The comment violates rules of the local instance. This report will only be shown to local
+    /// admins, not to community mods and will not be federated.
     /// Available from 1.0.0-alpha onwards
     public let violatesInstanceRules: Bool?
 }

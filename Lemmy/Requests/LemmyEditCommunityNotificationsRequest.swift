@@ -1,5 +1,5 @@
 //
-//  LemmyUpdateCommunityNotificationsRequest.swift
+//  LemmyEditCommunityNotificationsRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,8 +11,8 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyUpdateCommunityNotificationsRequest: PostRequest {
-    public typealias Body = LemmyUpdateCommunityNotifications
+public struct LemmyEditCommunityNotificationsRequest: PostRequest {
+    public typealias Body = LemmyEditCommunityNotifications
     public typealias Response = LemmySuccessResponse
     
     public let path: String = "api/v4/community/notifications"

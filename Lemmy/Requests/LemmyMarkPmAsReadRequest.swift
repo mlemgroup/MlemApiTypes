@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Unavailable after 0.19.15
+/// Unavailable after 0.19.17
 public struct LemmyMarkPmAsReadRequest: PostRequest {
     public typealias Body = LemmyMarkPrivateMessageAsRead
     public typealias Response = LemmyPrivateMessageResponse

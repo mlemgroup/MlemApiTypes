@@ -29,6 +29,8 @@ public struct LemmyGetModLogRequest: GetRequest {
       postId: Int?,
       commentId: Int?,
       listingType: LemmyListingType?,
+      showBulk: Bool?,
+      bulkActionParentId: Int?,
       pageCursor: String?
     ) {
         self.path = endpoint == .v4 ? "api/v4/modlog" : "api/v3/modlog"
@@ -42,6 +44,8 @@ public struct LemmyGetModLogRequest: GetRequest {
             postId: postId,
             commentId: commentId,
             listingType: listingType,
+            showBulk: showBulk,
+            bulkActionParentId: bulkActionParentId,
             pageCursor: pageCursor
         )
     }

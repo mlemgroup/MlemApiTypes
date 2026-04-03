@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Unavailable after 0.19.15
+/// Unavailable after 0.19.17
 public struct LemmyLegacyGetFederatedInstancesResponse: Codable, Hashable, Sendable {
     /// Optional, because federation may be disabled.
     /// Available on all versions

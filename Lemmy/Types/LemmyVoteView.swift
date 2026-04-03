@@ -14,7 +14,7 @@ import Rest
 public struct LemmyVoteView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let creator: LemmyPerson
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let score: Int?
     /// Available from 0.19.4 onwards
     public let creatorBannedFromCommunity: Bool?

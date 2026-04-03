@@ -20,14 +20,14 @@ public struct LemmyCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
     public let title: String
     /// A sidebar / markdown description.
-    /// Available on all versions
+    /// Unavailable after 0.19.17
     public let description: String?
     /// Whether the community is removed by a mod.
     /// Available on all versions
     public let removed: Bool
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let published: Date?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let updated: Date?
     /// Whether the community has been deleted by its creator.
     /// Available on all versions
@@ -36,7 +36,7 @@ public struct LemmyCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
     public let nsfw: Bool
     /// The federated actor_id.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let actorId: ActorIdentifier?
     /// Whether the community is local.
     /// Available on all versions
@@ -48,7 +48,7 @@ public struct LemmyCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
     public let banner: URL?
     /// Whether the community is hidden.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let hidden: Bool?
     /// Whether posting is restricted to mods only.
     /// Available on all versions
@@ -69,6 +69,11 @@ public struct LemmyCommunity: Codable, Hashable, Sendable {
     /// The federated ap_id.
     /// Available from 1.0.0-alpha onwards
     public let apId: ActorIdentifier?
+    /// Available from 1.0.0-alpha onwards
+    public let lastRefreshedAt: Date?
+    /// A shorter, one-line summary.
+    /// Available from 1.0.0-alpha onwards
+    public let summary: String?
     /// Available from 1.0.0-alpha onwards
     public let subscribers: Int?
     /// Available from 1.0.0-alpha onwards
@@ -121,6 +126,8 @@ public extension LemmyCommunity {
         case publishedAt = "published_at"
         case updatedAt = "updated_at"
         case apId = "ap_id"
+        case lastRefreshedAt = "last_refreshed_at"
+        case summary = "summary"
         case subscribers = "subscribers"
         case posts = "posts"
         case comments = "comments"

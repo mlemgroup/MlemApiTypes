@@ -19,9 +19,9 @@ public struct LemmySite: Codable, Hashable, Sendable {
     /// A sidebar for the site in markdown.
     /// Available on all versions
     public let sidebar: String?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let published: Date?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let updated: Date?
     /// An icon URL.
     /// Available on all versions
@@ -30,10 +30,10 @@ public struct LemmySite: Codable, Hashable, Sendable {
     /// Available on all versions
     public let banner: URL?
     /// A shorter, one-line description of the site.
-    /// Available on all versions
+    /// Unavailable after 0.19.17
     public let description: String?
     /// The federated actor_id.
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let actorId: ActorIdentifier?
     /// The time the site was last refreshed.
     /// Available on all versions
@@ -43,8 +43,8 @@ public struct LemmySite: Codable, Hashable, Sendable {
     public let inboxUrl: URL
     /// Unavailable after 0.19.3
     public let privateKey: String?
-    /// Available on all versions
-    public let publicKey: String
+    /// Unavailable after 0.19.17
+    public let publicKey: String?
     /// Available on all versions
     public let instanceId: Int
     /// If present, nsfw content is visible by default. Should be displayed by frontends/clients
@@ -55,6 +55,9 @@ public struct LemmySite: Codable, Hashable, Sendable {
     public let publishedAt: Date?
     /// Available from 1.0.0-alpha onwards
     public let updatedAt: Date?
+    /// A shorter, one-line summary of the site.
+    /// Available from 1.0.0-alpha onwards
+    public let summary: String?
     /// The federated ap_id.
     /// Available from 1.0.0-alpha onwards
     public let apId: ActorIdentifier?
@@ -79,6 +82,7 @@ public extension LemmySite {
         case contentWarning = "content_warning"
         case publishedAt = "published_at"
         case updatedAt = "updated_at"
+        case summary = "summary"
         case apId = "ap_id"
     }
 }

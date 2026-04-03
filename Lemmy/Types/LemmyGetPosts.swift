@@ -17,7 +17,7 @@ public struct LemmyGetPosts: Codable, Hashable, Sendable {
     /// Available on all versions
     public let sort: LemmyPostSortTypeBridge
     /// DEPRECATED, use page_cursor
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let page: Int?
     /// Available on all versions
     public let limit: Int?
@@ -25,11 +25,11 @@ public struct LemmyGetPosts: Codable, Hashable, Sendable {
     public let communityId: Int?
     /// Available on all versions
     public let communityName: String?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let savedOnly: Bool?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let likedOnly: Bool?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let dislikedOnly: Bool?
     /// Available on all versions
     public let pageCursor: String?
@@ -59,6 +59,12 @@ public struct LemmyGetPosts: Codable, Hashable, Sendable {
     /// If true, then only show posts with no comments
     /// Available from 1.0.0-alpha onwards
     public let noCommentsOnly: Bool?
+    /// Available from 1.0.0-alpha onwards
+    public let searchTerm: String?
+    /// Available from 1.0.0-alpha onwards
+    public let searchTitleOnly: Bool?
+    /// Available from 1.0.0-alpha onwards
+    public let searchUrlOnly: Bool?
 }
 
 public extension LemmyGetPosts {
@@ -82,5 +88,8 @@ public extension LemmyGetPosts {
         case hideMedia = "hide_media"
         case markAsRead = "mark_as_read"
         case noCommentsOnly = "no_comments_only"
+        case searchTerm = "search_term"
+        case searchTitleOnly = "search_title_only"
+        case searchUrlOnly = "search_url_only"
     }
 }

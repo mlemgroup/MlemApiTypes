@@ -21,12 +21,14 @@ public struct LemmyCreateMultiCommunityRequest: PostRequest {
     init(
       name: String,
       title: String?,
-      description: String?
+      summary: String?,
+      sidebar: String?
     ) {
         self.body = .init(
             name: name,
             title: title,
-            description: description
+            summary: summary,
+            sidebar: sidebar
         )
     }
 }

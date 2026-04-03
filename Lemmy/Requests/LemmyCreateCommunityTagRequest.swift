@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.0.0-alpha onwards
 public struct LemmyCreateCommunityTagRequest: PostRequest {
     public typealias Body = LemmyCreateCommunityTag
-    public typealias Response = LemmyTag
+    public typealias Response = LemmyCommunityTag
     
     public let path: String = "api/v4/community/tag"
     public let body: Body?
@@ -22,13 +22,15 @@ public struct LemmyCreateCommunityTagRequest: PostRequest {
       communityId: Int,
       name: String,
       displayName: String?,
-      description: String?
+      summary: String?,
+      color: LemmyTagColor?
     ) {
         self.body = .init(
             communityId: communityId,
             name: name,
             displayName: displayName,
-            description: description
+            summary: summary,
+            color: color
         )
     }
 }

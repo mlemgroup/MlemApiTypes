@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Unavailable after 0.19.15
+/// Unavailable after 0.19.17
 public struct LemmyMarkPersonMentionAsRead: Codable, Hashable, Sendable {
     /// Available on all versions
     public let personMentionId: Int

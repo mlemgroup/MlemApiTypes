@@ -12,29 +12,29 @@ import Rest
 
 /// Available on all versions
 public enum LemmyModlogKind: String, Codable, Sendable {
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     case all
     /// Available on all versions
     case modRemovePost
     /// Available on all versions
     case modLockPost
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     case modFeaturePost
     /// Available on all versions
     case modRemoveComment
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     case modRemoveCommunity
     /// Available on all versions
     case modBanFromCommunity
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     case modAddCommunity
     /// Available on all versions
     case modTransferCommunity
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     case modAdd
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     case modBan
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     case modHideCommunity
     /// Available on all versions
     case adminPurgePerson
@@ -64,6 +64,10 @@ public enum LemmyModlogKind: String, Codable, Sendable {
     case adminRemoveCommunity
     /// Available from 1.0.0-alpha onwards
     case modLockComment
+    /// Available from 1.0.0-alpha onwards
+    case modWarnComment
+    /// Available from 1.0.0-alpha onwards
+    case modWarnPost
     
     public init(from decoder: any Decoder) throws {
         let container = try decoder.singleValueContainer()
@@ -94,6 +98,8 @@ public enum LemmyModlogKind: String, Codable, Sendable {
         case "mod_change_community_visibility": .modChangeCommunityVisibility
         case "admin_remove_community": .adminRemoveCommunity
         case "mod_lock_comment": .modLockComment
+        case "mod_warn_comment": .modWarnComment
+        case "mod_warn_post": .modWarnPost
         default:
             throw DecodingError.valueNotFound(String.self, .init(codingPath: decoder.codingPath, debugDescription: "Value not found"))
         }
@@ -137,6 +143,8 @@ public enum LemmyModlogKind: String, Codable, Sendable {
         case (.modChangeCommunityVisibility, _): "mod_change_community_visibility"
         case (.adminRemoveCommunity, _): "admin_remove_community"
         case (.modLockComment, _): "mod_lock_comment"
+        case (.modWarnComment, _): "mod_warn_comment"
+        case (.modWarnPost, _): "mod_warn_post"
         }
         try container.encode(value)
     }

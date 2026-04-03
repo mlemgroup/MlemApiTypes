@@ -33,9 +33,9 @@ public struct LemmyPostReport: Codable, Hashable, Sendable {
     public let resolved: Bool
     /// Available on all versions
     public let resolverId: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let published: Date?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let updated: Date?
     /// Available from 1.0.0-alpha onwards
     public let publishedAt: Date?

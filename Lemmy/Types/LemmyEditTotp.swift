@@ -1,5 +1,5 @@
 //
-//  LemmyUpdateCommunityNotifications.swift
+//  LemmyEditTotp.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,16 +11,16 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyUpdateCommunityNotifications: Codable, Hashable, Sendable {
+public struct LemmyEditTotp: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let communityId: Int
+    public let totpToken: String
     /// Available on all versions
-    public let mode: LemmyCommunityNotificationsMode
+    public let enabled: Bool
 }
 
-public extension LemmyUpdateCommunityNotifications {
+public extension LemmyEditTotp {
     enum CodingKeys: String, CodingKey {
-        case communityId = "community_id"
-        case mode = "mode"
+        case totpToken = "totp_token"
+        case enabled = "enabled"
     }
 }

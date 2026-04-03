@@ -18,7 +18,7 @@ public struct LemmyGetComments: Codable, Hashable, Sendable {
     public let sort: LemmyCommentSortType?
     /// Available on all versions
     public let maxDepth: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let page: Int?
     /// Available on all versions
     public let limit: Int?
@@ -30,11 +30,11 @@ public struct LemmyGetComments: Codable, Hashable, Sendable {
     public let postId: Int?
     /// Available on all versions
     public let parentId: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let savedOnly: Bool?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let likedOnly: Bool?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let dislikedOnly: Bool?
     /// Filter to within a given time range, in seconds.
     /// IE 60 would give results for the past minute.
@@ -42,6 +42,8 @@ public struct LemmyGetComments: Codable, Hashable, Sendable {
     public let timeRangeSeconds: Int?
     /// Available from 1.0.0-alpha onwards
     public let pageCursor: String?
+    /// Available from 1.0.0-alpha onwards
+    public let searchTerm: String?
 }
 
 public extension LemmyGetComments {
@@ -60,5 +62,6 @@ public extension LemmyGetComments {
         case dislikedOnly = "disliked_only"
         case timeRangeSeconds = "time_range_seconds"
         case pageCursor = "page_cursor"
+        case searchTerm = "search_term"
     }
 }

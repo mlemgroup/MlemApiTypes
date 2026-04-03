@@ -31,14 +31,14 @@ public struct LemmyResolveObjectRequest: GetRequest {
 
 public enum LemmyResolveObjectResponseUnion: Decodable {
     case lemmyResolveObjectResponse(LemmyResolveObjectResponse)
-    case lemmySearchResponse(LemmySearchResponse)
+    case lemmyResolveObjectView(LemmyResolveObjectView)
     
     public init(from decoder: Decoder) throws {
         if let value = try? LemmyResolveObjectResponse(from: decoder) {
             self = .lemmyResolveObjectResponse(value)
             return
         }
-        let value = try LemmySearchResponse(from: decoder)
-        self = .lemmySearchResponse(value)
+        let value = try LemmyResolveObjectView(from: decoder)
+        self = .lemmyResolveObjectView(value)
     }
 }

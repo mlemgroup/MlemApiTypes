@@ -17,6 +17,8 @@ public struct LemmyAdminListUsers: Codable, Hashable, Sendable {
     /// Available on all versions
     public let pageCursor: String?
     /// Available on all versions
+    public let sort: LemmyLocalUserSortType?
+    /// Available on all versions
     public let limit: Int?
 }
 
@@ -24,6 +26,7 @@ public extension LemmyAdminListUsers {
     enum CodingKeys: String, CodingKey {
         case bannedOnly = "banned_only"
         case pageCursor = "page_cursor"
+        case sort = "sort"
         case limit = "limit"
     }
 }

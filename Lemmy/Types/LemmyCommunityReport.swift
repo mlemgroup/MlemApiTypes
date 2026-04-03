@@ -23,7 +23,7 @@ public struct LemmyCommunityReport: Codable, Hashable, Sendable {
     /// Available on all versions
     public let originalCommunityTitle: String
     /// Available on all versions
-    public let originalCommunityDescription: String?
+    public let originalCommunitySummary: String?
     /// Available on all versions
     public let originalCommunitySidebar: String?
     /// Available on all versions
@@ -49,7 +49,7 @@ public extension LemmyCommunityReport {
         case communityId = "community_id"
         case originalCommunityName = "original_community_name"
         case originalCommunityTitle = "original_community_title"
-        case originalCommunityDescription = "original_community_description"
+        case originalCommunitySummary = "original_community_summary"
         case originalCommunitySidebar = "original_community_sidebar"
         case originalCommunityIcon = "original_community_icon"
         case originalCommunityBanner = "original_community_banner"

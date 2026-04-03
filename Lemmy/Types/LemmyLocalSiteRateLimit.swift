@@ -14,37 +14,37 @@ import Rest
 public struct LemmyLocalSiteRateLimit: Codable, Hashable, Sendable {
     /// Available on all versions
     public let localSiteId: Int
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let message: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let messagePerSecond: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let post: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let postPerSecond: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let register: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let registerPerSecond: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let image: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let imagePerSecond: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let comment: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let commentPerSecond: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let search: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let searchPerSecond: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let published: Date?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let updated: Date?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let importUserSettings: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let importUserSettingsPerSecond: Int?
     /// Available from 1.0.0-alpha onwards
     public let messageMaxRequests: Int?

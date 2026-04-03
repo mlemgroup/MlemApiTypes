@@ -16,7 +16,7 @@ public struct LemmyGetModlog: Codable, Hashable, Sendable {
     public let modPersonId: Int?
     /// Available on all versions
     public let communityId: Int?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let page: Int?
     /// Available on all versions
     public let limit: Int?
@@ -32,6 +32,12 @@ public struct LemmyGetModlog: Codable, Hashable, Sendable {
     /// such as site bans, instance blocks, adding an admin, etc.
     /// Available from 1.0.0-alpha onwards
     public let listingType: LemmyListingType?
+    /// When `true` show all. When `false` or `None`, hide bulk actions (default).
+    /// Available from 1.0.0-alpha onwards
+    public let showBulk: Bool?
+    /// Return only child entries triggered by this parent modlog action.
+    /// Available from 1.0.0-alpha onwards
+    public let bulkActionParentId: Int?
     /// Available from 1.0.0-alpha onwards
     public let pageCursor: String?
 }
@@ -47,6 +53,8 @@ public extension LemmyGetModlog {
         case postId = "post_id"
         case commentId = "comment_id"
         case listingType = "listing_type"
+        case showBulk = "show_bulk"
+        case bulkActionParentId = "bulk_action_parent_id"
         case pageCursor = "page_cursor"
     }
 }

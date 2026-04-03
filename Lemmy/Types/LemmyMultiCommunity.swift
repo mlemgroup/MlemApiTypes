@@ -22,14 +22,17 @@ public struct LemmyMultiCommunity: Codable, Hashable, Sendable {
     public let name: String
     /// Available on all versions
     public let title: String?
+    /// A shorter, one-line summary.
     /// Available on all versions
-    public let description: String?
+    public let summary: String?
     /// Available on all versions
     public let local: Bool
     /// Available on all versions
     public let deleted: Bool
     /// Available on all versions
     public let apId: ActorIdentifier
+    /// Available on all versions
+    public let lastRefreshedAt: Date
     /// Available on all versions
     public let publishedAt: Date
     /// Available on all versions
@@ -40,6 +43,9 @@ public struct LemmyMultiCommunity: Codable, Hashable, Sendable {
     public let subscribersLocal: Int
     /// Available on all versions
     public let communities: Int
+    /// A sidebar in markdown.
+    /// Available on all versions
+    public let sidebar: String?
 }
 
 public extension LemmyMultiCommunity {
@@ -49,14 +55,16 @@ public extension LemmyMultiCommunity {
         case instanceId = "instance_id"
         case name = "name"
         case title = "title"
-        case description = "description"
+        case summary = "summary"
         case local = "local"
         case deleted = "deleted"
         case apId = "ap_id"
+        case lastRefreshedAt = "last_refreshed_at"
         case publishedAt = "published_at"
         case updatedAt = "updated_at"
         case subscribers = "subscribers"
         case subscribersLocal = "subscribers_local"
         case communities = "communities"
+        case sidebar = "sidebar"
     }
 }

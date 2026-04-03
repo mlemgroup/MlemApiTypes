@@ -1,5 +1,5 @@
 //
-//  LemmyUpdateOauthProviderRequest.swift
+//  LemmyEditOauthProviderRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyUpdateOauthProviderRequest: PutRequest {
+public struct LemmyEditOauthProviderRequest: PutRequest {
     public typealias Body = LemmyEditOAuthProvider
     public typealias Response = LemmyAdminOAuthProvider
     

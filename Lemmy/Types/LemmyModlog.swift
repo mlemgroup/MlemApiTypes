@@ -24,6 +24,8 @@ public struct LemmyModlog: Codable, Hashable, Sendable {
     public let expiresAt: Date?
     /// Available on all versions
     public let publishedAt: Date
+    /// Available on all versions
+    public let bulkActionParentId: Int?
 }
 
 public extension LemmyModlog {
@@ -34,5 +36,6 @@ public extension LemmyModlog {
         case reason = "reason"
         case expiresAt = "expires_at"
         case publishedAt = "published_at"
+        case bulkActionParentId = "bulk_action_parent_id"
     }
 }

@@ -14,7 +14,7 @@ import Rest
 public struct LemmyListCommentLikes: Codable, Hashable, Sendable {
     /// Available on all versions
     public let commentId: Int
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let page: Int?
     /// Available on all versions
     public let limit: Int?

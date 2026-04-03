@@ -22,11 +22,11 @@ public struct LemmyPrivateMessage: Codable, Hashable, Sendable {
     public let content: String
     /// Available on all versions
     public let deleted: Bool
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let read: Bool?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let published: Date?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let updated: Date?
     /// Available on all versions
     public let apId: ActorIdentifier
@@ -38,6 +38,8 @@ public struct LemmyPrivateMessage: Codable, Hashable, Sendable {
     public let publishedAt: Date?
     /// Available from 1.0.0-alpha onwards
     public let updatedAt: Date?
+    /// Available from 1.0.0-alpha onwards
+    public let deletedByRecipient: Bool?
 }
 
 public extension LemmyPrivateMessage {
@@ -55,5 +57,6 @@ public extension LemmyPrivateMessage {
         case removed = "removed"
         case publishedAt = "published_at"
         case updatedAt = "updated_at"
+        case deletedByRecipient = "deleted_by_recipient"
     }
 }

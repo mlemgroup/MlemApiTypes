@@ -18,7 +18,7 @@ public struct LemmyListCommunities: Codable, Hashable, Sendable {
     public let sort: LemmyCommunitySortTypeBridge
     /// Available on all versions
     public let showNsfw: Bool?
-    /// Unavailable after 0.19.15
+    /// Unavailable after 0.19.17
     public let page: Int?
     /// Available on all versions
     public let limit: Int?
@@ -26,6 +26,12 @@ public struct LemmyListCommunities: Codable, Hashable, Sendable {
     /// IE 60 would give results for the past minute.
     /// Available from 1.0.0-alpha onwards
     public let timeRangeSeconds: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let multiCommunityId: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let searchTerm: String?
+    /// Available from 1.0.0-alpha onwards
+    public let searchTitleOnly: Bool?
     /// Available from 1.0.0-alpha onwards
     public let pageCursor: String?
 }
@@ -38,6 +44,9 @@ public extension LemmyListCommunities {
         case page = "page"
         case limit = "limit"
         case timeRangeSeconds = "time_range_seconds"
+        case multiCommunityId = "multi_community_id"
+        case searchTerm = "search_term"
+        case searchTitleOnly = "search_title_only"
         case pageCursor = "page_cursor"
     }
 }

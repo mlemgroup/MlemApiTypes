@@ -17,13 +17,16 @@ public struct LemmyCreateMultiCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
     public let title: String?
     /// Available on all versions
-    public let description: String?
+    public let summary: String?
+    /// Available on all versions
+    public let sidebar: String?
 }
 
 public extension LemmyCreateMultiCommunity {
     enum CodingKeys: String, CodingKey {
         case name = "name"
         case title = "title"
-        case description = "description"
+        case summary = "summary"
+        case sidebar = "sidebar"
     }
 }

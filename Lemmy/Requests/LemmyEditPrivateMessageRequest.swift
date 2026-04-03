@@ -1,5 +1,5 @@
 //
-//  LemmyUpdatePrivateMessageRequest.swift
+//  LemmyEditPrivateMessageRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct LemmyUpdatePrivateMessageRequest: PutRequest {
+public struct LemmyEditPrivateMessageRequest: PutRequest {
     public typealias Body = LemmyEditPrivateMessage
     public typealias Response = LemmyPrivateMessageResponse
     

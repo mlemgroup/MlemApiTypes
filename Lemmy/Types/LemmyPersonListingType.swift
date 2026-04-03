@@ -1,5 +1,5 @@
 //
-//  LemmyTagsView.swift
+//  LemmyPersonListingType.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,5 +11,9 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyTagsView: Codable, Hashable, Sendable {
+public enum LemmyPersonListingType: String, Codable, Sendable {
+    /// Available on all versions
+    case all = "all"
+    /// Available on all versions
+    case local = "local"
 }

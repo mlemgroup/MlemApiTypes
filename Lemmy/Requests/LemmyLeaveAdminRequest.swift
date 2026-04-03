@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Unavailable after 0.19.15
+/// Unavailable after 0.19.17
 public struct LemmyLeaveAdminRequest: PostRequest {
     public typealias Body = Int
     public typealias Response = LemmyGetSiteResponse
