@@ -10,15 +10,17 @@
 import Foundation
 import Rest
 
-/// Available from 1.0.0-alpha onwards
+/// Available from 0.19.11 onwards
 public struct LemmyMarkDonationDialogShownRequest: PostRequest {
     public typealias Body = Int
     public typealias Response = LemmySuccessResponse
     
-    public let path: String = "api/v4/account/donation_dialog_shown"
+    public let path: String
     public let body: Body? = nil
     
     init(
+      endpoint: LemmyEndpointVersion
     ) {
+        self.path = endpoint == .v4 ? "api/v4/account/donation_dialog_shown" : "api/v3/user/donation_dialog_shown"
     }
 }
