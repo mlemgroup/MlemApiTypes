@@ -47,6 +47,10 @@ public struct LemmyGetPosts: Codable, Hashable, Sendable {
     /// Available from 1.0.0-alpha onwards
     public let timeRangeSeconds: Int?
     /// Available from 1.0.0-alpha onwards
+    public let creatorId: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let creatorUsername: String?
+    /// Available from 1.0.0-alpha onwards
     public let multiCommunityId: Int?
     /// Available from 1.0.0-alpha onwards
     public let multiCommunityName: String?
@@ -83,6 +87,8 @@ public extension LemmyGetPosts {
         case showRead = "show_read"
         case showNsfw = "show_nsfw"
         case timeRangeSeconds = "time_range_seconds"
+        case creatorId = "creator_id"
+        case creatorUsername = "creator_username"
         case multiCommunityId = "multi_community_id"
         case multiCommunityName = "multi_community_name"
         case hideMedia = "hide_media"

@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public struct LemmyEditCommunityNotificationsRequest: PostRequest {
+public struct LemmyEditCommunityNotificationsRequest: PutRequest {
     public typealias Body = LemmyEditCommunityNotifications
     public typealias Response = LemmySuccessResponse
     

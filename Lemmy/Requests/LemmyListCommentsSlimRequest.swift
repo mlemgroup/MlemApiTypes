@@ -33,6 +33,8 @@ public struct LemmyListCommentsSlimRequest: GetRequest {
       dislikedOnly: Bool?,
       timeRangeSeconds: Int?,
       pageCursor: String?,
+      creatorId: Int?,
+      creatorUsername: String?,
       searchTerm: String?
     ) {
         self.parameters = .init(
@@ -50,6 +52,8 @@ public struct LemmyListCommentsSlimRequest: GetRequest {
             dislikedOnly: dislikedOnly,
             timeRangeSeconds: timeRangeSeconds,
             pageCursor: pageCursor,
+            creatorId: creatorId,
+            creatorUsername: creatorUsername,
             searchTerm: searchTerm
         )
     }

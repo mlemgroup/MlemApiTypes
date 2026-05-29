@@ -24,6 +24,10 @@ public struct LemmyListReports: Codable, Hashable, Sendable {
     /// if no community is given, it returns reports for all communities moderated by the auth user
     /// Available on all versions
     public let communityId: Int?
+    /// If this is None, then the default sort is Old / First In First Out if viewing unresolved
+    /// reports, but new if viewing all reports. Setting this overrides the default.
+    /// Available on all versions
+    public let sort: LemmyReportSortType?
     /// Available on all versions
     public let pageCursor: String?
     /// Available on all versions
@@ -42,6 +46,7 @@ public extension LemmyListReports {
         case type_ = "type_"
         case postId = "post_id"
         case communityId = "community_id"
+        case sort = "sort"
         case pageCursor = "page_cursor"
         case limit = "limit"
         case showCommunityRuleViolations = "show_community_rule_violations"

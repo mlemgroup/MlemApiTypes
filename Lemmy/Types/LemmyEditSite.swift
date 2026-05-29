@@ -240,6 +240,8 @@ public struct LemmyEditSite: Codable, Hashable, Sendable {
     public let imageAllowVideoUploads: Bool?
     /// Available from 1.0.0-alpha onwards
     public let imageUploadDisabled: Bool?
+    /// Available from 1.0.0-alpha onwards
+    public let maxInvitesPerUserAllowed: Int?
 }
 
 public extension LemmyEditSite {
@@ -326,5 +328,6 @@ public extension LemmyEditSite {
         case imageMaxUploadSize = "image_max_upload_size"
         case imageAllowVideoUploads = "image_allow_video_uploads"
         case imageUploadDisabled = "image_upload_disabled"
+        case maxInvitesPerUserAllowed = "max_invites_per_user_allowed"
     }
 }

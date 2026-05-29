@@ -18,6 +18,8 @@ public enum LemmyRegistrationMode: String, Codable, Sendable {
     case requireApplication
     /// Available on all versions
     case open
+    /// Available from 1.0.0-alpha onwards
+    case requireInvitation
     
     public init(from decoder: any Decoder) throws {
         let container = try decoder.singleValueContainer()
@@ -25,6 +27,7 @@ public enum LemmyRegistrationMode: String, Codable, Sendable {
         case "Closed", "closed": .closed
         case "RequireApplication", "require_application": .requireApplication
         case "Open", "open": .open
+        case "require_invitation": .requireInvitation
         default:
             throw DecodingError.valueNotFound(String.self, .init(codingPath: decoder.codingPath, debugDescription: "Value not found"))
         }
@@ -39,6 +42,7 @@ public enum LemmyRegistrationMode: String, Codable, Sendable {
         case (.requireApplication, .v4): "require_application"
         case (.open, .v3): "Open"
         case (.open, .v4): "open"
+        case (.requireInvitation, _): "require_invitation"
         }
         try container.encode(value)
     }

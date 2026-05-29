@@ -58,6 +58,8 @@ public struct LemmyPostReportView: Codable, Hashable, Sendable {
     public let creatorBanExpiresAt: Date?
     /// Available from 1.0.0-alpha onwards
     public let creatorCommunityBanExpiresAt: Date?
+    /// Available from 1.0.0-alpha onwards
+    public let tags: LemmyCommunityTagsView?
 }
 
 public extension LemmyPostReportView {
@@ -85,5 +87,6 @@ public extension LemmyPostReportView {
         case creatorBanned = "creator_banned"
         case creatorBanExpiresAt = "creator_ban_expires_at"
         case creatorCommunityBanExpiresAt = "creator_community_ban_expires_at"
+        case tags = "tags"
     }
 }

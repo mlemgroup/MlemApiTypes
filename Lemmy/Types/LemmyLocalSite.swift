@@ -172,6 +172,9 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     public let imageAllowVideoUploads: Bool?
     /// Available from 1.0.0-alpha onwards
     public let imageUploadDisabled: Bool?
+    /// How many active invite links a user can have
+    /// Available from 1.0.0-alpha onwards
+    public let maxInvitesPerUserAllowed: Int?
 }
 
 public extension LemmyLocalSite {
@@ -234,5 +237,6 @@ public extension LemmyLocalSite {
         case imageMaxUploadSize = "image_max_upload_size"
         case imageAllowVideoUploads = "image_allow_video_uploads"
         case imageUploadDisabled = "image_upload_disabled"
+        case maxInvitesPerUserAllowed = "max_invites_per_user_allowed"
     }
 }

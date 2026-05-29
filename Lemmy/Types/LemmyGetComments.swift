@@ -43,6 +43,10 @@ public struct LemmyGetComments: Codable, Hashable, Sendable {
     /// Available from 1.0.0-alpha onwards
     public let pageCursor: String?
     /// Available from 1.0.0-alpha onwards
+    public let creatorId: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let creatorUsername: String?
+    /// Available from 1.0.0-alpha onwards
     public let searchTerm: String?
 }
 
@@ -62,6 +66,8 @@ public extension LemmyGetComments {
         case dislikedOnly = "disliked_only"
         case timeRangeSeconds = "time_range_seconds"
         case pageCursor = "page_cursor"
+        case creatorId = "creator_id"
+        case creatorUsername = "creator_username"
         case searchTerm = "search_term"
     }
 }
