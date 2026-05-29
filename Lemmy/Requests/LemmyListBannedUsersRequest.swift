@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Unavailable after 0.19.17
+/// Unavailable after 0.19.18
 public struct LemmyListBannedUsersRequest: GetRequest {
     public typealias Parameters = Int
     public typealias Response = LemmyBannedPersonsResponse

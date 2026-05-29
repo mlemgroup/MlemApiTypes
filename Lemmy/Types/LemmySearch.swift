@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public struct LemmySearch: Codable, Hashable, Sendable {
-    /// Unavailable after 0.19.17
+    /// Unavailable after 0.19.18
     public let q: String?
     /// Unavailable after 0.19.17
     public let communityId: Int?
@@ -24,13 +24,13 @@ public struct LemmySearch: Codable, Hashable, Sendable {
     public let type_: LemmySearchType?
     /// Unavailable after 0.19.17
     public let sort: LemmySearchSortTypeBridge
-    /// Unavailable after 0.19.17
+    /// Unavailable after 0.19.18
     public let listingType: LemmyListingType?
-    /// Unavailable after 0.19.17
+    /// Unavailable after 0.19.18
     public let page: Int?
     /// Unavailable after 0.19.17
     public let limit: Int?
-    /// Available between 0.19.6 and 0.19.17
+    /// Available between 0.19.6 and 0.19.18
     public let postTitleOnly: Bool?
     /// Available from 1.0.0-alpha onwards
     public let searchTerm: String?

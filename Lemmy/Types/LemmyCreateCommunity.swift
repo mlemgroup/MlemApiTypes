@@ -19,7 +19,7 @@ public struct LemmyCreateCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
     public let title: String
     /// A longer sidebar, or description of your community, in markdown.
-    /// Unavailable after 0.19.17
+    /// Unavailable after 0.19.18
     public let description: String?
     /// An icon URL.
     /// Available on all versions
