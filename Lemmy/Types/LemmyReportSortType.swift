@@ -1,0 +1,21 @@
+//
+//  LemmyReportSortType.swift
+//  Mlem
+//
+//  Created by https://github.com/mlemgroup/lemmy-swift-codegen
+//
+
+// ---- AUTOMATICALLY GENERATED FILE, DO NOT MODIFY ---- //
+
+import Foundation
+import Rest
+
+/// Available from 1.0.0-alpha onwards
+public enum LemmyReportSortType: String, Codable, Sendable {
+    /// Available on all versions
+    case `default` = "default"
+    /// Available on all versions
+    case new = "new"
+    /// Available on all versions
+    case old = "old"
+}
