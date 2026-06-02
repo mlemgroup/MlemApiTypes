@@ -15,6 +15,8 @@ public struct LemmyListPersonSaved: Codable, Hashable, Sendable {
     /// Available on all versions
     public let type_: LemmyPersonContentType?
     /// Available on all versions
+    public let searchTerm: String?
+    /// Available on all versions
     public let pageCursor: String?
     /// Available on all versions
     public let limit: Int?
@@ -23,6 +25,7 @@ public struct LemmyListPersonSaved: Codable, Hashable, Sendable {
 public extension LemmyListPersonSaved {
     enum CodingKeys: String, CodingKey {
         case type_ = "type_"
+        case searchTerm = "search_term"
         case pageCursor = "page_cursor"
         case limit = "limit"
     }

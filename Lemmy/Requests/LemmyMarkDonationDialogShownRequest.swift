@@ -1,5 +1,5 @@
 //
-//  LemmyDonationDialogShownRequest.swift
+//  LemmyMarkDonationDialogShownRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available from 0.19.11 onwards
-public struct LemmyDonationDialogShownRequest: PostRequest {
+public struct LemmyMarkDonationDialogShownRequest: PostRequest {
     public typealias Body = Int
     public typealias Response = LemmySuccessResponse
     

@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Unavailable after 0.19.18
 public struct LemmyPasswordReset: Codable, Hashable, Sendable {
     /// Available on all versions
     public let email: String

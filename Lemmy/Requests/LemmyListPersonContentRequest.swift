@@ -22,6 +22,8 @@ public struct LemmyListPersonContentRequest: GetRequest {
       type_: LemmyPersonContentType?,
       personId: Int?,
       username: String?,
+      communityId: Int?,
+      communityName: String?,
       pageCursor: String?,
       limit: Int?
     ) {
@@ -29,6 +31,8 @@ public struct LemmyListPersonContentRequest: GetRequest {
             type_: type_,
             personId: personId,
             username: username,
+            communityId: communityId,
+            communityName: communityName,
             pageCursor: pageCursor,
             limit: limit
         )

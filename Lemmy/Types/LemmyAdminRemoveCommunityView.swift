@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Unavailable after 0.19.17
+/// Unavailable after 0.19.18
 public struct LemmyAdminRemoveCommunityView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let modRemoveCommunity: LemmyAdminRemoveCommunity

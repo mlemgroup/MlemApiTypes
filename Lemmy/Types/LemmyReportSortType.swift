@@ -1,5 +1,5 @@
 //
-//  LemmySearchSortType.swift
+//  LemmyReportSortType.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,11 +11,11 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public enum LemmySearchSortType: String, Codable, Sendable {
+public enum LemmyReportSortType: String, Codable, Sendable {
+    /// Available on all versions
+    case `default` = "default"
     /// Available on all versions
     case new = "new"
-    /// Available on all versions
-    case top = "top"
     /// Available on all versions
     case old = "old"
 }

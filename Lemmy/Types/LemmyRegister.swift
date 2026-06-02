@@ -38,6 +38,9 @@ public struct LemmyRegister: Codable, Hashable, Sendable {
     /// If this is true the login is valid forever, otherwise it expires after one week.
     /// Available from 1.0.0-alpha onwards
     public let stayLoggedIn: Bool?
+    /// Invitation token
+    /// Available from 1.0.0-alpha onwards
+    public let token: String?
 }
 
 public extension LemmyRegister {
@@ -52,5 +55,6 @@ public extension LemmyRegister {
         case honeypot = "honeypot"
         case answer = "answer"
         case stayLoggedIn = "stay_logged_in"
+        case token = "token"
     }
 }

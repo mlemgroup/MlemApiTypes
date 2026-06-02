@@ -101,7 +101,8 @@ public struct LemmyEditSiteRequest: PutRequest {
       imageMaxBannerSize: Int?,
       imageMaxUploadSize: Int?,
       imageAllowVideoUploads: Bool?,
-      imageUploadDisabled: Bool?
+      imageUploadDisabled: Bool?,
+      maxInvitesPerUserAllowed: Int?
     ) {
         self.path = endpoint == .v4 ? "api/v4/site" : "api/v3/site"
         self.body = .init(
@@ -186,7 +187,8 @@ public struct LemmyEditSiteRequest: PutRequest {
             imageMaxBannerSize: imageMaxBannerSize,
             imageMaxUploadSize: imageMaxUploadSize,
             imageAllowVideoUploads: imageAllowVideoUploads,
-            imageUploadDisabled: imageUploadDisabled
+            imageUploadDisabled: imageUploadDisabled,
+            maxInvitesPerUserAllowed: maxInvitesPerUserAllowed
         )
     }
 }

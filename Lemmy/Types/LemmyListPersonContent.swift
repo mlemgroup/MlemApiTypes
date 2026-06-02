@@ -20,6 +20,10 @@ public struct LemmyListPersonContent: Codable, Hashable, Sendable {
     /// Available on all versions
     public let username: String?
     /// Available on all versions
+    public let communityId: Int?
+    /// Available on all versions
+    public let communityName: String?
+    /// Available on all versions
     public let pageCursor: String?
     /// Available on all versions
     public let limit: Int?
@@ -30,6 +34,8 @@ public extension LemmyListPersonContent {
         case type_ = "type_"
         case personId = "person_id"
         case username = "username"
+        case communityId = "community_id"
+        case communityName = "community_name"
         case pageCursor = "page_cursor"
         case limit = "limit"
     }

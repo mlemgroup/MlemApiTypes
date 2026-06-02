@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Unavailable after 0.19.17
+/// Unavailable after 0.19.18
 public struct LemmyListPrivateMessageReportsResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let privateMessageReports: [LemmyPrivateMessageReportView]

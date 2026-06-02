@@ -20,11 +20,13 @@ public struct LemmyListPersonSavedRequest: GetRequest {
     
     init(
       type_: LemmyPersonContentType?,
+      searchTerm: String?,
       pageCursor: String?,
       limit: Int?
     ) {
         self.parameters = .init(
             type_: type_,
+            searchTerm: searchTerm,
             pageCursor: pageCursor,
             limit: limit
         )
