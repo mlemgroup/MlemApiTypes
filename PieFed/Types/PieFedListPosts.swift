@@ -40,6 +40,8 @@ public struct PieFedListPosts: Codable, Hashable, Sendable {
     public let topicId: Int?
     /// Available from 1.3.0 onwards
     public let ignoreSticky: Bool?
+    /// Available from 1.6.27 onwards
+    public let nsfw: PieFedNsfwFilterType?
 }
 
 public extension PieFedListPosts {
@@ -58,5 +60,6 @@ public extension PieFedListPosts {
         case feedId = "feed_id"
         case topicId = "topic_id"
         case ignoreSticky = "ignore_sticky"
+        case nsfw = "nsfw"
     }
 }

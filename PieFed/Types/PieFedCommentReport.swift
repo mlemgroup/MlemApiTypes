@@ -30,6 +30,8 @@ public struct PieFedCommentReport: Codable, Hashable, Sendable {
     public let published: Date
     /// Available on all versions
     public let updated: Date?
+    /// Available from 1.6.27 onwards
+    public let description: String?
 }
 
 public extension PieFedCommentReport {
@@ -43,5 +45,6 @@ public extension PieFedCommentReport {
         case resolverId = "resolver_id"
         case published = "published"
         case updated = "updated"
+        case description = "description"
     }
 }

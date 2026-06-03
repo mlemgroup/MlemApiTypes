@@ -14,7 +14,7 @@ import Rest
 public struct PieFedPostEvent: Codable, Hashable, Sendable {
     /// Available on all versions
     public let start: Date
-    /// Available on all versions
+    /// Available on all versions, made non-optional in 1.6.27
     public let end: Date?
     /// Available on all versions
     public let timezone: String?
