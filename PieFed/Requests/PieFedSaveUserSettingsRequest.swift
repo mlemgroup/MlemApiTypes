@@ -44,7 +44,8 @@ public struct PieFedSaveUserSettingsRequest: PutRequest {
       genaiVisibility: PieFedAiVisibilityType?,
       replyCollapseThreshold: Int?,
       replyHideThreshold: Int?,
-      searchable: Bool?
+      searchable: Bool?,
+      displayName: String?
     ) {
         self.body = .init(
             showNsfw: showNsfw,
@@ -72,7 +73,8 @@ public struct PieFedSaveUserSettingsRequest: PutRequest {
             genaiVisibility: genaiVisibility,
             replyCollapseThreshold: replyCollapseThreshold,
             replyHideThreshold: replyHideThreshold,
-            searchable: searchable
+            searchable: searchable,
+            displayName: displayName
         )
     }
 }

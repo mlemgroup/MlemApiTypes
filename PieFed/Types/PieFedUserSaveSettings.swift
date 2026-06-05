@@ -64,6 +64,8 @@ public struct PieFedUserSaveSettings: Codable, Hashable, Sendable {
     public let replyHideThreshold: Int?
     /// Available from 1.4.0 onwards
     public let searchable: Bool?
+    /// Available from 1.6.27 onwards
+    public let displayName: String?
 }
 
 public extension PieFedUserSaveSettings {
@@ -94,5 +96,6 @@ public extension PieFedUserSaveSettings {
         case replyCollapseThreshold = "reply_collapse_threshold"
         case replyHideThreshold = "reply_hide_threshold"
         case searchable = "searchable"
+        case displayName = "display_name"
     }
 }

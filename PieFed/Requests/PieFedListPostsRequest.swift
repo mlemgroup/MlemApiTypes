@@ -32,7 +32,8 @@ public struct PieFedListPostsRequest: GetRequest {
       page: Int?,
       feedId: Int?,
       topicId: Int?,
-      ignoreSticky: Bool?
+      ignoreSticky: Bool?,
+      nsfw: PieFedNsfwFilterType?
     ) {
         self.parameters = .init(
             type_: type_,
@@ -48,7 +49,8 @@ public struct PieFedListPostsRequest: GetRequest {
             page: page,
             feedId: feedId,
             topicId: topicId,
-            ignoreSticky: ignoreSticky
+            ignoreSticky: ignoreSticky,
+            nsfw: nsfw
         )
     }
 }

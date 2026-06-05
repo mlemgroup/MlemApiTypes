@@ -42,6 +42,8 @@ public struct PieFedCommentReplyView: Codable, Hashable, Sendable {
     public let myVote: Int?
     /// Available from 1.2.0 onwards
     public let activityAlert: Bool?
+    /// Available from 1.6.27 onwards
+    public let distinguished: Bool?
 }
 
 public extension PieFedCommentReplyView {
@@ -61,5 +63,6 @@ public extension PieFedCommentReplyView {
         case creatorBlocked = "creator_blocked"
         case myVote = "my_vote"
         case activityAlert = "activity_alert"
+        case distinguished = "distinguished"
     }
 }
