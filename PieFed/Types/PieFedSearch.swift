@@ -17,7 +17,7 @@ public struct PieFedSearch: Codable, Hashable, Sendable {
     /// Available on all versions, made non-optional in 1.2.0
     public let type_: PieFedSearchType?
     /// Available on all versions
-    public let sort: PieFedSortType?
+    public let sort: PieFedSearchSortType?
     /// Available on all versions
     public let listingType: PieFedListingType?
     /// Available on all versions
