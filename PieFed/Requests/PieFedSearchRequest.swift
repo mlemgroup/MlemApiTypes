@@ -21,7 +21,7 @@ public struct PieFedSearchRequest: GetRequest {
     init(
       q: String,
       type_: PieFedSearchType?,
-      sort: PieFedSortType?,
+      sort: PieFedSearchSortType?,
       listingType: PieFedListingType?,
       page: Int?,
       limit: Int?,
