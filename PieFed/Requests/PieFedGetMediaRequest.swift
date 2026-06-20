@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.3.0 onwards
+/// Available on all versions
 public struct PieFedGetMediaRequest: GetRequest {
     public typealias Parameters = PieFedGetMedia
     public typealias Response = PieFedUserMediaResponse

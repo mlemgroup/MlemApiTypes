@@ -41,9 +41,9 @@ public enum PieFedSortType: String, Codable, Sendable {
     /// Available on all versions
     case new = "New"
     /// Available on all versions
+    case old = "Old"
+    /// Available on all versions
     case scaled = "Scaled"
     /// Available on all versions
     case active = "Active"
-    /// Available from 1.3.0 onwards
-    case old = "Old"
 }

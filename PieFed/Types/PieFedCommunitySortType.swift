@@ -17,10 +17,10 @@ public enum PieFedCommunitySortType: String, Codable, Sendable {
     /// Available on all versions
     case top = "Top"
     /// Available on all versions
-    case new = "New"
-    /// Available from 1.3.0 onwards
     case topAll = "TopAll"
-    /// Available from 1.3.0 onwards
+    /// Available on all versions
+    case new = "New"
+    /// Available on all versions
     case active = "Active"
     /// Available from 1.6.10 onwards
     case old = "Old"

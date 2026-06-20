@@ -14,7 +14,7 @@ import Rest
 public struct PieFedEditCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
     public let communityId: Int
-    /// Available on all versions, made optional in 1.3.0
+    /// Available on all versions
     public let title: String?
     /// Available on all versions
     public let bannerUrl: URL?

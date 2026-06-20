@@ -12,21 +12,21 @@ import Rest
 
 /// Available on all versions
 public struct PieFedGetPrivateMessagesConversation: Codable, Hashable, Sendable {
-    /// Available on all versions, made optional in 1.3.0
+    /// Available on all versions
     public let personId: Int?
+    /// Available on all versions
+    public let conversationId: Int?
     /// Available on all versions
     public let page: Int?
     /// Available on all versions
     public let limit: Int?
-    /// Available from 1.3.0 onwards
-    public let conversationId: Int?
 }
 
 public extension PieFedGetPrivateMessagesConversation {
     enum CodingKeys: String, CodingKey {
         case personId = "person_id"
+        case conversationId = "conversation_id"
         case page = "page"
         case limit = "limit"
-        case conversationId = "conversation_id"
     }
 }

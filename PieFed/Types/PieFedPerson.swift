@@ -37,13 +37,13 @@ public struct PieFedPerson: Codable, Hashable, Sendable {
     /// Available on all versions
     public let banner: URL?
     /// Available on all versions
+    public let extraFields: [PieFedUserExtraField]?
+    /// Available on all versions
     public let flair: String?
     /// Available on all versions
     public let published: Date
     /// Available on all versions
     public let title: String?
-    /// Available from 1.3.0 onwards
-    public let extraFields: [PieFedUserExtraField]?
     /// Available from 1.4.0 onwards
     public let note: String?
 }
@@ -62,10 +62,10 @@ public extension PieFedPerson {
         case aboutHtml = "about_html"
         case avatar = "avatar"
         case banner = "banner"
+        case extraFields = "extra_fields"
         case flair = "flair"
         case published = "published"
         case title = "title"
-        case extraFields = "extra_fields"
         case note = "note"
     }
 }

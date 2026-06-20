@@ -54,8 +54,8 @@ public struct PieFedPost: Codable, Hashable, Sendable {
     public let imageDetails: PieFedWidthHeight?
     /// Available on all versions
     public let crossPosts: [PieFedMiniCrossPosts]?
-    /// Available from 1.3.0 onwards
-    public let postType: PieFedPostType?
+    /// Available on all versions
+    public let postType: PieFedPostType
     /// Available from 1.4.0 onwards
     public let aiGenerated: Bool?
     /// Available from 1.4.0 onwards

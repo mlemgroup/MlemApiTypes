@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.3.0 onwards
+/// Available on all versions
 public struct PieFedDomainBlockRequest: PostRequest {
     public typealias Body = PieFedDomainBlock
     public typealias Response = PieFedDomainBlockResponse
