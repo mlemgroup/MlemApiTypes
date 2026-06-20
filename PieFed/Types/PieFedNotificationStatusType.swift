@@ -15,9 +15,9 @@ public enum PieFedNotificationStatusType: String, Codable, Sendable {
     /// Available on all versions
     case all = "All"
     /// Available on all versions
-    case new = "New"
+    case unread = "Unread"
     /// Available on all versions
     case read = "Read"
-    /// Available from 1.2.0 onwards
-    case unread = "Unread"
+    /// Available from 1.3.0 onwards
+    case new = "New"
 }

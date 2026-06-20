@@ -14,7 +14,7 @@ import Rest
 public struct PieFedUserSetFlair: Codable, Hashable, Sendable {
     /// Available on all versions
     public let communityId: Int
-    /// Available on all versions, made optional in 1.2.0
+    /// Available on all versions
     public let flairText: String?
 }
 

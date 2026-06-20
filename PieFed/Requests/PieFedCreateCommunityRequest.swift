@@ -21,27 +21,27 @@ public struct PieFedCreateCommunityRequest: PostRequest {
     init(
       name: String,
       title: String,
-      description: String?,
-      rules: String?,
-      iconUrl: URL?,
       bannerUrl: URL?,
+      description: String?,
+      discussionLanguages: [Int]?,
+      iconUrl: URL?,
+      localOnly: Bool?,
       nsfw: Bool?,
       restrictedToMods: Bool?,
-      localOnly: Bool?,
-      discussionLanguages: [Int]?,
+      rules: String?,
       questionAnswer: Bool?
     ) {
         self.body = .init(
             name: name,
             title: title,
-            description: description,
-            rules: rules,
-            iconUrl: iconUrl,
             bannerUrl: bannerUrl,
+            description: description,
+            discussionLanguages: discussionLanguages,
+            iconUrl: iconUrl,
+            localOnly: localOnly,
             nsfw: nsfw,
             restrictedToMods: restrictedToMods,
-            localOnly: localOnly,
-            discussionLanguages: discussionLanguages,
+            rules: rules,
             questionAnswer: questionAnswer
         )
     }

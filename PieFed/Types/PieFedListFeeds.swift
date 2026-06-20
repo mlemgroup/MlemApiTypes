@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.2.0 onwards
+/// Available on all versions
 public struct PieFedListFeeds: Codable, Hashable, Sendable {
     /// Available on all versions
     public let includeCommunities: Bool?

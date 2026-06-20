@@ -19,18 +19,18 @@ public struct PieFedListCommunitiesRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      type_: PieFedListingType?,
-      sort: PieFedCommunitySortType?,
-      showNsfw: Bool?,
+      limit: Int?,
       page: Int?,
-      limit: Int?
+      showNsfw: Bool?,
+      sort: PieFedCommunitySortType?,
+      type_: PieFedListingType?
     ) {
         self.parameters = .init(
-            type_: type_,
-            sort: sort,
-            showNsfw: showNsfw,
+            limit: limit,
             page: page,
-            limit: limit
+            showNsfw: showNsfw,
+            sort: sort,
+            type_: type_
         )
     }
 }

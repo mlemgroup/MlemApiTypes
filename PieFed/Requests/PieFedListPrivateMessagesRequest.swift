@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Available from 1.2.1 onwards
 public struct PieFedListPrivateMessagesRequest: GetRequest {
     public typealias Parameters = PieFedListPrivateMessages
     public typealias Response = PieFedListPrivateMessagesResponse
@@ -19,14 +19,14 @@ public struct PieFedListPrivateMessagesRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      unreadOnly: Bool?,
       page: Int?,
-      limit: Int?
+      limit: Int?,
+      unreadOnly: Bool?
     ) {
         self.parameters = .init(
-            unreadOnly: unreadOnly,
             page: page,
-            limit: limit
+            limit: limit,
+            unreadOnly: unreadOnly
         )
     }
 }

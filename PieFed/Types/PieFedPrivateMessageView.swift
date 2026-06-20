@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Available from 1.2.1 onwards
 public struct PieFedPrivateMessageView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let privateMessage: PieFedPrivateMessage

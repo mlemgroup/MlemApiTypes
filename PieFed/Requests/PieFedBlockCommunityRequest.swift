@@ -19,12 +19,12 @@ public struct PieFedBlockCommunityRequest: PostRequest {
     public let body: Body?
     
     init(
-      communityId: Int,
-      block: Bool
+      block: Bool,
+      communityId: Int
     ) {
         self.body = .init(
-            communityId: communityId,
-            block: block
+            block: block,
+            communityId: communityId
         )
     }
 }

@@ -14,7 +14,7 @@ import Rest
 public struct PieFedListCommentsResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let comments: [PieFedCommentView]
-    /// Available from 1.2.0 onwards
+    /// Available on all versions
     public let nextPage: String?
 }
 

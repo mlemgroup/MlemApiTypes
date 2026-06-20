@@ -13,20 +13,20 @@ import Rest
 /// Available on all versions
 public struct PieFedPersonView: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let person: PieFedPerson
+    public let activityAlert: Bool
     /// Available on all versions
     public let counts: PieFedPersonAggregates
     /// Available on all versions
     public let isAdmin: Bool
     /// Available on all versions
-    public let activityAlert: Bool
+    public let person: PieFedPerson
 }
 
 public extension PieFedPersonView {
     enum CodingKeys: String, CodingKey {
-        case person = "person"
+        case activityAlert = "activity_alert"
         case counts = "counts"
         case isAdmin = "is_admin"
-        case activityAlert = "activity_alert"
+        case person = "person"
     }
 }

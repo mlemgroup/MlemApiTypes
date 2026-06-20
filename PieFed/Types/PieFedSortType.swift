@@ -13,19 +13,15 @@ import Rest
 /// Available on all versions
 public enum PieFedSortType: String, Codable, Sendable {
     /// Available on all versions
-    case active = "Active"
-    /// Available on all versions
     case hot = "Hot"
     /// Available on all versions
-    case new = "New"
+    case top = "Top"
     /// Available on all versions
     case topHour = "TopHour"
     /// Available on all versions
     case topSixHour = "TopSixHour"
     /// Available on all versions
     case topTwelveHour = "TopTwelveHour"
-    /// Available on all versions
-    case topDay = "TopDay"
     /// Available on all versions
     case topWeek = "TopWeek"
     /// Available on all versions
@@ -41,9 +37,13 @@ public enum PieFedSortType: String, Codable, Sendable {
     /// Available on all versions
     case topAll = "TopAll"
     /// Available on all versions
+    case new = "New"
+    /// Available on all versions
     case scaled = "Scaled"
-    /// Available from 1.2.0 onwards
-    case top = "Top"
+    /// Available on all versions
+    case active = "Active"
+    /// Available from 1.2.2 onwards
+    case topDay = "TopDay"
     /// Available from 1.3.0 onwards
     case old = "Old"
 }

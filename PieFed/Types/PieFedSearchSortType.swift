@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.2.0 onwards
+/// Available on all versions
 public enum PieFedSearchSortType: String, Codable, Sendable {
     /// Available on all versions
     case active = "Active"

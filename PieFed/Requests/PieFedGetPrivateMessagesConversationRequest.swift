@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Available from 1.2.1 onwards
 public struct PieFedGetPrivateMessagesConversationRequest: GetRequest {
     public typealias Parameters = PieFedGetPrivateMessagesConversation
     public typealias Response = PieFedGetPrivateMessageConversationResponse
@@ -19,15 +19,15 @@ public struct PieFedGetPrivateMessagesConversationRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
+      personId: Int?,
       page: Int?,
       limit: Int?,
-      personId: Int?,
       conversationId: Int?
     ) {
         self.parameters = .init(
+            personId: personId,
             page: page,
             limit: limit,
-            personId: personId,
             conversationId: conversationId
         )
     }

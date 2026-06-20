@@ -15,6 +15,8 @@ public struct PieFedSite: Codable, Hashable, Sendable {
     /// Available on all versions
     public let actorId: ActorIdentifier
     /// Available on all versions
+    public let name: String
+    /// Available on all versions
     public let allLanguages: [PieFedLanguageView]?
     /// Available on all versions
     public let description: String?
@@ -22,8 +24,6 @@ public struct PieFedSite: Codable, Hashable, Sendable {
     public let enableDownvotes: Bool?
     /// Available on all versions
     public let icon: URL?
-    /// Available on all versions
-    public let name: String
     /// Available on all versions
     public let registrationMode: PieFedRegistrationMode?
     /// Available on all versions
@@ -41,11 +41,11 @@ public struct PieFedSite: Codable, Hashable, Sendable {
 public extension PieFedSite {
     enum CodingKeys: String, CodingKey {
         case actorId = "actor_id"
+        case name = "name"
         case allLanguages = "all_languages"
         case description = "description"
         case enableDownvotes = "enable_downvotes"
         case icon = "icon"
-        case name = "name"
         case registrationMode = "registration_mode"
         case sidebar = "sidebar"
         case sidebarMd = "sidebar_md"

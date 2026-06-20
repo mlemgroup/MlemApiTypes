@@ -13,14 +13,14 @@ import Rest
 /// Available on all versions
 public struct PieFedUserRepliesResponse: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let replies: [PieFedCommentReplyView]
-    /// Available from 1.2.0 onwards
     public let nextPage: String?
+    /// Available on all versions
+    public let replies: [PieFedCommentReplyView]
 }
 
 public extension PieFedUserRepliesResponse {
     enum CodingKeys: String, CodingKey {
-        case replies = "replies"
         case nextPage = "next_page"
+        case replies = "replies"
     }
 }

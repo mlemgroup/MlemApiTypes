@@ -17,9 +17,9 @@ public struct PieFedCreatePost: Codable, Hashable, Sendable {
     /// Available on all versions
     public let communityId: Int
     /// Available on all versions
-    public let url: URL?
-    /// Available on all versions
     public let body: String?
+    /// Available on all versions
+    public let url: URL?
     /// Available on all versions
     public let nsfw: Bool?
     /// Available on all versions
@@ -38,8 +38,8 @@ public extension PieFedCreatePost {
     enum CodingKeys: String, CodingKey {
         case title = "title"
         case communityId = "community_id"
-        case url = "url"
         case body = "body"
+        case url = "url"
         case nsfw = "nsfw"
         case languageId = "language_id"
         case altText = "alt_text"

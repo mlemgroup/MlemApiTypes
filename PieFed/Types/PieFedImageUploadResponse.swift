@@ -14,11 +14,11 @@ import Rest
 public struct PieFedImageUploadResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let url: URL
-    /// Available from 1.2.0 onwards
+    /// Available on all versions
     public let likedOnly: Bool?
-    /// Available from 1.2.0 onwards
+    /// Available on all versions
     public let savedOnly: Bool?
-    /// Available from 1.2.0 onwards
+    /// Available on all versions
     public let q: String?
 }
 
