@@ -29,9 +29,9 @@ public struct PieFedSite: Codable, Hashable, Sendable {
     /// Available on all versions
     public let sidebar: String?
     /// Available on all versions
-    public let userCount: Int?
-    /// Available from 1.1.0 onwards
     public let sidebarMd: String?
+    /// Available on all versions
+    public let userCount: Int?
     /// Available from 1.6.10 onwards
     public let announcementMd: String?
     /// Available from 1.6.10 onwards
@@ -48,8 +48,8 @@ public extension PieFedSite {
         case name = "name"
         case registrationMode = "registration_mode"
         case sidebar = "sidebar"
-        case userCount = "user_count"
         case sidebarMd = "sidebar_md"
+        case userCount = "user_count"
         case announcementMd = "announcement_md"
         case announcement = "announcement"
     }

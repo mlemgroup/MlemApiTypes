@@ -27,6 +27,8 @@ public struct PieFedPerson: Codable, Hashable, Sendable {
     /// Available on all versions
     public let deleted: Bool
     /// Available on all versions
+    public let flair: String?
+    /// Available on all versions
     public let id: Int
     /// Available on all versions
     public let instanceId: Int
@@ -38,8 +40,6 @@ public struct PieFedPerson: Codable, Hashable, Sendable {
     public let title: String?
     /// Available on all versions
     public let userName: String
-    /// Available from 1.1.0 onwards
-    public let flair: String?
     /// Available from 1.2.0 onwards
     public let aboutHtml: String?
     /// Available from 1.3.0 onwards
@@ -57,13 +57,13 @@ public extension PieFedPerson {
         case about = "about"
         case bot = "bot"
         case deleted = "deleted"
+        case flair = "flair"
         case id = "id"
         case instanceId = "instance_id"
         case local = "local"
         case published = "published"
         case title = "title"
         case userName = "user_name"
-        case flair = "flair"
         case aboutHtml = "about_html"
         case extraFields = "extra_fields"
         case note = "note"

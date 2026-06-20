@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.1.0 onwards
+/// Available on all versions
 public struct PieFedDeletePrivateMessage: Codable, Hashable, Sendable {
     /// Unavailable after 1.1.0
     public let messageId: Int?

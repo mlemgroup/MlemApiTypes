@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.1.0 onwards
+/// Available on all versions
 public struct PieFedEditPrivateMessageRequest: PutRequest {
     public typealias Body = PieFedEditPrivateMessage
     public typealias Response = PieFedPrivateMessageResponse

@@ -21,14 +21,12 @@ public struct PieFedListPrivateMessagesRequest: GetRequest {
     init(
       unreadOnly: Bool?,
       page: Int?,
-      limit: Int?,
-      creatorId: Int?
+      limit: Int?
     ) {
         self.parameters = .init(
             unreadOnly: unreadOnly,
             page: page,
-            limit: limit,
-            creatorId: creatorId
+            limit: limit
         )
     }
 }

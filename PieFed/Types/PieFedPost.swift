@@ -39,6 +39,8 @@ public struct PieFedPost: Codable, Hashable, Sendable {
     /// Available on all versions
     public let thumbnailUrl: URL?
     /// Available on all versions
+    public let smallThumbnailUrl: URL?
+    /// Available on all versions
     public let apId: ActorIdentifier
     /// Available on all versions
     public let local: Bool
@@ -48,8 +50,6 @@ public struct PieFedPost: Codable, Hashable, Sendable {
     public let sticky: Bool
     /// Available on all versions
     public let altText: String?
-    /// Available from 1.1.0 onwards
-    public let smallThumbnailUrl: URL?
     /// Available from 1.2.1 onwards
     public let imageDetails: PieFedWidthHeight?
     /// Available from 1.2.1 onwards
@@ -87,12 +87,12 @@ public extension PieFedPost {
         case deleted = "deleted"
         case nsfw = "nsfw"
         case thumbnailUrl = "thumbnail_url"
+        case smallThumbnailUrl = "small_thumbnail_url"
         case apId = "ap_id"
         case local = "local"
         case languageId = "language_id"
         case sticky = "sticky"
         case altText = "alt_text"
-        case smallThumbnailUrl = "small_thumbnail_url"
         case imageDetails = "image_details"
         case crossPosts = "cross_posts"
         case postType = "post_type"

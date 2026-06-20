@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.1.0 onwards
+/// Available on all versions
 public struct PieFedDeletePrivateMessageRequest: PostRequest {
     public typealias Body = PieFedDeletePrivateMessage
     public typealias Response = PieFedPrivateMessageResponse

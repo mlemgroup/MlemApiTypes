@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.1.0 onwards
+/// Available on all versions
 public struct PieFedSetPersonFlairRequest: PostRequest {
     public typealias Body = PieFedUserSetFlair
     public typealias Response = PieFedUserSetFlairResponse

@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public struct PieFedGetComments: Codable, Hashable, Sendable {
-    /// Unavailable after 1.1.0
+    /// Available on all versions
     public let type_: PieFedListingType?
     /// Available on all versions
     public let sort: PieFedCommentSortType?

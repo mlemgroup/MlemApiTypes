@@ -39,6 +39,8 @@ public struct PieFedCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
     public let nsfw: Bool
     /// Available on all versions
+    public let postingWarning: String?
+    /// Available on all versions
     public let published: Date
     /// Available on all versions
     public let removed: Bool
@@ -48,8 +50,6 @@ public struct PieFedCommunity: Codable, Hashable, Sendable {
     public let title: String
     /// Available on all versions
     public let updated: Date?
-    /// Available from 1.1.0 onwards
-    public let postingWarning: String?
     /// Available from 1.4.0 onwards
     public let aiGenerated: Bool?
     /// Available from 1.4.0 onwards
@@ -71,12 +71,12 @@ public extension PieFedCommunity {
         case local = "local"
         case name = "name"
         case nsfw = "nsfw"
+        case postingWarning = "posting_warning"
         case published = "published"
         case removed = "removed"
         case restrictedToMods = "restricted_to_mods"
         case title = "title"
         case updated = "updated"
-        case postingWarning = "posting_warning"
         case aiGenerated = "ai_generated"
         case questionAnswer = "question_answer"
     }
