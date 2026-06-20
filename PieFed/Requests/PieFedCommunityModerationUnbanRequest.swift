@@ -1,5 +1,5 @@
 //
-//  PieFedSetPersonFlairRequest.swift
+//  PieFedCommunityModerationUnbanRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,20 +11,20 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct PieFedSetPersonFlairRequest: PostRequest {
-    public typealias Body = PieFedUserSetFlair
-    public typealias Response = PieFedUserSetFlairResponse
+public struct PieFedCommunityModerationUnbanRequest: PutRequest {
+    public typealias Body = PieFedCommunityModerationUnban
+    public typealias Response = PieFedCommunityModerationBanItem
     
-    public let path: String = "api/alpha/user/set_flair"
+    public let path: String = "api/alpha/community/moderate/unban"
     public let body: Body?
     
     init(
       communityId: Int,
-      flairText: String?
+      userId: Int
     ) {
         self.body = .init(
             communityId: communityId,
-            flairText: flairText
+            userId: userId
         )
     }
 }

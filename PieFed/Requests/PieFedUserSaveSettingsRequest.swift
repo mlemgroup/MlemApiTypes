@@ -1,5 +1,5 @@
 //
-//  PieFedSaveUserSettingsRequest.swift
+//  PieFedUserSaveSettingsRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct PieFedSaveUserSettingsRequest: PutRequest {
+public struct PieFedUserSaveSettingsRequest: PutRequest {
     public typealias Body = PieFedUserSaveSettings
     public typealias Response = PieFedUserSaveSettingsResponse
     
@@ -19,14 +19,14 @@ public struct PieFedSaveUserSettingsRequest: PutRequest {
     public let body: Body?
     
     init(
-      showNsfw: Bool?,
-      showReadPosts: Bool?,
-      bio: String?,
       avatar: String?,
+      bio: String?,
       cover: String?,
       defaultCommentSortType: PieFedCommentSortType?,
       defaultSortType: PieFedSortType?,
+      showNsfw: Bool?,
       showNsfl: Bool?,
+      showReadPosts: Bool?,
       extraFields: [PieFedNewUserExtraField]?,
       acceptPrivateMessages: PieFedPrivateMessagePermissionsType?,
       bot: Bool?,
@@ -48,14 +48,14 @@ public struct PieFedSaveUserSettingsRequest: PutRequest {
       displayName: String?
     ) {
         self.body = .init(
-            showNsfw: showNsfw,
-            showReadPosts: showReadPosts,
-            bio: bio,
             avatar: avatar,
+            bio: bio,
             cover: cover,
             defaultCommentSortType: defaultCommentSortType,
             defaultSortType: defaultSortType,
+            showNsfw: showNsfw,
             showNsfl: showNsfl,
+            showReadPosts: showReadPosts,
             extraFields: extraFields,
             acceptPrivateMessages: acceptPrivateMessages,
             bot: bot,

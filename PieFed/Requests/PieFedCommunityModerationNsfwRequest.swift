@@ -1,5 +1,5 @@
 //
-//  PieFedModerateCommunityPostNsfwRequest.swift
+//  PieFedCommunityModerationNsfwRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct PieFedModerateCommunityPostNsfwRequest: PostRequest {
+public struct PieFedCommunityModerationNsfwRequest: PostRequest {
     public typealias Body = PieFedCommunityModerationNsfw
     public typealias Response = PieFedPostView
     

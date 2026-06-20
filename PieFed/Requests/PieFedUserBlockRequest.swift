@@ -1,5 +1,5 @@
 //
-//  PieFedBlockPersonRequest.swift
+//  PieFedUserBlockRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct PieFedBlockPersonRequest: PostRequest {
+public struct PieFedUserBlockRequest: PostRequest {
     public typealias Body = PieFedUserBlock
     public typealias Response = PieFedUserBlockResponse
     
@@ -19,12 +19,12 @@ public struct PieFedBlockPersonRequest: PostRequest {
     public let body: Body?
     
     init(
-      personId: Int,
-      block: Bool
+      block: Bool,
+      personId: Int
     ) {
         self.body = .init(
-            personId: personId,
-            block: block
+            block: block,
+            personId: personId
         )
     }
 }
