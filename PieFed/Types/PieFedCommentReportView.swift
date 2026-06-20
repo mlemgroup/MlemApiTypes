@@ -40,8 +40,6 @@ public struct PieFedCommentReportView: Codable, Hashable, Sendable {
     public let subscribed: PieFedSubscribedType
     /// Available on all versions
     public let myVote: Int?
-    /// Unavailable after 1.1.0
-    public let resolver: PieFedPerson?
     /// Available on all versions
     public let canAuthUserModerate: Bool?
     /// Available on all versions
@@ -66,7 +64,6 @@ public extension PieFedCommentReportView {
         case saved = "saved"
         case subscribed = "subscribed"
         case myVote = "my_vote"
-        case resolver = "resolver"
         case canAuthUserModerate = "can_auth_user_moderate"
         case commentReport = "comment_report"
         case commentCreator = "comment_creator"

@@ -20,20 +20,14 @@ public struct PieFedPostReport: Codable, Hashable, Sendable {
     public let postId: Int
     /// Available on all versions
     public let originalPostName: String
-    /// Unavailable after 1.1.0
-    public let originalPostUrl: String?
     /// Available on all versions
     public let originalPostBody: String
     /// Available on all versions
     public let reason: String
     /// Available on all versions
     public let resolved: Bool
-    /// Unavailable after 1.1.0
-    public let resolverId: Int?
     /// Available on all versions
     public let published: Date
-    /// Unavailable after 1.1.0
-    public let updated: Date?
 }
 
 public extension PieFedPostReport {
@@ -42,12 +36,9 @@ public extension PieFedPostReport {
         case creatorId = "creator_id"
         case postId = "post_id"
         case originalPostName = "original_post_name"
-        case originalPostUrl = "original_post_url"
         case originalPostBody = "original_post_body"
         case reason = "reason"
         case resolved = "resolved"
-        case resolverId = "resolver_id"
         case published = "published"
-        case updated = "updated"
     }
 }

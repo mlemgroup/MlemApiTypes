@@ -26,8 +26,6 @@ public struct PieFedPrivateMessage: Codable, Hashable, Sendable {
     public let read: Bool
     /// Available on all versions
     public let published: Date
-    /// Unavailable after 1.1.0
-    public let updated: Date?
     /// Available on all versions
     public let apId: ActorIdentifier
     /// Available on all versions
@@ -43,7 +41,6 @@ public extension PieFedPrivateMessage {
         case deleted = "deleted"
         case read = "read"
         case published = "published"
-        case updated = "updated"
         case apId = "ap_id"
         case local = "local"
     }

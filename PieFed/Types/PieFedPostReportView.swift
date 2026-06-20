@@ -36,10 +36,6 @@ public struct PieFedPostReportView: Codable, Hashable, Sendable {
     public let subscribed: PieFedSubscribedType
     /// Available on all versions
     public let saved: Bool
-    /// Unavailable after 1.1.0
-    public let myVote: Int?
-    /// Unavailable after 1.1.0
-    public let resolver: PieFedPerson?
 }
 
 public extension PieFedPostReportView {
@@ -56,7 +52,5 @@ public extension PieFedPostReportView {
         case creatorBlocked = "creator_blocked"
         case subscribed = "subscribed"
         case saved = "saved"
-        case myVote = "my_vote"
-        case resolver = "resolver"
     }
 }
