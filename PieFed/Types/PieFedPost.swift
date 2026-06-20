@@ -50,9 +50,9 @@ public struct PieFedPost: Codable, Hashable, Sendable {
     public let updated: Date?
     /// Available on all versions
     public let url: URL?
-    /// Available from 1.2.1 onwards
+    /// Available on all versions
     public let imageDetails: PieFedWidthHeight?
-    /// Available from 1.2.1 onwards
+    /// Available on all versions
     public let crossPosts: [PieFedMiniCrossPosts]?
     /// Available from 1.3.0 onwards
     public let postType: PieFedPostType?

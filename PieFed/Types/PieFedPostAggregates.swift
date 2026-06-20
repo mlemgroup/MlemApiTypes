@@ -26,8 +26,8 @@ public struct PieFedPostAggregates: Codable, Hashable, Sendable {
     public let score: Int
     /// Available on all versions
     public let upvotes: Int
-    /// Available from 1.2.1 onwards
-    public let crossPosts: Int?
+    /// Available on all versions
+    public let crossPosts: Int
 }
 
 public extension PieFedPostAggregates {

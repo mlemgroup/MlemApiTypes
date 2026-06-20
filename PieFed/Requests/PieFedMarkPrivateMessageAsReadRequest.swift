@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.2.1 onwards
+/// Available on all versions
 public struct PieFedMarkPrivateMessageAsReadRequest: PostRequest {
     public typealias Body = PieFedMarkPrivateMessageAsRead
     public typealias Response = PieFedPrivateMessageResponse

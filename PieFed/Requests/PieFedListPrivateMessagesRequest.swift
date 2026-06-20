@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.2.1 onwards
+/// Available on all versions
 public struct PieFedListPrivateMessagesRequest: GetRequest {
     public typealias Parameters = PieFedListPrivateMessages
     public typealias Response = PieFedListPrivateMessagesResponse

@@ -42,7 +42,7 @@ public enum PieFedSearchSortType: String, Codable, Sendable {
     case topAll = "TopAll"
     /// Available on all versions
     case scaled = "Scaled"
-    /// Available from 1.2.1 onwards
+    /// Available on all versions
     case old = "Old"
     /// Available from 1.2.2 onwards
     case top = "Top"
