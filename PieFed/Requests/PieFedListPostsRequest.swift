@@ -28,10 +28,10 @@ public struct PieFedListPostsRequest: GetRequest {
       personId: Int?,
       limit: Int?,
       page: Int?,
+      pageCursor: Int?,
       likedOnly: Bool?,
       feedId: Int?,
       topicId: Int?,
-      pageCursor: Int?,
       ignoreSticky: Bool?,
       nsfw: PieFedNsfwFilterType?
     ) {
@@ -45,10 +45,10 @@ public struct PieFedListPostsRequest: GetRequest {
             personId: personId,
             limit: limit,
             page: page,
+            pageCursor: pageCursor,
             likedOnly: likedOnly,
             feedId: feedId,
             topicId: topicId,
-            pageCursor: pageCursor,
             ignoreSticky: ignoreSticky,
             nsfw: nsfw
         )

@@ -19,6 +19,8 @@ public enum PieFedSearchSortType: String, Codable, Sendable {
     /// Available on all versions
     case new = "New"
     /// Available on all versions
+    case top = "Top"
+    /// Available on all versions
     case topHour = "TopHour"
     /// Available on all versions
     case topSixHour = "TopSixHour"
@@ -44,8 +46,6 @@ public enum PieFedSearchSortType: String, Codable, Sendable {
     case scaled = "Scaled"
     /// Available on all versions
     case old = "Old"
-    /// Available from 1.2.2 onwards
-    case top = "Top"
     /// Available from 1.4.0 onwards
     case relevance = "Relevance"
     /// Available from 1.6.27 onwards

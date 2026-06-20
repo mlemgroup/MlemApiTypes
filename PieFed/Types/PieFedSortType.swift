@@ -25,6 +25,8 @@ public enum PieFedSortType: String, Codable, Sendable {
     /// Available on all versions
     case topWeek = "TopWeek"
     /// Available on all versions
+    case topDay = "TopDay"
+    /// Available on all versions
     case topMonth = "TopMonth"
     /// Available on all versions
     case topThreeMonths = "TopThreeMonths"
@@ -42,8 +44,6 @@ public enum PieFedSortType: String, Codable, Sendable {
     case scaled = "Scaled"
     /// Available on all versions
     case active = "Active"
-    /// Available from 1.2.2 onwards
-    case topDay = "TopDay"
     /// Available from 1.3.0 onwards
     case old = "Old"
 }
