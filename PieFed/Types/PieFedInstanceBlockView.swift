@@ -13,17 +13,17 @@ import Rest
 /// Available on all versions
 public struct PieFedInstanceBlockView: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let person: PieFedPerson
-    /// Available on all versions
     public let instance: PieFedInstance
+    /// Available on all versions
+    public let person: PieFedPerson
     /// Unavailable after 1.1.0
     public let site: PieFedSite?
 }
 
 public extension PieFedInstanceBlockView {
     enum CodingKeys: String, CodingKey {
-        case person = "person"
         case instance = "instance"
+        case person = "person"
         case site = "site"
     }
 }

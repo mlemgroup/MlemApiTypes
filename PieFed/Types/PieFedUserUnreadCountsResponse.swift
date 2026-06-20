@@ -13,20 +13,20 @@ import Rest
 /// Available on all versions
 public struct PieFedUserUnreadCountsResponse: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let replies: Int
-    /// Available on all versions
     public let mentions: Int
     /// Available on all versions
     public let privateMessages: Int
-    /// Available from 1.2.0 onwards
-    public let other: Int?
+    /// Available on all versions
+    public let replies: Int
+    /// Available on all versions
+    public let other: Int
 }
 
 public extension PieFedUserUnreadCountsResponse {
     enum CodingKeys: String, CodingKey {
-        case replies = "replies"
         case mentions = "mentions"
         case privateMessages = "private_messages"
+        case replies = "replies"
         case other = "other"
     }
 }

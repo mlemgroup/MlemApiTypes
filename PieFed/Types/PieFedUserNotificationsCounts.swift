@@ -18,12 +18,12 @@ public struct PieFedUserNotificationsCounts: Codable, Hashable, Sendable {
     public let readNotifications: Int?
     /// Unavailable after 1.1.0
     public let totalNotifications: Int?
-    /// Available from 1.2.0 onwards
-    public let unread: Int?
-    /// Available from 1.2.0 onwards
-    public let read: Int?
-    /// Available from 1.2.0 onwards
-    public let total: Int?
+    /// Available on all versions
+    public let unread: Int
+    /// Available on all versions
+    public let read: Int
+    /// Available on all versions
+    public let total: Int
 }
 
 public extension PieFedUserNotificationsCounts {

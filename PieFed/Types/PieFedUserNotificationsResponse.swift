@@ -20,9 +20,9 @@ public struct PieFedUserNotificationsResponse: Codable, Hashable, Sendable {
     public let status: PieFedNotificationStatusType
     /// Unavailable after 1.1.0
     public let user: String?
-    /// Available from 1.2.0 onwards
-    public let username: String?
-    /// Available from 1.2.0 onwards
+    /// Available on all versions
+    public let username: String
+    /// Available on all versions
     public let nextPage: String?
 }
 

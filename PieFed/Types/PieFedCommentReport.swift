@@ -20,7 +20,7 @@ public struct PieFedCommentReport: Codable, Hashable, Sendable {
     public let commentId: Int
     /// Available on all versions
     public let originalCommentText: String
-    /// Available on all versions, made optional in 1.2.0
+    /// Available on all versions
     public let reason: String?
     /// Available on all versions
     public let resolved: Bool

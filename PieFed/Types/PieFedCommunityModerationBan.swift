@@ -15,22 +15,22 @@ public struct PieFedCommunityModerationBan: Codable, Hashable, Sendable {
     /// Available on all versions
     public let communityId: Int
     /// Available on all versions
-    public let userId: Int
-    /// Available on all versions
     public let reason: String
+    /// Available on all versions
+    public let userId: Int
     /// Unavailable after 1.1.0
     public let expiredAt: String?
-    /// Available from 1.2.0 onwards
+    /// Available on all versions
     public let expiresAt: Date?
-    /// Available from 1.2.0 onwards
+    /// Available on all versions
     public let permanent: Bool?
 }
 
 public extension PieFedCommunityModerationBan {
     enum CodingKeys: String, CodingKey {
         case communityId = "community_id"
-        case userId = "user_id"
         case reason = "reason"
+        case userId = "user_id"
         case expiredAt = "expired_at"
         case expiresAt = "expires_at"
         case permanent = "permanent"
