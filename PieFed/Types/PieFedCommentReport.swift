@@ -24,8 +24,6 @@ public struct PieFedCommentReport: Codable, Hashable, Sendable {
     public let reason: String?
     /// Available on all versions
     public let resolved: Bool
-    /// Unavailable after 1.1.0
-    public let resolverId: Int?
     /// Available on all versions
     public let published: Date
     /// Available on all versions
@@ -42,7 +40,6 @@ public extension PieFedCommentReport {
         case originalCommentText = "original_comment_text"
         case reason = "reason"
         case resolved = "resolved"
-        case resolverId = "resolver_id"
         case published = "published"
         case updated = "updated"
         case description = "description"
