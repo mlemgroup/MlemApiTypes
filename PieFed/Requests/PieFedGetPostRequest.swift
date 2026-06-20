@@ -19,12 +19,10 @@ public struct PieFedGetPostRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      id: Int?,
-      commentId: Int?
+      id: Int
     ) {
         self.parameters = .init(
-            id: id,
-            commentId: commentId
+            id: id
         )
     }
 }

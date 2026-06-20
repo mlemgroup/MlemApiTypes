@@ -19,14 +19,14 @@ public struct PieFedEditCommentRequest: PutRequest {
     public let body: Body?
     
     init(
+      body: String,
       commentId: Int,
-      body: String?,
       languageId: Int?,
       distinguished: Bool?
     ) {
         self.body = .init(
-            commentId: commentId,
             body: body,
+            commentId: commentId,
             languageId: languageId,
             distinguished: distinguished
         )

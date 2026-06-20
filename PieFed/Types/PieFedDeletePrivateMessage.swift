@@ -10,20 +10,17 @@
 import Foundation
 import Rest
 
-/// Available on all versions
+/// Available from 1.2.1 onwards
 public struct PieFedDeletePrivateMessage: Codable, Hashable, Sendable {
-    /// Unavailable after 1.1.0
-    public let messageId: Int?
+    /// Available on all versions
+    public let privateMessageId: Int
     /// Available on all versions
     public let deleted: Bool
-    /// Available from 1.2.1 onwards
-    public let privateMessageId: Int?
 }
 
 public extension PieFedDeletePrivateMessage {
     enum CodingKeys: String, CodingKey {
-        case messageId = "message_id"
-        case deleted = "deleted"
         case privateMessageId = "private_message_id"
+        case deleted = "deleted"
     }
 }
