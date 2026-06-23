@@ -13,23 +13,23 @@ import Rest
 /// Available on all versions
 public struct PieFedUserSaveSettings: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let showNsfw: Bool?
-    /// Available on all versions
-    public let showReadPosts: Bool?
+    public let avatar: String?
     /// Available on all versions
     public let bio: String?
-    /// Available from 1.2.0 onwards
-    public let avatar: String?
-    /// Available from 1.2.0 onwards
+    /// Available on all versions
     public let cover: String?
-    /// Available from 1.2.0 onwards
+    /// Available on all versions
     public let defaultCommentSortType: PieFedCommentSortType?
-    /// Available from 1.2.0 onwards
+    /// Available on all versions
     public let defaultSortType: PieFedSortType?
-    /// Available from 1.2.0 onwards
-    public let showNsfl: Bool?
-    /// Available from 1.3.0 onwards
+    /// Available on all versions
     public let extraFields: [PieFedNewUserExtraField]?
+    /// Available on all versions
+    public let showNsfw: Bool?
+    /// Available on all versions
+    public let showNsfl: Bool?
+    /// Available on all versions
+    public let showReadPosts: Bool?
     /// Available from 1.4.0 onwards
     public let acceptPrivateMessages: PieFedPrivateMessagePermissionsType?
     /// Available from 1.4.0 onwards
@@ -70,15 +70,15 @@ public struct PieFedUserSaveSettings: Codable, Hashable, Sendable {
 
 public extension PieFedUserSaveSettings {
     enum CodingKeys: String, CodingKey {
-        case showNsfw = "show_nsfw"
-        case showReadPosts = "show_read_posts"
-        case bio = "bio"
         case avatar = "avatar"
+        case bio = "bio"
         case cover = "cover"
         case defaultCommentSortType = "default_comment_sort_type"
         case defaultSortType = "default_sort_type"
-        case showNsfl = "show_nsfl"
         case extraFields = "extra_fields"
+        case showNsfw = "show_nsfw"
+        case showNsfl = "show_nsfl"
+        case showReadPosts = "show_read_posts"
         case acceptPrivateMessages = "accept_private_messages"
         case bot = "bot"
         case botVisibility = "bot_visibility"

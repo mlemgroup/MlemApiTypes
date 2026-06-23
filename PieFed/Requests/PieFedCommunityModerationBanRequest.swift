@@ -1,5 +1,5 @@
 //
-//  PieFedModerateCommunityBanRequest.swift
+//  PieFedCommunityModerationBanRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct PieFedModerateCommunityBanRequest: PostRequest {
+public struct PieFedCommunityModerationBanRequest: PostRequest {
     public typealias Body = PieFedCommunityModerationBan
     public typealias Response = PieFedCommunityModerationBanItem
     
@@ -20,17 +20,15 @@ public struct PieFedModerateCommunityBanRequest: PostRequest {
     
     init(
       communityId: Int,
-      userId: Int,
       reason: String,
-      expiredAt: String?,
+      userId: Int,
       expiresAt: Date?,
       permanent: Bool?
     ) {
         self.body = .init(
             communityId: communityId,
-            userId: userId,
             reason: reason,
-            expiredAt: expiredAt,
+            userId: userId,
             expiresAt: expiresAt,
             permanent: permanent
         )

@@ -1,5 +1,5 @@
 //
-//  PieFedModerateCommunityUnBanRequest.swift
+//  PieFedCommunityModerationUnbanRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct PieFedModerateCommunityUnBanRequest: PutRequest {
+public struct PieFedCommunityModerationUnbanRequest: PutRequest {
     public typealias Body = PieFedCommunityModerationUnban
     public typealias Response = PieFedCommunityModerationBanItem
     

@@ -14,12 +14,12 @@ import Rest
 public struct PieFedPostResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let postView: PieFedPostView
-    /// Available from 1.2.0 onwards
-    public let communityView: PieFedCommunityView?
-    /// Available from 1.2.0 onwards
-    public let moderators: [PieFedCommunityModeratorView]?
-    /// Available from 1.2.0 onwards
-    public let crossPosts: [PieFedPostView]?
+    /// Available on all versions
+    public let communityView: PieFedCommunityView
+    /// Available on all versions
+    public let moderators: [PieFedCommunityModeratorView]
+    /// Available on all versions
+    public let crossPosts: [PieFedPostView]
 }
 
 public extension PieFedPostResponse {

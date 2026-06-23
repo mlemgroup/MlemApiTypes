@@ -1,5 +1,5 @@
 //
-//  PieFedMarkReplyAsReadRequest.swift
+//  PieFedMarkCommentAsReadRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct PieFedMarkReplyAsReadRequest: PostRequest {
+public struct PieFedMarkCommentAsReadRequest: PostRequest {
     public typealias Body = PieFedMarkCommentAsRead
     public typealias Response = PieFedGetCommentReplyResponse
     

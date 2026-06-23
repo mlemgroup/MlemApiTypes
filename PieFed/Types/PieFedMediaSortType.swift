@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.3.0 onwards
+/// Available on all versions
 public enum PieFedMediaSortType: String, Codable, Sendable {
     /// Available on all versions
     case hot = "Hot"

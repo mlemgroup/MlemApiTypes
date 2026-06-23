@@ -15,11 +15,11 @@ public struct PieFedGetCommunityResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let communityView: PieFedCommunityView
     /// Available on all versions
-    public let site: PieFedSite?
+    public let discussionLanguages: [Int]
     /// Available on all versions
     public let moderators: [PieFedCommunityModeratorView]
     /// Available on all versions
-    public let discussionLanguages: [Int]
+    public let site: PieFedSite?
     /// Available between 1.4.0 and 1.4.0
     public let canRate: Bool?
     /// Available between 1.4.0 and 1.4.0
@@ -29,9 +29,9 @@ public struct PieFedGetCommunityResponse: Codable, Hashable, Sendable {
 public extension PieFedGetCommunityResponse {
     enum CodingKeys: String, CodingKey {
         case communityView = "community_view"
-        case site = "site"
-        case moderators = "moderators"
         case discussionLanguages = "discussion_languages"
+        case moderators = "moderators"
+        case site = "site"
         case canRate = "can_rate"
         case myRating = "my_rating"
     }

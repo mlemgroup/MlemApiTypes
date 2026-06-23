@@ -21,7 +21,7 @@ public enum PieFedListingType: String, Codable, Sendable {
     /// Available on all versions
     case popular = "Popular"
     /// Available on all versions
-    case moderatorView = "ModeratorView"
-    /// Available from 1.2.0 onwards
     case moderating = "Moderating"
+    /// Available on all versions
+    case moderatorView = "ModeratorView"
 }

@@ -15,21 +15,21 @@ public struct PieFedCommentReply: Codable, Hashable, Sendable {
     /// Available on all versions
     public let id: Int
     /// Available on all versions
-    public let recipientId: Int
-    /// Available on all versions
     public let commentId: Int
+    /// Available on all versions
+    public let published: Date
     /// Available on all versions
     public let read: Bool
     /// Available on all versions
-    public let published: Date
+    public let recipientId: Int
 }
 
 public extension PieFedCommentReply {
     enum CodingKeys: String, CodingKey {
         case id = "id"
-        case recipientId = "recipient_id"
         case commentId = "comment_id"
-        case read = "read"
         case published = "published"
+        case read = "read"
+        case recipientId = "recipient_id"
     }
 }

@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public struct PieFedGetNotificationsRequest: GetRequest {
-    public typealias Parameters = PieFedGetNotificationStatus
+    public typealias Parameters = PieFedGetNotifications
     public typealias Response = PieFedUserNotificationsResponse
     
     public let path: String = "api/alpha/user/notifications"
@@ -20,10 +20,12 @@ public struct PieFedGetNotificationsRequest: GetRequest {
     
     init(
       status: PieFedNotificationStatusType,
+      limit: Int?,
       page: Int?
     ) {
         self.parameters = .init(
             status: status,
+            limit: limit,
             page: page
         )
     }

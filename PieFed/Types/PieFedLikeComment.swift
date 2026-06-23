@@ -16,7 +16,7 @@ public struct PieFedLikeComment: Codable, Hashable, Sendable {
     public let commentId: Int
     /// Available on all versions
     public let score: Int
-    /// Available from 1.2.0 onwards
+    /// Available on all versions
     public let `private`: Bool?
     /// Available from 1.4.0 onwards
     public let emoji: String?

@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.2.0 onwards
+/// Available on all versions
 public struct PieFedLockCommentRequest: PostRequest {
     public typealias Body = PieFedLockComment
     public typealias Response = PieFedGetCommentResponse

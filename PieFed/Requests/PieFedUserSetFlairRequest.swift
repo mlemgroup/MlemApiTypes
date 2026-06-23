@@ -1,5 +1,5 @@
 //
-//  PieFedSetPersonFlairRequest.swift
+//  PieFedUserSetFlairRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -10,8 +10,8 @@
 import Foundation
 import Rest
 
-/// Available from 1.1.0 onwards
-public struct PieFedSetPersonFlairRequest: PostRequest {
+/// Available on all versions
+public struct PieFedUserSetFlairRequest: PostRequest {
     public typealias Body = PieFedUserSetFlair
     public typealias Response = PieFedUserSetFlairResponse
     

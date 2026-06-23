@@ -12,8 +12,8 @@ import Rest
 
 /// Available on all versions
 public struct PieFedUserMarkAllNotifsReadResponse: Codable, Hashable, Sendable {
-    /// Available on all versions, made non-optional in 1.2.0
-    public let markAllNotificationsAsRead: String?
+    /// Available on all versions
+    public let markAllNotificationsAsRead: String
 }
 
 public extension PieFedUserMarkAllNotifsReadResponse {

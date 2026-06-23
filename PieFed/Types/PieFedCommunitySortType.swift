@@ -13,15 +13,15 @@ import Rest
 /// Available on all versions
 public enum PieFedCommunitySortType: String, Codable, Sendable {
     /// Available on all versions
-    case active = "Active"
+    case hot = "Hot"
+    /// Available on all versions
+    case top = "Top"
+    /// Available on all versions
+    case topAll = "TopAll"
     /// Available on all versions
     case new = "New"
-    /// Available from 1.2.0 onwards
-    case hot = "Hot"
-    /// Available from 1.2.0 onwards
-    case top = "Top"
-    /// Available from 1.3.0 onwards
-    case topAll = "TopAll"
+    /// Available on all versions
+    case active = "Active"
     /// Available from 1.6.10 onwards
     case old = "Old"
     /// Available from 1.6.10 onwards

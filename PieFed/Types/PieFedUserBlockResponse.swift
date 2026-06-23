@@ -13,14 +13,14 @@ import Rest
 /// Available on all versions
 public struct PieFedUserBlockResponse: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let personView: PieFedPersonView
-    /// Available on all versions
     public let blocked: Bool
+    /// Available on all versions
+    public let personView: PieFedPersonView
 }
 
 public extension PieFedUserBlockResponse {
     enum CodingKeys: String, CodingKey {
-        case personView = "person_view"
         case blocked = "blocked"
+        case personView = "person_view"
     }
 }

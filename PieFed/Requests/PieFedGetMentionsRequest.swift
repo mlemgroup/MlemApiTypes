@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.1.0 onwards
+/// Available on all versions
 public struct PieFedGetMentionsRequest: GetRequest {
     public typealias Parameters = PieFedGetReplies
     public typealias Response = PieFedUserRepliesResponse
@@ -19,15 +19,15 @@ public struct PieFedGetMentionsRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      sort: PieFedCommentSortType?,
-      page: Int?,
       limit: Int?,
+      page: Int?,
+      sort: PieFedCommentSortType?,
       unreadOnly: Bool?
     ) {
         self.parameters = .init(
-            sort: sort,
-            page: page,
             limit: limit,
+            page: page,
+            sort: sort,
             unreadOnly: unreadOnly
         )
     }

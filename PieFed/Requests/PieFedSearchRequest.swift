@@ -20,11 +20,11 @@ public struct PieFedSearchRequest: GetRequest {
     
     init(
       q: String,
-      type_: PieFedSearchType?,
-      sort: PieFedSearchSortType?,
+      type_: PieFedSearchType,
+      limit: Int?,
       listingType: PieFedListingType?,
       page: Int?,
-      limit: Int?,
+      sort: PieFedSearchSortType?,
       communityName: String?,
       communityId: Int?,
       minimumUpvotes: Int?,
@@ -33,10 +33,10 @@ public struct PieFedSearchRequest: GetRequest {
         self.parameters = .init(
             q: q,
             type_: type_,
-            sort: sort,
+            limit: limit,
             listingType: listingType,
             page: page,
-            limit: limit,
+            sort: sort,
             communityName: communityName,
             communityId: communityId,
             minimumUpvotes: minimumUpvotes,

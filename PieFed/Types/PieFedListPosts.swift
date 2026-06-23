@@ -13,32 +13,30 @@ import Rest
 /// Available on all versions
 public struct PieFedListPosts: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let type_: PieFedListingType?
+    public let q: String?
     /// Available on all versions
     public let sort: PieFedSortType?
-    /// Unavailable after 1.2.2
-    public let pageCursor: Int?
     /// Available on all versions
-    public let limit: Int?
-    /// Available on all versions
-    public let communityId: Int?
-    /// Available on all versions
-    public let personId: Int?
+    public let type_: PieFedListingType?
     /// Available on all versions
     public let communityName: String?
     /// Available on all versions
-    public let likedOnly: Bool?
+    public let communityId: Int?
     /// Available on all versions
     public let savedOnly: Bool?
-    /// Available from 1.2.0 onwards
-    public let q: String?
-    /// Available from 1.2.0 onwards
+    /// Available on all versions
+    public let personId: Int?
+    /// Available on all versions
+    public let limit: Int?
+    /// Available on all versions
     public let page: Int?
-    /// Available from 1.2.0 onwards
+    /// Available on all versions
+    public let likedOnly: Bool?
+    /// Available on all versions
     public let feedId: Int?
-    /// Available from 1.2.0 onwards
+    /// Available on all versions
     public let topicId: Int?
-    /// Available from 1.3.0 onwards
+    /// Available on all versions
     public let ignoreSticky: Bool?
     /// Available from 1.6.27 onwards
     public let nsfw: PieFedNsfwFilterType?
@@ -46,17 +44,16 @@ public struct PieFedListPosts: Codable, Hashable, Sendable {
 
 public extension PieFedListPosts {
     enum CodingKeys: String, CodingKey {
-        case type_ = "type_"
-        case sort = "sort"
-        case pageCursor = "page_cursor"
-        case limit = "limit"
-        case communityId = "community_id"
-        case personId = "person_id"
-        case communityName = "community_name"
-        case likedOnly = "liked_only"
-        case savedOnly = "saved_only"
         case q = "q"
+        case sort = "sort"
+        case type_ = "type_"
+        case communityName = "community_name"
+        case communityId = "community_id"
+        case savedOnly = "saved_only"
+        case personId = "person_id"
+        case limit = "limit"
         case page = "page"
+        case likedOnly = "liked_only"
         case feedId = "feed_id"
         case topicId = "topic_id"
         case ignoreSticky = "ignore_sticky"

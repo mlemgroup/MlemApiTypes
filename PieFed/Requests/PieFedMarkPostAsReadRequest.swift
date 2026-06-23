@@ -19,14 +19,14 @@ public struct PieFedMarkPostAsReadRequest: PostRequest {
     public let body: Body?
     
     init(
-      postIds: [Int]?,
+      read: Bool,
       postId: Int?,
-      read: Bool
+      postIds: [Int]?
     ) {
         self.body = .init(
-            postIds: postIds,
+            read: read,
             postId: postId,
-            read: read
+            postIds: postIds
         )
     }
 }

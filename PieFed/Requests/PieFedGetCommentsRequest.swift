@@ -19,32 +19,32 @@ public struct PieFedGetCommentsRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      type_: PieFedListingType?,
-      sort: PieFedCommentSortType?,
-      maxDepth: Int?,
-      page: Int?,
       limit: Int?,
+      page: Int?,
+      sort: PieFedCommentSortType?,
+      likedOnly: Bool?,
+      savedOnly: Bool?,
+      personId: Int?,
       communityId: Int?,
       postId: Int?,
       parentId: Int?,
-      personId: Int?,
-      likedOnly: Bool?,
-      savedOnly: Bool?,
-      depthFirst: Bool?
+      maxDepth: Int?,
+      depthFirst: Bool?,
+      type_: PieFedListingType?
     ) {
         self.parameters = .init(
-            type_: type_,
-            sort: sort,
-            maxDepth: maxDepth,
-            page: page,
             limit: limit,
+            page: page,
+            sort: sort,
+            likedOnly: likedOnly,
+            savedOnly: savedOnly,
+            personId: personId,
             communityId: communityId,
             postId: postId,
             parentId: parentId,
-            personId: personId,
-            likedOnly: likedOnly,
-            savedOnly: savedOnly,
-            depthFirst: depthFirst
+            maxDepth: maxDepth,
+            depthFirst: depthFirst,
+            type_: type_
         )
     }
 }

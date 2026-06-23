@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.2.0 onwards
+/// Available on all versions
 public struct PieFedUserNotificationItemView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let author: PieFedPerson
@@ -27,6 +27,8 @@ public struct PieFedUserNotificationItemView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let comment: PieFedComment?
     /// Available on all versions
+    public let commentView: PieFedCommentView?
+    /// Available on all versions
     public let commentId: Int?
     /// Available on all versions
     public let community: PieFedCommunity?
@@ -34,8 +36,6 @@ public struct PieFedUserNotificationItemView: Codable, Hashable, Sendable {
     public let post: PieFedPostView?
     /// Available on all versions
     public let postId: Int?
-    /// Available from 1.3.0 onwards
-    public let commentView: PieFedCommentView?
 }
 
 public extension PieFedUserNotificationItemView {
@@ -47,10 +47,10 @@ public extension PieFedUserNotificationItemView {
         case notifType = "notif_type"
         case status = "status"
         case comment = "comment"
+        case commentView = "comment_view"
         case commentId = "comment_id"
         case community = "community"
         case post = "post"
         case postId = "post_id"
-        case commentView = "comment_view"
     }
 }

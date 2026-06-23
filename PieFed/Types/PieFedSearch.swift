@@ -14,19 +14,19 @@ import Rest
 public struct PieFedSearch: Codable, Hashable, Sendable {
     /// Available on all versions
     public let q: String
-    /// Available on all versions, made non-optional in 1.2.0
-    public let type_: PieFedSearchType?
     /// Available on all versions
-    public let sort: PieFedSearchSortType?
+    public let type_: PieFedSearchType
+    /// Available on all versions
+    public let limit: Int?
     /// Available on all versions
     public let listingType: PieFedListingType?
     /// Available on all versions
     public let page: Int?
     /// Available on all versions
-    public let limit: Int?
-    /// Available from 1.2.0 onwards
+    public let sort: PieFedSearchSortType?
+    /// Available on all versions
     public let communityName: String?
-    /// Available from 1.2.0 onwards
+    /// Available on all versions
     public let communityId: Int?
     /// Available from 1.5.0 onwards
     public let minimumUpvotes: Int?
@@ -38,10 +38,10 @@ public extension PieFedSearch {
     enum CodingKeys: String, CodingKey {
         case q = "q"
         case type_ = "type_"
-        case sort = "sort"
+        case limit = "limit"
         case listingType = "listing_type"
         case page = "page"
-        case limit = "limit"
+        case sort = "sort"
         case communityName = "community_name"
         case communityId = "community_id"
         case minimumUpvotes = "minimum_upvotes"

@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.2.0 onwards
+/// Available on all versions
 public struct PieFedListFeedsRequest: GetRequest {
     public typealias Parameters = PieFedListFeeds
     public typealias Response = PieFedFeedListResponse

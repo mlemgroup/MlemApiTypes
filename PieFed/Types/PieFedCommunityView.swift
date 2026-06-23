@@ -13,26 +13,26 @@ import Rest
 /// Available on all versions
 public struct PieFedCommunityView: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let community: PieFedCommunity
-    /// Available on all versions
-    public let subscribed: PieFedSubscribedType
+    public let activityAlert: Bool
     /// Available on all versions
     public let blocked: Bool
     /// Available on all versions
+    public let community: PieFedCommunity
+    /// Available on all versions
     public let counts: PieFedCommunityAggregates
     /// Available on all versions
-    public let activityAlert: Bool
-    /// Available from 1.2.0 onwards
+    public let subscribed: PieFedSubscribedType
+    /// Available on all versions
     public let flairList: [PieFedCommunityFlair]?
 }
 
 public extension PieFedCommunityView {
     enum CodingKeys: String, CodingKey {
-        case community = "community"
-        case subscribed = "subscribed"
-        case blocked = "blocked"
-        case counts = "counts"
         case activityAlert = "activity_alert"
+        case blocked = "blocked"
+        case community = "community"
+        case counts = "counts"
+        case subscribed = "subscribed"
         case flairList = "flair_list"
     }
 }

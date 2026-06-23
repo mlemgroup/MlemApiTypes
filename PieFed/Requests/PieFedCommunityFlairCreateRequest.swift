@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.2.0 onwards
+/// Available on all versions
 public struct PieFedCommunityFlairCreateRequest: PostRequest {
     public typealias Body = PieFedCommunityFlairCreate
     public typealias Response = PieFedCommunityFlairCreateResponse

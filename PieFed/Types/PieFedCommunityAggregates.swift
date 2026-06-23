@@ -15,23 +15,23 @@ public struct PieFedCommunityAggregates: Codable, Hashable, Sendable {
     /// Available on all versions
     public let id: Int
     /// Available on all versions
-    public let subscriptionsCount: Int
-    /// Available on all versions
-    public let totalSubscriptionsCount: Int
-    /// Available on all versions
     public let postCount: Int
     /// Available on all versions
     public let postReplyCount: Int
     /// Available on all versions
     public let published: Date
-    /// Available from 1.1.0 onwards
-    public let active6monthly: Int?
-    /// Available from 1.1.0 onwards
-    public let activeDaily: Int?
-    /// Available from 1.1.0 onwards
-    public let activeMonthly: Int?
-    /// Available from 1.1.0 onwards
-    public let activeWeekly: Int?
+    /// Available on all versions
+    public let subscriptionsCount: Int
+    /// Available on all versions
+    public let totalSubscriptionsCount: Int
+    /// Available on all versions
+    public let activeDaily: Int
+    /// Available on all versions
+    public let activeWeekly: Int
+    /// Available on all versions
+    public let activeMonthly: Int
+    /// Available on all versions
+    public let active6monthly: Int
     /// Available between 1.4.0 and 1.4.0
     public let averageRating: Double?
     /// Available between 1.4.0 and 1.4.0
@@ -41,15 +41,15 @@ public struct PieFedCommunityAggregates: Codable, Hashable, Sendable {
 public extension PieFedCommunityAggregates {
     enum CodingKeys: String, CodingKey {
         case id = "id"
-        case subscriptionsCount = "subscriptions_count"
-        case totalSubscriptionsCount = "total_subscriptions_count"
         case postCount = "post_count"
         case postReplyCount = "post_reply_count"
         case published = "published"
-        case active6monthly = "active_6monthly"
+        case subscriptionsCount = "subscriptions_count"
+        case totalSubscriptionsCount = "total_subscriptions_count"
         case activeDaily = "active_daily"
-        case activeMonthly = "active_monthly"
         case activeWeekly = "active_weekly"
+        case activeMonthly = "active_monthly"
+        case active6monthly = "active_6monthly"
         case averageRating = "average_rating"
         case totalRatings = "total_ratings"
     }

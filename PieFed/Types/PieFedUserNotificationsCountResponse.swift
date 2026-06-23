@@ -12,8 +12,8 @@ import Rest
 
 /// Available on all versions
 public struct PieFedUserNotificationsCountResponse: Codable, Hashable, Sendable {
-    /// Available on all versions, made non-optional in 1.2.0
-    public let count: Int?
+    /// Available on all versions
+    public let count: Int
 }
 
 public extension PieFedUserNotificationsCountResponse {

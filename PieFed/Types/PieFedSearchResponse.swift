@@ -15,20 +15,20 @@ public struct PieFedSearchResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let type_: PieFedSearchType
     /// Available on all versions
-    public let posts: [PieFedPostView]
-    /// Available on all versions
     public let communities: [PieFedCommunityView]
     /// Available on all versions
+    public let posts: [PieFedPostView]
+    /// Available on all versions
     public let users: [PieFedPersonView]
-    /// Available from 1.2.0 onwards
-    public let comments: [PieFedCommentView]?
+    /// Available on all versions
+    public let comments: [PieFedCommentView]
 }
 
 public extension PieFedSearchResponse {
     enum CodingKeys: String, CodingKey {
         case type_ = "type_"
-        case posts = "posts"
         case communities = "communities"
+        case posts = "posts"
         case users = "users"
         case comments = "comments"
     }

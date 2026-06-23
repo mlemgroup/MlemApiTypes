@@ -1,5 +1,5 @@
 //
-//  PieFedAddModToCommunityRequest.swift
+//  PieFedModCommunityRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct PieFedAddModToCommunityRequest: PostRequest {
+public struct PieFedModCommunityRequest: PostRequest {
     public typealias Body = PieFedModCommunity
     public typealias Response = PieFedModCommunityResponse
     
@@ -19,14 +19,14 @@ public struct PieFedAddModToCommunityRequest: PostRequest {
     public let body: Body?
     
     init(
+      added: Bool,
       communityId: Int,
-      personId: Int,
-      added: Bool
+      personId: Int
     ) {
         self.body = .init(
+            added: added,
             communityId: communityId,
-            personId: personId,
-            added: added
+            personId: personId
         )
     }
 }

@@ -13,14 +13,14 @@ import Rest
 /// Available on all versions
 public struct PieFedBlockCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let communityId: Int
-    /// Available on all versions
     public let block: Bool
+    /// Available on all versions
+    public let communityId: Int
 }
 
 public extension PieFedBlockCommunity {
     enum CodingKeys: String, CodingKey {
-        case communityId = "community_id"
         case block = "block"
+        case communityId = "community_id"
     }
 }

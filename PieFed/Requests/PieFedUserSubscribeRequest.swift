@@ -1,5 +1,5 @@
 //
-//  PieFedSubscribePersonRequest.swift
+//  PieFedUserSubscribeRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct PieFedSubscribePersonRequest: PutRequest {
+public struct PieFedUserSubscribeRequest: PutRequest {
     public typealias Body = PieFedUserSubscribe
     public typealias Response = PieFedUserSubscribeResponse
     

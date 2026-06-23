@@ -19,15 +19,15 @@ public struct PieFedGetRepliesRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      sort: PieFedCommentSortType?,
-      page: Int?,
       limit: Int?,
+      page: Int?,
+      sort: PieFedCommentSortType?,
       unreadOnly: Bool?
     ) {
         self.parameters = .init(
-            sort: sort,
-            page: page,
             limit: limit,
+            page: page,
+            sort: sort,
             unreadOnly: unreadOnly
         )
     }

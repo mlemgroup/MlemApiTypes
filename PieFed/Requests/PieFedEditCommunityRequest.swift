@@ -19,31 +19,29 @@ public struct PieFedEditCommunityRequest: PutRequest {
     public let body: Body?
     
     init(
-      id: Int?,
+      communityId: Int,
       title: String?,
-      description: String?,
-      rules: String?,
-      iconUrl: URL?,
       bannerUrl: URL?,
+      description: String?,
+      discussionLanguages: [Int]?,
+      iconUrl: URL?,
+      localOnly: Bool?,
       nsfw: Bool?,
       restrictedToMods: Bool?,
-      localOnly: Bool?,
-      discussionLanguages: [Int]?,
-      communityId: Int?,
+      rules: String?,
       questionAnswer: Bool?
     ) {
         self.body = .init(
-            id: id,
+            communityId: communityId,
             title: title,
-            description: description,
-            rules: rules,
-            iconUrl: iconUrl,
             bannerUrl: bannerUrl,
+            description: description,
+            discussionLanguages: discussionLanguages,
+            iconUrl: iconUrl,
+            localOnly: localOnly,
             nsfw: nsfw,
             restrictedToMods: restrictedToMods,
-            localOnly: localOnly,
-            discussionLanguages: discussionLanguages,
-            communityId: communityId,
+            rules: rules,
             questionAnswer: questionAnswer
         )
     }

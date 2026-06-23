@@ -13,19 +13,19 @@ import Rest
 /// Available on all versions
 public struct PieFedEditComment: Codable, Hashable, Sendable {
     /// Available on all versions
+    public let body: String
+    /// Available on all versions
     public let commentId: Int
-    /// Available on all versions, made non-optional in 1.2.0
-    public let body: String?
     /// Available on all versions
     public let languageId: Int?
-    /// Available from 1.2.0 onwards
+    /// Available on all versions
     public let distinguished: Bool?
 }
 
 public extension PieFedEditComment {
     enum CodingKeys: String, CodingKey {
-        case commentId = "comment_id"
         case body = "body"
+        case commentId = "comment_id"
         case languageId = "language_id"
         case distinguished = "distinguished"
     }

@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available from 1.2.0 onwards
+/// Available on all versions
 public enum PieFedSearchSortType: String, Codable, Sendable {
     /// Available on all versions
     case active = "Active"
@@ -18,6 +18,8 @@ public enum PieFedSearchSortType: String, Codable, Sendable {
     case hot = "Hot"
     /// Available on all versions
     case new = "New"
+    /// Available on all versions
+    case top = "Top"
     /// Available on all versions
     case topHour = "TopHour"
     /// Available on all versions
@@ -42,10 +44,8 @@ public enum PieFedSearchSortType: String, Codable, Sendable {
     case topAll = "TopAll"
     /// Available on all versions
     case scaled = "Scaled"
-    /// Available from 1.2.1 onwards
+    /// Available on all versions
     case old = "Old"
-    /// Available from 1.2.2 onwards
-    case top = "Top"
     /// Available from 1.4.0 onwards
     case relevance = "Relevance"
     /// Available from 1.6.27 onwards

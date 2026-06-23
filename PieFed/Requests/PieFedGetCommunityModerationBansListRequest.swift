@@ -19,14 +19,14 @@ public struct PieFedGetCommunityModerationBansListRequest: GetRequest {
     public let parameters: Parameters?
     
     init(
-      communityId: Int?,
-      page: Int?,
-      limit: Int?
+      communityId: Int,
+      limit: Int?,
+      page: Int?
     ) {
         self.parameters = .init(
             communityId: communityId,
-            page: page,
-            limit: limit
+            limit: limit,
+            page: page
         )
     }
 }

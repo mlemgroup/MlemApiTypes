@@ -13,23 +13,23 @@ import Rest
 /// Available on all versions
 public struct PieFedListCommunities: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let type_: PieFedListingType?
-    /// Available on all versions
-    public let sort: PieFedCommunitySortType?
-    /// Available on all versions
-    public let showNsfw: Bool?
+    public let limit: Int?
     /// Available on all versions
     public let page: Int?
     /// Available on all versions
-    public let limit: Int?
+    public let showNsfw: Bool?
+    /// Available on all versions
+    public let sort: PieFedCommunitySortType?
+    /// Available on all versions
+    public let type_: PieFedListingType?
 }
 
 public extension PieFedListCommunities {
     enum CodingKeys: String, CodingKey {
-        case type_ = "type_"
-        case sort = "sort"
-        case showNsfw = "show_nsfw"
-        case page = "page"
         case limit = "limit"
+        case page = "page"
+        case showNsfw = "show_nsfw"
+        case sort = "sort"
+        case type_ = "type_"
     }
 }

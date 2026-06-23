@@ -17,17 +17,9 @@ public struct PieFedCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
     public let apDomain: String?
     /// Available on all versions
-    public let banned: Bool?
-    /// Available on all versions
-    public let banner: URL?
-    /// Available on all versions
     public let deleted: Bool
     /// Available on all versions
-    public let description: String?
-    /// Available on all versions
     public let hidden: Bool
-    /// Available on all versions
-    public let icon: URL?
     /// Available on all versions
     public let id: Int
     /// Available on all versions
@@ -47,9 +39,17 @@ public struct PieFedCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
     public let title: String
     /// Available on all versions
-    public let updated: Date?
-    /// Available from 1.1.0 onwards
+    public let banned: Bool?
+    /// Available on all versions
+    public let banner: URL?
+    /// Available on all versions
+    public let description: String?
+    /// Available on all versions
+    public let icon: URL?
+    /// Available on all versions
     public let postingWarning: String?
+    /// Available on all versions
+    public let updated: Date?
     /// Available from 1.4.0 onwards
     public let aiGenerated: Bool?
     /// Available from 1.4.0 onwards
@@ -60,12 +60,8 @@ public extension PieFedCommunity {
     enum CodingKeys: String, CodingKey {
         case actorId = "actor_id"
         case apDomain = "ap_domain"
-        case banned = "banned"
-        case banner = "banner"
         case deleted = "deleted"
-        case description = "description"
         case hidden = "hidden"
-        case icon = "icon"
         case id = "id"
         case instanceId = "instance_id"
         case local = "local"
@@ -75,8 +71,12 @@ public extension PieFedCommunity {
         case removed = "removed"
         case restrictedToMods = "restricted_to_mods"
         case title = "title"
-        case updated = "updated"
+        case banned = "banned"
+        case banner = "banner"
+        case description = "description"
+        case icon = "icon"
         case postingWarning = "posting_warning"
+        case updated = "updated"
         case aiGenerated = "ai_generated"
         case questionAnswer = "question_answer"
     }

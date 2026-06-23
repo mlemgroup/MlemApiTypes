@@ -1,5 +1,5 @@
 //
-//  PieFedCreatePostReportRequest.swift
+//  PieFedReportPostRequest.swift
 //  Mlem
 //
 //  Created by https://github.com/mlemgroup/lemmy-swift-codegen
@@ -11,7 +11,7 @@ import Foundation
 import Rest
 
 /// Available on all versions
-public struct PieFedCreatePostReportRequest: PostRequest {
+public struct PieFedReportPostRequest: PostRequest {
     public typealias Body = PieFedReportPost
     public typealias Response = PieFedPostReportResponse
     

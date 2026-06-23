@@ -21,8 +21,8 @@ public struct PieFedCreatePostRequest: PostRequest {
     init(
       title: String,
       communityId: Int,
-      url: URL?,
       body: String?,
+      url: URL?,
       nsfw: Bool?,
       languageId: Int?,
       altText: String?,
@@ -33,8 +33,8 @@ public struct PieFedCreatePostRequest: PostRequest {
         self.body = .init(
             title: title,
             communityId: communityId,
-            url: url,
             body: body,
+            url: url,
             nsfw: nsfw,
             languageId: languageId,
             altText: altText,
