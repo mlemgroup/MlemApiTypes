@@ -21,7 +21,7 @@ public struct LemmyCreateCommunityRequest: PostRequest {
     init(
       endpoint: LemmyEndpointVersion,
       name: String,
-      title: String,
+      title: String?,
       description: String?,
       icon: String?,
       banner: String?,

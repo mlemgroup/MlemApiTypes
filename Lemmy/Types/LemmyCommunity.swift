@@ -17,8 +17,8 @@ public struct LemmyCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
     public let name: String
     /// A longer title, that can contain other characters, and doesn't have to be unique.
-    /// Available on all versions
-    public let title: String
+    /// Available on all versions, made optional in 1.0.0-alpha
+    public let title: String?
     /// A sidebar / markdown description.
     /// Unavailable after 0.19.19
     public let description: String?
