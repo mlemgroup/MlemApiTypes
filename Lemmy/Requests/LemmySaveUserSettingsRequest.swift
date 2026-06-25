@@ -53,12 +53,13 @@ public struct LemmySaveUserSettingsRequest: PutRequest {
       defaultPostTimeRangeSeconds: Int?,
       defaultItemsPerPage: Int?,
       defaultCommentSortType: LemmyCommentSortType?,
+      showMedia: Bool?,
       blockingKeywords: [String]?,
       animatedImagesEnabled: Bool?,
       privateMessagesEnabled: Bool?,
       showScore: Bool?,
       autoMarkFetchedPostsAsRead: Bool?,
-      hideMedia: Bool?,
+      hidePostsWithMedia: Bool?,
       showPersonVotes: Bool?
     ) {
         self.path = endpoint == .v4 ? "api/v4/account/settings/save" : "api/v3/user/save_user_settings"
@@ -96,12 +97,13 @@ public struct LemmySaveUserSettingsRequest: PutRequest {
             defaultPostTimeRangeSeconds: defaultPostTimeRangeSeconds,
             defaultItemsPerPage: defaultItemsPerPage,
             defaultCommentSortType: defaultCommentSortType,
+            showMedia: showMedia,
             blockingKeywords: blockingKeywords,
             animatedImagesEnabled: animatedImagesEnabled,
             privateMessagesEnabled: privateMessagesEnabled,
             showScore: showScore,
             autoMarkFetchedPostsAsRead: autoMarkFetchedPostsAsRead,
-            hideMedia: hideMedia,
+            hidePostsWithMedia: hidePostsWithMedia,
             showPersonVotes: showPersonVotes
         )
     }

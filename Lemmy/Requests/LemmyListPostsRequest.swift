@@ -38,12 +38,13 @@ public struct LemmyListPostsRequest: GetRequest {
       creatorUsername: String?,
       multiCommunityId: Int?,
       multiCommunityName: String?,
-      hideMedia: Bool?,
+      hidePostsWithMedia: Bool?,
       markAsRead: Bool?,
       noCommentsOnly: Bool?,
       searchTerm: String?,
       searchTitleOnly: Bool?,
-      searchUrlOnly: Bool?
+      searchUrlOnly: Bool?,
+      tagId: Int?
     ) {
         self.path = endpoint == .v4 ? "api/v4/post/list" : "api/v3/post/list"
         self.parameters = .init(
@@ -65,12 +66,13 @@ public struct LemmyListPostsRequest: GetRequest {
             creatorUsername: creatorUsername,
             multiCommunityId: multiCommunityId,
             multiCommunityName: multiCommunityName,
-            hideMedia: hideMedia,
+            hidePostsWithMedia: hidePostsWithMedia,
             markAsRead: markAsRead,
             noCommentsOnly: noCommentsOnly,
             searchTerm: searchTerm,
             searchTitleOnly: searchTitleOnly,
-            searchUrlOnly: searchUrlOnly
+            searchUrlOnly: searchUrlOnly,
+            tagId: tagId
         )
     }
 }

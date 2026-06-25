@@ -98,9 +98,9 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     /// Whether to automatically mark fetched posts as read.
     /// Available from 1.0.0-alpha onwards
     public let autoMarkFetchedPostsAsRead: Bool?
-    /// Whether to hide posts containing images/videos
+    /// Whether to hide posts containing images/videos. Often labeled hide_memes.
     /// Available from 1.0.0-alpha onwards
-    public let hideMedia: Bool?
+    public let hidePostsWithMedia: Bool?
     /// A default time range limit to apply to post sorts, in seconds.
     /// Available from 1.0.0-alpha onwards
     public let defaultPostTimeRangeSeconds: Int?
@@ -118,6 +118,9 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     public let defaultItemsPerPage: Int?
     /// Available from 1.0.0-alpha onwards
     public let invitedByLocalUserId: Int?
+    /// Whether to show media in the UI.
+    /// Available from 1.0.0-alpha onwards
+    public let showMedia: Bool?
 }
 
 public extension LemmyLocalUser {
@@ -154,7 +157,7 @@ public extension LemmyLocalUser {
         case privateMessagesEnabled = "private_messages_enabled"
         case defaultCommentSortType = "default_comment_sort_type"
         case autoMarkFetchedPostsAsRead = "auto_mark_fetched_posts_as_read"
-        case hideMedia = "hide_media"
+        case hidePostsWithMedia = "hide_posts_with_media"
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
         case showScore = "show_score"
         case showUpvotes = "show_upvotes"
@@ -163,5 +166,6 @@ public extension LemmyLocalUser {
         case showPersonVotes = "show_person_votes"
         case defaultItemsPerPage = "default_items_per_page"
         case invitedByLocalUserId = "invited_by_local_user_id"
+        case showMedia = "show_media"
     }
 }

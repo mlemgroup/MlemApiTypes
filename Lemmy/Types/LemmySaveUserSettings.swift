@@ -103,6 +103,9 @@ public struct LemmySaveUserSettings: Codable, Hashable, Sendable {
     /// The default comment sort, usually "hot"
     /// Available from 1.0.0-alpha onwards
     public let defaultCommentSortType: LemmyCommentSortType?
+    /// Whether to show media in the UI.
+    /// Available from 1.0.0-alpha onwards
+    public let showMedia: Bool?
     /// A list of keywords used for blocking posts having them in title,url or body.
     /// Available from 1.0.0-alpha onwards
     public let blockingKeywords: [String]?
@@ -119,9 +122,9 @@ public struct LemmySaveUserSettings: Codable, Hashable, Sendable {
     /// Whether to automatically mark fetched posts as read.
     /// Available from 1.0.0-alpha onwards
     public let autoMarkFetchedPostsAsRead: Bool?
-    /// Whether to hide posts containing images/videos.
+    /// Whether to hide posts containing images/videos. Often labeled hide_memes.
     /// Available from 1.0.0-alpha onwards
-    public let hideMedia: Bool?
+    public let hidePostsWithMedia: Bool?
     /// Whether to show vote totals given to others.
     /// Available from 1.0.0-alpha onwards
     public let showPersonVotes: Bool?
@@ -162,12 +165,13 @@ public extension LemmySaveUserSettings {
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
         case defaultItemsPerPage = "default_items_per_page"
         case defaultCommentSortType = "default_comment_sort_type"
+        case showMedia = "show_media"
         case blockingKeywords = "blocking_keywords"
         case animatedImagesEnabled = "animated_images_enabled"
         case privateMessagesEnabled = "private_messages_enabled"
         case showScore = "show_score"
         case autoMarkFetchedPostsAsRead = "auto_mark_fetched_posts_as_read"
-        case hideMedia = "hide_media"
+        case hidePostsWithMedia = "hide_posts_with_media"
         case showPersonVotes = "show_person_votes"
     }
 }
