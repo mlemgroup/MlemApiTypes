@@ -69,6 +69,9 @@ public struct LemmyGetPosts: Codable, Hashable, Sendable {
     public let searchTitleOnly: Bool?
     /// Available from 1.0.0-alpha onwards
     public let searchUrlOnly: Bool?
+    /// Only show posts which have this tag
+    /// Available from 1.0.0-alpha onwards
+    public let tagId: Int?
 }
 
 public extension LemmyGetPosts {
@@ -97,5 +100,6 @@ public extension LemmyGetPosts {
         case searchTerm = "search_term"
         case searchTitleOnly = "search_title_only"
         case searchUrlOnly = "search_url_only"
+        case tagId = "tag_id"
     }
 }
