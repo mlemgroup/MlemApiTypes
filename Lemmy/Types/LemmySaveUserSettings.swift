@@ -17,15 +17,15 @@ public struct LemmySaveUserSettings: Codable, Hashable, Sendable {
     public let showNsfw: Bool?
     /// Available on all versions
     public let blurNsfw: Bool?
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let autoExpand: Bool?
     /// Show post and comment scores.
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let showScores: Bool?
     /// Your user's theme.
     /// Available on all versions
     public let theme: String?
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let defaultSortType: LemmySortType?
     /// Available on all versions
     public let defaultListingType: LemmyListingType?
@@ -33,10 +33,10 @@ public struct LemmySaveUserSettings: Codable, Hashable, Sendable {
     /// Available on all versions
     public let interfaceLanguage: String?
     /// A URL for your avatar.
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let avatar: String?
     /// A URL for your banner.
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let banner: String?
     /// Your display name, which can contain strange characters, and does not need to be unique.
     /// Available on all versions
@@ -77,10 +77,10 @@ public struct LemmySaveUserSettings: Codable, Hashable, Sendable {
     /// Available on all versions
     public let postListingMode: LemmyPostListingMode?
     /// Whether to allow keyboard navigation (for browsing and interacting with posts and comments).
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let enableKeyboardNavigation: Bool?
     /// Whether user avatars or inline images in the UI that are gifs should be allowed to play or should be paused
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let enableAnimatedImages: Bool?
     /// Whether to auto-collapse bot comments.
     /// Available on all versions

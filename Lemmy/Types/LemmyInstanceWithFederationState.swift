@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Unavailable after 0.19.18
+/// Unavailable after 0.19.19
 public struct LemmyInstanceWithFederationState: Codable, Hashable, Sendable {
     /// if federation to this instance is or was active, show state of outgoing federation to this instance
     /// Available on all versions

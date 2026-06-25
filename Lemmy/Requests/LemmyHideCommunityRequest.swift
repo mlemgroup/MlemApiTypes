@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Unavailable after 0.19.18
+/// Unavailable after 0.19.19
 public struct LemmyHideCommunityRequest: PutRequest {
     public typealias Body = LemmyHideCommunity
     public typealias Response = LemmySuccessResponse

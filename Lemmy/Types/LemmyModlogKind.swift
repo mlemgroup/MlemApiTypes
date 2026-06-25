@@ -12,29 +12,29 @@ import Rest
 
 /// Available on all versions
 public enum LemmyModlogKind: String, Codable, Sendable {
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     case all
     /// Available on all versions
     case modRemovePost
     /// Available on all versions
     case modLockPost
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     case modFeaturePost
     /// Available on all versions
     case modRemoveComment
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     case modRemoveCommunity
     /// Available on all versions
     case modBanFromCommunity
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     case modAddCommunity
     /// Available on all versions
     case modTransferCommunity
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     case modAdd
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     case modBan
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     case modHideCommunity
     /// Available on all versions
     case adminPurgePerson

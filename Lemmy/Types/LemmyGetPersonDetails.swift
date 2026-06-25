@@ -17,15 +17,15 @@ public struct LemmyGetPersonDetails: Codable, Hashable, Sendable {
     /// Example: dessalines , or dessalines@xyz.tld
     /// Available on all versions
     public let username: String?
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let sort: LemmySortType?
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let page: Int?
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let limit: Int?
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let communityId: Int?
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let savedOnly: Bool?
 }
 

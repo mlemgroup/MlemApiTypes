@@ -19,9 +19,9 @@ public struct LemmySite: Codable, Hashable, Sendable {
     /// A sidebar for the site in markdown.
     /// Available on all versions
     public let sidebar: String?
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let published: Date?
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let updated: Date?
     /// An icon URL.
     /// Available on all versions
@@ -30,10 +30,10 @@ public struct LemmySite: Codable, Hashable, Sendable {
     /// Available on all versions
     public let banner: URL?
     /// A shorter, one-line description of the site.
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let description: String?
     /// The federated actor_id.
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let actorId: ActorIdentifier?
     /// The time the site was last refreshed.
     /// Available on all versions
@@ -43,7 +43,7 @@ public struct LemmySite: Codable, Hashable, Sendable {
     public let inboxUrl: URL
     /// Unavailable after 0.19.3
     public let privateKey: String?
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let publicKey: String?
     /// Available on all versions
     public let instanceId: Int
