@@ -14,13 +14,13 @@ import Rest
 public struct LemmyTagline: Codable, Hashable, Sendable {
     /// Available on all versions
     public let id: Int
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let localSiteId: Int?
     /// Available on all versions
     public let content: String
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let published: Date?
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let updated: Date?
     /// Available from 1.0.0-alpha onwards
     public let publishedAt: Date?

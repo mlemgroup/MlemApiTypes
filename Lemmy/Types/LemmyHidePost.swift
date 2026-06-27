@@ -12,7 +12,7 @@ import Rest
 
 /// Available from 0.19.4 onwards
 public struct LemmyHidePost: Codable, Hashable, Sendable {
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let postIds: [Int]?
     /// Available on all versions
     public let hide: Bool

@@ -14,9 +14,9 @@ import Rest
 public struct LemmyGetPersonDetailsResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let personView: LemmyPersonView
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let comments: [LemmyCommentView]?
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let posts: [LemmyPostView]?
     /// Available on all versions
     public let moderates: [LemmyCommunityModeratorView]

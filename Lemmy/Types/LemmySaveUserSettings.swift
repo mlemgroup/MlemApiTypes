@@ -17,15 +17,15 @@ public struct LemmySaveUserSettings: Codable, Hashable, Sendable {
     public let showNsfw: Bool?
     /// Available on all versions
     public let blurNsfw: Bool?
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let autoExpand: Bool?
     /// Show post and comment scores.
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let showScores: Bool?
     /// Your user's theme.
     /// Available on all versions
     public let theme: String?
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let defaultSortType: LemmySortType?
     /// Available on all versions
     public let defaultListingType: LemmyListingType?
@@ -33,10 +33,10 @@ public struct LemmySaveUserSettings: Codable, Hashable, Sendable {
     /// Available on all versions
     public let interfaceLanguage: String?
     /// A URL for your avatar.
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let avatar: String?
     /// A URL for your banner.
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let banner: String?
     /// Your display name, which can contain strange characters, and does not need to be unique.
     /// Available on all versions
@@ -77,10 +77,10 @@ public struct LemmySaveUserSettings: Codable, Hashable, Sendable {
     /// Available on all versions
     public let postListingMode: LemmyPostListingMode?
     /// Whether to allow keyboard navigation (for browsing and interacting with posts and comments).
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let enableKeyboardNavigation: Bool?
     /// Whether user avatars or inline images in the UI that are gifs should be allowed to play or should be paused
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let enableAnimatedImages: Bool?
     /// Whether to auto-collapse bot comments.
     /// Available on all versions
@@ -103,6 +103,9 @@ public struct LemmySaveUserSettings: Codable, Hashable, Sendable {
     /// The default comment sort, usually "hot"
     /// Available from 1.0.0-alpha onwards
     public let defaultCommentSortType: LemmyCommentSortType?
+    /// Whether to show media in the UI.
+    /// Available from 1.0.0-alpha onwards
+    public let showMedia: Bool?
     /// A list of keywords used for blocking posts having them in title,url or body.
     /// Available from 1.0.0-alpha onwards
     public let blockingKeywords: [String]?
@@ -119,9 +122,9 @@ public struct LemmySaveUserSettings: Codable, Hashable, Sendable {
     /// Whether to automatically mark fetched posts as read.
     /// Available from 1.0.0-alpha onwards
     public let autoMarkFetchedPostsAsRead: Bool?
-    /// Whether to hide posts containing images/videos.
+    /// Whether to hide posts containing images/videos. Often labeled hide_memes.
     /// Available from 1.0.0-alpha onwards
-    public let hideMedia: Bool?
+    public let hidePostsWithMedia: Bool?
     /// Whether to show vote totals given to others.
     /// Available from 1.0.0-alpha onwards
     public let showPersonVotes: Bool?
@@ -162,12 +165,13 @@ public extension LemmySaveUserSettings {
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
         case defaultItemsPerPage = "default_items_per_page"
         case defaultCommentSortType = "default_comment_sort_type"
+        case showMedia = "show_media"
         case blockingKeywords = "blocking_keywords"
         case animatedImagesEnabled = "animated_images_enabled"
         case privateMessagesEnabled = "private_messages_enabled"
         case showScore = "show_score"
         case autoMarkFetchedPostsAsRead = "auto_mark_fetched_posts_as_read"
-        case hideMedia = "hide_media"
+        case hidePostsWithMedia = "hide_posts_with_media"
         case showPersonVotes = "show_person_votes"
     }
 }

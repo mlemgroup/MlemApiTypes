@@ -17,7 +17,7 @@ public struct LemmyGetPosts: Codable, Hashable, Sendable {
     /// Available on all versions
     public let sort: LemmyPostSortTypeBridge
     /// DEPRECATED, use page_cursor
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let page: Int?
     /// Available on all versions
     public let limit: Int?
@@ -25,11 +25,11 @@ public struct LemmyGetPosts: Codable, Hashable, Sendable {
     public let communityId: Int?
     /// Available on all versions
     public let communityName: String?
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let savedOnly: Bool?
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let likedOnly: Bool?
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let dislikedOnly: Bool?
     /// Available on all versions
     public let pageCursor: String?
@@ -56,7 +56,7 @@ public struct LemmyGetPosts: Codable, Hashable, Sendable {
     public let multiCommunityName: String?
     /// If false, then show posts with media attached (even if your user setting is to hide them)
     /// Available from 1.0.0-alpha onwards
-    public let hideMedia: Bool?
+    public let hidePostsWithMedia: Bool?
     /// Whether to automatically mark fetched posts as read.
     /// Available from 1.0.0-alpha onwards
     public let markAsRead: Bool?
@@ -69,6 +69,9 @@ public struct LemmyGetPosts: Codable, Hashable, Sendable {
     public let searchTitleOnly: Bool?
     /// Available from 1.0.0-alpha onwards
     public let searchUrlOnly: Bool?
+    /// Only show posts which have this tag
+    /// Available from 1.0.0-alpha onwards
+    public let tagId: Int?
 }
 
 public extension LemmyGetPosts {
@@ -91,11 +94,12 @@ public extension LemmyGetPosts {
         case creatorUsername = "creator_username"
         case multiCommunityId = "multi_community_id"
         case multiCommunityName = "multi_community_name"
-        case hideMedia = "hide_media"
+        case hidePostsWithMedia = "hide_posts_with_media"
         case markAsRead = "mark_as_read"
         case noCommentsOnly = "no_comments_only"
         case searchTerm = "search_term"
         case searchTitleOnly = "search_title_only"
         case searchUrlOnly = "search_url_only"
+        case tagId = "tag_id"
     }
 }

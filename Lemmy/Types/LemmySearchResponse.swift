@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public struct LemmySearchResponse: Codable, Hashable, Sendable {
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let type_: LemmySearchType?
     /// Available on all versions
     public let comments: [LemmyCommentView]
@@ -20,7 +20,7 @@ public struct LemmySearchResponse: Codable, Hashable, Sendable {
     public let posts: [LemmyPostView]
     /// Available on all versions
     public let communities: [LemmyCommunityView]
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let users: [LemmyPersonView]?
     /// Available from 1.0.0-alpha onwards
     public let resolve: LemmyResolveObjectView?

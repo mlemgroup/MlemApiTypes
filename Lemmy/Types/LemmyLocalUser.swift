@@ -24,7 +24,7 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     public let showNsfw: Bool
     /// Available on all versions
     public let theme: String
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let defaultSortType: LemmySortType?
     /// Available on all versions
     public let defaultListingType: LemmyListingType
@@ -36,7 +36,7 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     /// Available on all versions
     public let sendNotificationsToEmail: Bool
     /// Whether to show comment / post scores.
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let showScores: Bool?
     /// Whether to show bot accounts.
     /// Available on all versions
@@ -55,7 +55,7 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     public let openLinksInNewTab: Bool
     /// Available on all versions
     public let blurNsfw: Bool
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let autoExpand: Bool?
     /// Whether infinite scroll is enabled.
     /// Available on all versions
@@ -68,17 +68,17 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     /// Available on all versions
     public let totp2faEnabled: Bool
     /// Whether to allow keyboard navigation (for browsing and interacting with posts and comments).
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let enableKeyboardNavigation: Bool?
     /// Whether user avatars and inline images in the UI that are gifs should be allowed to play or should be paused
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let enableAnimatedImages: Bool?
     /// Whether to auto-collapse bot comments.
     /// Available on all versions
     public let collapseBotComments: Bool
     /// The last time a donation request was shown to this user. If this is more than a year ago,
     /// a new notification request should be shown.
-    /// Available between 0.19.11 and 0.19.18
+    /// Available between 0.19.11 and 0.19.19
     public let lastDonationNotification: Date?
     /// Available from 1.0.0-alpha onwards
     public let defaultPostSortType: LemmyPostSortType?
@@ -98,9 +98,9 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     /// Whether to automatically mark fetched posts as read.
     /// Available from 1.0.0-alpha onwards
     public let autoMarkFetchedPostsAsRead: Bool?
-    /// Whether to hide posts containing images/videos
+    /// Whether to hide posts containing images/videos. Often labeled hide_memes.
     /// Available from 1.0.0-alpha onwards
-    public let hideMedia: Bool?
+    public let hidePostsWithMedia: Bool?
     /// A default time range limit to apply to post sorts, in seconds.
     /// Available from 1.0.0-alpha onwards
     public let defaultPostTimeRangeSeconds: Int?
@@ -118,6 +118,9 @@ public struct LemmyLocalUser: Codable, Hashable, Sendable {
     public let defaultItemsPerPage: Int?
     /// Available from 1.0.0-alpha onwards
     public let invitedByLocalUserId: Int?
+    /// Whether to show media in the UI.
+    /// Available from 1.0.0-alpha onwards
+    public let showMedia: Bool?
 }
 
 public extension LemmyLocalUser {
@@ -154,7 +157,7 @@ public extension LemmyLocalUser {
         case privateMessagesEnabled = "private_messages_enabled"
         case defaultCommentSortType = "default_comment_sort_type"
         case autoMarkFetchedPostsAsRead = "auto_mark_fetched_posts_as_read"
-        case hideMedia = "hide_media"
+        case hidePostsWithMedia = "hide_posts_with_media"
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
         case showScore = "show_score"
         case showUpvotes = "show_upvotes"
@@ -163,5 +166,6 @@ public extension LemmyLocalUser {
         case showPersonVotes = "show_person_votes"
         case defaultItemsPerPage = "default_items_per_page"
         case invitedByLocalUserId = "invited_by_local_user_id"
+        case showMedia = "show_media"
     }
 }

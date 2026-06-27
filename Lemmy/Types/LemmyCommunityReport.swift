@@ -21,7 +21,7 @@ public struct LemmyCommunityReport: Codable, Hashable, Sendable {
     /// Available on all versions
     public let originalCommunityName: String
     /// Available on all versions
-    public let originalCommunityTitle: String
+    public let originalCommunityTitle: String?
     /// Available on all versions
     public let originalCommunitySummary: String?
     /// Available on all versions

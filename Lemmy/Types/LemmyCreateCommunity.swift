@@ -16,16 +16,16 @@ public struct LemmyCreateCommunity: Codable, Hashable, Sendable {
     /// Available on all versions
     public let name: String
     /// A longer title.
-    /// Available on all versions
-    public let title: String
+    /// Available on all versions, made optional in 1.0.0-alpha
+    public let title: String?
     /// A longer sidebar, or description of your community, in markdown.
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let description: String?
     /// An icon URL.
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let icon: String?
     /// A banner URL.
-    /// Unavailable after 0.19.18
+    /// Unavailable after 0.19.19
     public let banner: String?
     /// Whether its an NSFW community.
     /// Available on all versions
