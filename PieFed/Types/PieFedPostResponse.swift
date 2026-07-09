@@ -15,11 +15,11 @@ public struct PieFedPostResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let postView: PieFedPostView
     /// Available on all versions
-    public let communityView: PieFedCommunityView
+    public let communityView: PieFedCommunityView?
     /// Available on all versions
-    public let moderators: [PieFedCommunityModeratorView]
+    public let moderators: [PieFedCommunityModeratorView]?
     /// Available on all versions
-    public let crossPosts: [PieFedPostView]
+    public let crossPosts: [PieFedPostView]?
 }
 
 public extension PieFedPostResponse {
