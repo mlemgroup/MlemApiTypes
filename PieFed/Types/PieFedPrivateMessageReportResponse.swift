@@ -13,7 +13,7 @@ import Rest
 /// Available from 1.7.17 onwards
 public struct PieFedPrivateMessageReportResponse: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let privateMessageReportView: PieFedPrivateMessageReportView?
+    public let privateMessageReportView: PieFedPrivateMessageReportView
 }
 
 public extension PieFedPrivateMessageReportResponse {

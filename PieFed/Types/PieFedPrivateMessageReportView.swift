@@ -13,13 +13,13 @@ import Rest
 /// Available from 1.7.17 onwards
 public struct PieFedPrivateMessageReportView: Codable, Hashable, Sendable {
     /// Available on all versions
-    public let privateMessageReport: PieFedPrivateMessageReport?
+    public let privateMessageReport: PieFedPrivateMessageReport
     /// Available on all versions
-    public let privateMessage: PieFedPrivateMessage?
+    public let privateMessage: PieFedPrivateMessage
     /// Available on all versions
-    public let privateMessageCreator: PieFedPerson?
+    public let privateMessageCreator: PieFedPerson
     /// Available on all versions
-    public let creator: PieFedPerson?
+    public let creator: PieFedPerson
 }
 
 public extension PieFedPrivateMessageReportView {
