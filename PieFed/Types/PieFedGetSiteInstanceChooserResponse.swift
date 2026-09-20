@@ -44,6 +44,8 @@ public struct PieFedGetSiteInstanceChooserResponse: Codable, Hashable, Sendable 
     public let trusts: [String]
     /// Available on all versions
     public let registrationMode: String
+    /// Available from 1.7.17 onwards
+    public let software: String?
 }
 
 public extension PieFedGetSiteInstanceChooserResponse {
@@ -64,5 +66,6 @@ public extension PieFedGetSiteInstanceChooserResponse {
         case defederation = "defederation"
         case trusts = "trusts"
         case registrationMode = "registration_mode"
+        case software = "software"
     }
 }
