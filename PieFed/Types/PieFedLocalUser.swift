@@ -60,6 +60,8 @@ public struct PieFedLocalUser: Codable, Hashable, Sendable {
     public let replyHideThreshold: Int?
     /// Available from 1.4.0 onwards
     public let searchable: Bool?
+    /// Available from 1.7.17 onwards
+    public let manuallyApprovesFollowers: Bool?
 }
 
 public extension PieFedLocalUser {
@@ -88,5 +90,6 @@ public extension PieFedLocalUser {
         case replyCollapseThreshold = "reply_collapse_threshold"
         case replyHideThreshold = "reply_hide_threshold"
         case searchable = "searchable"
+        case manuallyApprovesFollowers = "manually_approves_followers"
     }
 }
