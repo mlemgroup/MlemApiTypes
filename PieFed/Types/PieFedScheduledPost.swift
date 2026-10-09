@@ -75,7 +75,7 @@ public struct PieFedScheduledPost: Codable, Hashable, Sendable {
     /// Available on all versions
     public let nextScheduledFor: Date
     /// Available on all versions
-    public let repeat: PieFedScheduledPostRepeatType
+    public let `repeat`: PieFedScheduledPostRepeatType
 }
 
 public extension PieFedScheduledPost {
@@ -111,6 +111,6 @@ public extension PieFedScheduledPost {
         case gallery = "gallery"
         case created = "created"
         case nextScheduledFor = "next_scheduled_for"
-        case repeat = "repeat"
+        case `repeat` = "repeat"
     }
 }

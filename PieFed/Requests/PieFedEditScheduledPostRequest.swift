@@ -31,7 +31,7 @@ public struct PieFedEditScheduledPostRequest: PutRequest {
       tags: String?,
       flair: String?,
       scheduledFor: Date?,
-      repeat: PieFedScheduledPostRepeatType?
+      `repeat`: PieFedScheduledPostRepeatType?
     ) {
         self.body = .init(
             postId: postId,
@@ -46,7 +46,7 @@ public struct PieFedEditScheduledPostRequest: PutRequest {
             tags: tags,
             flair: flair,
             scheduledFor: scheduledFor,
-            repeat: repeat
+            `repeat`: `repeat`
         )
     }
 }

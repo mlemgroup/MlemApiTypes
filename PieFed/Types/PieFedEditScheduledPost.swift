@@ -37,7 +37,7 @@ public struct PieFedEditScheduledPost: Codable, Hashable, Sendable {
     /// Available on all versions
     public let scheduledFor: Date?
     /// Available on all versions
-    public let repeat: PieFedScheduledPostRepeatType?
+    public let `repeat`: PieFedScheduledPostRepeatType?
 }
 
 public extension PieFedEditScheduledPost {
@@ -54,6 +54,6 @@ public extension PieFedEditScheduledPost {
         case tags = "tags"
         case flair = "flair"
         case scheduledFor = "scheduled_for"
-        case repeat = "repeat"
+        case `repeat` = "repeat"
     }
 }

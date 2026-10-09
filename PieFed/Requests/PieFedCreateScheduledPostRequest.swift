@@ -30,7 +30,7 @@ public struct PieFedCreateScheduledPostRequest: PostRequest {
       event: PieFedPostEvent?,
       poll: PieFedPostPoll?,
       scheduledFor: Date,
-      repeat: PieFedScheduledPostRepeatType?
+      `repeat`: PieFedScheduledPostRepeatType?
     ) {
         self.body = .init(
             title: title,
@@ -44,7 +44,7 @@ public struct PieFedCreateScheduledPostRequest: PostRequest {
             event: event,
             poll: poll,
             scheduledFor: scheduledFor,
-            repeat: repeat
+            `repeat`: `repeat`
         )
     }
 }
