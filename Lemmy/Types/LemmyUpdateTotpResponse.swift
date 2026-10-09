@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Unavailable after 0.19.19
+/// Unavailable after 0.19.20
 public struct LemmyUpdateTotpResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let enabled: Bool
