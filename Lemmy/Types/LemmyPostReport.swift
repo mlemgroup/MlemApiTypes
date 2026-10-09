@@ -43,6 +43,8 @@ public struct LemmyPostReport: Codable, Hashable, Sendable {
     public let updatedAt: Date?
     /// Available from 1.0.0-alpha onwards
     public let violatesInstanceRules: Bool?
+    /// Available from 1.0.0-alpha onwards
+    public let conclusion: String?
 }
 
 public extension LemmyPostReport {
@@ -61,5 +63,6 @@ public extension LemmyPostReport {
         case publishedAt = "published_at"
         case updatedAt = "updated_at"
         case violatesInstanceRules = "violates_instance_rules"
+        case conclusion = "conclusion"
     }
 }

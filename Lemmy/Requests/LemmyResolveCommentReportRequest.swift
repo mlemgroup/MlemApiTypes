@@ -21,12 +21,14 @@ public struct LemmyResolveCommentReportRequest: PutRequest {
     init(
       endpoint: LemmyEndpointVersion,
       reportId: Int,
-      resolved: Bool
+      resolved: Bool,
+      conclusion: String?
     ) {
         self.path = endpoint == .v4 ? "api/v4/comment/report/resolve" : "api/v3/comment/report/resolve"
         self.body = .init(
             reportId: reportId,
-            resolved: resolved
+            resolved: resolved,
+            conclusion: conclusion
         )
     }
 }

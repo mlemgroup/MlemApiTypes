@@ -20,11 +20,13 @@ public struct LemmyResolveCommunityReportRequest: PutRequest {
     
     init(
       reportId: Int,
-      resolved: Bool
+      resolved: Bool,
+      conclusion: String?
     ) {
         self.body = .init(
             reportId: reportId,
-            resolved: resolved
+            resolved: resolved,
+            conclusion: conclusion
         )
     }
 }

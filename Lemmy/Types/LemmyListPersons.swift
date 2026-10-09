@@ -21,6 +21,8 @@ public struct LemmyListPersons: Codable, Hashable, Sendable {
     /// Available on all versions
     public let searchTitleOnly: Bool?
     /// Available on all versions
+    public let communityId: Int?
+    /// Available on all versions
     public let pageCursor: String?
     /// Available on all versions
     public let limit: Int?
@@ -32,6 +34,7 @@ public extension LemmyListPersons {
         case sort = "sort"
         case searchTerm = "search_term"
         case searchTitleOnly = "search_title_only"
+        case communityId = "community_id"
         case pageCursor = "page_cursor"
         case limit = "limit"
     }

@@ -23,6 +23,7 @@ public struct LemmyListPersonsRequest: GetRequest {
       sort: LemmyPersonSortType?,
       searchTerm: String?,
       searchTitleOnly: Bool?,
+      communityId: Int?,
       pageCursor: String?,
       limit: Int?
     ) {
@@ -31,6 +32,7 @@ public struct LemmyListPersonsRequest: GetRequest {
             sort: sort,
             searchTerm: searchTerm,
             searchTitleOnly: searchTitleOnly,
+            communityId: communityId,
             pageCursor: pageCursor,
             limit: limit
         )

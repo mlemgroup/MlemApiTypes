@@ -18,6 +18,10 @@ public struct LemmyLanguage: Codable, Hashable, Sendable {
     public let code: String
     /// Available on all versions
     public let name: String
+    /// Available from 1.0.0-alpha onwards
+    public let usageInLocalPostsPercent: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let usageInLocalCommentsPercent: Int?
 }
 
 public extension LemmyLanguage {
@@ -25,5 +29,7 @@ public extension LemmyLanguage {
         case id = "id"
         case code = "code"
         case name = "name"
+        case usageInLocalPostsPercent = "usage_in_local_posts_percent"
+        case usageInLocalCommentsPercent = "usage_in_local_comments_percent"
     }
 }

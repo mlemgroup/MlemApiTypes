@@ -16,11 +16,14 @@ public struct LemmyResolveCommunityReport: Codable, Hashable, Sendable {
     public let reportId: Int
     /// Available on all versions
     public let resolved: Bool
+    /// Available on all versions
+    public let conclusion: String?
 }
 
 public extension LemmyResolveCommunityReport {
     enum CodingKeys: String, CodingKey {
         case reportId = "report_id"
         case resolved = "resolved"
+        case conclusion = "conclusion"
     }
 }
