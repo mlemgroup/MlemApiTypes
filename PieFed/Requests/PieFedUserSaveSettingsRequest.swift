@@ -45,7 +45,8 @@ public struct PieFedUserSaveSettingsRequest: PutRequest {
       replyCollapseThreshold: Int?,
       replyHideThreshold: Int?,
       searchable: Bool?,
-      displayName: String?
+      displayName: String?,
+      reposterVisibility: PieFedReposterVisibility?
     ) {
         self.body = .init(
             avatar: avatar,
@@ -74,7 +75,8 @@ public struct PieFedUserSaveSettingsRequest: PutRequest {
             replyCollapseThreshold: replyCollapseThreshold,
             replyHideThreshold: replyHideThreshold,
             searchable: searchable,
-            displayName: displayName
+            displayName: displayName,
+            reposterVisibility: reposterVisibility
         )
     }
 }

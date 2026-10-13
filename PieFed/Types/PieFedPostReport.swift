@@ -28,6 +28,8 @@ public struct PieFedPostReport: Codable, Hashable, Sendable {
     public let resolved: Bool
     /// Available on all versions
     public let published: Date
+    /// Available from 1.8.2 onwards
+    public let description: String?
 }
 
 public extension PieFedPostReport {
@@ -40,5 +42,6 @@ public extension PieFedPostReport {
         case reason = "reason"
         case resolved = "resolved"
         case published = "published"
+        case description = "description"
     }
 }

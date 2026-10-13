@@ -20,16 +20,16 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     /// Available on all versions
     public let siteSetup: Bool
     /// Whether downvotes are enabled.
-    /// Unavailable after 0.19.19
+    /// Unavailable after 0.19.20
     public let enableDownvotes: Bool?
     /// Whether NSFW is enabled.
-    /// Unavailable after 0.19.19
+    /// Unavailable after 0.19.20
     public let enableNsfw: Bool?
     /// Whether only admins can create communities.
     /// Available on all versions
     public let communityCreationAdminOnly: Bool
     /// Whether emails are required.
-    /// Unavailable after 0.19.19
+    /// Unavailable after 0.19.20
     public let requireEmailVerification: Bool?
     /// An optional registration application questionnaire in markdown.
     /// Available on all versions
@@ -46,7 +46,7 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     /// Available on all versions
     public let legalInformation: String?
     /// Whether to hide mod names on the modlog.
-    /// Unavailable after 0.19.19
+    /// Unavailable after 0.19.20
     public let hideModlogModNames: Bool?
     /// Whether new applications email admins.
     /// Available on all versions
@@ -55,20 +55,20 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     /// Available on all versions
     public let slurFilterRegex: String?
     /// The max actor name length.
-    /// Unavailable after 0.19.19
+    /// Unavailable after 0.19.20
     public let actorNameMaxLength: Int?
     /// Whether federation is enabled.
     /// Available on all versions
     public let federationEnabled: Bool
     /// Whether captcha is enabled.
-    /// Unavailable after 0.19.19
+    /// Unavailable after 0.19.20
     public let captchaEnabled: Bool?
     /// The captcha difficulty.
-    /// Unavailable after 0.19.19
+    /// Unavailable after 0.19.20
     public let captchaDifficulty: String?
-    /// Unavailable after 0.19.19
+    /// Unavailable after 0.19.20
     public let published: Date?
-    /// Unavailable after 0.19.19
+    /// Unavailable after 0.19.20
     public let updated: Date?
     /// Available on all versions
     public let registrationMode: LemmyRegistrationMode
@@ -83,7 +83,7 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     /// Available from 0.19.4 onwards
     public let defaultPostListingMode: LemmyPostListingMode?
     /// Default value for [LocalUser.post_listing_mode]
-    /// Available between 0.19.4 and 0.19.19
+    /// Available between 0.19.4 and 0.19.20
     public let defaultSortType: LemmySortType?
     /// Whether emails are required.
     /// Available from 1.0.0-alpha onwards
@@ -120,13 +120,13 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     /// Available from 1.0.0-alpha onwards
     public let nsfwContentDisallowed: Bool?
     /// Available from 1.0.0-alpha onwards
-    public let users: Int?
+    public let localUsers: Int?
     /// Available from 1.0.0-alpha onwards
-    public let posts: Int?
+    public let localPosts: Int?
     /// Available from 1.0.0-alpha onwards
-    public let comments: Int?
+    public let localComments: Int?
     /// Available from 1.0.0-alpha onwards
-    public let communities: Int?
+    public let localCommunities: Int?
     /// The number of users with any activity in the last day.
     /// Available from 1.0.0-alpha onwards
     public let usersActiveDay: Int?
@@ -172,6 +172,22 @@ public struct LemmyLocalSite: Codable, Hashable, Sendable {
     public let imageAllowVideoUploads: Bool?
     /// Available from 1.0.0-alpha onwards
     public let imageUploadDisabled: Bool?
+    /// Available from 1.0.0-alpha onwards
+    public let linkedInstances: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let totalPosts: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let totalComments: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let totalUsers: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let totalCommunities: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let userRetentionMonthPercent: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let userRetentionHalfYearPercent: Int?
+    /// Available from 1.0.0-alpha onwards
+    public let bannedUsersPercent: Int?
     /// How many active invite links a user can have
     /// Available from 1.0.0-alpha onwards
     public let maxInvitesPerUserAllowed: Int?
@@ -217,10 +233,10 @@ public extension LemmyLocalSite {
         case commentDownvotes = "comment_downvotes"
         case defaultPostTimeRangeSeconds = "default_post_time_range_seconds"
         case nsfwContentDisallowed = "nsfw_content_disallowed"
-        case users = "users"
-        case posts = "posts"
-        case comments = "comments"
-        case communities = "communities"
+        case localUsers = "local_users"
+        case localPosts = "local_posts"
+        case localComments = "local_comments"
+        case localCommunities = "local_communities"
         case usersActiveDay = "users_active_day"
         case usersActiveWeek = "users_active_week"
         case usersActiveMonth = "users_active_month"
@@ -237,6 +253,14 @@ public extension LemmyLocalSite {
         case imageMaxUploadSize = "image_max_upload_size"
         case imageAllowVideoUploads = "image_allow_video_uploads"
         case imageUploadDisabled = "image_upload_disabled"
+        case linkedInstances = "linked_instances"
+        case totalPosts = "total_posts"
+        case totalComments = "total_comments"
+        case totalUsers = "total_users"
+        case totalCommunities = "total_communities"
+        case userRetentionMonthPercent = "user_retention_month_percent"
+        case userRetentionHalfYearPercent = "user_retention_half_year_percent"
+        case bannedUsersPercent = "banned_users_percent"
         case maxInvitesPerUserAllowed = "max_invites_per_user_allowed"
     }
 }

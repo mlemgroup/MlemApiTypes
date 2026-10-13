@@ -14,7 +14,7 @@ import Rest
 public struct LemmyPersonView: Codable, Hashable, Sendable {
     /// Available on all versions
     public let person: LemmyPerson
-    /// Unavailable after 0.19.19
+    /// Unavailable after 0.19.20
     public let counts: LemmyPersonAggregates?
     /// Available on all versions
     public let isAdmin: Bool
@@ -24,6 +24,9 @@ public struct LemmyPersonView: Codable, Hashable, Sendable {
     public let banned: Bool?
     /// Available from 1.0.0-alpha onwards
     public let banExpiresAt: Date?
+    /// Same as for CommunityView to hide optional community_actions for unrelated queries
+    /// Available from 1.0.0-alpha onwards
+    public let communityActions: LemmyCommunityActions?
 }
 
 public extension LemmyPersonView {
@@ -34,5 +37,6 @@ public extension LemmyPersonView {
         case personActions = "person_actions"
         case banned = "banned"
         case banExpiresAt = "ban_expires_at"
+        case communityActions = "community_actions"
     }
 }

@@ -40,6 +40,8 @@ public struct LemmyCommunityReport: Codable, Hashable, Sendable {
     public let publishedAt: Date
     /// Available on all versions
     public let updatedAt: Date?
+    /// Available on all versions
+    public let conclusion: String?
 }
 
 public extension LemmyCommunityReport {
@@ -58,5 +60,6 @@ public extension LemmyCommunityReport {
         case resolverId = "resolver_id"
         case publishedAt = "published_at"
         case updatedAt = "updated_at"
+        case conclusion = "conclusion"
     }
 }

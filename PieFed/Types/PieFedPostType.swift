@@ -24,4 +24,6 @@ public enum PieFedPostType: String, Codable, Sendable {
     case poll = "Poll"
     /// Available on all versions
     case event = "Event"
+    /// Available from 1.8.2 onwards
+    case gallery = "Gallery"
 }

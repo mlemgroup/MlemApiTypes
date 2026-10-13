@@ -27,14 +27,16 @@ public struct LemmyPrivateMessageReport: Codable, Hashable, Sendable {
     public let resolved: Bool
     /// Available on all versions
     public let resolverId: Int?
-    /// Unavailable after 0.19.19
+    /// Unavailable after 0.19.20
     public let published: Date?
-    /// Unavailable after 0.19.19
+    /// Unavailable after 0.19.20
     public let updated: Date?
     /// Available from 1.0.0-alpha onwards
     public let publishedAt: Date?
     /// Available from 1.0.0-alpha onwards
     public let updatedAt: Date?
+    /// Available from 1.0.0-alpha onwards
+    public let conclusion: String?
 }
 
 public extension LemmyPrivateMessageReport {
@@ -50,5 +52,6 @@ public extension LemmyPrivateMessageReport {
         case updated = "updated"
         case publishedAt = "published_at"
         case updatedAt = "updated_at"
+        case conclusion = "conclusion"
     }
 }

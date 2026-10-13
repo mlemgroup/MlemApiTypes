@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Unavailable after 0.19.19
+/// Unavailable after 0.19.20
 public struct LemmyListMentionsRequest: GetRequest {
     public typealias Parameters = LemmyGetPersonMentions
     public typealias Response = LemmyGetPersonMentionsResponse

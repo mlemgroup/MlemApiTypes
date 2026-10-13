@@ -62,6 +62,10 @@ public struct PieFedLocalUser: Codable, Hashable, Sendable {
     public let searchable: Bool?
     /// Available from 1.7.17 onwards
     public let manuallyApprovesFollowers: Bool?
+    /// Available from 1.8.2 onwards
+    public let showReposterAccounts: Bool?
+    /// Available from 1.8.2 onwards
+    public let postsSubjectToAdminApproval: Bool?
 }
 
 public extension PieFedLocalUser {
@@ -91,5 +95,7 @@ public extension PieFedLocalUser {
         case replyHideThreshold = "reply_hide_threshold"
         case searchable = "searchable"
         case manuallyApprovesFollowers = "manually_approves_followers"
+        case showReposterAccounts = "show_reposter_accounts"
+        case postsSubjectToAdminApproval = "posts_subject_to_admin_approval"
     }
 }

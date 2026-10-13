@@ -36,6 +36,28 @@ public struct PieFedPostReportView: Codable, Hashable, Sendable {
     public let subscribed: PieFedSubscribedType
     /// Available on all versions
     public let saved: Bool
+    /// Available from 1.8.2 onwards
+    public let bannedFromCommunity: Bool?
+    /// Available from 1.8.2 onwards
+    public let hidden: Bool?
+    /// Available from 1.8.2 onwards
+    public let read: Bool?
+    /// Available from 1.8.2 onwards
+    public let unreadComments: Int?
+    /// Available from 1.8.2 onwards
+    public let activityAlert: Bool?
+    /// Available from 1.8.2 onwards
+    public let altText: String?
+    /// Available from 1.8.2 onwards
+    public let myVote: Int?
+    /// Available from 1.8.2 onwards
+    public let blurred: Bool?
+    /// Available from 1.8.2 onwards
+    public let filtered: Bool?
+    /// Available from 1.8.2 onwards
+    public let flairList: [PieFedCommunityFlair]?
+    /// Available from 1.8.2 onwards
+    public let canAuthUserModerate: Bool?
 }
 
 public extension PieFedPostReportView {
@@ -52,5 +74,16 @@ public extension PieFedPostReportView {
         case creatorBlocked = "creator_blocked"
         case subscribed = "subscribed"
         case saved = "saved"
+        case bannedFromCommunity = "banned_from_community"
+        case hidden = "hidden"
+        case read = "read"
+        case unreadComments = "unread_comments"
+        case activityAlert = "activity_alert"
+        case altText = "alt_text"
+        case myVote = "my_vote"
+        case blurred = "blurred"
+        case filtered = "filtered"
+        case flairList = "flair_list"
+        case canAuthUserModerate = "can_auth_user_moderate"
     }
 }

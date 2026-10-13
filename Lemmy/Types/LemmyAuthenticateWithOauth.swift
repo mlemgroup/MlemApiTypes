@@ -28,6 +28,9 @@ public struct LemmyAuthenticateWithOauth: Codable, Hashable, Sendable {
     public let answer: String?
     /// Available on all versions
     public let pkceCodeVerifier: String?
+    /// Required if the user has TOTP 2FA enabled.
+    /// Available on all versions
+    public let totp2faToken: String?
     /// If this is true the login is valid forever, otherwise it expires after one week.
     /// Available on all versions
     public let stayLoggedIn: Bool?
@@ -42,6 +45,7 @@ public extension LemmyAuthenticateWithOauth {
         case username = "username"
         case answer = "answer"
         case pkceCodeVerifier = "pkce_code_verifier"
+        case totp2faToken = "totp_2fa_token"
         case stayLoggedIn = "stay_logged_in"
     }
 }
