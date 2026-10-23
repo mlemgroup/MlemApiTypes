@@ -195,18 +195,18 @@ public struct LemmyEditSite: Codable, Hashable, Sendable {
     /// Whether or not external auth methods can auto-register users.
     /// Available from 1.0.0-alpha onwards
     public let oauthRegistration: Bool?
-    /// What kind of post upvotes your site allows.
+    /// Default post upvote mode for newly created local communities.
     /// Available from 1.0.0-alpha onwards
-    public let postUpvotes: LemmyFederationMode?
-    /// What kind of post downvotes your site allows.
+    public let defaultPostUpvotes: LemmyVoteSettings?
+    /// Default post downvote mode for newly created local communities.
     /// Available from 1.0.0-alpha onwards
-    public let postDownvotes: LemmyFederationMode?
-    /// What kind of comment upvotes your site allows.
+    public let defaultPostDownvotes: LemmyVoteSettings?
+    /// Default comment upvote mode for newly created local communities.
     /// Available from 1.0.0-alpha onwards
-    public let commentUpvotes: LemmyFederationMode?
-    /// What kind of comment downvotes your site allows.
+    public let defaultCommentUpvotes: LemmyVoteSettings?
+    /// Default comment downvote mode for newly created local communities.
     /// Available from 1.0.0-alpha onwards
-    public let commentDownvotes: LemmyFederationMode?
+    public let defaultCommentDownvotes: LemmyVoteSettings?
     /// Block NSFW content being created
     /// Available from 1.0.0-alpha onwards
     public let nsfwContentDisallowed: Bool?
@@ -312,10 +312,10 @@ public extension LemmyEditSite {
         case rateLimitImportUserSettingsMaxRequests = "rate_limit_import_user_settings_max_requests"
         case rateLimitImportUserSettingsIntervalSeconds = "rate_limit_import_user_settings_interval_seconds"
         case oauthRegistration = "oauth_registration"
-        case postUpvotes = "post_upvotes"
-        case postDownvotes = "post_downvotes"
-        case commentUpvotes = "comment_upvotes"
-        case commentDownvotes = "comment_downvotes"
+        case defaultPostUpvotes = "default_post_upvotes"
+        case defaultPostDownvotes = "default_post_downvotes"
+        case defaultCommentUpvotes = "default_comment_upvotes"
+        case defaultCommentDownvotes = "default_comment_downvotes"
         case nsfwContentDisallowed = "nsfw_content_disallowed"
         case emailNotificationsDisabled = "email_notifications_disabled"
         case suggestedMultiCommunityId = "suggested_multi_community_id"

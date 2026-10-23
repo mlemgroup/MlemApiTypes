@@ -43,6 +43,14 @@ public struct LemmyCreateCommunity: Codable, Hashable, Sendable {
     /// A shorter, one line summary of your community.
     /// Available from 1.0.0-alpha onwards
     public let summary: String?
+    /// Available from 1.0.0-alpha onwards
+    public let postUpvotes: LemmyVoteSettings?
+    /// Available from 1.0.0-alpha onwards
+    public let postDownvotes: LemmyVoteSettings?
+    /// Available from 1.0.0-alpha onwards
+    public let commentUpvotes: LemmyVoteSettings?
+    /// Available from 1.0.0-alpha onwards
+    public let commentDownvotes: LemmyVoteSettings?
 }
 
 public extension LemmyCreateCommunity {
@@ -58,5 +66,9 @@ public extension LemmyCreateCommunity {
         case visibility = "visibility"
         case sidebar = "sidebar"
         case summary = "summary"
+        case postUpvotes = "post_upvotes"
+        case postDownvotes = "post_downvotes"
+        case commentUpvotes = "comment_upvotes"
+        case commentDownvotes = "comment_downvotes"
     }
 }
