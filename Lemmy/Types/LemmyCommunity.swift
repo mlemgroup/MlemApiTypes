@@ -101,6 +101,14 @@ public struct LemmyCommunity: Codable, Hashable, Sendable {
     public let unresolvedReportCount: Int?
     /// Available from 1.0.0-alpha onwards
     public let localRemoved: Bool?
+    /// Available from 1.0.0-alpha onwards
+    public let postUpvotes: LemmyVoteSettings?
+    /// Available from 1.0.0-alpha onwards
+    public let postDownvotes: LemmyVoteSettings?
+    /// Available from 1.0.0-alpha onwards
+    public let commentUpvotes: LemmyVoteSettings?
+    /// Available from 1.0.0-alpha onwards
+    public let commentDownvotes: LemmyVoteSettings?
 }
 
 public extension LemmyCommunity {
@@ -139,5 +147,9 @@ public extension LemmyCommunity {
         case reportCount = "report_count"
         case unresolvedReportCount = "unresolved_report_count"
         case localRemoved = "local_removed"
+        case postUpvotes = "post_upvotes"
+        case postDownvotes = "post_downvotes"
+        case commentUpvotes = "comment_upvotes"
+        case commentDownvotes = "comment_downvotes"
     }
 }

@@ -30,7 +30,11 @@ public struct LemmyEditCommunityRequest: PutRequest {
       discussionLanguages: [Int]?,
       visibility: LemmyCommunityVisibility?,
       sidebar: String?,
-      summary: String?
+      summary: String?,
+      postUpvotes: LemmyVoteSettings?,
+      postDownvotes: LemmyVoteSettings?,
+      commentUpvotes: LemmyVoteSettings?,
+      commentDownvotes: LemmyVoteSettings?
     ) {
         self.path = endpoint == .v4 ? "api/v4/community" : "api/v3/community"
         self.body = .init(
@@ -44,7 +48,11 @@ public struct LemmyEditCommunityRequest: PutRequest {
             discussionLanguages: discussionLanguages,
             visibility: visibility,
             sidebar: sidebar,
-            summary: summary
+            summary: summary,
+            postUpvotes: postUpvotes,
+            postDownvotes: postDownvotes,
+            commentUpvotes: commentUpvotes,
+            commentDownvotes: commentDownvotes
         )
     }
 }

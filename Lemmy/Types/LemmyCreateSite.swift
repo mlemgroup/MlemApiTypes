@@ -143,13 +143,13 @@ public struct LemmyCreateSite: Codable, Hashable, Sendable {
     /// Available from 1.0.0-alpha onwards
     public let federationSignedFetch: Bool?
     /// Available from 1.0.0-alpha onwards
-    public let postUpvotes: LemmyFederationMode?
+    public let defaultPostUpvotes: LemmyVoteSettings?
     /// Available from 1.0.0-alpha onwards
-    public let postDownvotes: LemmyFederationMode?
+    public let defaultPostDownvotes: LemmyVoteSettings?
     /// Available from 1.0.0-alpha onwards
-    public let commentUpvotes: LemmyFederationMode?
+    public let defaultCommentUpvotes: LemmyVoteSettings?
     /// Available from 1.0.0-alpha onwards
-    public let commentDownvotes: LemmyFederationMode?
+    public let defaultCommentDownvotes: LemmyVoteSettings?
     /// Available from 1.0.0-alpha onwards
     public let nsfwContentDisallowed: Bool?
     /// Available from 1.0.0-alpha onwards
@@ -245,10 +245,10 @@ public extension LemmyCreateSite {
         case oauthRegistration = "oauth_registration"
         case reportsEmailAdmins = "reports_email_admins"
         case federationSignedFetch = "federation_signed_fetch"
-        case postUpvotes = "post_upvotes"
-        case postDownvotes = "post_downvotes"
-        case commentUpvotes = "comment_upvotes"
-        case commentDownvotes = "comment_downvotes"
+        case defaultPostUpvotes = "default_post_upvotes"
+        case defaultPostDownvotes = "default_post_downvotes"
+        case defaultCommentUpvotes = "default_comment_upvotes"
+        case defaultCommentDownvotes = "default_comment_downvotes"
         case nsfwContentDisallowed = "nsfw_content_disallowed"
         case emailNotificationsDisabled = "email_notifications_disabled"
         case suggestedMultiCommunityId = "suggested_multi_community_id"
