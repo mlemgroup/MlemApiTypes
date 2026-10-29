@@ -11,25 +11,17 @@ import Foundation
 import Rest
 
 /// Available from 1.0.0-alpha onwards
-public enum LemmyNotificationTypeFilter: Codable, Hashable, Sendable {
+public enum LemmyNotificationTypeFilter: String, Codable, Sendable {
     /// Available on all versions
-    case all
+    case all = "all"
     /// Available on all versions
-    case other(LemmyNotificationType)
-    
-    public init(from decoder: any Decoder) throws {
-        let value = try String(from: decoder)
-        self = switch value {
-        case "all": .all
-        default:
-            try .other(.init(from: decoder))
-        }
-    }
-    
-    public func encode(to encoder: any Encoder) throws {
-        switch self {
-            case .all: "all"
-            case let .other(value): try value.encode(to: encoder)
-        }
-    }
+    case mention = "mention"
+    /// Available on all versions
+    case reply = "reply"
+    /// Available on all versions
+    case subscribed = "subscribed"
+    /// Available on all versions
+    case privateMessage = "private_message"
+    /// Available on all versions
+    case modAction = "mod_action"
 }
