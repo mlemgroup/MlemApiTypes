@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Available between 0.19.4 and 0.19.20
+/// Available between 0.19.4 and 0.19.21
 public struct LemmyListMediaResponse: Codable, Hashable, Sendable {
     /// Available on all versions
     public let images: [LemmyLocalImageView]
