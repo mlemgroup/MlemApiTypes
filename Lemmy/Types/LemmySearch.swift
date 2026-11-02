@@ -12,7 +12,7 @@ import Rest
 
 /// Available on all versions
 public struct LemmySearch: Codable, Hashable, Sendable {
-    /// Unavailable after 0.19.20
+    /// Unavailable after 0.19.21
     public let q: String?
     /// Available on all versions
     public let communityId: Int?
@@ -22,15 +22,15 @@ public struct LemmySearch: Codable, Hashable, Sendable {
     public let creatorId: Int?
     /// Available on all versions
     public let type_: LemmySearchType?
-    /// Unavailable after 0.19.20
+    /// Unavailable after 0.19.21
     public let sort: LemmySortType?
     /// Available on all versions
     public let listingType: LemmyListingType?
-    /// Unavailable after 0.19.20
+    /// Unavailable after 0.19.21
     public let page: Int?
     /// Available on all versions
     public let limit: Int?
-    /// Available between 0.19.6 and 0.19.20
+    /// Available between 0.19.6 and 0.19.21
     public let postTitleOnly: Bool?
     /// The search query. Can be a plain text, or an object ID which will be resolved
     /// (eg `https://lemmy.world/comment/1` or `!fediverse@lemmy.ml`).

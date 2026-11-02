@@ -18,17 +18,17 @@ public struct LemmyGetSiteResponse: Codable, Hashable, Sendable {
     public let admins: [LemmyPersonView]
     /// Available on all versions
     public let version: String
-    /// Unavailable after 0.19.20
+    /// Unavailable after 0.19.21
     public let myUser: LemmyMyUserInfo?
     /// Available on all versions
     public let allLanguages: [LemmyLanguage]
     /// Available on all versions
     public let discussionLanguages: [Int]
     /// A list of taglines shown at the top of the front page.
-    /// Unavailable after 0.19.20
+    /// Unavailable after 0.19.21
     public let taglines: [LemmyTagline]?
     /// A list of custom emojis your site supports.
-    /// Unavailable after 0.19.20
+    /// Unavailable after 0.19.21
     public let customEmojis: [LemmyCustomEmojiView]?
     /// Available from 0.19.4 onwards
     public let blockedUrls: [LemmyLocalSiteUrlBlocklist]?
@@ -42,6 +42,9 @@ public struct LemmyGetSiteResponse: Codable, Hashable, Sendable {
     public let adminOauthProviders: [LemmyAdminOAuthProvider]?
     /// Available from 1.0.0-alpha onwards
     public let activePlugins: [LemmyPluginMetadata]?
+    /// JWT for authenticated RSS feeds (readonly)
+    /// Available from 1.0.0-alpha onwards
+    public let myFeedToken: String?
     /// The number of seconds between the last application published, and approved / denied time.
     /// 
     /// Useful for estimating when your application will be approved.
@@ -66,6 +69,7 @@ public extension LemmyGetSiteResponse {
         case oauthProviders = "oauth_providers"
         case adminOauthProviders = "admin_oauth_providers"
         case activePlugins = "active_plugins"
+        case myFeedToken = "my_feed_token"
         case lastApplicationDurationSeconds = "last_application_duration_seconds"
         case captchaEnabled = "captcha_enabled"
     }

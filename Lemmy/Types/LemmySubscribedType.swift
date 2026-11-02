@@ -10,7 +10,7 @@
 import Foundation
 import Rest
 
-/// Unavailable after 0.19.20
+/// Unavailable after 0.19.21
 public enum LemmySubscribedType: String, Codable, Sendable {
     /// Available on all versions
     case subscribed = "Subscribed"
